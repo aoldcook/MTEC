@@ -12,6 +12,23 @@ import re
 import math
 import copy
 
+try:
+    from zoomrefine.mtec_prompt_plus import (
+        build_image_crop_anchor_metadata,
+        build_low_resolution_anchor_package,
+        build_structured_evidence_prompt,
+        create_image_global_anchor,
+        format_structured_evidence_prompt,
+    )
+except ImportError:
+    from mtec_prompt_plus import (
+        build_image_crop_anchor_metadata,
+        build_low_resolution_anchor_package,
+        build_structured_evidence_prompt,
+        create_image_global_anchor,
+        format_structured_evidence_prompt,
+    )
+
 ImageFile.LOAD_TRUNCATED_IMAGES = True # Allow loading of truncated images
 
 # --- Image Constraints ---
@@ -23,14 +40,20 @@ print(f"Applying image constraints: Max Size={MAX_SIZE_BYTES / (1024*1024):.2f}M
 # --- Prompts ---
 
 prompts = {
-    "system_prompt_1": """You are an advanced image understanding assistant. You will be given an image and a question about it.
+    "system_prompt_1": """You are an advanced image understanding assistant. You use MTEC-Prompt++ style compressed visual inputs: a low-resolution structural anchor plus task-relevant local evidence.
 """,
-    "user_template_1": """<image>\n{question}
+    "user_template_1": """<image>\nYou are viewing image_anchor_global, a low-resolution whole-image structural anchor. Use it to preserve global layout and scene context.
+
+{question}
 Your Task:
 1.**Provide Your Answer:** Examining the image and the question thoroughly, answer the question in the format **Answer: [Letter]**, where [Letter] is only the letter (A, B, C, D or E) of the correct option.
 2.**Identify Critical Area:**After output the answer,please determine which area most relevant to the question.Then,please determine a bounding box (normalized coordinates, 0 <= x1, y1, x2, y2 <= 1, x1 < x2, y1 < y2) of the area. Ensure the bounding box is large enough to include all the surrounding context that might be relevant to answering the question (such as information about the table row or column, nearby text, interacting objects, relevant background).Then output in the format**Bounding box: [x1, y1, x2, y2]**
 """,
-    "user_template_follow_up": """<image>\nI will provide you an extra image which is cropped from the original image.Just treat the newly input cropped image as an additional information to the local detail information.(The cropped image is clearer)
+    "user_template_follow_up": """<image>\nI will provide you an extra image which is cropped from the original image. Treat it as image_anchor_crop_1, a high-value local detail anchor. The previous image in the conversation is image_anchor_global, the low-resolution structural anchor.
+
+MTEC-Prompt++ structured evidence prompt with anchor links:
+{structured_evidence_prompt}
+
 Please examine the cropped image.(The cropped image may not contain the information needed to answer the question,then ignore this cropped image)
 Review the original image and combine with the information from the cropped image.
 Identify potential omission of information in visual perception or calculation based on the image and question.
@@ -376,6 +399,9 @@ for index, entry in enumerate(tqdm(test_set, desc="Processing entries", unit="en
         "id": entry.get("id", f"entry_{index}"), # Preserve or generate an ID
         "messages": copy.deepcopy(entry.get("messages", [])),
         "images": copy.deepcopy(entry.get("images", [])),
+        "Compression_Target": None,
+        "Low_Resolution_Anchor": None,
+        "Structured_Evidence_Prompt": None,
         "Answer": None, "Bounding_Box": None, "Rechecked Answer": None,
         "Response_Stage1": None, "Response_Stage2": None, "Error": None
     }
@@ -404,6 +430,8 @@ for index, entry in enumerate(tqdm(test_set, desc="Processing entries", unit="en
         image_bytes_stage1 = None
         original_width, original_height = None, None
         processing_error_message = None
+        global_anchor_metadata = None
+        crop_anchor_metadata = None
 
         if not os.path.exists(original_image_path):
             processing_error_message = f"Error: Original image file not found at {original_image_path}"
@@ -437,10 +465,22 @@ for index, entry in enumerate(tqdm(test_set, desc="Processing entries", unit="en
         if processing_error_message or image_bytes_stage1 is None or original_width is None or original_height is None:
             raise ValueError(processing_error_message if processing_error_message else "Failed to get image bytes or dimensions for Stage 1.")
 
-        print("Loading original image for Stage 1...")
+        try:
+            global_anchor_bytes, _, global_anchor_metadata = create_image_global_anchor(original_image_path)
+            image_bytes_stage1 = global_anchor_bytes
+            anchor_package = build_low_resolution_anchor_package(
+                question=question_for_model,
+                global_anchor=global_anchor_metadata,
+            )
+            output_result["Compression_Target"] = anchor_package["compression_target"]
+            output_result["Low_Resolution_Anchor"] = anchor_package["low_resolution_anchor"]
+        except Exception as anchor_err:
+            raise ValueError(f"Low-resolution image anchor generation failed: {anchor_err}")
+
+        print("Loading low-resolution global image anchor for Stage 1...")
         pixel_values_1 = load_image(io.BytesIO(image_bytes_stage1), input_size=model.config.image_size, max_num=max_num_patches)
         if pixel_values_1 is None:
-            raise ValueError(f"Failed to load/process original image {image_filename} using load_image for Stage 1.")
+            raise ValueError(f"Failed to load/process global image anchor {image_filename} using load_image for Stage 1.")
         pixel_values_1 = pixel_values_1.to(torch.bfloat16).to(device)
 
         # --- Stage 1: Inference (Answer + BBox) ---
@@ -466,6 +506,18 @@ for index, entry in enumerate(tqdm(test_set, desc="Processing entries", unit="en
         output_result['Bounding_Box'] = bbox_norm_1
         print(f"Parsed Answer (Stage 1): {answer_letter_1}, Parsed BBox: {bbox_norm_1}")
 
+        prompt_package = build_structured_evidence_prompt(
+            question=original_question_full,
+            stage1_response=response_1,
+            bbox_norm=bbox_norm_1,
+            expanded_bbox_norm=None,
+            global_anchor=global_anchor_metadata,
+            crop_anchor=None,
+        )
+        output_result["Compression_Target"] = prompt_package["compression_target"]
+        output_result["Low_Resolution_Anchor"] = prompt_package["low_resolution_anchor"]
+        output_result["Structured_Evidence_Prompt"] = prompt_package["structured_evidence_prompt"]
+
         if history_1 is None:
              print(f"Warning: model.chat did not return history for entry {index}. Skipping Stage 2.")
              output_result['Error'] = (output_result['Error'] or "") + "Failed to get history for Stage 2. "
@@ -486,6 +538,25 @@ for index, entry in enumerate(tqdm(test_set, desc="Processing entries", unit="en
             if cropped_image_bytes is None:
                 raise ValueError("Failed to crop image based on BBox for Stage 2.")
 
+            crop_anchor_metadata = build_image_crop_anchor_metadata(
+                crop_bytes=cropped_image_bytes,
+                bbox_norm=bbox_norm_1,
+                expanded_bbox_norm=bbox_to_crop,
+                original_width=original_width,
+                original_height=original_height,
+            )
+            prompt_package = build_structured_evidence_prompt(
+                question=original_question_full,
+                stage1_response=response_1,
+                bbox_norm=bbox_norm_1,
+                expanded_bbox_norm=bbox_to_crop,
+                global_anchor=global_anchor_metadata,
+                crop_anchor=crop_anchor_metadata,
+            )
+            output_result["Compression_Target"] = prompt_package["compression_target"]
+            output_result["Low_Resolution_Anchor"] = prompt_package["low_resolution_anchor"]
+            output_result["Structured_Evidence_Prompt"] = prompt_package["structured_evidence_prompt"]
+
             print("Loading cropped image for Stage 2...")
             pixel_values_2 = load_image(io.BytesIO(cropped_image_bytes), input_size=model.config.image_size, max_num=max_num_patches)
             if pixel_values_2 is None:
@@ -498,7 +569,10 @@ for index, entry in enumerate(tqdm(test_set, desc="Processing entries", unit="en
 
             # --- Stage 2: Inference (Recheck Answer with Cropped Image + History) ---
             print("Running Stage 2 inference (Recheck Answer)...")
-            question_2 = prompts['user_template_follow_up'].format(question=question_for_model) 
+            question_2 = prompts['user_template_follow_up'].format(
+                question=question_for_model,
+                structured_evidence_prompt=format_structured_evidence_prompt(prompt_package, compact=True),
+            )
             with torch.no_grad():
                 response_2 = model.chat(
                     tokenizer,
