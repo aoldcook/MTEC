@@ -176,8 +176,12 @@ def create_audio_structural_anchor(
             bitrate=bitrate,
         )
     else:
-        low_audio_path = Path(audio_path)
-        compression_warning = "ffmpeg not found; using original audio path as anchor."
+        low_audio_path, compression_warning = _compress_audio_python(
+            audio_path,
+            output_path,
+            sample_rate=sample_rate,
+            anchor_id=anchor_id,
+        )
 
     samples, decoded_sample_rate, decode_warning = _load_audio_samples(audio_path, sample_rate)
     if samples.size:
@@ -437,6 +441,58 @@ def _compress_audio_ffmpeg(
     if result.returncode != 0:
         return result.stderr.strip()
     return None
+
+
+def _compress_audio_python(
+    audio_path: str,
+    output_dir: Path,
+    sample_rate: int,
+    anchor_id: str,
+) -> Tuple[Path, Optional[str]]:
+    """Create a real low-cost audio anchor when ffmpeg is unavailable.
+
+    soundfile/libsndfile can write MP3/OGG on the AutoDL image. If those
+    codecs are unavailable, fall back to low-sample-rate mono PCM WAV; that is
+    still a genuine compressed structural anchor compared with the source WAV.
+    """
+    try:
+        import soundfile as sf
+    except Exception as err:
+        return Path(audio_path), f"ffmpeg and soundfile are unavailable; using original audio path as anchor: {err}"
+
+    try:
+        samples, source_rate = sf.read(str(audio_path), dtype="float32", always_2d=False)
+        if samples.ndim == 2:
+            samples = samples.mean(axis=1)
+        samples = _resample_audio(samples.astype(np.float32), source_rate, sample_rate)
+        samples = np.clip(samples, -1.0, 1.0)
+
+        attempts = [
+            (output_dir / f"{anchor_id}.mp3", {"format": "MP3", "subtype": "MPEG_LAYER_III"}),
+            (output_dir / f"{anchor_id}.ogg", {"format": "OGG", "subtype": "OPUS"}),
+            (output_dir / f"{anchor_id}.wav", {"format": "WAV", "subtype": "PCM_16"}),
+        ]
+        errors = []
+        for candidate_path, kwargs in attempts:
+            try:
+                sf.write(str(candidate_path), samples, sample_rate, **kwargs)
+                if candidate_path.exists() and candidate_path.stat().st_size > 0:
+                    return candidate_path, "ffmpeg not found; generated low-sample-rate mono audio anchor with soundfile."
+            except Exception as err:
+                errors.append(f"{candidate_path.suffix}: {err}")
+        return Path(audio_path), "ffmpeg not found and soundfile compression failed; using original audio path as anchor. " + " | ".join(errors)
+    except Exception as err:
+        return Path(audio_path), f"ffmpeg not found and Python audio compression failed; using original audio path as anchor: {err}"
+
+
+def _resample_audio(samples: np.ndarray, source_rate: int, target_rate: int) -> np.ndarray:
+    if samples.size == 0 or source_rate <= 0 or source_rate == target_rate:
+        return samples
+    duration = samples.shape[0] / float(source_rate)
+    target_length = max(1, int(round(duration * target_rate)))
+    source_x = np.linspace(0.0, duration, num=samples.shape[0], endpoint=False)
+    target_x = np.linspace(0.0, duration, num=target_length, endpoint=False)
+    return np.interp(target_x, source_x, samples).astype(np.float32)
 
 
 def _load_audio_samples(audio_path: str, sample_rate: int) -> Tuple[np.ndarray, int, Optional[str]]:

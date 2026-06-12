@@ -1,132 +1,213 @@
-#  <img src="asset/logo.png" alt="Example Image" width="45" style="margin-bottom:-50px"/> Zoom-Refine: Boosting High-Resolution Multimodal Understanding via Localized Zoom and Self-Refinement
+# MTEC-Prompt++
 
-[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
-[![arXiv](https://img.shields.io/badge/arXiv-2506.01663-red.svg)](https://arxiv.org/abs/2506.01663)
+MTEC-Prompt++ 是一个面向多模态大模型评测与压缩输入实验的工程化原型。当前项目从原始的 Zoom-Refine 图像增强思路扩展为三模态流程：图像、视频、音频都先生成低成本结构锚点，再和结构化文本证据一起输入模型，从而在尽量保留任务关键信息的同时降低媒体输入体积和 token 成本。
 
-This repository contains the official implementation for the paper: **Zoom-Refine: Boosting High-Resolution Multimodal Understanding via Localized Zoom and Self-Refinement**.
+当前重点验证的是：
 
-## Abstract
+- 图像：真实图像数据集上的低分辨率全局结构锚点。
+- 视频：低 FPS 视频锚点、关键帧和事件边界摘要。
+- 音频：真正低码率音频锚点和能量事件摘要，重点覆盖人声类音频。
+- 报告：将每次评测结果输出为简单 HTML 表格，包含预测、标注、正确性、压缩率和 token 节省比例。
 
-Multimodal Large Language Models (MLLMs) often struggle to interpret high-resolution images accurately, where fine-grained details are crucial for complex visual understanding. We introduce Zoom-Refine, a novel training-free method that enhances MLLM capabilities to address this issue. Zoom-Refine operates through a synergistic process of **Localized Zoom** and **Self-Refinement**. In the *Localized Zoom* step, Zoom-Refine leverages the MLLM to provide a preliminary response to an input query and identifies the most task-relevant image region by predicting its bounding box coordinates. During the *Self-Refinement* step, Zoom-Refine then integrates fine-grained details from the high-resolution crop (identified by Localized Zoom) with its initial reasoning to re-evaluate and refine its preliminary response. Our method harnesses the MLLM's inherent capabilities for spatial localization, contextual reasoning, and comparative analysis without requiring additional training or external experts. Comprehensive experiments demonstrate the efficacy of Zoom-Refine on two challenging high-resolution multimodal benchmarks.
+## 核心逻辑
 
-## 👀Framework Overview
+MTEC-Prompt++ 的输入是双通道：
 
-Zoom-Refine enhances MLLM understanding of high-resolution images in a two-step, training-free process:
+1. 低成本多模态结构锚点
 
-1.  **Localized Zoom:** The MLLM first processes a downsampled version of the image and the textual query to provide an initial answer and predict bounding box coordinates for the most task-relevant region.
-2.  **Self-Refinement:** A high-resolution crop is extracted from the original image based on the predicted bounding box. This crop, along with the initial context (original query, downsampled image, initial answer), is fed back to the MLLM, which then re-evaluates and refines its answer.
-<p align="center">
-    <img src="./asset/architecture.jpg" width="80%" height="80%">
-</p>
+   图像、视频、音频不会直接把完整原始媒体喂给模型，而是先转换为更小的结构锚点。
 
-## 💡Examples
+   - 图像：生成低分辨率 JPEG 全局锚点，保留整体布局和空间关系。
+   - 视频：抽取低 FPS 帧，保留时间顺序、场景变化和事件边界，并生成低 FPS 视频片段。
+   - 音频：生成低采样率、低码率单声道音频，同时提取能量窗口和显著事件段。
 
-<p align="center">
-    <img src="./asset/Example.jpg" width="80%" height="80%">
-</p>
-Representative examples from the MME-Realworld benchmark show InternVL3-78B with our method (answers in blue) achieving correct deductions where InternVL3-78B without our method(answers in red) fails.
+2. 结构化证据文本
 
-## 📦 Preparation
-### 1.MLLM checkpoints
-Our experiments primarily use models from the InternVL series, you could download these checkpoints before running.
-* [InternVL3-78B](https://huggingface.co/OpenGVLab/InternVL3-78B)
-* [InternVL3-14B](https://huggingface.co/OpenGVLab/InternVL3-14B)
-* [InternVL3-8B](https://huggingface.co/OpenGVLab/InternVL3-8B)
-* [InternVL3-2B](https://huggingface.co/OpenGVLab/InternVL3-2B)
-* [InternVL2.5-78B](https://huggingface.co/OpenGVLab/InternVL2_5-78B)
+   项目会根据问题类型生成紧凑的结构化 prompt，描述锚点类型、预算分配、关键媒体元信息和需要模型关注的证据。模型最终同时接收锚点媒体对象和结构化证据文本。
 
-### 2.Evaluation benchmarks
-Our experiments utilize the following publicly available benchmarks,you could download these benchmarks before evaluation.
-* [MME-RealWorld](https://huggingface.co/datasets/yifanzhang114/MME-RealWorld)
-* [HR-Bench](https://huggingface.co/datasets/DreamMr/HR-Bench)
+简化流程如下：
 
-After downloading the datasets, their JSON files need to be converted into a standardized format for evaluation with our framework. We provide scripts for this conversion:
-For MME-RealWorld use the `scripts/convert.py`
-For HR-Bench，you can use the `scripts/convert_parquet.py` to download the benchmark and use the `scripts/build_json.py` to convert to the expected format.
-
-**Standardized MCQA Format:**
-
-The preprocessing scripts will convert the benchmark data into the following standardized Multiple-Choice Question-Answering (MCQA) format, which is then used to prompt the MLLM for evaluation:
+```text
+原始图像/视频/音频
+        |
+        v
+低成本结构锚点生成
+        |
+        +--> 图像低分辨率锚点
+        +--> 视频低 FPS 锚点/关键帧
+        +--> 音频低码率锚点/事件摘要
+        |
+        v
+结构化证据 Prompt
+        |
+        v
+Qwen2.5-VL / Qwen2.5-Omni 评测
+        |
+        v
+JSON 结果 + HTML 表格报告
 ```
-[Image] [Question] The choices are listed below:
-(A) [Choice A]
-(B) [Choice B]
-(C) [Choice C]
-(D) [Choice D]
-(E) [Choice E]
-Select the best answer to the above multiple-choice question based on the image. Respond with only the letter (A, B, C, D, or E) of the correct option. 
-The best answer is:
+
+## 代码结构
+
+```text
+zoomrefine/
+  mtec_prompt_plus.py        # 问题画像、预算分配、结构化证据 prompt
+  mtec_media_pipeline.py     # 图像/视频/音频结构锚点生成
+
+scripts/
+  run_modelscope_mtec_anchor_7b.py   # Qwen2.5-Omni-7B 三模态 ModelScope 评测
+  run_modelscope_multimodal_smoke.py # Qwen2.5-VL-3B 轻量烟测
+  generate_mtec_table_report.py      # 简单 HTML 表格报告
+  generate_mtec_report.py            # 较完整的 HTML 报告
 ```
-## 🔧Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/xavier-yu114/NIPS2025.git
-    cd Zoom-Refine
-    ```
+本仓库只保存代码、配置和文档。模型权重、数据集和评测输出不应提交到 GitHub。
 
-2.  **Create a conda environment and activate it:**
-    ```bash
-    conda create -n zoom_refine python=3.9 
-    conda activate zoom_refine
-    ```
+## 环境准备
 
-3.  **Install dependencies:**
-    Install dependencies using `requirements.txt:`
-    ```bash
-    pip install -r requirements.txt
-    ```
-    The `requirements.txt` file includes the following dependencies:
-    - `-r requirements/internvl_chat.txt`
-    - `-r requirements/streamlit_demo.txt`
-    - `-r requirements/classification.txt`
-    - `-r requirements/segmentation.txt`
+建议使用 Python 3.9+ 和 CUDA 环境。AutoDL/A800 上可以使用已有 conda 环境，也可以新建环境：
 
-    we use  `flash-attn==2.3.6`
+```bash
+conda create -n mtec python=3.10 -y
+conda activate mtec
+pip install -r requirements.txt
+```
 
-  ```bash
-  pip install flash-attn==2.3.6 --no-build-isolation
-  ```
+Qwen2.5-Omni 评测还需要安装对应版本的 `transformers`、`qwen-omni-utils`、`torch`、`pandas`、`pyarrow`、`opencv-python`、`soundfile` 等依赖。音频压缩优先使用系统 `ffmpeg`；没有 `ffmpeg` 时，项目会退回到 Python/soundfile 路径生成低采样率音频锚点。
 
-4.  **Model Setup:**    
-*   API-based models (e.g., InternVL3-78B, InternVL2.5-78B via InternVL API):
-    *   To obtain an API key and for details on client library installation and configuration, please refer to the official InternVL API documentation: [https://internlm.intern-ai.org.cn/api/document](https://internlm.intern-ai.org.cn/api/document).
-    *   Once you have your API key, you can set it as an environment variable or include it in a configuration file.
-      ```bash
-      # export API_KEY="YOUR_API_KEY"
-      ```
-*   Locally-run models (e.g., InternVL3-14B/8B/2B from Hugging Face):
-    For locally run models, download the weights from their official sources (e.g., Hugging Face).Ensure your environment is configured as described in the "Install Dependencies" section above and update model paths in the configuration files or scripts.
+## 本地目录约定
 
-## 🚀 Evaluation
-This section outlines how to evaluate the Zoom-Refine method on the MME-RealWorld and HR-Bench benchmarks using the provided scripts.
+推荐目录结构：
 
-**A. Evaluating Baseline Performance**
+```text
+MTEC/
+  models/
+    qwen2.5-vl-3b/
+    qwen2.5-omni-7b/
+  data/
+    modelscope/
+      realworldqa/
+      video-mme-zips/
+      urbansound8k-noises/
+      hearsed-dcase2016/
+  outputs/
+    modelscope_mtec_anchor_7b/
+    reports/
+```
 
-**1. Using API-based Models :**
-   To evaluate the baseline performance of an API-based model:
-   ```bash
-   python evaluation/API.py     
-   ```
+这些目录已被 `.gitignore` 忽略：
 
-**2. Using Locally-run Models :**
-   To evaluate the baseline performance of a locally-run model:
-   ```bash
-   python evaluation/base.py
-   ```
-After you get your evaluation results,you can use `evaluation/eval_acc.py` to calculate the accuracy from the baseline prediction files.
+- `models/`
+- `data/`
+- `outputs/`
+- `.cache/`
+- `.venv/`
 
-**B. Evaluating with Zoom-Refine**
+## 3B 轻量烟测
 
-**1. Using API-based Models :**
-   To evaluate with Zoom-Refine using an API-based model:
-   ```bash
-   python zoomrefine/ZoomRefine_API.py 
-   ```
+3B 路径主要用于快速确认图像/视频/音频样本、结果格式和报告生成是否正常。
 
-**2. Using Locally-run Models:**
-   To evaluate with Zoom-Refine using a locally-run model:
-   ```bash
-   python zoomrefine/ZoomRefine_Base.py
-   ```
-After you get your evaluation results,you can use `zoomrefine/zoomrefine_acc.py` to calculate the accuracy from the Zoom-Refine prediction files.
+```bash
+OMP_NUM_THREADS=1 python scripts/run_modelscope_multimodal_smoke.py \
+  --model-path models/qwen2.5-vl-3b \
+  --modelscope-root data/modelscope \
+  --output-dir outputs/modelscope_multimodal_smoke \
+  --dtype bfloat16
+```
+
+生成表格报告：
+
+```bash
+python scripts/generate_mtec_table_report.py \
+  --inputs outputs/modelscope_multimodal_smoke/modelscope_multimodal_smoke_results.json \
+  --output outputs/reports/mtec_modelscope_3b_table.html \
+  --title "MTEC-Prompt++ ModelScope 3B Results Table"
+```
+
+## 7B 三模态评测
+
+7B 路径使用 Qwen2.5-Omni，并按 MTEC-Prompt++ 双通道逻辑运行图像、视频和音频评测。
+
+背景环境音评测：
+
+```bash
+HF_HUB_OFFLINE=1 OMP_NUM_THREADS=1 python scripts/run_modelscope_mtec_anchor_7b.py \
+  --model-path models/qwen2.5-omni-7b \
+  --modelscope-root data/modelscope \
+  --image-parquet data/modelscope/realworldqa/data/test-00000-of-00002.parquet \
+  --videomme-metadata data/datasets/video-mme/videomme/test-00000-of-00001.parquet \
+  --audio-task background \
+  --audio-parquet data/modelscope/urbansound8k-noises/data/test-00000-of-00001-40cf49999a374336.parquet \
+  --output-dir outputs/modelscope_mtec_anchor_7b \
+  --dtype bfloat16 \
+  --max-new-tokens 64
+```
+
+人声音频评测：
+
+```bash
+HF_HUB_OFFLINE=1 OMP_NUM_THREADS=1 python scripts/run_modelscope_mtec_anchor_7b.py \
+  --model-path models/qwen2.5-omni-7b \
+  --modelscope-root data/modelscope \
+  --image-parquet data/modelscope/realworldqa/data/test-00000-of-00002.parquet \
+  --videomme-metadata data/datasets/video-mme/videomme/test-00000-of-00001.parquet \
+  --audio-task voice \
+  --voice-audio-parquet data/modelscope/hearsed-dcase2016/data/test-00000-of-00001.parquet \
+  --output-dir outputs/modelscope_mtec_anchor_7b_voice \
+  --dtype bfloat16 \
+  --max-new-tokens 64
+```
+
+生成表格报告：
+
+```bash
+python scripts/generate_mtec_table_report.py \
+  --inputs outputs/modelscope_mtec_anchor_7b_voice/modelscope_mtec_anchor_7b_results.json \
+  --output outputs/reports/mtec_modelscope_mtec_anchor_7b_voice_table.html \
+  --title "MTEC-Prompt++ ModelScope 7B Voice Audio Results Table"
+```
+
+表格字段包括：
+
+- 模态和数据集
+- 媒体样本链接
+- 问题或 prompt
+- 模型预测
+- 标准答案
+- 压缩率
+- token 节省比例
+- 是否正确
+- 推理耗时
+- 错误或备注
+
+## 当前实验结论
+
+截至当前实验，7B 路径已验证：
+
+- RealWorldQA 真实图像样本可以通过低分辨率图像锚点完成回答。
+- Video-MME 样本可以通过低 FPS 视频锚点完成回答。
+- 背景环境音细分类不够稳定，尤其是空调、引擎怠速等持续低频声音容易混淆。
+- 人声事件更符合当前音频能力边界；低码率音频锚点下可以识别 speech、cough、clearthroat 等主要人声事件。
+
+因此，当前音频策略是：对背景音乐/环境音给出笼统描述即可，对人声类音频保留更高优先级。
+
+## Git 注意事项
+
+提交前建议检查：
+
+```bash
+git status --short
+git check-ignore -v models data outputs
+```
+
+不要提交以下内容：
+
+- 模型权重，如 `*.safetensors`、`*.bin`、`*.pt`、`*.pth`
+- 数据集文件，如 parquet、zip、mp4、wav、mp3
+- 评测输出，如 `outputs/` 下的 JSON、HTML、tar.gz
+
+只提交代码、文档、轻量配置和必要脚本。
+
+## License
+
+本项目沿用原仓库的 Apache-2.0 License。
