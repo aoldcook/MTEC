@@ -41,7 +41,7 @@ def run_media_anchor_smoke(args: argparse.Namespace) -> dict:
         stage1_response=None,
         bbox_norm=None,
         expanded_bbox_norm=None,
-        global_anchor=_first_anchor(package, "image_anchor"),
+        global_anchor=package["low_resolution_anchor"].get("image_anchor"),
         video_anchor=package["low_resolution_anchor"].get("video_anchor"),
         audio_anchor=package["low_resolution_anchor"].get("audio_anchor"),
         total_budget=args.total_budget,
