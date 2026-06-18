@@ -604,7 +604,9 @@ def _video_visual_context_reason(question: str, transcript_segment_count: int) -
         "absent", "not appear", "not shown", "not used", "not discussed", "not mentioned",
         "which of the following", "which acrobatic", "which component", "distinct color",
         "color", "chassis", "power supply", "graphics card", "motherboard", "memory stick",
-        "why", "intention", "goal", "purpose", "doing", "action", "fighting", "playing",
+        "why", "how were", "formed", "formation", "due to", "result of",
+        "intention", "goal", "purpose", "doing", "action", "fighting", "playing",
+        "theme", "themes", "primary themes", "mainly about", "regarding",
         "screen", "display", "shown on", "visible", "text", "number", "ocr",
         "what does this video show", "what is the video regarding",
     )
