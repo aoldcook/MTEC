@@ -510,6 +510,7 @@ VIDEO_ANCHOR_POLICIES = {
     "light": {"fps": 1.0, "max_frames": 16, "max_side": 512, "detail_max_crops": 2, "detail_max_side": 640, "audio_anchor": False, "transcript": True, "evidence_max_tokens": 192},
     "medium": {"fps": 1.5, "max_frames": 32, "max_side": 640, "detail_max_crops": 3, "detail_max_side": 768, "audio_anchor": False, "transcript": True, "evidence_max_tokens": 256},
     "full": {"fps": 4.0, "max_frames": 80, "max_side": 640, "detail_max_crops": 6, "detail_max_side": 960, "audio_anchor": True, "transcript": True, "evidence_max_tokens": 512},
+    "dense": {"fps": 8.0, "max_frames": 320, "max_side": 960, "detail_max_crops": 24, "detail_max_side": 1280, "audio_anchor": False, "transcript": True, "evidence_max_tokens": 768},
 }
 
 
@@ -1361,7 +1362,7 @@ def write_summary_files(output_dir: Path, records: List[Dict[str, Any]], model: 
         "algorithm_check": {
             "matches_design": True,
             "input_channels": ["low_resolution_multimodal_structural_anchor", "high_detail_keyframe_crop", "transcript_audio_anchor", "structured_evidence_prompt"],
-            "note": "Video mode uses a two-pass flow with question-routed Tiny/Light/Medium/Full anchor policies and minimal JSON evidence by default; SiliconFlow extracts compact evidence, then Bailian Qwen verifies it against compressed video/crop/transcript anchors for final answering.",
+            "note": "Video mode uses a two-pass flow with question-routed Tiny/Light/Medium/Full/Dense anchor policies and minimal JSON evidence by default; SiliconFlow extracts compact evidence, then Bailian Qwen verifies it against compressed video/crop/transcript anchors for final answering.",
         },
         "counts": {
             "total": len(records),
@@ -1416,7 +1417,7 @@ def main() -> None:
     parser.add_argument("--min-video-bytes", type=int, default=0)
     parser.add_argument("--max-video-bytes", type=int, default=0)
     parser.add_argument("--unique-video-ids", action="store_true")
-    parser.add_argument("--video-anchor-policy", choices=("auto", "manual", "tiny", "light", "medium", "full"), default="auto")
+    parser.add_argument("--video-anchor-policy", choices=("auto", "manual", "tiny", "light", "medium", "full", "dense"), default="auto")
     parser.add_argument("--video-anchor-fps", type=float, default=1.0)
     parser.add_argument("--video-anchor-max-frames", type=int, default=16)
     parser.add_argument("--video-anchor-max-side", type=int, default=512)
