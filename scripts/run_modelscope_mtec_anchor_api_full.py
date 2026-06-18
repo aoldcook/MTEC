@@ -639,6 +639,26 @@ def build_video_visual_context_prompt(package: Dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def video_only_anchor_contents(package: Dict[str, Any]) -> List[Dict[str, Any]]:
+    contents: List[Dict[str, Any]] = []
+    for anchor in package.get("low_resolution_anchor", {}).get("video_anchor", []):
+        path = anchor.get("low_fps_video_path")
+        if path and Path(path).exists():
+            contents.append(
+                {
+                    "type": "text",
+                    "text": (
+                        f"Attached video-only visual context anchor {anchor.get('anchor_link')}: "
+                        f"duration={anchor.get('source_duration_sec')}s; "
+                        f"frames={len(anchor.get('frames', []))}; target_fps={anchor.get('target_fps')}; "
+                        f"source_res={anchor.get('source_resolution')}."
+                    ),
+                }
+            )
+            contents.append(media_content("video", Path(path)))
+    return contents
+
+
 def compute_video_visual_context(
     client: "SiliconFlowClient",
     package: Dict[str, Any],
@@ -647,7 +667,7 @@ def compute_video_visual_context(
 ) -> Tuple[str, Dict[str, Any]]:
     return client.generate(
         [
-            *media_contents,
+            *(video_only_anchor_contents(package) or media_contents),
             {"type": "text", "text": build_video_visual_context_prompt(package)},
         ],
         max_tokens=max_tokens,
@@ -1031,17 +1051,31 @@ def run_video_record(
         )
         computed_visual_context_response = None
         computed_visual_context_meta = None
+        visual_context_error = None
         visual_context_reason = _video_visual_context_reason(policy_question, transcript_segment_count)
         visual_context_triggered = video_visual_context_pass == "true" or (
             video_visual_context_pass == "auto" and bool(visual_context_reason)
         )
         if visual_context_triggered:
-            computed_visual_context_response, computed_visual_context_meta = compute_video_visual_context(
-                client,
-                package,
-                media_contents,
-                max_tokens=video_visual_context_max_tokens,
-            )
+            try:
+                computed_visual_context_response, computed_visual_context_meta = compute_video_visual_context(
+                    client,
+                    package,
+                    media_contents,
+                    max_tokens=video_visual_context_max_tokens,
+                )
+            except FatalAPIError:
+                raise
+            except Exception as exc:
+                visual_context_error = f"{type(exc).__name__}: {exc}"
+                computed_visual_context_response = json.dumps(
+                    {
+                        "visual_context_error": visual_context_error,
+                        "fallback": "Skipped visual context hint after API error; continue with normal evidence pass.",
+                    },
+                    ensure_ascii=False,
+                )
+                computed_visual_context_meta = {"error": visual_context_error}
             package = structured_package(
                 question,
                 raw_package,
@@ -1128,6 +1162,7 @@ def run_video_record(
                 "video_visual_context_pass": video_visual_context_pass,
                 "video_visual_context_triggered": visual_context_triggered,
                 "video_visual_context_reason": visual_context_reason,
+                "video_visual_context_error": visual_context_error,
                 "video_visual_context_max_tokens": video_visual_context_max_tokens,
                 "evidence_pass": evidence_pass,
                 "prompt_style": prompt_style,
