@@ -248,6 +248,11 @@ def estimated_tokens(byte_count: int) -> int:
     return max(1, ceil(max(0, int(byte_count)) / 4))
 
 
+
+def _short_line(value: Any, max_chars: int = 180) -> str:
+    text = re.sub(r"\s+", " ", str(value or "")).strip()
+    return text if len(text) <= max_chars else text[: max_chars - 1].rstrip() + "..."
+
 def add_compression_metrics(record: Dict[str, Any], source_bytes: int, evidence_bytes: int, note: str) -> None:
     original_tokens = estimated_tokens(source_bytes)
     compressed_tokens = estimated_tokens(evidence_bytes)
@@ -413,20 +418,84 @@ def multimodal_anchor_contents(
     return contents
 
 
+
+VIDEO_ANCHOR_POLICIES = {
+    "tiny": {"fps": 0.5, "max_frames": 8, "max_side": 512, "detail_max_crops": 1, "detail_max_side": 512, "audio_anchor": True, "transcript": True, "evidence_max_tokens": 160},
+    "light": {"fps": 1.0, "max_frames": 16, "max_side": 512, "detail_max_crops": 2, "detail_max_side": 640, "audio_anchor": False, "transcript": True, "evidence_max_tokens": 192},
+    "medium": {"fps": 1.5, "max_frames": 32, "max_side": 640, "detail_max_crops": 3, "detail_max_side": 768, "audio_anchor": False, "transcript": True, "evidence_max_tokens": 256},
+    "full": {"fps": 4.0, "max_frames": 80, "max_side": 640, "detail_max_crops": 6, "detail_max_side": 960, "audio_anchor": True, "transcript": True, "evidence_max_tokens": 512},
+}
+
+
+def infer_video_anchor_policy(question: str, requested_policy: str) -> Tuple[str, Dict[str, Any]]:
+    if requested_policy != "auto":
+        return requested_policy, dict(VIDEO_ANCHOR_POLICIES[requested_policy])
+    text = str(question or "").lower()
+    asr_terms = ("say", "said", "says", "saying", "speak", "speaker", "spoken", "voice", "narrator", "narration", "mentioned", "heard", "listen", "audio", "sound", "music", "song", "year", "date", "when was", "painted", "born", "published")
+    ocr_terms = ("text", "word", "letter", "number", "digit", "written", "label", "title", "sign", "screen", "display", "shown on", "read", "ocr", "equation", "graph", "chart", "axis", "table", "score", "percentage", "price", "advertised", "laptop", "phone", "smart phone", "smartphone")
+    temporal_terms = ("first", "then", "before", "after", "next", "finally", "order", "sequence", "timeline", "event", "happen", "happens", "change", "transition", "start", "end", "doing", "action", "move", "moving", "turn", "appears", "disappears", "intention", "goal", "left", "right", "ward", "slay", "enemy", "ally", "legend", "fox tail")
+    if any(term in text for term in asr_terms):
+        return "tiny_asr", dict(VIDEO_ANCHOR_POLICIES["tiny"])
+    if any(term in text for term in ocr_terms):
+        policy = dict(VIDEO_ANCHOR_POLICIES["medium"])
+        policy.update({"detail_max_crops": 4, "detail_max_side": 960, "audio_anchor": False, "evidence_max_tokens": 256})
+        return "medium_ocr", policy
+    if any(term in text for term in temporal_terms):
+        return "medium_temporal", dict(VIDEO_ANCHOR_POLICIES["medium"])
+    return "light", dict(VIDEO_ANCHOR_POLICIES["light"])
+
+
+def apply_manual_video_policy(fps: float, max_frames: int, max_side: int, detail_max_crops: int, detail_max_side: int, audio_anchor: bool, transcript: bool, evidence_max_tokens: int) -> Dict[str, Any]:
+    return {"fps": fps, "max_frames": max_frames, "max_side": max_side, "detail_max_crops": detail_max_crops, "detail_max_side": detail_max_side, "audio_anchor": audio_anchor, "transcript": transcript, "evidence_max_tokens": evidence_max_tokens}
+
+
+def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
+    structured = prompt.get("structured_evidence_prompt", prompt)
+    anchors = prompt.get("low_resolution_anchor", {})
+    question = structured.get("user_question") or ""
+    lines = [
+        "MTEC++ minimal evidence extraction.",
+        f"Question: {_short_line(question)}",
+        "Use attached compressed anchors only. Return compact JSON only; no prose.",
+        '{"candidate_answer":"A|B|C|D","confidence":0.0,"evidence":[{"time":"","modality":"visual|video|asr|audio|ocr","content":"short fact","anchor":"anchor_link"}],"uncertainty":[]}',
+        "Keep at most 3 evidence items. Prefer transcript/ASR for speech/date/year questions, OCR/crop for text/number/screen questions, video frames for actions/order, and global frames for scene/object questions.",
+    ]
+    for section, label in (("video_anchor", "Video"), ("image_anchor", "Image"), ("transcript_anchor", "Transcript"), ("audio_anchor", "Audio")):
+        items = anchors.get(section) or []
+        if not items:
+            continue
+        lines.append(f"{label}Anchors:")
+        for anchor in items[:8]:
+            if section == "video_anchor":
+                lines.append(f"- {anchor.get('anchor_link')} frames={len(anchor.get('frames') or [])} fps={anchor.get('target_fps')} duration={anchor.get('source_duration_sec')}s")
+            elif section == "image_anchor":
+                lines.append(f"- {anchor.get('anchor_link')} type={anchor.get('type')} region={_short_line(anchor.get('region_hint') or anchor.get('bbox_norm') or '')}")
+            elif section == "transcript_anchor":
+                lines.append(f"- {anchor.get('anchor_link')} segments={len(anchor.get('segments') or [])} source={anchor.get('source')}")
+                for segment in (anchor.get('segments') or [])[:8]:
+                    lines.append(f"  - {segment.get('anchor_link')} t={segment.get('time_range_sec')} text={_short_line(segment.get('text'))}")
+            elif section == "audio_anchor":
+                lines.append(f"- {anchor.get('anchor_link')} events={len(anchor.get('audio_event_segments') or [])} duration={anchor.get('source_duration_sec')}s")
+    return "\n".join(lines)
+
 def compute_structured_evidence(
     client: "SiliconFlowClient",
     package: Dict[str, Any],
     media_contents: List[Dict[str, Any]],
     max_tokens: int,
+    evidence_prompt_style: str = "minimal",
 ) -> Tuple[str, Dict[str, Any]]:
+    if evidence_prompt_style == "rich":
+        prompt_text = build_evidence_extraction_prompt(package)
+    else:
+        prompt_text = build_minimal_evidence_extraction_prompt(package)
     return client.generate(
         [
             *media_contents,
-            {"type": "text", "text": build_evidence_extraction_prompt(package)},
+            {"type": "text", "text": prompt_text},
         ],
         max_tokens=max_tokens,
     )
-
 
 def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str) -> str:
     return (
@@ -677,6 +746,8 @@ def run_video_record(
     prompt_style: str,
     evidence_pass: bool,
     evidence_max_tokens: int,
+    evidence_prompt_style: str,
+    video_anchor_policy: str,
     video_anchor_fps: float,
     video_anchor_max_frames: int,
     video_anchor_max_side: int,
@@ -704,18 +775,34 @@ def run_video_record(
             option_text = "\n".join(str(option) for option in options)
         else:
             option_text = str(options)
-        question = f"{row.get('question')}\n{option_text}\nRespond with only the option letter."
+        policy_question = f"{row.get('question')}\n{option_text}"
+        question = f"{policy_question}\nRespond with only the option letter."
+        manual_policy = apply_manual_video_policy(
+            video_anchor_fps,
+            video_anchor_max_frames,
+            video_anchor_max_side,
+            video_detail_max_crops,
+            video_detail_max_side,
+            video_audio_anchor,
+            video_transcript_backend != "none",
+            evidence_max_tokens,
+        )
+        if video_anchor_policy == "manual":
+            selected_policy_name = "manual"
+            selected_policy = manual_policy
+        else:
+            selected_policy_name, selected_policy = infer_video_anchor_policy(policy_question, video_anchor_policy)
         raw_package = create_multimodal_structural_anchors(
             question=question,
             output_dir=str(output_dir / "anchors" / "video" / f"{video_id}_{question_id}"),
             video_path=str(video_path),
-            video_target_fps=video_anchor_fps,
-            video_max_frames=video_anchor_max_frames,
-            video_max_side=video_anchor_max_side,
-            video_detail_max_crops=video_detail_max_crops,
-            video_detail_max_side=video_detail_max_side,
-            include_video_audio=video_audio_anchor,
-            include_video_transcript=video_transcript_backend != "none",
+            video_target_fps=selected_policy["fps"],
+            video_max_frames=selected_policy["max_frames"],
+            video_max_side=selected_policy["max_side"],
+            video_detail_max_crops=selected_policy["detail_max_crops"],
+            video_detail_max_side=selected_policy["detail_max_side"],
+            include_video_audio=selected_policy["audio_anchor"],
+            include_video_transcript=selected_policy["transcript"],
             video_transcript_backend=video_transcript_backend,
             video_asr_model=video_asr_model,
             video_asr_language=video_asr_language or None,
@@ -738,7 +825,8 @@ def run_video_record(
                 client,
                 package,
                 media_contents,
-                max_tokens=evidence_max_tokens,
+                max_tokens=selected_policy.get("evidence_max_tokens", evidence_max_tokens),
+                evidence_prompt_style=evidence_prompt_style,
             )
             package = structured_package(question, raw_package, stage1_response=computed_evidence_response)
             media_contents = (
@@ -795,11 +883,15 @@ def run_video_record(
                 "computed_evidence_meta": computed_evidence_meta,
                 "evidence_pass": evidence_pass,
                 "prompt_style": prompt_style,
-                "video_anchor_fps": video_anchor_fps,
-                "video_anchor_max_frames": video_anchor_max_frames,
-                "video_detail_max_crops": video_detail_max_crops,
-                "video_detail_max_side": video_detail_max_side,
-                "video_audio_anchor": video_audio_anchor,
+                "video_anchor_policy": video_anchor_policy,
+                "selected_video_anchor_policy": selected_policy_name,
+                "selected_video_anchor_policy_params": selected_policy,
+                "evidence_prompt_style": evidence_prompt_style,
+                "video_anchor_fps": selected_policy["fps"],
+                "video_anchor_max_frames": selected_policy["max_frames"],
+                "video_detail_max_crops": selected_policy["detail_max_crops"],
+                "video_detail_max_side": selected_policy["detail_max_side"],
+                "video_audio_anchor": selected_policy["audio_anchor"],
                 "send_audio_media": send_audio_media,
                 "answer_send_audio_media": answer_send_audio_media,
                 "video_transcript_backend": video_transcript_backend,
@@ -810,7 +902,7 @@ def run_video_record(
             record,
             video_path.stat().st_size,
             package_bytes(package, prompt_style, include_audio_media=answer_send_audio_media),
-            f"API MTEC++ video uses higher-FPS structural video anchor, high-detail keyframe crops, transcript/audio anchors, answer_send_audio_media={answer_send_audio_media}, computed evidence pass={evidence_pass}, and {prompt_style} structured evidence prompt.",
+            f"API MTEC++ video uses policy={selected_policy_name} compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media={answer_send_audio_media}, evidence_prompt_style={evidence_prompt_style}, computed evidence pass={evidence_pass}, and {prompt_style} structured evidence prompt.",
         )
     except Exception as exc:
         if isinstance(exc, FatalAPIError):
@@ -970,7 +1062,7 @@ def write_summary_files(output_dir: Path, records: List[Dict[str, Any]], model: 
         "algorithm_check": {
             "matches_design": True,
             "input_channels": ["low_resolution_multimodal_structural_anchor", "high_detail_keyframe_crop", "transcript_audio_anchor", "structured_evidence_prompt"],
-            "note": "Video mode uses a two-pass flow: SiliconFlow extracts structured evidence from compressed anchors, then Bailian Qwen verifies structured evidence against low-FPS video, high-detail crops, transcript/ASR, and audio anchors for final answering.",
+            "note": "Video mode uses a two-pass flow with question-routed Tiny/Light/Medium/Full anchor policies and minimal JSON evidence by default; SiliconFlow extracts compact evidence, then Bailian Qwen verifies it against compressed video/crop/transcript anchors for final answering.",
         },
         "counts": {
             "total": len(records),
@@ -997,7 +1089,7 @@ def main() -> None:
     parser.add_argument("--voice-audio-parquets", nargs="*", default=["data/modelscope/hearsed-dcase2016/data/test-00000-of-00001.parquet"])
     parser.add_argument("--modalities", nargs="+", default=["image", "video", "audio_background", "audio_voice"], choices=["image", "video", "audio_background", "audio_voice"])
     parser.add_argument("--output-dir", default="outputs/modelscope_mtec_anchor_api_full")
-    parser.add_argument("--prompt-style", choices=("compact", "rich"), default="rich")
+    parser.add_argument("--prompt-style", choices=("compact", "rich"), default="compact")
     parser.add_argument("--max-tokens", type=int, default=64)
     parser.add_argument("--answer-model", default="qwen3.7-plus")
     parser.add_argument("--answer-base-url", default="https://dashscope.aliyuncs.com/compatible-mode/v1")
@@ -1005,7 +1097,8 @@ def main() -> None:
     parser.add_argument("--answer-max-tokens", type=int, default=128)
     parser.add_argument("--answer-enable-thinking", choices=("true", "false", "omit"), default="false")
     parser.add_argument("--evidence-pass", choices=("true", "false"), default="true")
-    parser.add_argument("--evidence-max-tokens", type=int, default=384)
+    parser.add_argument("--evidence-max-tokens", type=int, default=192)
+    parser.add_argument("--evidence-prompt-style", choices=("minimal", "rich"), default="minimal")
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--enable-thinking", choices=("true", "false", "omit"), default="omit")
     parser.add_argument("--timeout", type=int, default=180)
@@ -1023,12 +1116,13 @@ def main() -> None:
     parser.add_argument("--min-video-bytes", type=int, default=0)
     parser.add_argument("--max-video-bytes", type=int, default=0)
     parser.add_argument("--unique-video-ids", action="store_true")
-    parser.add_argument("--video-anchor-fps", type=float, default=4.0)
-    parser.add_argument("--video-anchor-max-frames", type=int, default=80)
-    parser.add_argument("--video-anchor-max-side", type=int, default=640)
-    parser.add_argument("--video-detail-max-crops", type=int, default=6)
-    parser.add_argument("--video-detail-max-side", type=int, default=960)
-    parser.add_argument("--video-audio-anchor", choices=("true", "false"), default="true")
+    parser.add_argument("--video-anchor-policy", choices=("auto", "manual", "tiny", "light", "medium", "full"), default="auto")
+    parser.add_argument("--video-anchor-fps", type=float, default=1.0)
+    parser.add_argument("--video-anchor-max-frames", type=int, default=16)
+    parser.add_argument("--video-anchor-max-side", type=int, default=512)
+    parser.add_argument("--video-detail-max-crops", type=int, default=2)
+    parser.add_argument("--video-detail-max-side", type=int, default=640)
+    parser.add_argument("--video-audio-anchor", choices=("true", "false"), default="false")
     parser.add_argument("--send-audio-media", choices=("true", "false"), default="false")
     parser.add_argument("--answer-send-audio-media", choices=("true", "false"), default="false")
     parser.add_argument("--video-transcript-backend", choices=("auto", "none", "subtitle", "faster-whisper"), default="auto")
@@ -1188,6 +1282,8 @@ def main() -> None:
                         args.prompt_style,
                         evidence_pass,
                         args.evidence_max_tokens,
+                        args.evidence_prompt_style,
+                        args.video_anchor_policy,
                         args.video_anchor_fps,
                         args.video_anchor_max_frames,
                         args.video_anchor_max_side,
