@@ -1,6 +1,8 @@
+import html
 import json
 import io
 import math
+import re
 import shutil
 import subprocess
 import wave
@@ -261,6 +263,7 @@ def create_multimodal_structural_anchors(
     video_asr_model: str = DEFAULT_VIDEO_ASR_MODEL,
     video_asr_language: Optional[str] = "en",
     video_transcript_max_segments: int = DEFAULT_VIDEO_TRANSCRIPT_MAX_SEGMENTS,
+    video_subtitle_path: Optional[str] = None,
     video_detail_max_crops: int = DEFAULT_VIDEO_DETAIL_MAX_CROPS,
     video_detail_max_side: int = DEFAULT_VIDEO_DETAIL_MAX_SIDE,
 ) -> Dict[str, Any]:
@@ -314,6 +317,7 @@ def create_multimodal_structural_anchors(
             model_name=video_asr_model,
             language=video_asr_language,
             max_segments=video_transcript_max_segments,
+            external_subtitle_path=video_subtitle_path,
         )
 
     package = build_low_resolution_anchor_package(
@@ -508,6 +512,7 @@ def create_video_transcript_anchor(
     language: Optional[str] = "en",
     max_segments: int = DEFAULT_VIDEO_TRANSCRIPT_MAX_SEGMENTS,
     anchor_id: str = "video_transcript_anchor",
+    external_subtitle_path: Optional[str] = None,
 ) -> Dict[str, Any]:
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
@@ -515,7 +520,19 @@ def create_video_transcript_anchor(
     segments: List[Dict[str, Any]] = []
     source = "none"
 
-    if backend in {"auto", "subtitle"}:
+    if backend in {"auto", "subtitle"} and external_subtitle_path:
+        external_path = Path(external_subtitle_path)
+        if external_path.exists() and external_path.stat().st_size > 0:
+            subtitle_segments = _parse_srt(external_path.read_text(encoding="utf-8", errors="ignore"), anchor_id, source="external_subtitle")
+            if subtitle_segments:
+                segments = subtitle_segments
+                source = "external_subtitle"
+            else:
+                warnings.append(f"External subtitle file had no parseable segments: {external_path}")
+        else:
+            warnings.append(f"External subtitle file missing or empty: {external_path}")
+
+    if not segments and backend in {"auto", "subtitle"}:
         subtitle_segments, subtitle_warning = _extract_embedded_subtitles(video_path, output_path, anchor_id)
         if subtitle_warning:
             warnings.append(subtitle_warning)
@@ -557,6 +574,7 @@ def create_video_transcript_anchor(
         "source": source,
         "backend": backend,
         "model_name": model_name if source == "faster_whisper_asr" else None,
+        "external_subtitle_path": str(external_subtitle_path) if external_subtitle_path else None,
         "language": language,
         "segments": segments[:max_segments],
         "text_preview": text[:1200],
@@ -588,7 +606,15 @@ def _extract_embedded_subtitles(
     return _parse_srt(subtitle_path.read_text(encoding="utf-8", errors="ignore"), anchor_id), None
 
 
-def _parse_srt(text: str, anchor_id: str) -> List[Dict[str, Any]]:
+
+def _clean_caption_text(value: str) -> str:
+    text = html.unescape(str(value or ""))
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"\{\\[^}]+\}", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    return text
+
+def _parse_srt(text: str, anchor_id: str, source: str = "embedded_subtitle") -> List[Dict[str, Any]]:
     segments: List[Dict[str, Any]] = []
     blocks = [block.strip() for block in re_split_blank_lines(text) if block.strip()]
     for index, block in enumerate(blocks, start=1):
@@ -599,7 +625,7 @@ def _parse_srt(text: str, anchor_id: str) -> List[Dict[str, Any]]:
         if not time_line:
             continue
         start_text, end_text = [part.strip() for part in time_line.split("-->", 1)]
-        caption = " ".join(line for line in lines if "-->" not in line and not line.isdigit()).strip()
+        caption = _clean_caption_text(" ".join(line for line in lines if "-->" not in line and not line.isdigit()))
         if not caption:
             continue
         segments.append(
@@ -608,7 +634,7 @@ def _parse_srt(text: str, anchor_id: str) -> List[Dict[str, Any]]:
                 "anchor_link": f"{anchor_id}_seg_{index:04d}",
                 "time_range_sec": [_srt_time_to_seconds(start_text), _srt_time_to_seconds(end_text)],
                 "text": caption,
-                "source": "embedded_subtitle",
+                "source": source,
             }
         )
     return segments

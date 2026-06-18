@@ -743,6 +743,17 @@ def downloaded_videos(zips_dir: Path) -> Dict[str, Tuple[Path, zipfile.ZipInfo]]
     return by_id
 
 
+
+def downloaded_subtitles(subtitle_zip: Path) -> Dict[str, Tuple[Path, zipfile.ZipInfo]]:
+    by_id: Dict[str, Tuple[Path, zipfile.ZipInfo]] = {}
+    if not subtitle_zip.exists():
+        return by_id
+    with zipfile.ZipFile(subtitle_zip) as archive:
+        for info in archive.infolist():
+            if info.filename.lower().endswith((".srt", ".vtt")) and info.file_size > 0:
+                by_id[Path(info.filename).stem] = (subtitle_zip, info)
+    return by_id
+
 def extract_zip_member(zip_path: Path, member: zipfile.ZipInfo, output_dir: Path) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / Path(member.filename).name
@@ -758,6 +769,7 @@ def run_video_record(
     answer_client: SiliconFlowClient,
     row: Dict[str, Any],
     video_lookup: Dict[str, Tuple[Path, zipfile.ZipInfo]],
+    subtitle_lookup: Optional[Dict[str, Tuple[Path, zipfile.ZipInfo]]],
     output_dir: Path,
     max_tokens: int,
     answer_max_tokens: int,
@@ -811,9 +823,14 @@ def run_video_record(
             selected_policy = manual_policy
         else:
             selected_policy_name, selected_policy = infer_video_anchor_policy(policy_question, video_anchor_policy)
+        anchor_output_dir = output_dir / "anchors" / "video" / f"{video_id}_{question_id}"
+        video_subtitle_path = None
+        if subtitle_lookup and selected_policy.get("transcript") and video_id in subtitle_lookup:
+            sub_zip, sub_member = subtitle_lookup[video_id]
+            video_subtitle_path = extract_zip_member(sub_zip, sub_member, anchor_output_dir / "subtitle")
         raw_package = create_multimodal_structural_anchors(
             question=question,
-            output_dir=str(output_dir / "anchors" / "video" / f"{video_id}_{question_id}"),
+            output_dir=str(anchor_output_dir),
             video_path=str(video_path),
             video_target_fps=selected_policy["fps"],
             video_max_frames=selected_policy["max_frames"],
@@ -823,6 +840,7 @@ def run_video_record(
             include_video_audio=selected_policy["audio_anchor"],
             include_video_transcript=selected_policy["transcript"],
             video_transcript_backend=video_transcript_backend,
+            video_subtitle_path=str(video_subtitle_path) if video_subtitle_path else None,
             video_asr_model=video_asr_model,
             video_asr_language=video_asr_language or None,
             video_transcript_max_segments=video_transcript_max_segments,
@@ -914,6 +932,9 @@ def run_video_record(
                 "send_audio_media": send_audio_media,
                 "answer_send_audio_media": answer_send_audio_media,
                 "video_transcript_backend": video_transcript_backend,
+                "video_subtitle_path": str(video_subtitle_path) if video_subtitle_path else None,
+                "transcript_segment_count": sum(len(anchor.get("segments") or []) for anchor in package.get("low_resolution_anchor", {}).get("transcript_anchor", [])),
+                "transcript_source": ",".join(str(anchor.get("source") or "") for anchor in package.get("low_resolution_anchor", {}).get("transcript_anchor", [])),
                 "video_asr_model": video_asr_model,
             }
         )
@@ -1111,6 +1132,7 @@ def main() -> None:
     parser.add_argument("--image-parquets", nargs="*", default=["data/modelscope/realworldqa/data/test-00000-of-00002.parquet", "data/modelscope/realworldqa/data/test-00001-of-00002.parquet"])
     parser.add_argument("--videomme-metadata", default="data/datasets/video-mme/videomme/test-00000-of-00001.parquet")
     parser.add_argument("--video-zips-dir", default="data/modelscope/video-mme-zips")
+    parser.add_argument("--videomme-subtitle-zip", default="data/datasets/video-mme/subtitle.zip")
     parser.add_argument("--background-audio-parquets", nargs="*", default=["data/modelscope/urbansound8k-noises/data/test-00000-of-00001-40cf49999a374336.parquet"])
     parser.add_argument("--voice-audio-parquets", nargs="*", default=["data/modelscope/hearsed-dcase2016/data/test-00000-of-00001.parquet"])
     parser.add_argument("--modalities", nargs="+", default=["image", "video", "audio_background", "audio_voice"], choices=["image", "video", "audio_background", "audio_voice"])
@@ -1262,6 +1284,7 @@ def main() -> None:
     if "video" in args.modalities:
         rng = random.Random(args.seed)
         video_lookup = downloaded_videos(resolve_path(args.video_zips_dir))
+        subtitle_lookup = downloaded_subtitles(resolve_path(args.videomme_subtitle_zip))
         meta = pd.read_parquet(resolve_path(args.videomme_metadata))
         if "videoID" in meta.columns:
             meta = meta[meta["videoID"].astype(str).isin(video_lookup.keys())]
@@ -1303,6 +1326,7 @@ def main() -> None:
                         answer_client,
                         row_dict,
                         video_lookup,
+                        subtitle_lookup,
                         output_dir,
                         args.max_tokens,
                         args.answer_max_tokens,
