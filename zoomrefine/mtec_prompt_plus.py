@@ -673,6 +673,11 @@ def format_compact_evidence_prompt(prompt: Dict[str, Any]) -> str:
     if summary:
         lines.append(f"Summary: {summary}")
 
+    visual_context_rows = _compact_visual_context_rows(structured.get("visual_context_hint"))
+    if visual_context_rows:
+        lines.append("NoTranscriptVisualContext:")
+        lines.extend(visual_context_rows)
+
     temporal_rows = _compact_temporal_rows(structured, anchors)
     if temporal_rows:
         lines.append("TemporalChain t|anchor|delta|note:")
@@ -986,6 +991,58 @@ def _safe_time_value(value: str) -> float:
         return float(value.rstrip("s"))
     except (TypeError, ValueError):
         return 0.0
+
+
+def _compact_visual_context_rows(value: Any) -> List[str]:
+    if not value:
+        return []
+    if isinstance(value, dict):
+        rows: List[str] = []
+        summary = value.get("visual_summary")
+        if summary:
+            rows.append(f"summary|{_one_line(summary)}")
+        keywords = value.get("question_keywords") or []
+        if keywords:
+            rows.append("keywords|" + _one_line(", ".join(str(item) for item in keywords[:16])))
+        actions = value.get("actions") or []
+        if actions:
+            rows.append("actions|" + _one_line(", ".join(str(item) for item in actions[:16])))
+        objects = value.get("visible_objects") or []
+        if objects:
+            rows.append("objects|" + _one_line(", ".join(str(item) for item in objects[:16])))
+        for event in (value.get("event_chain") or [])[:8]:
+            if isinstance(event, dict):
+                rows.append(
+                    "event|"
+                    + "|".join(
+                        [
+                            _one_line(event.get("time")),
+                            _one_line(event.get("action")),
+                            _one_line(", ".join(str(item) for item in (event.get("objects") or [])[:8])),
+                            _one_line(event.get("anchor")),
+                        ]
+                    )
+                )
+            else:
+                rows.append("event|" + _one_line(event))
+        option_cues = value.get("option_visual_cues") or {}
+        if isinstance(option_cues, dict):
+            for option, cue in list(option_cues.items())[:6]:
+                if isinstance(cue, dict):
+                    support = _one_line(", ".join(str(item) for item in (cue.get("support") or [])[:4]))
+                    contradiction = _one_line(", ".join(str(item) for item in (cue.get("contradiction") or [])[:4]))
+                    needs = _one_line(", ".join(str(item) for item in (cue.get("needs_check") or [])[:4]))
+                    rows.append(f"option_{option}|support={support}|contradiction={contradiction}|needs={needs}")
+                else:
+                    rows.append(f"option_{option}|{_one_line(cue)}")
+        absence = value.get("absence_checks") or []
+        if absence:
+            rows.append("absence|" + _one_line(", ".join(str(item) for item in absence[:8])))
+        uncertainty = value.get("uncertainty") or []
+        if uncertainty:
+            rows.append("uncertainty|" + _one_line(", ".join(str(item) for item in uncertainty[:8])))
+        return rows[:24]
+    return ["raw|" + _one_line(value)]
 
 
 def _compact_temporal_rows(

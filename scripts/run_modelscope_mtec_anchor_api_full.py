@@ -290,7 +290,12 @@ def add_compression_metrics(record: Dict[str, Any], source_bytes: int, evidence_
     )
 
 
-def structured_package(question: str, package: Dict[str, Any], stage1_response: Optional[str] = None) -> Dict[str, Any]:
+def structured_package(
+    question: str,
+    package: Dict[str, Any],
+    stage1_response: Optional[str] = None,
+    visual_context_response: Optional[str] = None,
+) -> Dict[str, Any]:
     anchors = package.get("low_resolution_anchor", {})
     image_anchors = anchors.get("image_anchor", [])
     video_anchors = anchors.get("video_anchor", [])
@@ -305,12 +310,41 @@ def structured_package(question: str, package: Dict[str, Any], stage1_response: 
         video_anchor=video_anchors,
         audio_anchor=audio_anchors,
     )
+    prompt = structured.setdefault("structured_evidence_prompt", {})
     if transcript_anchors:
         structured.setdefault("low_resolution_anchor", {})["transcript_anchor"] = transcript_anchors
-        prompt = structured.setdefault("structured_evidence_prompt", {})
         prompt["ocr_asr_evidence"] = _transcript_structured_evidence(transcript_anchors)
         prompt["question_relevant_time_windows"] = _transcript_question_windows(transcript_anchors)
+    if visual_context_response:
+        prompt["visual_context_hint"] = _coerce_visual_context_hint(visual_context_response)
     return structured
+
+
+def _coerce_visual_context_hint(response: Optional[str]) -> Any:
+    if not response:
+        return {}
+    text = str(response).strip()
+    if not text:
+        return {}
+    cleaned = text
+    if cleaned.startswith("```"):
+        lines = cleaned.splitlines()
+        if lines and lines[0].lstrip().startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip().startswith("```"):
+            lines = lines[:-1]
+        cleaned = "\n".join(lines).strip()
+    candidates = [cleaned]
+    start = cleaned.find("{")
+    end = cleaned.rfind("}")
+    if start >= 0 and end > start:
+        candidates.append(cleaned[start : end + 1])
+    for candidate in candidates:
+        try:
+            return json.loads(candidate)
+        except json.JSONDecodeError:
+            pass
+    return {"raw_visual_context": _short_line(cleaned, max_chars=1800)}
 
 
 def _transcript_structured_evidence(transcript_anchors: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -512,6 +546,11 @@ def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
         '{"candidate_answer":"A|B|C|D","confidence":0.0,"evidence":[{"time":"","modality":"visual|video|asr|audio|ocr","content":"short fact","anchor":"anchor_link"}],"uncertainty":[]}',
         "Keep at most 3 evidence items. Prefer transcript/ASR for speech/date/year questions, OCR/crop for text/number/screen questions, video frames for actions/order, and global frames for scene/object questions.",
     ]
+    visual_hint = structured.get("visual_context_hint")
+    if visual_hint:
+        lines.append("NoTranscriptVisualContextHint:")
+        lines.append(_short_line(json.dumps(visual_hint, ensure_ascii=False), max_chars=1600))
+        lines.append("Use the visual context hint to focus actions, objects, absence checks, and question keywords, but verify it against attached video/crop anchors.")
     for section, label in (("video_anchor", "Video"), ("image_anchor", "Image"), ("transcript_anchor", "Transcript"), ("audio_anchor", "Audio")):
         items = anchors.get(section) or []
         if not items:
@@ -555,6 +594,45 @@ def _prioritized_transcript_segments(anchor: Dict[str, Any], limit: int) -> List
             if len(selected) >= limit:
                 return selected
     return selected
+
+
+def build_video_visual_context_prompt(package: Dict[str, Any]) -> str:
+    structured = package.get("structured_evidence_prompt", package)
+    anchors = package.get("low_resolution_anchor", {})
+    question = structured.get("user_question") or ""
+    lines = [
+        "MTEC++ no-transcript visual context pass.",
+        f"Question: {_short_line(question)}",
+        "The video has no usable transcript/subtitles. Inspect the attached low-FPS video and high-detail keyframe crops.",
+        "Do not answer the multiple-choice question. Return compact JSON only.",
+        '{"visual_summary":"what the video is mainly about","event_chain":[{"time":"","action":"","objects":[],"anchor":""}],"visible_objects":[],"actions":[],"question_keywords":[],"option_visual_cues":{"A":{"support":[],"contradiction":[],"needs_check":[]},"B":{"support":[],"contradiction":[],"needs_check":[]},"C":{"support":[],"contradiction":[],"needs_check":[]},"D":{"support":[],"contradiction":[],"needs_check":[]}},"absence_checks":[],"uncertainty":[]}',
+        "Focus on: what happens, who/what moves, tools/props/objects, repeated actions, absent-vs-present options, and visual keywords that help retrieve or judge evidence later.",
+    ]
+    for anchor in (anchors.get("video_anchor") or [])[:3]:
+        lines.append(f"VideoAnchor {anchor.get('anchor_link')}: duration={anchor.get('source_duration_sec')}s frames={len(anchor.get('frames') or [])} fps={anchor.get('target_fps')}")
+        for frame in (anchor.get("frames") or [])[:12]:
+            lines.append(f"- {frame.get('anchor_link')} t={frame.get('time_sec')}s change={frame.get('change_score')}")
+    crops = [anchor for anchor in (anchors.get("image_anchor") or []) if anchor.get("type") == "video_keyframe_detail_crop"]
+    if crops:
+        lines.append("DetailCrops:")
+        for anchor in crops[:12]:
+            lines.append(f"- {anchor.get('anchor_link')} t={anchor.get('time_sec')}s region={_short_line(anchor.get('region_hint') or '')} reason={_short_line(anchor.get('selection_reason') or '')}")
+    return "\n".join(lines)
+
+
+def compute_video_visual_context(
+    client: "SiliconFlowClient",
+    package: Dict[str, Any],
+    media_contents: List[Dict[str, Any]],
+    max_tokens: int,
+) -> Tuple[str, Dict[str, Any]]:
+    return client.generate(
+        [
+            *media_contents,
+            {"type": "text", "text": build_video_visual_context_prompt(package)},
+        ],
+        max_tokens=max_tokens,
+    )
 
 
 def compute_structured_evidence(
@@ -855,6 +933,8 @@ def run_video_record(
     video_query_max_segments: int = 12,
     video_query_window_padding_sec: float = 8.0,
     video_query_detail_extra_crops: int = 4,
+    video_visual_context_pass: str = "auto",
+    video_visual_context_max_tokens: int = 384,
     cleanup_record_artifacts_enabled: bool = False,
 ) -> Dict[str, Any]:
     video_id = str(row.get("videoID"))
@@ -926,6 +1006,35 @@ def run_video_record(
             video_anchor = package["low_resolution_anchor"]["video_anchor"][0]
             video_input = Path(video_anchor.get("low_fps_video_path") or str(video_path))
             media_contents = [media_content("video", video_input)]
+        transcript_segment_count = sum(
+            len(anchor.get("segments") or [])
+            for anchor in package.get("low_resolution_anchor", {}).get("transcript_anchor", [])
+        )
+        computed_visual_context_response = None
+        computed_visual_context_meta = None
+        visual_context_triggered = video_visual_context_pass == "true" or (
+            video_visual_context_pass == "auto" and transcript_segment_count == 0
+        )
+        if visual_context_triggered:
+            computed_visual_context_response, computed_visual_context_meta = compute_video_visual_context(
+                client,
+                package,
+                media_contents,
+                max_tokens=video_visual_context_max_tokens,
+            )
+            package = structured_package(
+                question,
+                raw_package,
+                visual_context_response=computed_visual_context_response,
+            )
+            media_contents = (
+                multimodal_anchor_contents(
+                    package,
+                    include_images=False,
+                    include_audio_media=send_audio_media,
+                )
+                or media_contents
+            )
         computed_evidence_response = None
         computed_evidence_meta = None
         if evidence_pass:
@@ -936,7 +1045,12 @@ def run_video_record(
                 max_tokens=selected_policy.get("evidence_max_tokens", evidence_max_tokens),
                 evidence_prompt_style=evidence_prompt_style,
             )
-            package = structured_package(question, raw_package, stage1_response=computed_evidence_response)
+            package = structured_package(
+                question,
+                raw_package,
+                stage1_response=computed_evidence_response,
+                visual_context_response=computed_visual_context_response,
+            )
             media_contents = (
                 multimodal_anchor_contents(
                     package,
@@ -989,6 +1103,11 @@ def run_video_record(
                 "final_content_empty": not bool(str(response or "").strip()),
                 "computed_evidence_response": computed_evidence_response,
                 "computed_evidence_meta": computed_evidence_meta,
+                "computed_visual_context_response": computed_visual_context_response,
+                "computed_visual_context_meta": computed_visual_context_meta,
+                "video_visual_context_pass": video_visual_context_pass,
+                "video_visual_context_triggered": visual_context_triggered,
+                "video_visual_context_max_tokens": video_visual_context_max_tokens,
                 "evidence_pass": evidence_pass,
                 "prompt_style": prompt_style,
                 "video_anchor_policy": video_anchor_policy,
@@ -1258,6 +1377,8 @@ def main() -> None:
     parser.add_argument("--video-query-max-segments", type=int, default=12)
     parser.add_argument("--video-query-window-padding-sec", type=float, default=8.0)
     parser.add_argument("--video-query-detail-extra-crops", type=int, default=4)
+    parser.add_argument("--video-visual-context-pass", choices=("auto", "true", "false"), default="auto")
+    parser.add_argument("--video-visual-context-max-tokens", type=int, default=384)
     parser.add_argument("--shuffle", action="store_true")
     parser.add_argument("--seed", type=int, default=20260615)
     parser.add_argument("--max-per-image-source", type=int, default=0)
@@ -1432,6 +1553,8 @@ def main() -> None:
                         args.video_query_max_segments,
                         args.video_query_window_padding_sec,
                         args.video_query_detail_extra_crops,
+                        args.video_visual_context_pass,
+                        args.video_visual_context_max_tokens,
                         args.cleanup_record_artifacts,
                     )
                 )
