@@ -596,6 +596,23 @@ def _prioritized_transcript_segments(anchor: Dict[str, Any], limit: int) -> List
     return selected
 
 
+def _video_visual_context_reason(question: str, transcript_segment_count: int) -> str:
+    text = str(question or "").lower()
+    if transcript_segment_count <= 0:
+        return "missing_transcript"
+    hard_terms = (
+        "absent", "not appear", "not shown", "not used", "not discussed", "not mentioned",
+        "which of the following", "which acrobatic", "which component", "distinct color",
+        "color", "chassis", "power supply", "graphics card", "motherboard", "memory stick",
+        "why", "intention", "goal", "purpose", "doing", "action", "fighting", "playing",
+        "screen", "display", "shown on", "visible", "text", "number", "ocr",
+        "what does this video show", "what is the video regarding",
+    )
+    if any(term in text for term in hard_terms):
+        return "hard_visual_or_negative_question"
+    return ""
+
+
 def build_video_visual_context_prompt(package: Dict[str, Any]) -> str:
     structured = package.get("structured_evidence_prompt", package)
     anchors = package.get("low_resolution_anchor", {})
@@ -1012,8 +1029,9 @@ def run_video_record(
         )
         computed_visual_context_response = None
         computed_visual_context_meta = None
+        visual_context_reason = _video_visual_context_reason(policy_question, transcript_segment_count)
         visual_context_triggered = video_visual_context_pass == "true" or (
-            video_visual_context_pass == "auto" and transcript_segment_count == 0
+            video_visual_context_pass == "auto" and bool(visual_context_reason)
         )
         if visual_context_triggered:
             computed_visual_context_response, computed_visual_context_meta = compute_video_visual_context(
@@ -1107,6 +1125,7 @@ def run_video_record(
                 "computed_visual_context_meta": computed_visual_context_meta,
                 "video_visual_context_pass": video_visual_context_pass,
                 "video_visual_context_triggered": visual_context_triggered,
+                "video_visual_context_reason": visual_context_reason,
                 "video_visual_context_max_tokens": video_visual_context_max_tokens,
                 "evidence_pass": evidence_pass,
                 "prompt_style": prompt_style,
@@ -1379,6 +1398,7 @@ def main() -> None:
     parser.add_argument("--video-query-detail-extra-crops", type=int, default=4)
     parser.add_argument("--video-visual-context-pass", choices=("auto", "true", "false"), default="auto")
     parser.add_argument("--video-visual-context-max-tokens", type=int, default=384)
+    parser.add_argument("--video-record-keys", nargs="*", default=[], help="Run only exact Video-MME record keys like video:VIDEOID:QUESTIONID, preserving the provided order.")
     parser.add_argument("--shuffle", action="store_true")
     parser.add_argument("--seed", type=int, default=20260615)
     parser.add_argument("--max-per-image-source", type=int, default=0)
@@ -1490,27 +1510,37 @@ def main() -> None:
         meta = pd.read_parquet(resolve_path(args.videomme_metadata))
         if "videoID" in meta.columns:
             meta = meta[meta["videoID"].astype(str).isin(video_lookup.keys())]
+        requested_record_keys = [str(item) for item in (args.video_record_keys or [])]
+        requested_key_set = set(requested_record_keys)
         duration_candidates = []
         seen_video_ids: Set[str] = set()
         for _, row in meta.iterrows():
             row_dict = row.to_dict()
-            if not video_row_matches_duration(row_dict, args):
-                continue
             video_id = str(row_dict.get("videoID"))
+            question_id = str(row_dict.get("question_id") or row_dict.get("index") or "")
+            row_key = f"video:{video_id}:{question_id}"
+            if requested_key_set:
+                if row_key not in requested_key_set:
+                    continue
+            elif not video_row_matches_duration(row_dict, args):
+                continue
             if args.unique_video_ids and video_id in seen_video_ids:
                 continue
             seen_video_ids.add(video_id)
             duration_candidates.append(row_dict)
-        if args.shuffle:
+        if requested_record_keys:
+            order = {key: index for index, key in enumerate(requested_record_keys)}
+            duration_candidates.sort(key=lambda row: order.get(f"video:{row.get('videoID')}:{row.get('question_id') or row.get('index') or ''}", len(order)))
+        elif args.shuffle:
             rng.shuffle(duration_candidates)
         video_candidates = []
         for row_dict in duration_candidates:
             if not video_row_matches_resolution(row_dict, video_lookup, output_dir, args):
                 continue
             video_candidates.append(row_dict)
-            if args.limit_per_modality and len(video_candidates) >= args.limit_per_modality:
+            if not requested_record_keys and args.limit_per_modality and len(video_candidates) >= args.limit_per_modality:
                 break
-        if args.limit_per_modality:
+        if args.limit_per_modality and not requested_record_keys:
             video_candidates = video_candidates[: args.limit_per_modality]
         video_audio_anchor = args.video_audio_anchor == "true"
         send_audio_media = args.send_audio_media == "true"
