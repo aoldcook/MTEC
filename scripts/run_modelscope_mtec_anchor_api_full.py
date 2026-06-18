@@ -55,6 +55,24 @@ def write_bytes(path: Path, data: bytes) -> Path:
     return path
 
 
+
+def cleanup_record_artifacts(*paths: Any) -> int:
+    removed = 0
+    for value in paths:
+        if not value:
+            continue
+        path = Path(str(value))
+        try:
+            if path.is_dir():
+                shutil.rmtree(path)
+                removed += 1
+            elif path.exists():
+                path.unlink()
+                removed += 1
+        except Exception:
+            pass
+    return removed
+
 def image_stats_from_row(row: Dict[str, Any]) -> Dict[str, Any]:
     image_cell = row.get("image") or {}
     image_bytes = image_cell.get("bytes")
@@ -760,6 +778,7 @@ def run_video_record(
     video_asr_model: str,
     video_asr_language: str,
     video_transcript_max_segments: int,
+    cleanup_record_artifacts_enabled: bool = False,
 ) -> Dict[str, Any]:
     video_id = str(row.get("videoID"))
     question_id = str(row.get("question_id") or row.get("index") or "")
@@ -904,6 +923,13 @@ def run_video_record(
             package_bytes(package, prompt_style, include_audio_media=answer_send_audio_media),
             f"API MTEC++ video uses policy={selected_policy_name} compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media={answer_send_audio_media}, evidence_prompt_style={evidence_prompt_style}, computed evidence pass={evidence_pass}, and {prompt_style} structured evidence prompt.",
         )
+        if cleanup_record_artifacts_enabled:
+            removed = cleanup_record_artifacts(
+                output_dir / "anchors" / "video" / f"{video_id}_{question_id}",
+                video_path,
+            )
+            record["cleanup_record_artifacts"] = True
+            record["cleanup_removed_paths"] = removed
     except Exception as exc:
         if isinstance(exc, FatalAPIError):
             raise
@@ -1132,6 +1158,7 @@ def main() -> None:
     parser.add_argument("--shuffle", action="store_true")
     parser.add_argument("--seed", type=int, default=20260615)
     parser.add_argument("--max-per-image-source", type=int, default=0)
+    parser.add_argument("--cleanup-record-artifacts", action="store_true", help="Delete per-record extracted videos and generated anchors after metrics are written to JSONL.")
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
@@ -1296,6 +1323,7 @@ def main() -> None:
                         args.video_asr_model,
                         args.video_asr_language,
                         args.video_transcript_max_segments,
+                        args.cleanup_record_artifacts,
                     )
                 )
             except FatalAPIError:
