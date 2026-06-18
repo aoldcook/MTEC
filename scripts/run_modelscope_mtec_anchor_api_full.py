@@ -307,7 +307,41 @@ def structured_package(question: str, package: Dict[str, Any], stage1_response: 
     )
     if transcript_anchors:
         structured.setdefault("low_resolution_anchor", {})["transcript_anchor"] = transcript_anchors
+        prompt = structured.setdefault("structured_evidence_prompt", {})
+        prompt["ocr_asr_evidence"] = _transcript_structured_evidence(transcript_anchors)
+        prompt["question_relevant_time_windows"] = _transcript_question_windows(transcript_anchors)
     return structured
+
+
+def _transcript_structured_evidence(transcript_anchors: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    evidence: List[Dict[str, Any]] = []
+    seen = set()
+    for anchor in transcript_anchors:
+        source = anchor.get("source") or anchor.get("backend") or "transcript"
+        for segment in (anchor.get("question_relevant_segments") or [])[:16]:
+            key = segment.get("anchor_link") or segment.get("anchor_id")
+            if key in seen:
+                continue
+            seen.add(key)
+            evidence.append(
+                {
+                    "time": segment.get("time_range_sec"),
+                    "source": source,
+                    "content": segment.get("text"),
+                    "anchor_link": key or anchor.get("anchor_link"),
+                    "selection_role": segment.get("selection_role") or "question_relevant_transcript",
+                    "relevance_score": segment.get("relevance_score"),
+                    "relevance_terms": segment.get("relevance_terms") or [],
+                }
+            )
+    return evidence
+
+
+def _transcript_question_windows(transcript_anchors: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    windows: List[Dict[str, Any]] = []
+    for anchor in transcript_anchors:
+        windows.extend(anchor.get("question_relevant_time_windows") or [])
+    return windows
 
 
 def package_prompt(package: Dict[str, Any], prompt_style: str = "compact") -> str:
@@ -489,12 +523,39 @@ def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
             elif section == "image_anchor":
                 lines.append(f"- {anchor.get('anchor_link')} type={anchor.get('type')} region={_short_line(anchor.get('region_hint') or anchor.get('bbox_norm') or '')}")
             elif section == "transcript_anchor":
-                lines.append(f"- {anchor.get('anchor_link')} segments={len(anchor.get('segments') or [])} source={anchor.get('source')}")
-                for segment in (anchor.get('segments') or [])[:8]:
-                    lines.append(f"  - {segment.get('anchor_link')} t={segment.get('time_range_sec')} text={_short_line(segment.get('text'))}")
+                relevant_count = len(anchor.get('question_relevant_segments') or [])
+                lines.append(
+                    f"- {anchor.get('anchor_link')} segments={len(anchor.get('segments') or [])} "
+                    f"relevant={relevant_count} source={anchor.get('source')}"
+                )
+                for window in (anchor.get('question_relevant_time_windows') or [])[:6]:
+                    lines.append(f"  - query_window t={window.get('time_range_sec')} anchors={window.get('anchor_links')}")
+                for segment in _prioritized_transcript_segments(anchor, limit=12):
+                    role = segment.get('selection_role') or 'transcript'
+                    score = segment.get('relevance_score')
+                    score_text = f" score={score}" if score else ""
+                    lines.append(
+                        f"  - {segment.get('anchor_link')} role={role}{score_text} "
+                        f"t={segment.get('time_range_sec')} text={_short_line(segment.get('text'))}"
+                    )
             elif section == "audio_anchor":
                 lines.append(f"- {anchor.get('anchor_link')} events={len(anchor.get('audio_event_segments') or [])} duration={anchor.get('source_duration_sec')}s")
     return "\n".join(lines)
+
+def _prioritized_transcript_segments(anchor: Dict[str, Any], limit: int) -> List[Dict[str, Any]]:
+    selected: List[Dict[str, Any]] = []
+    seen = set()
+    for bucket in (anchor.get("question_relevant_segments") or [], anchor.get("segments") or []):
+        for segment in bucket:
+            key = segment.get("anchor_link") or segment.get("anchor_id") or json.dumps(segment, sort_keys=True, ensure_ascii=False)
+            if key in seen:
+                continue
+            seen.add(key)
+            selected.append(segment)
+            if len(selected) >= limit:
+                return selected
+    return selected
+
 
 def compute_structured_evidence(
     client: "SiliconFlowClient",
@@ -790,6 +851,10 @@ def run_video_record(
     video_asr_model: str,
     video_asr_language: str,
     video_transcript_max_segments: int,
+    video_query_retrieval: bool = True,
+    video_query_max_segments: int = 12,
+    video_query_window_padding_sec: float = 8.0,
+    video_query_detail_extra_crops: int = 4,
     cleanup_record_artifacts_enabled: bool = False,
 ) -> Dict[str, Any]:
     video_id = str(row.get("videoID"))
@@ -823,6 +888,9 @@ def run_video_record(
             selected_policy = manual_policy
         else:
             selected_policy_name, selected_policy = infer_video_anchor_policy(policy_question, video_anchor_policy)
+        if selected_policy.get("transcript") and video_query_retrieval and video_query_detail_extra_crops > 0:
+            selected_policy = dict(selected_policy)
+            selected_policy["detail_max_crops"] = int(selected_policy.get("detail_max_crops") or 0) + int(video_query_detail_extra_crops)
         anchor_output_dir = output_dir / "anchors" / "video" / f"{video_id}_{question_id}"
         video_subtitle_path = None
         if subtitle_lookup and selected_policy.get("transcript") and video_id in subtitle_lookup:
@@ -841,6 +909,9 @@ def run_video_record(
             include_video_transcript=selected_policy["transcript"],
             video_transcript_backend=video_transcript_backend,
             video_subtitle_path=str(video_subtitle_path) if video_subtitle_path else None,
+            video_query_retrieval=video_query_retrieval,
+            video_query_max_segments=video_query_max_segments,
+            video_query_window_padding_sec=video_query_window_padding_sec,
             video_asr_model=video_asr_model,
             video_asr_language=video_asr_language or None,
             video_transcript_max_segments=video_transcript_max_segments,
@@ -933,6 +1004,12 @@ def run_video_record(
                 "answer_send_audio_media": answer_send_audio_media,
                 "video_transcript_backend": video_transcript_backend,
                 "video_subtitle_path": str(video_subtitle_path) if video_subtitle_path else None,
+                "video_query_retrieval": video_query_retrieval,
+                "video_query_max_segments": video_query_max_segments,
+                "video_query_window_padding_sec": video_query_window_padding_sec,
+                "video_query_detail_extra_crops": video_query_detail_extra_crops,
+                "question_relevant_transcript_segment_count": sum(len(anchor.get("question_relevant_segments") or []) for anchor in package.get("low_resolution_anchor", {}).get("transcript_anchor", [])),
+                "question_relevant_time_windows": [window for anchor in package.get("low_resolution_anchor", {}).get("transcript_anchor", []) for window in (anchor.get("question_relevant_time_windows") or [])],
                 "transcript_segment_count": sum(len(anchor.get("segments") or []) for anchor in package.get("low_resolution_anchor", {}).get("transcript_anchor", [])),
                 "transcript_source": ",".join(str(anchor.get("source") or "") for anchor in package.get("low_resolution_anchor", {}).get("transcript_anchor", [])),
                 "video_asr_model": video_asr_model,
@@ -1177,6 +1254,10 @@ def main() -> None:
     parser.add_argument("--video-asr-model", default="base.en")
     parser.add_argument("--video-asr-language", default="en")
     parser.add_argument("--video-transcript-max-segments", type=int, default=48)
+    parser.add_argument("--video-query-retrieval", choices=("true", "false"), default="true")
+    parser.add_argument("--video-query-max-segments", type=int, default=12)
+    parser.add_argument("--video-query-window-padding-sec", type=float, default=8.0)
+    parser.add_argument("--video-query-detail-extra-crops", type=int, default=4)
     parser.add_argument("--shuffle", action="store_true")
     parser.add_argument("--seed", type=int, default=20260615)
     parser.add_argument("--max-per-image-source", type=int, default=0)
@@ -1347,6 +1428,10 @@ def main() -> None:
                         args.video_asr_model,
                         args.video_asr_language,
                         args.video_transcript_max_segments,
+                        args.video_query_retrieval == "true",
+                        args.video_query_max_segments,
+                        args.video_query_window_padding_sec,
+                        args.video_query_detail_extra_crops,
                         args.cleanup_record_artifacts,
                     )
                 )

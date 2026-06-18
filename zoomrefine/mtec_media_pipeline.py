@@ -41,6 +41,8 @@ DEFAULT_IMAGE_DETAIL_MAX_SIDE = 512
 DEFAULT_VIDEO_DETAIL_MAX_CROPS = 6
 DEFAULT_VIDEO_DETAIL_MAX_SIDE = 960
 DEFAULT_VIDEO_TRANSCRIPT_MAX_SEGMENTS = 48
+DEFAULT_VIDEO_QUERY_MAX_SEGMENTS = 12
+DEFAULT_VIDEO_QUERY_WINDOW_PADDING_SEC = 8.0
 DEFAULT_VIDEO_ASR_MODEL = "base.en"
 _FASTER_WHISPER_MODEL_CACHE: Dict[Tuple[str, str, str], Any] = {}
 
@@ -264,6 +266,9 @@ def create_multimodal_structural_anchors(
     video_asr_language: Optional[str] = "en",
     video_transcript_max_segments: int = DEFAULT_VIDEO_TRANSCRIPT_MAX_SEGMENTS,
     video_subtitle_path: Optional[str] = None,
+    video_query_retrieval: bool = True,
+    video_query_max_segments: int = DEFAULT_VIDEO_QUERY_MAX_SEGMENTS,
+    video_query_window_padding_sec: float = DEFAULT_VIDEO_QUERY_WINDOW_PADDING_SEC,
     video_detail_max_crops: int = DEFAULT_VIDEO_DETAIL_MAX_CROPS,
     video_detail_max_side: int = DEFAULT_VIDEO_DETAIL_MAX_SIDE,
 ) -> Dict[str, Any]:
@@ -287,6 +292,27 @@ def create_multimodal_structural_anchors(
             max_frames=video_max_frames,
             max_side=video_max_side,
         )
+
+    transcript_anchor = None
+    question_time_windows: List[Dict[str, Any]] = []
+    if video_path and include_video_transcript:
+        transcript_anchor = create_video_transcript_anchor(
+            video_path=video_path,
+            output_dir=str(output_path),
+            backend=video_transcript_backend,
+            model_name=video_asr_model,
+            language=video_asr_language,
+            max_segments=video_transcript_max_segments,
+            anchor_id="video_transcript_anchor",
+            external_subtitle_path=video_subtitle_path,
+            question=question,
+            query_retrieval=video_query_retrieval,
+            query_max_segments=video_query_max_segments,
+            query_window_padding_sec=video_query_window_padding_sec,
+        )
+        question_time_windows = transcript_anchor.get("question_relevant_time_windows") or []
+
+    if video_path and video_anchor:
         video_detail_anchors = create_video_detail_frame_anchors(
             question=question,
             video_path=video_path,
@@ -294,6 +320,7 @@ def create_multimodal_structural_anchors(
             video_anchor=video_anchor,
             max_crops=video_detail_max_crops,
             max_side=video_detail_max_side,
+            question_time_windows=question_time_windows,
         )
         if video_detail_anchors:
             image_anchor = _merge_anchor_lists(image_anchor, video_detail_anchors)
@@ -306,18 +333,6 @@ def create_multimodal_structural_anchors(
             video_path,
             str(output_path),
             anchor_id="video_audio_anchor_low_bitrate",
-        )
-
-    transcript_anchor = None
-    if video_path and include_video_transcript:
-        transcript_anchor = create_video_transcript_anchor(
-            video_path=video_path,
-            output_dir=str(output_path),
-            backend=video_transcript_backend,
-            model_name=video_asr_model,
-            language=video_asr_language,
-            max_segments=video_transcript_max_segments,
-            external_subtitle_path=video_subtitle_path,
         )
 
     package = build_low_resolution_anchor_package(
@@ -347,11 +362,18 @@ def create_video_detail_frame_anchors(
     max_side: int = DEFAULT_VIDEO_DETAIL_MAX_SIDE,
     jpeg_quality: int = 86,
     anchor_id: str = "video_keyframe_detail",
+    question_time_windows: Optional[List[Dict[str, Any]]] = None,
 ) -> List[Dict[str, Any]]:
-    if max_crops <= 0 or not _needs_video_detail(question):
+    query_windows = question_time_windows or []
+    if max_crops <= 0 or (not _needs_video_detail(question) and not query_windows):
         return []
 
-    frames = _select_video_detail_frames(video_anchor, max_count=max(1, math.ceil(max_crops / 2)))
+    max_detail_frames = max(1, max_crops if query_windows else math.ceil(max_crops / 2))
+    frames = _select_video_detail_frames(
+        video_anchor,
+        max_count=max_detail_frames,
+        question_time_windows=query_windows,
+    )
     if not frames:
         return []
 
@@ -367,20 +389,24 @@ def create_video_detail_frame_anchors(
     source_height = int(video_anchor.get("source_resolution", {}).get("height") or 0)
     crop_specs = _video_detail_crop_specs(source_width, source_height, question)
 
+    frame_cache: Dict[int, Tuple[Image.Image, int, int]] = {}
     try:
-        for frame in frames:
+        for spec in crop_specs:
             if len(anchors) >= max_crops:
                 break
-            frame_index = int(frame.get("frame_index") or 0)
-            capture.set(cv2.CAP_PROP_POS_FRAMES, frame_index)
-            ok, frame_bgr = capture.read()
-            if not ok:
-                continue
-            image = Image.fromarray(cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB))
-            width, height = image.size
-            for spec in crop_specs:
+            for frame in frames:
                 if len(anchors) >= max_crops:
                     break
+                frame_index = int(frame.get("frame_index") or 0)
+                if frame_index not in frame_cache:
+                    capture.set(cv2.CAP_PROP_POS_FRAMES, frame_index)
+                    ok, frame_bgr = capture.read()
+                    if not ok:
+                        continue
+                    image = Image.fromarray(cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB))
+                    width, height = image.size
+                    frame_cache[frame_index] = (image, width, height)
+                image, width, height = frame_cache[frame_index]
                 box = _norm_box(width, height, *spec["norm"])
                 crop = image.crop(box)
                 crop.thumbnail((max_side, max_side), Image.Resampling.LANCZOS)
@@ -406,6 +432,9 @@ def create_video_detail_frame_anchors(
                         "region_hint": spec["label"],
                         "linked_video_anchor": frame.get("anchor_link"),
                         "change_score": frame.get("change_score"),
+                        "question_relevant": bool(frame.get("question_relevant")),
+                        "query_window": frame.get("query_window"),
+                        "selection_reason": frame.get("selection_reason"),
                         "compression": {
                             "format": "jpeg",
                             "bytes": detail_path.stat().st_size,
@@ -441,25 +470,107 @@ def _needs_video_detail(question: str) -> bool:
     return any(keyword in text for keyword in detail_keywords)
 
 
-def _select_video_detail_frames(video_anchor: Dict[str, Any], max_count: int) -> List[Dict[str, Any]]:
+def _select_video_detail_frames(
+    video_anchor: Dict[str, Any],
+    max_count: int,
+    question_time_windows: Optional[List[Dict[str, Any]]] = None,
+) -> List[Dict[str, Any]]:
     frames = [frame for frame in video_anchor.get("frames", []) if frame.get("frame_index") is not None]
-    if not frames:
-        return []
     selected: List[Dict[str, Any]] = []
+    source_fps = float(video_anchor.get("source_fps") or 0.0)
+    source_frame_count = int(video_anchor.get("source_frame_count") or 0)
+    source_duration = float(video_anchor.get("source_duration_sec") or 0.0)
+
+    for window in question_time_windows or []:
+        if len(selected) >= max_count:
+            break
+        start, end = _coerce_time_window(window)
+        if end < start:
+            start, end = end, start
+        midpoint = (start + end) / 2.0
+        points = [midpoint]
+        if max_count - len(selected) >= 3 and end - start > 6.0:
+            points = [start, midpoint, end]
+        for point in points:
+            if len(selected) >= max_count:
+                break
+            time_sec = _clamp_float(point, 0.0, source_duration) if source_duration > 0 else max(0.0, point)
+            if source_fps > 0:
+                frame_index = int(round(time_sec * source_fps))
+                if source_frame_count > 0:
+                    frame_index = max(0, min(source_frame_count - 1, frame_index))
+            else:
+                frame_index = int(round(time_sec))
+            nearest = _nearest_video_anchor_frame(frames, time_sec)
+            candidate = {
+                "frame_index": frame_index,
+                "time_sec": round(time_sec, 3),
+                "anchor_link": nearest.get("anchor_link") if nearest else None,
+                "change_score": nearest.get("change_score") if nearest else None,
+                "question_relevant": True,
+                "query_window": window,
+                "selection_reason": "question_relevant_transcript_window",
+            }
+            _append_unique_frame(selected, candidate, max_count)
+
     for boundary in video_anchor.get("event_boundaries", []):
         link = boundary.get("anchor_link")
         match = next((frame for frame in frames if frame.get("anchor_link") == link), None)
-        if match and match not in selected:
-            selected.append(match)
+        if match:
+            candidate = dict(match)
+            candidate.setdefault("selection_reason", "event_boundary")
+            _append_unique_frame(selected, candidate, max_count)
         if len(selected) >= max_count:
-            return selected
+            return sorted(selected, key=lambda item: float(item.get("time_sec") or 0.0))
+
     ranked = sorted(frames, key=lambda frame: float(frame.get("change_score") or 0.0), reverse=True)
     for frame in ranked:
-        if frame not in selected:
-            selected.append(frame)
+        candidate = dict(frame)
+        candidate.setdefault("selection_reason", "high_change_frame")
+        _append_unique_frame(selected, candidate, max_count)
         if len(selected) >= max_count:
             return sorted(selected, key=lambda item: float(item.get("time_sec") or 0.0))
     return sorted(selected, key=lambda item: float(item.get("time_sec") or 0.0))
+
+
+def _coerce_time_window(window: Any) -> Tuple[float, float]:
+    if isinstance(window, dict):
+        value = window.get("time_range_sec") or window.get("window_sec") or window.get("time")
+    else:
+        value = window
+    if isinstance(value, (list, tuple)) and len(value) >= 2:
+        return _safe_float_value(value[0]), _safe_float_value(value[1])
+    value_float = _safe_float_value(value)
+    return value_float, value_float
+
+
+def _nearest_video_anchor_frame(frames: List[Dict[str, Any]], time_sec: float) -> Optional[Dict[str, Any]]:
+    if not frames:
+        return None
+    return min(frames, key=lambda frame: abs(float(frame.get("time_sec") or 0.0) - time_sec))
+
+
+def _append_unique_frame(selected: List[Dict[str, Any]], candidate: Dict[str, Any], max_count: int) -> None:
+    frame_index = candidate.get("frame_index")
+    if frame_index is None:
+        return
+    if any(item.get("frame_index") == frame_index for item in selected):
+        return
+    if len(selected) < max_count:
+        selected.append(candidate)
+
+
+def _clamp_float(value: float, lower: float, upper: float) -> float:
+    if upper <= lower:
+        return max(lower, value)
+    return max(lower, min(upper, value))
+
+
+def _safe_float_value(value: Any) -> float:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return 0.0
 
 
 def _video_detail_crop_specs(width: int, height: int, question: str) -> List[Dict[str, Any]]:
@@ -513,6 +624,10 @@ def create_video_transcript_anchor(
     max_segments: int = DEFAULT_VIDEO_TRANSCRIPT_MAX_SEGMENTS,
     anchor_id: str = "video_transcript_anchor",
     external_subtitle_path: Optional[str] = None,
+    question: str = "",
+    query_retrieval: bool = True,
+    query_max_segments: int = DEFAULT_VIDEO_QUERY_MAX_SEGMENTS,
+    query_window_padding_sec: float = DEFAULT_VIDEO_QUERY_WINDOW_PADDING_SEC,
 ) -> Dict[str, Any]:
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
@@ -563,7 +678,25 @@ def create_video_transcript_anchor(
     elif not segments:
         warnings.append("No transcript segments extracted; install faster-whisper or provide embedded subtitles.")
 
-    text = " ".join(segment.get("text", "") for segment in segments).strip()
+    all_segments = segments
+    question_relevant_segments: List[Dict[str, Any]] = []
+    question_relevant_time_windows: List[Dict[str, Any]] = []
+    query_terms: List[str] = []
+    if query_retrieval and all_segments:
+        question_relevant_segments, question_relevant_time_windows, query_terms = _select_question_relevant_transcript_segments(
+            all_segments,
+            question,
+            max_segments=max(0, query_max_segments),
+            padding_sec=query_window_padding_sec,
+        )
+    if query_retrieval and all_segments and not question_relevant_segments:
+        warnings.append("Question-driven transcript retrieval found no direct lexical hits; using temporal coverage segments.")
+    stored_segments = _build_transcript_segments_for_prompt(
+        all_segments,
+        max_segments=max_segments,
+        question_relevant_segments=question_relevant_segments,
+    )
+    text = " ".join(segment.get("text", "") for segment in all_segments).strip()
     transcript_path = output_path / f"{anchor_id}.json"
     transcript_payload = {
         "anchor_id": anchor_id,
@@ -576,7 +709,12 @@ def create_video_transcript_anchor(
         "model_name": model_name if source == "faster_whisper_asr" else None,
         "external_subtitle_path": str(external_subtitle_path) if external_subtitle_path else None,
         "language": language,
-        "segments": segments[:max_segments],
+        "segments": stored_segments,
+        "all_segment_count": len(all_segments),
+        "query_retrieval": bool(query_retrieval),
+        "query_terms": query_terms,
+        "question_relevant_segments": question_relevant_segments,
+        "question_relevant_time_windows": question_relevant_time_windows,
         "text_preview": text[:1200],
         "warnings": warnings,
     }
@@ -632,6 +770,7 @@ def _parse_srt(text: str, anchor_id: str, source: str = "embedded_subtitle") -> 
             {
                 "anchor_id": f"{anchor_id}_seg_{index:04d}",
                 "anchor_link": f"{anchor_id}_seg_{index:04d}",
+                "sequence_index": index,
                 "time_range_sec": [_srt_time_to_seconds(start_text), _srt_time_to_seconds(end_text)],
                 "text": caption,
                 "source": source,
@@ -659,6 +798,154 @@ def _srt_time_to_seconds(value: str) -> float:
         return round(float(value), 3)
     except ValueError:
         return 0.0
+
+
+_QUERY_STOPWORDS = {
+    "the", "and", "for", "with", "that", "this", "from", "only", "option", "letter",
+    "respond", "video", "which", "what", "when", "where", "why", "how", "does", "did",
+    "doing", "show", "shows", "shown", "following", "about", "into", "onto", "they", "them",
+    "their", "while", "there", "were", "was", "are", "is", "not", "none", "more", "most",
+    "than", "previously", "believed", "specific", "evidence", "claim", "answer", "choose",
+}
+
+
+def _query_terms(question: str) -> List[str]:
+    normalized = re.sub(r"[^a-zA-Z0-9]+", " ", str(question or "").lower())
+    terms: List[str] = []
+    for token in normalized.split():
+        if len(token) < 3 and not token.isdigit():
+            continue
+        if token in _QUERY_STOPWORDS:
+            continue
+        if token not in terms:
+            terms.append(token)
+    return terms[:80]
+
+
+def _select_question_relevant_transcript_segments(
+    segments: List[Dict[str, Any]],
+    question: str,
+    max_segments: int,
+    padding_sec: float,
+) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]], List[str]]:
+    if max_segments <= 0:
+        return [], [], []
+    terms = _query_terms(question)
+    if not terms:
+        return [], [], []
+    scored: List[Tuple[float, int, List[str]]] = []
+    for index, segment in enumerate(segments):
+        text = str(segment.get("text") or "").lower()
+        if not text:
+            continue
+        hits = [term for term in terms if term in text]
+        if not hits:
+            continue
+        score = float(len(hits))
+        score += sum(1.0 for term in hits if len(term) >= 6)
+        score += min(2.0, len(set(hits)) / 3.0)
+        scored.append((score, index, hits[:12]))
+    if not scored:
+        return [], [], terms
+    scored.sort(key=lambda item: (-item[0], item[1]))
+    selected_indices: List[int] = []
+    score_by_index = {index: score for score, index, _ in scored}
+    hits_by_index = {index: hits for _, index, hits in scored}
+    for _, index, _ in scored:
+        for candidate_index in (index - 1, index, index + 1):
+            if candidate_index < 0 or candidate_index >= len(segments):
+                continue
+            if candidate_index in selected_indices:
+                continue
+            selected_indices.append(candidate_index)
+            if len(selected_indices) >= max_segments:
+                break
+        if len(selected_indices) >= max_segments:
+            break
+    selected: List[Dict[str, Any]] = []
+    for rank, index in enumerate(selected_indices, start=1):
+        item = dict(segments[index])
+        item["selection_role"] = "question_relevant_transcript"
+        item["relevance_rank"] = rank
+        item["relevance_score"] = round(score_by_index.get(index, 0.0), 3)
+        item["relevance_terms"] = hits_by_index.get(index, [])
+        selected.append(item)
+    windows = _merge_time_windows(selected, padding_sec=padding_sec)
+    return selected, windows, terms
+
+
+def _merge_time_windows(segments: List[Dict[str, Any]], padding_sec: float) -> List[Dict[str, Any]]:
+    ranges: List[Tuple[float, float, List[str]]] = []
+    for segment in segments:
+        value = segment.get("time_range_sec") or []
+        if not isinstance(value, (list, tuple)) or len(value) < 2:
+            continue
+        start = max(0.0, _safe_float_value(value[0]) - padding_sec)
+        end = max(start, _safe_float_value(value[1]) + padding_sec)
+        ranges.append((start, end, [str(segment.get("anchor_link") or "")]))
+    if not ranges:
+        return []
+    ranges.sort(key=lambda item: item[0])
+    merged: List[Tuple[float, float, List[str]]] = []
+    for start, end, links in ranges:
+        if not merged or start > merged[-1][1] + 1.0:
+            merged.append((start, end, links))
+        else:
+            old_start, old_end, old_links = merged[-1]
+            merged[-1] = (old_start, max(old_end, end), old_links + links)
+    return [
+        {
+            "time_range_sec": [round(start, 3), round(end, 3)],
+            "anchor_links": [link for link in links if link],
+            "source": "question_relevant_transcript",
+        }
+        for start, end, links in merged[:12]
+    ]
+
+
+def _build_transcript_segments_for_prompt(
+    segments: List[Dict[str, Any]],
+    max_segments: int,
+    question_relevant_segments: List[Dict[str, Any]],
+) -> List[Dict[str, Any]]:
+    if max_segments <= 0:
+        return []
+    selected: List[Dict[str, Any]] = []
+    seen = set()
+    for segment in question_relevant_segments:
+        key = segment.get("anchor_link") or segment.get("anchor_id")
+        if key in seen:
+            continue
+        seen.add(key)
+        selected.append(segment)
+        if len(selected) >= max_segments:
+            return selected
+    coverage = _select_transcript_coverage_segments(segments, max_segments - len(selected), seen)
+    selected.extend(coverage)
+    return selected[:max_segments]
+
+
+def _select_transcript_coverage_segments(
+    segments: List[Dict[str, Any]],
+    max_count: int,
+    seen: Optional[set] = None,
+) -> List[Dict[str, Any]]:
+    if max_count <= 0 or not segments:
+        return []
+    seen = seen or set()
+    available = [segment for segment in segments if (segment.get("anchor_link") or segment.get("anchor_id")) not in seen]
+    if len(available) <= max_count:
+        return [dict(segment) for segment in available]
+    if max_count == 1:
+        indices = [0]
+    else:
+        indices = sorted({round(i * (len(available) - 1) / (max_count - 1)) for i in range(max_count)})
+    coverage: List[Dict[str, Any]] = []
+    for index in indices:
+        item = dict(available[int(index)])
+        item.setdefault("selection_role", "temporal_coverage_transcript")
+        coverage.append(item)
+    return coverage[:max_count]
 
 
 def _extract_audio_wav_for_asr(video_path: str, output_path: Path) -> Tuple[Optional[Path], Optional[str]]:
@@ -743,6 +1030,7 @@ def _run_faster_whisper_asr(
                 {
                     "anchor_id": f"{anchor_id}_seg_{index:04d}",
                     "anchor_link": f"{anchor_id}_seg_{index:04d}",
+                    "sequence_index": index,
                     "time_range_sec": [round(float(segment.start), 3), round(float(segment.end), 3)],
                     "text": text,
                     "source": "faster_whisper_asr",

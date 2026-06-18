@@ -274,8 +274,11 @@ def build_structured_evidence_prompt(
                 "region_hint": image_anchor.get("region_hint"),
                 "linked_video_anchor": image_anchor.get("linked_video_anchor"),
                 "frame_index": image_anchor.get("frame_index"),
+                "question_relevant": image_anchor.get("question_relevant"),
+                "query_window": image_anchor.get("query_window"),
+                "selection_reason": image_anchor.get("selection_reason"),
             }
-            confidence = 0.9
+            confidence = 0.95 if image_anchor.get("question_relevant") else 0.9
             time_value = f"{float(image_anchor.get('time_sec') or 0.0):.2f}s"
         else:
             content = "Question-conditioned detail crop preserves local evidence that may be lost in the global anchor."
@@ -1073,18 +1076,38 @@ def _compact_transcript_rows(anchors: Dict[str, Any]) -> List[str]:
     rows: List[str] = []
     for anchor in anchors.get("transcript_anchor", []):
         source = anchor.get("source") or anchor.get("backend") or ""
-        for segment in (anchor.get("segments") or [])[:18]:
+        for segment in _prioritized_transcript_segments(anchor, limit=28):
+            role = segment.get("selection_role") or "transcript"
+            score = segment.get("relevance_score")
+            source_text = f"{source}/{role}"
+            if score:
+                source_text += f"/score={_short_number(score)}"
             rows.append(
                 "|".join(
                     [
                         str(segment.get("time_range_sec", "")),
                         str(segment.get("anchor_link") or anchor.get("anchor_link") or ""),
-                        str(source),
+                        source_text,
                         _one_line(segment.get("text")),
                     ]
                 )
             )
     return rows
+
+
+def _prioritized_transcript_segments(anchor: Dict[str, Any], limit: int) -> List[Dict[str, Any]]:
+    selected: List[Dict[str, Any]] = []
+    seen = set()
+    for bucket in (anchor.get("question_relevant_segments") or [], anchor.get("segments") or []):
+        for segment in bucket:
+            key = segment.get("anchor_link") or segment.get("anchor_id") or json.dumps(segment, sort_keys=True, ensure_ascii=False)
+            if key in seen:
+                continue
+            seen.add(key)
+            selected.append(segment)
+            if len(selected) >= limit:
+                return selected
+    return selected
 
 
 def _one_line(value: Any) -> str:
