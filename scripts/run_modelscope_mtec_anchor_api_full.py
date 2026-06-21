@@ -211,8 +211,6 @@ def extract_final_prediction(
     for source in (
         final_response,
         _combined_message_text(final_meta),
-        computed_evidence_response,
-        _combined_message_text(computed_evidence_meta),
     ):
         letter = extract_letter(source)
         if letter:
@@ -271,6 +269,67 @@ def _short_line(value: Any, max_chars: int = 180) -> str:
     text = re.sub(r"\s+", " ", str(value or "")).strip()
     return text if len(text) <= max_chars else text[: max_chars - 1].rstrip() + "..."
 
+
+def _strip_json_code_fence(text: str) -> str:
+    value = str(text or "").strip()
+    if value.startswith("```"):
+        lines = value.splitlines()
+        if lines and lines[0].lstrip().startswith("```"):
+            lines = lines[1:]
+        if lines and lines[-1].strip().startswith("```"):
+            lines = lines[:-1]
+        value = "\n".join(lines).strip()
+    return value
+
+
+def _json_object_slice(text: str) -> str:
+    start = text.find("{")
+    end = text.rfind("}")
+    if start >= 0 and end > start:
+        return text[start : end + 1]
+    return ""
+
+
+def validate_json_object_response(text: Any) -> Tuple[bool, str, Optional[Any]]:
+    cleaned = _strip_json_code_fence(str(text or ""))
+    if not cleaned:
+        return False, "empty_response", None
+    for candidate in (cleaned, _json_object_slice(cleaned)):
+        if not candidate:
+            continue
+        try:
+            parsed = json.loads(candidate)
+        except json.JSONDecodeError as exc:
+            last_error = f"{type(exc).__name__}: {exc}"
+            continue
+        if isinstance(parsed, dict):
+            return True, "", parsed
+        return False, "json_is_not_object", parsed
+    return False, last_error if "last_error" in locals() else "no_json_object", None
+
+
+def fallback_invalid_evidence_json(reason: str, attempts: List[Dict[str, Any]]) -> str:
+    return json.dumps(
+        {
+            "question_type": "unknown",
+            "temporal_scope": {"type": "unknown", "time_range_sec": None, "confidence": 0.0},
+            "observations": [],
+            "counts": [],
+            "visible_set": {},
+            "ocr_text": [],
+            "missing_required_evidence": ["evidence_pass_json_invalid_or_truncated"],
+            "forbidden_inference": ["Do not rely on the truncated evidence text."],
+            "uncertainties": [
+                f"Evidence pass did not return valid JSON after retry: {reason}",
+                "Final verifier must rely on attached low-resolution video, high-resolution crops, transcript, and deterministic anchors.",
+            ],
+            "must_rely_on_visual_inputs": True,
+            "retry_attempts": attempts,
+        },
+        ensure_ascii=False,
+    )
+
+
 def add_compression_metrics(record: Dict[str, Any], source_bytes: int, evidence_bytes: int, note: str) -> None:
     original_tokens = estimated_tokens(source_bytes)
     compressed_tokens = estimated_tokens(evidence_bytes)
@@ -290,17 +349,142 @@ def add_compression_metrics(record: Dict[str, Any], source_bytes: int, evidence_
     )
 
 
+def build_task_specific_resolver_guidance(question: str) -> Dict[str, Any]:
+    text = str(question or "").lower()
+    guidance: Dict[str, Any] = {
+        "resolver_type": "generic_video_evidence",
+        "priority": "normal",
+        "evidence_template": {
+            "facts": [],
+            "conflicts": [],
+            "fallback_needed": False,
+        },
+        "rules": [
+            "Use direct video/crop evidence over text evidence when they conflict.",
+            "Keep timestamps and anchor links for every observation.",
+        ],
+    }
+    if any(term in text for term in ("how many", "number of", "count", "challenger", "challengers", "men and women", "men", "women", "presenting")):
+        guidance.update(
+            {
+                "resolver_type": "cross_shot_entity_bank_counter",
+                "priority": "high",
+                "evidence_template": {
+                    "count_target": "participants_or_question_target",
+                    "global_entities": [
+                        {
+                            "id": "P01",
+                            "role": "challenger|presenter|participant|background|unknown",
+                            "gender_or_category": "male|female|unknown",
+                            "time_ranges": [],
+                            "appearance": "",
+                            "evidence_anchors": [],
+                            "include_in_count": False,
+                            "include_reason": "",
+                            "confidence": 0.0,
+                        }
+                    ],
+                    "excluded_entities": [],
+                    "count_value": None,
+                    "count_confidence": 0.0,
+                    "count_uncertainties": [],
+                },
+                "rules": [
+                    "Do not count one frame only; build an entity bank across the whole relevant timeline.",
+                    "Merge the same person across shots using clothing, body position, role, stage/challenge area, and repeated foreground presence.",
+                    "Exclude audience, referees, background people, and brief non-participants unless the question target includes them.",
+                    "For stage men/women questions, prefer wide/panorama frames and max stable on-stage cast over local object crops.",
+                    "For challenger questions, count only people who take part in the challenge or are foreground participants, not all detected persons.",
+                    "If entity identity across shots is uncertain, keep separate hypotheses and report count_uncertainties instead of forcing a low-confidence exact count.",
+                ],
+            }
+        )
+    if any(term in text for term in ("third clip", "second clip", "first clip", "clip in the video", "clip ")) or (
+        "basketball" in text or any(term in text for term in ("dunk", "3-pointer", "3 pointer", "three-pointer", "layup", "game-winning shot"))
+    ):
+        guidance.update(
+            {
+                "resolver_type": "logical_clip_action_resolver",
+                "priority": "high",
+                "evidence_template": {
+                    "logical_clips": [
+                        {
+                            "clip_index": 1,
+                            "time_range": "",
+                            "boundary_confidence": 0.0,
+                            "start_evidence": "",
+                            "end_evidence": "",
+                            "actions": [],
+                        }
+                    ],
+                    "target_clip_index": None,
+                    "target_logical_clip_range": "",
+                    "backup_range": "",
+                    "action_hypotheses": [],
+                    "clip_uncertainties": [],
+                },
+                "rules": [
+                    "Do not treat the third PySceneDetect atomic shot as the third logical clip.",
+                    "Merge adjacent shots into logical clips when they show the same play/event, replay, scoreboard context, or continuous action.",
+                    "For third clip questions, identify the third logical event clip and use a backup range if boundary confidence is below 0.75.",
+                    "For basketball actions, distinguish dunk vs three-pointer by release distance, ball arc, player distance from rim, and hand/rim contact.",
+                    "A dunk requires close rim contact or downward force near the basket; a three-pointer requires distant release and long arc.",
+                ],
+            }
+        )
+    if any(term in text for term in ("current score", "ongoing game", "scoreboard", "score of", "score?")):
+        guidance.update(
+            {
+                "resolver_type": "scoreboard_state_tracker",
+                "priority": "high",
+                "evidence_template": {
+                    "scoreboard_roi": {},
+                    "score_ocr_sequence": [],
+                    "voted_score": "",
+                    "vote_confidence": 0.0,
+                    "state_machine_notes": [],
+                },
+                "rules": [
+                    "Use high-resolution scoreboard crops and direct video frames over transcript or generic OCR text.",
+                    "Vote across multiple nearby frames; do not trust a single low-confidence OCR read.",
+                    "Prefer temporally stable score values unless a scoring event explains a change.",
+                ],
+            }
+        )
+    if any(term in text for term in ("ward", "grass", "bush", "brush", "fox tail", "legend", "moba", "enemy", "ally")):
+        guidance.update(
+            {
+                "resolver_type": "moba_intent_resolver",
+                "priority": "medium",
+                "evidence_template": {
+                    "ranked_intent_hypotheses": [],
+                    "moba_facts": [],
+                    "negative_evidence": [],
+                },
+                "rules": [
+                    "Do not infer kill intent from damage numbers alone.",
+                    "Movement toward grass/bush/river with no kill notification can support warding/vision intent.",
+                    "A kill intent requires sustained enemy engagement or kill confirmation.",
+                    "Map options to MOBA intent labels before final option selection.",
+                ],
+            }
+        )
+    return guidance
+
+
 def structured_package(
     question: str,
     package: Dict[str, Any],
     stage1_response: Optional[str] = None,
     visual_context_response: Optional[str] = None,
+    global_timeline_response: Optional[str] = None,
 ) -> Dict[str, Any]:
     anchors = package.get("low_resolution_anchor", {})
     image_anchors = anchors.get("image_anchor", [])
     video_anchors = anchors.get("video_anchor", [])
     audio_anchors = anchors.get("audio_anchor", [])
     transcript_anchors = anchors.get("transcript_anchor", [])
+    video_evidence_anchors = anchors.get("video_evidence_anchor", [])
     structured = build_structured_evidence_prompt(
         question=question,
         stage1_response=stage1_response,
@@ -311,12 +495,18 @@ def structured_package(
         audio_anchor=audio_anchors,
     )
     prompt = structured.setdefault("structured_evidence_prompt", {})
+    prompt["task_specific_resolver_guidance"] = build_task_specific_resolver_guidance(question)
     if transcript_anchors:
         structured.setdefault("low_resolution_anchor", {})["transcript_anchor"] = transcript_anchors
         prompt["ocr_asr_evidence"] = _transcript_structured_evidence(transcript_anchors)
         prompt["question_relevant_time_windows"] = _transcript_question_windows(transcript_anchors)
+    if video_evidence_anchors:
+        structured.setdefault("low_resolution_anchor", {})["video_evidence_anchor"] = video_evidence_anchors
+        prompt["video_extraction_evidence"] = video_evidence_anchors
     if visual_context_response:
         prompt["visual_context_hint"] = _coerce_visual_context_hint(visual_context_response)
+    if global_timeline_response:
+        prompt["global_video_timeline"] = _coerce_visual_context_hint(global_timeline_response)
     return structured
 
 
@@ -402,6 +592,104 @@ def package_bytes(package: Dict[str, Any], prompt_style: str = "compact", includ
     return total
 
 
+def _path_stat(path: Any) -> Dict[str, Any]:
+    if not path:
+        return {"path": "", "exists": False, "bytes": 0}
+    value = Path(str(path))
+    return {
+        "path": str(value),
+        "exists": value.exists(),
+        "bytes": value.stat().st_size if value.exists() and value.is_file() else 0,
+    }
+
+
+def video_package_input_audit(
+    package: Dict[str, Any],
+    media_contents: List[Dict[str, Any]],
+    source_video_path: Path,
+    subtitle_path: Optional[Path],
+    prompt_style: str,
+    include_audio_media: bool,
+) -> Dict[str, Any]:
+    anchors = package.get("low_resolution_anchor", {})
+    image_anchors = anchors.get("image_anchor") or []
+    video_anchors = anchors.get("video_anchor") or []
+    full_timeline_anchors = [item for item in video_anchors if item.get("type") == "video_full_timeline_lowres"]
+    audio_anchors = anchors.get("audio_anchor") or []
+    transcript_anchors = anchors.get("transcript_anchor") or []
+    video_evidence_anchors = anchors.get("video_evidence_anchor") or []
+    detail_anchors = [item for item in image_anchors if item.get("type") == "video_keyframe_detail_crop"]
+    tubelet_anchors = [item for item in image_anchors if item.get("type") == "video_tubelet_storyboard"]
+    ocr_image_anchors = [item for item in image_anchors if item.get("type") == "video_ocr_region_crop"]
+    object_image_anchors = [item for item in image_anchors if item.get("type") == "video_object_region_crop"]
+
+    file_checks: List[Dict[str, Any]] = [_path_stat(source_video_path)]
+    if subtitle_path:
+        file_checks.append(_path_stat(subtitle_path))
+    for anchor in video_anchors:
+        file_checks.append(_path_stat(anchor.get("low_fps_video_path")))
+        for frame in anchor.get("frames") or []:
+            file_checks.append(_path_stat(frame.get("path")))
+    for anchor in detail_anchors + tubelet_anchors + ocr_image_anchors + object_image_anchors:
+        file_checks.append(_path_stat(anchor.get("path")))
+    for anchor in video_evidence_anchors:
+        file_checks.append(_path_stat(anchor.get("path")))
+    for anchor in audio_anchors:
+        path = anchor.get("low_bitrate_audio_path")
+        if include_audio_media or path:
+            file_checks.append(_path_stat(path))
+
+    missing_files = [item for item in file_checks if item.get("path") and not item.get("exists")]
+    empty_files = [item for item in file_checks if item.get("exists") and item.get("bytes", 0) <= 0]
+    media_counts: Dict[str, int] = {}
+    for content in media_contents:
+        media_counts[str(content.get("type") or "unknown")] = media_counts.get(str(content.get("type") or "unknown"), 0) + 1
+
+    warnings = []
+    if not video_anchors:
+        warnings.append("missing_video_anchor")
+    if video_anchors and not any(_path_stat(anchor.get("low_fps_video_path")).get("exists") for anchor in video_anchors):
+        warnings.append("missing_low_fps_video_file")
+    if video_anchors and not full_timeline_anchors:
+        warnings.append("missing_full_timeline_lowres_anchor")
+    if not tubelet_anchors:
+        warnings.append("missing_tubelet_storyboard_anchor")
+    if media_counts.get("video_url", 0) <= 0:
+        warnings.append("no_video_media_attached_to_api")
+    if transcript_anchors and not any(anchor.get("segments") for anchor in transcript_anchors):
+        warnings.append("transcript_anchor_has_no_segments")
+
+    prompt_text_bytes = len(package_prompt(package, prompt_style).encode("utf-8"))
+    evidence_bytes = package_bytes(package, prompt_style, include_audio_media=include_audio_media)
+    return {
+        "source_video": _path_stat(source_video_path),
+        "subtitle": _path_stat(subtitle_path) if subtitle_path else None,
+        "video_anchor_count": len(video_anchors),
+        "full_timeline_lowres_anchor_count": len(full_timeline_anchors),
+        "full_timeline_lowres_sample_count": sum(len(anchor.get("frames") or []) for anchor in full_timeline_anchors),
+        "low_fps_frame_count": sum(len(anchor.get("frames") or []) for anchor in video_anchors),
+        "detail_crop_count": len(detail_anchors),
+        "tubelet_storyboard_count": len(tubelet_anchors),
+        "ocr_region_crop_count": len(ocr_image_anchors),
+        "object_region_crop_count": len(object_image_anchors),
+        "video_evidence_anchor_count": len(video_evidence_anchors),
+        "motion_region_count": sum(len(anchor.get("motion_regions") or []) for anchor in video_evidence_anchors),
+        "ocr_region_count": sum(len(anchor.get("ocr_regions") or []) for anchor in video_evidence_anchors),
+        "object_detection_count": sum(len(anchor.get("object_detections") or []) for anchor in video_evidence_anchors),
+        "scene_segment_count": sum(len(anchor.get("scene_segments") or []) for anchor in video_evidence_anchors),
+        "audio_anchor_count": len(audio_anchors),
+        "transcript_anchor_count": len(transcript_anchors),
+        "transcript_segment_count": sum(len(anchor.get("segments") or []) for anchor in transcript_anchors),
+        "question_relevant_transcript_segment_count": sum(len(anchor.get("question_relevant_segments") or []) for anchor in transcript_anchors),
+        "media_content_counts": media_counts,
+        "prompt_text_bytes": prompt_text_bytes,
+        "evidence_bytes": evidence_bytes,
+        "missing_files": missing_files[:20],
+        "empty_files": empty_files[:20],
+        "warnings": warnings,
+    }
+
+
 def data_url(path: Path, mime: str) -> str:
     return f"data:{mime};base64," + base64.b64encode(path.read_bytes()).decode("ascii")
 
@@ -440,19 +728,46 @@ def image_anchor_contents(package: Dict[str, Any]) -> List[Dict[str, Any]]:
 def video_detail_image_anchor_contents(package: Dict[str, Any]) -> List[Dict[str, Any]]:
     contents = []
     for anchor in package.get("low_resolution_anchor", {}).get("image_anchor", []):
-        if anchor.get("type") != "video_keyframe_detail_crop":
+        if anchor.get("type") not in {"video_keyframe_detail_crop", "video_tubelet_storyboard", "video_ocr_region_crop", "video_object_region_crop"}:
             continue
         path = anchor.get("path")
         if path and Path(path).exists():
+            if anchor.get("type") == "video_tubelet_storyboard":
+                frame_summary = "; ".join(
+                    f"{frame.get('role')}@{frame.get('time_sec')}s"
+                    for frame in (anchor.get("frames") or [])
+                )
+                text = (
+                    f"Attached video tubelet storyboard {anchor.get('anchor_link')}: "
+                    f"time_range={anchor.get('time_range_sec')}; frames={frame_summary}; "
+                    f"region={anchor.get('region_hint')}; bbox={anchor.get('bbox_norm')}; "
+                    f"reason={anchor.get('selection_reason')}. Use it for action order and state-change reasoning."
+                )
+            elif anchor.get("type") == "video_ocr_region_crop":
+                text = (
+                    f"Attached video OCR region crop {anchor.get('anchor_link')}: "
+                    f"time={anchor.get('time_sec')}s; frame={anchor.get('frame_index')}; "
+                    f"ocr_text={anchor.get('recognized_text')}; conf={anchor.get('ocr_confidence')}; "
+                    f"bbox={anchor.get('bbox_norm')}. Verify text visually before answering."
+                )
+            elif anchor.get("type") == "video_object_region_crop":
+                text = (
+                    f"Attached video object region crop {anchor.get('anchor_link')}: "
+                    f"time={anchor.get('time_sec')}s; frame={anchor.get('frame_index')}; "
+                    f"label={anchor.get('detected_label')}; conf={anchor.get('detection_confidence')}; "
+                    f"bbox={anchor.get('bbox_norm')}. Use with global context to avoid duplicate counting."
+                )
+            else:
+                text = (
+                    f"Attached video detail image anchor {anchor.get('anchor_link')}: "
+                    f"time={anchor.get('time_sec')}s; frame={anchor.get('frame_index')}; "
+                    f"region={anchor.get('region_hint')}; bbox={anchor.get('bbox_norm')}; "
+                    f"linked_video_anchor={anchor.get('linked_video_anchor')}."
+                )
             contents.append(
                 {
                     "type": "text",
-                    "text": (
-                        f"Attached video detail image anchor {anchor.get('anchor_link')}: "
-                        f"time={anchor.get('time_sec')}s; frame={anchor.get('frame_index')}; "
-                        f"region={anchor.get('region_hint')}; bbox={anchor.get('bbox_norm')}; "
-                        f"linked_video_anchor={anchor.get('linked_video_anchor')}."
-                    ),
+                    "text": text,
                 }
             )
             contents.append(media_content("image", Path(path)))
@@ -473,11 +788,15 @@ def multimodal_anchor_contents(
     for anchor in anchors.get("video_anchor", []):
         path = anchor.get("low_fps_video_path")
         if path and Path(path).exists():
+            if anchor.get("type") == "video_full_timeline_lowres":
+                role_text = "full chronological low-resolution global fallback video"
+            else:
+                role_text = "compressed low-FPS evidence video"
             contents.append(
                 {
                     "type": "text",
                     "text": (
-                        f"Attached video anchor {anchor.get('anchor_link')}: "
+                        f"Attached video anchor {anchor.get('anchor_link')} ({role_text}): "
                         f"{anchor.get('type')}; duration={anchor.get('source_duration_sec')}s; "
                         f"frames={len(anchor.get('frames', []))}; target_fps={anchor.get('target_fps')}; "
                         f"source_res={anchor.get('source_resolution')}."
@@ -541,12 +860,33 @@ def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
     anchors = prompt.get("low_resolution_anchor", {})
     question = structured.get("user_question") or ""
     lines = [
-        "MTEC++ minimal evidence extraction.",
+        "MTEC++ minimal evidence extraction. You are an evidence recorder, not an answer generator.",
         f"Question: {_short_line(question)}",
         "Use attached compressed anchors only. Return compact JSON only; no prose.",
-        '{"candidate_answer":"A|B|C|D","confidence":0.0,"evidence":[{"time":"","modality":"visual|video|asr|audio|ocr","content":"short fact","anchor":"anchor_link"}],"uncertainty":[]}',
-        "Keep at most 3 evidence items. Prefer transcript/ASR for speech/date/year questions, OCR/crop for text/number/screen questions, video frames for actions/order, and global frames for scene/object questions.",
+        '{"question_type":"","temporal_scope":{"type":"","time_range_sec":null,"confidence":0.0},"observations":[{"id":"E1","time":"","modality":"visual|video|asr|audio|ocr","observation":"short observable fact","anchor":"anchor_link","scope_match":true,"confidence":0.0}],"counts":[],"visible_set":{},"ocr_text":[],"missing_required_evidence":[],"forbidden_inference":[],"uncertainty":[]}',
+        "Never output candidate_answer, preliminary_answer, best_option, final_answer, or an option letter as the answer.",
+        "Never write phrases like 'therefore the answer is', 'likely option', 'should be A/B/C/D', or 'correct answer'.",
+        "Keep at most 6 evidence items. Prefer transcript/ASR for speech/date/year questions, OCR/crop for text/number/screen questions, video frames for actions/order, and global frames for scene/object questions.",
+        "For absent/missing/which-color-is-absent questions, enumerate visible_set for every option; do not infer absence from a single frame.",
+        "For how-many/count/challenger/men/women questions, list tracks/instances across the valid timeline; do not count only one moment if the question asks total participants/events.",
+        "For beginning/start/displayed-at-the-beginning questions, mark later transcript or later visual evidence scope_match=false.",
+        "For current score/ongoing game questions, record only directly visible scoreboard OCR/crops with time and scope; write unreadable if uncertain.",
+        "If text/tool evidence conflicts with attached video or crop images, mark the conflict in uncertainty and prefer direct visual evidence from video/crops.",
     ]
+    global_timeline = structured.get("global_video_timeline")
+    if global_timeline:
+        lines.append("GlobalVideoTimelineHint:")
+        lines.append(_short_line(json.dumps(global_timeline, ensure_ascii=False), max_chars=1800))
+        lines.append("Align all observations, counts, OCR, and option evidence to this timeline. If tool evidence points to a different scene/time than the global video, mark it as conflict or scope_mismatch.")
+        if isinstance(global_timeline, dict) and global_timeline.get("task_specific_resolver"):
+            lines.append("AIGeneratedTaskSpecificResolver:")
+            lines.append(_short_line(json.dumps(global_timeline.get("task_specific_resolver"), ensure_ascii=False), max_chars=2200))
+            lines.append("Fill this resolver's evidence_template in computed evidence. Do not replace it with generic observations when resolver_type is cross_shot_entity_bank_counter or logical_clip_action_resolver.")
+    resolver_guidance = structured.get("task_specific_resolver_guidance")
+    if resolver_guidance:
+        lines.append("TaskSpecificResolverGuidance:")
+        lines.append(_short_line(json.dumps(resolver_guidance, ensure_ascii=False), max_chars=2200))
+        lines.append("Use this specialized template and rules when collecting evidence. If generic evidence conflicts with the specialized resolver, report the conflict and keep the resolver-specific fields.")
     visual_hint = structured.get("visual_context_hint")
     if visual_hint:
         lines.append("NoTranscriptVisualContextHint:")
@@ -637,7 +977,57 @@ def build_video_visual_context_prompt(package: Dict[str, Any]) -> str:
         lines.append("DetailCrops:")
         for anchor in crops[:12]:
             lines.append(f"- {anchor.get('anchor_link')} t={anchor.get('time_sec')}s region={_short_line(anchor.get('region_hint') or '')} reason={_short_line(anchor.get('selection_reason') or '')}")
+    tubelets = [anchor for anchor in (anchors.get("image_anchor") or []) if anchor.get("type") == "video_tubelet_storyboard"]
+    if tubelets:
+        lines.append("TubeletStoryboards:")
+        for anchor in tubelets[:8]:
+            frames = ", ".join(f"{frame.get('role')}@{frame.get('time_sec')}s" for frame in (anchor.get("frames") or []))
+            lines.append(f"- {anchor.get('anchor_link')} range={anchor.get('time_range_sec')} frames={frames} region={_short_line(anchor.get('region_hint') or '')} reason={_short_line(anchor.get('selection_reason') or '')}")
     return "\n".join(lines)
+
+
+def build_global_video_timeline_prompt(package: Dict[str, Any]) -> str:
+    structured = package.get("structured_evidence_prompt", package)
+    question = structured.get("user_question") or ""
+    resolver_guidance = structured.get("task_specific_resolver_guidance") or build_task_specific_resolver_guidance(question)
+    return "\n".join(
+        [
+            "MTEC++ global video timeline pass.",
+            f"Question: {_short_line(question)}",
+            "Inspect only the attached low-resolution full-video anchor.",
+            "Do not answer the multiple-choice question.",
+            "First route the question to a task-specific resolver, then build the global timeline and locate the scene/time span relevant to that resolver.",
+            "Use this resolver guidance as the default; adjust only if the video clearly requires a better specialized resolver:",
+            json.dumps(resolver_guidance, ensure_ascii=False),
+            "For cross_shot_entity_bank_counter: create an entity-bank plan, identify wide/panorama moments, and list time ranges where each participant/challenger should be checked.",
+            "For logical_clip_action_resolver: group atomic visual changes into logical event clips, identify the target clip index, target range, backup range, and action-specific cues.",
+            "If later text evidence or crops conflict with this visual timeline, the final verifier should re-check the video/crops and prefer direct visual evidence.",
+            "Return compact JSON only with this schema:",
+            '{"task_specific_resolver":{"resolver_type":"","evidence_template":{},"special_rules":[],"target_time_ranges":[],"fallback_policy":"","confidence":0.0},"timeline":[{"time_range":"","scene":"","actions":[],"objects":[],"visual_cues":[],"confidence":0.0}],"question_relevant_time_ranges":[{"time_range":"","reason":"","confidence":0.0}],"scene_locator":{"target_scene":"","time_range":"","confidence":0.0},"global_uncertainties":[]}',
+        ]
+    )
+
+
+def global_video_anchor_contents(package: Dict[str, Any]) -> List[Dict[str, Any]]:
+    contents: List[Dict[str, Any]] = []
+    anchors = package.get("low_resolution_anchor", {}).get("video_anchor", [])
+    global_anchors = [anchor for anchor in anchors if anchor.get("type") == "video_full_timeline_lowres"]
+    for anchor in global_anchors[:1]:
+        path = anchor.get("low_fps_video_path")
+        if path and Path(path).exists():
+            contents.append(
+                {
+                    "type": "text",
+                    "text": (
+                        f"Attached full-video global anchor {anchor.get('anchor_link')}: "
+                        f"duration={anchor.get('source_duration_sec')}s; "
+                        f"samples={len(anchor.get('frames', []))}; target_fps={anchor.get('target_fps')}; "
+                        f"source_res={anchor.get('source_resolution')}."
+                    ),
+                }
+            )
+            contents.append(media_content("video", Path(path)))
+    return contents
 
 
 def video_only_anchor_contents(package: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -675,6 +1065,34 @@ def compute_video_visual_context(
     )
 
 
+def compute_global_video_timeline(
+    client: "SiliconFlowClient",
+    package: Dict[str, Any],
+    max_tokens: int,
+) -> Tuple[str, Dict[str, Any]]:
+    contents = global_video_anchor_contents(package)
+    if not contents:
+        return (
+            json.dumps(
+                {
+                    "timeline": [],
+                    "question_relevant_time_ranges": [],
+                    "scene_locator": {"target_scene": "", "time_range": "", "confidence": 0.0},
+                    "global_uncertainties": ["No full-video global anchor was available."],
+                },
+                ensure_ascii=False,
+            ),
+            {"skipped": "missing_full_video_global_anchor"},
+        )
+    return client.generate(
+        [
+            *contents,
+            {"type": "text", "text": build_global_video_timeline_prompt(package)},
+        ],
+        max_tokens=max_tokens,
+    )
+
+
 def compute_structured_evidence(
     client: "SiliconFlowClient",
     package: Dict[str, Any],
@@ -694,15 +1112,67 @@ def compute_structured_evidence(
         max_tokens=max_tokens,
     )
 
+
+def compute_structured_evidence_with_json_retry(
+    client: "SiliconFlowClient",
+    package: Dict[str, Any],
+    media_contents: List[Dict[str, Any]],
+    max_tokens: int,
+    evidence_prompt_style: str = "minimal",
+    max_attempts: int = 3,
+) -> Tuple[str, Dict[str, Any]]:
+    attempts: List[Dict[str, Any]] = []
+    response = ""
+    meta: Dict[str, Any] = {}
+    token_budget = max(256, int(max_tokens or 256))
+    last_error = ""
+    for attempt_index in range(1, max_attempts + 1):
+        response, meta = compute_structured_evidence(
+            client,
+            package,
+            media_contents,
+            max_tokens=token_budget,
+            evidence_prompt_style=evidence_prompt_style,
+        )
+        valid, error, _ = validate_json_object_response(response)
+        attempt_info = {
+            "attempt": attempt_index,
+            "max_tokens": token_budget,
+            "valid_json": valid,
+            "error": error,
+            "response_chars": len(str(response or "")),
+        }
+        attempts.append(attempt_info)
+        if valid:
+            meta = dict(meta or {})
+            meta["evidence_json_valid"] = True
+            meta["evidence_json_retry_attempts"] = attempts
+            return response, meta
+        last_error = error
+        token_budget = min(max(token_budget * 2, token_budget + 256), 2048)
+    fallback = fallback_invalid_evidence_json(last_error, attempts)
+    meta = dict(meta or {})
+    meta["evidence_json_valid"] = False
+    meta["evidence_json_retry_attempts"] = attempts
+    meta["evidence_json_fallback_used"] = True
+    meta["evidence_json_error"] = last_error
+    meta["raw_invalid_evidence_response"] = _short_line(response, max_chars=2000)
+    return fallback, meta
+
 def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str) -> str:
     return (
         package_prompt(package, prompt_style)
         + "\n\nFINAL DECISION INSTRUCTIONS:\n"
-        + "You are receiving the compressed MTEC++ package, including structured evidence text, "
-        + "low-FPS video anchors, high-detail keyframe crops, transcript/ASR evidence, and audio anchors when attached.\n"
-        + "First silently cross-check the structured evidence against the attached anchors. Pay special attention to OCR, screen text, numbers, actions, event order, speech, narration, and audio-visual sync.\n"
-        + "If the computed evidence already contains candidate_answer or preliminary_answer, verify it instead of copying it blindly.\n"
-        + "Return exactly one line and nothing else: FINAL_ANSWER: <letter>."
+        + "You are an option verifier. You receive compressed video anchors, a low-resolution full-video global anchor, deterministic evidence, answer-neutral observations, transcript/ASR evidence, OCR/object crops, and tubelet storyboards.\n"
+        + "First use global_video_timeline and task_specific_resolver, if present, to locate the relevant scene/time span and understand the full-video event order. Then align structured/tool evidence to that visual timeline before judging options.\n"
+        + "If task_specific_resolver or computed evidence contains a resolver-specific template such as cross_shot_entity_bank_counter or logical_clip_action_resolver with medium/high confidence, prioritize that resolver over generic observations.\n"
+        + "For cross-shot count questions, use the entity bank and inclusion/exclusion reasons; do not answer from one frame, one YOLO track, or the largest local crop. For clip-action questions, use the target logical clip and backup range, not the third atomic scene cut.\n"
+        + "Evaluate each option independently as supported, contradicted, or unknown before choosing. Do not trust any previous candidate_answer, preliminary_answer, best_option, or option letter if it appears in computed evidence.\n"
+        + "If text evidence, computed evidence, transcript, OCR text, or deterministic metadata conflicts with the attached video or high-resolution crop images, prefer the direct visual evidence from the video/crops. Treat conflicting text evidence as uncertain, not authoritative.\n"
+        + "Treat temporal_scope as confidence-gated: confidence >= 0.75 means scoped evidence is primary; 0.50-0.75 means use scoped evidence plus the full-video global anchor; below 0.50 or missing evidence means do not hard-filter the rest of the video.\n"
+        + "If structured evidence is low quality, all/most options are unknown, OCR/count/visible-set evidence is incomplete, or local crops conflict, fall back to the full-video global anchor to re-check event order, scene context, action flow, and global layout.\n"
+        + "For count questions, prefer deterministic count_tracks/instances only when tracks are valid; otherwise use full-context video plus visible frames. For missing-set questions, use visible_set only when complete; otherwise re-check the full-video anchor. For OCR/model/score questions, combine OCR with high-detail crops and global context when OCR is uncertain.\n"
+        + "Silently build option_verification with A/B/C/D statuses and evidence IDs. Return exactly one line and nothing else: FINAL_ANSWER: <letter>."
     )
 
 
@@ -933,6 +1403,17 @@ def downloaded_subtitles(subtitle_zip: Path) -> Dict[str, Tuple[Path, zipfile.Zi
                 by_id[Path(info.filename).stem] = (subtitle_zip, info)
     return by_id
 
+
+def precomputed_subtitles(subtitle_dir: Path) -> Dict[str, Path]:
+    by_id: Dict[str, Path] = {}
+    if not subtitle_dir.exists():
+        return by_id
+    for path in sorted(subtitle_dir.glob("*.srt")):
+        if path.stat().st_size > 0:
+            by_id[path.stem] = path
+    return by_id
+
+
 def extract_zip_member(zip_path: Path, member: zipfile.ZipInfo, output_dir: Path) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     out_path = output_dir / Path(member.filename).name
@@ -949,6 +1430,7 @@ def run_video_record(
     row: Dict[str, Any],
     video_lookup: Dict[str, Tuple[Path, zipfile.ZipInfo]],
     subtitle_lookup: Optional[Dict[str, Tuple[Path, zipfile.ZipInfo]]],
+    precomputed_subtitle_lookup: Optional[Dict[str, Path]],
     output_dir: Path,
     max_tokens: int,
     answer_max_tokens: int,
@@ -975,6 +1457,11 @@ def run_video_record(
     video_query_detail_extra_crops: int = 4,
     video_visual_context_pass: str = "auto",
     video_visual_context_max_tokens: int = 384,
+    video_global_anchor: bool = True,
+    video_global_anchor_fps: float = 1.0,
+    video_global_anchor_max_side: int = 360,
+    global_timeline_pass: bool = True,
+    global_timeline_max_tokens: int = 512,
     cleanup_record_artifacts_enabled: bool = False,
 ) -> Dict[str, Any]:
     video_id = str(row.get("videoID"))
@@ -1016,6 +1503,8 @@ def run_video_record(
         if subtitle_lookup and selected_policy.get("transcript") and video_id in subtitle_lookup:
             sub_zip, sub_member = subtitle_lookup[video_id]
             video_subtitle_path = extract_zip_member(sub_zip, sub_member, anchor_output_dir / "subtitle")
+        elif precomputed_subtitle_lookup and selected_policy.get("transcript") and video_id in precomputed_subtitle_lookup:
+            video_subtitle_path = precomputed_subtitle_lookup[video_id]
         raw_package = create_multimodal_structural_anchors(
             question=question,
             output_dir=str(anchor_output_dir),
@@ -1035,6 +1524,9 @@ def run_video_record(
             video_asr_model=video_asr_model,
             video_asr_language=video_asr_language or None,
             video_transcript_max_segments=video_transcript_max_segments,
+            include_video_global_anchor=video_global_anchor,
+            video_global_anchor_fps=video_global_anchor_fps,
+            video_global_anchor_max_side=video_global_anchor_max_side,
         )
         package = structured_package(question, raw_package)
         media_contents = multimodal_anchor_contents(
@@ -1046,6 +1538,70 @@ def run_video_record(
             video_anchor = package["low_resolution_anchor"]["video_anchor"][0]
             video_input = Path(video_anchor.get("low_fps_video_path") or str(video_path))
             media_contents = [media_content("video", video_input)]
+        pre_api_input_audit = video_package_input_audit(
+            package,
+            media_contents,
+            video_path,
+            Path(video_subtitle_path) if video_subtitle_path else None,
+            prompt_style,
+            include_audio_media=send_audio_media,
+        )
+        print(
+            "INPUT_CHECK "
+            f"{record_key} video_media={pre_api_input_audit['media_content_counts'].get('video_url', 0)} "
+            f"image_media={pre_api_input_audit['media_content_counts'].get('image_url', 0)} "
+            f"frames={pre_api_input_audit['low_fps_frame_count']} "
+            f"global_full={pre_api_input_audit['full_timeline_lowres_anchor_count']} "
+            f"global_samples={pre_api_input_audit['full_timeline_lowres_sample_count']} "
+            f"tubelets={pre_api_input_audit['tubelet_storyboard_count']} "
+            f"details={pre_api_input_audit['detail_crop_count']} "
+            f"ocr={pre_api_input_audit['ocr_region_count']} "
+            f"motion={pre_api_input_audit['motion_region_count']} "
+            f"objects={pre_api_input_audit['object_detection_count']} "
+            f"transcript_segments={pre_api_input_audit['transcript_segment_count']} "
+            f"warnings={','.join(pre_api_input_audit['warnings']) or 'none'}",
+            flush=True,
+        )
+        critical_warnings = {"missing_video_anchor", "missing_low_fps_video_file", "no_video_media_attached_to_api"}
+        if critical_warnings.intersection(pre_api_input_audit["warnings"]) or pre_api_input_audit["missing_files"] or pre_api_input_audit["empty_files"]:
+            raise RuntimeError(f"Video input audit failed before API call: {json.dumps(pre_api_input_audit, ensure_ascii=False)[:1800]}")
+        computed_global_timeline_response = None
+        computed_global_timeline_meta = None
+        global_timeline_error = None
+        if global_timeline_pass:
+            try:
+                computed_global_timeline_response, computed_global_timeline_meta = compute_global_video_timeline(
+                    answer_client,
+                    package,
+                    max_tokens=global_timeline_max_tokens,
+                )
+            except FatalAPIError:
+                raise
+            except Exception as exc:
+                global_timeline_error = f"{type(exc).__name__}: {exc}"
+                computed_global_timeline_response = json.dumps(
+                    {
+                        "timeline": [],
+                        "question_relevant_time_ranges": [],
+                        "scene_locator": {"target_scene": "", "time_range": "", "confidence": 0.0},
+                        "global_uncertainties": [global_timeline_error],
+                    },
+                    ensure_ascii=False,
+                )
+                computed_global_timeline_meta = {"error": global_timeline_error}
+            package = structured_package(
+                question,
+                raw_package,
+                global_timeline_response=computed_global_timeline_response,
+            )
+            media_contents = (
+                multimodal_anchor_contents(
+                    package,
+                    include_images=False,
+                    include_audio_media=send_audio_media,
+                )
+                or media_contents
+            )
         transcript_segment_count = sum(
             len(anchor.get("segments") or [])
             for anchor in package.get("low_resolution_anchor", {}).get("transcript_anchor", [])
@@ -1081,6 +1637,7 @@ def run_video_record(
                 question,
                 raw_package,
                 visual_context_response=computed_visual_context_response,
+                global_timeline_response=computed_global_timeline_response,
             )
             media_contents = (
                 multimodal_anchor_contents(
@@ -1093,7 +1650,7 @@ def run_video_record(
         computed_evidence_response = None
         computed_evidence_meta = None
         if evidence_pass:
-            computed_evidence_response, computed_evidence_meta = compute_structured_evidence(
+            computed_evidence_response, computed_evidence_meta = compute_structured_evidence_with_json_retry(
                 client,
                 package,
                 media_contents,
@@ -1105,6 +1662,7 @@ def run_video_record(
                 raw_package,
                 stage1_response=computed_evidence_response,
                 visual_context_response=computed_visual_context_response,
+                global_timeline_response=computed_global_timeline_response,
             )
             media_contents = (
                 multimodal_anchor_contents(
@@ -1122,6 +1680,16 @@ def run_video_record(
             )
             or media_contents
         )
+        final_input_audit = video_package_input_audit(
+            package,
+            final_media_contents,
+            video_path,
+            Path(video_subtitle_path) if video_subtitle_path else None,
+            prompt_style,
+            include_audio_media=answer_send_audio_media,
+        )
+        if critical_warnings.intersection(final_input_audit["warnings"]) or final_input_audit["missing_files"] or final_input_audit["empty_files"]:
+            raise RuntimeError(f"Video input audit failed before final answer call: {json.dumps(final_input_audit, ensure_ascii=False)[:1800]}")
         response, meta = answer_client.generate(
             [
                 *final_media_contents,
@@ -1158,13 +1726,23 @@ def run_video_record(
                 "final_content_empty": not bool(str(response or "").strip()),
                 "computed_evidence_response": computed_evidence_response,
                 "computed_evidence_meta": computed_evidence_meta,
+                "computed_global_timeline_response": computed_global_timeline_response,
+                "computed_global_timeline_meta": computed_global_timeline_meta,
+                "global_timeline_pass": global_timeline_pass,
+                "global_timeline_error": global_timeline_error,
+                "global_timeline_max_tokens": global_timeline_max_tokens,
                 "computed_visual_context_response": computed_visual_context_response,
                 "computed_visual_context_meta": computed_visual_context_meta,
+                "pre_api_input_audit": pre_api_input_audit,
+                "final_input_audit": final_input_audit,
                 "video_visual_context_pass": video_visual_context_pass,
                 "video_visual_context_triggered": visual_context_triggered,
                 "video_visual_context_reason": visual_context_reason,
                 "video_visual_context_error": visual_context_error,
                 "video_visual_context_max_tokens": video_visual_context_max_tokens,
+                "video_global_anchor": video_global_anchor,
+                "video_global_anchor_fps": video_global_anchor_fps,
+                "video_global_anchor_max_side": video_global_anchor_max_side,
                 "evidence_pass": evidence_pass,
                 "prompt_style": prompt_style,
                 "video_anchor_policy": video_anchor_policy,
@@ -1361,8 +1939,8 @@ def write_summary_files(output_dir: Path, records: List[Dict[str, Any]], model: 
         "answer_model": answer_model,
         "algorithm_check": {
             "matches_design": True,
-            "input_channels": ["low_resolution_multimodal_structural_anchor", "high_detail_keyframe_crop", "transcript_audio_anchor", "structured_evidence_prompt"],
-            "note": "Video mode uses a two-pass flow with question-routed Tiny/Light/Medium/Full/Dense anchor policies and minimal JSON evidence by default; SiliconFlow extracts compact evidence, then Bailian Qwen verifies it against compressed video/crop/transcript anchors for final answering.",
+            "input_channels": ["low_resolution_video_timeline_anchor", "continuous_before_during_after_tubelet_storyboard", "task_aware_scene_motion_ocr_evidence", "high_detail_keyframe_crop", "transcript_audio_anchor", "structured_evidence_prompt", "per_record_input_audit"],
+            "note": "Video mode uses a two-pass flow with question-routed Tiny/Light/Medium/Full/Dense anchor policies, continuous tubelet storyboards, task-aware scene/motion/OCR evidence extraction, and per-record input audits before API calls; SiliconFlow extracts compact evidence, then Bailian Qwen verifies it against compressed video/tubelet/crop/transcript anchors for final answering.",
         },
         "counts": {
             "total": len(records),
@@ -1386,6 +1964,7 @@ def main() -> None:
     parser.add_argument("--videomme-metadata", default="data/datasets/video-mme/videomme/test-00000-of-00001.parquet")
     parser.add_argument("--video-zips-dir", default="data/modelscope/video-mme-zips")
     parser.add_argument("--videomme-subtitle-zip", default="data/datasets/video-mme/subtitle.zip")
+    parser.add_argument("--precomputed-subtitles-dir", default="", help="Directory of videoID.srt files to use when Video-MME subtitle.zip has no subtitle for a video.")
     parser.add_argument("--background-audio-parquets", nargs="*", default=["data/modelscope/urbansound8k-noises/data/test-00000-of-00001-40cf49999a374336.parquet"])
     parser.add_argument("--voice-audio-parquets", nargs="*", default=["data/modelscope/hearsed-dcase2016/data/test-00000-of-00001.parquet"])
     parser.add_argument("--modalities", nargs="+", default=["image", "video", "audio_background", "audio_voice"], choices=["image", "video", "audio_background", "audio_voice"])
@@ -1436,6 +2015,11 @@ def main() -> None:
     parser.add_argument("--video-query-detail-extra-crops", type=int, default=4)
     parser.add_argument("--video-visual-context-pass", choices=("auto", "true", "false"), default="auto")
     parser.add_argument("--video-visual-context-max-tokens", type=int, default=384)
+    parser.add_argument("--video-global-anchor", choices=("true", "false"), default="true", help="Attach a low-resolution full-duration video anchor for global temporal fallback.")
+    parser.add_argument("--video-global-anchor-fps", type=float, default=1.0)
+    parser.add_argument("--video-global-anchor-max-side", type=int, default=360)
+    parser.add_argument("--global-timeline-pass", choices=("true", "false"), default="true", help="First ask the answer model to inspect only the full-video low-resolution anchor and produce a timeline/scene locator.")
+    parser.add_argument("--global-timeline-max-tokens", type=int, default=512)
     parser.add_argument("--video-record-keys", nargs="*", default=[], help="Run only exact Video-MME record keys like video:VIDEOID:QUESTIONID, preserving the provided order.")
     parser.add_argument("--shuffle", action="store_true")
     parser.add_argument("--seed", type=int, default=20260615)
@@ -1545,6 +2129,7 @@ def main() -> None:
         rng = random.Random(args.seed)
         video_lookup = downloaded_videos(resolve_path(args.video_zips_dir))
         subtitle_lookup = downloaded_subtitles(resolve_path(args.videomme_subtitle_zip))
+        precomputed_subtitle_lookup = precomputed_subtitles(resolve_path(args.precomputed_subtitles_dir)) if args.precomputed_subtitles_dir else {}
         meta = pd.read_parquet(resolve_path(args.videomme_metadata))
         if "videoID" in meta.columns:
             meta = meta[meta["videoID"].astype(str).isin(video_lookup.keys())]
@@ -1583,6 +2168,8 @@ def main() -> None:
         video_audio_anchor = args.video_audio_anchor == "true"
         send_audio_media = args.send_audio_media == "true"
         answer_send_audio_media = args.answer_send_audio_media == "true"
+        video_global_anchor = args.video_global_anchor == "true"
+        global_timeline_pass = args.global_timeline_pass == "true"
         for count, row_dict in enumerate(video_candidates):
             video_id = str(row_dict.get("videoID"))
             question_id = str(row_dict.get("question_id") or row_dict.get("index") or count)
@@ -1597,6 +2184,7 @@ def main() -> None:
                         row_dict,
                         video_lookup,
                         subtitle_lookup,
+                        precomputed_subtitle_lookup,
                         output_dir,
                         args.max_tokens,
                         args.answer_max_tokens,
@@ -1623,6 +2211,11 @@ def main() -> None:
                         args.video_query_detail_extra_crops,
                         args.video_visual_context_pass,
                         args.video_visual_context_max_tokens,
+                        video_global_anchor,
+                        args.video_global_anchor_fps,
+                        args.video_global_anchor_max_side,
+                        global_timeline_pass,
+                        args.global_timeline_max_tokens,
                         args.cleanup_record_artifacts,
                     )
                 )

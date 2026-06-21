@@ -31,8 +31,6 @@ except ImportError:
 DEFAULT_VIDEO_TARGET_FPS = 3.0
 DEFAULT_VIDEO_MAX_FRAMES = 48
 DEFAULT_VIDEO_MAX_SIDE = 512
-DEFAULT_VIDEO_GLOBAL_ANCHOR_FPS = 1.0
-DEFAULT_VIDEO_GLOBAL_ANCHOR_MAX_SIDE = 360
 DEFAULT_VIDEO_JPEG_QUALITY = 82
 DEFAULT_AUDIO_SAMPLE_RATE = 16000
 DEFAULT_AUDIO_BITRATE = "32k"
@@ -179,100 +177,6 @@ def create_video_structural_anchor(
     }
 
 
-def create_video_full_timeline_anchor(
-    video_path: str,
-    output_dir: str,
-    target_fps: float = DEFAULT_VIDEO_GLOBAL_ANCHOR_FPS,
-    max_side: int = DEFAULT_VIDEO_GLOBAL_ANCHOR_MAX_SIDE,
-    anchor_id: str = "video_full_timeline_lowres",
-) -> Dict[str, Any]:
-    """Create a low-resolution, low-FPS clip that preserves full chronological coverage."""
-    output_path = Path(output_dir)
-    output_path.mkdir(parents=True, exist_ok=True)
-
-    cv2 = _require_cv2()
-    capture = cv2.VideoCapture(str(video_path))
-    if not capture.isOpened():
-        raise ValueError(f"Could not open video: {video_path}")
-
-    source_fps = capture.get(cv2.CAP_PROP_FPS) or 0.0
-    frame_count = int(capture.get(cv2.CAP_PROP_FRAME_COUNT) or 0)
-    width = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH) or 0)
-    height = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT) or 0)
-    duration = frame_count / source_fps if source_fps > 0 and frame_count > 0 else 0.0
-    step = _frame_step(source_fps, target_fps)
-    clip_path = output_path / f"{anchor_id}.mp4"
-
-    writer = None
-    output_size: Optional[Tuple[int, int]] = None
-    frames: List[Dict[str, Any]] = []
-    sampled_count = 0
-    frame_index = 0
-    try:
-        while True:
-            ok, frame = capture.read()
-            if not ok:
-                break
-            if frame_index % step != 0:
-                frame_index += 1
-                continue
-            time_sec = frame_index / source_fps if source_fps > 0 else float(sampled_count)
-            pil_image = _resize_frame(frame, max_side)
-            if writer is None:
-                output_size = pil_image.size
-                writer = cv2.VideoWriter(
-                    str(clip_path),
-                    cv2.VideoWriter_fourcc(*"mp4v"),
-                    max(0.1, target_fps),
-                    output_size,
-                )
-                if not writer.isOpened():
-                    writer = None
-                    break
-            if output_size and pil_image.size != output_size:
-                pil_image = pil_image.resize(output_size, Image.Resampling.LANCZOS)
-            writer.write(cv2.cvtColor(np.asarray(pil_image), cv2.COLOR_RGB2BGR))
-            sampled_count += 1
-            frames.append(
-                {
-                    "anchor_id": f"{anchor_id}_sample_{sampled_count:04d}",
-                    "anchor_link": f"{anchor_id}_sample_{sampled_count:04d}",
-                    "time_sec": round(time_sec, 3),
-                    "frame_index": frame_index,
-                    "summary": "Full-timeline low-resolution video sample kept in original chronological order.",
-                }
-            )
-            frame_index += 1
-    finally:
-        capture.release()
-        if writer is not None:
-            writer.release()
-
-    clip_exists = clip_path.exists() and clip_path.stat().st_size > 0
-    return {
-        "anchor_id": anchor_id,
-        "anchor_link": anchor_id,
-        "type": "video_full_timeline_lowres",
-        "role": "Low-resolution full-video global anchor: preserve complete temporal order, scene transitions, action flow, and global layout as fallback context.",
-        "source_path": str(Path(video_path)),
-        "source_duration_sec": round(duration, 3),
-        "source_fps": round(source_fps, 3),
-        "source_frame_count": frame_count,
-        "source_resolution": {"width": width, "height": height},
-        "target_fps": target_fps,
-        "max_side": max_side,
-        "frames": frames,
-        "low_fps_video_path": str(clip_path) if clip_exists else None,
-        "compression": {
-            "selected_frame_count": sampled_count,
-            "candidate_frame_count": sampled_count,
-            "frame_retention_ratio": _safe_ratio(sampled_count, frame_count),
-            "bytes": clip_path.stat().st_size if clip_exists else 0,
-            "strategy": "Full-duration chronological low-resolution video sampled at fixed low FPS without change-based dropping.",
-        },
-    }
-
-
 def create_audio_structural_anchor(
     audio_path: str,
     output_dir: str,
@@ -375,9 +279,6 @@ def create_multimodal_structural_anchors(
     video_query_window_padding_sec: float = DEFAULT_VIDEO_QUERY_WINDOW_PADDING_SEC,
     video_detail_max_crops: int = DEFAULT_VIDEO_DETAIL_MAX_CROPS,
     video_detail_max_side: int = DEFAULT_VIDEO_DETAIL_MAX_SIDE,
-    include_video_global_anchor: bool = True,
-    video_global_anchor_fps: float = DEFAULT_VIDEO_GLOBAL_ANCHOR_FPS,
-    video_global_anchor_max_side: int = DEFAULT_VIDEO_GLOBAL_ANCHOR_MAX_SIDE,
 ) -> Dict[str, Any]:
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
@@ -398,14 +299,6 @@ def create_multimodal_structural_anchors(
             target_fps=video_target_fps,
             max_frames=video_max_frames,
             max_side=video_max_side,
-        )
-    video_global_anchor = None
-    if video_path and include_video_global_anchor:
-        video_global_anchor = create_video_full_timeline_anchor(
-            video_path,
-            str(output_path),
-            target_fps=video_global_anchor_fps,
-            max_side=video_global_anchor_max_side,
         )
 
     transcript_anchor = None
@@ -487,7 +380,7 @@ def create_multimodal_structural_anchors(
     package = build_low_resolution_anchor_package(
         question=question,
         global_anchor=image_anchor,
-        video_anchor=[anchor for anchor in (video_global_anchor, video_anchor) if anchor],
+        video_anchor=video_anchor,
         audio_anchor=audio_anchor,
         total_budget=total_budget,
     )

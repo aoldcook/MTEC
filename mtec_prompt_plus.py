@@ -440,7 +440,6 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
         "- global anchor: scene layout, object distribution, large-scale spatial relations, temporal context, and overall scene state.",
         "- crop anchors: small objects, readable text, colors, attributes, counts, local relations, and fine-grained state changes.",
         "- video anchor: start/middle/end coverage, action continuity, event order, scene transitions, and answer-relevant timestamps.",
-        "- full-video low-resolution anchor: complete chronological fallback context; use it to recover temporal order, scene context, action flow, and global layout when local evidence is weak or fragmented.",
         "- audio anchor: speech/ASR cues, speaker mentions, narration, music/sound effects, rhythm, silence, emphasis, and events that may not be visible.",
         "- cross-modal use: align audio events or narration with nearby video frames; use audio to recover details lost by low-FPS video, and use video to ground ambiguous audio.",
         "HybridEvidenceGraph:",
@@ -475,11 +474,9 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
     if video_anchors or audio_anchors or transcript_anchors:
         lines.append("TemporalAnchors:")
         for anchor in video_anchors:
-            role = "full_timeline_global_fallback" if anchor.get("type") == "video_full_timeline_lowres" else "selected_evidence_anchor"
             lines.append(
                 "- "
                 f"{anchor.get('anchor_link')} type={anchor.get('type')} "
-                f"role={role} "
                 f"duration={anchor.get('source_duration_sec')}s "
                 f"frames={len(anchor.get('frames', []))}/{anchor.get('source_frame_count')} "
                 f"target_fps={anchor.get('target_fps')} "
@@ -724,20 +721,10 @@ def format_compact_evidence_prompt(prompt: Dict[str, Any]) -> str:
     if summary:
         lines.append(f"Summary: {summary}")
 
-    resolver_rows = _compact_task_resolver_rows(structured.get("task_specific_resolver_guidance"))
-    if resolver_rows:
-        lines.append("TaskSpecificResolverGuidance:")
-        lines.extend(resolver_rows)
-
     visual_context_rows = _compact_visual_context_rows(structured.get("visual_context_hint"))
     if visual_context_rows:
         lines.append("NoTranscriptVisualContext:")
         lines.extend(visual_context_rows)
-
-    global_timeline_rows = _compact_global_timeline_rows(structured.get("global_video_timeline"))
-    if global_timeline_rows:
-        lines.append("GlobalVideoTimeline:")
-        lines.extend(global_timeline_rows)
 
     temporal_rows = _compact_temporal_rows(structured, anchors)
     if temporal_rows:
@@ -1125,95 +1112,6 @@ def _compact_visual_context_rows(value: Any) -> List[str]:
             rows.append("uncertainty|" + _one_line(", ".join(str(item) for item in uncertainty[:8])))
         return rows[:24]
     return ["raw|" + _one_line(value)]
-
-
-def _compact_global_timeline_rows(value: Any) -> List[str]:
-    if not value:
-        return []
-    if not isinstance(value, dict):
-        return ["raw|" + _one_line(value)]
-    rows: List[str] = []
-    resolver_rows = _compact_task_resolver_rows(value.get("task_specific_resolver"))
-    if resolver_rows:
-        rows.append("ai_resolver_start")
-        rows.extend(resolver_rows[:10])
-    locator = value.get("scene_locator") or {}
-    if isinstance(locator, dict) and any(locator.values()):
-        rows.append(
-            "scene_locator|"
-            + "|".join(
-                [
-                    _one_line(locator.get("target_scene")),
-                    _one_line(locator.get("time_range")),
-                    _short_number(locator.get("confidence")),
-                ]
-            )
-        )
-    for item in (value.get("question_relevant_time_ranges") or [])[:6]:
-        if isinstance(item, dict):
-            rows.append(
-                "relevant_range|"
-                + "|".join(
-                    [
-                        _one_line(item.get("time_range")),
-                        _one_line(item.get("reason")),
-                        _short_number(item.get("confidence")),
-                    ]
-                )
-            )
-        else:
-            rows.append("relevant_range|" + _one_line(item))
-    for event in (value.get("timeline") or [])[:10]:
-        if isinstance(event, dict):
-            rows.append(
-                "event|"
-                + "|".join(
-                    [
-                        _one_line(event.get("time_range")),
-                        _one_line(event.get("scene")),
-                        _one_line(", ".join(str(item) for item in (event.get("actions") or [])[:6])),
-                        _one_line(", ".join(str(item) for item in (event.get("objects") or [])[:6])),
-                        _short_number(event.get("confidence")),
-                    ]
-                )
-            )
-        else:
-            rows.append("event|" + _one_line(event))
-    uncertainties = value.get("global_uncertainties") or []
-    if uncertainties:
-        rows.append("uncertainty|" + _one_line(", ".join(str(item) for item in uncertainties[:6])))
-    return rows[:24]
-
-
-def _compact_task_resolver_rows(value: Any) -> List[str]:
-    if not value:
-        return []
-    if not isinstance(value, dict):
-        return ["raw|" + _one_line(value)]
-    rows: List[str] = []
-    resolver_type = value.get("resolver_type") or ""
-    if resolver_type:
-        rows.append(
-            "resolver|"
-            + "|".join(
-                [
-                    _one_line(resolver_type),
-                    _one_line(value.get("priority")),
-                    _short_number(value.get("confidence")),
-                    _one_line(value.get("fallback_policy")),
-                ]
-            )
-        )
-    template = value.get("evidence_template") or {}
-    if template:
-        rows.append("template|" + _one_line(json.dumps(template, ensure_ascii=False, separators=(",", ":")),))
-    rules = value.get("rules") or value.get("special_rules") or []
-    for rule in rules[:8]:
-        rows.append("rule|" + _one_line(rule))
-    ranges = value.get("target_time_ranges") or []
-    for item in ranges[:6]:
-        rows.append("target_range|" + _one_line(item))
-    return rows[:16]
 
 
 def _compact_temporal_rows(

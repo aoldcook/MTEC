@@ -264,64 +264,6 @@ def build_structured_evidence_prompt(
             reason = "Prevents local crop evidence from losing surrounding context."
             region: Any = "whole_image"
             confidence = 1.0
-            time_value = "image"
-        elif image_anchor.get("type") == "video_tubelet_storyboard":
-            content = "Continuous video tubelet storyboard preserves before/during/after frames for event order, action continuity, and state changes."
-            reason = "Use this storyboard before trusting isolated crops; compare its frame roles and timestamps to decide what changed over time."
-            region = {
-                "time_range_sec": image_anchor.get("time_range_sec"),
-                "frames": image_anchor.get("frames"),
-                "region_hint": image_anchor.get("region_hint"),
-                "bbox_norm": image_anchor.get("bbox_norm"),
-                "linked_video_anchor": image_anchor.get("linked_video_anchor"),
-                "question_relevant": image_anchor.get("question_relevant"),
-                "selection_reason": image_anchor.get("selection_reason"),
-            }
-            confidence = 0.96 if image_anchor.get("question_relevant") else 0.92
-            time_range = image_anchor.get("time_range_sec") or []
-            if isinstance(time_range, (list, tuple)) and len(time_range) >= 2:
-                time_value = f"{float(time_range[0] or 0.0):.2f}-{float(time_range[1] or 0.0):.2f}s"
-            else:
-                time_value = "video_tubelet"
-        elif image_anchor.get("type") == "video_ocr_region_crop":
-            content = f"OCR region crop preserves readable text candidate: {image_anchor.get('recognized_text') or ''}"
-            reason = "Use this crop and OCR text together; OCR may be imperfect, so verify visually before answering text, number, score, sign, label, or screen questions."
-            region = {
-                "bbox_norm": image_anchor.get("bbox_norm"),
-                "region_hint": image_anchor.get("region_hint"),
-                "frame_index": image_anchor.get("frame_index"),
-                "recognized_text": image_anchor.get("recognized_text"),
-                "ocr_confidence": image_anchor.get("ocr_confidence"),
-            }
-            confidence = float(image_anchor.get("ocr_confidence") or 0.75)
-            time_value = f"{float(image_anchor.get('time_sec') or 0.0):.2f}s"
-        elif image_anchor.get("type") == "video_object_region_crop":
-            content = f"Object detector crop preserves candidate object: {image_anchor.get('detected_label') or ''}"
-            reason = "Use this object crop for count, presence/absence, spatial relation, and object identity checks; verify against the global timeline to avoid duplicate counting."
-            region = {
-                "bbox_norm": image_anchor.get("bbox_norm"),
-                "region_hint": image_anchor.get("region_hint"),
-                "frame_index": image_anchor.get("frame_index"),
-                "detected_label": image_anchor.get("detected_label"),
-                "detection_confidence": image_anchor.get("detection_confidence"),
-            }
-            confidence = float(image_anchor.get("detection_confidence") or 0.75)
-            time_value = f"{float(image_anchor.get('time_sec') or 0.0):.2f}s"
-        elif image_anchor.get("type") == "video_keyframe_detail_crop":
-            content = "High-resolution video keyframe crop preserves detail that may be lost in the low-FPS video anchor."
-            reason = "Use this crop for OCR, screen content, numbers, small objects, attributes, and frame-local state changes."
-            region = {
-                "bbox_norm": image_anchor.get("bbox_norm"),
-                "expanded_bbox_norm": image_anchor.get("expanded_bbox_norm"),
-                "region_hint": image_anchor.get("region_hint"),
-                "linked_video_anchor": image_anchor.get("linked_video_anchor"),
-                "frame_index": image_anchor.get("frame_index"),
-                "question_relevant": image_anchor.get("question_relevant"),
-                "query_window": image_anchor.get("query_window"),
-                "selection_reason": image_anchor.get("selection_reason"),
-            }
-            confidence = 0.95 if image_anchor.get("question_relevant") else 0.9
-            time_value = f"{float(image_anchor.get('time_sec') or 0.0):.2f}s"
         else:
             content = "Question-conditioned detail crop preserves local evidence that may be lost in the global anchor."
             reason = "Use this crop for small objects, text, counts, attributes, or spatial relations in its bbox."
@@ -331,15 +273,12 @@ def build_structured_evidence_prompt(
                 "region_hint": image_anchor.get("region_hint"),
             }
             confidence = 0.85
-            time_value = "image"
         visual_evidence.append(
             {
-                "time": time_value,
+                "time": "image",
                 "region": region,
                 "source": "low_resolution_global_anchor"
                 if image_anchor.get("type") == "image_global_low"
-                else "video_keyframe_detail_crop"
-                if image_anchor.get("type") == "video_keyframe_detail_crop"
                 else "question_conditioned_detail_crop",
                 "content": content,
                 "anchor_link": image_anchor.get("anchor_link"),
@@ -431,7 +370,7 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
 
     lines = [
         "MTEC++ Evidence Builder.",
-        "You are an evidence extractor, not an answer generator. Inspect every attached visual, video, and audio anchor and record observable facts only.",
+        "Inspect every attached visual, video, and audio anchor. Compute evidence first; do not answer the user question yet.",
         f"Question: {_one_line(question)}",
         "QuestionDecomposition:",
         f"- target_evidence_types={','.join(analysis.get('target_evidence_types', []))}",
@@ -440,7 +379,6 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
         "- global anchor: scene layout, object distribution, large-scale spatial relations, temporal context, and overall scene state.",
         "- crop anchors: small objects, readable text, colors, attributes, counts, local relations, and fine-grained state changes.",
         "- video anchor: start/middle/end coverage, action continuity, event order, scene transitions, and answer-relevant timestamps.",
-        "- full-video low-resolution anchor: complete chronological fallback context; use it to recover temporal order, scene context, action flow, and global layout when local evidence is weak or fragmented.",
         "- audio anchor: speech/ASR cues, speaker mentions, narration, music/sound effects, rhythm, silence, emphasis, and events that may not be visible.",
         "- cross-modal use: align audio events or narration with nearby video frames; use audio to recover details lost by low-FPS video, and use video to ground ambiguous audio.",
         "HybridEvidenceGraph:",
@@ -475,11 +413,9 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
     if video_anchors or audio_anchors or transcript_anchors:
         lines.append("TemporalAnchors:")
         for anchor in video_anchors:
-            role = "full_timeline_global_fallback" if anchor.get("type") == "video_full_timeline_lowres" else "selected_evidence_anchor"
             lines.append(
                 "- "
                 f"{anchor.get('anchor_link')} type={anchor.get('type')} "
-                f"role={role} "
                 f"duration={anchor.get('source_duration_sec')}s "
                 f"frames={len(anchor.get('frames', []))}/{anchor.get('source_frame_count')} "
                 f"target_fps={anchor.get('target_fps')} "
@@ -527,16 +463,10 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
     lines.extend(
         [
             "Return compact JSON only, with this schema:",
-            '{"question_type":"","temporal_scope":{"type":"","time_range_sec":null,"confidence":0.0},"observations":[{"id":"","time":"","source":"","observation":"","anchor":"anchor_link","scope_match":true,"confidence":0.0}],"counts":[],"visible_set":{},"ocr_text":[],"missing_required_evidence":[],"forbidden_inference":[],"uncertainties":[]}',
+            '{"global_context":[],"local_details":[],"task_relevant_observations":[],"counts":[],"spatial_relations":[],"direction_orientation":[],"distance_depth":[],"temporal_segments":[],"audio_evidence":[],"speech_or_narration":[],"audio_visual_sync":[],"symbols_text_rules":[],"ocr_text":[],"cross_level_support":[],"anchor_grounding":[],"merged_duplicates":[],"rare_evidence":[],"option_elimination":[],"uncertainties":[],"preliminary_answer":""}',
             "Rules:",
-            "- Do not provide candidate_answer, preliminary_answer, best_option, final_answer, or any option letter as the answer.",
-            "- Do not write phrases like therefore the answer is, likely option, should be A/B/C/D, or correct answer.",
             "- Every non-empty evidence item must cite one anchor_link.",
-            "- Every observation must include a timestamp/time range, source, confidence, and scope_match when a temporal scope exists.",
             "- For counting, list counted visible instances and ignored non-target instances.",
-            "- For count questions, list tracks/instances; do not infer a total from partial crops.",
-            "- For missing/absent questions, enumerate the visible set first; do not infer absence from one frame.",
-            "- For model/text/score questions, write unreadable/uncertain when OCR is weak; do not identify by appearance only.",
             "- For distance/depth, compare relative size, occlusion, perspective cues, scene geometry, and ground/contact cues; mark estimate uncertainty.",
             "- For symbols, signs, UI, labels, rules, or status indicators, identify the relevant object/context before reading color/text/state.",
             "- For direction/orientation, state the visual cue: front/rear, arrow head, body pose, or facing side.",
@@ -546,7 +476,7 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
             "- For speech, subtitles, narration, or educational/explainer videos, extract mentioned entities, event order, and negated/not-mentioned items from audio when available.",
             "- Treat timestamped transcript segments as primary evidence for narration, dialogue, mentioned/not-mentioned events, and ordering of spoken facts.",
             "- Align transcript timestamps to nearby video frames and audio event segments before selecting an option.",
-            "- For multiple-choice video questions, record option-relevant observations only; do not choose an option.",
+            "- For multiple-choice video questions, create option_elimination entries for every option using visual evidence, audio evidence, and cross-modal alignment.",
             "- If audio supports a detail not visible in the low-FPS video, keep it as audio_evidence with an anchor_link and explain the nearby visual context.",
             "- If audio and video disagree or one modality is missing/unclear, put the conflict in uncertainties instead of guessing.",
             "- If evidence conflicts across anchors, put the conflict in uncertainties.",
@@ -724,21 +654,6 @@ def format_compact_evidence_prompt(prompt: Dict[str, Any]) -> str:
     if summary:
         lines.append(f"Summary: {summary}")
 
-    resolver_rows = _compact_task_resolver_rows(structured.get("task_specific_resolver_guidance"))
-    if resolver_rows:
-        lines.append("TaskSpecificResolverGuidance:")
-        lines.extend(resolver_rows)
-
-    visual_context_rows = _compact_visual_context_rows(structured.get("visual_context_hint"))
-    if visual_context_rows:
-        lines.append("NoTranscriptVisualContext:")
-        lines.extend(visual_context_rows)
-
-    global_timeline_rows = _compact_global_timeline_rows(structured.get("global_video_timeline"))
-    if global_timeline_rows:
-        lines.append("GlobalVideoTimeline:")
-        lines.extend(global_timeline_rows)
-
     temporal_rows = _compact_temporal_rows(structured, anchors)
     if temporal_rows:
         lines.append("TemporalChain t|anchor|delta|note:")
@@ -758,16 +673,6 @@ def format_compact_evidence_prompt(prompt: Dict[str, Any]) -> str:
     if audio_rows:
         lines.append("AudioEvidence time|type|anchor|score|rms|content:")
         lines.extend(audio_rows)
-
-    transcript_rows = _compact_transcript_rows(anchors)
-    if transcript_rows:
-        lines.append("TranscriptEvidence time|anchor|source|text:")
-        lines.extend(transcript_rows)
-
-    extraction_rows = _compact_video_extraction_rows(anchors)
-    if extraction_rows:
-        lines.append("TaskAwareVideoExtraction:")
-        lines.extend(extraction_rows)
 
     relations = [_one_line(item) for item in structured.get("cross_modal_relations", []) if item]
     if relations:
@@ -790,54 +695,13 @@ def format_compact_evidence_prompt(prompt: Dict[str, Any]) -> str:
 def _coerce_computed_evidence(stage1_response: Optional[str]) -> Any:
     if not stage1_response:
         return {}
-    text = _strip_json_code_fence(stage1_response.strip())
+    text = stage1_response.strip()
     if not text:
         return {}
-    for candidate in (text, _json_object_slice(text)):
-        if not candidate:
-            continue
-        try:
-            return _remove_answer_fields(json.loads(candidate))
-        except json.JSONDecodeError:
-            pass
-    return {"raw_evidence": _trim_text(text, max_chars=2600)}
-
-
-def _remove_answer_fields(value: Any) -> Any:
-    banned = {
-        "candidate_answer",
-        "preliminary_answer",
-        "predicted_answer",
-        "best_option",
-        "final_answer",
-        "answer",
-        "choice",
-    }
-    if isinstance(value, dict):
-        return {key: _remove_answer_fields(item) for key, item in value.items() if str(key).lower() not in banned}
-    if isinstance(value, list):
-        return [_remove_answer_fields(item) for item in value]
-    return value
-
-
-def _strip_json_code_fence(text: str) -> str:
-    value = text.strip()
-    if value.startswith("```"):
-        lines = value.splitlines()
-        if lines and lines[0].lstrip().startswith("```"):
-            lines = lines[1:]
-        if lines and lines[-1].strip().startswith("```"):
-            lines = lines[:-1]
-        value = "\n".join(lines).strip()
-    return value
-
-
-def _json_object_slice(text: str) -> str:
-    start = text.find("{")
-    end = text.rfind("}")
-    if start >= 0 and end > start:
-        return text[start : end + 1]
-    return ""
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return {"raw_evidence": _trim_text(text, max_chars=1400)}
 
 
 def _question_analysis(question: str) -> Dict[str, Any]:
@@ -893,9 +757,6 @@ def _compact_computed_evidence_rows(evidence: Any) -> List[str]:
         "direction_orientation",
         "distance_depth",
         "temporal_segments",
-        "audio_evidence",
-        "speech_or_narration",
-        "audio_visual_sync",
         "symbols_text_rules",
         "ocr_text",
         "cross_level_support",
@@ -904,6 +765,7 @@ def _compact_computed_evidence_rows(evidence: Any) -> List[str]:
         "rare_evidence",
         "option_elimination",
         "uncertainties",
+        "preliminary_answer",
         "raw_evidence",
     ]
     for key in preferred_keys:
@@ -1075,147 +937,6 @@ def _safe_time_value(value: str) -> float:
         return 0.0
 
 
-def _compact_visual_context_rows(value: Any) -> List[str]:
-    if not value:
-        return []
-    if isinstance(value, dict):
-        rows: List[str] = []
-        summary = value.get("visual_summary")
-        if summary:
-            rows.append(f"summary|{_one_line(summary)}")
-        keywords = value.get("question_keywords") or []
-        if keywords:
-            rows.append("keywords|" + _one_line(", ".join(str(item) for item in keywords[:16])))
-        actions = value.get("actions") or []
-        if actions:
-            rows.append("actions|" + _one_line(", ".join(str(item) for item in actions[:16])))
-        objects = value.get("visible_objects") or []
-        if objects:
-            rows.append("objects|" + _one_line(", ".join(str(item) for item in objects[:16])))
-        for event in (value.get("event_chain") or [])[:8]:
-            if isinstance(event, dict):
-                rows.append(
-                    "event|"
-                    + "|".join(
-                        [
-                            _one_line(event.get("time")),
-                            _one_line(event.get("action")),
-                            _one_line(", ".join(str(item) for item in (event.get("objects") or [])[:8])),
-                            _one_line(event.get("anchor")),
-                        ]
-                    )
-                )
-            else:
-                rows.append("event|" + _one_line(event))
-        option_cues = value.get("option_visual_cues") or {}
-        if isinstance(option_cues, dict):
-            for option, cue in list(option_cues.items())[:6]:
-                if isinstance(cue, dict):
-                    support = _one_line(", ".join(str(item) for item in (cue.get("support") or [])[:4]))
-                    contradiction = _one_line(", ".join(str(item) for item in (cue.get("contradiction") or [])[:4]))
-                    needs = _one_line(", ".join(str(item) for item in (cue.get("needs_check") or [])[:4]))
-                    rows.append(f"option_{option}|support={support}|contradiction={contradiction}|needs={needs}")
-                else:
-                    rows.append(f"option_{option}|{_one_line(cue)}")
-        absence = value.get("absence_checks") or []
-        if absence:
-            rows.append("absence|" + _one_line(", ".join(str(item) for item in absence[:8])))
-        uncertainty = value.get("uncertainty") or []
-        if uncertainty:
-            rows.append("uncertainty|" + _one_line(", ".join(str(item) for item in uncertainty[:8])))
-        return rows[:24]
-    return ["raw|" + _one_line(value)]
-
-
-def _compact_global_timeline_rows(value: Any) -> List[str]:
-    if not value:
-        return []
-    if not isinstance(value, dict):
-        return ["raw|" + _one_line(value)]
-    rows: List[str] = []
-    resolver_rows = _compact_task_resolver_rows(value.get("task_specific_resolver"))
-    if resolver_rows:
-        rows.append("ai_resolver_start")
-        rows.extend(resolver_rows[:10])
-    locator = value.get("scene_locator") or {}
-    if isinstance(locator, dict) and any(locator.values()):
-        rows.append(
-            "scene_locator|"
-            + "|".join(
-                [
-                    _one_line(locator.get("target_scene")),
-                    _one_line(locator.get("time_range")),
-                    _short_number(locator.get("confidence")),
-                ]
-            )
-        )
-    for item in (value.get("question_relevant_time_ranges") or [])[:6]:
-        if isinstance(item, dict):
-            rows.append(
-                "relevant_range|"
-                + "|".join(
-                    [
-                        _one_line(item.get("time_range")),
-                        _one_line(item.get("reason")),
-                        _short_number(item.get("confidence")),
-                    ]
-                )
-            )
-        else:
-            rows.append("relevant_range|" + _one_line(item))
-    for event in (value.get("timeline") or [])[:10]:
-        if isinstance(event, dict):
-            rows.append(
-                "event|"
-                + "|".join(
-                    [
-                        _one_line(event.get("time_range")),
-                        _one_line(event.get("scene")),
-                        _one_line(", ".join(str(item) for item in (event.get("actions") or [])[:6])),
-                        _one_line(", ".join(str(item) for item in (event.get("objects") or [])[:6])),
-                        _short_number(event.get("confidence")),
-                    ]
-                )
-            )
-        else:
-            rows.append("event|" + _one_line(event))
-    uncertainties = value.get("global_uncertainties") or []
-    if uncertainties:
-        rows.append("uncertainty|" + _one_line(", ".join(str(item) for item in uncertainties[:6])))
-    return rows[:24]
-
-
-def _compact_task_resolver_rows(value: Any) -> List[str]:
-    if not value:
-        return []
-    if not isinstance(value, dict):
-        return ["raw|" + _one_line(value)]
-    rows: List[str] = []
-    resolver_type = value.get("resolver_type") or ""
-    if resolver_type:
-        rows.append(
-            "resolver|"
-            + "|".join(
-                [
-                    _one_line(resolver_type),
-                    _one_line(value.get("priority")),
-                    _short_number(value.get("confidence")),
-                    _one_line(value.get("fallback_policy")),
-                ]
-            )
-        )
-    template = value.get("evidence_template") or {}
-    if template:
-        rows.append("template|" + _one_line(json.dumps(template, ensure_ascii=False, separators=(",", ":")),))
-    rules = value.get("rules") or value.get("special_rules") or []
-    for rule in rules[:8]:
-        rows.append("rule|" + _one_line(rule))
-    ranges = value.get("target_time_ranges") or []
-    for item in ranges[:6]:
-        rows.append("target_range|" + _one_line(item))
-    return rows[:16]
-
-
 def _compact_temporal_rows(
     structured: Dict[str, Any],
     anchors: Dict[str, Any],
@@ -1298,189 +1019,6 @@ def _compact_audio_rows(
             )
         )
     return rows
-
-
-def _compact_transcript_rows(anchors: Dict[str, Any]) -> List[str]:
-    rows: List[str] = []
-    for anchor in anchors.get("transcript_anchor", []):
-        source = anchor.get("source") or anchor.get("backend") or ""
-        for segment in _prioritized_transcript_segments(anchor, limit=28):
-            role = segment.get("selection_role") or "transcript"
-            score = segment.get("relevance_score")
-            source_text = f"{source}/{role}"
-            if score:
-                source_text += f"/score={_short_number(score)}"
-            rows.append(
-                "|".join(
-                    [
-                        str(segment.get("time_range_sec", "")),
-                        str(segment.get("anchor_link") or anchor.get("anchor_link") or ""),
-                        source_text,
-                        _one_line(segment.get("text")),
-                    ]
-                )
-            )
-    return rows
-
-
-def _compact_video_extraction_rows(anchors: Dict[str, Any]) -> List[str]:
-    rows: List[str] = []
-    for anchor in anchors.get("video_evidence_anchor", []):
-        profile = anchor.get("query_profile") or {}
-        question_types = ",".join(str(item) for item in (profile.get("question_types") or [])[:8])
-        required = ",".join(str(item) for item in (profile.get("required_evidence") or [])[:10])
-        rows.append(f"profile|types={_one_line(question_types)}|required={_one_line(required)}")
-        temporal_scope = anchor.get("temporal_scope") or {}
-        if temporal_scope:
-            rows.append(
-                "temporal_scope|"
-                + "|".join(
-                    [
-                        _one_line(temporal_scope.get("type")),
-                        _one_line(temporal_scope.get("time_range_sec")),
-                        _short_number(temporal_scope.get("confidence")),
-                        _one_line(temporal_scope.get("source")),
-                    ]
-                )
-            )
-        deterministic = anchor.get("deterministic_evidence") or {}
-        hard = deterministic.get("hard_evidence") or {}
-        quality = deterministic.get("evidence_quality") or {}
-        for constraint in (deterministic.get("constraints_for_llm") or [])[:5]:
-            rows.append("constraint|" + _one_line(constraint))
-        count_tracks = hard.get("count_tracks") or {}
-        if count_tracks:
-            rows.append(
-                "count_tracks|"
-                + "|".join(
-                    [
-                        _one_line(count_tracks.get("method")),
-                        f"confirmed={len(count_tracks.get('confirmed_tracks') or [])}",
-                        f"uncertain={len(count_tracks.get('uncertain_tracks') or [])}",
-                        f"value={_one_line(count_tracks.get('count_value'))}",
-                        f"conf={_short_number(count_tracks.get('count_confidence'))}",
-                    ]
-                )
-            )
-            for track in (count_tracks.get("confirmed_tracks") or [])[:6]:
-                rows.append(
-                    "track|"
-                    + "|".join(
-                        [
-                            _one_line(track.get("track_id")),
-                            _one_line(track.get("label")),
-                            _one_line(track.get("time_range_sec")),
-                            f"seen={_one_line(track.get('frames_seen'))}",
-                            _one_line(track.get("detections")),
-                        ]
-                    )
-                )
-        visible_set = hard.get("visible_set") or {}
-        if visible_set:
-            rows.append(
-                "visible_set|"
-                + "|".join(
-                    [
-                        f"visible={_one_line(visible_set.get('visible_options'))}",
-                        f"missing_candidates={_one_line(visible_set.get('missing_candidates'))}",
-                        _one_line(visible_set.get("rule")),
-                    ]
-                )
-            )
-        ocr_votes = hard.get("ocr_votes") or {}
-        if ocr_votes:
-            rows.append(
-                "ocr_votes|"
-                + "|".join(
-                    [
-                        f"status={_one_line(ocr_votes.get('ocr_status'))}",
-                        f"voted={_one_line(ocr_votes.get('voted_text'))}",
-                        f"candidates={len(ocr_votes.get('ocr_candidates') or [])}",
-                    ]
-                )
-            )
-        for missing in (quality.get("missing") or [])[:4]:
-            rows.append("quality_missing|" + _one_line(missing))
-        for scene in (anchor.get("scene_segments") or [])[:6]:
-            rows.append(
-                "scene|"
-                + "|".join(
-                    [
-                        _one_line(scene.get("id")),
-                        _one_line(scene.get("time_range_sec")),
-                        _one_line(scene.get("source")),
-                    ]
-                )
-            )
-        for motion in (anchor.get("motion_regions") or [])[:8]:
-            rows.append(
-                "motion|"
-                + "|".join(
-                    [
-                        _one_line(motion.get("time_sec")),
-                        _one_line(motion.get("bbox_norm")),
-                        _short_number(motion.get("motion_intensity")),
-                        _short_number(motion.get("motion_area_ratio")),
-                    ]
-                )
-            )
-        for region in (anchor.get("ocr_regions") or [])[:8]:
-            rows.append(
-                "ocr|"
-                + "|".join(
-                    [
-                        _one_line(region.get("time_sec")),
-                        _one_line(region.get("anchor_link")),
-                        _short_number(region.get("confidence")),
-                        _one_line(region.get("text")),
-                    ]
-                )
-            )
-        for detection in (anchor.get("object_detections") or [])[:12]:
-            rows.append(
-                "object|"
-                + "|".join(
-                    [
-                        _one_line(detection.get("time_sec")),
-                        _one_line(detection.get("anchor_link")),
-                        _one_line(detection.get("label")),
-                        _short_number(detection.get("confidence")),
-                        _one_line(detection.get("bbox_norm")),
-                    ]
-                )
-            )
-        for unit in (anchor.get("evidence_units") or [])[:14]:
-            rows.append(
-                "unit|"
-                + "|".join(
-                    [
-                        _one_line(unit.get("id")),
-                        _one_line(unit.get("evidence_type")),
-                        _one_line(unit.get("time_range_sec") or unit.get("time_sec")),
-                        _one_line(unit.get("anchor_link")),
-                        _short_number(unit.get("confidence")),
-                        _one_line(unit.get("event")),
-                    ]
-                )
-            )
-        for warning in (anchor.get("warnings") or [])[:4]:
-            rows.append("warning|" + _one_line(warning))
-    return rows[:48]
-
-
-def _prioritized_transcript_segments(anchor: Dict[str, Any], limit: int) -> List[Dict[str, Any]]:
-    selected: List[Dict[str, Any]] = []
-    seen = set()
-    for bucket in (anchor.get("question_relevant_segments") or [], anchor.get("segments") or []):
-        for segment in bucket:
-            key = segment.get("anchor_link") or segment.get("anchor_id") or json.dumps(segment, sort_keys=True, ensure_ascii=False)
-            if key in seen:
-                continue
-            seen.add(key)
-            selected.append(segment)
-            if len(selected) >= limit:
-                return selected
-    return selected
 
 
 def _one_line(value: Any) -> str:
