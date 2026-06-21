@@ -19,6 +19,7 @@ try:
         create_image_global_anchor,
         infer_question_profile,
     )
+    from zoomrefine.mtec_task_resolvers import route_question_family
 except ImportError:
     from mtec_prompt_plus import (
         DEFAULT_TOTAL_BUDGET,
@@ -26,6 +27,7 @@ except ImportError:
         create_image_global_anchor,
         infer_question_profile,
     )
+    from mtec_task_resolvers import route_question_family
 
 
 DEFAULT_VIDEO_TARGET_FPS = 3.0
@@ -610,6 +612,7 @@ def _video_query_extraction_profile(question: str) -> Dict[str, Any]:
     text = (question or "").lower()
     question_types: List[str] = []
     target_terms = _query_terms_for_video_evidence(question)
+    task_family = route_question_family(question)
     if any(term in text for term in ("how many", "number of", "count", "many")):
         question_types.append("count")
     if any(term in text for term in ("before", "after", "first", "then", "next", "finally", "order", "sequence")):
@@ -624,12 +627,30 @@ def _video_query_extraction_profile(question: str) -> Dict[str, Any]:
         question_types.append("action_motion")
     if any(term in text for term in ("absent", "missing", "not appear", "not shown", "which color")):
         question_types.append("absence_verification")
+    family_type_map = {
+        "cross_shot_entity_count": ["count"],
+        "scene_group_attribute_count": ["count", "spatial_relation"],
+        "container_object_count": ["count", "spatial_relation"],
+        "missing_set": ["absence_verification"],
+        "stateful_ocr": ["ocr"],
+        "ordinal_clip_action": ["temporal_order", "action_motion"],
+        "domain_intention": ["action_motion"],
+        "scene_conditioned_attribute": ["spatial_relation"],
+    }
+    for family_question_type in family_type_map.get(task_family.get("task_family"), []):
+        if family_question_type not in question_types:
+            question_types.append(family_question_type)
     if not question_types:
         question_types.append("semantic_video")
+    required_evidence = _required_video_evidence(question_types)
+    for item in task_family.get("required_evidence") or []:
+        if item not in required_evidence:
+            required_evidence.append(item)
     return {
         "question_types": question_types,
+        "task_family": task_family,
         "target_terms": target_terms[:32],
-        "required_evidence": _required_video_evidence(question_types),
+        "required_evidence": required_evidence,
     }
 
 
@@ -852,6 +873,7 @@ def _build_deterministic_evidence_engine(
         "version": "deterministic_evidence_engine_v1",
         "question_analysis": {
             "question_types": list(question_types),
+            "task_family": query_profile.get("task_family") or {},
             "options": options,
             "target_terms": query_profile.get("target_terms") or [],
         },
@@ -868,10 +890,12 @@ def _build_deterministic_evidence_engine(
 
 def _llm_constraints_for_query(question: str, question_types: set, temporal_scope: Dict[str, Any]) -> List[str]:
     text = (question or "").lower()
+    task_family = route_question_family(question).get("task_family")
     constraints = [
         "Evidence extractor must not output candidate_answer, preliminary_answer, best_option, or final answer.",
         "Every observation must be timestamped and grounded to an anchor_link when available.",
         "Final verification must evaluate each option independently as supported, contradicted, or unknown.",
+        f"Use task_family={task_family} resolver semantics before generic evidence if confidence is medium/high.",
     ]
     if temporal_scope.get("type") not in {None, "full_video"}:
         constraints.append("Do not use evidence outside temporal_scope for the answer unless all scoped evidence is missing.")
@@ -881,6 +905,14 @@ def _llm_constraints_for_query(question: str, question_types: set, temporal_scop
         constraints.append("For missing/absent questions, use visible_set aggregation over the valid scope, not one frame where something is unseen.")
     if "ocr" in question_types or any(term in text for term in ("model", "screen", "score", "text", "advertised")):
         constraints.append("For model/text/score questions, do not infer from appearance if OCR is unreadable or outside temporal scope.")
+    if task_family == "scene_group_attribute_count":
+        constraints.append("For scene group attribute counts, use the best wide/panorama scene frame and do not sum people across close-ups.")
+    if task_family == "container_object_count":
+        constraints.append("For container counts, locate the container ROI and exclude objects outside it.")
+    if task_family == "ordinal_clip_action":
+        constraints.append("For ordinal clip actions, group atomic shots into logical clips before selecting the requested ordinal clip.")
+    if task_family == "domain_intention":
+        constraints.append("For intent questions, rank domain-specific intent hypotheses and include negative evidence.")
     if any(term in text for term in ("beginning", "at the start", "opening")):
         constraints.append("For beginning questions, later transcript or late visual evidence is scope_mismatch and cannot override opening visual evidence.")
     return constraints

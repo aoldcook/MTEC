@@ -30,6 +30,10 @@ from zoomrefine.mtec_prompt_plus import (  # noqa: E402
     format_compact_evidence_prompt,
     format_rich_evidence_prompt,
 )
+from zoomrefine.mtec_task_resolvers import (  # noqa: E402
+    build_task_specific_resolver_guidance as _build_task_family_resolver_guidance,
+    route_question_family,
+)
 
 
 SYSTEM_PROMPT = (
@@ -350,126 +354,7 @@ def add_compression_metrics(record: Dict[str, Any], source_bytes: int, evidence_
 
 
 def build_task_specific_resolver_guidance(question: str) -> Dict[str, Any]:
-    text = str(question or "").lower()
-    guidance: Dict[str, Any] = {
-        "resolver_type": "generic_video_evidence",
-        "priority": "normal",
-        "evidence_template": {
-            "facts": [],
-            "conflicts": [],
-            "fallback_needed": False,
-        },
-        "rules": [
-            "Use direct video/crop evidence over text evidence when they conflict.",
-            "Keep timestamps and anchor links for every observation.",
-        ],
-    }
-    if any(term in text for term in ("how many", "number of", "count", "challenger", "challengers", "men and women", "men", "women", "presenting")):
-        guidance.update(
-            {
-                "resolver_type": "cross_shot_entity_bank_counter",
-                "priority": "high",
-                "evidence_template": {
-                    "count_target": "participants_or_question_target",
-                    "global_entities": [
-                        {
-                            "id": "P01",
-                            "role": "challenger|presenter|participant|background|unknown",
-                            "gender_or_category": "male|female|unknown",
-                            "time_ranges": [],
-                            "appearance": "",
-                            "evidence_anchors": [],
-                            "include_in_count": False,
-                            "include_reason": "",
-                            "confidence": 0.0,
-                        }
-                    ],
-                    "excluded_entities": [],
-                    "count_value": None,
-                    "count_confidence": 0.0,
-                    "count_uncertainties": [],
-                },
-                "rules": [
-                    "Do not count one frame only; build an entity bank across the whole relevant timeline.",
-                    "Merge the same person across shots using clothing, body position, role, stage/challenge area, and repeated foreground presence.",
-                    "Exclude audience, referees, background people, and brief non-participants unless the question target includes them.",
-                    "For stage men/women questions, prefer wide/panorama frames and max stable on-stage cast over local object crops.",
-                    "For challenger questions, count only people who take part in the challenge or are foreground participants, not all detected persons.",
-                    "If entity identity across shots is uncertain, keep separate hypotheses and report count_uncertainties instead of forcing a low-confidence exact count.",
-                ],
-            }
-        )
-    if any(term in text for term in ("third clip", "second clip", "first clip", "clip in the video", "clip ")) or (
-        "basketball" in text or any(term in text for term in ("dunk", "3-pointer", "3 pointer", "three-pointer", "layup", "game-winning shot"))
-    ):
-        guidance.update(
-            {
-                "resolver_type": "logical_clip_action_resolver",
-                "priority": "high",
-                "evidence_template": {
-                    "logical_clips": [
-                        {
-                            "clip_index": 1,
-                            "time_range": "",
-                            "boundary_confidence": 0.0,
-                            "start_evidence": "",
-                            "end_evidence": "",
-                            "actions": [],
-                        }
-                    ],
-                    "target_clip_index": None,
-                    "target_logical_clip_range": "",
-                    "backup_range": "",
-                    "action_hypotheses": [],
-                    "clip_uncertainties": [],
-                },
-                "rules": [
-                    "Do not treat the third PySceneDetect atomic shot as the third logical clip.",
-                    "Merge adjacent shots into logical clips when they show the same play/event, replay, scoreboard context, or continuous action.",
-                    "For third clip questions, identify the third logical event clip and use a backup range if boundary confidence is below 0.75.",
-                    "For basketball actions, distinguish dunk vs three-pointer by release distance, ball arc, player distance from rim, and hand/rim contact.",
-                    "A dunk requires close rim contact or downward force near the basket; a three-pointer requires distant release and long arc.",
-                ],
-            }
-        )
-    if any(term in text for term in ("current score", "ongoing game", "scoreboard", "score of", "score?")):
-        guidance.update(
-            {
-                "resolver_type": "scoreboard_state_tracker",
-                "priority": "high",
-                "evidence_template": {
-                    "scoreboard_roi": {},
-                    "score_ocr_sequence": [],
-                    "voted_score": "",
-                    "vote_confidence": 0.0,
-                    "state_machine_notes": [],
-                },
-                "rules": [
-                    "Use high-resolution scoreboard crops and direct video frames over transcript or generic OCR text.",
-                    "Vote across multiple nearby frames; do not trust a single low-confidence OCR read.",
-                    "Prefer temporally stable score values unless a scoring event explains a change.",
-                ],
-            }
-        )
-    if any(term in text for term in ("ward", "grass", "bush", "brush", "fox tail", "legend", "moba", "enemy", "ally")):
-        guidance.update(
-            {
-                "resolver_type": "moba_intent_resolver",
-                "priority": "medium",
-                "evidence_template": {
-                    "ranked_intent_hypotheses": [],
-                    "moba_facts": [],
-                    "negative_evidence": [],
-                },
-                "rules": [
-                    "Do not infer kill intent from damage numbers alone.",
-                    "Movement toward grass/bush/river with no kill notification can support warding/vision intent.",
-                    "A kill intent requires sustained enemy engagement or kill confirmation.",
-                    "Map options to MOBA intent labels before final option selection.",
-                ],
-            }
-        )
-    return guidance
+    return _build_task_family_resolver_guidance(question)
 
 
 def structured_package(
@@ -837,6 +722,15 @@ def infer_video_anchor_policy(question: str, requested_policy: str) -> Tuple[str
     if requested_policy != "auto":
         return requested_policy, dict(VIDEO_ANCHOR_POLICIES[requested_policy])
     text = str(question or "").lower()
+    task_family = route_question_family(question).get("task_family")
+    if task_family == "scene_group_attribute_count":
+        policy = dict(VIDEO_ANCHOR_POLICIES["full"])
+        policy.update({"detail_max_crops": 8, "detail_max_side": 960, "audio_anchor": False, "evidence_max_tokens": 384})
+        return "full_scene_group_count", policy
+    if task_family in {"container_object_count", "missing_set"}:
+        policy = dict(VIDEO_ANCHOR_POLICIES["medium"])
+        policy.update({"detail_max_crops": 8, "detail_max_side": 960, "audio_anchor": False, "evidence_max_tokens": 320})
+        return f"medium_{task_family}", policy
     asr_terms = ("say", "said", "says", "saying", "speak", "speaker", "spoken", "voice", "narrator", "narration", "mentioned", "heard", "listen", "audio", "sound", "music", "song", "year", "date", "when was", "painted", "born", "published")
     ocr_terms = ("text", "word", "letter", "number", "digit", "written", "label", "title", "sign", "screen", "display", "shown on", "read", "ocr", "equation", "graph", "chart", "axis", "table", "score", "percentage", "price", "advertised", "laptop", "phone", "smart phone", "smartphone")
     temporal_terms = ("first", "then", "before", "after", "next", "finally", "order", "sequence", "timeline", "event", "happen", "happens", "change", "transition", "start", "end", "doing", "action", "move", "moving", "turn", "appears", "disappears", "intention", "goal", "left", "right", "ward", "slay", "enemy", "ally", "legend", "fox tail")
@@ -863,13 +757,18 @@ def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
         "MTEC++ minimal evidence extraction. You are an evidence recorder, not an answer generator.",
         f"Question: {_short_line(question)}",
         "Use attached compressed anchors only. Return compact JSON only; no prose.",
-        '{"question_type":"","temporal_scope":{"type":"","time_range_sec":null,"confidence":0.0},"observations":[{"id":"E1","time":"","modality":"visual|video|asr|audio|ocr","observation":"short observable fact","anchor":"anchor_link","scope_match":true,"confidence":0.0}],"counts":[],"visible_set":{},"ocr_text":[],"missing_required_evidence":[],"forbidden_inference":[],"uncertainty":[]}',
+        '{"question_type":"","task_family":"","task_family_evidence":{},"temporal_scope":{"type":"","time_range_sec":null,"confidence":0.0},"observations":[{"id":"E1","time":"","modality":"visual|video|asr|audio|ocr","observation":"short observable fact","anchor":"anchor_link","scope_match":true,"confidence":0.0}],"counts":[],"visible_set":{},"ocr_text":[],"missing_required_evidence":[],"forbidden_inference":[],"uncertainty":[]}',
         "Never output candidate_answer, preliminary_answer, best_option, final_answer, or an option letter as the answer.",
         "Never write phrases like 'therefore the answer is', 'likely option', 'should be A/B/C/D', or 'correct answer'.",
         "Keep at most 6 evidence items. Prefer transcript/ASR for speech/date/year questions, OCR/crop for text/number/screen questions, video frames for actions/order, and global frames for scene/object questions.",
-        "For absent/missing/which-color-is-absent questions, enumerate visible_set for every option; do not infer absence from a single frame.",
-        "For how-many/count/challenger/men/women questions, list tracks/instances across the valid timeline; do not count only one moment if the question asks total participants/events.",
+        "First fill task_family from TaskSpecificResolverGuidance. Then fill task_family_evidence using that resolver's evidence_template.",
+        "For missing_set questions, enumerate visible_set for every option; do not infer absence from a single frame.",
+        "For cross_shot_entity_count questions, build an entity bank across the valid timeline; do not count only one moment if the question asks total participants/events.",
+        "For scene_group_attribute_count questions, use the best wide/panorama frame and do not sum repeated close-ups.",
+        "For container_object_count questions, locate the container ROI and count only visible inside-container items.",
         "For beginning/start/displayed-at-the-beginning questions, mark later transcript or later visual evidence scope_match=false.",
+        "For container_object_count with beginning/start scope, do not use later reveal shots, later pack shots, or later ASR product-list counts as primary evidence.",
+        "For scene_group_attribute_count multiple-choice questions, verify each option against the best wide/panorama stage frame; include stage-edge people and do not count only central dancers.",
         "For current score/ongoing game questions, record only directly visible scoreboard OCR/crops with time and scope; write unreadable if uncertain.",
         "If text/tool evidence conflicts with attached video or crop images, mark the conflict in uncertainty and prefer direct visual evidence from video/crops.",
     ]
@@ -881,12 +780,12 @@ def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
         if isinstance(global_timeline, dict) and global_timeline.get("task_specific_resolver"):
             lines.append("AIGeneratedTaskSpecificResolver:")
             lines.append(_short_line(json.dumps(global_timeline.get("task_specific_resolver"), ensure_ascii=False), max_chars=2200))
-            lines.append("Fill this resolver's evidence_template in computed evidence. Do not replace it with generic observations when resolver_type is cross_shot_entity_bank_counter or logical_clip_action_resolver.")
+            lines.append("Fill this task-family resolver's evidence_template in computed evidence. Do not replace specialized resolver fields with generic observations when task_family is high-priority.")
     resolver_guidance = structured.get("task_specific_resolver_guidance")
     if resolver_guidance:
         lines.append("TaskSpecificResolverGuidance:")
         lines.append(_short_line(json.dumps(resolver_guidance, ensure_ascii=False), max_chars=2200))
-        lines.append("Use this specialized template and rules when collecting evidence. If generic evidence conflicts with the specialized resolver, report the conflict and keep the resolver-specific fields.")
+        lines.append("Use this specialized task-family template and rules when collecting evidence. If generic evidence conflicts with the specialized resolver, report the conflict and keep the resolver-specific fields.")
     visual_hint = structured.get("visual_context_hint")
     if visual_hint:
         lines.append("NoTranscriptVisualContextHint:")
@@ -999,8 +898,15 @@ def build_global_video_timeline_prompt(package: Dict[str, Any]) -> str:
             "First route the question to a task-specific resolver, then build the global timeline and locate the scene/time span relevant to that resolver.",
             "Use this resolver guidance as the default; adjust only if the video clearly requires a better specialized resolver:",
             json.dumps(resolver_guidance, ensure_ascii=False),
-            "For cross_shot_entity_bank_counter: create an entity-bank plan, identify wide/panorama moments, and list time ranges where each participant/challenger should be checked.",
-            "For logical_clip_action_resolver: group atomic visual changes into logical event clips, identify the target clip index, target range, backup range, and action-specific cues.",
+            "Do not override question_scope_guard. If it says beginning_locked, target_time_ranges must stay in the opening segment; later reveal shots or later ASR are out-of-scope conflicts, not primary evidence.",
+            "Resolver registry: cross_shot_entity_count, scene_group_attribute_count, container_object_count, missing_set, stateful_ocr, ordinal_clip_action, domain_intention, scene_conditioned_attribute, generic_video_evidence.",
+            "For cross_shot_entity_count: create an entity-bank plan, identify wide/panorama moments, and list time ranges where each participant/challenger/entity should be checked.",
+            "For scene_group_attribute_count: find the best wide scene frame and count people/attributes there; do not sum close-ups.",
+            "For container_object_count: locate the container ROI and count only inside-container instances in the valid temporal scope.",
+            "For missing_set: check each option independently across the full valid scope and report seen/not_seen.",
+            "For stateful_ocr: locate the stable OCR region, vote across nearby frames, and apply state constraints.",
+            "For ordinal_clip_action: group atomic visual changes into logical event clips, identify the target clip index, target range, backup range, and action-specific cues.",
+            "For domain_intention: detect the domain ontology, rank possible intents, and include negative evidence.",
             "If later text evidence or crops conflict with this visual timeline, the final verifier should re-check the video/crops and prefer direct visual evidence.",
             "Return compact JSON only with this schema:",
             '{"task_specific_resolver":{"resolver_type":"","evidence_template":{},"special_rules":[],"target_time_ranges":[],"fallback_policy":"","confidence":0.0},"timeline":[{"time_range":"","scene":"","actions":[],"objects":[],"visual_cues":[],"confidence":0.0}],"question_relevant_time_ranges":[{"time_range":"","reason":"","confidence":0.0}],"scene_locator":{"target_scene":"","time_range":"","confidence":0.0},"global_uncertainties":[]}',
@@ -1165,11 +1071,13 @@ def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str) -> str
         + "\n\nFINAL DECISION INSTRUCTIONS:\n"
         + "You are an option verifier. You receive compressed video anchors, a low-resolution full-video global anchor, deterministic evidence, answer-neutral observations, transcript/ASR evidence, OCR/object crops, and tubelet storyboards.\n"
         + "First use global_video_timeline and task_specific_resolver, if present, to locate the relevant scene/time span and understand the full-video event order. Then align structured/tool evidence to that visual timeline before judging options.\n"
-        + "If task_specific_resolver or computed evidence contains a resolver-specific template such as cross_shot_entity_bank_counter or logical_clip_action_resolver with medium/high confidence, prioritize that resolver over generic observations.\n"
-        + "For cross-shot count questions, use the entity bank and inclusion/exclusion reasons; do not answer from one frame, one YOLO track, or the largest local crop. For clip-action questions, use the target logical clip and backup range, not the third atomic scene cut.\n"
+        + "If task_specific_resolver or computed evidence contains a medium/high-confidence task-family template, prioritize its structured fields over generic observations while still mapping evidence to options yourself.\n"
+        + "Task-family policy: cross_shot_entity_count uses entity bank and inclusion/exclusion reasons; scene_group_attribute_count uses one best wide scene instead of summed close-ups; container_object_count counts inside the container ROI only; missing_set checks every option across the valid scope; stateful_ocr votes stable OCR states; ordinal_clip_action uses the target logical clip, not an atomic scene cut; domain_intention ranks ontology-grounded intents with negative evidence.\n"
         + "Evaluate each option independently as supported, contradicted, or unknown before choosing. Do not trust any previous candidate_answer, preliminary_answer, best_option, or option letter if it appears in computed evidence.\n"
         + "If text evidence, computed evidence, transcript, OCR text, or deterministic metadata conflicts with the attached video or high-resolution crop images, prefer the direct visual evidence from the video/crops. Treat conflicting text evidence as uncertain, not authoritative.\n"
         + "Treat temporal_scope as confidence-gated: confidence >= 0.75 means scoped evidence is primary; 0.50-0.75 means use scoped evidence plus the full-video global anchor; below 0.50 or missing evidence means do not hard-filter the rest of the video.\n"
+        + "For beginning/start/displayed-at-the-beginning questions, never let later reveal shots, later transcript/ASR claims, or later product summaries override opening visual evidence. Mark them out-of-scope.\n"
+        + "For scene-group attribute counts with options, verify each option against the best wide/panorama frame and include all visible on-stage people, including stage-edge performers/presenters.\n"
         + "If structured evidence is low quality, all/most options are unknown, OCR/count/visible-set evidence is incomplete, or local crops conflict, fall back to the full-video global anchor to re-check event order, scene context, action flow, and global layout.\n"
         + "For count questions, prefer deterministic count_tracks/instances only when tracks are valid; otherwise use full-context video plus visible frames. For missing-set questions, use visible_set only when complete; otherwise re-check the full-video anchor. For OCR/model/score questions, combine OCR with high-detail crops and global context when OCR is uncertain.\n"
         + "Silently build option_verification with A/B/C/D statuses and evidence IDs. Return exactly one line and nothing else: FINAL_ANSWER: <letter>."

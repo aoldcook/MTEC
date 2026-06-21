@@ -527,16 +527,22 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
     lines.extend(
         [
             "Return compact JSON only, with this schema:",
-            '{"question_type":"","temporal_scope":{"type":"","time_range_sec":null,"confidence":0.0},"observations":[{"id":"","time":"","source":"","observation":"","anchor":"anchor_link","scope_match":true,"confidence":0.0}],"counts":[],"visible_set":{},"ocr_text":[],"missing_required_evidence":[],"forbidden_inference":[],"uncertainties":[]}',
+            '{"question_type":"","task_family":"","task_family_evidence":{},"temporal_scope":{"type":"","time_range_sec":null,"confidence":0.0},"observations":[{"id":"","time":"","source":"","observation":"","anchor":"anchor_link","scope_match":true,"confidence":0.0}],"counts":[],"visible_set":{},"ocr_text":[],"missing_required_evidence":[],"forbidden_inference":[],"uncertainties":[]}',
             "Rules:",
             "- Do not provide candidate_answer, preliminary_answer, best_option, final_answer, or any option letter as the answer.",
             "- Do not write phrases like therefore the answer is, likely option, should be A/B/C/D, or correct answer.",
             "- Every non-empty evidence item must cite one anchor_link.",
             "- Every observation must include a timestamp/time range, source, confidence, and scope_match when a temporal scope exists.",
-            "- For counting, list counted visible instances and ignored non-target instances.",
-            "- For count questions, list tracks/instances; do not infer a total from partial crops.",
-            "- For missing/absent questions, enumerate the visible set first; do not infer absence from one frame.",
-            "- For model/text/score questions, write unreadable/uncertain when OCR is weak; do not identify by appearance only.",
+            "- First route the question to task_family and fill task_family_evidence from the supplied resolver template when available.",
+            "- For cross_shot_entity_count, build an entity bank with inclusion/exclusion reasons; do not infer a total from partial crops.",
+            "- For scene_group_attribute_count, use the best wide/panorama scene frame; do not sum close-ups or repeated shots.",
+            "- For container_object_count, locate the container/surface ROI and count only visible inside-scope instances.",
+            "- For beginning/start/displayed-at-the-beginning questions, keep later reveal shots and later transcript/ASR claims out of scope even if they are clearer.",
+            "- For scene-group count options, verify each option against all visible people in the wide/panorama frame, including stage-edge performers or presenters.",
+            "- For missing_set, enumerate the visible set for every option first; do not infer absence from one frame.",
+            "- For stateful_ocr/model/text/score questions, write unreadable/uncertain when OCR is weak; do not identify by appearance only.",
+            "- For ordinal_clip_action, group atomic shots into logical clips before selecting first/second/third/last clip.",
+            "- For domain_intention, identify the domain ontology, ranked intents, and negative evidence before judging options.",
             "- For distance/depth, compare relative size, occlusion, perspective cues, scene geometry, and ground/contact cues; mark estimate uncertainty.",
             "- For symbols, signs, UI, labels, rules, or status indicators, identify the relevant object/context before reading color/text/state.",
             "- For direction/orientation, state the visual cue: front/rear, arrow head, body pose, or facing side.",
@@ -1191,19 +1197,25 @@ def _compact_task_resolver_rows(value: Any) -> List[str]:
     if not isinstance(value, dict):
         return ["raw|" + _one_line(value)]
     rows: List[str] = []
+    task_family = value.get("task_family") or ""
     resolver_type = value.get("resolver_type") or ""
-    if resolver_type:
+    if resolver_type or task_family:
         rows.append(
             "resolver|"
             + "|".join(
                 [
+                    _one_line(task_family),
                     _one_line(resolver_type),
+                    _one_line(value.get("resolver_class")),
                     _one_line(value.get("priority")),
-                    _short_number(value.get("confidence")),
+                    _short_number(value.get("route_confidence") or value.get("confidence")),
                     _one_line(value.get("fallback_policy")),
                 ]
             )
         )
+    required = value.get("required_evidence") or []
+    if required:
+        rows.append("required|" + _one_line(",".join(str(item) for item in required[:10])))
     template = value.get("evidence_template") or {}
     if template:
         rows.append("template|" + _one_line(json.dumps(template, ensure_ascii=False, separators=(",", ":")),))
