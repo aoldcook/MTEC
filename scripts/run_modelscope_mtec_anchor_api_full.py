@@ -395,6 +395,13 @@ def structured_package(
     return structured
 
 
+def should_suppress_computed_evidence_for_final(question: str, raw_package: Dict[str, Any]) -> bool:
+    if route_question_family(question).get("task_family") != "scene_group_attribute_count":
+        return False
+    video_anchors = (raw_package.get("low_resolution_anchor") or {}).get("video_anchor") or []
+    return any(anchor.get("type") == "video_visual_count_clip" for anchor in video_anchors)
+
+
 def _coerce_visual_context_hint(response: Optional[str]) -> Any:
     if not response:
         return {}
@@ -500,6 +507,7 @@ def video_package_input_audit(
     image_anchors = anchors.get("image_anchor") or []
     video_anchors = anchors.get("video_anchor") or []
     full_timeline_anchors = [item for item in video_anchors if item.get("type") == "video_full_timeline_lowres"]
+    visual_count_video_anchors = [item for item in video_anchors if item.get("type") == "video_visual_count_clip"]
     audio_anchors = anchors.get("audio_anchor") or []
     transcript_anchors = anchors.get("transcript_anchor") or []
     video_evidence_anchors = anchors.get("video_evidence_anchor") or []
@@ -507,6 +515,7 @@ def video_package_input_audit(
     tubelet_anchors = [item for item in image_anchors if item.get("type") == "video_tubelet_storyboard"]
     ocr_image_anchors = [item for item in image_anchors if item.get("type") == "video_ocr_region_crop"]
     object_image_anchors = [item for item in image_anchors if item.get("type") == "video_object_region_crop"]
+    visual_count_anchors = [item for item in image_anchors if item.get("type") == "video_visual_count_sheet"]
 
     file_checks: List[Dict[str, Any]] = [_path_stat(source_video_path)]
     if subtitle_path:
@@ -515,7 +524,7 @@ def video_package_input_audit(
         file_checks.append(_path_stat(anchor.get("low_fps_video_path")))
         for frame in anchor.get("frames") or []:
             file_checks.append(_path_stat(frame.get("path")))
-    for anchor in detail_anchors + tubelet_anchors + ocr_image_anchors + object_image_anchors:
+    for anchor in detail_anchors + tubelet_anchors + ocr_image_anchors + object_image_anchors + visual_count_anchors:
         file_checks.append(_path_stat(anchor.get("path")))
     for anchor in video_evidence_anchors:
         file_checks.append(_path_stat(anchor.get("path")))
@@ -539,6 +548,8 @@ def video_package_input_audit(
         warnings.append("missing_full_timeline_lowres_anchor")
     if not tubelet_anchors:
         warnings.append("missing_tubelet_storyboard_anchor")
+    if any(term in str((package.get("structured_evidence_prompt") or {}).get("user_question") or "").lower() for term in ("how many", "number of", "count")) and not visual_count_anchors and not visual_count_video_anchors:
+        warnings.append("missing_visual_count_executor_anchor")
     if media_counts.get("video_url", 0) <= 0:
         warnings.append("no_video_media_attached_to_api")
     if transcript_anchors and not any(anchor.get("segments") for anchor in transcript_anchors):
@@ -551,12 +562,14 @@ def video_package_input_audit(
         "subtitle": _path_stat(subtitle_path) if subtitle_path else None,
         "video_anchor_count": len(video_anchors),
         "full_timeline_lowres_anchor_count": len(full_timeline_anchors),
+        "visual_count_video_anchor_count": len(visual_count_video_anchors),
         "full_timeline_lowres_sample_count": sum(len(anchor.get("frames") or []) for anchor in full_timeline_anchors),
         "low_fps_frame_count": sum(len(anchor.get("frames") or []) for anchor in video_anchors),
         "detail_crop_count": len(detail_anchors),
         "tubelet_storyboard_count": len(tubelet_anchors),
         "ocr_region_crop_count": len(ocr_image_anchors),
         "object_region_crop_count": len(object_image_anchors),
+        "visual_count_sheet_count": len(visual_count_anchors),
         "video_evidence_anchor_count": len(video_evidence_anchors),
         "motion_region_count": sum(len(anchor.get("motion_regions") or []) for anchor in video_evidence_anchors),
         "ocr_region_count": sum(len(anchor.get("ocr_regions") or []) for anchor in video_evidence_anchors),
@@ -613,7 +626,7 @@ def image_anchor_contents(package: Dict[str, Any]) -> List[Dict[str, Any]]:
 def video_detail_image_anchor_contents(package: Dict[str, Any]) -> List[Dict[str, Any]]:
     contents = []
     for anchor in package.get("low_resolution_anchor", {}).get("image_anchor", []):
-        if anchor.get("type") not in {"video_keyframe_detail_crop", "video_tubelet_storyboard", "video_ocr_region_crop", "video_object_region_crop"}:
+        if anchor.get("type") not in {"video_keyframe_detail_crop", "video_tubelet_storyboard", "video_ocr_region_crop", "video_object_region_crop", "video_visual_count_sheet"}:
             continue
         path = anchor.get("path")
         if path and Path(path).exists():
@@ -641,6 +654,13 @@ def video_detail_image_anchor_contents(package: Dict[str, Any]) -> List[Dict[str
                     f"time={anchor.get('time_sec')}s; frame={anchor.get('frame_index')}; "
                     f"label={anchor.get('detected_label')}; conf={anchor.get('detection_confidence')}; "
                     f"bbox={anchor.get('bbox_norm')}. Use with global context to avoid duplicate counting."
+                )
+            elif anchor.get("type") == "video_visual_count_sheet":
+                text = (
+                    f"Attached strong visual count sheet {anchor.get('anchor_link')}: "
+                    f"task_family={anchor.get('task_family')}; times={anchor.get('time_points_sec')}; "
+                    f"region={anchor.get('region_hint')}; rules={anchor.get('counting_rules')}. "
+                    "Use this image as primary evidence for visual count questions and verify each option independently."
                 )
             else:
                 text = (
@@ -675,6 +695,8 @@ def multimodal_anchor_contents(
         if path and Path(path).exists():
             if anchor.get("type") == "video_full_timeline_lowres":
                 role_text = "full chronological low-resolution global fallback video"
+            elif anchor.get("type") == "video_visual_count_clip":
+                role_text = "original-resolution visual count verification video"
             else:
                 role_text = "compressed low-FPS evidence video"
             contents.append(
@@ -684,7 +706,8 @@ def multimodal_anchor_contents(
                         f"Attached video anchor {anchor.get('anchor_link')} ({role_text}): "
                         f"{anchor.get('type')}; duration={anchor.get('source_duration_sec')}s; "
                         f"frames={len(anchor.get('frames', []))}; target_fps={anchor.get('target_fps')}; "
-                        f"source_res={anchor.get('source_resolution')}."
+                        f"source_res={anchor.get('source_resolution')}; "
+                        f"counting_rules={anchor.get('counting_rules') or []}."
                     ),
                 }
             )
@@ -769,6 +792,7 @@ def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
         "For beginning/start/displayed-at-the-beginning questions, mark later transcript or later visual evidence scope_match=false.",
         "For container_object_count with beginning/start scope, do not use later reveal shots, later pack shots, or later ASR product-list counts as primary evidence.",
         "For scene_group_attribute_count multiple-choice questions, verify each option against the best wide/panorama stage frame; include stage-edge people and do not count only central dancers.",
+        "If a strong visual_count_sheet is attached, use it as primary count evidence before generic low-FPS frames, object detections, transcript, or ASR.",
         "For current score/ongoing game questions, record only directly visible scoreboard OCR/crops with time and scope; write unreadable if uncertain.",
         "If text/tool evidence conflicts with attached video or crop images, mark the conflict in uncertainty and prefer direct visual evidence from video/crops.",
     ]
@@ -1078,6 +1102,7 @@ def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str) -> str
         + "Treat temporal_scope as confidence-gated: confidence >= 0.75 means scoped evidence is primary; 0.50-0.75 means use scoped evidence plus the full-video global anchor; below 0.50 or missing evidence means do not hard-filter the rest of the video.\n"
         + "For beginning/start/displayed-at-the-beginning questions, never let later reveal shots, later transcript/ASR claims, or later product summaries override opening visual evidence. Mark them out-of-scope.\n"
         + "For scene-group attribute counts with options, verify each option against the best wide/panorama frame and include all visible on-stage people, including stage-edge performers/presenters.\n"
+        + "When a strong visual count sheet is attached, treat it as the primary evidence for count verification and compare each option against it before trusting computed evidence, ASR, or generic low-FPS observations.\n"
         + "If structured evidence is low quality, all/most options are unknown, OCR/count/visible-set evidence is incomplete, or local crops conflict, fall back to the full-video global anchor to re-check event order, scene context, action flow, and global layout.\n"
         + "For count questions, prefer deterministic count_tracks/instances only when tracks are valid; otherwise use full-context video plus visible frames. For missing-set questions, use visible_set only when complete; otherwise re-check the full-video anchor. For OCR/model/score questions, combine OCR with high-detail crops and global context when OCR is uncertain.\n"
         + "Silently build option_verification with A/B/C/D statuses and evidence IDs. Return exactly one line and nothing else: FINAL_ANSWER: <letter>."
@@ -1461,8 +1486,10 @@ def run_video_record(
             f"frames={pre_api_input_audit['low_fps_frame_count']} "
             f"global_full={pre_api_input_audit['full_timeline_lowres_anchor_count']} "
             f"global_samples={pre_api_input_audit['full_timeline_lowres_sample_count']} "
+            f"visual_count_video={pre_api_input_audit['visual_count_video_anchor_count']} "
             f"tubelets={pre_api_input_audit['tubelet_storyboard_count']} "
             f"details={pre_api_input_audit['detail_crop_count']} "
+            f"visual_count={pre_api_input_audit['visual_count_sheet_count']} "
             f"ocr={pre_api_input_audit['ocr_region_count']} "
             f"motion={pre_api_input_audit['motion_region_count']} "
             f"objects={pre_api_input_audit['object_detection_count']} "
@@ -1565,13 +1592,19 @@ def run_video_record(
                 max_tokens=selected_policy.get("evidence_max_tokens", evidence_max_tokens),
                 evidence_prompt_style=evidence_prompt_style,
             )
+            stage1_response_for_final = None if should_suppress_computed_evidence_for_final(question, raw_package) else computed_evidence_response
             package = structured_package(
                 question,
                 raw_package,
-                stage1_response=computed_evidence_response,
+                stage1_response=stage1_response_for_final,
                 visual_context_response=computed_visual_context_response,
                 global_timeline_response=computed_global_timeline_response,
             )
+            if stage1_response_for_final is None and computed_evidence_response:
+                package.setdefault("structured_evidence_prompt", {})["computed_evidence_suppressed_for_final"] = {
+                    "reason": "original_visual_count_clip_attached",
+                    "policy": "Final verifier should count directly from the original-resolution visual count clip instead of inheriting a possibly wrong intermediate count.",
+                }
             media_contents = (
                 multimodal_anchor_contents(
                     package,

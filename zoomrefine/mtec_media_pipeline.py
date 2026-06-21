@@ -409,6 +409,13 @@ def create_multimodal_structural_anchors(
             target_fps=video_global_anchor_fps,
             max_side=video_global_anchor_max_side,
         )
+    visual_count_video_anchor = None
+    if video_path and video_anchor:
+        visual_count_video_anchor = create_video_visual_count_clip_anchor(
+            question=question,
+            video_path=video_path,
+            video_anchor=video_anchor,
+        )
 
     transcript_anchor = None
     question_time_windows: List[Dict[str, Any]] = []
@@ -475,6 +482,14 @@ def create_multimodal_structural_anchors(
         )
         if video_tubelet_anchors:
             image_anchor = _merge_anchor_lists(image_anchor, video_tubelet_anchors)
+        visual_count_anchors = create_video_visual_count_executor_anchors(
+            question=question,
+            video_path=video_path,
+            output_dir=output_path,
+            video_anchor=video_anchor,
+        )
+        if visual_count_anchors:
+            image_anchor = _merge_anchor_lists(image_anchor, visual_count_anchors)
 
     audio_anchor = None
     if audio_path:
@@ -489,7 +504,7 @@ def create_multimodal_structural_anchors(
     package = build_low_resolution_anchor_package(
         question=question,
         global_anchor=image_anchor,
-        video_anchor=[anchor for anchor in (video_global_anchor, video_anchor) if anchor],
+        video_anchor=[anchor for anchor in (video_global_anchor, video_anchor, visual_count_video_anchor) if anchor],
         audio_anchor=audio_anchor,
         total_budget=total_budget,
     )
@@ -2102,6 +2117,336 @@ def create_video_detail_frame_anchors(
     finally:
         capture.release()
     return anchors
+
+
+def create_video_visual_count_executor_anchors(
+    question: str,
+    video_path: str,
+    output_dir: Path,
+    video_anchor: Dict[str, Any],
+    max_side_per_frame: int = 640,
+    jpeg_quality: int = 88,
+    anchor_id: str = "video_visual_count_executor",
+) -> List[Dict[str, Any]]:
+    route = route_question_family(question)
+    task_family = route.get("task_family")
+    if task_family != "container_object_count":
+        return []
+
+    source_duration = float(video_anchor.get("source_duration_sec") or 0.0)
+    source_fps = float(video_anchor.get("source_fps") or 0.0)
+    source_frame_count = int(video_anchor.get("source_frame_count") or 0)
+    if source_duration <= 0 or source_fps <= 0:
+        return []
+
+    times = _container_count_times(question, source_duration)
+    role = (
+        "Visual counting executor for container/object count questions. "
+        "Use this sheet as primary visual evidence for the scoped container; ignore out-of-scope later transcript claims."
+    )
+    region_hint = "scoped_container_count_candidates"
+
+    frames = _read_video_frames_at_times(video_path, times, source_fps, source_frame_count)
+    if not frames:
+        return []
+
+    output_path = output_dir / anchor_id
+    output_path.mkdir(parents=True, exist_ok=True)
+    sheet = _compose_visual_count_sheet(frames, max_side_per_frame=max_side_per_frame)
+    visual_anchor_id = f"{anchor_id}_sheet_0001"
+    path = output_path / f"{visual_anchor_id}.jpg"
+    sheet.save(path, format="JPEG", quality=jpeg_quality, optimize=True)
+    anchors = [
+        {
+            "anchor_id": visual_anchor_id,
+            "anchor_link": visual_anchor_id,
+            "type": "video_visual_count_sheet",
+            "role": role,
+            "path": str(path),
+            "source_video_path": str(Path(video_path)),
+            "task_family": task_family,
+            "resolver_class": route.get("resolver_class"),
+            "source_resolution": video_anchor.get("source_resolution"),
+            "resolution": {"width": sheet.width, "height": sheet.height},
+            "region_hint": region_hint,
+            "time_points_sec": [round(item["time_sec"], 3) for item in frames],
+            "frames": [
+                {
+                    "time_sec": round(item["time_sec"], 3),
+                    "frame_index": item["frame_index"],
+                    "label": item["label"],
+                }
+                for item in frames
+            ],
+            "counting_rules": _visual_count_sheet_rules(task_family, question),
+            "compression": {
+                "format": "jpeg",
+                "bytes": path.stat().st_size,
+                "quality": jpeg_quality,
+                "strategy": "High-resolution task-family visual counting contact sheet.",
+            },
+        }
+    ]
+    zoom_anchor = _create_container_count_zoom_anchor(
+        frames=frames,
+        output_path=output_path,
+        source_video_path=video_path,
+        video_anchor=video_anchor,
+        route=route,
+        anchor_id=anchor_id,
+        jpeg_quality=jpeg_quality,
+        question=question,
+    )
+    if zoom_anchor:
+        anchors.append(zoom_anchor)
+    return anchors
+
+
+def create_video_visual_count_clip_anchor(
+    question: str,
+    video_path: str,
+    video_anchor: Dict[str, Any],
+    max_bytes: int = 15_500_000,
+) -> Optional[Dict[str, Any]]:
+    route = route_question_family(question)
+    if route.get("task_family") != "scene_group_attribute_count":
+        return None
+    path = Path(video_path)
+    if not path.exists() or path.stat().st_size > max_bytes:
+        return None
+    return {
+        "anchor_id": "video_visual_count_clip_original",
+        "anchor_link": "video_visual_count_clip_original",
+        "type": "video_visual_count_clip",
+        "role": (
+            "Original-resolution visual count clip for scene/group attribute counting. "
+            "Use it to count all on-scene people and verify each option independently."
+        ),
+        "low_fps_video_path": str(path),
+        "source_video_path": str(path),
+        "source_duration_sec": video_anchor.get("source_duration_sec"),
+        "source_frame_count": video_anchor.get("source_frame_count"),
+        "source_fps": video_anchor.get("source_fps"),
+        "source_resolution": video_anchor.get("source_resolution"),
+        "target_fps": "original",
+        "frames": video_anchor.get("frames") or [],
+        "task_family": route.get("task_family"),
+        "resolver_class": route.get("resolver_class"),
+        "counting_rules": [
+            "Use this original-resolution video as primary evidence for scene/group count questions.",
+            "Count all visible people in the target scene, including stage-edge performers and presenters.",
+            "Exclude audience members.",
+            "Verify every multiple-choice option against the video before selecting one.",
+        ],
+        "compression": {
+            "strategy": "No visual recompression; original media file attached for count verification when API size allows.",
+            "bytes": path.stat().st_size,
+        },
+    }
+
+
+def _scene_group_count_times(video_anchor: Dict[str, Any], duration: float) -> List[float]:
+    frames = [frame for frame in video_anchor.get("frames", []) if frame.get("time_sec") is not None]
+    candidates: List[float] = []
+    for ratio in (0.35, 0.50, 0.62, 0.75, 0.82, 0.90):
+        candidates.append(duration * ratio)
+    for frame in sorted(frames, key=lambda item: float(item.get("change_score") or 0.0), reverse=True)[:8]:
+        time_sec = float(frame.get("time_sec") or 0.0)
+        if duration * 0.25 <= time_sec <= duration * 0.95:
+            candidates.append(time_sec)
+    return _dedupe_times(candidates, duration, max_count=8, min_gap=3.0)
+
+
+def _container_count_times(question: str, duration: float) -> List[float]:
+    text = str(question or "").lower()
+    if any(term in text for term in ("beginning", "at the start", "start of", "opening", "initially", "displayed at the beginning")):
+        candidates = [0.0, 0.4, 0.8, 1.2, 1.8, 2.5, 3.5, 5.0]
+    else:
+        candidates = [duration * ratio for ratio in (0.05, 0.15, 0.30, 0.50, 0.70, 0.90)]
+    return _dedupe_times(candidates, duration, max_count=8, min_gap=0.25)
+
+
+def _dedupe_times(times: List[float], duration: float, max_count: int, min_gap: float) -> List[float]:
+    selected: List[float] = []
+    for value in times:
+        time_sec = _clamp_float(float(value), 0.0, max(0.0, duration - 0.05))
+        if any(abs(existing - time_sec) < min_gap for existing in selected):
+            continue
+        selected.append(time_sec)
+        if len(selected) >= max_count:
+            break
+    return selected
+
+
+def _read_video_frames_at_times(
+    video_path: str,
+    times: List[float],
+    source_fps: float,
+    source_frame_count: int,
+) -> List[Dict[str, Any]]:
+    cv2 = _require_cv2()
+    capture = cv2.VideoCapture(str(video_path))
+    if not capture.isOpened():
+        return []
+    frames: List[Dict[str, Any]] = []
+    try:
+        for index, time_sec in enumerate(times, start=1):
+            frame_index = _time_to_frame_index(time_sec, source_fps, source_frame_count)
+            capture.set(cv2.CAP_PROP_POS_FRAMES, frame_index)
+            ok, frame_bgr = capture.read()
+            if not ok:
+                continue
+            image = Image.fromarray(cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB))
+            frames.append(
+                {
+                    "time_sec": float(time_sec),
+                    "frame_index": frame_index,
+                    "label": f"candidate_{index}@{time_sec:.2f}s",
+                    "image": image,
+                }
+            )
+    finally:
+        capture.release()
+    return frames
+
+
+def _create_container_count_zoom_anchor(
+    frames: List[Dict[str, Any]],
+    output_path: Path,
+    source_video_path: str,
+    video_anchor: Dict[str, Any],
+    route: Dict[str, Any],
+    anchor_id: str,
+    jpeg_quality: int,
+    question: str,
+) -> Optional[Dict[str, Any]]:
+    best: Optional[Dict[str, Any]] = None
+    best_score = -1.0
+    for item in frames:
+        image = item["image"]
+        box = _foreground_bbox_from_background(image)
+        if not box:
+            continue
+        left, top, right, bottom = box
+        area_ratio = ((right - left) * (bottom - top)) / max(1, image.width * image.height)
+        score = area_ratio + 0.05 * float(item.get("time_sec") or 0.0)
+        if score > best_score:
+            best_score = score
+            best = {**item, "box": box}
+    if not best:
+        return None
+    image = best["image"]
+    width, height = image.size
+    box = _expand_box(best["box"], width, height, scale=1.35)
+    crop = image.crop(box)
+    crop.thumbnail((960, 960), Image.Resampling.LANCZOS)
+    zoom_anchor_id = f"{anchor_id}_zoom_0002"
+    path = output_path / f"{zoom_anchor_id}.jpg"
+    crop.save(path, format="JPEG", quality=jpeg_quality, optimize=True)
+    return {
+        "anchor_id": zoom_anchor_id,
+        "anchor_link": zoom_anchor_id,
+        "type": "video_visual_count_sheet",
+        "role": (
+            "Zoomed container/package-face ROI for visual counting. "
+            "Inspect printed, embossed, or visible item shapes on the displayed box before using later narration."
+        ),
+        "path": str(path),
+        "source_video_path": str(Path(source_video_path)),
+        "task_family": route.get("task_family"),
+        "resolver_class": route.get("resolver_class"),
+        "source_resolution": video_anchor.get("source_resolution"),
+        "resolution": {"width": crop.width, "height": crop.height},
+        "region_hint": "container_or_package_face_zoom_count_roi",
+        "time_points_sec": [round(float(best.get("time_sec") or 0.0), 3)],
+        "frames": [
+            {
+                "time_sec": round(float(best.get("time_sec") or 0.0), 3),
+                "frame_index": best.get("frame_index"),
+                "label": best.get("label"),
+                "bbox_norm": _box_to_norm(box, width, height),
+            }
+        ],
+        "counting_rules": _visual_count_sheet_rules(route.get("task_family") or "", question),
+        "compression": {
+            "format": "jpeg",
+            "bytes": path.stat().st_size,
+            "quality": jpeg_quality,
+            "strategy": "Foreground zoom crop for scoped visual counting.",
+        },
+    }
+
+
+def _foreground_bbox_from_background(image: Image.Image) -> Optional[Tuple[int, int, int, int]]:
+    rgb = image.convert("RGB")
+    width, height = rgb.size
+    pixels = np.asarray(rgb).astype(np.int16)
+    corner = max(8, min(width, height) // 20)
+    samples = np.concatenate(
+        [
+            pixels[:corner, :corner].reshape(-1, 3),
+            pixels[:corner, -corner:].reshape(-1, 3),
+            pixels[-corner:, :corner].reshape(-1, 3),
+            pixels[-corner:, -corner:].reshape(-1, 3),
+        ],
+        axis=0,
+    )
+    bg = np.median(samples, axis=0)
+    diff = np.abs(pixels - bg).sum(axis=2)
+    mask = diff > 55
+    ys, xs = np.where(mask)
+    if len(xs) < width * height * 0.01:
+        return None
+    left, right = int(xs.min()), int(xs.max()) + 1
+    top, bottom = int(ys.min()), int(ys.max()) + 1
+    if right - left < width * 0.08 or bottom - top < height * 0.08:
+        return None
+    return _ensure_min_box_size((left, top, right, bottom), width, height, min_size=96)
+
+
+def _compose_visual_count_sheet(frames: List[Dict[str, Any]], max_side_per_frame: int) -> Image.Image:
+    prepared: List[Tuple[Image.Image, str]] = []
+    for item in frames:
+        image = item["image"].copy()
+        image.thumbnail((max_side_per_frame, max_side_per_frame), Image.Resampling.LANCZOS)
+        prepared.append((image, item["label"]))
+    if not prepared:
+        return Image.new("RGB", (1, 1), "white")
+    columns = 2 if len(prepared) <= 4 else 3
+    rows = int(math.ceil(len(prepared) / columns))
+    label_h = 28
+    cell_w = max(image.width for image, _ in prepared)
+    cell_h = max(image.height for image, _ in prepared) + label_h
+    sheet = Image.new("RGB", (cell_w * columns, cell_h * rows), "white")
+    draw = ImageDraw.Draw(sheet)
+    for index, (image, label) in enumerate(prepared):
+        col = index % columns
+        row = index // columns
+        x = col * cell_w
+        y = row * cell_h
+        draw.rectangle([x, y, x + cell_w, y + label_h], fill=(245, 245, 245))
+        draw.text((x + 8, y + 7), label, fill=(0, 0, 0))
+        sheet.paste(image, (x + (cell_w - image.width) // 2, y + label_h))
+    return sheet
+
+
+def _visual_count_sheet_rules(task_family: str, question: str) -> List[str]:
+    if task_family == "scene_group_attribute_count":
+        return [
+            "Count all visible people on the target scene/stage in each wide candidate frame.",
+            "Include lead performers, presenters, backup performers, and stage-edge people if they are on the stage.",
+            "Do not count the audience.",
+            "Verify every multiple-choice option against the sheet before selecting one.",
+        ]
+    rules = [
+        "Use only the scoped container/surface visible in this sheet.",
+        "Count distinct visible item shapes/instances, including printed or embossed items when the question asks about the displayed box artwork.",
+        "Do not use later ASR or later reveal shots when the question says beginning/start.",
+        "Verify every multiple-choice option against the sheet before selecting one.",
+    ]
+    if any(term in str(question or "").lower() for term in ("beginning", "start", "opening")):
+        rules.append("The sheet is the primary beginning-scope evidence.")
+    return rules
 
 
 def _merge_anchor_lists(existing: Optional[Any], extra: List[Dict[str, Any]]) -> List[Dict[str, Any]]:

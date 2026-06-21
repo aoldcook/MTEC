@@ -539,6 +539,7 @@ def build_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
             "- For container_object_count, locate the container/surface ROI and count only visible inside-scope instances.",
             "- For beginning/start/displayed-at-the-beginning questions, keep later reveal shots and later transcript/ASR claims out of scope even if they are clearer.",
             "- For scene-group count options, verify each option against all visible people in the wide/panorama frame, including stage-edge performers or presenters.",
+            "- If a video_visual_count_sheet is available, use it as primary count evidence before generic low-FPS frames, transcript, ASR, or object labels.",
             "- For missing_set, enumerate the visible set for every option first; do not infer absence from one frame.",
             "- For stateful_ocr/model/text/score questions, write unreadable/uncertain when OCR is weak; do not identify by appearance only.",
             "- For ordinal_clip_action, group atomic shots into logical clips before selecting first/second/third/last clip.",
