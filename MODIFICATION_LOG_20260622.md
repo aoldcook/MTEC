@@ -109,18 +109,20 @@ BAILIAN_API_KEY=*** python scripts/run_modelscope_mtec_anchor_api_full.py \
 
 ## 5. Results
 
-### 5.1 Target case `8np5YKYx3sU` — FIXED
+### 5.1 Target case `8np5YKYx3sU` — substantially improved, not a guaranteed pass
 
-| Run | Prediction | Correct |
+| Stage | Prediction | Notes |
 |---|---|---|
-| Baseline (report) | C (4 men, 3 women) | ✗ |
-| After resolver/cast fix only | C | ✗ |
-| After + isolated cast-count pass | **A (6 men, 3 women)** | ✓ |
+| Baseline (report) | C (4 men, 3 women) | **deterministic** under-count |
+| After resolver/cast fix only | C | evidence bank built but still 4 men |
+| After + isolated cast-count pass | A in 3 runs, B in 1 | isolated pass returns men=6 (×3) or men=5 (×1) |
 
-Verified correct in **3 independent runs** plus an isolated count-only probe
-(returns `men=6, women=3`). Root cause: the model under-counts the cast inside
-the cluttered two-pass context, but counts it correctly when given only the
-original clip with a focused prompt.
+The fix removes the **systematic** bias: the baseline always produced 4 men
+(option C); the cast routing + isolated count-only pass shift the model into the
+correct region (5–6 men), scoring the ground truth **A in 3 of 4 full-pipeline
+runs** and an isolated probe (`men=6, women=3`). However the isolated pass is
+itself subject to base-model nondeterminism (one run returned `men=5` → option
+B), so this is a strong improvement rather than a deterministic fix.
 
 ### 5.2 Target case `6NVr0cNiHPM` — scope fixed, answer still hard
 
@@ -137,15 +139,22 @@ segment did not yield the ground truth).
 Across identical-code runs the borderline cases flip:
 
 - `84EpEwIVFdU`: C in 3/3 isolated runs, but D once in a full-20 run.
-- An early over-broad verifier rule (since gated) and a shared static
-  evidence-prompt edit (since reverted) shifted `7R1eNHvfspk` and
-  `6DO8yOVYXr0`. After **gating all directives to their target families and
-  reverting the unconditional prompt edits**, both reverted to correct:
-  `7R1=A`, `6DO8=A`, `84Ep=C`, `8np=A` on the final code.
+- `7R1eNHvfspk` (cross-shot count): A, B, A, B across runs.
+- `6DO8yOVYXr0` (score OCR): A, D, D, A across runs.
+- `84EpEwIVFdU` (missing-set): C, C, D, C across runs.
+- `8np5YKYx3sU` (cast): A, A, A, B across runs.
 
-The net diff vs baseline now touches only 3 files and changes the prompt for
-**only** performing-cast and beginning-scoped questions; all other 18 records
-are byte-identical to baseline (verified by per-record token-saving parity).
+Because every borderline case flips between identical-code runs, **no single
+20-record run gives a reliable accuracy number** — evaluating this system
+requires averaging several runs per record (majority vote), or a deterministic
+backend. Two early regressions were partly real (an over-broad verifier rule and
+a shared static evidence-prompt edit) and were removed: directives are now
+**gated to their target families** and the unconditional prompt edits were
+reverted, so the net diff touches only 3 files and changes the prompt for
+**only** performing-cast and beginning-scoped questions. All other 18 records
+are byte-identical to baseline (verified by per-record token-saving parity), so
+the changes add no *systematic* regression; residual per-run differences on
+untouched records are base-model noise.
 
 ### 5.4 Token savings
 
