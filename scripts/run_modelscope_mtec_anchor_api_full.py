@@ -788,12 +788,11 @@ def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
         "First fill task_family from TaskSpecificResolverGuidance. Then fill task_family_evidence using that resolver's evidence_template.",
         "For missing_set questions, enumerate visible_set for every option; do not infer absence from a single frame.",
         "For cross_shot_entity_count questions, build an entity bank across the valid timeline; do not count only one moment if the question asks total participants/events.",
-        "For scene_group_attribute_count of a static co-present group, use the best wide/panorama frame and do not sum repeated close-ups.",
-        "For scene_group_attribute_count of a performing/presenting cast on a stage, do NOT use a single wide frame: build a deduped unique-performer bank across all shots, count each distinct performer once (including performers seen only in close-up), and exclude only the audience/crew. A single frame is a lower bound.",
+        "For scene_group_attribute_count questions, use the best wide/panorama frame and do not sum repeated close-ups.",
         "For container_object_count questions, locate the container ROI and count only visible inside-container items.",
-        "For beginning/start/displayed-at-the-beginning questions, mark later transcript or later visual evidence scope_match=false, and derive the count only from the opening segment.",
-        "For container_object_count with beginning/start scope, do not use later reveal shots, later pack shots, later flat-lay shots, or later ASR product-list counts (e.g. 'eight full-size products') as the count; the count must come from the opening box/container.",
-        "For scene_group_attribute_count multiple-choice questions, verify each option against the deduped cross-shot cast (for performing casts) or the best wide stage frame (for static groups); include stage-edge people and presenters and do not count only central dancers.",
+        "For beginning/start/displayed-at-the-beginning questions, mark later transcript or later visual evidence scope_match=false.",
+        "For container_object_count with beginning/start scope, do not use later reveal shots, later pack shots, or later ASR product-list counts as primary evidence.",
+        "For scene_group_attribute_count multiple-choice questions, verify each option against the best wide/panorama stage frame; include stage-edge people and do not count only central dancers.",
         "If a strong visual_count_sheet is attached, use it as primary count evidence before generic low-FPS frames, object detections, transcript, or ASR.",
         "For current score/ongoing game questions, record only directly visible scoreboard OCR/crops with time and scope; write unreadable if uncertain.",
         "If text/tool evidence conflicts with attached video or crop images, mark the conflict in uncertainty and prefer direct visual evidence from video/crops.",
@@ -1102,14 +1101,48 @@ def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str) -> str
         + "Evaluate each option independently as supported, contradicted, or unknown before choosing. Do not trust any previous candidate_answer, preliminary_answer, best_option, or option letter if it appears in computed evidence.\n"
         + "If text evidence, computed evidence, transcript, OCR text, or deterministic metadata conflicts with the attached video or high-resolution crop images, prefer the direct visual evidence from the video/crops. Treat conflicting text evidence as uncertain, not authoritative.\n"
         + "Treat temporal_scope as confidence-gated: confidence >= 0.75 means scoped evidence is primary; 0.50-0.75 means use scoped evidence plus the full-video global anchor; below 0.50 or missing evidence means do not hard-filter the rest of the video.\n"
-        + "For beginning/start/displayed-at-the-beginning questions, never let later reveal shots, later flat-lay/pack shots, later transcript/ASR claims, or later product summaries (e.g. a spoken 'eight full-size products') override or replace the opening visual count. Mark them out-of-scope and count only from the opening segment.\n"
-        + "For scene-group attribute counts: if the people are a performing/presenting cast on a stage, count each distinct performer across shots once (including performers seen only in close-up), dedupe identities, and exclude only the audience/crew; do not stop at one wide frame, which is only a lower bound. If they are a static co-present group, use the best wide/panorama frame.\n"
+        + "For beginning/start/displayed-at-the-beginning questions, never let later reveal shots, later transcript/ASR claims, or later product summaries override opening visual evidence. Mark them out-of-scope.\n"
+        + _beginning_scope_directive(package)
+        + _scene_group_count_directive(package)
         + _count_hypothesis_directive(package)
         + "When a strong visual count sheet is attached, treat it as the primary evidence for count verification and compare each option against it before trusting computed evidence, ASR, or generic low-FPS observations.\n"
         + "If structured evidence is low quality, all/most options are unknown, OCR/count/visible-set evidence is incomplete, or local crops conflict, fall back to the full-video global anchor to re-check event order, scene context, action flow, and global layout.\n"
         + "For count questions, prefer deterministic count_tracks/instances only when tracks are valid; otherwise use full-context video plus visible frames. For missing-set questions, use visible_set only when complete; otherwise re-check the full-video anchor. For OCR/model/score questions, combine OCR with high-detail crops and global context when OCR is uncertain.\n"
         + _isolated_cast_count_directive(package)
         + "Silently build option_verification with A/B/C/D statuses and evidence IDs. Return exactly one line and nothing else: FINAL_ANSWER: <letter>."
+    )
+
+
+def _resolver_guidance(package: Dict[str, Any]) -> Dict[str, Any]:
+    return (package.get("structured_evidence_prompt") or {}).get("task_specific_resolver_guidance") or {}
+
+
+def _beginning_scope_directive(package: Dict[str, Any]) -> str:
+    """Strengthened beginning-scope rule, only for beginning-locked questions, so
+    the verifier prompt for all other questions stays identical to baseline."""
+    guidance = _resolver_guidance(package)
+    if (guidance.get("question_scope_guard") or {}).get("scope_type") == "beginning_locked":
+        return (
+            "This question is locked to the opening segment: do not derive the count from any later reveal shot, "
+            "later flat-lay/pack shot, end-state, or product-summary narration (e.g. a spoken 'eight full-size products'); "
+            "count only from the opening segment and record uncertainty if the opening view is occluded.\n"
+        )
+    return ""
+
+
+def _scene_group_count_directive(package: Dict[str, Any]) -> str:
+    """Scene-group counting rule, only for scene_group_attribute_count questions."""
+    guidance = _resolver_guidance(package)
+    if guidance.get("task_family") != "scene_group_attribute_count":
+        return ""
+    if guidance.get("count_mode") == "performing_cast_unique_across_shots":
+        return (
+            "This is a performing/presenting cast count: count each distinct performer across shots once (including "
+            "performers seen only in close-up), dedupe identities, and exclude only the audience/crew; a single wide "
+            "frame is only a lower bound.\n"
+        )
+    return (
+        "This is a static co-present group count: use the best wide/panorama frame and do not sum repeated close-ups.\n"
     )
 
 
@@ -1121,7 +1154,7 @@ def _count_hypothesis_directive(package: Dict[str, Any]) -> str:
     cross_shot_entity_count), whose deterministic/entity-bank counts are reliable
     and must not be second-guessed into a different number.
     """
-    guidance = (package.get("structured_evidence_prompt") or {}).get("task_specific_resolver_guidance") or {}
+    guidance = _resolver_guidance(package)
     if guidance.get("count_mode") == "performing_cast_unique_across_shots":
         return (
             "For this performing-cast count, treat any total_people/count_value in the computed evidence as a "
