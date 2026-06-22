@@ -8,9 +8,27 @@ __pycache__/
 *.pyc
 
 # binaries, snapshots, and macOS/junk
-*.pt
 *.partial
 ._*
 .DS_Store
 .ipynb_checkpoints/
 backups/
+
+# additional binaries / media / archives
+*.pyo
+*.pyd
+*.log
+*.tar
+*.tar.gz
+*.zip
+*.parquet
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+*.mp4
+*.mov
+*.avi
+*.wav
+*.mp3

@@ -24,11 +24,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from zoomrefine.mtec_media_pipeline import create_multimodal_structural_anchors  # noqa: E402
-from zoomrefine.mtec_prompt_plus import (  # noqa: E402
-    build_evidence_extraction_prompt,
-    build_structured_evidence_prompt,
-    format_compact_evidence_prompt,
-)
+from zoomrefine.mtec_prompt_plus import build_structured_evidence_prompt, format_compact_evidence_prompt  # noqa: E402
 
 
 SYSTEM_PROMPT = (
@@ -254,48 +250,20 @@ def package_prompt(package: Dict[str, Any]) -> str:
     return format_compact_evidence_prompt(package)
 
 
-def structured_package(question: str, package: Dict[str, Any], stage1_response: Optional[str] = None) -> Dict[str, Any]:
+def structured_package(question: str, package: Dict[str, Any]) -> Dict[str, Any]:
     anchors = package.get("low_resolution_anchor", {})
     image_anchors = anchors.get("image_anchor", [])
     video_anchors = anchors.get("video_anchor", [])
     audio_anchors = anchors.get("audio_anchor", [])
-    transcript_anchors = anchors.get("transcript_anchor", [])
-    structured = build_structured_evidence_prompt(
+    return build_structured_evidence_prompt(
         question=question,
-        stage1_response=stage1_response,
+        stage1_response=None,
         bbox_norm=None,
         expanded_bbox_norm=None,
-        global_anchor=image_anchors,
+        global_anchor=image_anchors[0] if image_anchors else None,
         video_anchor=video_anchors,
         audio_anchor=audio_anchors,
     )
-    if transcript_anchors:
-        structured.setdefault("low_resolution_anchor", {})["transcript_anchor"] = transcript_anchors
-    return structured
-
-
-def video_anchor_contents(package: Dict[str, Any], include_audio_media: bool = True) -> List[Dict[str, Any]]:
-    contents: List[Dict[str, Any]] = []
-    anchors = package.get("low_resolution_anchor", {})
-    for anchor in anchors.get("video_anchor", []):
-        path = anchor.get("low_fps_video_path")
-        if path and Path(path).exists():
-            contents.append({"type": "text", "text": f"Attached video anchor {anchor.get('anchor_link')}: {anchor.get('type')}; duration={anchor.get('source_duration_sec')}s; frames={len(anchor.get('frames', []))}; target_fps={anchor.get('target_fps')}."})
-            contents.append({"type": "video", "video": path})
-    for anchor in anchors.get("image_anchor", []):
-        if anchor.get("type") != "video_keyframe_detail_crop":
-            continue
-        path = anchor.get("path")
-        if path and Path(path).exists():
-            contents.append({"type": "text", "text": f"Attached video detail image anchor {anchor.get('anchor_link')}: time={anchor.get('time_sec')}s; frame={anchor.get('frame_index')}; region={anchor.get('region_hint')}; bbox={anchor.get('bbox_norm')}; linked_video_anchor={anchor.get('linked_video_anchor')}."})
-            contents.append({"type": "image", "image": path})
-    for anchor in anchors.get("audio_anchor", []):
-        path = anchor.get("low_bitrate_audio_path")
-        if path and Path(path).exists():
-            contents.append({"type": "text", "text": f"Attached audio anchor {anchor.get('anchor_link')}: {anchor.get('type')}; duration={anchor.get('source_duration_sec')}s; events={len(anchor.get('audio_event_segments') or [])}; bitrate={anchor.get('target_bitrate')}."})
-            if include_audio_media:
-                contents.append({"type": "audio", "audio": path})
-    return contents
 
 
 def package_bytes(package: Dict[str, Any]) -> int:
@@ -363,8 +331,6 @@ def run_video(
     metadata_path: Path,
     output_dir: Path,
     max_new_tokens: int,
-    evidence_max_tokens: int,
-    send_audio_media: bool,
 ) -> Dict[str, Any]:
     record: Dict[str, Any] = {"dataset": "lmms-lab/Video-MME", "modality": "video", "status": "started"}
     started = time.perf_counter()
@@ -398,14 +364,11 @@ def run_video(
                 "correct": bool(prediction and ground_truth and prediction == ground_truth),
                 "low_resolution_anchor": package["low_resolution_anchor"],
                 "structured_evidence_prompt": package.get("structured_evidence_prompt"),
-                "computed_evidence_response": computed_evidence_response,
-                "evidence_pass": True,
-                "send_audio_media": send_audio_media,
                 "videoID": row.get("videoID"),
                 "question_id": row.get("question_id"),
             }
         )
-        add_compression_metrics(record, video_path.stat().st_size, package_bytes(package), "MTEC++ video uses higher-FPS video, audio/transcript anchors, high-detail keyframe crops, evidence pass, and compact structured evidence prompt.")
+        add_compression_metrics(record, video_path.stat().st_size, package_bytes(package), "MTEC++ video uses low-FPS structural video anchor plus compact structured evidence prompt.")
     except Exception as exc:
         record.update({"status": "failed", "Error": f"{type(exc).__name__}: {exc}"})
     record["elapsed_seconds"] = round(time.perf_counter() - started, 3)
@@ -510,8 +473,6 @@ def main() -> None:
     parser.add_argument("--output-dir", default="outputs/modelscope_mtec_anchor_7b")
     parser.add_argument("--dtype", choices=("auto", "bfloat16", "float16"), default="bfloat16")
     parser.add_argument("--max-new-tokens", type=int, default=64)
-    parser.add_argument("--evidence-max-tokens", type=int, default=384)
-    parser.add_argument("--send-audio-media", action="store_true")
     parser.add_argument("--flash-attention", action="store_true")
     args = parser.parse_args()
 
@@ -524,7 +485,7 @@ def main() -> None:
     runner = QwenOmniRunner(resolve_path(args.model_path), args.dtype, args.flash_attention)
     records = [
         run_image(runner, resolve_path(args.image_parquet), output_dir, args.max_new_tokens),
-        run_video(runner, modelscope_root, resolve_path(args.videomme_metadata), output_dir, args.max_new_tokens, args.evidence_max_tokens, args.send_audio_media),
+        run_video(runner, modelscope_root, resolve_path(args.videomme_metadata), output_dir, args.max_new_tokens),
         run_voice_audio(runner, resolve_path(args.voice_audio_parquet), output_dir, args.max_new_tokens)
         if args.audio_task == "voice"
         else run_audio(runner, resolve_path(args.audio_parquet), output_dir, args.max_new_tokens),

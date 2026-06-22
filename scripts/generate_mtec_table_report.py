@@ -75,7 +75,7 @@ def ratio_text(value: Any) -> str:
         number = float(value)
     except (TypeError, ValueError):
         return str(value)
-    if 0 <= number <= 1:
+    if 0 <= number <= 2:
         return f"{number * 100:.1f}%"
     return f"{number:.3g}"
 
