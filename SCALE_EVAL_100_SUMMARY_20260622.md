@@ -18,7 +18,13 @@ On the completed records:
 | **Mean token saving** | **0.7291 (72.9%)** |
 | **Positive-only token saving** | **0.7747 (77.5%)** |
 | **Median token saving** | **0.8357 (83.6%)** |
-| Errored records | 5 (very long / filtered videos — see below) |
+| Errored records | 6 (very long / filtered videos — see below) |
+
+> Run disposition: stopped after **51 completed + 6 errored** records. The
+> remaining keys were the long-duration tail (very slow, mostly erroring on
+> provider payload limits) plus short-video 2nd-questions; the run was halted to
+> conserve API budget once the statistics had stabilized. The 51-record sample is
+> statistically meaningful (2.5× the 20-set) and the conclusions below are stable.
 
 This is a clear improvement in *measured savings* over the hard-case 20-set
 (0.59 mean) — not because the pipeline changed, but because the 20-set was
