@@ -1182,6 +1182,21 @@ def _isolated_cast_count_directive(package: Dict[str, Any]) -> str:
     )
 
 
+def _drop_visual_count_clip_from_final(package: Dict[str, Any]) -> int:
+    """Remove the original-resolution video_visual_count_clip anchor from the
+    package so it is not attached to the final answer call. Returns how many
+    anchors were removed. Used only after the isolated cast-count pass already
+    consumed the clip and produced an authoritative count."""
+    anchors = (package.get("low_resolution_anchor") or {}).get("video_anchor")
+    if not isinstance(anchors, list):
+        return 0
+    kept = [a for a in anchors if not (isinstance(a, dict) and a.get("type") == "video_visual_count_clip")]
+    removed = len(anchors) - len(kept)
+    if removed:
+        package["low_resolution_anchor"]["video_anchor"] = kept
+    return removed
+
+
 def _video_data_uri(path: str) -> str:
     import base64
 
@@ -1528,6 +1543,7 @@ def run_video_record(
     global_timeline_pass: bool = True,
     global_timeline_max_tokens: int = 512,
     cleanup_record_artifacts_enabled: bool = False,
+    drop_visual_count_clip_when_isolated: bool = False,
 ) -> Dict[str, Any]:
     video_id = str(row.get("videoID"))
     question_id = str(row.get("question_id") or row.get("index") or "")
@@ -1748,6 +1764,20 @@ def run_video_record(
         isolated_cast_count = run_isolated_cast_count_pass(question, raw_package, answer_client)
         if isolated_cast_count:
             package.setdefault("structured_evidence_prompt", {})["isolated_cast_count"] = isolated_cast_count
+            # Token-savings optimization (opt-in, default OFF): once the isolated
+            # count-only pass has extracted the authoritative cast count from the full
+            # original clip, the main verifier only needs to map men/women to an option,
+            # so the large original visual-count clip is redundant in the final call.
+            # Dropping it avoids sending the full original video twice (8np: main-call
+            # video tokens 28.5k -> 7.4k, token_saving 0.0 -> 0.37). Held behind a flag
+            # because non-degradation cannot be proven under the nondeterministic backend.
+            if drop_visual_count_clip_when_isolated and isolated_cast_count.get("parsed"):
+                removed = _drop_visual_count_clip_from_final(package)
+                if removed:
+                    package.setdefault("structured_evidence_prompt", {})["visual_count_clip_dropped_for_final"] = {
+                        "reason": "isolated_cast_count_pass_supplied_authoritative_count",
+                        "removed_anchor_count": removed,
+                    }
         final_media_contents = (
             multimodal_anchor_contents(
                 package,
@@ -2101,6 +2131,7 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=20260615)
     parser.add_argument("--max-per-image-source", type=int, default=0)
     parser.add_argument("--cleanup-record-artifacts", action="store_true", help="Delete per-record extracted videos and generated anchors after metrics are written to JSONL.")
+    parser.add_argument("--drop-visual-count-clip-when-isolated", action="store_true", help="Token-savings optimization: for performing-cast questions, drop the redundant original-resolution visual-count clip from the final answer call once the isolated cast-count pass has produced a count (avoids sending the full video twice). Default off; the count still drives the answer, but enable only after confirming no accuracy regression on your backend.")
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
@@ -2293,6 +2324,7 @@ def main() -> None:
                         global_timeline_pass,
                         args.global_timeline_max_tokens,
                         args.cleanup_record_artifacts,
+                        args.drop_visual_count_clip_when_isolated,
                     )
                 )
             except FatalAPIError:
