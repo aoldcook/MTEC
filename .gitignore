@@ -6,3 +6,11 @@ models/
 .cache/
 __pycache__/
 *.pyc
+
+# binaries, snapshots, and macOS/junk
+*.pt
+*.partial
+._*
+.DS_Store
+.ipynb_checkpoints/
+backups/
