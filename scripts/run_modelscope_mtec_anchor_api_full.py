@@ -461,6 +461,43 @@ def _transcript_question_windows(transcript_anchors: List[Dict[str, Any]]) -> Li
     return windows
 
 
+# ---------------------------------------------------------------------------
+# Module #2: anchor metadata stripping
+# Non-semantic anchor fields that the model never reasons over. They only bloat
+# the serialized prompt text. Stripping them from the *prompt copy* (not the
+# saved record, and not the media-attachment path) reduces text tokens with no
+# change to the visual evidence or decision inputs.
+# ---------------------------------------------------------------------------
+PROMPT_NON_SEMANTIC_KEYS = frozenset({
+    "compression", "bytes", "quality", "jpeg_quality", "strategy", "format",
+    "path", "low_fps_video_path", "source_video_path", "low_bitrate_audio_path",
+    "source_frame_count", "source_fps", "source_resolution", "resolution",
+    "max_side", "anchor_id",
+})
+
+
+def _strip_non_semantic_metadata(obj: Any) -> Any:
+    """Recursively drop non-semantic bookkeeping keys from a structure."""
+    if isinstance(obj, dict):
+        return {
+            k: _strip_non_semantic_metadata(v)
+            for k, v in obj.items()
+            if k not in PROMPT_NON_SEMANTIC_KEYS
+        }
+    if isinstance(obj, list):
+        return [_strip_non_semantic_metadata(v) for v in obj]
+    return obj
+
+
+def strip_package_for_prompt(package: Dict[str, Any], enabled: bool) -> Dict[str, Any]:
+    """Return a copy of the package with non-semantic metadata removed for text
+    serialization. No-op when disabled. The original package is left intact so
+    media attachment (which needs paths) and the saved record are unaffected."""
+    if not enabled:
+        return package
+    return _strip_non_semantic_metadata(package)
+
+
 def package_prompt(package: Dict[str, Any], prompt_style: str = "compact") -> str:
     if prompt_style == "rich":
         return format_rich_evidence_prompt(package)
@@ -773,7 +810,8 @@ def apply_manual_video_policy(fps: float, max_frames: int, max_side: int, detail
     return {"fps": fps, "max_frames": max_frames, "max_side": max_side, "detail_max_crops": detail_max_crops, "detail_max_side": detail_max_side, "audio_anchor": audio_anchor, "transcript": transcript, "evidence_max_tokens": evidence_max_tokens}
 
 
-def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any]) -> str:
+def build_minimal_evidence_extraction_prompt(prompt: Dict[str, Any], strip_metadata: bool = False) -> str:
+    prompt = strip_package_for_prompt(prompt, strip_metadata)
     structured = prompt.get("structured_evidence_prompt", prompt)
     anchors = prompt.get("low_resolution_anchor", {})
     question = structured.get("user_question") or ""
@@ -1030,11 +1068,12 @@ def compute_structured_evidence(
     media_contents: List[Dict[str, Any]],
     max_tokens: int,
     evidence_prompt_style: str = "minimal",
+    strip_metadata: bool = False,
 ) -> Tuple[str, Dict[str, Any]]:
     if evidence_prompt_style == "rich":
         prompt_text = build_evidence_extraction_prompt(package)
     else:
-        prompt_text = build_minimal_evidence_extraction_prompt(package)
+        prompt_text = build_minimal_evidence_extraction_prompt(package, strip_metadata=strip_metadata)
     return client.generate(
         [
             *media_contents,
@@ -1051,6 +1090,7 @@ def compute_structured_evidence_with_json_retry(
     max_tokens: int,
     evidence_prompt_style: str = "minimal",
     max_attempts: int = 3,
+    strip_metadata: bool = False,
 ) -> Tuple[str, Dict[str, Any]]:
     attempts: List[Dict[str, Any]] = []
     response = ""
@@ -1064,6 +1104,7 @@ def compute_structured_evidence_with_json_retry(
             media_contents,
             max_tokens=token_budget,
             evidence_prompt_style=evidence_prompt_style,
+            strip_metadata=strip_metadata,
         )
         valid, error, _ = validate_json_object_response(response)
         attempt_info = {
@@ -1090,9 +1131,9 @@ def compute_structured_evidence_with_json_retry(
     meta["raw_invalid_evidence_response"] = _short_line(response, max_chars=2000)
     return fallback, meta
 
-def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str) -> str:
+def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str, strip_metadata: bool = False) -> str:
     return (
-        package_prompt(package, prompt_style)
+        package_prompt(strip_package_for_prompt(package, strip_metadata), prompt_style)
         + "\n\nFINAL DECISION INSTRUCTIONS:\n"
         + "You are an option verifier. You receive compressed video anchors, a low-resolution full-video global anchor, deterministic evidence, answer-neutral observations, transcript/ASR evidence, OCR/object crops, and tubelet storyboards.\n"
         + "First use global_video_timeline and task_specific_resolver, if present, to locate the relevant scene/time span and understand the full-video event order. Then align structured/tool evidence to that visual timeline before judging options.\n"
@@ -1544,6 +1585,8 @@ def run_video_record(
     global_timeline_max_tokens: int = 512,
     cleanup_record_artifacts_enabled: bool = False,
     drop_visual_count_clip_when_isolated: bool = False,
+    strip_anchor_metadata: bool = False,
+    enable_prompt_cache: bool = False,
 ) -> Dict[str, Any]:
     video_id = str(row.get("videoID"))
     question_id = str(row.get("question_id") or row.get("index") or "")
@@ -1732,13 +1775,20 @@ def run_video_record(
             )
         computed_evidence_response = None
         computed_evidence_meta = None
+        # Module #1 (caching): capture the exact media list sent to the evidence pass so
+        # the final pass can reuse it byte-for-byte. Provider context caching then reuses
+        # the repeated video/image prefix instead of re-billing it. Identical visual
+        # evidence => zero accuracy impact; only the trailing instruction text differs.
+        evidence_call_media: Optional[List[Dict[str, Any]]] = None
         if evidence_pass:
+            evidence_call_media = media_contents
             computed_evidence_response, computed_evidence_meta = compute_structured_evidence_with_json_retry(
                 client,
                 package,
                 media_contents,
                 max_tokens=selected_policy.get("evidence_max_tokens", evidence_max_tokens),
                 evidence_prompt_style=evidence_prompt_style,
+                strip_metadata=strip_anchor_metadata,
             )
             stage1_response_for_final = None if should_suppress_computed_evidence_for_final(question, raw_package) else computed_evidence_response
             package = structured_package(
@@ -1778,14 +1828,19 @@ def run_video_record(
                         "reason": "isolated_cast_count_pass_supplied_authoritative_count",
                         "removed_anchor_count": removed,
                     }
-        final_media_contents = (
-            multimodal_anchor_contents(
-                package,
-                include_images=False,
-                include_audio_media=answer_send_audio_media,
+        if enable_prompt_cache and evidence_call_media and not (package.get("structured_evidence_prompt") or {}).get("visual_count_clip_dropped_for_final"):
+            # Reuse the identical media list from the evidence pass so the repeated
+            # video/image prefix is served from the provider cache on the final call.
+            final_media_contents = evidence_call_media
+        else:
+            final_media_contents = (
+                multimodal_anchor_contents(
+                    package,
+                    include_images=False,
+                    include_audio_media=answer_send_audio_media,
+                )
+                or media_contents
             )
-            or media_contents
-        )
         final_input_audit = video_package_input_audit(
             package,
             final_media_contents,
@@ -1799,7 +1854,7 @@ def run_video_record(
         response, meta = answer_client.generate(
             [
                 *final_media_contents,
-                {"type": "text", "text": build_final_answer_prompt(package, prompt_style)},
+                {"type": "text", "text": build_final_answer_prompt(package, prompt_style, strip_metadata=strip_anchor_metadata)},
             ],
             max_tokens=answer_max_tokens,
         )
@@ -2132,6 +2187,8 @@ def main() -> None:
     parser.add_argument("--max-per-image-source", type=int, default=0)
     parser.add_argument("--cleanup-record-artifacts", action="store_true", help="Delete per-record extracted videos and generated anchors after metrics are written to JSONL.")
     parser.add_argument("--drop-visual-count-clip-when-isolated", action="store_true", help="Token-savings optimization: for performing-cast questions, drop the redundant original-resolution visual-count clip from the final answer call once the isolated cast-count pass has produced a count (avoids sending the full video twice). Default off; the count still drives the answer, but enable only after confirming no accuracy regression on your backend.")
+    parser.add_argument("--enable-prompt-cache", action="store_true", help="Module #1 (caching): reuse the evidence pass's exact media list for the final answer call so the provider serves the repeated video/image prefix from context cache. Identical visual evidence, only trailing text differs => no accuracy impact. Default off.")
+    parser.add_argument("--strip-anchor-metadata", action="store_true", help="Module #2 (metadata stripping): remove non-semantic anchor bookkeeping fields (compression/bytes/quality/strategy/paths/resolutions) from the prompt serialization only. Saved records and attached media are unchanged => no accuracy impact. Default off.")
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
@@ -2325,6 +2382,8 @@ def main() -> None:
                         args.global_timeline_max_tokens,
                         args.cleanup_record_artifacts,
                         args.drop_visual_count_clip_when_isolated,
+                        args.strip_anchor_metadata,
+                        args.enable_prompt_cache,
                     )
                 )
             except FatalAPIError:
