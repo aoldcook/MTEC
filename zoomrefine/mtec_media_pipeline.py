@@ -19,7 +19,7 @@ try:
         create_image_global_anchor,
         infer_question_profile,
     )
-    from zoomrefine.mtec_task_resolvers import route_question_family
+    from zoomrefine.mtec_task_resolvers import route_question_family, is_performing_cast_question
 except ImportError:
     from mtec_prompt_plus import (
         DEFAULT_TOTAL_BUDGET,
@@ -27,7 +27,7 @@ except ImportError:
         create_image_global_anchor,
         infer_question_profile,
     )
-    from mtec_task_resolvers import route_question_family
+    from mtec_task_resolvers import route_question_family, is_performing_cast_question
 
 
 DEFAULT_VIDEO_TARGET_FPS = 3.0
@@ -921,7 +921,10 @@ def _llm_constraints_for_query(question: str, question_types: set, temporal_scop
     if "ocr" in question_types or any(term in text for term in ("model", "screen", "score", "text", "advertised")):
         constraints.append("For model/text/score questions, do not infer from appearance if OCR is unreadable or outside temporal scope.")
     if task_family == "scene_group_attribute_count":
-        constraints.append("For scene group attribute counts, use the best wide/panorama scene frame and do not sum people across close-ups.")
+        if is_performing_cast_question(question):
+            constraints.append("For this performing/presenting cast count, count each distinct performer across shots once (including close-up performers), dedupe identities, and exclude only the audience; a single wide frame is a lower bound, not the answer.")
+        else:
+            constraints.append("For scene group attribute counts, use the best wide/panorama scene frame and do not sum people across close-ups.")
     if task_family == "container_object_count":
         constraints.append("For container counts, locate the container ROI and exclude objects outside it.")
     if task_family == "ordinal_clip_action":

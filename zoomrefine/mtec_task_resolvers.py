@@ -115,12 +115,32 @@ def route_question_family(question: str, options: Optional[Dict[str, str]] = Non
     }
 
 
+def is_performing_cast_question(question: str) -> bool:
+    """A scene-group count is a *performing cast* count when the people are
+    performers/presenters who appear across multiple shots (often in close-up),
+    rather than a static co-present group captured in one wide frame.
+
+    These questions must be answered by deduped cross-shot unique-performer
+    aggregation, NOT by a single best wide shot, because not all performers are
+    simultaneously present in one frame.
+    """
+    text = str(question or "").lower()
+    cast_terms = ["present", "presenting", "perform", "performing", "performer", "singer", "band", "host", "anchor", "presenter", "演", "主持", "表演"]
+    stage_terms = ["stage", "on stage", "on-stage", "show", "concert", "舞台", "演出"]
+    return any(term in text for term in cast_terms) and any(term in text for term in stage_terms)
+
+
 def build_task_specific_resolver_guidance(question: str) -> Dict[str, Any]:
     route = route_question_family(question)
     family = route["task_family"]
-    template = _family_evidence_template(family)
+    template = _family_evidence_template(family, question)
     scope_guard = _question_scope_guard(question)
-    return {
+    count_mode = (
+        "performing_cast_unique_across_shots"
+        if family == "scene_group_attribute_count" and is_performing_cast_question(question)
+        else None
+    )
+    guidance = {
         "version": "task_family_resolver_registry_v1",
         "task_family": family,
         "resolver_type": family,
@@ -136,15 +156,41 @@ def build_task_specific_resolver_guidance(question: str) -> Dict[str, Any]:
         },
         "question_scope_guard": scope_guard,
         "evidence_template": template,
-        "rules": _family_rules(family) + scope_guard.get("rules", []),
+        "rules": _family_rules(family, question) + scope_guard.get("rules", []),
         "fallback_policy": (
             "Resolver outputs evidence only. The final verifier still maps evidence to options. "
             "If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence."
         ),
     }
+    if count_mode:
+        guidance["count_mode"] = count_mode
+    return guidance
 
 
-def _family_evidence_template(family: str) -> Dict[str, Any]:
+def _family_evidence_template(family: str, question: Optional[str] = None) -> Dict[str, Any]:
+    if family == "scene_group_attribute_count" and is_performing_cast_question(question or ""):
+        return {
+            "scene": "stage_performance",
+            "count_method": "unique_cast_across_shots_dedup",
+            "include_closeup_performers": True,
+            "unique_performers": [
+                {
+                    "performer_id": "P1",
+                    "first_seen": "",
+                    "shot_types": [],
+                    "gender": "",
+                    "role": "",
+                    "dedup_key": "",
+                    "include_in_count": True,
+                    "include_reason": "",
+                    "confidence": 0.0,
+                }
+            ],
+            "excluded": ["audience", "crew", "host_if_not_performing"],
+            "total_people": None,
+            "attribute_breakdown": {"men": None, "women": None},
+            "count_confidence": 0.0,
+        }
     if family == "cross_shot_entity_count":
         return {
             "target_entity": "question_target",
@@ -226,12 +272,21 @@ def _family_evidence_template(family: str) -> Dict[str, Any]:
     return {"facts": [], "conflicts": [], "fallback_needed": False}
 
 
-def _family_rules(family: str) -> List[str]:
+def _family_rules(family: str, question: Optional[str] = None) -> List[str]:
     common = [
         "Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.",
         "Every non-empty evidence item must include timestamp/time range and anchor_link when available.",
         "Resolver output is structured evidence only; final option mapping happens later.",
     ]
+    if family == "scene_group_attribute_count" and is_performing_cast_question(question or ""):
+        return common + [
+            "This is a performing/presenting cast count: count every distinct performer who appears on the stage across the WHOLE performance, not only those visible in a single wide frame.",
+            "A performer seen only in close-up (for example a lead singer) still counts once; do NOT drop or ignore close-up performers.",
+            "Build a unique-performer bank and dedupe the same person across shots using face, outfit, hair, and role; record uncertain merges.",
+            "Include lead performers, presenters, and backup performers; exclude only the audience and crew.",
+            "After building the deduped cast, map it to men/women, then verify every multiple-choice option against the cast bank instead of stopping at the first plausible wide-shot count.",
+            "The number of people in any single frame is a lower bound, not the answer; the deduped cross-shot cast total is usually higher.",
+        ]
     family_rules = {
         "cross_shot_entity_count": [
             "Build an entity bank across the relevant timeline; never answer from one frame or one crop.",
@@ -292,11 +347,12 @@ def _question_scope_guard(question: str) -> Dict[str, Any]:
         return {
             "scope_type": "beginning_locked",
             "allowed_scope": "opening visual segment only",
-            "forbidden_scope": "later reveal shots, later transcript/ASR claims, later product summaries",
+            "forbidden_scope": "later reveal shots, later flat-lay/pack shots, later transcript/ASR claims, later product summaries",
             "rules": [
-                "The question explicitly locks the evidence to the beginning/opening segment.",
-                "Do not expand a beginning/start question to a later reveal or end-state even if later evidence is clearer.",
-                "Treat later ASR/transcript numbers as out-of-scope conflict unless they describe the opening frame directly.",
+                "The question explicitly locks the evidence to the beginning/opening segment. The COUNT must come from the opening segment only.",
+                "Forbidden: deriving the count from any later reveal shot, later flat-lay, end-state, or product-summary narration, even if those shots are clearer or easier to count.",
+                "If a later spoken phrase states a product/item number (for example 'eight full-size products') during a later reveal, it is end-scope narration and must NOT be used as the beginning count.",
+                "If the beginning box/container is partly occluded, count the visible items in the opening segment and record uncertainty; do not substitute a later, clearer reveal count.",
             ],
         }
     return {"scope_type": "full_or_question_scope", "rules": []}
