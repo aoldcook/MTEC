@@ -47,6 +47,36 @@ class FatalAPIError(RuntimeError):
     pass
 
 
+class _InspectionBlocked(RuntimeError):
+    """Raised when a request is rejected by content moderation (DataInspectionFailed)
+    after the normal retry loop, signaling the caller to retry with fewer media items."""
+    pass
+
+
+def _reduce_media_to_primary_video(content: List[Dict[str, Any]]) -> Optional[List[Dict[str, Any]]]:
+    """Return a reduced content list that keeps all text items plus only the first
+    video item (dropping images and any extra videos), or None if there is nothing
+    to reduce. Used to slip past the content-moderation false-positive that scales
+    with the number of attached media items."""
+    if not isinstance(content, list):
+        return None
+    media_items = [c for c in content if isinstance(c, dict) and c.get("type") in {"video_url", "image_url", "audio_url"}]
+    if len(media_items) <= 1:
+        return None  # already minimal; nothing to gain
+    reduced: List[Dict[str, Any]] = []
+    kept_video = False
+    for c in content:
+        t = c.get("type") if isinstance(c, dict) else None
+        if t == "video_url" and not kept_video:
+            reduced.append(c)
+            kept_video = True
+        elif t in {"video_url", "image_url", "audio_url"}:
+            continue  # drop extra media
+        else:
+            reduced.append(c)  # keep text
+    return reduced
+
+
 def resolve_path(path_text: str) -> Path:
     path = Path(os.path.expanduser(os.path.expandvars(path_text)))
     if path.is_absolute():
@@ -1365,6 +1395,33 @@ class SiliconFlowClient:
         self.enable_thinking = enable_thinking
 
     def generate(self, content: List[Dict[str, Any]], max_tokens: int) -> Tuple[str, Dict[str, Any]]:
+        # The DashScope content-moderation false-positive scales with the number of
+        # media items in one request: any single video/image passes, but a large
+        # multi-media request for certain (benign) videos is reliably flagged. So on a
+        # persistent DataInspectionFailed we retry with progressively fewer media
+        # items (full -> primary video only -> text only). Each variant first gets the
+        # normal transient-retry loop.
+        variants = [("full", content)]
+        primary = _reduce_media_to_primary_video(content)
+        if primary is not None:
+            variants.append(("primary_video_only", primary))
+        text_only = [c for c in content if isinstance(c, dict) and c.get("type") == "text"]
+        if text_only and len(text_only) != len(content):
+            variants.append(("text_only", text_only))
+        last_error = ""
+        for variant_name, variant in variants:
+            try:
+                text, meta = self._generate_once(variant, max_tokens)
+                if variant_name != "full":
+                    meta = dict(meta or {})
+                    meta["inspection_fallback_variant"] = variant_name
+                return text, meta
+            except _InspectionBlocked as exc:
+                last_error = str(exc)
+                continue  # moderation blocked this variant; try a smaller one
+        raise RuntimeError(last_error or "DataInspectionFailed after media reduction")
+
+    def _generate_once(self, content: List[Dict[str, Any]], max_tokens: int) -> Tuple[str, Dict[str, Any]]:
         payload = {
             "model": self.model,
             "messages": [
@@ -1385,6 +1442,7 @@ class SiliconFlowClient:
             # Allow the API to resolve oss:// media URLs produced by _maybe_oss_url.
             headers["X-DashScope-OssResourceResolve"] = "enable"
         last_error = ""
+        inspection_blocked = False
         for attempt in range(self.max_retries + 1):
             req = urllib.request.Request(self.url, data=body, headers=headers, method="POST")
             try:
@@ -1405,12 +1463,17 @@ class SiliconFlowClient:
                 last_error = f"HTTP {exc.code}: {detail[:1200]}"
                 if "account balance is insufficient" in detail:
                     raise FatalAPIError(last_error)
-                if exc.code not in {408, 409, 429, 500, 502, 503, 504}:
+                # DataInspectionFailed is a transient/false-positive content-moderation
+                # glitch, so retry it (and signal the caller to try fewer media items).
+                inspection_blocked = "data_inspection_failed" in detail.lower() or "datainspectionfailed" in detail.lower()
+                if exc.code not in {408, 409, 429, 500, 502, 503, 504} and not inspection_blocked:
                     break
             except Exception as exc:
                 last_error = f"{type(exc).__name__}: {exc}"
             if attempt < self.max_retries:
                 time.sleep(self.retry_sleep * (attempt + 1))
+        if inspection_blocked:
+            raise _InspectionBlocked(last_error)
         raise RuntimeError(last_error)
 
 
