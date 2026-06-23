@@ -410,6 +410,7 @@ def create_multimodal_structural_anchors(
             max_side=video_global_anchor_max_side,
         )
     visual_count_video_anchor = None
+    det_count_evidence = None
     if video_path and video_anchor:
         visual_count_video_anchor = create_video_visual_count_clip_anchor(
             question=question,
@@ -490,6 +491,14 @@ def create_multimodal_structural_anchors(
         )
         if visual_count_anchors:
             image_anchor = _merge_anchor_lists(image_anchor, visual_count_anchors)
+        det_count_anchors, det_count_evidence = build_deterministic_count_anchors(
+            question=question,
+            video_path=video_path,
+            output_dir=output_path,
+            video_anchor=video_anchor,
+        )
+        if det_count_anchors:
+            image_anchor = _merge_anchor_lists(image_anchor, det_count_anchors)
 
     audio_anchor = None
     if audio_path:
@@ -512,6 +521,8 @@ def create_multimodal_structural_anchors(
         package["low_resolution_anchor"]["transcript_anchor"] = [transcript_anchor]
     if video_evidence_anchor:
         package["low_resolution_anchor"]["video_evidence_anchor"] = [video_evidence_anchor]
+    if det_count_evidence:
+        package["low_resolution_anchor"]["deterministic_count_evidence"] = det_count_evidence
     package["media_probe"] = {
         "image": {"path": image_path} if image_path else None,
         "video": probe_media(video_path) if video_path else None,
@@ -2120,6 +2131,172 @@ def create_video_detail_frame_anchors(
     finally:
         capture.release()
     return anchors
+
+
+# ---------------------------------------------------------------------------
+# Deterministic / instance-level visual counting for counting questions.
+# Idea: instead of relying on sparse keyframes, (1) preserve a CONTINUOUS dense
+# segment over the window where the target/action appears, and (2) run a
+# deterministic detector (YOLO for instances, motion-energy peaks for repeated
+# actions) to produce an explicit instance/repetition count as hard evidence.
+# Gated by DETERMINISTIC_COUNT["enabled"] (set from the runner CLI flag).
+# ---------------------------------------------------------------------------
+DETERMINISTIC_COUNT = {"enabled": False, "max_frames": 48, "person_imgsz": 1280, "person_conf": 0.25}
+
+_COUNT_FAMILIES = {"temporal_event_count", "cross_shot_entity_count", "scene_group_attribute_count", "container_object_count"}
+
+
+def _estimate_motion_repetitions(frames: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Count repeated-action cycles by peak-counting a frame-to-frame motion-energy
+    signal over a continuous dense window. Deterministic but approximate."""
+    cv2 = _require_cv2()
+    grays = []
+    for fr in frames:
+        arr = np.asarray(fr["image"].convert("L"))
+        small = cv2.resize(arr, (96, 96))
+        grays.append(small.astype(np.float32))
+    if len(grays) < 4:
+        return {"approx_repetitions": None, "note": "too few frames"}
+    energy = np.array([float(np.mean(np.abs(grays[i] - grays[i - 1]))) for i in range(1, len(grays))])
+    # smooth with a small moving average
+    k = 3
+    kernel = np.ones(k) / k
+    sm = np.convolve(energy, kernel, mode="same")
+    thr = float(sm.mean() + 0.4 * sm.std())
+    peaks = 0
+    last = -10
+    for i in range(1, len(sm) - 1):
+        if sm[i] > thr and sm[i] >= sm[i - 1] and sm[i] > sm[i + 1] and (i - last) >= 2:
+            peaks += 1
+            last = i
+    return {"approx_repetitions": int(peaks), "motion_threshold": round(thr, 3), "signal_len": len(sm)}
+
+
+def build_deterministic_count_anchors(
+    question: str,
+    video_path: str,
+    output_dir: Path,
+    video_anchor: Dict[str, Any],
+) -> Tuple[List[Dict[str, Any]], Optional[Dict[str, Any]]]:
+    """Return (image_anchors, hard_evidence) for counting questions: a continuous
+    dense-segment montage plus a deterministic instance/repetition count."""
+    if not DETERMINISTIC_COUNT.get("enabled"):
+        return [], None
+    route = route_question_family(question)
+    fam = route.get("task_family")
+    if fam not in _COUNT_FAMILIES:
+        return [], None
+    try:
+        return _build_deterministic_count_anchors_impl(question, video_path, output_dir, video_anchor, route, fam)
+    except Exception as err:  # never let counting evidence break the pipeline
+        return [], {"method": "deterministic_count_v1", "task_family": fam, "error": f"{type(err).__name__}: {err}"}
+
+
+def _build_deterministic_count_anchors_impl(
+    question: str,
+    video_path: str,
+    output_dir: Path,
+    video_anchor: Dict[str, Any],
+    route: Dict[str, Any],
+    fam: str,
+) -> Tuple[List[Dict[str, Any]], Optional[Dict[str, Any]]]:
+    duration = float(video_anchor.get("source_duration_sec") or 0.0)
+    source_fps = float(video_anchor.get("source_fps") or 0.0)
+    source_frame_count = int(video_anchor.get("source_frame_count") or 0)
+    if duration <= 0 or source_fps <= 0:
+        return [], None
+    text = str(question or "").lower()
+    beginning = any(t in text for t in ("beginning", "at the start", "start of", "opening", "initially"))
+    w0, w1 = (0.0, min(duration, 8.0)) if beginning else (0.0, duration)
+    k = max(8, int(DETERMINISTIC_COUNT.get("max_frames", 48)))
+    times = [w0 + (w1 - w0) * i / (k - 1) for i in range(k)]
+    frames = _read_video_frames_at_times(video_path, times, source_fps, source_frame_count)
+    if not frames:
+        return [], None
+    out = output_dir / "deterministic_count"
+    out.mkdir(parents=True, exist_ok=True)
+    anchors: List[Dict[str, Any]] = []
+    hard: Dict[str, Any] = {
+        "method": "deterministic_count_v1",
+        "task_family": fam,
+        "window_sec": [round(w0, 2), round(w1, 2)],
+        "frames_analyzed": len(frames),
+    }
+    # (1) continuous dense-segment montage so the verifier sees uninterrupted motion
+    sheet = _compose_visual_count_sheet(frames, max_side_per_frame=360)
+    sheet_path = out / "continuous_segment_sheet.jpg"
+    sheet.save(sheet_path, format="JPEG", quality=85, optimize=True)
+    anchors.append({
+        "anchor_id": "deterministic_continuous_segment",
+        "anchor_link": "deterministic_continuous_segment",
+        "type": "video_visual_count_sheet",
+        "role": ("Continuous dense-sampled segment (not isolated keyframes) covering the counting window; "
+                 "use it to count every instance/occurrence over time."),
+        "path": str(sheet_path),
+        "task_family": fam,
+        "time_points_sec": [round(f["time_sec"], 2) for f in frames],
+        "resolution": {"width": sheet.width, "height": sheet.height},
+        "compression": {"format": "jpeg", "bytes": sheet_path.stat().st_size, "quality": 85,
+                        "strategy": "continuous dense segment montage for deterministic counting"},
+    })
+    # (2) deterministic instance / repetition counting
+    person_target = bool(_count_target_labels(question)) or fam in {"scene_group_attribute_count", "cross_shot_entity_count"} \
+        or any(t in text for t in ("acrobat", "people", "person", "men", "women", "player", "dancer", "performer", "juror"))
+    if fam == "temporal_event_count":
+        hard["target_type"] = "action_repetition"
+        hard.update(_estimate_motion_repetitions(frames))
+    if person_target:
+        try:
+            model = _get_yolo_model()
+            per_frame = []
+            best = None
+            for fr in frames:
+                res = model.predict(source=np.asarray(fr["image"]), imgsz=DETERMINISTIC_COUNT["person_imgsz"],
+                                    conf=DETERMINISTIC_COUNT["person_conf"], verbose=False)[0]
+                boxes = getattr(res, "boxes", None)
+                cls = boxes.cls.detach().cpu().numpy() if boxes is not None else np.array([])
+                pc = int((cls == 0).sum())
+                per_frame.append({"time_sec": round(fr["time_sec"], 2), "persons": pc})
+                if best is None or pc > best[1]:
+                    best = (fr, pc, boxes)
+            counts = [p["persons"] for p in per_frame]
+            hard["target_type"] = hard.get("target_type", "person")
+            hard["person_detector"] = "ultralytics_yolo11"
+            hard["per_frame_person_counts"] = per_frame
+            hard["max_persons_single_frame"] = int(max(counts)) if counts else 0
+            hard["median_persons"] = int(np.median(counts)) if counts else 0
+            # annotate the densest frame with boxes
+            if best and best[2] is not None:
+                img = best[0]["image"].convert("RGB").copy()
+                draw = ImageDraw.Draw(img)
+                xy = best[2].xyxy.detach().cpu().numpy()
+                cl = best[2].cls.detach().cpu().numpy()
+                n = 0
+                for j in range(len(xy)):
+                    if int(cl[j]) != 0:
+                        continue
+                    n += 1
+                    x1, y1, x2, y2 = [int(v) for v in xy[j]]
+                    draw.rectangle([x1, y1, x2, y2], outline=(255, 0, 0), width=3)
+                    draw.text((x1 + 2, y1 + 2), str(n), fill=(255, 255, 0))
+                img.thumbnail((960, 960), Image.Resampling.LANCZOS)
+                ann = out / "person_count_annotated.jpg"
+                img.save(ann, format="JPEG", quality=88, optimize=True)
+                anchors.append({
+                    "anchor_id": "deterministic_person_count",
+                    "anchor_link": "deterministic_person_count",
+                    "type": "video_visual_count_sheet",
+                    "role": (f"Densest frame at {best[0]['time_sec']:.1f}s with {n} persons detected and boxed by a "
+                             "deterministic detector; the true count is at least this many."),
+                    "path": str(ann),
+                    "task_family": fam,
+                    "detected_person_count": n,
+                    "compression": {"format": "jpeg", "bytes": ann.stat().st_size, "quality": 88,
+                                    "strategy": "YOLO person-count annotated densest frame"},
+                })
+        except Exception as err:
+            hard["person_detector_error"] = f"{type(err).__name__}: {err}"
+    return anchors, hard
 
 
 def create_video_visual_count_executor_anchors(

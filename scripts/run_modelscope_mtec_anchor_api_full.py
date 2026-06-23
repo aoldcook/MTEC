@@ -23,6 +23,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+import zoomrefine.mtec_media_pipeline as mtec_media_pipeline  # noqa: E402
 from zoomrefine.mtec_media_pipeline import create_multimodal_structural_anchors, probe_media  # noqa: E402
 from zoomrefine.mtec_prompt_plus import (  # noqa: E402
     build_evidence_extraction_prompt,
@@ -1223,6 +1224,7 @@ def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str, strip_
         + _scene_group_count_directive(package)
         + _count_hypothesis_directive(package)
         + _count_undercount_directive(package)
+        + _deterministic_count_directive(package)
         + "When a strong visual count sheet is attached, treat it as the primary evidence for count verification and compare each option against it before trusting computed evidence, ASR, or generic low-FPS observations.\n"
         + "If structured evidence is low quality, all/most options are unknown, OCR/count/visible-set evidence is incomplete, or local crops conflict, fall back to the full-video global anchor to re-check event order, scene context, action flow, and global layout.\n"
         + "For count questions, prefer deterministic count_tracks/instances only when tracks are valid; otherwise use full-context video plus visible frames. For missing-set questions, use visible_set only when complete; otherwise re-check the full-video anchor. For OCR/model/score questions, combine OCR with high-detail crops and global context when OCR is uncertain.\n"
@@ -1233,6 +1235,28 @@ def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str, strip_
 
 def _resolver_guidance(package: Dict[str, Any]) -> Dict[str, Any]:
     return (package.get("structured_evidence_prompt") or {}).get("task_specific_resolver_guidance") or {}
+
+
+def _deterministic_count_directive(package: Dict[str, Any]) -> str:
+    """Surface the deterministic detector's count as a strong prior for counting."""
+    ev = (package.get("structured_evidence_prompt") or {}).get("deterministic_count_evidence") or {}
+    if not ev:
+        return ""
+    bits = []
+    if ev.get("max_persons_single_frame") is not None:
+        bits.append(
+            f"A deterministic object detector found at most {ev['max_persons_single_frame']} persons simultaneously "
+            f"in one frame (median {ev.get('median_persons')}) over the counting window; the true number of people is "
+            "AT LEAST this many — do not pick an option below it unless the detector clearly missed occluded people."
+        )
+    if ev.get("approx_repetitions") is not None:
+        bits.append(
+            f"A deterministic motion-cycle counter estimated about {ev['approx_repetitions']} repetitions of the action "
+            "over the continuous segment; use it as a prior alongside the dense-segment montage when choosing the count."
+        )
+    if not bits:
+        return ""
+    return "Deterministic count evidence (instance-level): " + " ".join(bits) + "\n"
 
 
 def _count_undercount_directive(package: Dict[str, Any]) -> str:
@@ -1946,6 +1970,9 @@ def run_video_record(
                 )
                 or media_contents
             )
+        det_count_ev = (raw_package.get("low_resolution_anchor") or {}).get("deterministic_count_evidence")
+        if det_count_ev:
+            package.setdefault("structured_evidence_prompt", {})["deterministic_count_evidence"] = det_count_ev
         isolated_cast_count = run_isolated_cast_count_pass(question, raw_package, answer_client)
         if isolated_cast_count:
             package.setdefault("structured_evidence_prompt", {})["isolated_cast_count"] = isolated_cast_count
@@ -2324,6 +2351,7 @@ def main() -> None:
     parser.add_argument("--drop-visual-count-clip-when-isolated", action="store_true", help="Token-savings optimization: for performing-cast questions, drop the redundant original-resolution visual-count clip from the final answer call once the isolated cast-count pass has produced a count (avoids sending the full video twice). Default off; the count still drives the answer, but enable only after confirming no accuracy regression on your backend.")
     parser.add_argument("--enable-prompt-cache", action="store_true", help="Module #1 (caching): reuse the evidence pass's exact media list for the final answer call so the provider serves the repeated video/image prefix from context cache. Identical visual evidence, only trailing text differs => no accuracy impact. Default off.")
     parser.add_argument("--strip-anchor-metadata", action="store_true", help="Module #2 (metadata stripping): remove non-semantic anchor bookkeeping fields (compression/bytes/quality/strategy/paths/resolutions) from the prompt serialization only. Saved records and attached media are unchanged => no accuracy impact. Default off.")
+    parser.add_argument("--deterministic-count", action="store_true", help="For counting questions, attach a continuous dense-sampled segment + a deterministic detector count (YOLO persons / motion-energy repetitions) as hard evidence to improve instance/repetition counting. Default off.")
     parser.add_argument("--oss-media-upload", choices=("off", "auto"), default="off", help="Large-media fix: when 'auto', upload video media (and any media file > --oss-threshold-bytes) to DashScope temporary OSS and reference it by oss:// URL instead of a base64 data-URI. Avoids the 20 MB/data-URI and ~28 MB/request payload limits that fail long videos. Requires the dashscope SDK.")
     parser.add_argument("--oss-threshold-bytes", type=int, default=8_000_000, help="Upload media files larger than this many bytes to OSS when --oss-media-upload=auto (video is always uploaded).")
     parser.add_argument("--oss-upload-model", default="qwen-vl-max", help="Model name used only to obtain the temporary-OSS upload certificate.")
@@ -2342,6 +2370,9 @@ def main() -> None:
         OSS_MEDIA["api_key"] = answer_api_key or api_key
         OSS_MEDIA["model"] = args.oss_upload_model
         OSS_MEDIA["threshold_bytes"] = args.oss_threshold_bytes
+
+    if args.deterministic_count:
+        mtec_media_pipeline.DETERMINISTIC_COUNT["enabled"] = True
 
     output_dir = resolve_path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
