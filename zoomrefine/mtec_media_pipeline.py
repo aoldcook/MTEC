@@ -2240,8 +2240,15 @@ def _build_deterministic_count_anchors_impl(
                         "strategy": "continuous dense segment montage for deterministic counting"},
     })
     # (2) deterministic instance / repetition counting
-    person_target = bool(_count_target_labels(question)) or fam in {"scene_group_attribute_count", "cross_shot_entity_count"} \
-        or any(t in text for t in ("acrobat", "people", "person", "men", "women", "player", "dancer", "performer", "juror"))
+    # Only emit a person-instance prior for *group-size* questions ("how many people
+    # are on stage / in the room"). For "how many people did ACTION X" (e.g. raised
+    # their hands) a total-person count is the wrong number and misleads the verifier,
+    # so we deliberately exclude cross_shot_entity_count and action-qualified questions.
+    action_qualified = any(t in text for t in (
+        "raise", "raised", "wave", "waved", "stood", "stand up", "stood up", "fell",
+        "fall", "jump", "scored", "answer", "answered", "left", "entered", "spoke",
+    ))
+    person_target = fam == "scene_group_attribute_count" and not action_qualified
     if fam == "temporal_event_count":
         hard["target_type"] = "action_repetition"
         hard.update(_estimate_motion_repetitions(frames))
