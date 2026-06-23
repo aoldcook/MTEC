@@ -13,6 +13,11 @@ TASK_FAMILY_REGISTRY: Dict[str, Dict[str, Any]] = {
         "priority": "high",
         "required_evidence": ["best_wide_shot", "instance_attribute_table", "non_accumulation_guard"],
     },
+    "temporal_event_count": {
+        "resolver_class": "TemporalEventCounter",
+        "priority": "high",
+        "required_evidence": ["per_occurrence_timeline", "full_range_enumeration", "no_single_frame_count"],
+    },
     "container_object_count": {
         "resolver_class": "ContainerObjectCounter",
         "priority": "high",
@@ -86,7 +91,15 @@ def route_question_family(question: str, options: Optional[Dict[str, str]] = Non
         confidence = 0.76
         reasons.append("intent or domain keyword")
     elif has_any(["how many", "number of", "count", "many", "几个", "多少"]):
-        if has_any(["box", "basket", "plate", "table", "bag", "container", "盒", "篮", "盘", "桌", "袋"]):
+        if is_action_repetition_count_question(question):
+            # "how many jumps/rolls/spins/laps/sets/times ..." — counting a repeated
+            # ACTION over time, not a static group in one frame. Route to temporal
+            # event counting so occurrences are enumerated across the full timeline
+            # instead of read off a single wide shot (which systematically undercounts).
+            family = "temporal_event_count"
+            confidence = 0.82
+            reasons.append("count question over a repeated action/event across time")
+        elif has_any(["box", "basket", "plate", "table", "bag", "container", "盒", "篮", "盘", "桌", "袋"]):
             family = "container_object_count"
             confidence = 0.84
             reasons.append("count question with container/surface scope")
@@ -130,6 +143,36 @@ def is_performing_cast_question(question: str) -> bool:
     return any(term in text for term in cast_terms) and any(term in text for term in stage_terms)
 
 
+# Repeated countable actions/events: "how many jumps/rolls/laps/sets/times ..." ask
+# for the number of occurrences of an action over time, not a static group in one
+# frame. The single-best-wide-shot counting method systematically under-counts these.
+# Whole-word action nouns/verbs (matched with word boundaries to avoid substrings
+# like "lap" in "laptop" or "spin" in "spinach").
+_ACTION_REPETITION_WORDS = (
+    "jump", "jumps", "roll", "rolls", "spin", "spins", "rotation", "rotations",
+    "somersault", "somersaults", "cartwheel", "cartwheels", "lap", "laps", "rep",
+    "reps", "push-up", "push-ups", "pushup", "pushups", "sit-up", "sit-ups",
+    "squat", "squats", "kick", "kicks", "punch", "punches", "clap", "claps",
+    "bounce", "bounces", "dribble", "dribbles", "swing", "swings", "round", "rounds",
+    "set", "sets",
+)
+# Multi-word / phrase cues (safe as substrings) and CJK markers.
+_ACTION_REPETITION_PHRASES = ("how many times", "times does", "times did", "次", "圈", "组")
+
+
+def is_action_repetition_count_question(question: str) -> bool:
+    """True for counting questions about a repeated action/event over time
+    (jumps, rolls, laps, sets, 'how many times', ...), which must be counted by
+    enumerating occurrences across the full timeline rather than from one frame."""
+    text = str(question or "").lower()
+    if not any(term in text for term in ("how many", "number of", "count", "many", "几个", "多少", "几次")):
+        return False
+    if any(p in text for p in _ACTION_REPETITION_PHRASES):
+        return True
+    words = set(re.findall(r"[a-z][a-z\-]*", text))
+    return any(w in words for w in _ACTION_REPETITION_WORDS)
+
+
 def build_task_specific_resolver_guidance(question: str) -> Dict[str, Any]:
     route = route_question_family(question)
     family = route["task_family"]
@@ -168,6 +211,18 @@ def build_task_specific_resolver_guidance(question: str) -> Dict[str, Any]:
 
 
 def _family_evidence_template(family: str, question: Optional[str] = None) -> Dict[str, Any]:
+    if family == "temporal_event_count":
+        return {
+            "target_action": "question_action",
+            "count_method": "enumerate_each_occurrence_across_full_timeline_then_sum",
+            "scan_scope": "full_question_time_range",
+            "occurrences": [
+                {"index": 1, "time_sec": None, "actor": "", "evidence": "", "confidence": 0.0}
+            ],
+            "count_value": None,
+            "undercount_check": "scanned every segment of the relevant range; fast/repeated reps not skipped",
+            "count_confidence": 0.0,
+        }
     if family == "scene_group_attribute_count" and is_performing_cast_question(question or ""):
         return {
             "scene": "stage_performance",
@@ -288,6 +343,13 @@ def _family_rules(family: str, question: Optional[str] = None) -> List[str]:
             "The number of people in any single frame is a lower bound, not the answer; the deduped cross-shot cast total is usually higher.",
         ]
     family_rules = {
+        "temporal_event_count": [
+            "This counts a repeated ACTION/EVENT over time (e.g. jumps, rolls, laps, sets, 'how many times'), NOT a static group in one frame.",
+            "Enumerate EACH occurrence with its own timestamp across the full relevant time range, then the count is the number of occurrences (sum), not what is visible in any single frame.",
+            "Scan the entire relevant span including fast or back-to-back repetitions; compressed/low-FPS frames make it easy to SKIP occurrences, so the true count is usually HIGHER than a quick glance suggests.",
+            "If unsure between two adjacent option counts, prefer the higher one unless you can positively account for every occurrence and rule the higher count out.",
+            "Use the low-FPS evidence video and the global timeline together to catch occurrences between sampled frames.",
+        ],
         "cross_shot_entity_count": [
             "Build an entity bank across the relevant timeline; never answer from one frame or one crop.",
             "Merge the same entity across shots using appearance, role, position, and repeated participation; record uncertain merges.",

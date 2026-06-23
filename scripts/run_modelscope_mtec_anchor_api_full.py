@@ -1214,7 +1214,7 @@ def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str, strip_
         + "You are an option verifier. You receive compressed video anchors, a low-resolution full-video global anchor, deterministic evidence, answer-neutral observations, transcript/ASR evidence, OCR/object crops, and tubelet storyboards.\n"
         + "First use global_video_timeline and task_specific_resolver, if present, to locate the relevant scene/time span and understand the full-video event order. Then align structured/tool evidence to that visual timeline before judging options.\n"
         + "If task_specific_resolver or computed evidence contains a medium/high-confidence task-family template, prioritize its structured fields over generic observations while still mapping evidence to options yourself.\n"
-        + "Task-family policy: cross_shot_entity_count uses entity bank and inclusion/exclusion reasons; scene_group_attribute_count uses one best wide scene instead of summed close-ups; container_object_count counts inside the container ROI only; missing_set checks every option across the valid scope; stateful_ocr votes stable OCR states; ordinal_clip_action uses the target logical clip, not an atomic scene cut; domain_intention ranks ontology-grounded intents with negative evidence.\n"
+        + "Task-family policy: cross_shot_entity_count uses entity bank and inclusion/exclusion reasons; scene_group_attribute_count uses one best wide scene instead of summed close-ups; temporal_event_count enumerates each occurrence of a repeated action across the full timeline and sums them (never a single-frame count); container_object_count counts inside the container ROI only; missing_set checks every option across the valid scope; stateful_ocr votes stable OCR states; ordinal_clip_action uses the target logical clip, not an atomic scene cut; domain_intention ranks ontology-grounded intents with negative evidence.\n"
         + "Evaluate each option independently as supported, contradicted, or unknown before choosing. Do not trust any previous candidate_answer, preliminary_answer, best_option, or option letter if it appears in computed evidence.\n"
         + "If text evidence, computed evidence, transcript, OCR text, or deterministic metadata conflicts with the attached video or high-resolution crop images, prefer the direct visual evidence from the video/crops. Treat conflicting text evidence as uncertain, not authoritative.\n"
         + "Treat temporal_scope as confidence-gated: confidence >= 0.75 means scoped evidence is primary; 0.50-0.75 means use scoped evidence plus the full-video global anchor; below 0.50 or missing evidence means do not hard-filter the rest of the video.\n"
@@ -1222,6 +1222,7 @@ def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str, strip_
         + _beginning_scope_directive(package)
         + _scene_group_count_directive(package)
         + _count_hypothesis_directive(package)
+        + _count_undercount_directive(package)
         + "When a strong visual count sheet is attached, treat it as the primary evidence for count verification and compare each option against it before trusting computed evidence, ASR, or generic low-FPS observations.\n"
         + "If structured evidence is low quality, all/most options are unknown, OCR/count/visible-set evidence is incomplete, or local crops conflict, fall back to the full-video global anchor to re-check event order, scene context, action flow, and global layout.\n"
         + "For count questions, prefer deterministic count_tracks/instances only when tracks are valid; otherwise use full-context video plus visible frames. For missing-set questions, use visible_set only when complete; otherwise re-check the full-video anchor. For OCR/model/score questions, combine OCR with high-detail crops and global context when OCR is uncertain.\n"
@@ -1232,6 +1233,28 @@ def build_final_answer_prompt(package: Dict[str, Any], prompt_style: str, strip_
 
 def _resolver_guidance(package: Dict[str, Any]) -> Dict[str, Any]:
     return (package.get("structured_evidence_prompt") or {}).get("task_specific_resolver_guidance") or {}
+
+
+def _count_undercount_directive(package: Dict[str, Any]) -> str:
+    """For any counting task, counteract the systematic UNDER-count bias from
+    compressed/low-FPS video (skipped instances/occurrences). Gated to count
+    families so non-count questions are unaffected."""
+    guidance = _resolver_guidance(package)
+    fam = guidance.get("task_family")
+    if fam not in {"temporal_event_count", "cross_shot_entity_count", "scene_group_attribute_count", "container_object_count"}:
+        return ""
+    if fam == "temporal_event_count":
+        return (
+            "Counting a repeated action over time: enumerate every occurrence across the full relevant span (use the "
+            "low-FPS video + global timeline together). Compressed sampling SKIPS occurrences, so the count is usually "
+            "higher than a first glance; if torn between two adjacent options, pick the higher unless you can account "
+            "for every occurrence.\n"
+        )
+    return (
+        "Counting note: compressed/low-FPS frames tend to make the model UNDER-count (skipped instances, occluded or "
+        "edge items, brief appearances). Enumerate exhaustively across all attached frames and the full time scope; do "
+        "not default to the lowest option unless you can positively rule out the higher counts.\n"
+    )
 
 
 def _beginning_scope_directive(package: Dict[str, Any]) -> str:
