@@ -630,15 +630,61 @@ def data_url(path: Path, mime: str) -> str:
     return f"data:{mime};base64," + base64.b64encode(path.read_bytes()).decode("ascii")
 
 
+# ---------------------------------------------------------------------------
+# Large-media fix: upload big media to DashScope temporary OSS and reference it
+# by oss:// URL (with header X-DashScope-OssResourceResolve: enable) instead of a
+# base64 data-URI. This avoids the provider's 20 MB-per-data-URI and ~28 MB
+# total-request-string limits that fail long videos. Configured in main().
+# ---------------------------------------------------------------------------
+OSS_MEDIA = {
+    "enabled": False,
+    "model": "qwen-vl-max",   # model used only to obtain a temp-OSS upload certificate
+    "api_key": None,
+    "threshold_bytes": 8_000_000,  # upload media files larger than this
+    "always_kinds": {"video"},     # always upload these kinds when enabled
+    "cache": {},                    # path -> oss url (per process)
+    "used": False,
+}
+
+
+def _maybe_oss_url(kind: str, path: Path) -> Optional[str]:
+    if not OSS_MEDIA["enabled"] or not OSS_MEDIA["api_key"]:
+        return None
+    try:
+        size = path.stat().st_size
+    except OSError:
+        return None
+    if kind not in OSS_MEDIA["always_kinds"] and size <= OSS_MEDIA["threshold_bytes"]:
+        return None
+    cache_key = f"{path}:{size}"
+    if cache_key in OSS_MEDIA["cache"]:
+        return OSS_MEDIA["cache"][cache_key]
+    try:
+        from dashscope.utils.oss_utils import OssUtils
+
+        url, _cert = OssUtils.upload(
+            model=OSS_MEDIA["model"], file_path=str(path), api_key=OSS_MEDIA["api_key"]
+        )
+    except Exception:
+        return None
+    if url:
+        OSS_MEDIA["cache"][cache_key] = url
+        OSS_MEDIA["used"] = True
+    return url
+
+
 def media_content(kind: str, path: Path) -> Dict[str, Any]:
     if kind == "image":
-        return {"type": "image_url", "image_url": {"url": data_url(path, "image/jpeg")}}
+        oss = _maybe_oss_url("image", path)
+        return {"type": "image_url", "image_url": {"url": oss or data_url(path, "image/jpeg")}}
     if kind == "video":
-        return {"type": "video_url", "video_url": {"url": data_url(path, "video/mp4")}}
+        oss = _maybe_oss_url("video", path)
+        return {"type": "video_url", "video_url": {"url": oss or data_url(path, "video/mp4")}}
     if kind == "audio":
         suffix = path.suffix.lower()
         mime = "audio/mpeg" if suffix == ".mp3" else "audio/ogg" if suffix == ".ogg" else "audio/wav"
-        return {"type": "audio_url", "audio_url": {"url": data_url(path, mime)}}
+        oss = _maybe_oss_url("audio", path)
+        return {"type": "audio_url", "audio_url": {"url": oss or data_url(path, mime)}}
     raise ValueError(f"Unsupported media kind: {kind}")
 
 
@@ -1287,7 +1333,7 @@ def run_isolated_cast_count_pass(
         "Answer ONLY as: men=<n>, women=<n>."
     )
     content = [
-        {"type": "video_url", "video_url": {"url": _video_data_uri(src)}},
+        media_content("video", Path(src)),
         {"type": "text", "text": prompt},
     ]
     try:
@@ -1335,6 +1381,9 @@ class SiliconFlowClient:
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
         }
+        if OSS_MEDIA["enabled"]:
+            # Allow the API to resolve oss:// media URLs produced by _maybe_oss_url.
+            headers["X-DashScope-OssResourceResolve"] = "enable"
         last_error = ""
         for attempt in range(self.max_retries + 1):
             req = urllib.request.Request(self.url, data=body, headers=headers, method="POST")
@@ -2189,6 +2238,9 @@ def main() -> None:
     parser.add_argument("--drop-visual-count-clip-when-isolated", action="store_true", help="Token-savings optimization: for performing-cast questions, drop the redundant original-resolution visual-count clip from the final answer call once the isolated cast-count pass has produced a count (avoids sending the full video twice). Default off; the count still drives the answer, but enable only after confirming no accuracy regression on your backend.")
     parser.add_argument("--enable-prompt-cache", action="store_true", help="Module #1 (caching): reuse the evidence pass's exact media list for the final answer call so the provider serves the repeated video/image prefix from context cache. Identical visual evidence, only trailing text differs => no accuracy impact. Default off.")
     parser.add_argument("--strip-anchor-metadata", action="store_true", help="Module #2 (metadata stripping): remove non-semantic anchor bookkeeping fields (compression/bytes/quality/strategy/paths/resolutions) from the prompt serialization only. Saved records and attached media are unchanged => no accuracy impact. Default off.")
+    parser.add_argument("--oss-media-upload", choices=("off", "auto"), default="off", help="Large-media fix: when 'auto', upload video media (and any media file > --oss-threshold-bytes) to DashScope temporary OSS and reference it by oss:// URL instead of a base64 data-URI. Avoids the 20 MB/data-URI and ~28 MB/request payload limits that fail long videos. Requires the dashscope SDK.")
+    parser.add_argument("--oss-threshold-bytes", type=int, default=8_000_000, help="Upload media files larger than this many bytes to OSS when --oss-media-upload=auto (video is always uploaded).")
+    parser.add_argument("--oss-upload-model", default="qwen-vl-max", help="Model name used only to obtain the temporary-OSS upload certificate.")
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args()
 
@@ -2198,6 +2250,12 @@ def main() -> None:
     answer_api_key = os.environ.get(args.answer_api_key_env)
     if "video" in args.modalities and not answer_api_key:
         raise SystemExit(f"Missing API key env var for video final answer pass: {args.answer_api_key_env}")
+
+    if args.oss_media_upload == "auto":
+        OSS_MEDIA["enabled"] = True
+        OSS_MEDIA["api_key"] = answer_api_key or api_key
+        OSS_MEDIA["model"] = args.oss_upload_model
+        OSS_MEDIA["threshold_bytes"] = args.oss_threshold_bytes
 
     output_dir = resolve_path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
