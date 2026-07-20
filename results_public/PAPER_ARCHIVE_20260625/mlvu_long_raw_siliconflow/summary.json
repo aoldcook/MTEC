@@ -1,0 +1,23 @@
+{
+ "config": {
+  "label": "MLVU-long 180 (raw, SiliconFlow)",
+  "platform": "siliconflow",
+  "model": "Qwen3-VL-32B-Instruct",
+  "mode": "raw video base64",
+  "notes": "most exceed base64 ceiling -> video_too_large",
+  "source_globs": [
+   "outputs/raw_sf_mlvu_long/s*/results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 180,
+  "completed": 39,
+  "failed": 141,
+  "correct": 24,
+  "acc_over_completed_pct": 61.5,
+  "acc_incl_failures_pct": 13.3,
+  "failure_classes": {
+   "video_too_large": 141
+  }
+ }
+}

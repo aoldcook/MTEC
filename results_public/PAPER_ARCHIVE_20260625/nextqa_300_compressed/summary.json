@@ -1,0 +1,24 @@
+{
+ "config": {
+  "label": "NExT-QA 300 (compressed)",
+  "platform": "bailian",
+  "model": "qwen3.7-plus",
+  "mode": "MTEC compressed",
+  "notes": "video embedded in parquet",
+  "source_globs": [
+   "outputs/eval_nextqa_300_20260624/*results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 300,
+  "completed": 300,
+  "failed": 0,
+  "correct": 248,
+  "acc_over_completed_pct": 82.7,
+  "acc_incl_failures_pct": 82.7,
+  "failure_classes": {},
+  "token_saving_raw_mean_pct": 25.5,
+  "token_saving_raw_median_pct": 40.9,
+  "token_saving_positive_count": "229/300"
+ }
+}

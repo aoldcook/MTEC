@@ -1,0 +1,268 @@
+{
+ "anchor_id": "video_evidence_extractor",
+ "anchor_link": "video_evidence_extractor",
+ "type": "video_task_aware_evidence_extraction",
+ "role": "Pre-LLM task-aware evidence extractor using scene cuts, motion saliency, OCR regions, ASR windows, scoring, and diversity hints.",
+ "source_video_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/nextqa/s0/media/video/2703151976.mp4",
+ "query_profile": {
+  "question_types": [
+   "action_motion"
+  ],
+  "task_family": {
+   "task_family": "domain_intention",
+   "resolver_class": "DomainIntentResolver",
+   "priority": "medium",
+   "confidence": 0.76,
+   "route_reasons": [
+    "intent or domain keyword"
+   ],
+   "options_detected": [
+    "A"
+   ],
+   "required_evidence": [
+    "domain_ontology",
+    "event_facts",
+    "ranked_intents",
+    "negative_evidence"
+   ]
+  },
+  "target_terms": [
+   "why",
+   "flashes",
+   "seen",
+   "here",
+   "there",
+   "throughout",
+   "whole",
+   "entertain",
+   "baby",
+   "game",
+   "bar",
+   "atmosphere",
+   "photo",
+   "taken",
+   "stage",
+   "light"
+  ],
+  "required_evidence": [
+   "global_timeline",
+   "low_fps_context",
+   "motion_region",
+   "state_change_tubelet",
+   "domain_ontology",
+   "event_facts",
+   "ranked_intents",
+   "negative_evidence"
+  ]
+ },
+ "temporal_scope": {
+  "type": "scene_specific",
+  "time_range_sec": [
+   0.0,
+   45.279
+  ],
+  "confidence": 0.55,
+  "source": "scene_keyword_no_semantic_locator",
+  "instructions": [
+   "Locate the stage scene before using appearance evidence.",
+   "Evidence from other scenes should be treated as scope_match=false."
+  ],
+  "target_scene": "stage"
+ },
+ "scene_segments": [
+  {
+   "id": "scene_fallback_0001",
+   "time_range_sec": [
+    0.0,
+    15.093
+   ],
+   "duration_sec": 15.093,
+   "source": "uniform_fallback"
+  },
+  {
+   "id": "scene_fallback_0002",
+   "time_range_sec": [
+    15.093,
+    30.186
+   ],
+   "duration_sec": 15.093,
+   "source": "uniform_fallback"
+  },
+  {
+   "id": "scene_fallback_0003",
+   "time_range_sec": [
+    30.186,
+    45.279
+   ],
+   "duration_sec": 15.093,
+   "source": "uniform_fallback"
+  }
+ ],
+ "motion_regions": [],
+ "ocr_regions": [],
+ "object_detections": [],
+ "deterministic_evidence": {
+  "version": "deterministic_evidence_engine_v1",
+  "question_analysis": {
+   "question_types": [
+    "action_motion"
+   ],
+   "task_family": {
+    "task_family": "domain_intention",
+    "resolver_class": "DomainIntentResolver",
+    "priority": "medium",
+    "confidence": 0.76,
+    "route_reasons": [
+     "intent or domain keyword"
+    ],
+    "options_detected": [
+     "A"
+    ],
+    "required_evidence": [
+     "domain_ontology",
+     "event_facts",
+     "ranked_intents",
+     "negative_evidence"
+    ]
+   },
+   "options": {
+    "A": "entertain baby' 'B. show game' 'C. bar atmosphere' 'D. photo taken' 'E. stage light']"
+   },
+   "target_terms": [
+    "why",
+    "flashes",
+    "seen",
+    "here",
+    "there",
+    "throughout",
+    "whole",
+    "entertain",
+    "baby",
+    "game",
+    "bar",
+    "atmosphere",
+    "photo",
+    "taken",
+    "stage",
+    "light"
+   ]
+  },
+  "temporal_scope": {
+   "type": "scene_specific",
+   "time_range_sec": [
+    0.0,
+    45.279
+   ],
+   "confidence": 0.55,
+   "source": "scene_keyword_no_semantic_locator",
+   "instructions": [
+    "Locate the stage scene before using appearance evidence.",
+    "Evidence from other scenes should be treated as scope_match=false."
+   ],
+   "target_scene": "stage"
+  },
+  "hard_evidence": {
+   "scoped_motion": [],
+   "scoped_ocr": [],
+   "scoped_objects": [],
+   "transcript_scope": [
+    {
+     "anchor_link": "video_transcript_anchor_seg_0001",
+     "time_range_sec": [
+      0.0,
+      26.39
+     ],
+     "text": "I'm so into it for you guys.",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    }
+   ]
+  },
+  "evidence_quality": {
+   "missing": [],
+   "conflicts": [],
+   "needs_reextract": false
+  },
+  "constraints_for_llm": [
+   "Evidence extractor must not output candidate_answer, preliminary_answer, best_option, or final answer.",
+   "Every observation must be timestamped and grounded to an anchor_link when available.",
+   "Final verification must evaluate each option independently as supported, contradicted, or unknown.",
+   "Use task_family=domain_intention resolver semantics before generic evidence if confidence is medium/high.",
+   "Do not use evidence outside temporal_scope for the answer unless all scoped evidence is missing.",
+   "For intent questions, rank domain-specific intent hypotheses and include negative evidence."
+  ]
+ },
+ "question_time_windows": [],
+ "priority_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    45.279
+   ],
+   "source": "temporal_scope_scene_specific"
+  }
+ ],
+ "evidence_units": [
+  {
+   "id": "E_scene_0001",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    0.0,
+    15.093
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0002",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    15.093,
+    30.186
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0003",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    30.186,
+    45.279
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0001",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    0.0,
+    45.279
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.7,
+   "source": "temporal_scope_scene_specific",
+   "scope_match": true
+  }
+ ],
+ "scoring_policy": {
+  "query_relevance": "question type and keyword overlap",
+  "temporal_importance": "scene boundary, motion peak, start/current/count windows, ASR hit windows",
+  "motion_saliency": "OpenCV frame-difference bbox intensity",
+  "ocr_confidence": "Tesseract text confidence and readable crop",
+  "diversity": "prefer different time windows and evidence types before repeating nearby evidence"
+ },
+ "warnings": [
+  "PySceneDetect found no scene cuts; used timeline fallback.",
+  "YOLO found no relevant object detections."
+ ]
+}

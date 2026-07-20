@@ -1,0 +1,849 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/vmme/s1/media/video/6NVr0cNiHPM.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/vmme/s1/anchors/video/6NVr0cNiHPM_248-2/subtitle/6NVr0cNiHPM.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0040",
+   "anchor_link": "video_transcript_anchor_seg_0040",
+   "sequence_index": 40,
+   "time_range_sec": [
+    106.74,
+    111.36
+   ],
+   "text": "when it's time to take it all off shake",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0041",
+   "anchor_link": "video_transcript_anchor_seg_0041",
+   "sequence_index": 41,
+   "time_range_sec": [
+    109.38,
+    113.939
+   ],
+   "text": "to activate bifacil eye makeup remover",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "makeup",
+    "eye"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0042",
+   "anchor_link": "video_transcript_anchor_seg_0042",
+   "sequence_index": 42,
+   "time_range_sec": [
+    111.36,
+    116.399
+   ],
+   "text": "pour onto a cotton pad until fully",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    12.84,
+    17.16
+   ],
+   "text": "skin apply a dropper full of advanced",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    15.24,
+    19.8
+   ],
+   "text": "genifique face serum to the palm of your",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "face",
+    "serum"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    17.16,
+    21.66
+   ],
+   "text": "hands massage and press into skin with",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    24.24,
+    28.32
+   ],
+   "text": "moisturize with renergie lift",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    26.1,
+    32.479
+   ],
+   "text": "multi-action Ultra face cream for a",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "face",
+    "cream"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    28.32,
+    32.479
+   ],
+   "text": "tightening Lifting and Firming effect",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    33.44,
+    37.92
+   ],
+   "text": "apply Advanced genifique Eye cream by",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "eye",
+    "cream"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    35.94,
+    40.02
+   ],
+   "text": "dotting under eye using your ring finger",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "eye"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0043",
+   "anchor_link": "video_transcript_anchor_seg_0043",
+   "sequence_index": 43,
+   "time_range_sec": [
+    113.939,
+    118.82
+   ],
+   "text": "saturated and remove even the most",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    1.01,
+    10.2
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    7.28,
+    12.84
+   ],
+   "text": "pour toner onto a cotton pad and apply",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    10.2,
+    15.24
+   ],
+   "text": "all over for smooth hydrated and glowy",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    19.8,
+    24.24
+   ],
+   "text": "fingertips for a boost of Radiance",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    21.66,
+    26.1
+   ],
+   "text": "hydration and anti-aging benefits",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    37.92,
+    42.96
+   ],
+   "text": "or finger with the lightest touch to",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    40.02,
+    45.3
+   ],
+   "text": "instantly smooth fine lines and wrinkles",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    42.96,
+    47.579
+   ],
+   "text": "pop blushing Tresor shade on cheeks up",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    45.3,
+    50.52
+   ],
+   "text": "to temples and Center Bridge of nose",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    47.579,
+    52.8
+   ],
+   "text": "with full face brush number five for a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    50.52,
+    54.96
+   ],
+   "text": "touch of highlight sweep rose gold shade",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    52.8,
+    56.94
+   ],
+   "text": "to cheekbones using Contour brush number",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    54.96,
+    59.94
+   ],
+   "text": "seven or fingertips",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    56.94,
+    61.8
+   ],
+   "text": "to Define crease applied shade ladies",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    59.94,
+    63.18
+   ],
+   "text": "night with all over a shadow brush",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    61.8,
+    67.26
+   ],
+   "text": "number 10.",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    63.18,
+    69.299
+   ],
+   "text": "apply dressy Brown shade to lids",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    67.26,
+    72.42
+   ],
+   "text": "apply dressy beige shade to Inner Eye",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    69.299,
+    74.7
+   ],
+   "text": "Corners to brighten eye look",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    72.42,
+    77.76
+   ],
+   "text": "line and Define upper lash line with the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    74.7,
+    79.979
+   ],
+   "text": "shade brune adore",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    77.76,
+    82.439
+   ],
+   "text": "to complete the sultry eye look apply",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    79.979,
+    84.92
+   ],
+   "text": "lashi doll mascara for lifted lengthened",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    82.439,
+    84.92
+   ],
+   "text": "lashes",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0033",
+   "anchor_link": "video_transcript_anchor_seg_0033",
+   "sequence_index": 33,
+   "time_range_sec": [
+    86.64,
+    91.38
+   ],
+   "text": "to balance out the smokey eye apply a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    89.1,
+    95.42
+   ],
+   "text": "neutral lip like lapsulu gloss and",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    91.38,
+    95.42
+   ],
+   "text": "Atelier Parisian 213.",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    96.619,
+    101.46
+   ],
+   "text": "finish with the Via Bell fragrance to",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    99.299,
+    104.35
+   ],
+   "text": "experience joyous femininity through",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    101.46,
+    106.74
+   ],
+   "text": "this energizing perfume",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0039",
+   "anchor_link": "video_transcript_anchor_seg_0039",
+   "sequence_index": 39,
+   "time_range_sec": [
+    104.35,
+    109.38
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0044",
+   "anchor_link": "video_transcript_anchor_seg_0044",
+   "sequence_index": 44,
+   "time_range_sec": [
+    116.399,
+    121.32
+   ],
+   "text": "stubborn makeup repeat as needed",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0045",
+   "anchor_link": "video_transcript_anchor_seg_0045",
+   "sequence_index": 45,
+   "time_range_sec": [
+    118.82,
+    123.24
+   ],
+   "text": "lancome's Beauty Box is loaded with",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0046",
+   "anchor_link": "video_transcript_anchor_seg_0046",
+   "sequence_index": 46,
+   "time_range_sec": [
+    121.32,
+    125.579
+   ],
+   "text": "eight full-size products all wrapped up",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0047",
+   "anchor_link": "video_transcript_anchor_seg_0047",
+   "sequence_index": 47,
+   "time_range_sec": [
+    123.24,
+    129.32
+   ],
+   "text": "in a sustainable golden case made of a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0048",
+   "anchor_link": "video_transcript_anchor_seg_0048",
+   "sequence_index": 48,
+   "time_range_sec": [
+    125.579,
+    129.32
+   ],
+   "text": "hundred percent recycled materials",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 48,
+ "query_retrieval": true,
+ "query_terms": [
+  "order",
+  "skincare",
+  "products",
+  "used",
+  "before",
+  "makeup",
+  "face",
+  "serum",
+  "toner",
+  "eye",
+  "cream"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0040",
+   "anchor_link": "video_transcript_anchor_seg_0040",
+   "sequence_index": 40,
+   "time_range_sec": [
+    106.74,
+    111.36
+   ],
+   "text": "when it's time to take it all off shake",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0041",
+   "anchor_link": "video_transcript_anchor_seg_0041",
+   "sequence_index": 41,
+   "time_range_sec": [
+    109.38,
+    113.939
+   ],
+   "text": "to activate bifacil eye makeup remover",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "makeup",
+    "eye"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0042",
+   "anchor_link": "video_transcript_anchor_seg_0042",
+   "sequence_index": 42,
+   "time_range_sec": [
+    111.36,
+    116.399
+   ],
+   "text": "pour onto a cotton pad until fully",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    12.84,
+    17.16
+   ],
+   "text": "skin apply a dropper full of advanced",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    15.24,
+    19.8
+   ],
+   "text": "genifique face serum to the palm of your",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "face",
+    "serum"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    17.16,
+    21.66
+   ],
+   "text": "hands massage and press into skin with",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    24.24,
+    28.32
+   ],
+   "text": "moisturize with renergie lift",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    26.1,
+    32.479
+   ],
+   "text": "multi-action Ultra face cream for a",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "face",
+    "cream"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    28.32,
+    32.479
+   ],
+   "text": "tightening Lifting and Firming effect",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    33.44,
+    37.92
+   ],
+   "text": "apply Advanced genifique Eye cream by",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "eye",
+    "cream"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    35.94,
+    40.02
+   ],
+   "text": "dotting under eye using your ring finger",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "eye"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0043",
+   "anchor_link": "video_transcript_anchor_seg_0043",
+   "sequence_index": 43,
+   "time_range_sec": [
+    113.939,
+    118.82
+   ],
+   "text": "saturated and remove even the most",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    4.84,
+    48.02
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0006",
+    "video_transcript_anchor_seg_0009",
+    "video_transcript_anchor_seg_0010",
+    "video_transcript_anchor_seg_0011",
+    "video_transcript_anchor_seg_0012",
+    "video_transcript_anchor_seg_0013"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    98.74,
+    126.82
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0040",
+    "video_transcript_anchor_seg_0041",
+    "video_transcript_anchor_seg_0042",
+    "video_transcript_anchor_seg_0043"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "[Music] pour toner onto a cotton pad and apply all over for smooth hydrated and glowy skin apply a dropper full of advanced genifique face serum to the palm of your hands massage and press into skin with fingertips for a boost of Radiance hydration and anti-aging benefits moisturize with renergie lift multi-action Ultra face cream for a tightening Lifting and Firming effect apply Advanced genifique Eye cream by dotting under eye using your ring finger or finger with the lightest touch to instantly smooth fine lines and wrinkles pop blushing Tresor shade on cheeks up to temples and Center Bridge of nose with full face brush number five for a touch of highlight sweep rose gold shade to cheekbones using Contour brush number seven or fingertips to Define crease applied shade ladies night with all over a shadow brush number 10. apply dressy Brown shade to lids apply dressy beige shade to Inner Eye Corners to brighten eye look line and Define upper lash line with the shade brune adore to complete the sultry eye look apply lashi doll mascara for lifted lengthened lashes to balance out the smokey eye apply a neutral lip like lapsulu gloss and Atelier Parisian 213. finish with the Via Bell ",
+ "warnings": []
+}

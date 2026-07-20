@@ -1,0 +1,14 @@
+========================================================================
+ABLATION CONFIG I_no_task_routing  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[vmme] config: completed 80/80 (100% completion), acc 78.8% (63/80), median_token_save 82.5%
+      paired vs A on 80 shared keys: config 78.8% (63) vs A 81.2% (65) -> dAcc -2.5 pts
+      token-save median: config 82.5% vs A 82.0% -> d +0.5 pts
+
+[nextqa] config: completed 50/50 (100% completion), acc 74.0% (37/50), median_token_save 46.6%
+      paired vs A on 50 shared keys: config 74.0% (37) vs A 72.0% (36) -> dAcc +2.0 pts
+      token-save median: config 46.6% vs A 46.6% -> d +0.0 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=130 shared): config 76.9% vs A 77.7% -> dAcc -0.8 pts

@@ -32,3 +32,16 @@ backups/
 *.avi
 *.wav
 *.mp3
+
+# credentials - never commit
+.env
+*.env
+!.env.example
+
+# editor/rollback copies of pipeline scripts
+*.bak
+*.pre_cropgate
+
+# curated, committable copy of experiment outputs (see results_public/README.md)
+!results_public/
+!results_public/**

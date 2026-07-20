@@ -1,0 +1,607 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/nextqa/s1/media/video/4177758139.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.3,
+    6.54
+   ],
+   "text": "Okay Charlie what does the Bible say about whining or grumbling and complaining in Philippians?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    13.98,
+    15.42
+   ],
+   "text": "Good boy.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "boy"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    15.42,
+    21.9
+   ],
+   "text": "And Carmel what does the Bible say about teasing or picking fights and causing trouble?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    62.7,
+    64.7
+   ],
+   "text": "Better, patient may then worry.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    64.7,
+    69.7
+   ],
+   "text": "A man who controls himself but then a man who takes a sissy.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "take"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    69.7,
+    70.7
+   ],
+   "text": "Well done, good girl.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    74.7,
+    75.7
+   ],
+   "text": "The Lord?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    75.7,
+    80.7
+   ],
+   "text": "The test mind that spruity resides in truth for men.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "side"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    80.7,
+    81.7
+   ],
+   "text": "Well done.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    21.9,
+    22.9
+   ],
+   "text": "Fools?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    22.9,
+    28.5
+   ],
+   "text": "Fools let's bring him straight in, we'll now from the beach.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    28.5,
+    29.5
+   ],
+   "text": "Well done.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    30.14,
+    35.1
+   ],
+   "text": "And Charlie what does the Bible say about snatching toys or stealing things from other people?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4509,
+   "no_speech_prob": 0.0632
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    35.1,
+    36.1
+   ],
+   "text": "Um...",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4509,
+   "no_speech_prob": 0.0632
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    36.1,
+    37.1
+   ],
+   "text": "He who?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4509,
+   "no_speech_prob": 0.0632
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    37.1,
+    39.1
+   ],
+   "text": "He must deal.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4509,
+   "no_speech_prob": 0.0632
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    39.1,
+    40.1
+   ],
+   "text": "He who has been?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4509,
+   "no_speech_prob": 0.0632
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    40.1,
+    46.1
+   ],
+   "text": "Still no longer but must have something in...",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4509,
+   "no_speech_prob": 0.0632
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    46.1,
+    51.7
+   ],
+   "text": "Do something with his own hands, at hand we have something in order to need.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4509,
+   "no_speech_prob": 0.0632
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    51.7,
+    53.7
+   ],
+   "text": "To share well done.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4509,
+   "no_speech_prob": 0.0632
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    53.7,
+    61.7
+   ],
+   "text": "And Carmel what does the Bible say about getting angry and then hitting or throwing things or kicking or biting?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    61.7,
+    62.7
+   ],
+   "text": "Better?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    70.7,
+    73.7
+   ],
+   "text": "And Charlie what does the Bible say about lying?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    73.7,
+    74.7
+   ],
+   "text": "The Lord?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    81.7,
+    89.7
+   ],
+   "text": "Carmel what does the Bible say about people that roll their eyes at their parents or their rebellious and defiant?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.1087,
+   "no_speech_prob": 0.2764
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    89.7,
+    90.7
+   ],
+   "text": "The...",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.1087,
+   "no_speech_prob": 0.2764
+  }
+ ],
+ "all_segment_count": 26,
+ "query_retrieval": true,
+ "query_terms": [
+  "boy",
+  "after",
+  "finished",
+  "speaking",
+  "first",
+  "time",
+  "take",
+  "food",
+  "cover",
+  "mouth",
+  "stand",
+  "stare",
+  "camera",
+  "move",
+  "side"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.3,
+    6.54
+   ],
+   "text": "Okay Charlie what does the Bible say about whining or grumbling and complaining in Philippians?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    13.98,
+    15.42
+   ],
+   "text": "Good boy.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "boy"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    15.42,
+    21.9
+   ],
+   "text": "And Carmel what does the Bible say about teasing or picking fights and causing trouble?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6096,
+   "no_speech_prob": 0.0353,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    62.7,
+    64.7
+   ],
+   "text": "Better, patient may then worry.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    64.7,
+    69.7
+   ],
+   "text": "A man who controls himself but then a man who takes a sissy.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "take"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    69.7,
+    70.7
+   ],
+   "text": "Well done, good girl.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    74.7,
+    75.7
+   ],
+   "text": "The Lord?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    75.7,
+    80.7
+   ],
+   "text": "The test mind that spruity resides in truth for men.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "side"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    80.7,
+    81.7
+   ],
+   "text": "Well done.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3382,
+   "no_speech_prob": 0.1941,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    29.9
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0003"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    54.7,
+    89.7
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0017",
+    "video_transcript_anchor_seg_0018",
+    "video_transcript_anchor_seg_0019",
+    "video_transcript_anchor_seg_0022",
+    "video_transcript_anchor_seg_0023",
+    "video_transcript_anchor_seg_0024"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "Okay Charlie what does the Bible say about whining or grumbling and complaining in Philippians? Good boy. And Carmel what does the Bible say about teasing or picking fights and causing trouble? Fools? Fools let's bring him straight in, we'll now from the beach. Well done. And Charlie what does the Bible say about snatching toys or stealing things from other people? Um... He who? He must deal. He who has been? Still no longer but must have something in... Do something with his own hands, at hand we have something in order to need. To share well done. And Carmel what does the Bible say about getting angry and then hitting or throwing things or kicking or biting? Better? Better, patient may then worry. A man who controls himself but then a man who takes a sissy. Well done, good girl. And Charlie what does the Bible say about lying? The Lord? The Lord? The test mind that spruity resides in truth for men. Well done. Carmel what does the Bible say about people that roll their eyes at their parents or their rebellious and defiant? The...",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

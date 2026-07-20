@@ -1,0 +1,180 @@
+1
+00:00:00,080 --> 00:00:05,120
+<font color="white" size=".72c">in this video I'm going to show you a</font>
+
+2
+00:00:01,640 --> 00:00:05,120
+<font color="white" size=".72c">better way to clean your max</font>
+
+3
+00:00:08,480 --> 00:00:13,080
+<font color="white" size=".72c">keyboard how's it going folks this is</font>
+
+4
+00:00:10,719 --> 00:00:15,280
+<font color="white" size=".72c">Jeff Benjamin with 9o5 Mac we've all</font>
+
+5
+00:00:13,080 --> 00:00:17,960
+<font color="white" size=".72c">been there before we're eating at our</font>
+
+6
+00:00:15,280 --> 00:00:20,240
+<font color="white" size=".72c">desk and we have just stuff all over</font>
+
+7
+00:00:17,960 --> 00:00:22,199
+<font color="white" size=".72c">crumbs whatever the case may be all over</font>
+
+8
+00:00:20,240 --> 00:00:24,519
+<font color="white" size=".72c">your keyboard you want to clean it off</font>
+
+9
+00:00:22,199 --> 00:00:26,039
+<font color="white" size=".72c">or maybe even your cat decides to take a</font>
+
+10
+00:00:24,519 --> 00:00:28,039
+<font color="white" size=".72c">nap right on your keyboard and they get</font>
+
+11
+00:00:26,039 --> 00:00:30,080
+<font color="white" size=".72c">paw prints all over the keyboard's keys</font>
+
+12
+00:00:28,039 --> 00:00:31,679
+<font color="white" size=".72c">now of course we know how to clean</font>
+
+13
+00:00:30,080 --> 00:00:33,480
+<font color="white" size=".72c">keyboard it's not really that difficult</font>
+
+14
+00:00:31,679 --> 00:00:36,360
+<font color="white" size=".72c">just take a cloth and wipe it off right</font>
+
+15
+00:00:33,480 --> 00:00:38,200
+<font color="white" size=".72c">but when you do that with your Mac own</font>
+
+16
+00:00:36,360 --> 00:00:40,719
+<font color="white" size=".72c">then you start to hit Keys you maybe</font>
+
+17
+00:00:38,200 --> 00:00:42,239
+<font color="white" size=".72c">input text that's erroneous you just</font>
+
+18
+00:00:40,719 --> 00:00:44,520
+<font color="white" size=".72c">maybe even quit a program that you're</font>
+
+19
+00:00:42,239 --> 00:00:46,920
+<font color="white" size=".72c">working on at the moment it's not a good</font>
+
+20
+00:00:44,520 --> 00:00:49,360
+<font color="white" size=".72c">thing right A Better Way is to use an</font>
+
+21
+00:00:46,920 --> 00:00:50,960
+<font color="white" size=".72c">app called keyboard cleaner and this is</font>
+
+22
+00:00:49,360 --> 00:00:52,480
+<font color="white" size=".72c">a free app it was actually submitted to</font>
+
+23
+00:00:50,960 --> 00:00:54,680
+<font color="white" size=".72c">the Mac App Store a long time ago but</font>
+
+24
+00:00:52,480 --> 00:00:56,879
+<font color="white" size=".72c">Apple never approved it for whatever</font>
+
+25
+00:00:54,680 --> 00:00:58,920
+<font color="white" size=".72c">reason but this app basically allows you</font>
+
+26
+00:00:56,879 --> 00:01:00,960
+<font color="white" size=".72c">to suspend the activity on your Mac it</font>
+
+27
+00:00:58,920 --> 00:01:02,840
+<font color="white" size=".72c">goes to a black screen so that you can't</font>
+
+28
+00:01:00,960 --> 00:01:04,280
+<font color="white" size=".72c">input text while you're cleaning your</font>
+
+29
+00:01:02,840 --> 00:01:05,799
+<font color="white" size=".72c">keyboard so I'm just going to launch the</font>
+
+30
+00:01:04,280 --> 00:01:07,759
+<font color="white" size=".72c">app just like that and now keyboard</font>
+
+31
+00:01:05,799 --> 00:01:10,080
+<font color="white" size=".72c">cleaner is launched it's a black screen</font>
+
+32
+00:01:07,759 --> 00:01:12,280
+<font color="white" size=".72c">and now I can clean my keyboard at will</font>
+
+33
+00:01:10,080 --> 00:01:14,119
+<font color="white" size=".72c">without worrying about inputting text or</font>
+
+34
+00:01:12,280 --> 00:01:16,080
+<font color="white" size=".72c">quitting an app or anything like that</font>
+
+35
+00:01:14,119 --> 00:01:17,799
+<font color="white" size=".72c">just messing up something I'm working on</font>
+
+36
+00:01:16,080 --> 00:01:19,840
+<font color="white" size=".72c">I don't have to go and shut down my Mac</font>
+
+37
+00:01:17,799 --> 00:01:21,600
+<font color="white" size=".72c">completely once I'm finished all I need</font>
+
+38
+00:01:19,840 --> 00:01:24,119
+<font color="white" size=".72c">to do is hold the command key and press</font>
+
+39
+00:01:21,600 --> 00:01:26,119
+<font color="white" size=".72c">the Q button to quit the application and</font>
+
+40
+00:01:24,119 --> 00:01:28,439
+<font color="white" size=".72c">now I'm back to my Mac like normal with</font>
+
+41
+00:01:26,119 --> 00:01:29,400
+<font color="white" size=".72c">a clean keyboard so ladies and gentlemen</font>
+
+42
+00:01:28,439 --> 00:01:30,840
+<font color="white" size=".72c">let me know what you think about</font>
+
+43
+00:01:29,400 --> 00:01:36,158
+<font color="white" size=".72c">keyboard cleaner Down Below in the</font>
+
+44
+00:01:30,840 --> 00:01:36,158
+<font color="white" size=".72c">comment section this is Jeff with 95</font>
+
+45
+00:01:37,640 --> 00:01:40,640
+<font color="white" size=".72c">Mac</font>
+

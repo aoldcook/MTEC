@@ -1,0 +1,6638 @@
+1
+00:00:06,439 --> 00:00:09,976
+<font color="white" size=".72c">
+♪ ♪</font>
+
+2
+00:00:10,009 --> 00:00:11,677
+<font color="white" size=".72c">
+NARRATOR:
+
+We live in a world</font>
+
+3
+00:00:11,710 --> 00:00:14,714
+<font color="white" size=".72c">
+where objects have permanence.</font>
+
+4
+00:00:14,747 --> 00:00:18,684
+<font color="white" size=".72c">
+And we see cause, then effect.</font>
+
+5
+00:00:18,717 --> 00:00:21,754
+<font color="white" size=".72c">
+But a startling phenomenon
+
+is revealing</font>
+
+6
+00:00:21,787 --> 00:00:23,156
+<font color="white" size=".72c">
+that this is not
+
+how the universe works</font>
+
+7
+00:00:23,189 --> 00:00:26,959
+<font color="white" size=".72c">
+at the smallest scales of atoms
+
+and tiny particles.</font>
+
+8
+00:00:26,992 --> 00:00:28,928
+<font color="white" size=".72c">
+♪ ♪</font>
+
+9
+00:00:28,961 --> 00:00:33,099
+<font color="white" size=".72c">
+Albert Einstein argued
+
+it couldn't possibly be real.</font>
+
+10
+00:00:33,132 --> 00:00:35,768
+<font color="white" size=".72c">
+DAVID KAISER:
+
+Einstein was like
+
+a jack-in-the-box;</font>
+
+11
+00:00:35,801 --> 00:00:38,304
+<font color="white" size=".72c">
+every day, he'd pop up
+
+with a new challenge.</font>
+
+12
+00:00:38,337 --> 00:00:41,340
+<font color="white" size=".72c">
+NARRATOR:
+
+But after a century of disputes
+
+and discoveries...</font>
+
+13
+00:00:41,373 --> 00:00:43,509
+<font color="white" size=".72c">
+ANTON ZEILINGER:
+
+The experiment is
+
+just beautiful.</font>
+
+14
+00:00:43,542 --> 00:00:48,448
+<font color="white" size=".72c">
+NARRATOR:
+
+...we're using it to create
+
+revolutionary, new technologies.</font>
+
+15
+00:00:48,481 --> 00:00:51,217
+<font color="white" size=".72c">
+What we have here is
+
+a quantum playground.</font>
+
+16
+00:00:51,250 --> 00:00:53,820
+<font color="white" size=".72c">
+JIAN-WEI PAN:
+
+We want to push
+
+these technologies</font>
+
+17
+00:00:53,853 --> 00:00:55,254
+<font color="white" size=".72c">
+as far as possible.</font>
+
+18
+00:00:55,287 --> 00:00:58,458
+<font color="white" size=".72c">
+NARRATOR:
+
+It's perhaps the strangest
+
+concept in physics.</font>
+
+19
+00:00:58,491 --> 00:01:01,394
+<font color="white" size=".72c">
+SHOHINI GHOSE:
+
+We're left with conclusions
+
+that make no sense whatsoever.</font>
+
+20
+00:01:01,427 --> 00:01:05,331
+<font color="white" size=".72c">
+NARRATOR:
+
+Yet it could be what forms
+
+the very fabric of our cosmos.</font>
+
+21
+00:01:05,364 --> 00:01:07,800
+<font color="white" size=".72c">
+In the end, we just have
+
+this quantum mechanical world.</font>
+
+22
+00:01:07,833 --> 00:01:09,102
+<font color="white" size=".72c">
+There is no space anymore.</font>
+
+23
+00:01:09,135 --> 00:01:11,537
+<font color="white" size=".72c">
+GHOSE:
+
+It's like being
+
+in "Alice in Wonderland."</font>
+
+24
+00:01:11,570 --> 00:01:13,206
+<font color="white" size=".72c">
+Everything is possible.</font>
+
+25
+00:01:13,239 --> 00:01:16,309
+<font color="white" size=".72c">
+NARRATOR:
+
+Could it be real?</font>
+
+26
+00:01:16,342 --> 00:01:19,645
+<font color="white" size=".72c">
+It's
+
+"Einstein's Quantum Riddle,"</font>
+
+27
+00:01:19,678 --> 00:01:22,482
+<font color="white" size=".72c">
+right now, on "NOVA."</font>
+
+28
+00:01:22,515 --> 00:01:27,020
+<font color="white" size=".72c">
+♪ ♪</font>
+
+29
+00:01:34,693 --> 00:01:38,664
+<font color="white" size=".72c">
+♪ ♪</font>
+
+30
+00:01:40,598 --> 00:01:44,670
+<font color="white" size=".72c">
+NARRATOR:
+
+Is reality an illusion?</font>
+
+31
+00:01:44,703 --> 00:01:48,107
+<font color="white" size=".72c">
+Could something here
+
+mysteriously affect</font>
+
+32
+00:01:48,140 --> 00:01:50,843
+<font color="white" size=".72c">
+something there?</font>
+
+33
+00:01:50,876 --> 00:01:53,613
+<font color="white" size=".72c">
+A century of discoveries
+
+in physics</font>
+
+34
+00:01:53,646 --> 00:01:56,616
+<font color="white" size=".72c">
+reveals a strange,
+
+counterintuitive micro-world</font>
+
+35
+00:01:56,649 --> 00:01:58,884
+<font color="white" size=".72c">
+of atoms and tiny particles</font>
+
+36
+00:01:58,918 --> 00:02:01,621
+<font color="white" size=".72c">
+that challenges
+
+our intuitive understanding</font>
+
+37
+00:02:01,654 --> 00:02:04,457
+<font color="white" size=".72c">
+of the world we see around us.</font>
+
+38
+00:02:05,991 --> 00:02:10,463
+<font color="white" size=".72c">
+It's known as quantum mechanics.</font>
+
+39
+00:02:10,496 --> 00:02:12,064
+<font color="white" size=".72c">
+This strange theory has
+
+enabled us to develop</font>
+
+40
+00:02:12,097 --> 00:02:16,035
+<font color="white" size=".72c">
+the remarkable technologies
+
+of our digital age.</font>
+
+41
+00:02:16,068 --> 00:02:21,007
+<font color="white" size=".72c">
+But it makes
+
+a very troubling prediction--</font>
+
+42
+00:02:21,040 --> 00:02:23,176
+<font color="white" size=".72c">
+called quantum entanglement.</font>
+
+43
+00:02:23,209 --> 00:02:27,046
+<font color="white" size=".72c">
+♪ ♪</font>
+
+44
+00:02:27,079 --> 00:02:28,814
+<font color="white" size=".72c">
+GHOSE:
+
+Entanglement is</font>
+
+45
+00:02:28,847 --> 00:02:31,517
+<font color="white" size=".72c">
+this very powerful
+
+but strange connection</font>
+
+46
+00:02:31,550 --> 00:02:34,720
+<font color="white" size=".72c">
+that exists
+
+between pairs of particles.</font>
+
+47
+00:02:34,753 --> 00:02:36,689
+<font color="white" size=".72c">
+ROBBERT DIJKGRAAF:
+
+Even if they're very far apart,</font>
+
+48
+00:02:36,722 --> 00:02:38,858
+<font color="white" size=".72c">
+in a way,
+
+they're always coordinated.</font>
+
+49
+00:02:38,891 --> 00:02:40,993
+<font color="white" size=".72c">
+♪ ♪</font>
+
+50
+00:02:41,026 --> 00:02:44,297
+<font color="white" size=".72c">
+NARRATOR:
+
+Nature's fundamental building
+
+blocks could be connected</font>
+
+51
+00:02:44,329 --> 00:02:46,966
+<font color="white" size=".72c">
+and influence each other
+
+instantaneously,</font>
+
+52
+00:02:46,999 --> 00:02:50,803
+<font color="white" size=".72c">
+as if the space between them
+
+doesn't exist.</font>
+
+53
+00:02:50,836 --> 00:02:54,173
+<font color="white" size=".72c">
+As if two objects can mirror
+
+each other</font>
+
+54
+00:02:54,206 --> 00:02:56,242
+<font color="white" size=".72c">
+without any apparent connection.</font>
+
+55
+00:02:56,275 --> 00:02:57,710
+<font color="white" size=".72c">
+♪ ♪</font>
+
+56
+00:02:57,743 --> 00:03:01,814
+<font color="white" size=".72c">
+Einstein called it
+
+"spooky action at a distance."</font>
+
+57
+00:03:01,847 --> 00:03:03,916
+<font color="white" size=".72c">
+He rejected the idea</font>
+
+58
+00:03:03,949 --> 00:03:06,285
+<font color="white" size=".72c">
+and tried to prove
+
+it couldn't be real.</font>
+
+59
+00:03:06,318 --> 00:03:07,653
+<font color="white" size=".72c">
+GHOSE:
+
+You could have situations</font>
+
+60
+00:03:07,686 --> 00:03:10,723
+<font color="white" size=".72c">
+where the cause and the effect
+
+happen at the same time.</font>
+
+61
+00:03:11,991 --> 00:03:15,027
+<font color="white" size=".72c">
+NARRATOR:
+
+But if entanglement isn't real,</font>
+
+62
+00:03:15,060 --> 00:03:17,463
+<font color="white" size=".72c">
+cutting-edge technologies
+
+could be in jeopardy.</font>
+
+63
+00:03:17,496 --> 00:03:20,032
+<font color="white" size=".72c">
+KAISER:
+
+Quantum computers,
+
+quantum encryption--</font>
+
+64
+00:03:20,065 --> 00:03:23,269
+<font color="white" size=".72c">
+they depend on entanglement
+
+being a fact in the world.</font>
+
+65
+00:03:23,302 --> 00:03:24,770
+<font color="white" size=".72c">
+♪ ♪</font>
+
+66
+00:03:24,803 --> 00:03:26,038
+<font color="white" size=".72c">
+NARRATOR:
+
+Underlying it all</font>
+
+67
+00:03:26,071 --> 00:03:28,975
+<font color="white" size=".72c">
+is a profound question:</font>
+
+68
+00:03:29,008 --> 00:03:34,647
+<font color="white" size=".72c">
+do we live in Einstein's
+
+universe of common-sense laws</font>
+
+69
+00:03:34,680 --> 00:03:36,449
+<font color="white" size=".72c">
+or a bizarre quantum reality</font>
+
+70
+00:03:36,482 --> 00:03:40,418
+<font color="white" size=".72c">
+that allows spooky connections
+
+across space and time?</font>
+
+71
+00:03:40,452 --> 00:03:43,389
+<font color="white" size=".72c">
+♪ ♪</font>
+
+72
+00:03:52,398 --> 00:03:56,302
+<font color="white" size=".72c">
+♪ ♪</font>
+
+73
+00:04:01,240 --> 00:04:04,243
+<font color="white" size=".72c">
+300 miles off the coast
+
+of West Africa,</font>
+
+74
+00:04:04,276 --> 00:04:07,013
+<font color="white" size=".72c">
+on one of the Canary Islands,</font>
+
+75
+00:04:07,046 --> 00:04:10,483
+<font color="white" size=".72c">
+a team of physicists is setting
+
+up a remarkable experiment</font>
+
+76
+00:04:10,516 --> 00:04:14,687
+<font color="white" size=".72c">
+that will use almost the
+
+entire breadth of the universe</font>
+
+77
+00:04:14,720 --> 00:04:17,023
+<font color="white" size=".72c">
+to settle the question,</font>
+
+78
+00:04:17,055 --> 00:04:20,125
+<font color="white" size=".72c">
+"Is the seemingly impossible
+
+phenomenon</font>
+
+79
+00:04:20,159 --> 00:04:21,661
+<font color="white" size=".72c">
+"of quantum entanglement</font>
+
+80
+00:04:21,694 --> 00:04:23,229
+<font color="white" size=".72c">
+"an illusion,</font>
+
+81
+00:04:23,262 --> 00:04:26,132
+<font color="white" size=".72c">
+or is it actually real?"</font>
+
+82
+00:04:26,165 --> 00:04:30,303
+<font color="white" size=".72c">
+Leading the team
+
+is Anton Zeilinger.</font>
+
+83
+00:04:30,336 --> 00:04:36,475
+<font color="white" size=".72c">
+ZEILINGER:
+
+So we're now going up
+
+the mountain</font>
+
+84
+00:04:36,508 --> 00:04:39,245
+<font color="white" size=".72c">
+towards
+
+the Roque de los Muchachos.</font>
+
+85
+00:04:39,278 --> 00:04:42,382
+<font color="white" size=".72c">
+So everything looks perfect
+
+today.</font>
+
+86
+00:04:44,249 --> 00:04:45,851
+<font color="white" size=".72c">
+NARRATOR:
+
+It's a precarious undertaking.</font>
+
+87
+00:04:45,884 --> 00:04:48,154
+<font color="white" size=".72c">
+They've got a short window</font>
+
+88
+00:04:48,187 --> 00:04:51,724
+<font color="white" size=".72c">
+on two of Europe's
+
+largest telescopes.</font>
+
+89
+00:04:51,757 --> 00:04:56,095
+<font color="white" size=".72c">
+Each one will simultaneously
+
+focus on a different quasar--</font>
+
+90
+00:04:56,128 --> 00:04:57,363
+<font color="white" size=".72c">
+an extremely distant galaxy</font>
+
+91
+00:04:57,396 --> 00:05:02,234
+<font color="white" size=".72c">
+emitting huge amounts of light
+
+from its core.</font>
+
+92
+00:05:02,267 --> 00:05:03,602
+<font color="white" size=".72c">
+♪ ♪</font>
+
+93
+00:05:03,635 --> 00:05:07,907
+<font color="white" size=".72c">
+This light will be used
+
+to control precise equipment</font>
+
+94
+00:05:07,940 --> 00:05:09,442
+<font color="white" size=".72c">
+that must be perfectly aligned</font>
+
+95
+00:05:09,475 --> 00:05:13,146
+<font color="white" size=".72c">
+to make measurements
+
+on tiny subatomic particles.</font>
+
+96
+00:05:13,712 --> 00:05:16,315
+<font color="white" size=".72c">
+(speaking German):</font>
+
+97
+00:05:16,348 --> 00:05:17,450
+<font color="white" size=".72c">
+MAN (on radio):
+
+Okay.</font>
+
+98
+00:05:17,483 --> 00:05:19,518
+<font color="white" size=".72c">
+NARRATOR:
+
+And if that isn't tricky enough,</font>
+
+99
+00:05:19,551 --> 00:05:24,090
+<font color="white" size=".72c">
+the weather on the mountain
+
+is notoriously unpredictable.</font>
+
+100
+00:05:24,123 --> 00:05:26,158
+<font color="white" size=".72c">
+The team needs
+
+perfect conditions</font>
+
+101
+00:05:26,191 --> 00:05:27,827
+<font color="white" size=".72c">
+for the experiment to work.</font>
+
+102
+00:05:27,860 --> 00:05:30,429
+<font color="white" size=".72c">
+♪ ♪</font>
+
+103
+00:05:30,462 --> 00:05:33,099
+<font color="white" size=".72c">
+ZEILINGER:
+
+In the end
+
+it could be running smoothly</font>
+
+104
+00:05:33,132 --> 00:05:37,803
+<font color="white" size=".72c">
+or there need to be
+
+a couple of decisions made,</font>
+
+105
+00:05:37,836 --> 00:05:41,674
+<font color="white" size=".72c">
+you know, in an excited state
+
+in the last instant.</font>
+
+106
+00:05:41,707 --> 00:05:45,378
+<font color="white" size=".72c">
+♪ ♪</font>
+
+107
+00:05:45,411 --> 00:05:48,814
+<font color="white" size=".72c">
+NARRATOR:
+
+With the experiment
+
+finally set up,</font>
+
+108
+00:05:48,847 --> 00:05:54,286
+<font color="white" size=".72c">
+the team takes their positions.</font>
+
+109
+00:05:54,319 --> 00:05:56,189
+<font color="white" size=".72c">
+♪ ♪</font>
+
+110
+00:05:57,689 --> 00:06:00,493
+<font color="white" size=".72c">
+David Kaiser
+
+has worked on this experiment</font>
+
+111
+00:06:00,526 --> 00:06:01,460
+<font color="white" size=".72c">
+with his colleagues</font>
+
+112
+00:06:01,493 --> 00:06:04,597
+<font color="white" size=".72c">
+Jason Gallicchio
+
+and Andy Friedman</font>
+
+113
+00:06:04,630 --> 00:06:06,565
+<font color="white" size=".72c">
+for four years.</font>
+
+114
+00:06:06,598 --> 00:06:10,536
+<font color="white" size=".72c">
+Coordinating it all
+
+is Dominik Rauch.</font>
+
+115
+00:06:10,569 --> 00:06:13,172
+<font color="white" size=".72c">
+The experiment is
+
+his thesis project,</font>
+
+116
+00:06:13,205 --> 00:06:15,007
+<font color="white" size=".72c">
+and it's been years
+
+in the making.</font>
+
+117
+00:06:15,040 --> 00:06:18,411
+<font color="white" size=".72c">
+But as darkness falls,</font>
+
+118
+00:06:18,444 --> 00:06:22,515
+<font color="white" size=".72c">
+temperatures on the mountain
+
+begin to drop.</font>
+
+119
+00:06:22,548 --> 00:06:27,019
+<font color="white" size=".72c">
+MAN (speaking German, on radio):</font>
+
+120
+00:06:27,586 --> 00:06:30,022
+<font color="white" size=".72c">
+(speaking German)</font>
+
+121
+00:06:30,055 --> 00:06:32,057
+<font color="white" size=".72c">
+Okay, there's bad news.</font>
+
+122
+00:06:32,090 --> 00:06:35,094
+<font color="white" size=".72c">
+They have been told to leave
+
+the William Herschel</font>
+
+123
+00:06:35,127 --> 00:06:36,595
+<font color="white" size=".72c">
+because the road will be
+
+so dangerous,</font>
+
+124
+00:06:36,628 --> 00:06:38,798
+<font color="white" size=".72c">
+too dangerous,
+
+so they have to go down now.</font>
+
+125
+00:06:38,831 --> 00:06:39,999
+<font color="white" size=".72c">
+KAISER:
+
+Too icy?</font>
+
+126
+00:06:40,032 --> 00:06:41,267
+<font color="white" size=".72c">
+Yeah.</font>
+
+127
+00:06:40,032 --> 00:06:41,267
+<font color="white" size=".72c">
+That's okay.</font>
+
+128
+00:06:41,300 --> 00:06:43,436
+<font color="white" size=".72c">
+♪ ♪</font>
+
+129
+00:06:46,238 --> 00:06:49,709
+<font color="white" size=".72c">
+♪ ♪</font>
+
+130
+00:06:56,915 --> 00:07:03,355
+<font color="white" size=".72c">
+NARRATOR:
+
+The next day, the team prepares
+
+for another attempt.</font>
+
+131
+00:07:03,388 --> 00:07:06,425
+<font color="white" size=".72c">
+♪ ♪</font>
+
+132
+00:07:06,458 --> 00:07:11,664
+<font color="white" size=".72c">
+They verify the equipment hasn't
+
+been affected by the weather.</font>
+
+133
+00:07:13,398 --> 00:07:19,071
+<font color="white" size=".72c">
+But now, the air is thick
+
+with clouds.</font>
+
+134
+00:07:24,610 --> 00:07:27,179
+<font color="white" size=".72c">
+ZEILINGER:
+
+Here's the humidity
+
+at the various telescopes,</font>
+
+135
+00:07:27,212 --> 00:07:30,716
+<font color="white" size=".72c">
+and you see
+
+the humidity is 100%.</font>
+
+136
+00:07:30,749 --> 00:07:34,987
+<font color="white" size=".72c">
+So as long as this lasts,</font>
+
+137
+00:07:35,020 --> 00:07:36,989
+<font color="white" size=".72c">
+we can't do much.</font>
+
+138
+00:07:37,022 --> 00:07:40,593
+<font color="white" size=".72c">
+(wind whistling)</font>
+
+139
+00:07:40,626 --> 00:07:41,961
+<font color="white" size=".72c">
+(phone ringing)</font>
+
+140
+00:07:41,994 --> 00:07:46,032
+<font color="white" size=".72c">
+NARRATOR:
+
+The teams at both telescopes
+
+wait.</font>
+
+141
+00:07:48,367 --> 00:07:51,504
+<font color="white" size=".72c">
+But the clouds don't clear.</font>
+
+142
+00:07:51,537 --> 00:07:56,442
+<font color="white" size=".72c">
+All the preparation has come
+
+to nothing.</font>
+
+143
+00:07:56,475 --> 00:08:00,312
+<font color="white" size=".72c">
+Time on these huge telescopes
+
+is precious,</font>
+
+144
+00:08:00,345 --> 00:08:02,281
+<font color="white" size=".72c">
+and theirs has run out.</font>
+
+145
+00:08:02,314 --> 00:08:05,484
+<font color="white" size=".72c">
+This ambitious test
+
+of quantum entanglement</font>
+
+146
+00:08:05,517 --> 00:08:08,854
+<font color="white" size=".72c">
+must wait.</font>
+
+147
+00:08:08,887 --> 00:08:15,361
+<font color="white" size=".72c">
+♪ ♪</font>
+
+148
+00:08:15,394 --> 00:08:17,496
+<font color="white" size=".72c">
+Why are physicists so determined</font>
+
+149
+00:08:17,529 --> 00:08:20,065
+<font color="white" size=".72c">
+to put this bizarre aspect
+
+of quantum mechanics</font>
+
+150
+00:08:20,098 --> 00:08:22,468
+<font color="white" size=".72c">
+to the ultimate test?</font>
+
+151
+00:08:25,337 --> 00:08:26,972
+<font color="white" size=".72c">
+To explore the beginning
+
+of the story,</font>
+
+152
+00:08:27,005 --> 00:08:29,308
+<font color="white" size=".72c">
+David Kaiser has come
+
+to Brussels,</font>
+
+153
+00:08:29,341 --> 00:08:34,246
+<font color="white" size=".72c">
+the city that Albert Einstein
+
+traveled to in 1927</font>
+
+154
+00:08:34,279 --> 00:08:37,515
+<font color="white" size=".72c">
+to attend a meeting
+
+about a new theory</font>
+
+155
+00:08:37,549 --> 00:08:41,921
+<font color="white" size=".72c">
+that described the micro-world
+
+of atoms and tiny particles--</font>
+
+156
+00:08:41,953 --> 00:08:45,558
+<font color="white" size=".72c">
+quantum mechanics.</font>
+
+157
+00:08:45,591 --> 00:08:46,959
+<font color="white" size=".72c">
+Quantum mechanics is one</font>
+
+158
+00:08:46,992 --> 00:08:49,595
+<font color="white" size=".72c">
+of the most amazing intellectual
+
+achievements in human history.</font>
+
+159
+00:08:49,628 --> 00:08:52,131
+<font color="white" size=".72c">
+GHOSE:
+
+For the first time,</font>
+
+160
+00:08:52,164 --> 00:08:57,236
+<font color="white" size=".72c">
+scientists were able to probe
+
+a world that was, until then,</font>
+
+161
+00:08:57,269 --> 00:08:58,504
+<font color="white" size=".72c">
+quite invisible to us.</font>
+
+162
+00:08:58,537 --> 00:09:02,107
+<font color="white" size=".72c">
+Looking at the world
+
+at the scale of atoms,</font>
+
+163
+00:09:02,140 --> 00:09:06,178
+<font color="white" size=".72c">
+a million times smaller
+
+than the width of a human hair.</font>
+
+164
+00:09:06,211 --> 00:09:07,713
+<font color="white" size=".72c">
+One way to think
+
+about the scales</font>
+
+165
+00:09:07,746 --> 00:09:09,949
+<font color="white" size=".72c">
+is that if you take
+
+an everyday object,</font>
+
+166
+00:09:09,982 --> 00:09:14,253
+<font color="white" size=".72c">
+like a soccer ball...</font>
+
+167
+00:09:14,286 --> 00:09:15,821
+<font color="white" size=".72c">
+and you enlarge
+
+that soccer ball,</font>
+
+168
+00:09:15,854 --> 00:09:19,658
+<font color="white" size=".72c">
+so that actually you can see
+
+the individual atoms,</font>
+
+169
+00:09:19,691 --> 00:09:24,330
+<font color="white" size=".72c">
+you roughly have to make it
+
+the size of the Earth.</font>
+
+170
+00:09:24,363 --> 00:09:27,866
+<font color="white" size=".72c">
+And then move into the planet.</font>
+
+171
+00:09:27,899 --> 00:09:32,905
+<font color="white" size=".72c">
+Then you are in the world
+
+of atoms and particles.</font>
+
+172
+00:09:32,938 --> 00:09:36,241
+<font color="white" size=".72c">
+NARRATOR:
+
+It was the nature
+
+of fundamental particles,</font>
+
+173
+00:09:36,274 --> 00:09:39,712
+<font color="white" size=".72c">
+which make up the world
+
+we see around us,</font>
+
+174
+00:09:39,745 --> 00:09:42,648
+<font color="white" size=".72c">
+that Einstein had come
+
+to Brussels to discuss.</font>
+
+175
+00:09:42,681 --> 00:09:45,918
+<font color="white" size=".72c">
+And it was here that Einstein
+
+entered into a heated debate</font>
+
+176
+00:09:45,951 --> 00:09:53,258
+<font color="white" size=".72c">
+that would lead to the discovery
+
+of quantum entanglement--</font>
+
+177
+00:09:53,290 --> 00:09:56,228
+<font color="white" size=".72c">
+a concept that would trouble him
+
+for the rest of his life.</font>
+
+178
+00:09:56,261 --> 00:09:58,564
+<font color="white" size=".72c">
+♪ ♪</font>
+
+179
+00:09:58,597 --> 00:10:02,167
+<font color="white" size=".72c">
+David Kaiser has come
+
+to the place where it all began.</font>
+
+180
+00:10:02,200 --> 00:10:04,837
+<font color="white" size=".72c">
+♪ ♪</font>
+
+181
+00:10:04,870 --> 00:10:08,574
+<font color="white" size=".72c">
+KAISER:
+
+This is the original
+
+Solvay Institute building.</font>
+
+182
+00:10:08,607 --> 00:10:10,809
+<font color="white" size=".72c">
+Beautiful grand building.</font>
+
+183
+00:10:10,842 --> 00:10:12,211
+<font color="white" size=".72c">
+And this is the place,</font>
+
+184
+00:10:12,244 --> 00:10:15,614
+<font color="white" size=".72c">
+back in October 1927,</font>
+
+185
+00:10:15,647 --> 00:10:17,683
+<font color="white" size=".72c">
+where the fifth
+
+Solvay Conference was held.</font>
+
+186
+00:10:17,716 --> 00:10:21,854
+<font color="white" size=".72c">
+This amazing, weeklong series
+
+of discussions</font>
+
+187
+00:10:21,887 --> 00:10:23,255
+<font color="white" size=".72c">
+on really
+
+what the world was made of,</font>
+
+188
+00:10:23,288 --> 00:10:26,625
+<font color="white" size=".72c">
+on the nature of matter
+
+and the new quantum theory.</font>
+
+189
+00:10:26,658 --> 00:10:30,963
+<font color="white" size=".72c">
+And these steps are
+
+the very steps</font>
+
+190
+00:10:30,996 --> 00:10:34,767
+<font color="white" size=".72c">
+on which this famous
+
+group photograph was taken.</font>
+
+191
+00:10:34,800 --> 00:10:36,568
+<font color="white" size=".72c">
+It's a collection</font>
+
+192
+00:10:36,601 --> 00:10:39,772
+<font color="white" size=".72c">
+of the some of the most
+
+brilliant people in the world.</font>
+
+193
+00:10:39,805 --> 00:10:42,040
+<font color="white" size=".72c">
+Here in the front row,
+
+we see Albert Einstein,</font>
+
+194
+00:10:42,074 --> 00:10:44,610
+<font color="white" size=".72c">
+and the great Marie Curie
+
+and Max Planck;</font>
+
+195
+00:10:44,643 --> 00:10:48,147
+<font color="white" size=".72c">
+in the back row, standing,
+
+the dapper Erwin Schrödinger.</font>
+
+196
+00:10:48,180 --> 00:10:50,282
+<font color="white" size=".72c">
+And these sort of brash
+
+20-year-olds, or mid-20s,</font>
+
+197
+00:10:50,315 --> 00:10:52,751
+<font color="white" size=".72c">
+Werner Heisenberg
+
+and Wolfgang Pauli.</font>
+
+198
+00:10:52,784 --> 00:10:57,790
+<font color="white" size=".72c">
+NARRATOR:
+
+These scientists were the
+
+pioneers of quantum mechanics.</font>
+
+199
+00:10:57,823 --> 00:11:00,626
+<font color="white" size=".72c">
+KAISER:
+
+I had a huge version
+
+of this photograph</font>
+
+200
+00:11:00,659 --> 00:11:01,627
+<font color="white" size=".72c">
+up on the wall,</font>
+
+201
+00:11:01,660 --> 00:11:03,095
+<font color="white" size=".72c">
+it was a poster
+
+in my college dorm room.</font>
+
+202
+00:11:03,128 --> 00:11:04,897
+<font color="white" size=".72c">
+My roommates had
+
+their favorite bands,</font>
+
+203
+00:11:04,930 --> 00:11:07,332
+<font color="white" size=".72c">
+and I had
+
+the 1927 Solvay Conference,</font>
+
+204
+00:11:07,365 --> 00:11:08,767
+<font color="white" size=".72c">
+which says a lot.</font>
+
+205
+00:11:08,800 --> 00:11:12,171
+<font color="white" size=".72c">
+NARRATOR:
+
+This was one of the greatest
+
+meetings of minds</font>
+
+206
+00:11:12,204 --> 00:11:14,306
+<font color="white" size=".72c">
+in history.</font>
+
+207
+00:11:14,339 --> 00:11:17,042
+<font color="white" size=".72c">
+More than half were,
+
+or would become,</font>
+
+208
+00:11:17,075 --> 00:11:20,045
+<font color="white" size=".72c">
+Nobel Prize winners.</font>
+
+209
+00:11:20,078 --> 00:11:24,650
+<font color="white" size=".72c">
+Their experiments were showing
+
+that deep inside matter,</font>
+
+210
+00:11:24,683 --> 00:11:28,587
+<font color="white" size=".72c">
+tiny particles-- like atoms
+
+and their orbiting electrons--</font>
+
+211
+00:11:28,620 --> 00:11:31,890
+<font color="white" size=".72c">
+were not solid little spheres.</font>
+
+212
+00:11:31,923 --> 00:11:36,862
+<font color="white" size=".72c">
+They seemed fuzzy and undefined.</font>
+
+213
+00:11:36,895 --> 00:11:39,498
+<font color="white" size=".72c">
+KAISER:
+
+So this, this group here,</font>
+
+214
+00:11:39,531 --> 00:11:40,833
+<font color="white" size=".72c">
+these, these were the folks</font>
+
+215
+00:11:40,866 --> 00:11:45,471
+<font color="white" size=".72c">
+who had just been plumbing
+
+deeper and deeper and deeper</font>
+
+216
+00:11:45,504 --> 00:11:47,873
+<font color="white" size=".72c">
+to find what they hoped would be
+
+a bedrock</font>
+
+217
+00:11:47,906 --> 00:11:48,907
+<font color="white" size=".72c">
+of what the world was made of,</font>
+
+218
+00:11:48,940 --> 00:11:50,743
+<font color="white" size=".72c">
+and to their surprise,</font>
+
+219
+00:11:50,776 --> 00:11:53,579
+<font color="white" size=".72c">
+they found things less
+
+and less solid as they dug in.</font>
+
+220
+00:11:53,612 --> 00:11:55,514
+<font color="white" size=".72c">
+This world was not
+
+tiny little bricks</font>
+
+221
+00:11:55,547 --> 00:11:56,749
+<font color="white" size=".72c">
+that got smaller and smaller.</font>
+
+222
+00:11:56,782 --> 00:12:00,285
+<font color="white" size=".72c">
+At some point, the bricks
+
+gave way to this mush,</font>
+
+223
+00:12:00,318 --> 00:12:02,554
+<font color="white" size=".72c">
+and what looked like solidity,
+
+solidness,</font>
+
+224
+00:12:02,587 --> 00:12:04,556
+<font color="white" size=".72c">
+in fact became very confusing</font>
+
+225
+00:12:04,589 --> 00:12:07,659
+<font color="white" size=".72c">
+and kind of a whole new way
+
+of thinking about nature.</font>
+
+226
+00:12:07,692 --> 00:12:10,296
+<font color="white" size=".72c">
+♪ ♪</font>
+
+227
+00:12:12,664 --> 00:12:14,900
+<font color="white" size=".72c">
+NARRATOR:
+
+The theory of quantum mechanics
+
+presented at the meeting</font>
+
+228
+00:12:14,933 --> 00:12:18,270
+<font color="white" size=".72c">
+was strange.</font>
+
+229
+00:12:18,303 --> 00:12:21,907
+<font color="white" size=".72c">
+It said that a particle,
+
+like an electron,</font>
+
+230
+00:12:21,940 --> 00:12:26,445
+<font color="white" size=".72c">
+isn't physically real
+
+until it's observed--</font>
+
+231
+00:12:26,478 --> 00:12:30,983
+<font color="white" size=".72c">
+measured by an instrument
+
+that can detect it.</font>
+
+232
+00:12:31,016 --> 00:12:33,218
+<font color="white" size=".72c">
+Before it's detected,</font>
+
+233
+00:12:33,251 --> 00:12:35,821
+<font color="white" size=".72c">
+instead of being
+
+a solid particle,</font>
+
+234
+00:12:35,854 --> 00:12:39,224
+<font color="white" size=".72c">
+an electron is just
+
+a fuzzy wave--</font>
+
+235
+00:12:39,257 --> 00:12:42,995
+<font color="white" size=".72c">
+a wave of probability.</font>
+
+236
+00:12:43,028 --> 00:12:46,298
+<font color="white" size=".72c">
+These objects,
+
+like electrons and atoms,</font>
+
+237
+00:12:46,331 --> 00:12:49,001
+<font color="white" size=".72c">
+when we describe mathematically
+
+their behavior,</font>
+
+238
+00:12:49,034 --> 00:12:50,536
+<font color="white" size=".72c">
+the only thing we can describe</font>
+
+239
+00:12:50,569 --> 00:12:55,507
+<font color="white" size=".72c">
+is the probability of being
+
+at one place or another.</font>
+
+240
+00:12:55,540 --> 00:12:56,575
+<font color="white" size=".72c">
+CARROLL:
+
+It's like a wave</font>
+
+241
+00:12:56,608 --> 00:12:58,477
+<font color="white" size=".72c">
+of all those different
+
+possibilities.</font>
+
+242
+00:12:58,510 --> 00:13:01,580
+<font color="white" size=".72c">
+It's not that the electron is
+
+in one place or the other,</font>
+
+243
+00:13:01,613 --> 00:13:03,282
+<font color="white" size=".72c">
+we just don't know,</font>
+
+244
+00:13:03,315 --> 00:13:05,617
+<font color="white" size=".72c">
+it's that the electron really is
+
+a combination</font>
+
+245
+00:13:05,650 --> 00:13:08,353
+<font color="white" size=".72c">
+of every possible place
+
+it could be</font>
+
+246
+00:13:08,386 --> 00:13:09,688
+<font color="white" size=".72c">
+until we look at it.</font>
+
+247
+00:13:11,156 --> 00:13:14,393
+<font color="white" size=".72c">
+NARRATOR:
+
+Quantum mechanics only tells us
+
+the probability</font>
+
+248
+00:13:14,426 --> 00:13:16,228
+<font color="white" size=".72c">
+of a particle's properties,</font>
+
+249
+00:13:16,261 --> 00:13:18,463
+<font color="white" size=".72c">
+like location.</font>
+
+250
+00:13:18,496 --> 00:13:21,934
+<font color="white" size=".72c">
+The laws of nature were
+
+no longer definite statements</font>
+
+251
+00:13:21,967 --> 00:13:24,036
+<font color="white" size=".72c">
+about what's going to happen
+
+next.</font>
+
+252
+00:13:24,069 --> 00:13:26,839
+<font color="white" size=".72c">
+They were just statements
+
+about probabilities.</font>
+
+253
+00:13:26,872 --> 00:13:29,441
+<font color="white" size=".72c">
+And Einstein felt,
+
+"Well, that's defeat.</font>
+
+254
+00:13:29,474 --> 00:13:33,145
+<font color="white" size=".72c">
+"You're giving up on the heart
+
+of what physics has been,</font>
+
+255
+00:13:33,178 --> 00:13:36,515
+<font color="white" size=".72c">
+namely, to give a complete
+
+description of reality."</font>
+
+256
+00:13:36,548 --> 00:13:39,518
+<font color="white" size=".72c">
+♪ ♪</font>
+
+257
+00:13:39,551 --> 00:13:41,553
+<font color="white" size=".72c">
+NARRATOR:
+
+For Einstein,</font>
+
+258
+00:13:41,586 --> 00:13:44,890
+<font color="white" size=".72c">
+the idea that particles only pop
+
+into existence</font>
+
+259
+00:13:44,923 --> 00:13:46,792
+<font color="white" size=".72c">
+when they're observed</font>
+
+260
+00:13:46,825 --> 00:13:50,829
+<font color="white" size=".72c">
+is akin to magic.</font>
+
+261
+00:13:50,862 --> 00:13:52,564
+<font color="white" size=".72c">
+It's said he asked,</font>
+
+262
+00:13:52,597 --> 00:13:55,267
+<font color="white" size=".72c">
+"Do you really believe
+
+the moon is not there</font>
+
+263
+00:13:55,300 --> 00:13:59,338
+<font color="white" size=".72c">
+when you are not looking at it?"</font>
+
+264
+00:13:59,371 --> 00:14:00,706
+<font color="white" size=".72c">
+♪ ♪</font>
+
+265
+00:14:00,739 --> 00:14:03,909
+<font color="white" size=".72c">
+Outside of the formal setting
+
+of the conference...</font>
+
+266
+00:14:03,942 --> 00:14:05,510
+<font color="white" size=".72c">
+KAISER:
+
+Bonsoir.</font>
+
+267
+00:14:05,543 --> 00:14:08,380
+<font color="white" size=".72c">
+NARRATOR:
+
+...he challenged the most vocal
+
+supporter of these ideas:</font>
+
+268
+00:14:08,413 --> 00:14:13,619
+<font color="white" size=".72c">
+the great Danish physicist
+
+Niels Bohr.</font>
+
+269
+00:14:13,652 --> 00:14:16,321
+<font color="white" size=".72c">
+KAISER:
+
+Einstein would show up
+
+to breakfast at the hotel,</font>
+
+270
+00:14:16,354 --> 00:14:17,923
+<font color="white" size=".72c">
+and Niels Bohr would be there,</font>
+
+271
+00:14:17,956 --> 00:14:20,259
+<font color="white" size=".72c">
+and Einstein would present
+
+his latest challenge.</font>
+
+272
+00:14:20,292 --> 00:14:22,895
+<font color="white" size=".72c">
+Niels Bohr would sort of mumble
+
+and wonder</font>
+
+273
+00:14:22,928 --> 00:14:24,763
+<font color="white" size=".72c">
+and confer
+
+with his younger colleagues.</font>
+
+274
+00:14:24,796 --> 00:14:27,966
+<font color="white" size=".72c">
+They'd head off to the formal
+
+meeting at the institute,</font>
+
+275
+00:14:27,999 --> 00:14:31,036
+<font color="white" size=".72c">
+and somehow, every night
+
+by suppertime,</font>
+
+276
+00:14:31,069 --> 00:14:32,604
+<font color="white" size=".72c">
+Bohr would have an answer.</font>
+
+277
+00:14:32,637 --> 00:14:34,306
+<font color="white" size=".72c">
+One of the observers said</font>
+
+278
+00:14:34,339 --> 00:14:35,908
+<font color="white" size=".72c">
+that Einstein was like
+
+a jack-in-the-box;</font>
+
+279
+00:14:35,941 --> 00:14:37,809
+<font color="white" size=".72c">
+every day, he'd pop up
+
+with a new challenge.</font>
+
+280
+00:14:37,842 --> 00:14:40,112
+<font color="white" size=".72c">
+And Bohr would flip
+
+this way and that,</font>
+
+281
+00:14:40,145 --> 00:14:42,547
+<font color="white" size=".72c">
+and in the end, by supper,
+
+have crushed that one,</font>
+
+282
+00:14:42,580 --> 00:14:44,016
+<font color="white" size=".72c">
+and it would start
+
+all over again.</font>
+
+283
+00:14:46,117 --> 00:14:48,153
+<font color="white" size=".72c">
+NARRATOR:
+
+To Bohr and his colleagues,</font>
+
+284
+00:14:48,186 --> 00:14:52,391
+<font color="white" size=".72c">
+quantum mechanics not only
+
+explained experimental results,</font>
+
+285
+00:14:52,424 --> 00:14:56,461
+<font color="white" size=".72c">
+its mathematics were elegant
+
+and beautiful.</font>
+
+286
+00:14:56,494 --> 00:15:00,532
+<font color="white" size=".72c">
+And since Einstein hadn't found
+
+flaws in their equations,</font>
+
+287
+00:15:00,565 --> 00:15:04,670
+<font color="white" size=".72c">
+they left the Solvay meeting
+
+feeling more confident than ever</font>
+
+288
+00:15:04,703 --> 00:15:06,505
+<font color="white" size=".72c">
+in their ideas.</font>
+
+289
+00:15:06,538 --> 00:15:09,708
+<font color="white" size=".72c">
+But Einstein didn't give up
+
+his conviction</font>
+
+290
+00:15:09,741 --> 00:15:13,412
+<font color="white" size=".72c">
+that quantum mechanics
+
+was flawed.</font>
+
+291
+00:15:13,445 --> 00:15:15,013
+<font color="white" size=".72c">
+And in his refusal to accept</font>
+
+292
+00:15:15,046 --> 00:15:17,616
+<font color="white" size=".72c">
+the weird implications
+
+of the theory,</font>
+
+293
+00:15:17,649 --> 00:15:22,287
+<font color="white" size=".72c">
+he would wind up uncovering
+
+something even weirder.</font>
+
+294
+00:15:22,320 --> 00:15:23,789
+<font color="white" size=".72c">
+♪ ♪</font>
+
+295
+00:15:23,822 --> 00:15:28,860
+<font color="white" size=".72c">
+In 1933, with the Nazi Party
+
+in power in Germany,</font>
+
+296
+00:15:28,893 --> 00:15:31,396
+<font color="white" size=".72c">
+Einstein chose to settle
+
+in America</font>
+
+297
+00:15:31,429 --> 00:15:34,199
+<font color="white" size=".72c">
+and took a position at the
+
+Institute for Advanced Study</font>
+
+298
+00:15:34,232 --> 00:15:36,268
+<font color="white" size=".72c">
+in Princeton, New Jersey.</font>
+
+299
+00:15:36,301 --> 00:15:39,004
+<font color="white" size=".72c">
+♪ ♪</font>
+
+300
+00:15:39,037 --> 00:15:42,174
+<font color="white" size=".72c">
+He recruited two physicists
+
+to help him,</font>
+
+301
+00:15:42,207 --> 00:15:46,645
+<font color="white" size=".72c">
+Nathan Rosen and Boris Podolsky.</font>
+
+302
+00:15:46,678 --> 00:15:49,581
+<font color="white" size=".72c">
+And in 1935, at afternoon tea,</font>
+
+303
+00:15:49,614 --> 00:15:53,285
+<font color="white" size=".72c">
+the three men spotted a possible
+
+flaw in quantum mechanics</font>
+
+304
+00:15:53,318 --> 00:15:56,455
+<font color="white" size=".72c">
+that would shake the
+
+very foundations of the theory.</font>
+
+305
+00:15:58,323 --> 00:16:01,193
+<font color="white" size=".72c">
+They noticed that the
+
+mathematics of quantum mechanics</font>
+
+306
+00:16:01,226 --> 00:16:06,264
+<font color="white" size=".72c">
+led to a seemingly impossible
+
+situation.</font>
+
+307
+00:16:06,297 --> 00:16:10,869
+<font color="white" size=".72c">
+Today, Robbert Dijkgraaf is
+
+the director of the institute.</font>
+
+308
+00:16:10,902 --> 00:16:12,371
+<font color="white" size=".72c">
+DIJKGRAAF:
+
+Apparently Podolsky would say,</font>
+
+309
+00:16:12,404 --> 00:16:14,306
+<font color="white" size=".72c">
+"Well, Professor Einstein,</font>
+
+310
+00:16:14,339 --> 00:16:16,875
+<font color="white" size=".72c">
+"this is very important
+
+in your arguments</font>
+
+311
+00:16:16,908 --> 00:16:19,945
+<font color="white" size=".72c">
+showing that quantum theory
+
+is incomplete."</font>
+
+312
+00:16:19,978 --> 00:16:23,115
+<font color="white" size=".72c">
+So they got
+
+this very animated discussion</font>
+
+313
+00:16:23,148 --> 00:16:25,017
+<font color="white" size=".72c">
+and what can happen still is,</font>
+
+314
+00:16:25,050 --> 00:16:27,619
+<font color="white" size=".72c">
+now you have a bunch of
+
+scientists discussing,</font>
+
+315
+00:16:27,652 --> 00:16:31,256
+<font color="white" size=".72c">
+and at some point, someone says,
+
+"Let's write a paper together."</font>
+
+316
+00:16:31,289 --> 00:16:32,257
+<font color="white" size=".72c">
+So they did.</font>
+
+317
+00:16:32,290 --> 00:16:34,826
+<font color="white" size=".72c">
+♪ ♪</font>
+
+318
+00:16:34,859 --> 00:16:38,363
+<font color="white" size=".72c">
+NARRATOR:
+
+Their paper,
+
+known today as EPR,</font>
+
+319
+00:16:38,396 --> 00:16:43,235
+<font color="white" size=".72c">
+argued that the equations
+
+of quantum mechanics</font>
+
+320
+00:16:43,268 --> 00:16:46,738
+<font color="white" size=".72c">
+predicted an impossible
+
+connection between particles--</font>
+
+321
+00:16:46,771 --> 00:16:49,108
+<font color="white" size=".72c">
+a seemingly magical effect.</font>
+
+322
+00:16:50,608 --> 00:16:54,212
+<font color="white" size=".72c">
+It would be like having
+
+two particles,</font>
+
+323
+00:16:54,245 --> 00:16:56,382
+<font color="white" size=".72c">
+each hidden under a cup.</font>
+
+324
+00:16:58,750 --> 00:17:01,053
+<font color="white" size=".72c">
+Looking at one</font>
+
+325
+00:17:01,086 --> 00:17:05,624
+<font color="white" size=".72c">
+mysteriously causes the other
+
+to reveal itself, too,</font>
+
+326
+00:17:05,656 --> 00:17:09,428
+<font color="white" size=".72c">
+with matching properties.</font>
+
+327
+00:17:10,361 --> 00:17:12,130
+<font color="white" size=".72c">
+Quantum theory suggested</font>
+
+328
+00:17:12,163 --> 00:17:15,934
+<font color="white" size=".72c">
+this effect could happen
+
+in the real world,</font>
+
+329
+00:17:15,967 --> 00:17:20,239
+<font color="white" size=".72c">
+for example, with particles
+
+of light-- photons.</font>
+
+330
+00:17:21,673 --> 00:17:24,776
+<font color="white" size=".72c">
+The equations implied
+
+that a source of photons</font>
+
+331
+00:17:24,809 --> 00:17:28,046
+<font color="white" size=".72c">
+could create pairs
+
+in such a way</font>
+
+332
+00:17:28,079 --> 00:17:30,315
+<font color="white" size=".72c">
+that when we measure one,</font>
+
+333
+00:17:30,348 --> 00:17:32,918
+<font color="white" size=".72c">
+causing it to snap
+
+out of its fuzzy state,</font>
+
+334
+00:17:32,951 --> 00:17:37,656
+<font color="white" size=".72c">
+the other mysteriously snaps
+
+out of its fuzzy state</font>
+
+335
+00:17:37,689 --> 00:17:39,491
+<font color="white" size=".72c">
+at the same instant,</font>
+
+336
+00:17:39,524 --> 00:17:42,027
+<font color="white" size=".72c">
+with correlated properties.</font>
+
+337
+00:17:47,499 --> 00:17:51,203
+<font color="white" size=".72c">
+The 1935 paper
+
+that described this effect</font>
+
+338
+00:17:51,236 --> 00:17:56,108
+<font color="white" size=".72c">
+has become Einstein's
+
+most referenced work of all.</font>
+
+339
+00:17:56,141 --> 00:18:00,212
+<font color="white" size=".72c">
+It has captivated generations
+
+of physicists,</font>
+
+340
+00:18:00,245 --> 00:18:03,915
+<font color="white" size=".72c">
+including Anton Zeilinger.</font>
+
+341
+00:18:03,948 --> 00:18:08,353
+<font color="white" size=".72c">
+ZEILINGER:
+
+The Einstein-Podolsky-Rosen
+
+paper fascinated me.</font>
+
+342
+00:18:08,386 --> 00:18:11,890
+<font color="white" size=".72c">
+And I had to read it
+
+at least five or six times</font>
+
+343
+00:18:11,923 --> 00:18:14,559
+<font color="white" size=".72c">
+until I finally understood
+
+what goes on.</font>
+
+344
+00:18:14,592 --> 00:18:17,562
+<font color="white" size=".72c">
+And then it didn't let me go
+
+again.</font>
+
+345
+00:18:17,595 --> 00:18:21,066
+<font color="white" size=".72c">
+NARRATOR:
+
+Another way to think
+
+of the paired particles</font>
+
+346
+00:18:21,099 --> 00:18:25,637
+<font color="white" size=".72c">
+is to imagine a game of chance
+
+that's somehow rigged.</font>
+
+347
+00:18:25,670 --> 00:18:30,509
+<font color="white" size=".72c">
+Suppose I had a pair
+
+of quantum dice.</font>
+
+348
+00:18:30,542 --> 00:18:35,947
+<font color="white" size=".72c">
+I put these two quantum dice
+
+in my little cup,</font>
+
+349
+00:18:35,980 --> 00:18:39,384
+<font color="white" size=".72c">
+throw them.</font>
+
+350
+00:18:39,417 --> 00:18:43,255
+<font color="white" size=".72c">
+I look at them,
+
+they show the same number-- six.</font>
+
+351
+00:18:43,288 --> 00:18:45,624
+<font color="white" size=".72c">
+I put them again in the cup,</font>
+
+352
+00:18:45,657 --> 00:18:48,226
+<font color="white" size=".72c">
+throw them again.</font>
+
+353
+00:18:48,259 --> 00:18:51,163
+<font color="white" size=".72c">
+Now they both show three.</font>
+
+354
+00:18:51,196 --> 00:18:55,634
+<font color="white" size=".72c">
+I put them in again,
+
+throw again,</font>
+
+355
+00:18:55,667 --> 00:18:58,236
+<font color="white" size=".72c">
+now they both show one.</font>
+
+356
+00:18:58,269 --> 00:19:01,773
+<font color="white" size=".72c">
+Point now being,
+
+what I see here is,</font>
+
+357
+00:19:01,806 --> 00:19:04,910
+<font color="white" size=".72c">
+I see two random processes--</font>
+
+358
+00:19:04,943 --> 00:19:07,379
+<font color="white" size=".72c">
+namely, each die showing
+
+some number--</font>
+
+359
+00:19:07,412 --> 00:19:13,485
+<font color="white" size=".72c">
+but these two random processes
+
+do the same.</font>
+
+360
+00:19:13,518 --> 00:19:15,086
+<font color="white" size=".72c">
+It's really mind-boggling.</font>
+
+361
+00:19:15,119 --> 00:19:16,655
+<font color="white" size=".72c">
+♪ ♪</font>
+
+362
+00:19:16,688 --> 00:19:19,891
+<font color="white" size=".72c">
+NARRATOR:
+
+How could two particles act
+
+in unison,</font>
+
+363
+00:19:19,924 --> 00:19:22,694
+<font color="white" size=".72c">
+even when they're separated
+
+from each other?</font>
+
+364
+00:19:25,129 --> 00:19:26,965
+<font color="white" size=".72c">
+Essential to the EPR argument</font>
+
+365
+00:19:26,998 --> 00:19:29,467
+<font color="white" size=".72c">
+is that these particles can be,
+
+can be separated</font>
+
+366
+00:19:29,500 --> 00:19:30,735
+<font color="white" size=".72c">
+at an arbitrary distance.</font>
+
+367
+00:19:30,768 --> 00:19:32,170
+<font color="white" size=".72c">
+One could be here at Princeton,</font>
+
+368
+00:19:32,203 --> 00:19:33,972
+<font color="white" size=".72c">
+one could be
+
+in the Andromeda Galaxy.</font>
+
+369
+00:19:34,005 --> 00:19:36,775
+<font color="white" size=".72c">
+And yet, according
+
+to quantum mechanics,</font>
+
+370
+00:19:36,808 --> 00:19:38,677
+<font color="white" size=".72c">
+a choice to measure
+
+something here</font>
+
+371
+00:19:38,710 --> 00:19:41,413
+<font color="white" size=".72c">
+is somehow
+
+instantaneously affecting</font>
+
+372
+00:19:41,446 --> 00:19:43,882
+<font color="white" size=".72c">
+what could be said
+
+about this other particle.</font>
+
+373
+00:19:43,915 --> 00:19:46,318
+<font color="white" size=".72c">
+You can't go from Princeton
+
+to Andromeda instantly,</font>
+
+374
+00:19:46,351 --> 00:19:47,819
+<font color="white" size=".72c">
+and yet that, they argued,</font>
+
+375
+00:19:47,852 --> 00:19:50,021
+<font color="white" size=".72c">
+is what the equations of quantum
+
+mechanics seemed to imply,</font>
+
+376
+00:19:50,054 --> 00:19:51,122
+<font color="white" size=".72c">
+and that, they said,</font>
+
+377
+00:19:51,155 --> 00:19:52,657
+<font color="white" size=".72c">
+so much the worse
+
+for quantum mechanics.</font>
+
+378
+00:19:52,690 --> 00:19:55,160
+<font color="white" size=".72c">
+The world simply can't operate
+
+that way.</font>
+
+379
+00:19:56,761 --> 00:20:00,532
+<font color="white" size=".72c">
+NARRATOR:
+
+For Einstein, this strange
+
+effect conflicted</font>
+
+380
+00:20:00,565 --> 00:20:04,769
+<font color="white" size=".72c">
+with the most basic concept
+
+we use to describe reality--</font>
+
+381
+00:20:04,802 --> 00:20:06,471
+<font color="white" size=".72c">
+space.</font>
+
+382
+00:20:06,504 --> 00:20:11,643
+<font color="white" size=".72c">
+For him, objects, particles,
+
+everything that exists</font>
+
+383
+00:20:11,676 --> 00:20:15,747
+<font color="white" size=".72c">
+is located in space.</font>
+
+384
+00:20:15,780 --> 00:20:18,516
+<font color="white" size=".72c">
+Space, together with time,</font>
+
+385
+00:20:18,549 --> 00:20:21,753
+<font color="white" size=".72c">
+was the key ingredient in his
+
+theory of special relativity,</font>
+
+386
+00:20:21,786 --> 00:20:28,994
+<font color="white" size=".72c">
+with its famous equation,
+
+E = MC squared.</font>
+
+387
+00:20:29,027 --> 00:20:33,265
+<font color="white" size=".72c">
+CARROLL:
+
+Einstein, of course, was
+
+the master of space-time.</font>
+
+388
+00:20:33,298 --> 00:20:35,634
+<font color="white" size=".72c">
+He thought that
+
+if something happened here,</font>
+
+389
+00:20:35,667 --> 00:20:38,436
+<font color="white" size=".72c">
+that shouldn't immediately
+
+and instantaneously</font>
+
+390
+00:20:38,469 --> 00:20:40,338
+<font color="white" size=".72c">
+change something
+
+that is going on over there--</font>
+
+391
+00:20:40,371 --> 00:20:43,242
+<font color="white" size=".72c">
+the principle of locality,
+
+as we currently call it.</font>
+
+392
+00:20:44,876 --> 00:20:47,812
+<font color="white" size=".72c">
+NARRATOR:
+
+For Einstein,
+
+it's simply common sense</font>
+
+393
+00:20:47,845 --> 00:20:51,082
+<font color="white" size=".72c">
+that if objects are separated
+
+in space,</font>
+
+394
+00:20:51,115 --> 00:20:53,285
+<font color="white" size=".72c">
+for one to affect the other,</font>
+
+395
+00:20:53,318 --> 00:20:57,355
+<font color="white" size=".72c">
+something must travel
+
+between them.</font>
+
+396
+00:20:57,388 --> 00:21:01,660
+<font color="white" size=".72c">
+♪ ♪</font>
+
+397
+00:21:01,693 --> 00:21:03,495
+<font color="white" size=".72c">
+And that traveling takes time.</font>
+
+398
+00:21:07,532 --> 00:21:11,136
+<font color="white" size=".72c">
+Quantum particles acting in
+
+unison could be explained</font>
+
+399
+00:21:11,169 --> 00:21:14,572
+<font color="white" size=".72c">
+if they were communicating--</font>
+
+400
+00:21:14,605 --> 00:21:18,376
+<font color="white" size=".72c">
+one particle instantly
+
+sending a signal to the other,</font>
+
+401
+00:21:18,409 --> 00:21:22,314
+<font color="white" size=".72c">
+telling it what properties
+
+it should have.</font>
+
+402
+00:21:22,347 --> 00:21:24,215
+<font color="white" size=".72c">
+But that would require a signal</font>
+
+403
+00:21:24,248 --> 00:21:26,951
+<font color="white" size=".72c">
+traveling faster
+
+than the speed of light,</font>
+
+404
+00:21:26,984 --> 00:21:29,587
+<font color="white" size=".72c">
+something Einstein's theory
+
+of special relativity</font>
+
+405
+00:21:29,620 --> 00:21:34,125
+<font color="white" size=".72c">
+had proven impossible.</font>
+
+406
+00:21:34,158 --> 00:21:39,464
+<font color="white" size=".72c">
+And it would mean the particles
+
+were fuzzy and undefined</font>
+
+407
+00:21:39,497 --> 00:21:45,170
+<font color="white" size=".72c">
+until the moment
+
+they were observed.</font>
+
+408
+00:21:45,203 --> 00:21:47,138
+<font color="white" size=".72c">
+Instead,</font>
+
+409
+00:21:47,171 --> 00:21:50,809
+<font color="white" size=".72c">
+Einstein thought the particles
+
+should be real all along.</font>
+
+410
+00:21:50,842 --> 00:21:54,913
+<font color="white" size=".72c">
+They must carry with them
+
+a hidden layer of deeper physics</font>
+
+411
+00:21:54,946 --> 00:21:59,484
+<font color="white" size=".72c">
+that determines their properties
+
+from the start.</font>
+
+412
+00:21:59,517 --> 00:22:01,953
+<font color="white" size=".72c">
+Almost the way
+
+that magic tricks,</font>
+
+413
+00:22:01,986 --> 00:22:07,859
+<font color="white" size=".72c">
+while appearing mysterious,
+
+have a hidden explanation.</font>
+
+414
+00:22:07,892 --> 00:22:11,930
+<font color="white" size=".72c">
+But this hidden physics was
+
+missing from quantum theory.</font>
+
+415
+00:22:11,963 --> 00:22:16,401
+<font color="white" size=".72c">
+So Einstein, Podolsky, and Rosen
+
+argued that quantum mechanics</font>
+
+416
+00:22:16,434 --> 00:22:18,503
+<font color="white" size=".72c">
+was incomplete.</font>
+
+417
+00:22:18,536 --> 00:22:20,872
+<font color="white" size=".72c">
+♪ ♪</font>
+
+418
+00:22:20,905 --> 00:22:23,975
+<font color="white" size=".72c">
+DIJKGRAAF:
+
+Podolsky was very enthusiastic
+
+about this project.</font>
+
+419
+00:22:24,008 --> 00:22:25,744
+<font color="white" size=".72c">
+In fact, he was so enthusiastic</font>
+
+420
+00:22:25,777 --> 00:22:28,747
+<font color="white" size=".72c">
+that he ran
+
+to the "New York Times"</font>
+
+421
+00:22:28,780 --> 00:22:29,848
+<font color="white" size=".72c">
+and told them the news.</font>
+
+422
+00:22:29,881 --> 00:22:33,017
+<font color="white" size=".72c">
+So Einstein was really upset
+
+with Podolsky,</font>
+
+423
+00:22:33,050 --> 00:22:35,653
+<font color="white" size=".72c">
+and apparently, he didn't speak
+
+to him anymore.</font>
+
+424
+00:22:35,686 --> 00:22:37,255
+<font color="white" size=".72c">
+♪ ♪</font>
+
+425
+00:22:37,288 --> 00:22:40,158
+<font color="white" size=".72c">
+NARRATOR:
+
+When Niels Bohr heard
+
+of Einstein's paper,</font>
+
+426
+00:22:40,191 --> 00:22:43,528
+<font color="white" size=".72c">
+he wrote an obscure response,</font>
+
+427
+00:22:43,561 --> 00:22:46,631
+<font color="white" size=".72c">
+arguing that one particle
+
+could somehow</font>
+
+428
+00:22:46,664 --> 00:22:49,901
+<font color="white" size=".72c">
+mysteriously influence
+
+the other.</font>
+
+429
+00:22:49,934 --> 00:22:51,970
+<font color="white" size=".72c">
+This seemingly impossible
+
+phenomenon</font>
+
+430
+00:22:52,003 --> 00:22:56,708
+<font color="white" size=".72c">
+became known
+
+as quantum entanglement.</font>
+
+431
+00:22:58,709 --> 00:23:04,082
+<font color="white" size=".72c">
+But Einstein dismissed it as
+
+"spooky actions at a distance."</font>
+
+432
+00:23:05,716 --> 00:23:08,086
+<font color="white" size=".72c">
+No one could think of
+
+an experiment to test</font>
+
+433
+00:23:08,119 --> 00:23:13,124
+<font color="white" size=".72c">
+whether Einstein or Bohr
+
+was correct.</font>
+
+434
+00:23:13,157 --> 00:23:16,060
+<font color="white" size=".72c">
+But that didn't stop
+
+physicists and engineers</font>
+
+435
+00:23:16,093 --> 00:23:17,762
+<font color="white" size=".72c">
+from making use
+
+of quantum mechanics</font>
+
+436
+00:23:17,795 --> 00:23:20,899
+<font color="white" size=".72c">
+to do new things.</font>
+
+437
+00:23:20,932 --> 00:23:23,067
+<font color="white" size=".72c">
+GHOSE:
+
+In the '30s and '40s,</font>
+
+438
+00:23:23,100 --> 00:23:26,805
+<font color="white" size=".72c">
+the debate around the EPR paper
+
+sort of dies down.</font>
+
+439
+00:23:26,838 --> 00:23:28,706
+<font color="white" size=".72c">
+But, quantum theory
+
+actually takes off.</font>
+
+440
+00:23:28,739 --> 00:23:31,109
+<font color="white" size=".72c">
+♪ ♪</font>
+
+441
+00:23:31,142 --> 00:23:35,113
+<font color="white" size=".72c">
+The mathematics leads to all
+
+kinds of amazing developments.</font>
+
+442
+00:23:35,146 --> 00:23:37,749
+<font color="white" size=".72c">
+NARRATOR:
+
+Entanglement aside,</font>
+
+443
+00:23:37,782 --> 00:23:39,217
+<font color="white" size=".72c">
+the equations
+
+of quantum mechanics</font>
+
+444
+00:23:39,250 --> 00:23:42,554
+<font color="white" size=".72c">
+enabled the scientists
+
+of the Manhattan Project</font>
+
+445
+00:23:42,587 --> 00:23:45,290
+<font color="white" size=".72c">
+to develop the atomic bomb.</font>
+
+446
+00:23:45,323 --> 00:23:47,725
+<font color="white" size=".72c">
+And in the years
+
+after the Second World War,</font>
+
+447
+00:23:47,758 --> 00:23:50,462
+<font color="white" size=".72c">
+researchers at Bell Labs
+
+in New Jersey</font>
+
+448
+00:23:50,495 --> 00:23:53,665
+<font color="white" size=".72c">
+used quantum theory to develop
+
+one of the first lasers...</font>
+
+449
+00:23:53,698 --> 00:23:54,999
+<font color="white" size=".72c">
+MAN (in film):
+
+In our laboratories,</font>
+
+450
+00:23:55,032 --> 00:23:56,734
+<font color="white" size=".72c">
+men experiment with a light</font>
+
+451
+00:23:56,767 --> 00:23:59,671
+<font color="white" size=".72c">
+once undreamed-of
+
+in the natural world.</font>
+
+452
+00:23:59,704 --> 00:24:01,139
+<font color="white" size=".72c">
+NARRATOR:
+
+...and build small devices</font>
+
+453
+00:24:01,172 --> 00:24:03,808
+<font color="white" size=".72c">
+that could control
+
+the flow of electricity--</font>
+
+454
+00:24:03,841 --> 00:24:05,777
+<font color="white" size=".72c">
+transistors.</font>
+
+455
+00:24:05,810 --> 00:24:08,847
+<font color="white" size=".72c">
+MAN 2 (on film):
+
+It's destined to play
+
+a vital role in your future,</font>
+
+456
+00:24:08,880 --> 00:24:11,015
+<font color="white" size=".72c">
+your electronic future.</font>
+
+457
+00:24:11,048 --> 00:24:14,018
+<font color="white" size=".72c">
+NARRATOR:
+
+Transistors became
+
+the building blocks</font>
+
+458
+00:24:14,051 --> 00:24:16,654
+<font color="white" size=".72c">
+of the burgeoning field
+
+of electronics.</font>
+
+459
+00:24:16,687 --> 00:24:18,056
+<font color="white" size=".72c">
+Computers, disc drives--</font>
+
+460
+00:24:18,089 --> 00:24:21,793
+<font color="white" size=".72c">
+the entire digital revolution
+
+soon followed,</font>
+
+461
+00:24:21,826 --> 00:24:22,794
+<font color="white" size=".72c">
+all made possible</font>
+
+462
+00:24:22,827 --> 00:24:26,198
+<font color="white" size=".72c">
+by the equations
+
+of quantum theory.</font>
+
+463
+00:24:27,198 --> 00:24:30,935
+<font color="white" size=".72c">
+Yet Einstein's questions
+
+about entanglement</font>
+
+464
+00:24:30,968 --> 00:24:32,070
+<font color="white" size=".72c">
+and what it implied</font>
+
+465
+00:24:32,103 --> 00:24:34,105
+<font color="white" size=".72c">
+about the incompleteness
+
+of quantum mechanics</font>
+
+466
+00:24:34,138 --> 00:24:38,776
+<font color="white" size=".72c">
+remained unanswered
+
+until the 1960s,</font>
+
+467
+00:24:38,809 --> 00:24:42,013
+<font color="white" size=".72c">
+when a physicist
+
+from Northern Ireland</font>
+
+468
+00:24:42,046 --> 00:24:44,349
+<font color="white" size=".72c">
+made a remarkable breakthrough--</font>
+
+469
+00:24:44,382 --> 00:24:46,751
+<font color="white" size=".72c">
+John Bell.</font>
+
+470
+00:24:46,784 --> 00:24:49,454
+<font color="white" size=".72c">
+KAISER:
+
+Bell was a very talented
+
+young physics student,</font>
+
+471
+00:24:49,487 --> 00:24:52,190
+<font color="white" size=".72c">
+but he quickly grew dissatisfied
+
+with what he considered almost,</font>
+
+472
+00:24:52,223 --> 00:24:54,425
+<font color="white" size=".72c">
+almost a kind of dishonesty
+
+among his teachers.</font>
+
+473
+00:24:54,458 --> 00:24:55,827
+<font color="white" size=".72c">
+(talking in background)</font>
+
+474
+00:24:55,860 --> 00:24:57,161
+<font color="white" size=".72c">
+NARRATOR:
+
+Bell insisted</font>
+
+475
+00:24:57,194 --> 00:24:59,964
+<font color="white" size=".72c">
+that Einstein's questions
+
+about quantum mechanics</font>
+
+476
+00:24:59,997 --> 00:25:01,599
+<font color="white" size=".72c">
+had not been addressed.</font>
+
+477
+00:25:01,632 --> 00:25:04,369
+<font color="white" size=".72c">
+KAISER:
+
+He got into shouting matches
+
+with his professors.</font>
+
+478
+00:25:04,402 --> 00:25:06,671
+<font color="white" size=".72c">
+"Don't tell us that Bohr solved
+
+all the problems.</font>
+
+479
+00:25:06,704 --> 00:25:09,407
+<font color="white" size=".72c">
+This really deserves
+
+further thought."</font>
+
+480
+00:25:09,440 --> 00:25:13,144
+<font color="white" size=".72c">
+BELL:
+
+Quantum mechanics has been
+
+fantastically successful.</font>
+
+481
+00:25:13,177 --> 00:25:16,347
+<font color="white" size=".72c">
+So it is
+
+a very intriguing situation</font>
+
+482
+00:25:16,380 --> 00:25:19,083
+<font color="white" size=".72c">
+that at the, at the foundation</font>
+
+483
+00:25:19,116 --> 00:25:22,287
+<font color="white" size=".72c">
+of all that impressive success,</font>
+
+484
+00:25:22,320 --> 00:25:23,821
+<font color="white" size=".72c">
+there are these great doubts.</font>
+
+485
+00:25:23,854 --> 00:25:26,658
+<font color="white" size=".72c">
+♪ ♪</font>
+
+486
+00:25:26,691 --> 00:25:29,727
+<font color="white" size=".72c">
+CARROLL:
+
+It's a very strange thing
+
+that ever since the 1930s,</font>
+
+487
+00:25:29,760 --> 00:25:31,930
+<font color="white" size=".72c">
+the idea of sitting
+
+and thinking hard</font>
+
+488
+00:25:31,963 --> 00:25:33,698
+<font color="white" size=".72c">
+about the foundations
+
+of quantum mechanics</font>
+
+489
+00:25:33,731 --> 00:25:36,768
+<font color="white" size=".72c">
+has been disreputable
+
+among professional physicists.</font>
+
+490
+00:25:36,801 --> 00:25:38,436
+<font color="white" size=".72c">
+When people tried to do that,</font>
+
+491
+00:25:38,469 --> 00:25:40,772
+<font color="white" size=".72c">
+they were kicked out
+
+of physics departments.</font>
+
+492
+00:25:40,805 --> 00:25:42,607
+<font color="white" size=".72c">
+And so, for someone like Bell,</font>
+
+493
+00:25:42,640 --> 00:25:46,344
+<font color="white" size=".72c">
+he needed to have a day job
+
+doing ordinary particle physics,</font>
+
+494
+00:25:46,377 --> 00:25:48,179
+<font color="white" size=".72c">
+but at night,
+
+you know, hidden away,</font>
+
+495
+00:25:48,212 --> 00:25:49,247
+<font color="white" size=".72c">
+he could do work</font>
+
+496
+00:25:49,280 --> 00:25:50,648
+<font color="white" size=".72c">
+on the foundations
+
+of quantum mechanics.</font>
+
+497
+00:25:50,681 --> 00:25:54,118
+<font color="white" size=".72c">
+NARRATOR:
+
+Bell became
+
+a leading particle physicist</font>
+
+498
+00:25:54,151 --> 00:25:55,987
+<font color="white" size=".72c">
+at CERN, in Geneva.</font>
+
+499
+00:25:56,020 --> 00:25:58,222
+<font color="white" size=".72c">
+But he continued to explore
+
+the debate</font>
+
+500
+00:25:58,255 --> 00:26:01,426
+<font color="white" size=".72c">
+between Einstein and Bohr.</font>
+
+501
+00:26:01,459 --> 00:26:06,164
+<font color="white" size=".72c">
+And in 1964, he published
+
+an astonishing paper.</font>
+
+502
+00:26:07,865 --> 00:26:10,034
+<font color="white" size=".72c">
+Bell proved</font>
+
+503
+00:26:10,067 --> 00:26:14,238
+<font color="white" size=".72c">
+that Bohr's and Einstein's ideas
+
+made different predictions.</font>
+
+504
+00:26:14,271 --> 00:26:18,576
+<font color="white" size=".72c">
+If you could randomly perform
+
+one of two possible measurements</font>
+
+505
+00:26:18,609 --> 00:26:20,044
+<font color="white" size=".72c">
+on each particle,</font>
+
+506
+00:26:20,077 --> 00:26:24,749
+<font color="white" size=".72c">
+and check how often
+
+the results lined up,</font>
+
+507
+00:26:24,782 --> 00:26:27,552
+<font color="white" size=".72c">
+the answer would reveal whether
+
+we lived in Einstein's world--</font>
+
+508
+00:26:27,585 --> 00:26:31,422
+<font color="white" size=".72c">
+a world that followed
+
+common-sense laws--</font>
+
+509
+00:26:31,455 --> 00:26:34,892
+<font color="white" size=".72c">
+or Bohr's--</font>
+
+510
+00:26:34,925 --> 00:26:37,195
+<font color="white" size=".72c">
+a world that was deeply strange</font>
+
+511
+00:26:37,228 --> 00:26:40,298
+<font color="white" size=".72c">
+and allowed
+
+spooky quantum connections.</font>
+
+512
+00:26:40,331 --> 00:26:41,566
+<font color="white" size=".72c">
+We now know with hindsight</font>
+
+513
+00:26:41,599 --> 00:26:43,901
+<font color="white" size=".72c">
+this was one of
+
+the most significant articles</font>
+
+514
+00:26:43,934 --> 00:26:45,136
+<font color="white" size=".72c">
+in the history of physics--</font>
+
+515
+00:26:45,169 --> 00:26:46,938
+<font color="white" size=".72c">
+not just the history
+
+of 20th-century physics,</font>
+
+516
+00:26:46,971 --> 00:26:49,541
+<font color="white" size=".72c">
+in the history of,
+
+of the field as a whole.</font>
+
+517
+00:26:51,609 --> 00:26:54,245
+<font color="white" size=".72c">
+But Bell's article appears
+
+in this, you know,</font>
+
+518
+00:26:54,278 --> 00:26:55,480
+<font color="white" size=".72c">
+sort of out-of-the-way journal--</font>
+
+519
+00:26:55,513 --> 00:26:57,882
+<font color="white" size=".72c">
+in fact, the journal itself
+
+folds a few years later.</font>
+
+520
+00:26:57,915 --> 00:27:00,385
+<font color="white" size=".72c">
+This is not central
+
+to the physics community.</font>
+
+521
+00:27:00,418 --> 00:27:03,254
+<font color="white" size=".72c">
+It's sort of dutifully filed
+
+on library shelves</font>
+
+522
+00:27:03,287 --> 00:27:04,355
+<font color="white" size=".72c">
+and then forgotten.</font>
+
+523
+00:27:04,388 --> 00:27:06,891
+<font color="white" size=".72c">
+It literally collects dust
+
+on the shelf.</font>
+
+524
+00:27:06,924 --> 00:27:11,963
+<font color="white" size=".72c">
+NARRATOR:
+
+A few years later,
+
+completely by chance,</font>
+
+525
+00:27:11,996 --> 00:27:13,631
+<font color="white" size=".72c">
+a brilliant
+
+experimental physicist</font>
+
+526
+00:27:13,664 --> 00:27:16,768
+<font color="white" size=".72c">
+stumbled upon Bell's article.</font>
+
+527
+00:27:16,801 --> 00:27:19,904
+<font color="white" size=".72c">
+JOHN CLAUSER:
+
+I thought this is one
+
+of the most amazing papers</font>
+
+528
+00:27:19,937 --> 00:27:23,041
+<font color="white" size=".72c">
+I had ever read
+
+in my whole life.</font>
+
+529
+00:27:23,074 --> 00:27:26,711
+<font color="white" size=".72c">
+And I kept wondering,
+
+"Well, gee, this is wonderful,</font>
+
+530
+00:27:26,744 --> 00:27:29,514
+<font color="white" size=".72c">
+but where's
+
+the experimental evidence?"</font>
+
+531
+00:27:29,547 --> 00:27:32,083
+<font color="white" size=".72c">
+NARRATOR:
+
+John worked on Bell's theory</font>
+
+532
+00:27:32,116 --> 00:27:33,918
+<font color="white" size=".72c">
+with fellow physicist
+
+Abner Shimony,</font>
+
+533
+00:27:33,951 --> 00:27:37,088
+<font color="white" size=".72c">
+and at the University
+
+of California, Berkeley,</font>
+
+534
+00:27:37,121 --> 00:27:40,191
+<font color="white" size=".72c">
+started work on an experiment
+
+to test it.</font>
+
+535
+00:27:40,224 --> 00:27:44,062
+<font color="white" size=".72c">
+He had a talent for tinkering
+
+in the lab</font>
+
+536
+00:27:44,095 --> 00:27:45,496
+<font color="white" size=".72c">
+and building the parts
+
+he needed.</font>
+
+537
+00:27:45,529 --> 00:27:46,964
+<font color="white" size=".72c">
+CLAUSER:
+
+I used to rummage around here</font>
+
+538
+00:27:46,997 --> 00:27:49,867
+<font color="white" size=".72c">
+and scavenge and dumpster-dive
+
+for old equipment.</font>
+
+539
+00:27:49,900 --> 00:27:54,172
+<font color="white" size=".72c">
+NARRATOR:
+
+He knew where to find hidden
+
+storage rooms, like this,</font>
+
+540
+00:27:54,205 --> 00:27:57,241
+<font color="white" size=".72c">
+which he could raid
+
+to salvage spare parts</font>
+
+541
+00:27:57,274 --> 00:27:59,544
+<font color="white" size=".72c">
+for his experiments.</font>
+
+542
+00:27:59,577 --> 00:28:02,346
+<font color="white" size=".72c">
+(grunts)</font>
+
+543
+00:28:02,379 --> 00:28:07,251
+<font color="white" size=".72c">
+CLAUSER:
+
+This was a power supply
+
+for diode lasers.</font>
+
+544
+00:28:07,284 --> 00:28:09,387
+<font color="white" size=".72c">
+That looks like
+
+something I built.</font>
+
+545
+00:28:09,420 --> 00:28:12,657
+<font color="white" size=".72c">
+♪ ♪</font>
+
+546
+00:28:12,690 --> 00:28:15,259
+<font color="white" size=".72c">
+Here is a picture
+
+of the experiment I did.</font>
+
+547
+00:28:15,292 --> 00:28:19,130
+<font color="white" size=".72c">
+(chuckling):
+
+I had more hair in those days.</font>
+
+548
+00:28:19,163 --> 00:28:20,665
+<font color="white" size=".72c">
+Here's another picture.</font>
+
+549
+00:28:20,698 --> 00:28:22,333
+<font color="white" size=".72c">
+This is of Stu Freedman,</font>
+
+550
+00:28:22,366 --> 00:28:24,602
+<font color="white" size=".72c">
+who worked on it with me.</font>
+
+551
+00:28:24,635 --> 00:28:29,540
+<font color="white" size=".72c">
+NARRATOR:
+
+Piece by piece,
+
+John Clauser and Stuart Freedman</font>
+
+552
+00:28:29,573 --> 00:28:32,877
+<font color="white" size=".72c">
+constructed the world's first
+
+Bell test experiment.</font>
+
+553
+00:28:32,910 --> 00:28:37,014
+<font color="white" size=".72c">
+They focused a laser
+
+onto calcium atoms,</font>
+
+554
+00:28:37,047 --> 00:28:40,051
+<font color="white" size=".72c">
+causing them to emit
+
+pairs of photons</font>
+
+555
+00:28:40,084 --> 00:28:42,987
+<font color="white" size=".72c">
+that the equations
+
+of quantum theory suggested</font>
+
+556
+00:28:43,020 --> 00:28:45,990
+<font color="white" size=".72c">
+should be entangled.</font>
+
+557
+00:28:46,023 --> 00:28:48,726
+<font color="white" size=".72c">
+They recorded whether or not
+
+the photons passed</font>
+
+558
+00:28:48,759 --> 00:28:51,662
+<font color="white" size=".72c">
+through filters on each side</font>
+
+559
+00:28:51,695 --> 00:28:56,200
+<font color="white" size=".72c">
+and checked how often
+
+the answers agreed.</font>
+
+560
+00:28:56,233 --> 00:28:58,870
+<font color="white" size=".72c">
+After hundreds of thousands
+
+of measurements,</font>
+
+561
+00:28:58,903 --> 00:29:00,638
+<font color="white" size=".72c">
+if the pairs were
+
+more correlated</font>
+
+562
+00:29:00,671 --> 00:29:03,307
+<font color="white" size=".72c">
+than Einstein's physics
+
+predicted,</font>
+
+563
+00:29:03,340 --> 00:29:08,579
+<font color="white" size=".72c">
+they must be spookily entangled.</font>
+
+564
+00:29:08,612 --> 00:29:10,481
+<font color="white" size=".72c">
+We saw the stronger correlation</font>
+
+565
+00:29:10,514 --> 00:29:12,150
+<font color="white" size=".72c">
+characteristic
+
+of quantum mechanics.</font>
+
+566
+00:29:12,183 --> 00:29:16,087
+<font color="white" size=".72c">
+We measured it,
+
+and that is what we got.</font>
+
+567
+00:29:16,120 --> 00:29:17,855
+<font color="white" size=".72c">
+♪ ♪</font>
+
+568
+00:29:17,888 --> 00:29:19,023
+<font color="white" size=".72c">
+NARRATOR:
+
+The outcome was exactly</font>
+
+569
+00:29:19,056 --> 00:29:22,560
+<font color="white" size=".72c">
+what Bohr's quantum mechanics
+
+predicted.</font>
+
+570
+00:29:22,593 --> 00:29:25,530
+<font color="white" size=".72c">
+The experiment appeared to show</font>
+
+571
+00:29:25,563 --> 00:29:28,332
+<font color="white" size=".72c">
+that the spooky connections
+
+of quantum entanglement</font>
+
+572
+00:29:28,365 --> 00:29:31,469
+<font color="white" size=".72c">
+did exist in the natural world.</font>
+
+573
+00:29:31,502 --> 00:29:38,910
+<font color="white" size=".72c">
+Could it be that the great
+
+Albert Einstein was wrong?</font>
+
+574
+00:29:38,943 --> 00:29:40,711
+<font color="white" size=".72c">
+Remarkably,</font>
+
+575
+00:29:40,744 --> 00:29:44,982
+<font color="white" size=".72c">
+the first people to react
+
+to this extraordinary result</font>
+
+576
+00:29:45,015 --> 00:29:48,085
+<font color="white" size=".72c">
+were not the world's
+
+leading physicists.</font>
+
+577
+00:29:48,118 --> 00:29:51,656
+<font color="white" size=".72c">
+♪ ♪</font>
+
+578
+00:29:51,689 --> 00:29:54,692
+<font color="white" size=".72c">
+CLAUSER:
+
+Ronald Reagan's definition
+
+of a hippie</font>
+
+579
+00:29:54,725 --> 00:29:58,596
+<font color="white" size=".72c">
+was someone who dresses
+
+like Tarzan,</font>
+
+580
+00:29:58,629 --> 00:29:59,831
+<font color="white" size=".72c">
+has hair like Jane,</font>
+
+581
+00:29:59,864 --> 00:30:02,099
+<font color="white" size=".72c">
+and smells like Cheeta.</font>
+
+582
+00:30:02,132 --> 00:30:02,767
+<font color="white" size=".72c">
+(laughs)</font>
+
+583
+00:30:02,800 --> 00:30:06,003
+<font color="white" size=".72c">
+♪ ♪</font>
+
+584
+00:30:06,036 --> 00:30:09,073
+<font color="white" size=".72c">
+NARRATOR:
+
+A small group
+
+of free-thinking physicists</font>
+
+585
+00:30:09,106 --> 00:30:12,577
+<font color="white" size=".72c">
+at the heart of San Francisco's
+
+New Age scene</font>
+
+586
+00:30:12,610 --> 00:30:15,379
+<font color="white" size=".72c">
+got in touch with John.</font>
+
+587
+00:30:15,412 --> 00:30:18,449
+<font color="white" size=".72c">
+KAISER:
+
+They called themselves
+
+the Fundamental Fysiks Group.</font>
+
+588
+00:30:18,482 --> 00:30:20,351
+<font color="white" size=".72c">
+They spelled physics with an F.</font>
+
+589
+00:30:20,384 --> 00:30:23,454
+<font color="white" size=".72c">
+Some members would experiment
+
+with psychedelic drugs.</font>
+
+590
+00:30:23,487 --> 00:30:25,456
+<font color="white" size=".72c">
+I mean, they were,
+
+they were kind of in the flow</font>
+
+591
+00:30:25,489 --> 00:30:26,791
+<font color="white" size=".72c">
+of the kind of hippie scene.</font>
+
+592
+00:30:26,824 --> 00:30:29,193
+<font color="white" size=".72c">
+And that group was
+
+just mesmerized</font>
+
+593
+00:30:29,226 --> 00:30:30,394
+<font color="white" size=".72c">
+by the question of entanglement.</font>
+
+594
+00:30:30,427 --> 00:30:33,264
+<font color="white" size=".72c">
+♪ ♪</font>
+
+595
+00:30:33,297 --> 00:30:36,234
+<font color="white" size=".72c">
+CLAUSER:
+
+The idea was just to discuss
+
+fringe subjects</font>
+
+596
+00:30:36,267 --> 00:30:37,401
+<font color="white" size=".72c">
+with an open mind.</font>
+
+597
+00:30:37,434 --> 00:30:38,736
+<font color="white" size=".72c">
+And I thought, "Oh, sure!</font>
+
+598
+00:30:38,769 --> 00:30:40,838
+<font color="white" size=".72c">
+Uh, that's kind of what I do."</font>
+
+599
+00:30:40,871 --> 00:30:42,874
+<font color="white" size=".72c">
+♪ ♪</font>
+
+600
+00:30:42,907 --> 00:30:47,578
+<font color="white" size=".72c">
+They were doing their best
+
+to link Eastern mysticism</font>
+
+601
+00:30:47,611 --> 00:30:50,147
+<font color="white" size=".72c">
+with quantum entanglement.</font>
+
+602
+00:30:50,180 --> 00:30:52,717
+<font color="white" size=".72c">
+They sold a lot
+
+of popular textbooks.</font>
+
+603
+00:30:52,750 --> 00:30:55,019
+<font color="white" size=".72c">
+There were a lot of followers.</font>
+
+604
+00:30:55,052 --> 00:30:57,455
+<font color="white" size=".72c">
+NARRATOR:
+
+Their books became bestsellers,</font>
+
+605
+00:30:57,488 --> 00:31:01,592
+<font color="white" size=".72c">
+like "The Tao of Physics,"
+
+which highlighted</font>
+
+606
+00:31:01,625 --> 00:31:03,461
+<font color="white" size=".72c">
+that Eastern philosophy
+
+and quantum entanglement</font>
+
+607
+00:31:03,494 --> 00:31:06,430
+<font color="white" size=".72c">
+both described
+
+a deep connectedness</font>
+
+608
+00:31:06,463 --> 00:31:09,000
+<font color="white" size=".72c">
+of things in the universe.</font>
+
+609
+00:31:09,033 --> 00:31:11,135
+<font color="white" size=".72c">
+It was the great cosmic oneness.</font>
+
+610
+00:31:11,168 --> 00:31:17,074
+<font color="white" size=".72c">
+NARRATOR:
+
+The group held meetings
+
+at the iconic Esalen Institute.</font>
+
+611
+00:31:17,107 --> 00:31:19,944
+<font color="white" size=".72c">
+CLAUSER:
+
+It was a marvelous,
+
+beautiful place</font>
+
+612
+00:31:19,977 --> 00:31:21,979
+<font color="white" size=".72c">
+where they would discuss
+
+all of these ideas.</font>
+
+613
+00:31:22,012 --> 00:31:25,049
+<font color="white" size=".72c">
+It was right
+
+on the Pacific Coast</font>
+
+614
+00:31:25,082 --> 00:31:26,984
+<font color="white" size=".72c">
+with the overflow
+
+from the hot tubs</font>
+
+615
+00:31:27,017 --> 00:31:30,321
+<font color="white" size=".72c">
+cascading down the cliffs
+
+into the Pacific Ocean.</font>
+
+616
+00:31:30,354 --> 00:31:33,324
+<font color="white" size=".72c">
+To my knowledge,</font>
+
+617
+00:31:33,357 --> 00:31:36,961
+<font color="white" size=".72c">
+no useful connections
+
+to Eastern mysticism</font>
+
+618
+00:31:36,994 --> 00:31:38,729
+<font color="white" size=".72c">
+were ever discovered
+
+by the group.</font>
+
+619
+00:31:38,762 --> 00:31:41,332
+<font color="white" size=".72c">
+♪ ♪</font>
+
+620
+00:31:41,365 --> 00:31:43,234
+<font color="white" size=".72c">
+(chuckles):
+
+But it was fun.</font>
+
+621
+00:31:44,702 --> 00:31:46,437
+<font color="white" size=".72c">
+NARRATOR:
+
+The Fundamental Fysiks Group</font>
+
+622
+00:31:46,470 --> 00:31:50,308
+<font color="white" size=".72c">
+may not have uncovered
+
+the secrets of "cosmic oneness,"</font>
+
+623
+00:31:50,341 --> 00:31:54,278
+<font color="white" size=".72c">
+but in seeing entanglement
+
+as central to physics,</font>
+
+624
+00:31:54,311 --> 00:32:00,351
+<font color="white" size=".72c">
+they were decades ahead
+
+of their time.</font>
+
+625
+00:32:00,384 --> 00:32:04,689
+<font color="white" size=".72c">
+♪ ♪</font>
+
+626
+00:32:04,722 --> 00:32:06,524
+<font color="white" size=".72c">
+40 years later,</font>
+
+627
+00:32:06,557 --> 00:32:08,893
+<font color="white" size=".72c">
+cutting-edge labs
+
+around the world</font>
+
+628
+00:32:08,926 --> 00:32:11,963
+<font color="white" size=".72c">
+are now racing
+
+to harness quantum entanglement</font>
+
+629
+00:32:11,996 --> 00:32:15,866
+<font color="white" size=".72c">
+to create revolutionary
+
+new technologies...</font>
+
+630
+00:32:15,899 --> 00:32:18,569
+<font color="white" size=".72c">
+♪ ♪</font>
+
+631
+00:32:18,602 --> 00:32:22,006
+<font color="white" size=".72c">
+...like quantum computers.</font>
+
+632
+00:32:22,039 --> 00:32:24,308
+<font color="white" size=".72c">
+♪ ♪</font>
+
+633
+00:32:24,341 --> 00:32:25,676
+<font color="white" size=".72c">
+GHOSE:
+
+In our everyday computers,</font>
+
+634
+00:32:25,709 --> 00:32:29,080
+<font color="white" size=".72c">
+the fundamental unit
+
+of computing is a bit,</font>
+
+635
+00:32:29,113 --> 00:32:31,148
+<font color="white" size=".72c">
+a binary digit-- zero or one.</font>
+
+636
+00:32:31,181 --> 00:32:33,884
+<font color="white" size=".72c">
+And inside the computer,
+
+there's all these transistors,</font>
+
+637
+00:32:33,917 --> 00:32:35,619
+<font color="white" size=".72c">
+which are turning on and off
+
+currents.</font>
+
+638
+00:32:35,652 --> 00:32:37,855
+<font color="white" size=".72c">
+On is one, off is zero,</font>
+
+639
+00:32:37,888 --> 00:32:41,559
+<font color="white" size=".72c">
+and these combinations lead
+
+to universal computing.</font>
+
+640
+00:32:41,592 --> 00:32:43,094
+<font color="white" size=".72c">
+With a quantum computer,</font>
+
+641
+00:32:43,127 --> 00:32:44,428
+<font color="white" size=".72c">
+you start
+
+with a fundamental unit</font>
+
+642
+00:32:44,461 --> 00:32:47,098
+<font color="white" size=".72c">
+that's not a bit,
+
+but a quantum bit,</font>
+
+643
+00:32:47,131 --> 00:32:49,667
+<font color="white" size=".72c">
+which is not really
+
+a zero or a one,</font>
+
+644
+00:32:49,700 --> 00:32:50,701
+<font color="white" size=".72c">
+but it can be fluid.</font>
+
+645
+00:32:50,734 --> 00:32:52,803
+<font color="white" size=".72c">
+♪ ♪</font>
+
+646
+00:32:52,836 --> 00:32:57,808
+<font color="white" size=".72c">
+NARRATOR:
+
+A quantum bit makes use of the
+
+fuzziness of the quantum world.</font>
+
+647
+00:32:57,841 --> 00:32:59,343
+<font color="white" size=".72c">
+A qubit, as it's known,</font>
+
+648
+00:32:59,376 --> 00:33:04,648
+<font color="white" size=".72c">
+can be zero or one,
+
+or a combination of both.</font>
+
+649
+00:33:04,681 --> 00:33:07,284
+<font color="white" size=".72c">
+A particle
+
+or tiny quantum system</font>
+
+650
+00:33:07,317 --> 00:33:09,453
+<font color="white" size=".72c">
+can be made into a qubit.</font>
+
+651
+00:33:09,486 --> 00:33:11,689
+<font color="white" size=".72c">
+And today, it's not just
+
+pairs of particles</font>
+
+652
+00:33:11,722 --> 00:33:13,891
+<font color="white" size=".72c">
+that can be entangled.</font>
+
+653
+00:33:13,924 --> 00:33:17,228
+<font color="white" size=".72c">
+Groups of qubits can be linked
+
+with entanglement</font>
+
+654
+00:33:17,261 --> 00:33:19,730
+<font color="white" size=".72c">
+to create a quantum computer.</font>
+
+655
+00:33:19,763 --> 00:33:21,832
+<font color="white" size=".72c">
+♪ ♪</font>
+
+656
+00:33:21,865 --> 00:33:25,503
+<font color="white" size=".72c">
+The more qubits, the greater
+
+the processing power.</font>
+
+657
+00:33:25,536 --> 00:33:27,805
+<font color="white" size=".72c">
+♪ ♪</font>
+
+658
+00:33:27,838 --> 00:33:31,842
+<font color="white" size=".72c">
+At Google's quantum computing
+
+laboratory in Santa Barbara,</font>
+
+659
+00:33:31,875 --> 00:33:35,212
+<font color="white" size=".72c">
+the team has recently succeeded
+
+in creating a tiny chip</font>
+
+660
+00:33:35,245 --> 00:33:39,116
+<font color="white" size=".72c">
+that holds an array
+
+of 72 qubits.</font>
+
+661
+00:33:39,149 --> 00:33:41,685
+<font color="white" size=".72c">
+♪ ♪</font>
+
+662
+00:33:41,718 --> 00:33:43,821
+<font color="white" size=".72c">
+The task for researcher
+
+Marissa Giustina</font>
+
+663
+00:33:43,854 --> 00:33:45,022
+<font color="white" size=".72c">
+and her colleagues</font>
+
+664
+00:33:45,055 --> 00:33:49,827
+<font color="white" size=".72c">
+is to send signals
+
+to these microscopic qubits</font>
+
+665
+00:33:49,860 --> 00:33:54,165
+<font color="white" size=".72c">
+to control and entangle them.</font>
+
+666
+00:33:54,198 --> 00:33:56,901
+<font color="white" size=".72c">
+GIUSTINA:
+
+Mounted on the underside
+
+of this plate,</font>
+
+667
+00:33:56,934 --> 00:33:58,836
+<font color="white" size=".72c">
+we have the quantum
+
+processing chip itself,</font>
+
+668
+00:33:58,869 --> 00:34:01,272
+<font color="white" size=".72c">
+in essence,
+
+a quantum playground,</font>
+
+669
+00:34:01,305 --> 00:34:02,273
+<font color="white" size=".72c">
+you could say.</font>
+
+670
+00:34:02,306 --> 00:34:05,543
+<font color="white" size=".72c">
+Each qubit is a quantum object</font>
+
+671
+00:34:05,576 --> 00:34:09,179
+<font color="white" size=".72c">
+that we should be able
+
+to control at will.</font>
+
+672
+00:34:09,213 --> 00:34:11,815
+<font color="white" size=".72c">
+Thinking about it as...</font>
+
+673
+00:34:11,849 --> 00:34:15,085
+<font color="white" size=".72c">
+"the faster version
+
+of that PC over there"</font>
+
+674
+00:34:15,119 --> 00:34:18,089
+<font color="white" size=".72c">
+would be a great slight to this.</font>
+
+675
+00:34:18,121 --> 00:34:19,757
+<font color="white" size=".72c">
+It can be much more than that.</font>
+
+676
+00:34:21,692 --> 00:34:24,228
+<font color="white" size=".72c">
+NARRATOR:
+
+By using entangled qubits,</font>
+
+677
+00:34:24,261 --> 00:34:27,164
+<font color="white" size=".72c">
+quantum computers could tackle
+
+real-world problems</font>
+
+678
+00:34:27,197 --> 00:34:31,002
+<font color="white" size=".72c">
+that traditional computers
+
+simply can't cope with.</font>
+
+679
+00:34:32,735 --> 00:34:34,205
+<font color="white" size=".72c">
+For example,</font>
+
+680
+00:34:34,237 --> 00:34:36,674
+<font color="white" size=".72c">
+a salesman has to travel
+
+to several cities</font>
+
+681
+00:34:36,706 --> 00:34:40,143
+<font color="white" size=".72c">
+and wants to find
+
+the shortest route.</font>
+
+682
+00:34:40,177 --> 00:34:43,313
+<font color="white" size=".72c">
+Sounds easy.</font>
+
+683
+00:34:43,347 --> 00:34:45,181
+<font color="white" size=".72c">
+But with just 30 cities,</font>
+
+684
+00:34:45,215 --> 00:34:47,650
+<font color="white" size=".72c">
+there are
+
+so many possible routes</font>
+
+685
+00:34:47,684 --> 00:34:49,719
+<font color="white" size=".72c">
+that it would take
+
+an ordinary computer,</font>
+
+686
+00:34:49,753 --> 00:34:51,222
+<font color="white" size=".72c">
+even a powerful one,</font>
+
+687
+00:34:51,255 --> 00:34:54,592
+<font color="white" size=".72c">
+hundreds of years
+
+to try each one</font>
+
+688
+00:34:54,625 --> 00:34:57,261
+<font color="white" size=".72c">
+and find the shortest.</font>
+
+689
+00:34:57,294 --> 00:34:59,763
+<font color="white" size=".72c">
+But with a handful
+
+of entangled qubits,</font>
+
+690
+00:34:59,796 --> 00:35:03,100
+<font color="white" size=".72c">
+a quantum computer could resolve
+
+the optimal path</font>
+
+691
+00:35:03,133 --> 00:35:06,504
+<font color="white" size=".72c">
+in a fraction
+
+of the number of steps.</font>
+
+692
+00:35:08,739 --> 00:35:12,276
+<font color="white" size=".72c">
+There's another reason teams
+
+like Marissa's are racing</font>
+
+693
+00:35:12,309 --> 00:35:14,578
+<font color="white" size=".72c">
+to create a powerful
+
+quantum computer--</font>
+
+694
+00:35:14,611 --> 00:35:18,649
+<font color="white" size=".72c">
+cracking secret codes.</font>
+
+695
+00:35:18,682 --> 00:35:21,085
+<font color="white" size=".72c">
+In today's world,
+
+everything from online shopping</font>
+
+696
+00:35:21,118 --> 00:35:24,388
+<font color="white" size=".72c">
+to covert
+
+military communications</font>
+
+697
+00:35:24,421 --> 00:35:28,692
+<font color="white" size=".72c">
+is protected from hackers
+
+using secure digital codes,</font>
+
+698
+00:35:28,725 --> 00:35:34,031
+<font color="white" size=".72c">
+a process called encryption.</font>
+
+699
+00:35:34,064 --> 00:35:37,735
+<font color="white" size=".72c">
+But what if hackers
+
+could get hold</font>
+
+700
+00:35:37,768 --> 00:35:39,837
+<font color="white" size=".72c">
+of quantum computers?</font>
+
+701
+00:35:39,870 --> 00:35:41,172
+<font color="white" size=".72c">
+GHOSE:
+
+A quantum computer</font>
+
+702
+00:35:41,205 --> 00:35:43,841
+<font color="white" size=".72c">
+could crack
+
+our best encryption protocols</font>
+
+703
+00:35:43,874 --> 00:35:45,075
+<font color="white" size=".72c">
+in minutes,</font>
+
+704
+00:35:45,108 --> 00:35:46,410
+<font color="white" size=".72c">
+whereas a regular computer,</font>
+
+705
+00:35:46,443 --> 00:35:48,512
+<font color="white" size=".72c">
+or even a super-computing
+
+network today,</font>
+
+706
+00:35:48,545 --> 00:35:50,982
+<font color="white" size=".72c">
+couldn't do it, you know,
+
+given months of time.</font>
+
+707
+00:35:52,382 --> 00:35:54,885
+<font color="white" size=".72c">
+NARRATOR:
+
+But while quantum entanglement
+
+may be a threat</font>
+
+708
+00:35:54,918 --> 00:35:56,787
+<font color="white" size=".72c">
+to traditional encryption,</font>
+
+709
+00:35:56,820 --> 00:36:01,425
+<font color="white" size=".72c">
+it also offers an even more
+
+secure alternative--</font>
+
+710
+00:36:01,458 --> 00:36:06,030
+<font color="white" size=".72c">
+a communication system
+
+that the very laws of physics</font>
+
+711
+00:36:06,063 --> 00:36:08,499
+<font color="white" size=".72c">
+protect from secret hacking.</font>
+
+712
+00:36:08,532 --> 00:36:11,335
+<font color="white" size=".72c">
+♪ ♪</font>
+
+713
+00:36:12,803 --> 00:36:17,141
+<font color="white" size=".72c">
+Researchers in China
+
+are leading the way.</font>
+
+714
+00:36:17,174 --> 00:36:19,543
+<font color="white" size=".72c">
+Here in Shanghai,</font>
+
+715
+00:36:19,576 --> 00:36:23,347
+<font color="white" size=".72c">
+at the University
+
+of Science and Technology,</font>
+
+716
+00:36:23,380 --> 00:36:29,486
+<font color="white" size=".72c">
+Jian-Wei Pan runs a leading
+
+quantum research center.</font>
+
+717
+00:36:29,519 --> 00:36:31,055
+<font color="white" size=".72c">
+His teams are working to harness</font>
+
+718
+00:36:31,088 --> 00:36:35,125
+<font color="white" size=".72c">
+the properties
+
+of the quantum world.</font>
+
+719
+00:36:35,158 --> 00:36:39,964
+<font color="white" size=".72c">
+They can send secret messages
+
+using a stream of photons</font>
+
+720
+00:36:39,997 --> 00:36:42,533
+<font color="white" size=".72c">
+in a system
+
+that instantly detects</font>
+
+721
+00:36:42,566 --> 00:36:45,803
+<font color="white" size=".72c">
+any attempt to eavesdrop.</font>
+
+722
+00:36:46,903 --> 00:36:48,672
+<font color="white" size=".72c">
+Jian-Wei's team</font>
+
+723
+00:36:48,705 --> 00:36:51,442
+<font color="white" size=".72c">
+has created
+
+a network of optical fibers</font>
+
+724
+00:36:51,475 --> 00:36:53,344
+<font color="white" size=".72c">
+more than a thousand miles long</font>
+
+725
+00:36:53,377 --> 00:36:55,879
+<font color="white" size=".72c">
+that can carry
+
+secure information</font>
+
+726
+00:36:55,912 --> 00:36:58,816
+<font color="white" size=".72c">
+from Beijing to Shanghai.</font>
+
+727
+00:36:58,849 --> 00:37:03,120
+<font color="white" size=".72c">
+It is used by banks
+
+and data companies.</font>
+
+728
+00:37:03,153 --> 00:37:07,625
+<font color="white" size=".72c">
+But there's a limit to how far
+
+quantum signals can be sent</font>
+
+729
+00:37:07,658 --> 00:37:10,761
+<font color="white" size=".72c">
+through optical fibers.</font>
+
+730
+00:37:10,794 --> 00:37:12,096
+<font color="white" size=".72c">
+To send signals further,</font>
+
+731
+00:37:12,129 --> 00:37:14,365
+<font color="white" size=".72c">
+Jian-Wei's team launched</font>
+
+732
+00:37:14,398 --> 00:37:18,669
+<font color="white" size=".72c">
+the world's first quantum
+
+communication satellite.</font>
+
+733
+00:37:21,104 --> 00:37:25,576
+<font color="white" size=".72c">
+Above Earth's atmosphere,
+
+there are fewer obstacles,</font>
+
+734
+00:37:25,609 --> 00:37:29,780
+<font color="white" size=".72c">
+and quantum particles can travel
+
+much further.</font>
+
+735
+00:37:29,813 --> 00:37:33,183
+<font color="white" size=".72c">
+♪ ♪</font>
+
+736
+00:37:33,216 --> 00:37:37,521
+<font color="white" size=".72c">
+Each night, teams on the ground
+
+prepare to track the satellite</font>
+
+737
+00:37:37,554 --> 00:37:39,456
+<font color="white" size=".72c">
+across the sky.</font>
+
+738
+00:37:39,489 --> 00:37:43,193
+<font color="white" size=".72c">
+♪ ♪</font>
+
+739
+00:37:43,226 --> 00:37:45,796
+<font color="white" size=".72c">
+Laser guidance equipment
+
+locks on</font>
+
+740
+00:37:45,829 --> 00:37:49,767
+<font color="white" size=".72c">
+and allows signals to be sent
+
+and received.</font>
+
+741
+00:37:49,800 --> 00:37:52,836
+<font color="white" size=".72c">
+The team aims to use
+
+this equipment</font>
+
+742
+00:37:52,869 --> 00:37:56,140
+<font color="white" size=".72c">
+to create a new, secure
+
+communication system</font>
+
+743
+00:37:56,173 --> 00:37:58,976
+<font color="white" size=".72c">
+using quantum entanglement.</font>
+
+744
+00:38:01,712 --> 00:38:03,914
+<font color="white" size=".72c">
+The satellite sends
+
+entangled photons</font>
+
+745
+00:38:03,947 --> 00:38:05,616
+<font color="white" size=".72c">
+to two users.</font>
+
+746
+00:38:05,649 --> 00:38:09,887
+<font color="white" size=".72c">
+An eavesdropper could intercept
+
+one of the entangled photons,</font>
+
+747
+00:38:09,920 --> 00:38:15,125
+<font color="white" size=".72c">
+measure it, and
+
+send on a replacement photon.</font>
+
+748
+00:38:15,158 --> 00:38:17,961
+<font color="white" size=".72c">
+But it wouldn't be
+
+an entangled photon--</font>
+
+749
+00:38:17,994 --> 00:38:20,164
+<font color="white" size=".72c">
+its properties wouldn't match.</font>
+
+750
+00:38:20,197 --> 00:38:24,768
+<font color="white" size=".72c">
+It would be clear an
+
+eavesdropper was on the line.</font>
+
+751
+00:38:24,801 --> 00:38:26,603
+<font color="white" size=".72c">
+In theory,
+
+this technique could be used</font>
+
+752
+00:38:26,636 --> 00:38:30,541
+<font color="white" size=".72c">
+to create a totally secure
+
+global communication network.</font>
+
+753
+00:38:30,574 --> 00:38:32,276
+<font color="white" size=".72c">
+PAN:
+
+So the next step is,</font>
+
+754
+00:38:32,309 --> 00:38:35,279
+<font color="white" size=".72c">
+we will have ground station,
+
+for example, in Canada,</font>
+
+755
+00:38:35,312 --> 00:38:38,349
+<font color="white" size=".72c">
+and also in Africa
+
+and many countries.</font>
+
+756
+00:38:38,382 --> 00:38:40,617
+<font color="white" size=".72c">
+So, we will use our satellite</font>
+
+757
+00:38:40,650 --> 00:38:43,020
+<font color="white" size=".72c">
+for the global
+
+quantum communication.</font>
+
+758
+00:38:43,053 --> 00:38:46,757
+<font color="white" size=".72c">
+We want to push this technology
+
+as far as possible.</font>
+
+759
+00:38:48,024 --> 00:38:49,526
+<font color="white" size=".72c">
+NARRATOR:
+
+These are the first steps</font>
+
+760
+00:38:49,559 --> 00:38:52,696
+<font color="white" size=".72c">
+in creating a completely
+
+unhackable quantum internet</font>
+
+761
+00:38:52,729 --> 00:38:54,031
+<font color="white" size=".72c">
+of the future--</font>
+
+762
+00:38:54,064 --> 00:38:58,802
+<font color="white" size=".72c">
+made possible
+
+by quantum entanglement.</font>
+
+763
+00:38:58,835 --> 00:39:01,004
+<font color="white" size=".72c">
+But there's a problem.</font>
+
+764
+00:39:01,037 --> 00:39:03,874
+<font color="white" size=".72c">
+What if quantum entanglement--</font>
+
+765
+00:39:03,907 --> 00:39:06,744
+<font color="white" size=".72c">
+"spooky action at a distance"--</font>
+
+766
+00:39:06,777 --> 00:39:08,612
+<font color="white" size=".72c">
+isn't real after all?</font>
+
+767
+00:39:10,580 --> 00:39:12,950
+<font color="white" size=".72c">
+It could mean entangled photons
+
+are not the path</font>
+
+768
+00:39:12,983 --> 00:39:16,253
+<font color="white" size=".72c">
+to complete security.</font>
+
+769
+00:39:16,286 --> 00:39:17,521
+<font color="white" size=".72c">
+The question goes back</font>
+
+770
+00:39:17,554 --> 00:39:21,725
+<font color="white" size=".72c">
+to Clauser and Freedman's
+
+Bell test experiment.</font>
+
+771
+00:39:21,758 --> 00:39:23,560
+<font color="white" size=".72c">
+♪ ♪</font>
+
+772
+00:39:23,593 --> 00:39:26,196
+<font color="white" size=".72c">
+In the years
+
+after their pioneering work,</font>
+
+773
+00:39:26,229 --> 00:39:29,099
+<font color="white" size=".72c">
+physicists began to test
+
+possible loopholes</font>
+
+774
+00:39:29,132 --> 00:39:32,403
+<font color="white" size=".72c">
+in their experiment--</font>
+
+775
+00:39:32,436 --> 00:39:34,838
+<font color="white" size=".72c">
+ways in which
+
+the illusion of entanglement</font>
+
+776
+00:39:34,871 --> 00:39:37,307
+<font color="white" size=".72c">
+might be created,</font>
+
+777
+00:39:37,340 --> 00:39:41,345
+<font color="white" size=".72c">
+so the effect might not be
+
+so spooky after all.</font>
+
+778
+00:39:41,378 --> 00:39:45,783
+<font color="white" size=".72c">
+One loophole is especially hard
+
+to rule out.</font>
+
+779
+00:39:47,150 --> 00:39:51,321
+<font color="white" size=".72c">
+In modern Bell test experiments,
+
+devices at each side test</font>
+
+780
+00:39:51,354 --> 00:39:54,792
+<font color="white" size=".72c">
+whether the photons can pass
+
+through one of two filters</font>
+
+781
+00:39:54,825 --> 00:39:57,161
+<font color="white" size=".72c">
+that are randomly chosen,</font>
+
+782
+00:39:57,194 --> 00:40:00,030
+<font color="white" size=".72c">
+effectively asking
+
+one of two questions</font>
+
+783
+00:40:00,063 --> 00:40:04,034
+<font color="white" size=".72c">
+and checking how often
+
+the answers agree.</font>
+
+784
+00:40:04,067 --> 00:40:06,203
+<font color="white" size=".72c">
+After thousands of photons,</font>
+
+785
+00:40:06,236 --> 00:40:08,372
+<font color="white" size=".72c">
+if the results show
+
+more agreement</font>
+
+786
+00:40:08,405 --> 00:40:10,808
+<font color="white" size=".72c">
+than Einstein's physics
+
+predicts,</font>
+
+787
+00:40:10,841 --> 00:40:16,413
+<font color="white" size=".72c">
+the particles must be
+
+spookily entangled.</font>
+
+788
+00:40:16,446 --> 00:40:17,548
+<font color="white" size=".72c">
+But what if something</font>
+
+789
+00:40:17,581 --> 00:40:20,484
+<font color="white" size=".72c">
+had mysteriously influenced
+
+the equipment</font>
+
+790
+00:40:20,517 --> 00:40:23,287
+<font color="white" size=".72c">
+so that the choices
+
+of the filters</font>
+
+791
+00:40:23,320 --> 00:40:26,490
+<font color="white" size=".72c">
+were not truly random?</font>
+
+792
+00:40:26,523 --> 00:40:28,625
+<font color="white" size=".72c">
+KAISER:
+
+Is there any common cause,</font>
+
+793
+00:40:28,658 --> 00:40:32,162
+<font color="white" size=".72c">
+deep in the past, before
+
+you even turn on your device,</font>
+
+794
+00:40:32,195 --> 00:40:34,531
+<font color="white" size=".72c">
+that could have nudged
+
+the questions to be asked</font>
+
+795
+00:40:34,564 --> 00:40:36,300
+<font color="white" size=".72c">
+and the types of particles
+
+to be emitted?</font>
+
+796
+00:40:36,333 --> 00:40:38,368
+<font color="white" size=".72c">
+Maybe some strange particle,</font>
+
+797
+00:40:38,401 --> 00:40:41,205
+<font color="white" size=".72c">
+maybe some force that had not
+
+been taken into account,</font>
+
+798
+00:40:41,238 --> 00:40:42,706
+<font color="white" size=".72c">
+so that what looks
+
+like entanglement</font>
+
+799
+00:40:42,739 --> 00:40:45,108
+<font color="white" size=".72c">
+might indeed be an accident,
+
+an illusion.</font>
+
+800
+00:40:45,141 --> 00:40:48,278
+<font color="white" size=".72c">
+Maybe the world still acts
+
+like Einstein thought.</font>
+
+801
+00:40:48,311 --> 00:40:52,216
+<font color="white" size=".72c">
+♪ ♪</font>
+
+802
+00:40:52,249 --> 00:40:53,517
+<font color="white" size=".72c">
+NARRATOR:
+
+It is this loophole</font>
+
+803
+00:40:53,550 --> 00:40:56,286
+<font color="white" size=".72c">
+that the team at
+
+the high-altitude observatory</font>
+
+804
+00:40:56,319 --> 00:40:57,421
+<font color="white" size=".72c">
+in the Canary Islands</font>
+
+805
+00:40:57,454 --> 00:41:00,357
+<font color="white" size=".72c">
+is working to tackle.</font>
+
+806
+00:41:00,390 --> 00:41:04,294
+<font color="white" size=".72c">
+♪ ♪</font>
+
+807
+00:41:04,327 --> 00:41:08,699
+<font color="white" size=".72c">
+With quantum mechanics
+
+now more established than ever,</font>
+
+808
+00:41:08,732 --> 00:41:11,235
+<font color="white" size=".72c">
+they're determined
+
+to put entanglement</font>
+
+809
+00:41:11,268 --> 00:41:12,769
+<font color="white" size=".72c">
+to the ultimate test,</font>
+
+810
+00:41:12,802 --> 00:41:15,372
+<font color="white" size=".72c">
+and finally settle
+
+the Einstein-Bohr debate</font>
+
+811
+00:41:15,405 --> 00:41:17,040
+<font color="white" size=".72c">
+beyond all reasonable doubt.</font>
+
+812
+00:41:17,073 --> 00:41:21,044
+<font color="white" size=".72c">
+The team is creating
+
+a giant version</font>
+
+813
+00:41:21,077 --> 00:41:23,146
+<font color="white" size=".72c">
+of Clauser and Freedman's
+
+Bell test,</font>
+
+814
+00:41:23,179 --> 00:41:26,951
+<font color="white" size=".72c">
+with the entire universe
+
+as their lab bench.</font>
+
+815
+00:41:29,219 --> 00:41:33,290
+<font color="white" size=".72c">
+In this "cosmic Bell test,"</font>
+
+816
+00:41:33,323 --> 00:41:36,193
+<font color="white" size=".72c">
+the source
+
+of the entangled particles</font>
+
+817
+00:41:36,226 --> 00:41:40,631
+<font color="white" size=".72c">
+is about a third of a mile
+
+from each of the detectors.</font>
+
+818
+00:41:40,664 --> 00:41:44,134
+<font color="white" size=".72c">
+The team must send perfectly
+
+timed pairs of photons</font>
+
+819
+00:41:44,167 --> 00:41:46,970
+<font color="white" size=".72c">
+through the air to each side.</font>
+
+820
+00:41:47,003 --> 00:41:50,173
+<font color="white" size=".72c">
+At the same time, the telescopes
+
+will collect light</font>
+
+821
+00:41:50,206 --> 00:41:54,211
+<font color="white" size=".72c">
+from two extremely far-off,
+
+extremely bright galaxies</font>
+
+822
+00:41:54,244 --> 00:41:56,246
+<font color="white" size=".72c">
+called quasars.</font>
+
+823
+00:41:56,279 --> 00:41:59,283
+<font color="white" size=".72c">
+These are among the brightest
+
+objects in the sky,</font>
+
+824
+00:41:59,316 --> 00:42:02,886
+<font color="white" size=".72c">
+emitting light in powerful jets.</font>
+
+825
+00:42:02,919 --> 00:42:05,355
+<font color="white" size=".72c">
+Random variations in this light</font>
+
+826
+00:42:05,388 --> 00:42:07,224
+<font color="white" size=".72c">
+will control
+
+which filters are used</font>
+
+827
+00:42:07,257 --> 00:42:09,927
+<font color="white" size=".72c">
+to measure the photon pairs.</font>
+
+828
+00:42:09,960 --> 00:42:13,063
+<font color="white" size=".72c">
+And since the quasars
+
+are so far away--</font>
+
+829
+00:42:13,096 --> 00:42:15,732
+<font color="white" size=".72c">
+the light has been traveling
+
+for billions of years</font>
+
+830
+00:42:15,765 --> 00:42:17,734
+<font color="white" size=".72c">
+to reach Earth--</font>
+
+831
+00:42:17,767 --> 00:42:19,570
+<font color="white" size=".72c">
+it makes it incredibly unlikely</font>
+
+832
+00:42:19,603 --> 00:42:22,306
+<font color="white" size=".72c">
+that anything could be
+
+influencing the random nature</font>
+
+833
+00:42:22,339 --> 00:42:25,175
+<font color="white" size=".72c">
+of the test.</font>
+
+834
+00:42:26,943 --> 00:42:29,046
+<font color="white" size=".72c">
+If the experiment is successful,</font>
+
+835
+00:42:29,079 --> 00:42:30,647
+<font color="white" size=".72c">
+the team will have tackled
+
+the loophole</font>
+
+836
+00:42:30,680 --> 00:42:33,283
+<font color="white" size=".72c">
+and shown
+
+that quantum entanglement</font>
+
+837
+00:42:33,316 --> 00:42:36,053
+<font color="white" size=".72c">
+is as spooky
+
+as Bohr always claimed.</font>
+
+838
+00:42:36,086 --> 00:42:40,257
+<font color="white" size=".72c">
+Dominik and Jason are
+
+at one telescope.</font>
+
+839
+00:42:40,290 --> 00:42:41,558
+<font color="white" size=".72c">
+Hello, Anton.</font>
+
+840
+00:42:41,591 --> 00:42:45,362
+<font color="white" size=".72c">
+NARRATOR:
+
+Anton is at the other.</font>
+
+841
+00:42:45,395 --> 00:42:48,699
+<font color="white" size=".72c">
+(speaking German):</font>
+
+842
+00:42:48,732 --> 00:42:51,134
+<font color="white" size=".72c">
+ZEILINGER
+
+(speaking German on phone):</font>
+
+843
+00:42:51,167 --> 00:42:53,604
+<font color="white" size=".72c">
+RAUCH (speaking German):</font>
+
+844
+00:42:54,237 --> 00:42:57,274
+<font color="white" size=".72c">
+(both speaking German)</font>
+
+845
+00:42:57,307 --> 00:43:02,746
+<font color="white" size=".72c">
+♪ ♪</font>
+
+846
+00:43:02,779 --> 00:43:05,983
+<font color="white" size=".72c">
+NARRATOR:
+
+With clear skies
+
+finally overhead,</font>
+
+847
+00:43:06,016 --> 00:43:08,852
+<font color="white" size=".72c">
+the huge telescopes awaken...</font>
+
+848
+00:43:08,885 --> 00:43:11,655
+<font color="white" size=".72c">
+♪ ♪</font>
+
+849
+00:43:15,258 --> 00:43:17,995
+<font color="white" size=".72c">
+...poised to collect light
+
+from distant quasars.</font>
+
+850
+00:43:18,028 --> 00:43:22,232
+<font color="white" size=".72c">
+♪ ♪</font>
+
+851
+00:43:22,265 --> 00:43:23,300
+<font color="white" size=".72c">
+Moving.</font>
+
+852
+00:43:23,333 --> 00:43:25,535
+<font color="white" size=".72c">
+MAN (speaking German on radio):</font>
+
+853
+00:43:25,568 --> 00:43:26,536
+<font color="white" size=".72c">
+MAN 2:
+
+All right.</font>
+
+854
+00:43:26,569 --> 00:43:27,704
+<font color="white" size=".72c">
+Dark count level.</font>
+
+855
+00:43:27,737 --> 00:43:29,272
+<font color="white" size=".72c">
+MAN (on radio):
+
+Okay, this is good.</font>
+
+856
+00:43:29,305 --> 00:43:31,274
+<font color="white" size=".72c">
+RAUCH:
+
+So we're doing everything...</font>
+
+857
+00:43:31,307 --> 00:43:33,310
+<font color="white" size=".72c">
+...everything at once now.</font>
+
+858
+00:43:33,343 --> 00:43:34,611
+<font color="white" size=".72c">
+So the guys for the links</font>
+
+859
+00:43:34,644 --> 00:43:37,347
+<font color="white" size=".72c">
+are setting the state
+
+of the entangled photon pair.</font>
+
+860
+00:43:37,380 --> 00:43:39,182
+<font color="white" size=".72c">
+We're trying to acquire
+
+the quasar.</font>
+
+861
+00:43:39,215 --> 00:43:42,285
+<font color="white" size=".72c">
+We're just centering it</font>
+
+862
+00:43:42,318 --> 00:43:44,354
+<font color="white" size=".72c">
+and making the field of view
+
+as small as possible,</font>
+
+863
+00:43:44,387 --> 00:43:46,623
+<font color="white" size=".72c">
+to be sure that we only have
+
+the quasar.</font>
+
+864
+00:43:46,656 --> 00:43:47,658
+<font color="white" size=".72c">
+Okay.</font>
+
+865
+00:43:47,691 --> 00:43:48,925
+<font color="white" size=".72c">
+It's guiding now?</font>
+
+866
+00:43:47,691 --> 00:43:48,925
+<font color="white" size=".72c">
+Yes.</font>
+
+867
+00:43:48,958 --> 00:43:49,960
+<font color="white" size=".72c">
+Let's wait for
+
+one more image.</font>
+
+868
+00:43:49,993 --> 00:43:51,395
+<font color="white" size=".72c">
+Okay.</font>
+
+869
+00:43:49,993 --> 00:43:51,395
+<font color="white" size=".72c">
+Of this one.</font>
+
+870
+00:43:51,428 --> 00:43:52,429
+<font color="white" size=".72c">
+MAN:
+
+All right.</font>
+
+871
+00:43:52,462 --> 00:43:55,365
+<font color="white" size=".72c">
+Great, great, great,
+
+great, great.</font>
+
+872
+00:43:55,398 --> 00:43:56,767
+<font color="white" size=".72c">
+Yeah, that's good.</font>
+
+873
+00:43:57,300 --> 00:43:58,735
+<font color="white" size=".72c">
+Looks like, 90,</font>
+
+874
+00:43:58,768 --> 00:44:01,739
+<font color="white" size=".72c">
+let's say 91 to be conservative,
+
+of purity.</font>
+
+875
+00:44:03,440 --> 00:44:05,642
+<font color="white" size=".72c">
+NARRATOR:
+
+With the telescopes
+
+now locked on</font>
+
+876
+00:44:05,675 --> 00:44:08,412
+<font color="white" size=".72c">
+to two different quasars,</font>
+
+877
+00:44:08,445 --> 00:44:10,547
+<font color="white" size=".72c">
+the team begins
+
+to take readings.</font>
+
+878
+00:44:10,580 --> 00:44:13,350
+<font color="white" size=".72c">
+MAN (on radio):
+
+The red counts, 12,000.</font>
+
+879
+00:44:13,383 --> 00:44:15,485
+<font color="white" size=".72c">
+Blue counts, 7,000.</font>
+
+880
+00:44:15,518 --> 00:44:18,422
+<font color="white" size=".72c">
+♪ ♪</font>
+
+881
+00:44:23,493 --> 00:44:26,863
+<font color="white" size=".72c">
+We did a full,
+
+the full cosmic Bell test.</font>
+
+882
+00:44:26,896 --> 00:44:28,331
+<font color="white" size=".72c">
+MAN:
+
+What?</font>
+
+883
+00:44:28,364 --> 00:44:30,067
+<font color="white" size=".72c">
+Yeah, we're doing
+
+a full cosmic Bell test.</font>
+
+884
+00:44:31,367 --> 00:44:32,936
+<font color="white" size=".72c">
+NARRATOR:
+
+It's working.</font>
+
+885
+00:44:32,969 --> 00:44:37,074
+<font color="white" size=".72c">
+Light from the quasars is
+
+selecting which filters are used</font>
+
+886
+00:44:37,107 --> 00:44:41,745
+<font color="white" size=".72c">
+to measure
+
+the entangled photons.</font>
+
+887
+00:44:41,778 --> 00:44:43,413
+<font color="white" size=".72c">
+RAUCH:
+
+It is exciting.</font>
+
+888
+00:44:43,446 --> 00:44:44,514
+<font color="white" size=".72c">
+It is.</font>
+
+889
+00:44:44,547 --> 00:44:45,882
+<font color="white" size=".72c">
+Now we do have a test,</font>
+
+890
+00:44:45,915 --> 00:44:49,286
+<font color="white" size=".72c">
+but it's not clear
+
+what the outcome will be.</font>
+
+891
+00:44:49,319 --> 00:44:51,988
+<font color="white" size=".72c">
+♪ ♪</font>
+
+892
+00:44:52,021 --> 00:44:53,056
+<font color="white" size=".72c">
+MAN:
+
+Moving.</font>
+
+893
+00:44:53,089 --> 00:44:56,693
+<font color="white" size=".72c">
+(man talking indistinctly
+
+on radio)</font>
+
+894
+00:44:56,726 --> 00:44:58,128
+<font color="white" size=".72c">
+MAN:
+
+All right.</font>
+
+895
+00:44:58,161 --> 00:45:02,032
+<font color="white" size=".72c">
+Everything is exactly the same,
+
+beautiful, perfect, yeah.</font>
+
+896
+00:45:02,065 --> 00:45:04,168
+<font color="white" size=".72c">
+♪ ♪</font>
+
+897
+00:45:17,013 --> 00:45:20,317
+<font color="white" size=".72c">
+♪ ♪</font>
+
+898
+00:45:20,350 --> 00:45:22,219
+<font color="white" size=".72c">
+NARRATOR:
+
+Two months later,
+
+back in Vienna,</font>
+
+899
+00:45:22,252 --> 00:45:26,022
+<font color="white" size=".72c">
+the team analyzes
+
+the experimental data.</font>
+
+900
+00:45:26,055 --> 00:45:29,426
+<font color="white" size=".72c">
+RAUCH:
+
+This might take a second.</font>
+
+901
+00:45:30,927 --> 00:45:33,063
+<font color="white" size=".72c">
+The numbers look
+
+really great.</font>
+
+902
+00:45:33,096 --> 00:45:35,132
+<font color="white" size=".72c">
+And it is extremely pleasing
+
+to see</font>
+
+903
+00:45:35,165 --> 00:45:37,534
+<font color="white" size=".72c">
+that all this worked
+
+so nice.</font>
+
+904
+00:45:37,567 --> 00:45:39,903
+<font color="white" size=".72c">
+We clearly see
+
+correlations</font>
+
+905
+00:45:39,936 --> 00:45:41,304
+<font color="white" size=".72c">
+that correspond
+
+to quantum mechanics.</font>
+
+906
+00:45:41,337 --> 00:45:44,708
+<font color="white" size=".72c">
+NARRATOR:
+
+The results show entanglement.</font>
+
+907
+00:45:44,741 --> 00:45:47,711
+<font color="white" size=".72c">
+♪ ♪</font>
+
+908
+00:45:47,744 --> 00:45:49,713
+<font color="white" size=".72c">
+And since the light
+
+from the quasars</font>
+
+909
+00:45:49,746 --> 00:45:50,881
+<font color="white" size=".72c">
+controlling the test</font>
+
+910
+00:45:50,914 --> 00:45:54,384
+<font color="white" size=".72c">
+was nearly
+
+eight billion years old,</font>
+
+911
+00:45:54,417 --> 00:45:55,786
+<font color="white" size=".72c">
+it's extremely unlikely</font>
+
+912
+00:45:55,819 --> 00:45:59,756
+<font color="white" size=".72c">
+that anything could have
+
+affected its random nature.</font>
+
+913
+00:45:59,789 --> 00:46:04,661
+<font color="white" size=".72c">
+This remaining loophole seems
+
+to be closed.</font>
+
+914
+00:46:04,694 --> 00:46:08,031
+<font color="white" size=".72c">
+ZEILINGER:
+
+The experiment we did
+
+is just fantastic.</font>
+
+915
+00:46:08,064 --> 00:46:10,133
+<font color="white" size=".72c">
+The big cosmos comes down</font>
+
+916
+00:46:10,166 --> 00:46:13,303
+<font color="white" size=".72c">
+to control
+
+a small quantum experiment.</font>
+
+917
+00:46:13,336 --> 00:46:16,940
+<font color="white" size=".72c">
+That, that in itself is a,
+
+is, is beautiful.</font>
+
+918
+00:46:16,973 --> 00:46:21,611
+<font color="white" size=".72c">
+♪ ♪</font>
+
+919
+00:46:21,644 --> 00:46:24,414
+<font color="white" size=".72c">
+You know, honestly, I still,
+
+I still get chills.</font>
+
+920
+00:46:24,447 --> 00:46:26,216
+<font color="white" size=".72c">
+I mean...</font>
+
+921
+00:46:26,249 --> 00:46:27,584
+<font color="white" size=".72c">
+...when I realize what our team
+
+was able to do,</font>
+
+922
+00:46:27,617 --> 00:46:30,821
+<font color="white" size=".72c">
+in this intellectual journey
+
+that stretches back</font>
+
+923
+00:46:30,854 --> 00:46:33,223
+<font color="white" size=".72c">
+to the early years
+
+of the 20th century.</font>
+
+924
+00:46:33,256 --> 00:46:36,326
+<font color="white" size=".72c">
+There's, there's hardly
+
+any room left</font>
+
+925
+00:46:36,359 --> 00:46:41,131
+<font color="white" size=".72c">
+for a kind of alternative,
+
+Einstein-like explanation.</font>
+
+926
+00:46:41,164 --> 00:46:42,465
+<font color="white" size=".72c">
+We haven't ruled it out,</font>
+
+927
+00:46:42,498 --> 00:46:45,635
+<font color="white" size=".72c">
+but we've shoved it into
+
+such a tiny corner of the cosmos</font>
+
+928
+00:46:45,668 --> 00:46:48,972
+<font color="white" size=".72c">
+as to make it
+
+even more implausible</font>
+
+929
+00:46:49,005 --> 00:46:51,208
+<font color="white" size=".72c">
+for anything
+
+other than entanglement</font>
+
+930
+00:46:51,241 --> 00:46:52,475
+<font color="white" size=".72c">
+to explain our results.</font>
+
+931
+00:46:52,508 --> 00:46:55,879
+<font color="white" size=".72c">
+♪ ♪</font>
+
+932
+00:46:55,912 --> 00:46:58,048
+<font color="white" size=".72c">
+NARRATOR:
+
+Accepting that entanglement
+
+is a part</font>
+
+933
+00:46:58,081 --> 00:47:00,684
+<font color="white" size=".72c">
+of the natural world around us</font>
+
+934
+00:47:00,717 --> 00:47:04,187
+<font color="white" size=".72c">
+has profound implications.</font>
+
+935
+00:47:04,220 --> 00:47:06,489
+<font color="white" size=".72c">
+It means we must accept
+
+that an action in one place</font>
+
+936
+00:47:06,522 --> 00:47:10,060
+<font color="white" size=".72c">
+can have an instant effect
+
+anywhere in the universe,</font>
+
+937
+00:47:10,093 --> 00:47:13,430
+<font color="white" size=".72c">
+as if there's no space
+
+between them.</font>
+
+938
+00:47:13,463 --> 00:47:18,401
+<font color="white" size=".72c">
+Or that particles
+
+only take on physical properties</font>
+
+939
+00:47:18,434 --> 00:47:22,105
+<font color="white" size=".72c">
+when we observe them.</font>
+
+940
+00:47:22,138 --> 00:47:25,041
+<font color="white" size=".72c">
+Or we must accept both.</font>
+
+941
+00:47:25,074 --> 00:47:27,377
+<font color="white" size=".72c">
+We're left with conclusions
+
+about the universe</font>
+
+942
+00:47:27,410 --> 00:47:29,145
+<font color="white" size=".72c">
+that make no sense whatsoever.</font>
+
+943
+00:47:29,178 --> 00:47:32,315
+<font color="white" size=".72c">
+Science is stepping outside
+
+of all of our boundaries</font>
+
+944
+00:47:32,348 --> 00:47:34,451
+<font color="white" size=".72c">
+of common sense.</font>
+
+945
+00:47:34,484 --> 00:47:36,720
+<font color="white" size=".72c">
+It's almost like being
+
+in "Alice in Wonderland," right?</font>
+
+946
+00:47:36,753 --> 00:47:39,690
+<font color="white" size=".72c">
+Where everything is possible.</font>
+
+947
+00:47:43,359 --> 00:47:45,128
+<font color="white" size=".72c">
+♪ ♪</font>
+
+948
+00:47:45,161 --> 00:47:46,863
+<font color="white" size=".72c">
+NARRATOR:
+
+It was first seen</font>
+
+949
+00:47:46,896 --> 00:47:49,766
+<font color="white" size=".72c">
+as an unwelcome
+
+but unavoidable consequence</font>
+
+950
+00:47:49,799 --> 00:47:52,269
+<font color="white" size=".72c">
+of quantum mechanics.</font>
+
+951
+00:47:52,302 --> 00:47:56,539
+<font color="white" size=".72c">
+Now, after nearly a century
+
+of disputes and discoveries,</font>
+
+952
+00:47:56,572 --> 00:47:58,909
+<font color="white" size=".72c">
+"spooky action at a distance"</font>
+
+953
+00:47:58,942 --> 00:48:03,246
+<font color="white" size=".72c">
+is finally at the heart
+
+of modern physics.</font>
+
+954
+00:48:03,279 --> 00:48:06,483
+<font color="white" size=".72c">
+At the Institute
+
+for Advanced Study,</font>
+
+955
+00:48:06,516 --> 00:48:08,685
+<font color="white" size=".72c">
+where the concept
+
+of entanglement</font>
+
+956
+00:48:08,718 --> 00:48:10,854
+<font color="white" size=".72c">
+was first described,</font>
+
+957
+00:48:10,887 --> 00:48:13,590
+<font color="white" size=".72c">
+researchers are now using it</font>
+
+958
+00:48:13,623 --> 00:48:17,527
+<font color="white" size=".72c">
+in their search for a single
+
+unified theory of the universe--</font>
+
+959
+00:48:17,560 --> 00:48:21,698
+<font color="white" size=".72c">
+the holy grail of physics.</font>
+
+960
+00:48:23,266 --> 00:48:27,170
+<font color="white" size=".72c">
+Einstein's theories of special
+
+and general relativity</font>
+
+961
+00:48:27,203 --> 00:48:30,640
+<font color="white" size=".72c">
+perfectly describe
+
+space, time, and gravity</font>
+
+962
+00:48:30,673 --> 00:48:33,410
+<font color="white" size=".72c">
+at the largest scales
+
+of the universe,</font>
+
+963
+00:48:33,443 --> 00:48:37,414
+<font color="white" size=".72c">
+while quantum mechanics
+
+perfectly describes</font>
+
+964
+00:48:37,447 --> 00:48:38,782
+<font color="white" size=".72c">
+the tiniest scales.</font>
+
+965
+00:48:38,815 --> 00:48:44,788
+<font color="white" size=".72c">
+Yet these two theories have
+
+never been brought together.</font>
+
+966
+00:48:44,821 --> 00:48:48,325
+<font color="white" size=".72c">
+So far, we have not yet had
+
+a single complete theory</font>
+
+967
+00:48:48,358 --> 00:48:50,427
+<font color="white" size=".72c">
+that is both quantum mechanical</font>
+
+968
+00:48:50,460 --> 00:48:51,895
+<font color="white" size=".72c">
+and reproduces the prediction</font>
+
+969
+00:48:51,928 --> 00:48:56,066
+<font color="white" size=".72c">
+of Einstein's wonderful theory
+
+of general relativity.</font>
+
+970
+00:48:56,099 --> 00:48:59,202
+<font color="white" size=".72c">
+Maybe the secret
+
+is entanglement.</font>
+
+971
+00:49:01,004 --> 00:49:03,740
+<font color="white" size=".72c">
+NARRATOR:
+
+What if space itself
+
+is actually created</font>
+
+972
+00:49:03,773 --> 00:49:07,177
+<font color="white" size=".72c">
+by the tiny quantum world?</font>
+
+973
+00:49:07,210 --> 00:49:10,880
+<font color="white" size=".72c">
+Just like temperature,
+
+warm and cold,</font>
+
+974
+00:49:10,913 --> 00:49:15,552
+<font color="white" size=".72c">
+consists simply of the movement
+
+of atoms inside an object,</font>
+
+975
+00:49:15,585 --> 00:49:18,455
+<font color="white" size=".72c">
+perhaps space as we know it</font>
+
+976
+00:49:18,488 --> 00:49:23,526
+<font color="white" size=".72c">
+emerges from networks
+
+of entangled quantum particles.</font>
+
+977
+00:49:23,559 --> 00:49:27,497
+<font color="white" size=".72c">
+It's a mind-blowing idea.</font>
+
+978
+00:49:27,530 --> 00:49:29,699
+<font color="white" size=".72c">
+DIJKGRAAF:
+
+What we are learning these days</font>
+
+979
+00:49:29,732 --> 00:49:33,870
+<font color="white" size=".72c">
+is that we might have to give up
+
+that what Einstein holds sacred,</font>
+
+980
+00:49:33,903 --> 00:49:35,271
+<font color="white" size=".72c">
+namely, space and time.</font>
+
+981
+00:49:35,304 --> 00:49:37,407
+<font color="white" size=".72c">
+So, he was always thinking,</font>
+
+982
+00:49:37,440 --> 00:49:38,808
+<font color="white" size=".72c">
+"Well, we have little pieces
+
+of space and time,</font>
+
+983
+00:49:38,841 --> 00:49:42,045
+<font color="white" size=".72c">
+and out of this,
+
+we build the whole universe."</font>
+
+984
+00:49:42,078 --> 00:49:48,218
+<font color="white" size=".72c">
+NARRATOR:
+
+In a radical theory-- known
+
+as the holographic universe--</font>
+
+985
+00:49:48,251 --> 00:49:52,155
+<font color="white" size=".72c">
+space and time are created
+
+by entangled quantum particles</font>
+
+986
+00:49:52,188 --> 00:49:56,259
+<font color="white" size=".72c">
+on a sphere
+
+that's infinitely far away.</font>
+
+987
+00:49:56,292 --> 00:49:58,995
+<font color="white" size=".72c">
+What's happening
+
+in space</font>
+
+988
+00:49:59,028 --> 00:50:02,365
+<font color="white" size=".72c">
+in some sense
+
+all described</font>
+
+989
+00:50:02,398 --> 00:50:05,668
+<font color="white" size=".72c">
+in terms of a screen
+
+outside here.</font>
+
+990
+00:50:05,701 --> 00:50:07,637
+<font color="white" size=".72c">
+The ultimate description
+
+of reality</font>
+
+991
+00:50:07,670 --> 00:50:09,806
+<font color="white" size=".72c">
+resides on this screen.</font>
+
+992
+00:50:09,839 --> 00:50:13,009
+<font color="white" size=".72c">
+Think of it as kind of quantum
+
+bits living on that screen.</font>
+
+993
+00:50:13,042 --> 00:50:16,079
+<font color="white" size=".72c">
+And this,
+
+like a movie projector,</font>
+
+994
+00:50:16,112 --> 00:50:19,816
+<font color="white" size=".72c">
+creates a illusion of
+
+the three-dimensional reality</font>
+
+995
+00:50:19,849 --> 00:50:22,219
+<font color="white" size=".72c">
+that I'm now experiencing.</font>
+
+996
+00:50:24,387 --> 00:50:27,757
+<font color="white" size=".72c">
+NARRATOR:
+
+It may be impossible
+
+to intuitively understand</font>
+
+997
+00:50:27,790 --> 00:50:30,894
+<font color="white" size=".72c">
+this wild mathematical idea,</font>
+
+998
+00:50:30,927 --> 00:50:32,529
+<font color="white" size=".72c">
+but it suggests</font>
+
+999
+00:50:32,562 --> 00:50:34,531
+<font color="white" size=".72c">
+that entanglement could be</font>
+
+1000
+00:50:34,564 --> 00:50:39,969
+<font color="white" size=".72c">
+what forms the true fabric
+
+of the universe.</font>
+
+1001
+00:50:40,002 --> 00:50:43,406
+<font color="white" size=".72c">
+The most puzzling element
+
+of entanglement,</font>
+
+1002
+00:50:43,439 --> 00:50:47,744
+<font color="white" size=".72c">
+that, you know, somehow two
+
+points in space can communicate,</font>
+
+1003
+00:50:47,777 --> 00:50:49,379
+<font color="white" size=".72c">
+becomes less of a problem,</font>
+
+1004
+00:50:49,412 --> 00:50:51,214
+<font color="white" size=".72c">
+because space itself
+
+has disappeared.</font>
+
+1005
+00:50:51,247 --> 00:50:54,918
+<font color="white" size=".72c">
+In the end, we just have
+
+this quantum mechanical world.</font>
+
+1006
+00:50:54,951 --> 00:50:57,654
+<font color="white" size=".72c">
+There is no space anymore.</font>
+
+1007
+00:50:57,687 --> 00:51:01,591
+<font color="white" size=".72c">
+And so in some sense,
+
+the paradoxes of entanglement...</font>
+
+1008
+00:51:01,624 --> 00:51:05,261
+<font color="white" size=".72c">
+The EPR paradox
+
+disappears into thin air.</font>
+
+1009
+00:51:05,294 --> 00:51:09,599
+<font color="white" size=".72c">
+♪ ♪</font>
+
+1010
+00:51:09,632 --> 00:51:12,435
+<font color="white" size=".72c">
+CARROLL:
+
+Truly understanding
+
+quantum mechanics</font>
+
+1011
+00:51:12,468 --> 00:51:14,571
+<font color="white" size=".72c">
+will only happen
+
+when we put ourselves</font>
+
+1012
+00:51:14,604 --> 00:51:16,106
+<font color="white" size=".72c">
+on the entanglement side,</font>
+
+1013
+00:51:16,139 --> 00:51:19,976
+<font color="white" size=".72c">
+and we stop privileging
+
+the world that we see</font>
+
+1014
+00:51:20,009 --> 00:51:21,644
+<font color="white" size=".72c">
+and start thinking
+
+about the world</font>
+
+1015
+00:51:21,677 --> 00:51:22,645
+<font color="white" size=".72c">
+as it actually is.</font>
+
+1016
+00:51:22,678 --> 00:51:25,448
+<font color="white" size=".72c">
+♪ ♪</font>
+
+1017
+00:51:25,481 --> 00:51:28,885
+<font color="white" size=".72c">
+KAISER:
+
+Science has made
+
+enormous progress for centuries</font>
+
+1018
+00:51:28,918 --> 00:51:32,422
+<font color="white" size=".72c">
+by sort of breaking complicated
+
+systems down into parts.</font>
+
+1019
+00:51:32,455 --> 00:51:34,591
+<font color="white" size=".72c">
+When we come to a phenomenon
+
+like quantum entanglement,</font>
+
+1020
+00:51:34,624 --> 00:51:36,093
+<font color="white" size=".72c">
+that scheme breaks.</font>
+
+1021
+00:51:37,493 --> 00:51:40,430
+<font color="white" size=".72c">
+When it comes to the bedrock
+
+of quantum mechanics,</font>
+
+1022
+00:51:40,463 --> 00:51:44,000
+<font color="white" size=".72c">
+the whole is more
+
+than the sum of its parts.</font>
+
+1023
+00:51:44,033 --> 00:51:46,035
+<font color="white" size=".72c">
+♪ ♪</font>
+
+1024
+00:51:46,068 --> 00:51:48,938
+<font color="white" size=".72c">
+ZEILINGER:
+
+The basic motivation is</font>
+
+1025
+00:51:48,971 --> 00:51:51,374
+<font color="white" size=".72c">
+just to learn how nature works.</font>
+
+1026
+00:51:51,407 --> 00:51:53,977
+<font color="white" size=".72c">
+What's really going on?</font>
+
+1027
+00:51:54,010 --> 00:51:55,411
+<font color="white" size=".72c">
+Einstein said it very nicely.</font>
+
+1028
+00:51:55,444 --> 00:51:57,780
+<font color="white" size=".72c">
+He's not interested
+
+in this detailed question</font>
+
+1029
+00:51:57,813 --> 00:51:59,048
+<font color="white" size=".72c">
+or that detailed question.</font>
+
+1030
+00:51:59,081 --> 00:52:01,684
+<font color="white" size=".72c">
+He just wanted to know</font>
+
+1031
+00:52:01,717 --> 00:52:06,456
+<font color="white" size=".72c">
+what were God's thoughts
+
+when He created the world.</font>
+
+1032
+00:52:06,489 --> 00:52:09,860
+<font color="white" size=".72c">
+♪ ♪</font>
+
+1033
+00:52:21,470 --> 00:52:26,943
+<font color="white" size=".72c">
+♪ ♪</font>
+
+1034
+00:52:34,850 --> 00:52:37,487
+<font color="white" size=".72c">
+To order this program on DVD,</font>
+
+1035
+00:52:37,520 --> 00:52:42,825
+<font color="white" size=".72c">
+visit ShopPBS
+
+or call 1-800-PLAY-PBS.</font>
+
+1036
+00:52:42,858 --> 00:52:45,495
+<font color="white" size=".72c">
+Episodes of "NOVA" are available
+
+with Passport.</font>
+
+1037
+00:52:45,528 --> 00:52:48,164
+<font color="white" size=".72c">
+"NOVA" is also available
+
+on Amazon Prime Video.</font>
+
+1038
+00:52:48,197 --> 00:52:53,637
+<font color="white" size=".72c">
+♪ ♪</font>
+

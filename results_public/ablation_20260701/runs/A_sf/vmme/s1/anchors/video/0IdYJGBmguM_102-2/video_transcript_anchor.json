@@ -1,0 +1,697 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/vmme/s1/media/video/0IdYJGBmguM.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/vmme/s1/anchors/video/0IdYJGBmguM_102-2/subtitle/0IdYJGBmguM.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    34.86,
+    39.899
+   ],
+   "text": "I'm never gonna get to be a best man you",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 5.333,
+   "relevance_terms": [
+    "ever",
+    "get",
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    37.14,
+    43.52
+   ],
+   "text": "can be the best man when I get married",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 6.333,
+   "relevance_terms": [
+    "get",
+    "married",
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    39.899,
+    47.16
+   ],
+   "text": "I'm never gonna get to be your best man",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 5.333,
+   "relevance_terms": [
+    "ever",
+    "get",
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    33.12,
+    37.14
+   ],
+   "text": "on Ross look I don't have any brothers",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    43.52,
+    50.399
+   ],
+   "text": "wait so you get to be my best man twice",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "get",
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    47.16,
+    53.46
+   ],
+   "text": "and I don't get to be yours at all",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "get"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    50.399,
+    55.82
+   ],
+   "text": "oh no you yeah of course you can be my",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    53.46,
+    55.82
+   ],
+   "text": "best man",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    63.059,
+    67.2
+   ],
+   "text": "for science fiction writers",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    71.34,
+    77.939
+   ],
+   "text": "that's it from now on Joey I want you to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    74.52,
+    78.24
+   ],
+   "text": "be my best man yes Shame about you",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    77.939,
+    81.31
+   ],
+   "text": "though",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.599,
+    5.22
+   ],
+   "text": "hey guys hey hey all right here's the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    4.2,
+    9.72
+   ],
+   "text": "ring",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    5.22,
+    12.059
+   ],
+   "text": "yes yes a thousand times yes",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    9.72,
+    13.04
+   ],
+   "text": "so uh any ideas for the bachelor party",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    12.059,
+    15.0
+   ],
+   "text": "yet",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    13.04,
+    16.56
+   ],
+   "text": "before you start handing out wedding",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    15.0,
+    17.76
+   ],
+   "text": "rings and playing in Bachelor parties",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    16.56,
+    19.5
+   ],
+   "text": "don't you have to decide who your best",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    17.76,
+    21.18
+   ],
+   "text": "man's gonna be",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    19.5,
+    23.539
+   ],
+   "text": "oh it's awkward it's awkward it's",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    21.18,
+    23.539
+   ],
+   "text": "awkward",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    24.06,
+    28.68
+   ],
+   "text": "I sort of already asked Chandler",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    26.519,
+    30.72
+   ],
+   "text": "what he got to do it at your first",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    28.68,
+    33.12
+   ],
+   "text": "wedding Joey I figured you'd understand",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    30.72,
+    34.86
+   ],
+   "text": "I mean I've known him a lot longer come",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    65.28,
+    69.84
+   ],
+   "text": "I can't believe you're not picking me",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    67.2,
+    71.34
+   ],
+   "text": "hey how could it not be me I'm not even",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    69.84,
+    74.52
+   ],
+   "text": "I don't even all right you know what",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    78.24,
+    88.209
+   ],
+   "text": "[Applause]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    81.31,
+    88.209
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 32,
+ "query_retrieval": true,
+ "query_terms": [
+  "people",
+  "arguing",
+  "whether",
+  "person",
+  "blue",
+  "shirt",
+  "will",
+  "ever",
+  "get",
+  "married",
+  "man",
+  "suit",
+  "should",
+  "his",
+  "best",
+  "many",
+  "times",
+  "getting"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    34.86,
+    39.899
+   ],
+   "text": "I'm never gonna get to be a best man you",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 5.333,
+   "relevance_terms": [
+    "ever",
+    "get",
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    37.14,
+    43.52
+   ],
+   "text": "can be the best man when I get married",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 6.333,
+   "relevance_terms": [
+    "get",
+    "married",
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    39.899,
+    47.16
+   ],
+   "text": "I'm never gonna get to be your best man",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 5.333,
+   "relevance_terms": [
+    "ever",
+    "get",
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    33.12,
+    37.14
+   ],
+   "text": "on Ross look I don't have any brothers",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    43.52,
+    50.399
+   ],
+   "text": "wait so you get to be my best man twice",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "get",
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    47.16,
+    53.46
+   ],
+   "text": "and I don't get to be yours at all",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "get"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    50.399,
+    55.82
+   ],
+   "text": "oh no you yeah of course you can be my",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    53.46,
+    55.82
+   ],
+   "text": "best man",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    63.059,
+    67.2
+   ],
+   "text": "for science fiction writers",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    71.34,
+    77.939
+   ],
+   "text": "that's it from now on Joey I want you to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    74.52,
+    78.24
+   ],
+   "text": "be my best man yes Shame about you",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "man",
+    "best"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    77.939,
+    81.31
+   ],
+   "text": "though",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    25.12,
+    89.31
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0016",
+    "video_transcript_anchor_seg_0017",
+    "video_transcript_anchor_seg_0018",
+    "video_transcript_anchor_seg_0019",
+    "video_transcript_anchor_seg_0020",
+    "video_transcript_anchor_seg_0021",
+    "video_transcript_anchor_seg_0022",
+    "video_transcript_anchor_seg_0023",
+    "video_transcript_anchor_seg_0024",
+    "video_transcript_anchor_seg_0028",
+    "video_transcript_anchor_seg_0029",
+    "video_transcript_anchor_seg_0030"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "hey guys hey hey all right here's the ring yes yes a thousand times yes so uh any ideas for the bachelor party yet before you start handing out wedding rings and playing in Bachelor parties don't you have to decide who your best man's gonna be oh it's awkward it's awkward it's awkward I sort of already asked Chandler what he got to do it at your first wedding Joey I figured you'd understand I mean I've known him a lot longer come on Ross look I don't have any brothers I'm never gonna get to be a best man you can be the best man when I get married I'm never gonna get to be your best man wait so you get to be my best man twice and I don't get to be yours at all oh no you yeah of course you can be my best man for science fiction writers I can't believe you're not picking me hey how could it not be me I'm not even I don't even all right you know what that's it from now on Joey I want you to be my best man yes Shame about you though [Applause] [Music]",
+ "warnings": []
+}

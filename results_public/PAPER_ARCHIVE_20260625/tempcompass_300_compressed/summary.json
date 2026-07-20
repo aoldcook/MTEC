@@ -1,0 +1,26 @@
+{
+ "config": {
+  "label": "TempCompass 300 (compressed)",
+  "platform": "bailian",
+  "model": "qwen3.7-plus",
+  "mode": "MTEC compressed",
+  "notes": "short clips; dedup of double-process artifact",
+  "source_globs": [
+   "outputs/eval_tempcompass_300_20260624/*results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 300,
+  "completed": 293,
+  "failed": 7,
+  "correct": 239,
+  "acc_over_completed_pct": 81.6,
+  "acc_incl_failures_pct": 79.7,
+  "failure_classes": {
+   "(none)": 7
+  },
+  "token_saving_raw_mean_pct": -60.5,
+  "token_saving_raw_median_pct": -26.4,
+  "token_saving_positive_count": "82/293"
+ }
+}

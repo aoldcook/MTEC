@@ -1,0 +1,21 @@
+{
+ "config": {
+  "label": "Video-MME short/med 105 (raw direct)",
+  "platform": "bailian",
+  "model": "qwen3.7-plus",
+  "mode": "raw video via OSS (no compression)",
+  "notes": "early raw probe",
+  "source_globs": [
+   "outputs/direct_raw_qwen37_105_20260624/*results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 27,
+  "completed": 27,
+  "failed": 0,
+  "correct": 22,
+  "acc_over_completed_pct": 81.5,
+  "acc_incl_failures_pct": 81.5,
+  "failure_classes": {}
+ }
+}

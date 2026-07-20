@@ -1,0 +1,24 @@
+loaded 11 jobs
+LAUNCH [1/11] J_tiny/vmme/s0 pid=107243
+LAUNCH [2/11] J_tiny/vmme/s1 pid=107244
+LAUNCH [3/11] J_tiny/vmme/s2 pid=107245
+DONE [OK rc=0] J_tiny/vmme/s2 completed=1 failed=0 remaining=10
+LAUNCH [4/11] J_tiny/nextqa/s0 pid=157302
+DONE [OK rc=0] J_tiny/vmme/s1 completed=2 failed=0 remaining=8
+LAUNCH [5/11] J_tiny/nextqa/s1 pid=166593
+DONE [OK rc=0] J_tiny/vmme/s0 completed=3 failed=0 remaining=6
+LAUNCH [6/11] J_tiny/mlvu/s0 pid=177036
+DONE [OK rc=0] J_tiny/nextqa/s0 completed=4 failed=0 remaining=5
+LAUNCH [7/11] J_tiny/mlvu/s1 pid=193124
+DONE [OK rc=0] J_tiny/mlvu/s0 completed=5 failed=0 remaining=5
+LAUNCH [8/11] J_tiny/mlvu/s2 pid=198543
+DONE [OK rc=0] J_tiny/nextqa/s1 completed=6 failed=0 remaining=3
+LAUNCH [9/11] J_tiny/vmme_long/s0 pid=209737
+DONE [OK rc=0] J_tiny/mlvu/s1 completed=7 failed=0 remaining=2
+LAUNCH [10/11] J_tiny/vmme_long/s1 pid=224500
+DONE [OK rc=0] J_tiny/mlvu/s2 completed=8 failed=0 remaining=1
+LAUNCH [11/11] J_tiny/vmme_long/s2 pid=225903
+DONE [OK rc=0] J_tiny/vmme_long/s0 completed=9 failed=0 remaining=0
+DONE [OK rc=0] J_tiny/vmme_long/s2 completed=10 failed=0 remaining=1
+DONE [OK rc=0] J_tiny/vmme_long/s1 completed=11 failed=0 remaining=0
+QUEUE_ALL_DONE total=11 completed=11 failed=0

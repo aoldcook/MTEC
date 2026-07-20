@@ -1,0 +1,566 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/media/video/Z-rHofd6g2Q.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/subtitle/Z-rHofd6g2Q.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    18.56,
+    24.359
+   ],
+   "text": "about 30 40 minutes but there President",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    22.199,
+    27.92
+   ],
+   "text": "Obama just trying to find his car",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "car",
+    "obama"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    24.359,
+    30.039
+   ],
+   "text": "initially but uh as he wanders over let",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    4.839,
+    10.16
+   ],
+   "text": "an hour or so ago because uh President",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    7.16,
+    12.799
+   ],
+   "text": "Obama or former president Obama there at",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "obama"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    10.16,
+    14.639
+   ],
+   "text": "number 10 in the last hour he's just",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    31.64,
+    36.559
+   ],
+   "text": "moments did you discuss",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    34.32,
+    40.96
+   ],
+   "text": "Gaza come and have a CH with us for a",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "have"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    36.559,
+    40.96
+   ],
+   "text": "minute how did it go what did you talk",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    44.079,
+    49.64
+   ],
+   "text": "about well he's finally found the car",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "car"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    47.079,
+    51.12
+   ],
+   "text": "and avoiding all of those questions uh",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    1.48,
+    4.839
+   ],
+   "text": "now let's return to those events in",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    3.52,
+    7.16
+   ],
+   "text": "Downing Street that we showed you about",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    12.799,
+    16.48
+   ],
+   "text": "emerged in the last couple of minutes",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    14.639,
+    18.56
+   ],
+   "text": "just want to show you those pictures it",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    16.48,
+    22.199
+   ],
+   "text": "wasn't the longest of meetings perhaps",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    27.92,
+    31.64
+   ],
+   "text": "me just put the sound up and here just a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    30.039,
+    34.32
+   ],
+   "text": "little of what the report few few",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    49.64,
+    54.0
+   ],
+   "text": "we were talking to Helen cat a little",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    51.12,
+    56.44
+   ],
+   "text": "earlier and certain amount of surprise",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    54.0,
+    58.44
+   ],
+   "text": "amongst the political reporters there",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    56.44,
+    60.68
+   ],
+   "text": "suddenly seeing the former American",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    58.44,
+    63.12
+   ],
+   "text": "president arriving there at Downing",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    60.68,
+    64.879
+   ],
+   "text": "Street but no word about what exactly",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    63.12,
+    68.96
+   ],
+   "text": "was discussed in that meeting if we hear",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    64.879,
+    68.96
+   ],
+   "text": "we'll obviously return to that",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 26,
+ "query_retrieval": true,
+ "query_terms": [
+  "brand",
+  "car",
+  "obama",
+  "have",
+  "bmw",
+  "ford",
+  "mercedes",
+  "range",
+  "rover"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    18.56,
+    24.359
+   ],
+   "text": "about 30 40 minutes but there President",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    22.199,
+    27.92
+   ],
+   "text": "Obama just trying to find his car",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "car",
+    "obama"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    24.359,
+    30.039
+   ],
+   "text": "initially but uh as he wanders over let",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    4.839,
+    10.16
+   ],
+   "text": "an hour or so ago because uh President",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    7.16,
+    12.799
+   ],
+   "text": "Obama or former president Obama there at",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "obama"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    10.16,
+    14.639
+   ],
+   "text": "number 10 in the last hour he's just",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    31.64,
+    36.559
+   ],
+   "text": "moments did you discuss",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    34.32,
+    40.96
+   ],
+   "text": "Gaza come and have a CH with us for a",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "have"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    36.559,
+    40.96
+   ],
+   "text": "minute how did it go what did you talk",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    44.079,
+    49.64
+   ],
+   "text": "about well he's finally found the car",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "car"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    47.079,
+    51.12
+   ],
+   "text": "and avoiding all of those questions uh",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    59.12
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0003",
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0009",
+    "video_transcript_anchor_seg_0010",
+    "video_transcript_anchor_seg_0011",
+    "video_transcript_anchor_seg_0014",
+    "video_transcript_anchor_seg_0015",
+    "video_transcript_anchor_seg_0016",
+    "video_transcript_anchor_seg_0017",
+    "video_transcript_anchor_seg_0018"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "now let's return to those events in Downing Street that we showed you about an hour or so ago because uh President Obama or former president Obama there at number 10 in the last hour he's just emerged in the last couple of minutes just want to show you those pictures it wasn't the longest of meetings perhaps about 30 40 minutes but there President Obama just trying to find his car initially but uh as he wanders over let me just put the sound up and here just a little of what the report few few moments did you discuss Gaza come and have a CH with us for a minute how did it go what did you talk about well he's finally found the car and avoiding all of those questions uh we were talking to Helen cat a little earlier and certain amount of surprise amongst the political reporters there suddenly seeing the former American president arriving there at Downing Street but no word about what exactly was discussed in that meeting if we hear we'll obviously return to that",
+ "warnings": []
+}

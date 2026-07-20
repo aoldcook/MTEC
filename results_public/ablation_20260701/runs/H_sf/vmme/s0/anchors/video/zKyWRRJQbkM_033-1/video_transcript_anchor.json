@@ -1,0 +1,909 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/vmme/s0/media/video/zKyWRRJQbkM.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/vmme/s0/anchors/video/zKyWRRJQbkM_033-1/subtitle/zKyWRRJQbkM.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    59.44,
+    63.6
+   ],
+   "text": "a decent living",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    60.8,
+    64.479
+   ],
+   "text": "in 1938 that was established at 25 cents",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 5.333,
+   "relevance_terms": [
+    "25",
+    "5",
+    "2",
+    "1"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    63.6,
+    67.6
+   ],
+   "text": "an hour",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0039",
+   "anchor_link": "video_transcript_anchor_seg_0039",
+   "sequence_index": 39,
+   "time_range_sec": [
+    70.0,
+    73.84
+   ],
+   "text": "inflation",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0040",
+   "anchor_link": "video_transcript_anchor_seg_0040",
+   "sequence_index": 40,
+   "time_range_sec": [
+    70.88,
+    76.56
+   ],
+   "text": "so in 2019 seven dollars and 25 cents",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 5.333,
+   "relevance_terms": [
+    "25",
+    "5",
+    "2",
+    "1"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0041",
+   "anchor_link": "video_transcript_anchor_seg_0041",
+   "sequence_index": 41,
+   "time_range_sec": [
+    73.84,
+    78.0
+   ],
+   "text": "was actually only worth six dollars",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    2.96,
+    6.879
+   ],
+   "text": "below the federal minimum wage",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    4.799,
+    9.679
+   ],
+   "text": "that's seven dollars and 25 cents per",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "25",
+    "5",
+    "2"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    6.879,
+    11.84
+   ],
+   "text": "hour which works out to about 15 000",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "15",
+    "5",
+    "1"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    9.679,
+    13.12
+   ],
+   "text": "a year even though the cost of living",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.16,
+    4.799
+   ],
+   "text": "about 1.7 million americans earn at or",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "1",
+    "7"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    26.48,
+    30.4
+   ],
+   "text": "and bartenders employers only have to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    11.84,
+    14.96
+   ],
+   "text": "continues to rise",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    13.12,
+    16.72
+   ],
+   "text": "this number has stayed the same for over",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    16.72,
+    20.0
+   ],
+   "text": "minimum wage is the lowest amount an",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    18.32,
+    20.56
+   ],
+   "text": "employer can legally pay an hourly",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    20.0,
+    22.72
+   ],
+   "text": "worker",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    22.72,
+    26.48
+   ],
+   "text": "example according to federal law",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    24.56,
+    28.56
+   ],
+   "text": "workers who receive tips like waiters",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    28.56,
+    31.039
+   ],
+   "text": "pay them two dollars and thirteen cents",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    31.039,
+    34.48
+   ],
+   "text": "disabled workers can earn as little as",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    32.96,
+    36.88
+   ],
+   "text": "one dollar an hour",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    34.48,
+    38.399
+   ],
+   "text": "but many states have their own laws for",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    38.399,
+    42.48
+   ],
+   "text": "plus washington dc have a higher minimum",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    40.559,
+    43.36
+   ],
+   "text": "wage you'll always get the highest wage",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    42.48,
+    45.28
+   ],
+   "text": "possible",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    45.28,
+    50.16
+   ],
+   "text": "lower one the federal minimum applies",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    48.239,
+    51.28
+   ],
+   "text": "this amount hasn't changed since july",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    50.16,
+    53.039
+   ],
+   "text": "2009",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    53.039,
+    56.8
+   ],
+   "text": "raise when president franklin d",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    55.12,
+    57.76
+   ],
+   "text": "roosevelt first introduced the federal",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0033",
+   "anchor_link": "video_transcript_anchor_seg_0033",
+   "sequence_index": 33,
+   "time_range_sec": [
+    57.76,
+    60.8
+   ],
+   "text": "he said it was meant to be the wages of",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    64.479,
+    70.0
+   ],
+   "text": "since then it's been raised 22 times but",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    67.6,
+    70.88
+   ],
+   "text": "after 1968 it just couldn't keep up with",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0043",
+   "anchor_link": "video_transcript_anchor_seg_0043",
+   "sequence_index": 43,
+   "time_range_sec": [
+    78.0,
+    81.119
+   ],
+   "text": "in minimum wage for years",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0044",
+   "anchor_link": "video_transcript_anchor_seg_0044",
+   "sequence_index": 44,
+   "time_range_sec": [
+    79.6,
+    82.96
+   ],
+   "text": "but there's long been debate about how",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0045",
+   "anchor_link": "video_transcript_anchor_seg_0045",
+   "sequence_index": 45,
+   "time_range_sec": [
+    81.119,
+    85.6
+   ],
+   "text": "that would affect the overall economy",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0047",
+   "anchor_link": "video_transcript_anchor_seg_0047",
+   "sequence_index": 47,
+   "time_range_sec": [
+    85.6,
+    89.68
+   ],
+   "text": "employers will hire fewer of them",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0048",
+   "anchor_link": "video_transcript_anchor_seg_0048",
+   "sequence_index": 48,
+   "time_range_sec": [
+    87.439,
+    91.28
+   ],
+   "text": "leading to greater unemployment they",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0049",
+   "anchor_link": "video_transcript_anchor_seg_0049",
+   "sequence_index": 49,
+   "time_range_sec": [
+    89.68,
+    92.32
+   ],
+   "text": "also argue that it would cut into the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0051",
+   "anchor_link": "video_transcript_anchor_seg_0051",
+   "sequence_index": 51,
+   "time_range_sec": [
+    92.32,
+    96.158
+   ],
+   "text": "and increase inflation the other side",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0052",
+   "anchor_link": "video_transcript_anchor_seg_0052",
+   "sequence_index": 52,
+   "time_range_sec": [
+    94.72,
+    98.4
+   ],
+   "text": "says higher pay",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0053",
+   "anchor_link": "video_transcript_anchor_seg_0053",
+   "sequence_index": 53,
+   "time_range_sec": [
+    96.158,
+    99.52
+   ],
+   "text": "would reduce employee turnover increase",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0055",
+   "anchor_link": "video_transcript_anchor_seg_0055",
+   "sequence_index": 55,
+   "time_range_sec": [
+    99.52,
+    104.399
+   ],
+   "text": "and help people keep up with the rising",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0056",
+   "anchor_link": "video_transcript_anchor_seg_0056",
+   "sequence_index": 56,
+   "time_range_sec": [
+    101.6,
+    104.399
+   ],
+   "text": "cost of living",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0057",
+   "anchor_link": "video_transcript_anchor_seg_0057",
+   "sequence_index": 57,
+   "time_range_sec": [
+    105.039,
+    109.439
+   ],
+   "text": "hey thanks for watching if you like this",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0059",
+   "anchor_link": "video_transcript_anchor_seg_0059",
+   "sequence_index": 59,
+   "time_range_sec": [
+    109.439,
+    115.84
+   ],
+   "text": "usa today to stay up to date with all",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0060",
+   "anchor_link": "video_transcript_anchor_seg_0060",
+   "sequence_index": 60,
+   "time_range_sec": [
+    111.439,
+    115.84
+   ],
+   "text": "the latest news",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  }
+ ],
+ "all_segment_count": 60,
+ "query_retrieval": true,
+ "query_terms": [
+  "denominations",
+  "bills",
+  "coins",
+  "animation",
+  "beginning",
+  "total",
+  "value",
+  "these",
+  "15",
+  "25",
+  "including",
+  "three",
+  "5",
+  "one",
+  "quarter",
+  "2",
+  "two",
+  "1",
+  "7",
+  "bill",
+  "10"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    59.44,
+    63.6
+   ],
+   "text": "a decent living",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    60.8,
+    64.479
+   ],
+   "text": "in 1938 that was established at 25 cents",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 5.333,
+   "relevance_terms": [
+    "25",
+    "5",
+    "2",
+    "1"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    63.6,
+    67.6
+   ],
+   "text": "an hour",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0039",
+   "anchor_link": "video_transcript_anchor_seg_0039",
+   "sequence_index": 39,
+   "time_range_sec": [
+    70.0,
+    73.84
+   ],
+   "text": "inflation",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0040",
+   "anchor_link": "video_transcript_anchor_seg_0040",
+   "sequence_index": 40,
+   "time_range_sec": [
+    70.88,
+    76.56
+   ],
+   "text": "so in 2019 seven dollars and 25 cents",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 5.333,
+   "relevance_terms": [
+    "25",
+    "5",
+    "2",
+    "1"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0041",
+   "anchor_link": "video_transcript_anchor_seg_0041",
+   "sequence_index": 41,
+   "time_range_sec": [
+    73.84,
+    78.0
+   ],
+   "text": "was actually only worth six dollars",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    2.96,
+    6.879
+   ],
+   "text": "below the federal minimum wage",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    4.799,
+    9.679
+   ],
+   "text": "that's seven dollars and 25 cents per",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "25",
+    "5",
+    "2"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    6.879,
+    11.84
+   ],
+   "text": "hour which works out to about 15 000",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "15",
+    "5",
+    "1"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    9.679,
+    13.12
+   ],
+   "text": "a year even though the cost of living",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.16,
+    4.799
+   ],
+   "text": "about 1.7 million americans earn at or",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "1",
+    "7"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    26.48,
+    30.4
+   ],
+   "text": "and bartenders employers only have to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    38.4
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0003",
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0015"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    51.44,
+    86.0
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0034",
+    "video_transcript_anchor_seg_0035",
+    "video_transcript_anchor_seg_0036",
+    "video_transcript_anchor_seg_0039",
+    "video_transcript_anchor_seg_0040",
+    "video_transcript_anchor_seg_0041"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "about 1.7 million americans earn at or below the federal minimum wage that's seven dollars and 25 cents per hour which works out to about 15 000 a year even though the cost of living continues to rise this number has stayed the same for over a decade minimum wage is the lowest amount an employer can legally pay an hourly worker but there are some exceptions for example according to federal law workers who receive tips like waiters and bartenders employers only have to pay them two dollars and thirteen cents an hour disabled workers can earn as little as one dollar an hour but many states have their own laws for example 29 states plus washington dc have a higher minimum wage you'll always get the highest wage possible so in states with no minimum wage or a lower one the federal minimum applies this amount hasn't changed since july 2009 the longest period in history without a raise when president franklin d roosevelt first introduced the federal minimum wage he said it was meant to be the wages of a decent living in 1938 that was established at 25 cents an hour since then it's been raised 22 times but after 1968 it just couldn't keep up with inflation so in 2019 seven dollars and 25 ",
+ "warnings": []
+}

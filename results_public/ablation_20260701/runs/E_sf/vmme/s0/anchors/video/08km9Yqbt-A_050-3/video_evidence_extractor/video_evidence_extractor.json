@@ -1,0 +1,1035 @@
+{
+ "anchor_id": "video_evidence_extractor",
+ "anchor_link": "video_evidence_extractor",
+ "type": "video_task_aware_evidence_extraction",
+ "role": "Pre-LLM task-aware evidence extractor using scene cuts, motion saliency, OCR regions, ASR windows, scoring, and diversity hints.",
+ "source_video_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_sf/vmme/s0/media/video/08km9Yqbt-A.mp4",
+ "query_profile": {
+  "question_types": [
+   "semantic_video"
+  ],
+  "task_family": {
+   "task_family": "generic_video_evidence",
+   "resolver_class": "GenericVideoEvidenceResolver",
+   "priority": "normal",
+   "confidence": 0.55,
+   "route_reasons": [
+    "default generic route"
+   ],
+   "options_detected": [
+    "A"
+   ],
+   "required_evidence": [
+    "global_timeline",
+    "low_fps_context",
+    "option_verification"
+   ]
+  },
+  "target_terms": [
+   "direction",
+   "should",
+   "one",
+   "face",
+   "observe",
+   "5",
+   "celestial",
+   "event",
+   "north",
+   "east",
+   "south",
+   "west"
+  ],
+  "required_evidence": [
+   "global_timeline",
+   "low_fps_context",
+   "option_verification"
+  ]
+ },
+ "temporal_scope": {
+  "type": "full_video",
+  "time_range_sec": [
+   0.0,
+   102.035
+  ],
+  "confidence": 0.7,
+  "source": "default_full_video",
+  "instructions": [
+   "No narrow temporal constraint detected; aggregate evidence across the full video."
+  ]
+ },
+ "scene_segments": [
+  {
+   "id": "scene_0001",
+   "time_range_sec": [
+    0.0,
+    5.138
+   ],
+   "duration_sec": 5.138,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0002",
+   "time_range_sec": [
+    5.138,
+    20.587
+   ],
+   "duration_sec": 15.449,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0003",
+   "time_range_sec": [
+    20.587,
+    27.06
+   ],
+   "duration_sec": 6.473,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0004",
+   "time_range_sec": [
+    27.06,
+    34.067
+   ],
+   "duration_sec": 7.007,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0005",
+   "time_range_sec": [
+    34.067,
+    37.404
+   ],
+   "duration_sec": 3.337,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0006",
+   "time_range_sec": [
+    37.404,
+    43.71
+   ],
+   "duration_sec": 6.306,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0007",
+   "time_range_sec": [
+    43.71,
+    52.753
+   ],
+   "duration_sec": 9.043,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0008",
+   "time_range_sec": [
+    52.753,
+    59.927
+   ],
+   "duration_sec": 7.174,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0009",
+   "time_range_sec": [
+    59.927,
+    77.544
+   ],
+   "duration_sec": 17.617,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0010",
+   "time_range_sec": [
+    77.544,
+    84.484
+   ],
+   "duration_sec": 6.94,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0011",
+   "time_range_sec": [
+    84.484,
+    92.559
+   ],
+   "duration_sec": 8.075,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0012",
+   "time_range_sec": [
+    92.559,
+    97.364
+   ],
+   "duration_sec": 4.805,
+   "source": "pyscenedetect_adaptive"
+  }
+ ],
+ "motion_regions": [
+  {
+   "id": "motion_candidate_0036",
+   "time_sec": 21.021,
+   "frame_index": 630,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    0.8796
+   ],
+   "motion_area_ratio": 0.82073,
+   "motion_intensity": 0.42881,
+   "score": 0.62477,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0041",
+   "time_sec": 27.527,
+   "frame_index": 825,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.99278,
+   "motion_intensity": 0.31231,
+   "score": 0.65254,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0055",
+   "time_sec": 34.535,
+   "frame_index": 1035,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    0.9306
+   ],
+   "motion_area_ratio": 0.74178,
+   "motion_intensity": 0.23861,
+   "score": 0.49019,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0064",
+   "time_sec": 44.044,
+   "frame_index": 1320,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.91545,
+   "motion_intensity": 0.28083,
+   "score": 0.59814,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0094",
+   "time_sec": 62.562,
+   "frame_index": 1875,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.8574,
+   "motion_intensity": 0.3502,
+   "score": 0.6038,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0118",
+   "time_sec": 77.578,
+   "frame_index": 2325,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.90894,
+   "motion_intensity": 0.27013,
+   "score": 0.58954,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0133",
+   "time_sec": 85.085,
+   "frame_index": 2550,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.91924,
+   "motion_intensity": 0.31722,
+   "score": 0.61823,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0148",
+   "time_sec": 92.593,
+   "frame_index": 2775,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.93528,
+   "motion_intensity": 0.4178,
+   "score": 0.67654,
+   "source": "opencv_frame_difference"
+  }
+ ],
+ "ocr_regions": [],
+ "object_detections": [],
+ "deterministic_evidence": {
+  "version": "deterministic_evidence_engine_v1",
+  "question_analysis": {
+   "question_types": [
+    "semantic_video"
+   ],
+   "task_family": {
+    "task_family": "generic_video_evidence",
+    "resolver_class": "GenericVideoEvidenceResolver",
+    "priority": "normal",
+    "confidence": 0.55,
+    "route_reasons": [
+     "default generic route"
+    ],
+    "options_detected": [
+     "A"
+    ],
+    "required_evidence": [
+     "global_timeline",
+     "low_fps_context",
+     "option_verification"
+    ]
+   },
+   "options": {
+    "A": "North.' 'B. East.' 'C. South.' 'D. West.']"
+   },
+   "target_terms": [
+    "direction",
+    "should",
+    "one",
+    "face",
+    "observe",
+    "5",
+    "celestial",
+    "event",
+    "north",
+    "east",
+    "south",
+    "west"
+   ]
+  },
+  "temporal_scope": {
+   "type": "full_video",
+   "time_range_sec": [
+    0.0,
+    102.035
+   ],
+   "confidence": 0.7,
+   "source": "default_full_video",
+   "instructions": [
+    "No narrow temporal constraint detected; aggregate evidence across the full video."
+   ]
+  },
+  "hard_evidence": {
+   "scoped_motion": [
+    {
+     "id": "motion_candidate_0036",
+     "time_sec": 21.021,
+     "frame_index": 630,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      0.8796
+     ],
+     "motion_area_ratio": 0.82073,
+     "motion_intensity": 0.42881,
+     "score": 0.62477,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0041",
+     "time_sec": 27.527,
+     "frame_index": 825,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.99278,
+     "motion_intensity": 0.31231,
+     "score": 0.65254,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0055",
+     "time_sec": 34.535,
+     "frame_index": 1035,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      0.9306
+     ],
+     "motion_area_ratio": 0.74178,
+     "motion_intensity": 0.23861,
+     "score": 0.49019,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0064",
+     "time_sec": 44.044,
+     "frame_index": 1320,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.91545,
+     "motion_intensity": 0.28083,
+     "score": 0.59814,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0094",
+     "time_sec": 62.562,
+     "frame_index": 1875,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.8574,
+     "motion_intensity": 0.3502,
+     "score": 0.6038,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0118",
+     "time_sec": 77.578,
+     "frame_index": 2325,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.90894,
+     "motion_intensity": 0.27013,
+     "score": 0.58954,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0133",
+     "time_sec": 85.085,
+     "frame_index": 2550,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.91924,
+     "motion_intensity": 0.31722,
+     "score": 0.61823,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0148",
+     "time_sec": 92.593,
+     "frame_index": 2775,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.93528,
+     "motion_intensity": 0.4178,
+     "score": 0.67654,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    }
+   ],
+   "scoped_ocr": [],
+   "scoped_objects": [],
+   "transcript_scope": [
+    {
+     "anchor_link": "video_transcript_anchor_seg_0001",
+     "time_range_sec": [
+      1.48,
+      8.599
+     ],
+     "text": "[Music]",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0002",
+     "time_range_sec": [
+      5.56,
+      10.92
+     ],
+     "text": "2024 will feature a variety of exciting",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0003",
+     "time_range_sec": [
+      8.599,
+      13.48
+     ],
+     "text": "astronomy events we start with a",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0004",
+     "time_range_sec": [
+      10.92,
+      16.359
+     ],
+     "text": "planetary alignment of Jupiter Mars and",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0005",
+     "time_range_sec": [
+      13.48,
+      18.56
+     ],
+     "text": "Saturn at number five this alignment on",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0006",
+     "time_range_sec": [
+      16.359,
+      21.92
+     ],
+     "text": "June 29th will be joined by the moon and",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0007",
+     "time_range_sec": [
+      18.56,
+      25.32
+     ],
+     "text": "the Eastern Sky Before Sunrise watch as",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0008",
+     "time_range_sec": [
+      21.92,
+      28.4
+     ],
+     "text": "these worlds form a straight line across",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0009",
+     "time_range_sec": [
+      25.32,
+      30.56
+     ],
+     "text": "the night sky at number four we have the",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0010",
+     "time_range_sec": [
+      28.4,
+      32.8
+     ],
+     "text": "super Harvest Moon eclipse",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0011",
+     "time_range_sec": [
+      30.56,
+      34.96
+     ],
+     "text": "a partial lunar eclipse will be visible",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0012",
+     "time_range_sec": [
+      32.8,
+      38.559
+     ],
+     "text": "in the United States during a super moon",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0013",
+     "time_range_sec": [
+      34.96,
+      40.76
+     ],
+     "text": "on September 17th it is the Harvest Moon",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0014",
+     "time_range_sec": [
+      38.559,
+      44.44
+     ],
+     "text": "because it is the full moon closest to",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0015",
+     "time_range_sec": [
+      40.76,
+      46.84
+     ],
+     "text": "the Equinox on September 22nd get ready",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0016",
+     "time_range_sec": [
+      44.44,
+      49.559
+     ],
+     "text": "for planetary oppositions at number",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0017",
+     "time_range_sec": [
+      46.84,
+      52.28
+     ],
+     "text": "three catch our Celestial Lord of the",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0018",
+     "time_range_sec": [
+      49.559,
+      54.76
+     ],
+     "text": "Rings Saturn at opposition on September",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0019",
+     "time_range_sec": [
+      52.28,
+      57.52
+     ],
+     "text": "8th and massive Jupiter will dominate",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0020",
+     "time_range_sec": [
+      54.76,
+      59.44
+     ],
+     "text": "the night's sky on December 7th a",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0021",
+     "time_range_sec": [
+      57.52,
+      62.399
+     ],
+     "text": "telescope will help you observe Saturn's",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0022",
+     "time_range_sec": [
+      59.44,
+      64.239
+     ],
+     "text": "rings and and Jupiter's Great Red Spot",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0023",
+     "time_range_sec": [
+      62.399,
+      66.72
+     ],
+     "text": "shooting stars will rain down from the",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0024",
+     "time_range_sec": [
+      64.239,
+      69.159
+     ],
+     "text": "summer night sky with the perced meteor",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    }
+   ]
+  },
+  "evidence_quality": {
+   "missing": [],
+   "conflicts": [],
+   "needs_reextract": false
+  },
+  "constraints_for_llm": [
+   "Evidence extractor must not output candidate_answer, preliminary_answer, best_option, or final answer.",
+   "Every observation must be timestamped and grounded to an anchor_link when available.",
+   "Final verification must evaluate each option independently as supported, contradicted, or unknown.",
+   "Use task_family=generic_video_evidence resolver semantics before generic evidence if confidence is medium/high."
+  ]
+ },
+ "question_time_windows": [],
+ "priority_time_windows": [],
+ "evidence_units": [
+  {
+   "id": "E_scene_0001",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    0.0,
+    5.138
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0002",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    5.138,
+    20.587
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0003",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    20.587,
+    27.06
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0004",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    27.06,
+    34.067
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0005",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    34.067,
+    37.404
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0006",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    37.404,
+    43.71
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_motion_0001",
+   "evidence_type": "motion_saliency",
+   "time_sec": 21.021,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     0.8796
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.42881,
+    "motion_area_ratio": 0.82073
+   }
+  },
+  {
+   "id": "E_motion_0002",
+   "evidence_type": "motion_saliency",
+   "time_sec": 27.527,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.31231,
+    "motion_area_ratio": 0.99278
+   }
+  },
+  {
+   "id": "E_motion_0003",
+   "evidence_type": "motion_saliency",
+   "time_sec": 34.535,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     0.9306
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.23861,
+    "motion_area_ratio": 0.74178
+   }
+  },
+  {
+   "id": "E_motion_0004",
+   "evidence_type": "motion_saliency",
+   "time_sec": 44.044,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.28083,
+    "motion_area_ratio": 0.91545
+   }
+  },
+  {
+   "id": "E_motion_0005",
+   "evidence_type": "motion_saliency",
+   "time_sec": 62.562,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.3502,
+    "motion_area_ratio": 0.8574
+   }
+  },
+  {
+   "id": "E_motion_0006",
+   "evidence_type": "motion_saliency",
+   "time_sec": 77.578,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.27013,
+    "motion_area_ratio": 0.90894
+   }
+  },
+  {
+   "id": "E_motion_0007",
+   "evidence_type": "motion_saliency",
+   "time_sec": 85.085,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.31722,
+    "motion_area_ratio": 0.91924
+   }
+  },
+  {
+   "id": "E_motion_0008",
+   "evidence_type": "motion_saliency",
+   "time_sec": 92.593,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.4178,
+    "motion_area_ratio": 0.93528
+   }
+  }
+ ],
+ "scoring_policy": {
+  "query_relevance": "question type and keyword overlap",
+  "temporal_importance": "scene boundary, motion peak, start/current/count windows, ASR hit windows",
+  "motion_saliency": "OpenCV frame-difference bbox intensity",
+  "ocr_confidence": "Tesseract text confidence and readable crop",
+  "diversity": "prefer different time windows and evidence types before repeating nearby evidence"
+ },
+ "warnings": []
+}

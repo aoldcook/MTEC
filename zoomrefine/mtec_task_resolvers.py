@@ -1,3 +1,4 @@
+import os
 import re
 from typing import Any, Dict, List, Optional
 
@@ -74,7 +75,9 @@ def route_question_family(question: str, options: Optional[Dict[str, str]] = Non
     confidence = 0.55
     reasons: List[str] = []
 
-    if has_any(["current score", "scoreboard", "score of", "比分", "当前比分", "计时器", "timer", "price", "license plate", "plate number", "displayed time"]):
+    if os.environ.get("MTEC_DISABLE_TASK_FAMILY_ROUTING") == "1":
+        reasons.append("task-family routing disabled via MTEC_DISABLE_TASK_FAMILY_ROUTING")
+    elif has_any(["current score", "scoreboard", "score of", "比分", "当前比分", "计时器", "timer", "price", "license plate", "plate number", "displayed time"]):
         family = "stateful_ocr"
         confidence = 0.88
         reasons.append("state-like OCR keyword")

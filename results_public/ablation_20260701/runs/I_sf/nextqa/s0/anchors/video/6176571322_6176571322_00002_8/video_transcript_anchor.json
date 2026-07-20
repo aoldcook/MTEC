@@ -1,0 +1,145 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/I_sf/nextqa/s0/media/video/6176571322.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    2.02,
+    3.02
+   ],
+   "text": "Thank you.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9014,
+   "no_speech_prob": 0.1189,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    3.02,
+    15.0
+   ],
+   "text": "Thank you, girls.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9014,
+   "no_speech_prob": 0.1189,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "girls",
+    "girl"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.02,
+    2.02
+   ],
+   "text": "I'm going to put a child together.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9014,
+   "no_speech_prob": 0.1189
+  }
+ ],
+ "all_segment_count": 3,
+ "query_retrieval": true,
+ "query_terms": [
+  "girls",
+  "pink",
+  "dark",
+  "green",
+  "unable",
+  "hold",
+  "hands",
+  "properly",
+  "acting",
+  "far",
+  "apart",
+  "held",
+  "woman",
+  "middle",
+  "rushed",
+  "down",
+  "man",
+  "black",
+  "girl",
+  "holding",
+  "puppets"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    2.02,
+    3.02
+   ],
+   "text": "Thank you.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9014,
+   "no_speech_prob": 0.1189,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    3.02,
+    15.0
+   ],
+   "text": "Thank you, girls.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9014,
+   "no_speech_prob": 0.1189,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "girls",
+    "girl"
+   ]
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    23.0
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0003"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "I'm going to put a child together. Thank you. Thank you, girls.",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

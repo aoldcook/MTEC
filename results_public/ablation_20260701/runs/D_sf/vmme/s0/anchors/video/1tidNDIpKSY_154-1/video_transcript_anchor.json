@@ -1,0 +1,237 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/D_sf/vmme/s0/media/video/1tidNDIpKSY.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/D_sf/vmme/s0/anchors/video/1tidNDIpKSY_154-1/subtitle/1tidNDIpKSY.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    13.0,
+    17.279
+   ],
+   "text": "the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    13.879,
+    21.82
+   ],
+   "text": "2026 FIFA World Cup be",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "fifa",
+    "world",
+    "cup"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    17.279,
+    25.109
+   ],
+   "text": "played the winner is New York New",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.09,
+    3.78
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    4.16,
+    10.0
+   ],
+   "text": "so here we are for the biggest",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    6.96,
+    13.0
+   ],
+   "text": "announcement in the history of",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    10.0,
+    13.879
+   ],
+   "text": "announcements where will the final of",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    21.82,
+    25.109
+   ],
+   "text": "[Applause]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    28.96,
+    31.96
+   ],
+   "text": "Jersey",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    51.39,
+    54.469
+   ],
+   "text": "[Applause]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    58.92,
+    61.92
+   ],
+   "text": "not",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 11,
+ "query_retrieval": true,
+ "query_terms": [
+  "beginning",
+  "man",
+  "standing",
+  "next",
+  "uefa",
+  "champions",
+  "league",
+  "trophy",
+  "olympic",
+  "torch",
+  "fifa",
+  "world",
+  "cup",
+  "super",
+  "bowl"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    13.0,
+    17.279
+   ],
+   "text": "the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    13.879,
+    21.82
+   ],
+   "text": "2026 FIFA World Cup be",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "fifa",
+    "world",
+    "cup"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    17.279,
+    25.109
+   ],
+   "text": "played the winner is New York New",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    5.0,
+    33.109
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0006",
+    "video_transcript_anchor_seg_0007"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "[Music] so here we are for the biggest announcement in the history of announcements where will the final of the 2026 FIFA World Cup be played the winner is New York New [Applause] Jersey [Applause] not",
+ "warnings": []
+}

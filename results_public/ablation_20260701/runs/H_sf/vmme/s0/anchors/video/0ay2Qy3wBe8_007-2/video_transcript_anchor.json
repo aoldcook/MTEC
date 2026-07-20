@@ -1,0 +1,490 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/vmme/s0/media/video/0ay2Qy3wBe8.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/vmme/s0/anchors/video/0ay2Qy3wBe8_007-2/subtitle/0ay2Qy3wBe8.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    14.599,
+    18.359
+   ],
+   "text": "signal the homing",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "homing"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    21.32,
+    25.24
+   ],
+   "text": "pigeon the Pony",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "pigeon",
+    "pony"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    28.08,
+    35.0
+   ],
+   "text": "Express the semaphor",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "express"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    7.64,
+    14.599
+   ],
+   "text": "message can be delivered by different",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    9.599,
+    18.359
+   ],
+   "text": "means of communication such as the smoke",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "communication"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    31.719,
+    35.0
+   ],
+   "text": "flag the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    35.42,
+    42.84
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    39.6,
+    42.84
+   ],
+   "text": "telegraph the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "telegraph"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    45.84,
+    49.079
+   ],
+   "text": "telephone the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "telephone"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    52.079,
+    55.16
+   ],
+   "text": "radio",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.719,
+    5.319
+   ],
+   "text": "a brief and somewhat accurate history of",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    3.6,
+    7.64
+   ],
+   "text": "how we stay",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    5.319,
+    9.599
+   ],
+   "text": "connected let's see if an important",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    53.82,
+    58.44
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    55.16,
+    58.44
+   ],
+   "text": "email the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    58.92,
+    63.32
+   ],
+   "text": "smartphone",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    60.22,
+    63.32
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    67.32,
+    74.92
+   ],
+   "text": "last but not least Facebook like us on",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    71.439,
+    77.92
+   ],
+   "text": "Facebook so we can stay",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    74.92,
+    77.92
+   ],
+   "text": "connected",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 20,
+ "query_retrieval": true,
+ "query_terms": [
+  "kind",
+  "communication",
+  "listed",
+  "before",
+  "semaphore",
+  "telephone",
+  "homing",
+  "pigeon",
+  "telegraph",
+  "pony",
+  "express"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    14.599,
+    18.359
+   ],
+   "text": "signal the homing",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "homing"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    21.32,
+    25.24
+   ],
+   "text": "pigeon the Pony",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "pigeon",
+    "pony"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    28.08,
+    35.0
+   ],
+   "text": "Express the semaphor",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "express"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    7.64,
+    14.599
+   ],
+   "text": "message can be delivered by different",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    9.599,
+    18.359
+   ],
+   "text": "means of communication such as the smoke",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "communication"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    31.719,
+    35.0
+   ],
+   "text": "flag the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    35.42,
+    42.84
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    39.6,
+    42.84
+   ],
+   "text": "telegraph the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "telegraph"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    45.84,
+    49.079
+   ],
+   "text": "telephone the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "telephone"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    52.079,
+    55.16
+   ],
+   "text": "radio",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    63.16
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0006",
+    "video_transcript_anchor_seg_0007",
+    "video_transcript_anchor_seg_0008",
+    "video_transcript_anchor_seg_0009",
+    "video_transcript_anchor_seg_0010",
+    "video_transcript_anchor_seg_0011",
+    "video_transcript_anchor_seg_0012",
+    "video_transcript_anchor_seg_0013"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "a brief and somewhat accurate history of how we stay connected let's see if an important message can be delivered by different means of communication such as the smoke signal the homing pigeon the Pony Express the semaphor flag the [Music] telegraph the telephone the radio [Music] email the smartphone [Music] last but not least Facebook like us on Facebook so we can stay connected",
+ "warnings": []
+}

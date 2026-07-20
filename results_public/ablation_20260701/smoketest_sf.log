@@ -1,0 +1,22 @@
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:ZfNSxRiYfZQ:258-3 video_media=2 image_media=15 frames=121 global_full=1 global_samples=105 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=11 transcript_segments=1 warnings=none
+video:ZfNSxRiYfZQ:258-3 [video]: completed pred=A gt=D correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7R1eNHvfspk:147-2 video_media=2 image_media=21 frames=89 global_full=1 global_samples=74 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=18 warnings=none
+video:7R1eNHvfspk:147-2 [video]: completed pred=A gt=C correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1q-5IIyZL20:197-2 video_media=2 image_media=21 frames=126 global_full=1 global_samples=110 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=8 transcript_segments=43 warnings=none
+video:1q-5IIyZL20:197-2 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:0ag_Qi5OEd0:522-3 video_media=2 image_media=4 frames=521 global_full=1 global_samples=489 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=7 warnings=none
+video:0ag_Qi5OEd0:522-3 [video]: completed pred=C gt=B correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7Hk9jct2ozY:321-2 video_media=2 image_media=4 frames=472 global_full=1 global_samples=440 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=43 warnings=none
+video:7Hk9jct2ozY:321-2 [video]: completed pred=B gt=D correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1pHkv4KUiFY:314-2 video_media=2 image_media=21 frames=282 global_full=1 global_samples=267 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=7 warnings=none
+video:1pHkv4KUiFY:314-2 [video]: completed pred=A gt=A correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/modelscope_mtec_anchor_api_full_summary.json
+SMOKETEST_DONE rc=0

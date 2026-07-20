@@ -1,0 +1,874 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/J_medium/vmme/s2/media/video/zOgYnntFl-k.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/J_medium/vmme/s2/anchors/video/zOgYnntFl-k_366-2/subtitle/zOgYnntFl-k.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    13.44,
+    16.88
+   ],
+   "text": "has a job to do but the judge and the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    16.32,
+    19.359
+   ],
+   "text": "jury",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "jury"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    16.88,
+    21.52
+   ],
+   "text": "are the most crucial roles in court if",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    19.359,
+    23.359
+   ],
+   "text": "you find yourself in a jury trial",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "jury"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    21.52,
+    25.599
+   ],
+   "text": "at the very least you should know what",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    23.359,
+    28.0
+   ],
+   "text": "the roles of the judge and the jury are",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "jury"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    25.599,
+    28.64
+   ],
+   "text": "although you undoubtedly have the gist",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    31.519,
+    34.0
+   ],
+   "text": "let's break down the role of the judge",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    33.28,
+    36.16
+   ],
+   "text": "first",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "first"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    34.0,
+    37.68
+   ],
+   "text": "even in a jury trial the judge still",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "jury"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    36.16,
+    39.92
+   ],
+   "text": "wears many hats",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "many"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    37.68,
+    40.719
+   ],
+   "text": "metaphorical hats of course first and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "first"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.24,
+    3.28
+   ],
+   "text": "whether it's a football team broadway",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    12.719,
+    16.32
+   ],
+   "text": "reporter",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    45.36,
+    48.879
+   ],
+   "text": "each side makes its arguments and",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    57.76,
+    60.96
+   ],
+   "text": "procedure",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    67.84,
+    71.76
+   ],
+   "text": "party objecting and the evidence or",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0044",
+   "anchor_link": "video_transcript_anchor_seg_0044",
+   "sequence_index": 44,
+   "time_range_sec": [
+    79.759,
+    82.64
+   ],
+   "text": "beforehand",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0050",
+   "anchor_link": "video_transcript_anchor_seg_0050",
+   "sequence_index": 50,
+   "time_range_sec": [
+    91.52,
+    94.88
+   ],
+   "text": "act as a guide for the jury",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0057",
+   "anchor_link": "video_transcript_anchor_seg_0057",
+   "sequence_index": 57,
+   "time_range_sec": [
+    104.24,
+    108.399
+   ],
+   "text": "based on the evidence that has been",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0063",
+   "anchor_link": "video_transcript_anchor_seg_0063",
+   "sequence_index": 63,
+   "time_range_sec": [
+    117.039,
+    121.119
+   ],
+   "text": "damages the defendant must pay",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0069",
+   "anchor_link": "video_transcript_anchor_seg_0069",
+   "sequence_index": 69,
+   "time_range_sec": [
+    128.08,
+    132.0
+   ],
+   "text": "the trier of fact the judge decides both",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0075",
+   "anchor_link": "video_transcript_anchor_seg_0075",
+   "sequence_index": 75,
+   "time_range_sec": [
+    141.04,
+    146.319
+   ],
+   "text": "one person not six it also presents the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0082",
+   "anchor_link": "video_transcript_anchor_seg_0082",
+   "sequence_index": 82,
+   "time_range_sec": [
+    155.28,
+    158.72
+   ],
+   "text": "ability that jurors do not",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0088",
+   "anchor_link": "video_transcript_anchor_seg_0088",
+   "sequence_index": 88,
+   "time_range_sec": [
+    166.8,
+    169.68
+   ],
+   "text": "enough the elevated desk the judge sits",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0094",
+   "anchor_link": "video_transcript_anchor_seg_0094",
+   "sequence_index": 94,
+   "time_range_sec": [
+    176.319,
+    179.599
+   ],
+   "text": "not a bench but the word comes from the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0100",
+   "anchor_link": "video_transcript_anchor_seg_0100",
+   "sequence_index": 100,
+   "time_range_sec": [
+    188.159,
+    192.56
+   ],
+   "text": "sidelined by a lack of knowledge on how",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0106",
+   "anchor_link": "video_transcript_anchor_seg_0106",
+   "sequence_index": 106,
+   "time_range_sec": [
+    201.44,
+    205.12
+   ],
+   "text": "in the court",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0113",
+   "anchor_link": "video_transcript_anchor_seg_0113",
+   "sequence_index": 113,
+   "time_range_sec": [
+    216.079,
+    220.48
+   ],
+   "text": "waiting room where you've been waiting",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0119",
+   "anchor_link": "video_transcript_anchor_seg_0119",
+   "sequence_index": 119,
+   "time_range_sec": [
+    229.36,
+    233.36
+   ],
+   "text": "into the courtroom",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0125",
+   "anchor_link": "video_transcript_anchor_seg_0125",
+   "sequence_index": 125,
+   "time_range_sec": [
+    241.68,
+    246.319
+   ],
+   "text": "know what to expect",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0131",
+   "anchor_link": "video_transcript_anchor_seg_0131",
+   "sequence_index": 131,
+   "time_range_sec": [
+    254.159,
+    258.959
+   ],
+   "text": "escorted to the witness stand",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0138",
+   "anchor_link": "video_transcript_anchor_seg_0138",
+   "sequence_index": 138,
+   "time_range_sec": [
+    269.199,
+    272.24
+   ],
+   "text": "nearby",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0144",
+   "anchor_link": "video_transcript_anchor_seg_0144",
+   "sequence_index": 144,
+   "time_range_sec": [
+    280.4,
+    284.4
+   ],
+   "text": "it is important for witnesses testifying",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0150",
+   "anchor_link": "video_transcript_anchor_seg_0150",
+   "sequence_index": 150,
+   "time_range_sec": [
+    293.52,
+    296.8
+   ],
+   "text": "sometimes used",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0156",
+   "anchor_link": "video_transcript_anchor_seg_0156",
+   "sequence_index": 156,
+   "time_range_sec": [
+    305.759,
+    310.0
+   ],
+   "text": "the judge is in charge of the courtroom",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0162",
+   "anchor_link": "video_transcript_anchor_seg_0162",
+   "sequence_index": 162,
+   "time_range_sec": [
+    316.8,
+    320.08
+   ],
+   "text": "when either the defense attorney or the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0169",
+   "anchor_link": "video_transcript_anchor_seg_0169",
+   "sequence_index": 169,
+   "time_range_sec": [
+    331.12,
+    335.52
+   ],
+   "text": "sits at the defense table",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0175",
+   "anchor_link": "video_transcript_anchor_seg_0175",
+   "sequence_index": 175,
+   "time_range_sec": [
+    343.84,
+    349.84
+   ],
+   "text": "hopes of getting the defendant a not",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0181",
+   "anchor_link": "video_transcript_anchor_seg_0181",
+   "sequence_index": 181,
+   "time_range_sec": [
+    356.88,
+    360.639
+   ],
+   "text": "defendant",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0187",
+   "anchor_link": "video_transcript_anchor_seg_0187",
+   "sequence_index": 187,
+   "time_range_sec": [
+    368.479,
+    372.0
+   ],
+   "text": "is to make certain",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0194",
+   "anchor_link": "video_transcript_anchor_seg_0194",
+   "sequence_index": 194,
+   "time_range_sec": [
+    381.52,
+    384.96
+   ],
+   "text": "the judge can help prevent a witness",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0200",
+   "anchor_link": "video_transcript_anchor_seg_0200",
+   "sequence_index": 200,
+   "time_range_sec": [
+    394.0,
+    399.28
+   ],
+   "text": "called the jury box the people on the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0206",
+   "anchor_link": "video_transcript_anchor_seg_0206",
+   "sequence_index": 206,
+   "time_range_sec": [
+    405.52,
+    410.72
+   ],
+   "text": "all of the witnesses called to testify",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0212",
+   "anchor_link": "video_transcript_anchor_seg_0212",
+   "sequence_index": 212,
+   "time_range_sec": [
+    419.759,
+    425.12
+   ],
+   "text": "testimony and evidence then they decide",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0219",
+   "anchor_link": "video_transcript_anchor_seg_0219",
+   "sequence_index": 219,
+   "time_range_sec": [
+    436.479,
+    440.08
+   ],
+   "text": "and sometimes if they can't agree on the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0225",
+   "anchor_link": "video_transcript_anchor_seg_0225",
+   "sequence_index": 225,
+   "time_range_sec": [
+    448.88,
+    453.599
+   ],
+   "text": "rail in the back of the courtroom",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0231",
+   "anchor_link": "video_transcript_anchor_seg_0231",
+   "sequence_index": 231,
+   "time_range_sec": [
+    473.44,
+    475.52
+   ],
+   "text": "you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  }
+ ],
+ "all_segment_count": 231,
+ "query_retrieval": true,
+ "query_terms": [
+  "many",
+  "members",
+  "jury",
+  "first",
+  "half",
+  "6",
+  "7",
+  "5",
+  "8"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    13.44,
+    16.88
+   ],
+   "text": "has a job to do but the judge and the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    16.32,
+    19.359
+   ],
+   "text": "jury",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "jury"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    16.88,
+    21.52
+   ],
+   "text": "are the most crucial roles in court if",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    19.359,
+    23.359
+   ],
+   "text": "you find yourself in a jury trial",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "jury"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    21.52,
+    25.599
+   ],
+   "text": "at the very least you should know what",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    23.359,
+    28.0
+   ],
+   "text": "the roles of the judge and the jury are",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "jury"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    25.599,
+    28.64
+   ],
+   "text": "although you undoubtedly have the gist",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    31.519,
+    34.0
+   ],
+   "text": "let's break down the role of the judge",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    33.28,
+    36.16
+   ],
+   "text": "first",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "first"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    34.0,
+    37.68
+   ],
+   "text": "even in a jury trial the judge still",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "jury"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    36.16,
+    39.92
+   ],
+   "text": "wears many hats",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "many"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    37.68,
+    40.719
+   ],
+   "text": "metaphorical hats of course first and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "first"
+   ]
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    5.44,
+    48.719
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0008",
+    "video_transcript_anchor_seg_0009",
+    "video_transcript_anchor_seg_0010",
+    "video_transcript_anchor_seg_0011",
+    "video_transcript_anchor_seg_0012",
+    "video_transcript_anchor_seg_0013",
+    "video_transcript_anchor_seg_0014",
+    "video_transcript_anchor_seg_0017",
+    "video_transcript_anchor_seg_0018",
+    "video_transcript_anchor_seg_0019",
+    "video_transcript_anchor_seg_0020",
+    "video_transcript_anchor_seg_0021"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "whether it's a football team broadway production factory line or fire department each person has their defined roles the same is true in court of course everyone from the bailiff to the court reporter has a job to do but the judge and the jury are the most crucial roles in court if you find yourself in a jury trial at the very least you should know what the roles of the judge and the jury are although you undoubtedly have the gist certainty usually wins the day in the courtroom so let's break down the role of the judge first even in a jury trial the judge still wears many hats metaphorical hats of course first and foremost the judge is an independent impartial decision maker in the pursuit of justice each side makes its arguments and presents the facts and evidence that it wants the jury to consider it's up to the judge to oversee it all without bias the judge is the ruler of the courtroom she decides all matters of courtroom procedure she also decides all legal issues including ruling on evidentiary objections when the judge sustains an objection to evidence it means she agrees with the party objecting and the evidence or testimony is disallowed if she overrules the objection it m",
+ "warnings": []
+}

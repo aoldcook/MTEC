@@ -1,0 +1,711 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/vmme/s0/media/video/5_fXicEnKKk.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/vmme/s0/anchors/video/5_fXicEnKKk_016-2/subtitle/5_fXicEnKKk.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    37.68,
+    42.399
+   ],
+   "text": "central star of the painting is a",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "painting"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    39.719,
+    44.879
+   ],
+   "text": "representation of vango's own life as he",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "van",
+    "life"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    42.399,
+    47.16
+   ],
+   "text": "battled mental illness while seeking to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "led"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    2.6,
+    8.24
+   ],
+   "text": "discussing Vincent vango's famous",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "van"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    4.72,
+    11.48
+   ],
+   "text": "painting star night this masterpiece",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "painting"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    8.24,
+    13.799
+   ],
+   "text": "painted in 1889 is a testament to the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    24.32,
+    29.279
+   ],
+   "text": "a surreal vision of stars twinkling",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    26.8,
+    32.36
+   ],
+   "text": "above a tormented world the painting's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "painting"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    29.279,
+    34.76
+   ],
+   "text": "title story night reflects the artist's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    34.76,
+    39.719
+   ],
+   "text": "cosmos amidst his personal turmoil the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.199,
+    4.72
+   ],
+   "text": "welcome everyone today we'll be",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    13.799,
+    18.88
+   ],
+   "text": "the essence of Nature and human emotion",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    11.48,
+    16.76
+   ],
+   "text": "artist's incredible ability to capture",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    16.76,
+    21.64
+   ],
+   "text": "Vango spent months capturing the night",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    18.88,
+    24.32
+   ],
+   "text": "sky Beauty from his Asylum bed using",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    21.64,
+    26.8
+   ],
+   "text": "bold expressive brush Strokes to create",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    32.36,
+    37.68
+   ],
+   "text": "desire to capture the Tranquility of the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    44.879,
+    49.52
+   ],
+   "text": "create his own legacy the Stars",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    47.16,
+    52.0
+   ],
+   "text": "surrounding it symbolize the supports",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    49.52,
+    54.6
+   ],
+   "text": "and love of his friends and family while",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    52.0,
+    57.199
+   ],
+   "text": "the stormy clouds evoke the chaos of his",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    54.6,
+    60.239
+   ],
+   "text": "personal struggles star night is a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    57.199,
+    62.84
+   ],
+   "text": "powerful reminder of vango's resilience",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    60.239,
+    65.64
+   ],
+   "text": "and the transformative power of art it",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    62.84,
+    67.56
+   ],
+   "text": "continues to Captivate audiences and",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    65.64,
+    69.479
+   ],
+   "text": "inspire people around the world",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    67.56,
+    72.0
+   ],
+   "text": "reminding us of the beauty and",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    69.479,
+    74.2
+   ],
+   "text": "complexity of The Human Experience if",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    72.0,
+    76.96
+   ],
+   "text": "you enjoyed this exploration don't",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    74.2,
+    79.158
+   ],
+   "text": "forget to like subscribe and support my",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    76.96,
+    81.799
+   ],
+   "text": "new channel for more fascinating",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    79.158,
+    84.28
+   ],
+   "text": "insights into art and culture if you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0033",
+   "anchor_link": "video_transcript_anchor_seg_0033",
+   "sequence_index": 33,
+   "time_range_sec": [
+    81.799,
+    86.72
+   ],
+   "text": "enjoyed this exploration don't forget to",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    84.28,
+    89.36
+   ],
+   "text": "like subscribe and support my new",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    86.72,
+    93.079
+   ],
+   "text": "channel for more fascinating insights",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    89.36,
+    93.079
+   ],
+   "text": "into our and culture",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 36,
+ "query_retrieval": true,
+ "query_terms": [
+  "elements",
+  "appear",
+  "paintings",
+  "primarily",
+  "mentioned",
+  "van",
+  "gogh",
+  "tragic",
+  "life",
+  "artistic",
+  "attainments",
+  "value",
+  "painting",
+  "hope",
+  "led",
+  "success"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    37.68,
+    42.399
+   ],
+   "text": "central star of the painting is a",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "painting"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    39.719,
+    44.879
+   ],
+   "text": "representation of vango's own life as he",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "van",
+    "life"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    42.399,
+    47.16
+   ],
+   "text": "battled mental illness while seeking to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "led"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    2.6,
+    8.24
+   ],
+   "text": "discussing Vincent vango's famous",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "van"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    4.72,
+    11.48
+   ],
+   "text": "painting star night this masterpiece",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "painting"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    8.24,
+    13.799
+   ],
+   "text": "painted in 1889 is a testament to the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    24.32,
+    29.279
+   ],
+   "text": "a surreal vision of stars twinkling",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    26.8,
+    32.36
+   ],
+   "text": "above a tormented world the painting's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "painting"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    29.279,
+    34.76
+   ],
+   "text": "title story night reflects the artist's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    34.76,
+    39.719
+   ],
+   "text": "cosmos amidst his personal turmoil the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.199,
+    4.72
+   ],
+   "text": "welcome everyone today we'll be",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    13.799,
+    18.88
+   ],
+   "text": "the essence of Nature and human emotion",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    55.16
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0003",
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0006",
+    "video_transcript_anchor_seg_0010",
+    "video_transcript_anchor_seg_0011",
+    "video_transcript_anchor_seg_0012",
+    "video_transcript_anchor_seg_0014",
+    "video_transcript_anchor_seg_0015",
+    "video_transcript_anchor_seg_0016",
+    "video_transcript_anchor_seg_0017"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "welcome everyone today we'll be discussing Vincent vango's famous painting star night this masterpiece painted in 1889 is a testament to the artist's incredible ability to capture the essence of Nature and human emotion Vango spent months capturing the night sky Beauty from his Asylum bed using bold expressive brush Strokes to create a surreal vision of stars twinkling above a tormented world the painting's title story night reflects the artist's desire to capture the Tranquility of the cosmos amidst his personal turmoil the central star of the painting is a representation of vango's own life as he battled mental illness while seeking to create his own legacy the Stars surrounding it symbolize the supports and love of his friends and family while the stormy clouds evoke the chaos of his personal struggles star night is a powerful reminder of vango's resilience and the transformative power of art it continues to Captivate audiences and inspire people around the world reminding us of the beauty and complexity of The Human Experience if you enjoyed this exploration don't forget to like subscribe and support my new channel for more fascinating insights into art and culture if you enjoy",
+ "warnings": []
+}

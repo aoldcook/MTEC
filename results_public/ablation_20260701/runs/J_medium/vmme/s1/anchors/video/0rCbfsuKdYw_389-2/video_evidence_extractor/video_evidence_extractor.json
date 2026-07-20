@@ -1,0 +1,992 @@
+{
+ "anchor_id": "video_evidence_extractor",
+ "anchor_link": "video_evidence_extractor",
+ "type": "video_task_aware_evidence_extraction",
+ "role": "Pre-LLM task-aware evidence extractor using scene cuts, motion saliency, OCR regions, ASR windows, scoring, and diversity hints.",
+ "source_video_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/J_medium/vmme/s1/media/video/0rCbfsuKdYw.mp4",
+ "query_profile": {
+  "question_types": [
+   "semantic_video"
+  ],
+  "task_family": {
+   "task_family": "generic_video_evidence",
+   "resolver_class": "GenericVideoEvidenceResolver",
+   "priority": "normal",
+   "confidence": 0.55,
+   "route_reasons": [
+    "default generic route"
+   ],
+   "options_detected": [
+    "A"
+   ],
+   "required_evidence": [
+    "global_timeline",
+    "low_fps_context",
+    "option_verification"
+   ]
+  },
+  "target_terms": [
+   "game",
+   "played",
+   "each",
+   "generation",
+   "play",
+   "stations",
+   "gran",
+   "turismo",
+   "last",
+   "god",
+   "war",
+   "grand",
+   "theft",
+   "auto"
+  ],
+  "required_evidence": [
+   "global_timeline",
+   "low_fps_context",
+   "option_verification"
+  ]
+ },
+ "temporal_scope": {
+  "type": "full_video",
+  "time_range_sec": [
+   0.0,
+   1045.8
+  ],
+  "confidence": 0.7,
+  "source": "default_full_video",
+  "instructions": [
+   "No narrow temporal constraint detected; aggregate evidence across the full video."
+  ]
+ },
+ "scene_segments": [
+  {
+   "id": "scene_0001",
+   "time_range_sec": [
+    0.0,
+    2.633
+   ],
+   "duration_sec": 2.633,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0002",
+   "time_range_sec": [
+    2.633,
+    6.6
+   ],
+   "duration_sec": 3.967,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0003",
+   "time_range_sec": [
+    6.6,
+    10.133
+   ],
+   "duration_sec": 3.533,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0004",
+   "time_range_sec": [
+    10.133,
+    14.633
+   ],
+   "duration_sec": 4.5,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0005",
+   "time_range_sec": [
+    14.633,
+    17.133
+   ],
+   "duration_sec": 2.5,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0006",
+   "time_range_sec": [
+    17.133,
+    22.0
+   ],
+   "duration_sec": 4.867,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0007",
+   "time_range_sec": [
+    22.0,
+    23.4
+   ],
+   "duration_sec": 1.4,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0008",
+   "time_range_sec": [
+    23.4,
+    25.067
+   ],
+   "duration_sec": 1.667,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0009",
+   "time_range_sec": [
+    25.067,
+    25.8
+   ],
+   "duration_sec": 0.733,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0010",
+   "time_range_sec": [
+    25.8,
+    27.167
+   ],
+   "duration_sec": 1.367,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0011",
+   "time_range_sec": [
+    27.167,
+    28.733
+   ],
+   "duration_sec": 1.566,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0012",
+   "time_range_sec": [
+    28.733,
+    30.767
+   ],
+   "duration_sec": 2.034,
+   "source": "pyscenedetect_adaptive"
+  }
+ ],
+ "motion_regions": [
+  {
+   "id": "motion_candidate_0444",
+   "time_sec": 230.5,
+   "frame_index": 6915,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.91706,
+   "motion_intensity": 0.52407,
+   "score": 0.72056,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0582",
+   "time_sec": 306.0,
+   "frame_index": 9180,
+   "bbox_norm": [
+    0.0703,
+    0.0625,
+    0.9297,
+    0.9375
+   ],
+   "motion_area_ratio": 0.7451,
+   "motion_intensity": 0.87081,
+   "score": 0.80796,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0698",
+   "time_sec": 369.5,
+   "frame_index": 11085,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.96145,
+   "motion_intensity": 0.59463,
+   "score": 0.77804,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_1560",
+   "time_sec": 825.5,
+   "frame_index": 24765,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.97413,
+   "motion_intensity": 0.59954,
+   "score": 0.78684,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_1658",
+   "time_sec": 879.0,
+   "frame_index": 26370,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.91974,
+   "motion_intensity": 0.53698,
+   "score": 0.72836,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_1723",
+   "time_sec": 920.5,
+   "frame_index": 27615,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.94053,
+   "motion_intensity": 0.63366,
+   "score": 0.78709,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_1924",
+   "time_sec": 1022.5,
+   "frame_index": 30675,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.9922,
+   "motion_intensity": 0.86896,
+   "score": 0.93058,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_1934",
+   "time_sec": 1028.0,
+   "frame_index": 30840,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.9922,
+   "motion_intensity": 0.72381,
+   "score": 0.858,
+   "source": "opencv_frame_difference"
+  }
+ ],
+ "ocr_regions": [],
+ "object_detections": [],
+ "deterministic_evidence": {
+  "version": "deterministic_evidence_engine_v1",
+  "question_analysis": {
+   "question_types": [
+    "semantic_video"
+   ],
+   "task_family": {
+    "task_family": "generic_video_evidence",
+    "resolver_class": "GenericVideoEvidenceResolver",
+    "priority": "normal",
+    "confidence": 0.55,
+    "route_reasons": [
+     "default generic route"
+    ],
+    "options_detected": [
+     "A"
+    ],
+    "required_evidence": [
+     "global_timeline",
+     "low_fps_context",
+     "option_verification"
+    ]
+   },
+   "options": {
+    "A": "Gran Turismo.' 'B. The Last of Us.' 'C. God of War.' 'D. Grand Theft Auto V.']"
+   },
+   "target_terms": [
+    "game",
+    "played",
+    "each",
+    "generation",
+    "play",
+    "stations",
+    "gran",
+    "turismo",
+    "last",
+    "god",
+    "war",
+    "grand",
+    "theft",
+    "auto"
+   ]
+  },
+  "temporal_scope": {
+   "type": "full_video",
+   "time_range_sec": [
+    0.0,
+    1045.8
+   ],
+   "confidence": 0.7,
+   "source": "default_full_video",
+   "instructions": [
+    "No narrow temporal constraint detected; aggregate evidence across the full video."
+   ]
+  },
+  "hard_evidence": {
+   "scoped_motion": [
+    {
+     "id": "motion_candidate_0444",
+     "time_sec": 230.5,
+     "frame_index": 6915,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.91706,
+     "motion_intensity": 0.52407,
+     "score": 0.72056,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0582",
+     "time_sec": 306.0,
+     "frame_index": 9180,
+     "bbox_norm": [
+      0.0703,
+      0.0625,
+      0.9297,
+      0.9375
+     ],
+     "motion_area_ratio": 0.7451,
+     "motion_intensity": 0.87081,
+     "score": 0.80796,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0698",
+     "time_sec": 369.5,
+     "frame_index": 11085,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.96145,
+     "motion_intensity": 0.59463,
+     "score": 0.77804,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_1560",
+     "time_sec": 825.5,
+     "frame_index": 24765,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.97413,
+     "motion_intensity": 0.59954,
+     "score": 0.78684,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_1658",
+     "time_sec": 879.0,
+     "frame_index": 26370,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.91974,
+     "motion_intensity": 0.53698,
+     "score": 0.72836,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_1723",
+     "time_sec": 920.5,
+     "frame_index": 27615,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.94053,
+     "motion_intensity": 0.63366,
+     "score": 0.78709,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_1924",
+     "time_sec": 1022.5,
+     "frame_index": 30675,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.9922,
+     "motion_intensity": 0.86896,
+     "score": 0.93058,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_1934",
+     "time_sec": 1028.0,
+     "frame_index": 30840,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.9922,
+     "motion_intensity": 0.72381,
+     "score": 0.858,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    }
+   ],
+   "scoped_ocr": [],
+   "scoped_objects": [],
+   "transcript_scope": [
+    {
+     "anchor_link": "video_transcript_anchor_seg_0282",
+     "time_range_sec": [
+      566.959,
+      570.399
+     ],
+     "text": "even though it was the home to god tier",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0283",
+     "time_range_sec": [
+      568.72,
+      572.16
+     ],
+     "text": "games like grand theft auto 5 and the",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0284",
+     "time_range_sec": [
+      570.399,
+      573.76
+     ],
+     "text": "last of us even though is where sony",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0054",
+     "time_range_sec": [
+      110.158,
+      114.24
+     ],
+     "text": "powerful console money could buy so this",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0055",
+     "time_range_sec": [
+      112.158,
+      116.158
+     ],
+     "text": "is gran turismo running on the ps1 and",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0056",
+     "time_range_sec": [
+      114.24,
+      118.079
+     ],
+     "text": "if you compare it to nintendo or sega's",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0146",
+     "time_range_sec": [
+      295.12,
+      299.28
+     ],
+     "text": "power that combined with some of the",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0147",
+     "time_range_sec": [
+      297.28,
+      302.16
+     ],
+     "text": "best games of the generation led the",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0148",
+     "time_range_sec": [
+      299.28,
+      305.6
+     ],
+     "text": "playstation 2 to break every record ever",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0249",
+     "time_range_sec": [
+      495.12,
+      499.199
+     ],
+     "text": "consoles off don't get any ideas",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0250",
+     "time_range_sec": [
+      499.52,
+      504.319
+     ],
+     "text": "so now we have the ps3 gran turismo next",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0251",
+     "time_range_sec": [
+      501.68,
+      506.319
+     ],
+     "text": "to the ps2 next to the ps1 i can't wait",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    }
+   ]
+  },
+  "evidence_quality": {
+   "missing": [],
+   "conflicts": [],
+   "needs_reextract": false
+  },
+  "constraints_for_llm": [
+   "Evidence extractor must not output candidate_answer, preliminary_answer, best_option, or final answer.",
+   "Every observation must be timestamped and grounded to an anchor_link when available.",
+   "Final verification must evaluate each option independently as supported, contradicted, or unknown.",
+   "Use task_family=generic_video_evidence resolver semantics before generic evidence if confidence is medium/high."
+  ]
+ },
+ "question_time_windows": [
+  {
+   "time_range_sec": [
+    102.158,
+    126.079
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0054",
+    "video_transcript_anchor_seg_0055",
+    "video_transcript_anchor_seg_0056"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    287.12,
+    313.6
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0146",
+    "video_transcript_anchor_seg_0147",
+    "video_transcript_anchor_seg_0148"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    487.12,
+    514.319
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0249",
+    "video_transcript_anchor_seg_0250",
+    "video_transcript_anchor_seg_0251"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    558.959,
+    581.76
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0282",
+    "video_transcript_anchor_seg_0283",
+    "video_transcript_anchor_seg_0284"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "priority_time_windows": [],
+ "evidence_units": [
+  {
+   "id": "E_scene_0001",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    0.0,
+    2.633
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0002",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    2.633,
+    6.6
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0003",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    6.6,
+    10.133
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0004",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    10.133,
+    14.633
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0005",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    14.633,
+    17.133
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0006",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    17.133,
+    22.0
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": true
+  },
+  {
+   "id": "E_motion_0001",
+   "evidence_type": "motion_saliency",
+   "time_sec": 230.5,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.52407,
+    "motion_area_ratio": 0.91706
+   }
+  },
+  {
+   "id": "E_motion_0002",
+   "evidence_type": "motion_saliency",
+   "time_sec": 306.0,
+   "region": {
+    "bbox_norm": [
+     0.0703,
+     0.0625,
+     0.9297,
+     0.9375
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.87081,
+    "motion_area_ratio": 0.7451
+   }
+  },
+  {
+   "id": "E_motion_0003",
+   "evidence_type": "motion_saliency",
+   "time_sec": 369.5,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.59463,
+    "motion_area_ratio": 0.96145
+   }
+  },
+  {
+   "id": "E_motion_0004",
+   "evidence_type": "motion_saliency",
+   "time_sec": 825.5,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.59954,
+    "motion_area_ratio": 0.97413
+   }
+  },
+  {
+   "id": "E_motion_0005",
+   "evidence_type": "motion_saliency",
+   "time_sec": 879.0,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.53698,
+    "motion_area_ratio": 0.91974
+   }
+  },
+  {
+   "id": "E_motion_0006",
+   "evidence_type": "motion_saliency",
+   "time_sec": 920.5,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.63366,
+    "motion_area_ratio": 0.94053
+   }
+  },
+  {
+   "id": "E_motion_0007",
+   "evidence_type": "motion_saliency",
+   "time_sec": 1022.5,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.86896,
+    "motion_area_ratio": 0.9922
+   }
+  },
+  {
+   "id": "E_motion_0008",
+   "evidence_type": "motion_saliency",
+   "time_sec": 1028.0,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.72381,
+    "motion_area_ratio": 0.9922
+   }
+  },
+  {
+   "id": "E_query_window_0001",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    102.158,
+    126.079
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0002",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    287.12,
+    313.6
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0003",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    487.12,
+    514.319
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0004",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    558.959,
+    581.76
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": true
+  }
+ ],
+ "scoring_policy": {
+  "query_relevance": "question type and keyword overlap",
+  "temporal_importance": "scene boundary, motion peak, start/current/count windows, ASR hit windows",
+  "motion_saliency": "OpenCV frame-difference bbox intensity",
+  "ocr_confidence": "Tesseract text confidence and readable crop",
+  "diversity": "prefer different time windows and evidence types before repeating nearby evidence"
+ },
+ "warnings": []
+}

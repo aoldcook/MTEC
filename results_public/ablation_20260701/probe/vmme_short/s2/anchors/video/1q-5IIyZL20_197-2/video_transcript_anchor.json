@@ -1,0 +1,651 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s2/media/video/1q-5IIyZL20.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s2/anchors/video/1q-5IIyZL20_197-2/subtitle/1q-5IIyZL20.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    15.15,
+    18.39
+   ],
+   "text": "that's priced enough at least that's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    17.039,
+    27.75
+   ],
+   "text": "what I'm telling the dog but he's not",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "dog"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    18.39,
+    30.9
+   ],
+   "text": "buying it after we left a GT we flew",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    37.5,
+    42.03
+   ],
+   "text": "renamed the pit the Mediterranean",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    39.27,
+    43.5
+   ],
+   "text": "theater highly mr. poofles would like to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "poo"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    42.03,
+    45.45
+   ],
+   "text": "offer you a complimentary green cleaning",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    1.4,
+    6.21
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    3.2,
+    8.58
+   ],
+   "text": "hey it's pip demerit dragon and mr. pit",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    6.21,
+    10.05
+   ],
+   "text": "bulls and we're finalists from season 10",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    8.58,
+    11.58
+   ],
+   "text": "of America's Got Talent",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    10.05,
+    12.99
+   ],
+   "text": "the great thing about this show is it's",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    11.58,
+    15.15
+   ],
+   "text": "the best of the best from all over the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    12.99,
+    17.039
+   ],
+   "text": "world so just getting to the competition",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    27.75,
+    33.329
+   ],
+   "text": "back to Vegas the next day we got a show",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    30.9,
+    35.34
+   ],
+   "text": "we got our own show v a magic dragon",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    33.329,
+    37.5
+   ],
+   "text": "show at the Flamingo Hotel and Casino",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    35.34,
+    39.27
+   ],
+   "text": "mr. pibbles and I just got the theater",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    43.5,
+    46.68
+   ],
+   "text": "service would you like that it's very",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    45.45,
+    49.14
+   ],
+   "text": "good it's been cleaning as I ring for",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    46.68,
+    50.34
+   ],
+   "text": "years tonight on stage we did a new bit",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    49.14,
+    52.829
+   ],
+   "text": "and that we've been working on for the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    50.34,
+    54.809
+   ],
+   "text": "past few months getting ready for",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    52.829,
+    57.0
+   ],
+   "text": "Champions now hide it mr. pibbles is",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    54.809,
+    59.37
+   ],
+   "text": "gonna lick all of the food out of your",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    57.0,
+    61.68
+   ],
+   "text": "ring leaving it as gleaming as the day",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    59.37,
+    65.81
+   ],
+   "text": "that you bought it for yourself mr.",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    61.68,
+    68.67
+   ],
+   "text": "pibbles cleaned one of Heidi's rings and",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    65.81,
+    69.93
+   ],
+   "text": "well Heidi seemed happy with the results",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    68.67,
+    74.0
+   ],
+   "text": "on the count of three give them a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    69.93,
+    74.0
+   ],
+   "text": "squeeze one two three",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    76.32,
+    81.52
+   ],
+   "text": "lovely good sure buddy",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    79.81,
+    82.63
+   ],
+   "text": "the judges will greet it was great to go",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0033",
+   "anchor_link": "video_transcript_anchor_seg_0033",
+   "sequence_index": 33,
+   "time_range_sec": [
+    81.52,
+    85.03
+   ],
+   "text": "in there and hear what they have to say",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    82.63,
+    86.229
+   ],
+   "text": "because mr. pibbles and I we haven't won",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    85.03,
+    88.36
+   ],
+   "text": "America's Got Talent",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    86.229,
+    90.82
+   ],
+   "text": "we were back here as runners-up slash",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    88.36,
+    93.31
+   ],
+   "text": "losers you have been one of the best",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    90.82,
+    95.86
+   ],
+   "text": "ambassadors for the show to give people",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0039",
+   "anchor_link": "video_transcript_anchor_seg_0039",
+   "sequence_index": 39,
+   "time_range_sec": [
+    93.31,
+    96.429
+   ],
+   "text": "trust to come on the show so I owe you a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0040",
+   "anchor_link": "video_transcript_anchor_seg_0040",
+   "sequence_index": 40,
+   "time_range_sec": [
+    95.86,
+    101.429
+   ],
+   "text": "lot",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0041",
+   "anchor_link": "video_transcript_anchor_seg_0041",
+   "sequence_index": 41,
+   "time_range_sec": [
+    96.429,
+    101.429
+   ],
+   "text": "thank you goodbye thanks guys",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0042",
+   "anchor_link": "video_transcript_anchor_seg_0042",
+   "sequence_index": 42,
+   "time_range_sec": [
+    103.56,
+    110.64
+   ],
+   "text": "hi YouTube click below to subscribe for",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0043",
+   "anchor_link": "video_transcript_anchor_seg_0043",
+   "sequence_index": 43,
+   "time_range_sec": [
+    107.95,
+    110.64
+   ],
+   "text": "more talent",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 43,
+ "query_retrieval": true,
+ "query_terms": [
+  "function",
+  "black",
+  "plastic",
+  "bag",
+  "store",
+  "dog",
+  "treats",
+  "later",
+  "carry",
+  "toys",
+  "during",
+  "walks",
+  "collect",
+  "water",
+  "drink",
+  "catch",
+  "poo"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    15.15,
+    18.39
+   ],
+   "text": "that's priced enough at least that's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    17.039,
+    27.75
+   ],
+   "text": "what I'm telling the dog but he's not",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "dog"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    18.39,
+    30.9
+   ],
+   "text": "buying it after we left a GT we flew",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    37.5,
+    42.03
+   ],
+   "text": "renamed the pit the Mediterranean",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    39.27,
+    43.5
+   ],
+   "text": "theater highly mr. poofles would like to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "poo"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    42.03,
+    45.45
+   ],
+   "text": "offer you a complimentary green cleaning",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    7.15,
+    53.45
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0008",
+    "video_transcript_anchor_seg_0009",
+    "video_transcript_anchor_seg_0010",
+    "video_transcript_anchor_seg_0015",
+    "video_transcript_anchor_seg_0016",
+    "video_transcript_anchor_seg_0017"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "[Music] hey it's pip demerit dragon and mr. pit bulls and we're finalists from season 10 of America's Got Talent the great thing about this show is it's the best of the best from all over the world so just getting to the competition that's priced enough at least that's what I'm telling the dog but he's not buying it after we left a GT we flew back to Vegas the next day we got a show we got our own show v a magic dragon show at the Flamingo Hotel and Casino mr. pibbles and I just got the theater renamed the pit the Mediterranean theater highly mr. poofles would like to offer you a complimentary green cleaning service would you like that it's very good it's been cleaning as I ring for years tonight on stage we did a new bit and that we've been working on for the past few months getting ready for Champions now hide it mr. pibbles is gonna lick all of the food out of your ring leaving it as gleaming as the day that you bought it for yourself mr. pibbles cleaned one of Heidi's rings and well Heidi seemed happy with the results on the count of three give them a squeeze one two three lovely good sure buddy the judges will greet it was great to go in there and hear what they have to say be",
+ "warnings": []
+}

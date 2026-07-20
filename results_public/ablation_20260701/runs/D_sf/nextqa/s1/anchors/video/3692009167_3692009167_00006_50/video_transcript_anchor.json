@@ -1,0 +1,374 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/D_sf/nextqa/s1/media/video/3692009167.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.59,
+    2.59
+   ],
+   "text": "Look at it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "look"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    2.59,
+    4.59
+   ],
+   "text": "Liam. Liam.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    4.59,
+    6.59
+   ],
+   "text": "Look at it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "look"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    6.59,
+    8.59
+   ],
+   "text": "Wow, that's amazing.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    8.59,
+    10.59
+   ],
+   "text": "Look at it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "look"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    10.59,
+    12.59
+   ],
+   "text": "I love it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    12.59,
+    16.58
+   ],
+   "text": "Hey, you're going to take a picture.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    16.58,
+    18.58
+   ],
+   "text": "Hey, you're going to take a picture.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    18.58,
+    20.58
+   ],
+   "text": "Who is that, Liam?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    20.58,
+    22.58
+   ],
+   "text": "It's your great grandpa.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    22.58,
+    34.77
+   ],
+   "text": "Oh, that's all right.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    34.77,
+    38.77
+   ],
+   "text": "I think all kinds of wonderful things should be done.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    38.77,
+    40.77
+   ],
+   "text": "It's the thought.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.1232,
+   "no_speech_prob": 0.0381
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    40.77,
+    42.77
+   ],
+   "text": "Yeah.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.1232,
+   "no_speech_prob": 0.0381
+  }
+ ],
+ "all_segment_count": 14,
+ "query_retrieval": true,
+ "query_terms": [
+  "man",
+  "floral",
+  "shirt",
+  "leans",
+  "towards",
+  "child",
+  "head",
+  "kiss",
+  "baby",
+  "smell",
+  "look",
+  "playing",
+  "support"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.59,
+    2.59
+   ],
+   "text": "Look at it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "look"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    2.59,
+    4.59
+   ],
+   "text": "Liam. Liam.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    4.59,
+    6.59
+   ],
+   "text": "Look at it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "look"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    6.59,
+    8.59
+   ],
+   "text": "Wow, that's amazing.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    8.59,
+    10.59
+   ],
+   "text": "Look at it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "look"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    10.59,
+    12.59
+   ],
+   "text": "I love it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3304,
+   "no_speech_prob": 0.2583,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    20.59
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0003",
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0006"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "Look at it. Liam. Liam. Look at it. Wow, that's amazing. Look at it. I love it. Hey, you're going to take a picture. Hey, you're going to take a picture. Who is that, Liam? It's your great grandpa. Oh, that's all right. I think all kinds of wonderful things should be done. It's the thought. Yeah.",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

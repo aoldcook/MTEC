@@ -1,0 +1,575 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/nextqa/s0/media/video/4976487220.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    25.39,
+    31.39
+   ],
+   "text": "I'm Mavash, a petite woman with grey hair and kind eyes, as she helped me with my blankets.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "woman"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    31.39,
+    34.39
+   ],
+   "text": "And I'm Faribah, said another woman who appeared to be in her mid-40s.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "woman",
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    34.39,
+    36.39
+   ],
+   "text": "She smiled and held out her hand.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    1.39,
+    8.39
+   ],
+   "text": "Because having gone through her stories, then I knew how it might have felt to them.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3598,
+   "no_speech_prob": 0.2306,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    8.39,
+    12.39
+   ],
+   "text": "The whole time that they were in prison and everything.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3598,
+   "no_speech_prob": 0.2306,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    22.39,
+    25.39
+   ],
+   "text": "She comes into this cell.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3598,
+   "no_speech_prob": 0.2306,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    36.39,
+    40.39
+   ],
+   "text": "Haj Khunum, that's one of the guards, all the guards.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    60.39,
+    64.39
+   ],
+   "text": "They heard I was from America and wanted to teach me some English.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    64.39,
+    69.39
+   ],
+   "text": "I readily agreed if I was going to be cooped up in Evan, at least I could do something worthwhile for others.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    69.39,
+    73.39
+   ],
+   "text": "My new cell looked as though its occupants had been living here for a while.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    73.39,
+    79.39
+   ],
+   "text": "The two women had built up a large supply of blankets, which were spread out like a carpet over half the floor.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    12.39,
+    22.39
+   ],
+   "text": "So I don't know if I can ask you to try, but just meeting them and finding out these two of the high ladies.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3598,
+   "no_speech_prob": 0.2306
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    40.39,
+    43.39
+   ],
+   "text": "Nobody knows their own name, so they just have nicknames.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    43.39,
+    51.39
+   ],
+   "text": "Head dropped me off in a cell next to my previous one, which my former cellmate, Vida, had told me she'd shared with two Baha'i women.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    51.39,
+    57.39
+   ],
+   "text": "Mavash and Faribah had often spotted me through the barred windows in my door, walking back and forth down the corridor.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    57.39,
+    60.39
+   ],
+   "text": "They told me as I sat down on my blankets beside them.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    79.39,
+    83.39
+   ],
+   "text": "A row of books lined part one wall and a family photo was leaning against them.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.2798,
+   "no_speech_prob": 0.0573
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    83.39,
+    87.39
+   ],
+   "text": "This cell, like my last one, had a television.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.2798,
+   "no_speech_prob": 0.0573
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    87.39,
+    89.39
+   ],
+   "text": "How long it was?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.2798,
+   "no_speech_prob": 0.0573
+  }
+ ],
+ "all_segment_count": 19,
+ "query_retrieval": true,
+ "query_terms": [
+  "blonde",
+  "woman",
+  "after",
+  "touching",
+  "her",
+  "scarf",
+  "beginning",
+  "jump",
+  "run",
+  "put",
+  "earpiece",
+  "talking",
+  "hold",
+  "bottle",
+  "starts",
+  "standing"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    25.39,
+    31.39
+   ],
+   "text": "I'm Mavash, a petite woman with grey hair and kind eyes, as she helped me with my blankets.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "woman"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    31.39,
+    34.39
+   ],
+   "text": "And I'm Faribah, said another woman who appeared to be in her mid-40s.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "woman",
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    34.39,
+    36.39
+   ],
+   "text": "She smiled and held out her hand.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    1.39,
+    8.39
+   ],
+   "text": "Because having gone through her stories, then I knew how it might have felt to them.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3598,
+   "no_speech_prob": 0.2306,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    8.39,
+    12.39
+   ],
+   "text": "The whole time that they were in prison and everything.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3598,
+   "no_speech_prob": 0.2306,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    22.39,
+    25.39
+   ],
+   "text": "She comes into this cell.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3598,
+   "no_speech_prob": 0.2306,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    36.39,
+    40.39
+   ],
+   "text": "Haj Khunum, that's one of the guards, all the guards.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.234,
+   "no_speech_prob": 0.3213,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    60.39,
+    64.39
+   ],
+   "text": "They heard I was from America and wanted to teach me some English.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    64.39,
+    69.39
+   ],
+   "text": "I readily agreed if I was going to be cooped up in Evan, at least I could do something worthwhile for others.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    69.39,
+    73.39
+   ],
+   "text": "My new cell looked as though its occupants had been living here for a while.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    73.39,
+    79.39
+   ],
+   "text": "The two women had built up a large supply of blankets, which were spread out like a carpet over half the floor.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.0813,
+   "no_speech_prob": 0.3003,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    48.39
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0006",
+    "video_transcript_anchor_seg_0007",
+    "video_transcript_anchor_seg_0008"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    52.39,
+    87.39
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0013",
+    "video_transcript_anchor_seg_0014",
+    "video_transcript_anchor_seg_0015",
+    "video_transcript_anchor_seg_0016"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "Because having gone through her stories, then I knew how it might have felt to them. The whole time that they were in prison and everything. So I don't know if I can ask you to try, but just meeting them and finding out these two of the high ladies. She comes into this cell. I'm Mavash, a petite woman with grey hair and kind eyes, as she helped me with my blankets. And I'm Faribah, said another woman who appeared to be in her mid-40s. She smiled and held out her hand. Haj Khunum, that's one of the guards, all the guards. Nobody knows their own name, so they just have nicknames. Head dropped me off in a cell next to my previous one, which my former cellmate, Vida, had told me she'd shared with two Baha'i women. Mavash and Faribah had often spotted me through the barred windows in my door, walking back and forth down the corridor. They told me as I sat down on my blankets beside them. They heard I was from America and wanted to teach me some English. I readily agreed if I was going to be cooped up in Evan, at least I could do something worthwhile for others. My new cell looked as though its occupants had been living here for a while. The two women had built up a large supply of blank",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

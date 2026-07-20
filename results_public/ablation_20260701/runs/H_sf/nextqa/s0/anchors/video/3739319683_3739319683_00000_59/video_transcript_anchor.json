@@ -1,0 +1,246 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/nextqa/s0/media/video/3739319683.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.0,
+    37.04
+   ],
+   "text": "I'm a hot boy!",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    37.04,
+    39.04
+   ],
+   "text": "I'm saying you won't let me know.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    39.04,
+    41.04
+   ],
+   "text": "I thought it was going hard too.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    43.04,
+    45.04
+   ],
+   "text": "That's the last one.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    45.04,
+    47.04
+   ],
+   "text": "What else have you been to?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    47.04,
+    49.04
+   ],
+   "text": "Hey, don't tell me you haven't played anywhere.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    49.04,
+    52.04
+   ],
+   "text": "We are a special player.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    52.04,
+    54.04
+   ],
+   "text": "They are superpowers.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    54.04,
+    56.04
+   ],
+   "text": "I don't believe I have a room.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    56.04,
+    58.04
+   ],
+   "text": "Don't run fast.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    58.04,
+    60.04
+   ],
+   "text": "It's a good game.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    60.04,
+    62.04
+   ],
+   "text": "So, it's the best game I can find.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.2193,
+   "no_speech_prob": 0.3374
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    62.04,
+    69.04
+   ],
+   "text": "I'm not going to be a",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.3088,
+   "no_speech_prob": 0.2837
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    69.04,
+    72.04
+   ],
+   "text": "little bit too late.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.3088,
+   "no_speech_prob": 0.2837
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    72.04,
+    79.04
+   ],
+   "text": "I'm going to be a little bit late.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.3088,
+   "no_speech_prob": 0.2837
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    79.04,
+    85.04
+   ],
+   "text": "I'm going to be a little bit late.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.3088,
+   "no_speech_prob": 0.2837
+  }
+ ],
+ "all_segment_count": 16,
+ "query_retrieval": true,
+ "query_terms": [
+  "many",
+  "people",
+  "sitting",
+  "down",
+  "wait",
+  "turn",
+  "watching",
+  "performance",
+  "basketball",
+  "match",
+  "2",
+  "perform",
+  "football"
+ ],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "I'm a hot boy! I'm saying you won't let me know. I thought it was going hard too. That's the last one. What else have you been to? Hey, don't tell me you haven't played anywhere. We are a special player. They are superpowers. I don't believe I have a room. Don't run fast. It's a good game. So, it's the best game I can find. I'm not going to be a little bit too late. I'm going to be a little bit late. I'm going to be a little bit late.",
+ "warnings": [
+  "No embedded subtitle stream extracted.",
+  "Question-driven transcript retrieval found no direct lexical hits; using temporal coverage segments."
+ ]
+}

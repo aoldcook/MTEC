@@ -1,0 +1,214 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/I_sf/vmme/s1/media/video/zNxi2s36tS0.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/I_sf/vmme/s1/anchors/video/zNxi2s36tS0_163-3/subtitle/zNxi2s36tS0.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    38.32,
+    41.52
+   ],
+   "text": "takes the win",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    39.92,
+    45.16
+   ],
+   "text": "10-06",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "10",
+    "06"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    41.52,
+    45.16
+   ],
+   "text": "the win 3.7",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "7"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    12.16,
+    15.16
+   ],
+   "text": "so",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    28.32,
+    32.64
+   ],
+   "text": "oh we are away door and getting a great",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    30.72,
+    34.64
+   ],
+   "text": "start on the outside here's jake torrent",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    32.64,
+    36.239
+   ],
+   "text": "out in front watch for eddie osirique a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    34.64,
+    38.32
+   ],
+   "text": "bit jake torrance in the lead he's",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    36.239,
+    39.92
+   ],
+   "text": "pulling away from the field and doran",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 9,
+ "query_retrieval": true,
+ "query_terms": [
+  "shortest",
+  "time",
+  "reach",
+  "finish",
+  "line",
+  "9",
+  "5",
+  "seconds",
+  "10",
+  "06",
+  "8",
+  "7"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    38.32,
+    41.52
+   ],
+   "text": "takes the win",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    39.92,
+    45.16
+   ],
+   "text": "10-06",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "10",
+    "06"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    41.52,
+    45.16
+   ],
+   "text": "the win 3.7",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "7"
+   ]
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    30.32,
+    53.16
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0007",
+    "video_transcript_anchor_seg_0008",
+    "video_transcript_anchor_seg_0009"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "so oh we are away door and getting a great start on the outside here's jake torrent out in front watch for eddie osirique a bit jake torrance in the lead he's pulling away from the field and doran takes the win 10-06 the win 3.7",
+ "warnings": []
+}

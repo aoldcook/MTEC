@@ -1,0 +1,1276 @@
+{
+ "anchor_id": "video_evidence_extractor",
+ "anchor_link": "video_evidence_extractor",
+ "type": "video_task_aware_evidence_extraction",
+ "role": "Pre-LLM task-aware evidence extractor using scene cuts, motion saliency, OCR regions, ASR windows, scoring, and diversity hints.",
+ "source_video_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/nextqa/s0/media/video/4976487220.mp4",
+ "query_profile": {
+  "question_types": [
+   "temporal_order",
+   "action_motion"
+  ],
+  "task_family": {
+   "task_family": "generic_video_evidence",
+   "resolver_class": "GenericVideoEvidenceResolver",
+   "priority": "normal",
+   "confidence": 0.55,
+   "route_reasons": [
+    "default generic route"
+   ],
+   "options_detected": [
+    "A"
+   ],
+   "required_evidence": [
+    "global_timeline",
+    "low_fps_context",
+    "option_verification"
+   ]
+  },
+  "target_terms": [
+   "blonde",
+   "woman",
+   "after",
+   "touching",
+   "her",
+   "scarf",
+   "beginning",
+   "jump",
+   "run",
+   "put",
+   "earpiece",
+   "talking",
+   "hold",
+   "bottle",
+   "starts",
+   "standing"
+  ],
+  "required_evidence": [
+   "global_timeline",
+   "low_fps_context",
+   "event_boundaries",
+   "before_during_after",
+   "motion_region",
+   "state_change_tubelet",
+   "option_verification"
+  ]
+ },
+ "temporal_scope": {
+  "type": "beginning",
+  "time_range_sec": [
+   0.0,
+   13.228
+  ],
+  "confidence": 0.9,
+  "source": "keyword_beginning",
+  "instructions": [
+   "Use evidence inside temporal_scope first.",
+   "Mark evidence outside temporal_scope as scope_match=false and do not use it for final decisions unless no scoped evidence exists."
+  ]
+ },
+ "scene_segments": [
+  {
+   "id": "scene_fallback_0001",
+   "time_range_sec": [
+    0.0,
+    17.638
+   ],
+   "duration_sec": 17.638,
+   "source": "uniform_fallback"
+  },
+  {
+   "id": "scene_fallback_0002",
+   "time_range_sec": [
+    17.638,
+    35.275
+   ],
+   "duration_sec": 17.638,
+   "source": "uniform_fallback"
+  },
+  {
+   "id": "scene_fallback_0003",
+   "time_range_sec": [
+    35.275,
+    52.913
+   ],
+   "duration_sec": 17.638,
+   "source": "uniform_fallback"
+  },
+  {
+   "id": "scene_fallback_0004",
+   "time_range_sec": [
+    52.913,
+    70.55
+   ],
+   "duration_sec": 17.638,
+   "source": "uniform_fallback"
+  },
+  {
+   "id": "scene_fallback_0005",
+   "time_range_sec": [
+    70.55,
+    88.188
+   ],
+   "duration_sec": 17.638,
+   "source": "uniform_fallback"
+  }
+ ],
+ "motion_regions": [
+  {
+   "id": "motion_candidate_0022",
+   "time_sec": 11.511,
+   "frame_index": 345,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.93325,
+   "motion_intensity": 0.257,
+   "score": 0.59512,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0025",
+   "time_sec": 13.013,
+   "frame_index": 390,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.9443,
+   "motion_intensity": 0.33909,
+   "score": 0.64169,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0029",
+   "time_sec": 15.015,
+   "frame_index": 450,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.93479,
+   "motion_intensity": 0.45324,
+   "score": 0.69401,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0033",
+   "time_sec": 17.017,
+   "frame_index": 510,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.95913,
+   "motion_intensity": 0.2601,
+   "score": 0.60962,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0036",
+   "time_sec": 18.518,
+   "frame_index": 555,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.95055,
+   "motion_intensity": 0.32433,
+   "score": 0.63744,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0039",
+   "time_sec": 20.02,
+   "frame_index": 600,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.91793,
+   "motion_intensity": 0.36443,
+   "score": 0.64118,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0042",
+   "time_sec": 21.521,
+   "frame_index": 645,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.93596,
+   "motion_intensity": 0.30959,
+   "score": 0.62278,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0045",
+   "time_sec": 23.023,
+   "frame_index": 690,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.87743,
+   "motion_intensity": 0.30891,
+   "score": 0.59317,
+   "source": "opencv_frame_difference"
+  }
+ ],
+ "ocr_regions": [],
+ "object_detections": [
+  {
+   "id": "video_object_region_0001",
+   "anchor_link": "video_object_region_0001",
+   "time_sec": 0.0,
+   "frame_index": 0,
+   "label": "person",
+   "confidence": 0.7448,
+   "bbox_norm": [
+    0.0,
+    0.225,
+    0.4813,
+    1.0
+   ],
+   "source": "ultralytics_yolo",
+   "score": 0.7448
+  },
+  {
+   "id": "video_object_region_0003",
+   "anchor_link": "video_object_region_0003",
+   "time_sec": 4.004,
+   "frame_index": 120,
+   "label": "person",
+   "confidence": 0.7166,
+   "bbox_norm": [
+    0.0,
+    0.2125,
+    0.4594,
+    1.0
+   ],
+   "source": "ultralytics_yolo",
+   "score": 0.7166
+  },
+  {
+   "id": "video_object_region_0005",
+   "anchor_link": "video_object_region_0005",
+   "time_sec": 8.675,
+   "frame_index": 260,
+   "label": "person",
+   "confidence": 0.7133,
+   "bbox_norm": [
+    0.0,
+    0.1792,
+    0.45,
+    1.0
+   ],
+   "source": "ultralytics_yolo",
+   "score": 0.7133
+  },
+  {
+   "id": "video_object_region_0007",
+   "anchor_link": "video_object_region_0007",
+   "time_sec": 12.012,
+   "frame_index": 360,
+   "label": "person",
+   "confidence": 0.5443,
+   "bbox_norm": [
+    0.2656,
+    0.075,
+    0.8,
+    1.0
+   ],
+   "source": "ultralytics_yolo",
+   "score": 0.5443
+  },
+  {
+   "id": "video_object_region_0008",
+   "anchor_link": "video_object_region_0008",
+   "time_sec": 14.014,
+   "frame_index": 420,
+   "label": "person",
+   "confidence": 0.5288,
+   "bbox_norm": [
+    0.2344,
+    0.3167,
+    0.7375,
+    1.0
+   ],
+   "source": "ultralytics_yolo",
+   "score": 0.5288
+  },
+  {
+   "id": "video_object_region_0009",
+   "anchor_link": "video_object_region_0009",
+   "time_sec": 16.683,
+   "frame_index": 500,
+   "label": "person",
+   "confidence": 0.7539,
+   "bbox_norm": [
+    0.2,
+    0.1625,
+    0.8938,
+    1.0
+   ],
+   "source": "ultralytics_yolo",
+   "score": 0.7539
+  },
+  {
+   "id": "video_object_region_0012",
+   "anchor_link": "video_object_region_0012",
+   "time_sec": 22.022,
+   "frame_index": 660,
+   "label": "chair",
+   "confidence": 0.5512,
+   "bbox_norm": [
+    0.0,
+    0.0375,
+    0.2812,
+    0.9917
+   ],
+   "source": "ultralytics_yolo",
+   "score": 0.5512
+  }
+ ],
+ "deterministic_evidence": {
+  "version": "deterministic_evidence_engine_v1",
+  "question_analysis": {
+   "question_types": [
+    "action_motion",
+    "temporal_order"
+   ],
+   "task_family": {
+    "task_family": "generic_video_evidence",
+    "resolver_class": "GenericVideoEvidenceResolver",
+    "priority": "normal",
+    "confidence": 0.55,
+    "route_reasons": [
+     "default generic route"
+    ],
+    "options_detected": [
+     "A"
+    ],
+    "required_evidence": [
+     "global_timeline",
+     "low_fps_context",
+     "option_verification"
+    ]
+   },
+   "options": {
+    "A": "jump and run' 'B. put on earpiece' 'C. talking' 'D. hold the bottle' 'E. starts standing up']"
+   },
+   "target_terms": [
+    "blonde",
+    "woman",
+    "after",
+    "touching",
+    "her",
+    "scarf",
+    "beginning",
+    "jump",
+    "run",
+    "put",
+    "earpiece",
+    "talking",
+    "hold",
+    "bottle",
+    "starts",
+    "standing"
+   ]
+  },
+  "temporal_scope": {
+   "type": "beginning",
+   "time_range_sec": [
+    0.0,
+    13.228
+   ],
+   "confidence": 0.9,
+   "source": "keyword_beginning",
+   "instructions": [
+    "Use evidence inside temporal_scope first.",
+    "Mark evidence outside temporal_scope as scope_match=false and do not use it for final decisions unless no scoped evidence exists."
+   ]
+  },
+  "hard_evidence": {
+   "scoped_motion": [
+    {
+     "id": "motion_candidate_0022",
+     "time_sec": 11.511,
+     "frame_index": 345,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.93325,
+     "motion_intensity": 0.257,
+     "score": 0.59512,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0025",
+     "time_sec": 13.013,
+     "frame_index": 390,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.9443,
+     "motion_intensity": 0.33909,
+     "score": 0.64169,
+     "source": "opencv_frame_difference",
+     "scope_match": true
+    },
+    {
+     "id": "motion_candidate_0029",
+     "time_sec": 15.015,
+     "frame_index": 450,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.93479,
+     "motion_intensity": 0.45324,
+     "score": 0.69401,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_0033",
+     "time_sec": 17.017,
+     "frame_index": 510,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.95913,
+     "motion_intensity": 0.2601,
+     "score": 0.60962,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_0036",
+     "time_sec": 18.518,
+     "frame_index": 555,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.95055,
+     "motion_intensity": 0.32433,
+     "score": 0.63744,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_0039",
+     "time_sec": 20.02,
+     "frame_index": 600,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.91793,
+     "motion_intensity": 0.36443,
+     "score": 0.64118,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_0042",
+     "time_sec": 21.521,
+     "frame_index": 645,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.93596,
+     "motion_intensity": 0.30959,
+     "score": 0.62278,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_0045",
+     "time_sec": 23.023,
+     "frame_index": 690,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.87743,
+     "motion_intensity": 0.30891,
+     "score": 0.59317,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    }
+   ],
+   "scoped_ocr": [],
+   "scoped_objects": [
+    {
+     "id": "video_object_region_0001",
+     "anchor_link": "video_object_region_0001",
+     "time_sec": 0.0,
+     "frame_index": 0,
+     "label": "person",
+     "confidence": 0.7448,
+     "bbox_norm": [
+      0.0,
+      0.225,
+      0.4813,
+      1.0
+     ],
+     "source": "ultralytics_yolo",
+     "score": 0.7448,
+     "scope_match": true
+    },
+    {
+     "id": "video_object_region_0003",
+     "anchor_link": "video_object_region_0003",
+     "time_sec": 4.004,
+     "frame_index": 120,
+     "label": "person",
+     "confidence": 0.7166,
+     "bbox_norm": [
+      0.0,
+      0.2125,
+      0.4594,
+      1.0
+     ],
+     "source": "ultralytics_yolo",
+     "score": 0.7166,
+     "scope_match": true
+    },
+    {
+     "id": "video_object_region_0005",
+     "anchor_link": "video_object_region_0005",
+     "time_sec": 8.675,
+     "frame_index": 260,
+     "label": "person",
+     "confidence": 0.7133,
+     "bbox_norm": [
+      0.0,
+      0.1792,
+      0.45,
+      1.0
+     ],
+     "source": "ultralytics_yolo",
+     "score": 0.7133,
+     "scope_match": true
+    },
+    {
+     "id": "video_object_region_0007",
+     "anchor_link": "video_object_region_0007",
+     "time_sec": 12.012,
+     "frame_index": 360,
+     "label": "person",
+     "confidence": 0.5443,
+     "bbox_norm": [
+      0.2656,
+      0.075,
+      0.8,
+      1.0
+     ],
+     "source": "ultralytics_yolo",
+     "score": 0.5443,
+     "scope_match": true
+    },
+    {
+     "id": "video_object_region_0008",
+     "anchor_link": "video_object_region_0008",
+     "time_sec": 14.014,
+     "frame_index": 420,
+     "label": "person",
+     "confidence": 0.5288,
+     "bbox_norm": [
+      0.2344,
+      0.3167,
+      0.7375,
+      1.0
+     ],
+     "source": "ultralytics_yolo",
+     "score": 0.5288,
+     "scope_match": false
+    },
+    {
+     "id": "video_object_region_0009",
+     "anchor_link": "video_object_region_0009",
+     "time_sec": 16.683,
+     "frame_index": 500,
+     "label": "person",
+     "confidence": 0.7539,
+     "bbox_norm": [
+      0.2,
+      0.1625,
+      0.8938,
+      1.0
+     ],
+     "source": "ultralytics_yolo",
+     "score": 0.7539,
+     "scope_match": false
+    },
+    {
+     "id": "video_object_region_0012",
+     "anchor_link": "video_object_region_0012",
+     "time_sec": 22.022,
+     "frame_index": 660,
+     "label": "chair",
+     "confidence": 0.5512,
+     "bbox_norm": [
+      0.0,
+      0.0375,
+      0.2812,
+      0.9917
+     ],
+     "source": "ultralytics_yolo",
+     "score": 0.5512,
+     "scope_match": false
+    }
+   ],
+   "transcript_scope": [
+    {
+     "anchor_link": "video_transcript_anchor_seg_0005",
+     "time_range_sec": [
+      25.39,
+      31.39
+     ],
+     "text": "I'm Mavash, a petite woman with grey hair and kind eyes, as she helped me with my blankets.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0006",
+     "time_range_sec": [
+      31.39,
+      34.39
+     ],
+     "text": "And I'm Faribah, said another woman who appeared to be in her mid-40s.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0007",
+     "time_range_sec": [
+      34.39,
+      36.39
+     ],
+     "text": "She smiled and held out her hand.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0001",
+     "time_range_sec": [
+      1.39,
+      8.39
+     ],
+     "text": "Because having gone through her stories, then I knew how it might have felt to them.",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0002",
+     "time_range_sec": [
+      8.39,
+      12.39
+     ],
+     "text": "The whole time that they were in prison and everything.",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0004",
+     "time_range_sec": [
+      22.39,
+      25.39
+     ],
+     "text": "She comes into this cell.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0008",
+     "time_range_sec": [
+      36.39,
+      40.39
+     ],
+     "text": "Haj Khunum, that's one of the guards, all the guards.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0013",
+     "time_range_sec": [
+      60.39,
+      64.39
+     ],
+     "text": "They heard I was from America and wanted to teach me some English.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0014",
+     "time_range_sec": [
+      64.39,
+      69.39
+     ],
+     "text": "I readily agreed if I was going to be cooped up in Evan, at least I could do something worthwhile for others.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0015",
+     "time_range_sec": [
+      69.39,
+      73.39
+     ],
+     "text": "My new cell looked as though its occupants had been living here for a while.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0016",
+     "time_range_sec": [
+      73.39,
+      79.39
+     ],
+     "text": "The two women had built up a large supply of blankets, which were spread out like a carpet over half the floor.",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    }
+   ]
+  },
+  "evidence_quality": {
+   "missing": [],
+   "conflicts": [],
+   "needs_reextract": false
+  },
+  "constraints_for_llm": [
+   "Evidence extractor must not output candidate_answer, preliminary_answer, best_option, or final answer.",
+   "Every observation must be timestamped and grounded to an anchor_link when available.",
+   "Final verification must evaluate each option independently as supported, contradicted, or unknown.",
+   "Use task_family=generic_video_evidence resolver semantics before generic evidence if confidence is medium/high.",
+   "Do not use evidence outside temporal_scope for the answer unless all scoped evidence is missing.",
+   "For beginning questions, later transcript or late visual evidence is scope_mismatch and cannot override opening visual evidence."
+  ]
+ },
+ "question_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    48.39
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0006",
+    "video_transcript_anchor_seg_0007",
+    "video_transcript_anchor_seg_0008"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    52.39,
+    87.39
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0013",
+    "video_transcript_anchor_seg_0014",
+    "video_transcript_anchor_seg_0015",
+    "video_transcript_anchor_seg_0016"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "priority_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    13.228
+   ],
+   "source": "temporal_scope_beginning"
+  },
+  {
+   "time_range_sec": [
+    0.0,
+    10.0
+   ],
+   "source": "question_start_focus"
+  }
+ ],
+ "evidence_units": [
+  {
+   "id": "E_scene_0001",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    0.0,
+    17.638
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0002",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    17.638,
+    35.275
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": false
+  },
+  {
+   "id": "E_scene_0003",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    35.275,
+    52.913
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": false
+  },
+  {
+   "id": "E_scene_0004",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    52.913,
+    70.55
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": false
+  },
+  {
+   "id": "E_scene_0005",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    70.55,
+    88.188
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": false
+  },
+  {
+   "id": "E_motion_0001",
+   "evidence_type": "motion_saliency",
+   "time_sec": 11.511,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.257,
+    "motion_area_ratio": 0.93325
+   }
+  },
+  {
+   "id": "E_motion_0002",
+   "evidence_type": "motion_saliency",
+   "time_sec": 13.013,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": true,
+   "score_terms": {
+    "motion_intensity": 0.33909,
+    "motion_area_ratio": 0.9443
+   }
+  },
+  {
+   "id": "E_motion_0003",
+   "evidence_type": "motion_saliency",
+   "time_sec": 15.015,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.45324,
+    "motion_area_ratio": 0.93479
+   }
+  },
+  {
+   "id": "E_motion_0004",
+   "evidence_type": "motion_saliency",
+   "time_sec": 17.017,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.2601,
+    "motion_area_ratio": 0.95913
+   }
+  },
+  {
+   "id": "E_motion_0005",
+   "evidence_type": "motion_saliency",
+   "time_sec": 18.518,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.32433,
+    "motion_area_ratio": 0.95055
+   }
+  },
+  {
+   "id": "E_motion_0006",
+   "evidence_type": "motion_saliency",
+   "time_sec": 20.02,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.36443,
+    "motion_area_ratio": 0.91793
+   }
+  },
+  {
+   "id": "E_motion_0007",
+   "evidence_type": "motion_saliency",
+   "time_sec": 21.521,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.30959,
+    "motion_area_ratio": 0.93596
+   }
+  },
+  {
+   "id": "E_motion_0008",
+   "evidence_type": "motion_saliency",
+   "time_sec": 23.023,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.30891,
+    "motion_area_ratio": 0.87743
+   }
+  },
+  {
+   "id": "E_object_0001",
+   "evidence_type": "object_detection",
+   "time_sec": 0.0,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.225,
+     0.4813,
+     1.0
+    ]
+   },
+   "event": "Detected object candidate: person",
+   "anchor_link": "video_object_region_0001",
+   "confidence": 0.7448,
+   "source": "ultralytics_yolo",
+   "scope_match": true
+  },
+  {
+   "id": "E_object_0002",
+   "evidence_type": "object_detection",
+   "time_sec": 4.004,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.2125,
+     0.4594,
+     1.0
+    ]
+   },
+   "event": "Detected object candidate: person",
+   "anchor_link": "video_object_region_0003",
+   "confidence": 0.7166,
+   "source": "ultralytics_yolo",
+   "scope_match": true
+  },
+  {
+   "id": "E_object_0003",
+   "evidence_type": "object_detection",
+   "time_sec": 8.675,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.1792,
+     0.45,
+     1.0
+    ]
+   },
+   "event": "Detected object candidate: person",
+   "anchor_link": "video_object_region_0005",
+   "confidence": 0.7133,
+   "source": "ultralytics_yolo",
+   "scope_match": true
+  },
+  {
+   "id": "E_object_0004",
+   "evidence_type": "object_detection",
+   "time_sec": 12.012,
+   "region": {
+    "bbox_norm": [
+     0.2656,
+     0.075,
+     0.8,
+     1.0
+    ]
+   },
+   "event": "Detected object candidate: person",
+   "anchor_link": "video_object_region_0007",
+   "confidence": 0.5443,
+   "source": "ultralytics_yolo",
+   "scope_match": true
+  },
+  {
+   "id": "E_object_0005",
+   "evidence_type": "object_detection",
+   "time_sec": 14.014,
+   "region": {
+    "bbox_norm": [
+     0.2344,
+     0.3167,
+     0.7375,
+     1.0
+    ]
+   },
+   "event": "Detected object candidate: person",
+   "anchor_link": "video_object_region_0008",
+   "confidence": 0.5288,
+   "source": "ultralytics_yolo",
+   "scope_match": false
+  },
+  {
+   "id": "E_object_0006",
+   "evidence_type": "object_detection",
+   "time_sec": 16.683,
+   "region": {
+    "bbox_norm": [
+     0.2,
+     0.1625,
+     0.8938,
+     1.0
+    ]
+   },
+   "event": "Detected object candidate: person",
+   "anchor_link": "video_object_region_0009",
+   "confidence": 0.7539,
+   "source": "ultralytics_yolo",
+   "scope_match": false
+  },
+  {
+   "id": "E_object_0007",
+   "evidence_type": "object_detection",
+   "time_sec": 22.022,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0375,
+     0.2812,
+     0.9917
+    ]
+   },
+   "event": "Detected object candidate: chair",
+   "anchor_link": "video_object_region_0012",
+   "confidence": 0.5512,
+   "source": "ultralytics_yolo",
+   "scope_match": false
+  },
+  {
+   "id": "E_query_window_0001",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    0.0,
+    13.228
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.7,
+   "source": "temporal_scope_beginning",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0002",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    0.0,
+    10.0
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.7,
+   "source": "question_start_focus",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0003",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    0.0,
+    48.39
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0004",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    52.39,
+    87.39
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": false
+  }
+ ],
+ "scoring_policy": {
+  "query_relevance": "question type and keyword overlap",
+  "temporal_importance": "scene boundary, motion peak, start/current/count windows, ASR hit windows",
+  "motion_saliency": "OpenCV frame-difference bbox intensity",
+  "ocr_confidence": "Tesseract text confidence and readable crop",
+  "diversity": "prefer different time windows and evidence types before repeating nearby evidence"
+ },
+ "warnings": [
+  "PySceneDetect found no scene cuts; used timeline fallback."
+ ]
+}

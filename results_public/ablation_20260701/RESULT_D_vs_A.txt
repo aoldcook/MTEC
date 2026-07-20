@@ -1,0 +1,14 @@
+========================================================================
+ABLATION CONFIG D_no_visual_context  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[mlvu] config: completed 30/30 (100% completion), acc 90.0% (27/30), median_token_save 96.0%
+      paired vs A on 30 shared keys: config 90.0% (27) vs A 86.7% (26) -> dAcc +3.3 pts
+      token-save median: config 96.0% vs A 96.0% -> d +0.0 pts
+
+[vmme_long] config: completed 40/40 (100% completion), acc 70.0% (28/40), median_token_save 89.4%
+      paired vs A on 28 shared keys: config 60.7% (17) vs A 53.6% (15) -> dAcc +7.1 pts
+      token-save median: config 89.4% vs A 89.4% -> d +0.0 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=58 shared): config 75.9% vs A 70.7% -> dAcc +5.2 pts

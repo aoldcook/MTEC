@@ -1,0 +1,1108 @@
+[
+ {
+  "record_key": "video:ZfNSxRiYfZQ:258-3",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/ZfNSxRiYfZQ.mp4",
+  "question": "What mode of transportation does the man in the video use to go out?\n['A. By bike.' 'B. By bus.' 'C. By subway.' 'D. By driving a car.']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "A",
+  "raw_response": "FINAL_ANSWER: A",
+  "correct": false,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1280,
+     "height": 720,
+     "r_frame_rate": "24/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "104.512939",
+    "size": "11257412"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/ZfNSxRiYfZQ.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "ZfNSxRiYfZQ",
+  "question_id": "258-3",
+  "api_meta": {
+   "api_elapsed_seconds": 15.236,
+   "usage": {
+    "prompt_tokens": 17876,
+    "completion_tokens": 5,
+    "total_tokens": 17881
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: A"
+   },
+   "response_id": "019f1bee751c89846dab68a1023f3e64"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 15.236,
+   "usage": {
+    "prompt_tokens": 17876,
+    "completion_tokens": 5,
+    "total_tokens": 17881
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: A"
+   },
+   "response_id": "019f1bee751c89846dab68a1023f3e64"
+  },
+  "answer_model": "Qwen/Qwen3-VL-32B-Instruct",
+  "answer_base_url": "https://api.siliconflow.cn/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\"question_type\":\"mode_of_transportation\",\"task_family\":\"generic_video_evidence\",\"task_family_evidence\":{\"facts\":[],\"conflicts\":[],\"fallback_needed\":false},\"temporal_scope\":{\"type\":\"full_video\",\"time_range_sec\":[0.0,104.5],\"confidence\":0.95},\"observations\":[{\"id\":\"E1\",\"time\":\"0.0-104.5\",\"modality\":\"visual|video\",\"observation\":\"The video shows a man sitting on a log by the beach at sunset. No vehicles, roads, or transportation infrastructure are visible in any frame. The man does not appear to be leaving or arriving by any mode of transportation.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E2\",\"time\":\"0.0-104.5\",\"modality\":\"visual|video\",\"observation\":\"The beach scene is static with calm water, rocks, and bare branches. There is no motion or visual evidence of travel or departure.\",\"anchor\":\"video_anchor_low_fps\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E3\",\"time\":\"0.0-104.5\",\"modality\":\"visual|video\",\"observation\":\"No frames show the man near a bike, bus, subway, or car. No roads, bike lanes, or transit stations are visible.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E4\",\"time\":\"0.0-104.5\",\"modality\":\"visual|video\",\"observation\":\"The man is shown in various settings (desk, gym, beach) but never in the act of commuting or using a vehicle. No transportation-related objects are present.\",\"anchor\":\"video_anchor_low_fps\",\"scope_match\":true,\"confidence\":0.95}],\"counts\":[],\"visible_set\":{\"A. By bike.\":false,\"B. By bus.\":false,\"C. By subway.\":false,\"D. By driving a car.\":false},\"ocr_text\":[],\"missing_required_evidence\":[],\"forbidden_inference\":[],\"uncertainty\":[\"No visual evidence of any transportation mode is present in the video. The question cannot be answered from the provided frames.\"]}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 25.208,
+   "usage": {
+    "prompt_tokens": 9299,
+    "completion_tokens": 465,
+    "total_tokens": 9764
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\"question_type\":\"mode_of_transportation\",\"task_family\":\"generic_video_evidence\",\"task_family_evidence\":{\"facts\":[],\"conflicts\":[],\"fallback_needed\":false},\"temporal_scope\":{\"type\":\"full_video\",\"time_range_sec\":[0.0,104.5],\"confidence\":0.95},\"observations\":[{\"id\":\"E1\",\"time\":\"0.0-104.5\",\"modality\":\"visual|video\",\"observation\":\"The video shows a man sitting on a log by the beach at sunset. No vehicles, roads, or transportation infrastructure are visible in any frame. The man does not appear to be leaving or arriving by any mode of transportation.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E2\",\"time\":\"0.0-104.5\",\"modality\":\"visual|video\",\"observation\":\"The beach scene is static with calm water, rocks, and bare branches. There is no motion or visual evidence of travel or departure.\",\"anchor\":\"video_anchor_low_fps\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E3\",\"time\":\"0.0-104.5\",\"modality\":\"visual|video\",\"observation\":\"No frames show the man near a bike, bus, subway, or car. No roads, bike lanes, or transit stations are visible.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E4\",\"time\":\"0.0-104.5\",\"modality\":\"visual|video\",\"observation\":\"The man is shown in various settings (desk, gym, beach) but never in the act of commuting or using a vehicle. No transportation-related objects are present.\",\"anchor\":\"video_anchor_low_fps\",\"scope_match\":true,\"confidence\":0.95}],\"counts\":[],\"visible_set\":{\"A. By bike.\":false,\"B. By bus.\":false,\"C. By subway.\":false,\"D. By driving a car.\":false},\"ocr_text\":[],\"missing_required_evidence\":[],\"forbidden_inference\":[],\"uncertainty\":[\"No visual evidence of any transportation mode is present in the video. The question cannot be answered from the provided frames.\"]}"
+   },
+   "response_id": "019f1bee16b2a9cae004d4e35393a6c4",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 892 (char 891)",
+     "response_chars": 973
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1797
+    }
+   ]
+  },
+  "computed_global_timeline_response": "{\"task_specific_resolver\":{\"resolver_type\":\"generic_video_evidence\",\"evidence_template\":{\"facts\":[],\"conflicts\":[],\"fallback_needed\":false},\"special_rules\":[\"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\"Resolver output is structured evidence only; final option mapping happens later.\",\"Use global timeline, local crops, transcript, and options jointly.\",\"Record uncertainty instead of forcing unsupported evidence.\"],\"target_time_ranges\":[],\"fallback_policy\":\"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\"confidence\":0.55},\"timeline\":[{\"time_range\":\"0.0-104.5\",\"scene\":\"A man sits on a log by the beach at sunset, with bare branches and rocks in the foreground. The background shows calm water and a distant horizon. No vehicles or transportation modes are visible.\",\"actions\":[],\"objects\":[\"man\", \"log\", \"beach\", \"water\", \"rocks\", \"branches\"],\"visual_cues\":[\"no vehicles\", \"no roads\", \"no motion suggesting travel\", \"static beach scene\"],\"confidence\":0.95}],\"question_relevant_time_ranges\":[{\"time_range\":\"0.0-104.5\",\"reason\":\"The entire video shows a static beach scene with no indication of the man leaving or using any mode of transportation. No vehicles, roads, or transit infrastructure are visible.\",\"confidence\":0.95}],\"scene_locator\":{\"target_scene\":\"beach scene with man sitting on log\",\"time_range\":\"0.0-104.5\",\"confidence\":0.95},\"global_uncertainties\":[]}",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 17.364,
+   "usage": {
+    "prompt_tokens": 1191,
+    "completion_tokens": 369,
+    "total_tokens": 1560
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\"task_specific_resolver\":{\"resolver_type\":\"generic_video_evidence\",\"evidence_template\":{\"facts\":[],\"conflicts\":[],\"fallback_needed\":false},\"special_rules\":[\"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\"Resolver output is structured evidence only; final option mapping happens later.\",\"Use global timeline, local crops, transcript, and options jointly.\",\"Record uncertainty instead of forcing unsupported evidence.\"],\"target_time_ranges\":[],\"fallback_policy\":\"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\"confidence\":0.55},\"timeline\":[{\"time_range\":\"0.0-104.5\",\"scene\":\"A man sits on a log by the beach at sunset, with bare branches and rocks in the foreground. The background shows calm water and a distant horizon. No vehicles or transportation modes are visible.\",\"actions\":[],\"objects\":[\"man\", \"log\", \"beach\", \"water\", \"rocks\", \"branches\"],\"visual_cues\":[\"no vehicles\", \"no roads\", \"no motion suggesting travel\", \"static beach scene\"],\"confidence\":0.95}],\"question_relevant_time_ranges\":[{\"time_range\":\"0.0-104.5\",\"reason\":\"The entire video shows a static beach scene with no indication of the man leaving or using any mode of transportation. No vehicles, roads, or transit infrastructure are visible.\",\"confidence\":0.95}],\"scene_locator\":{\"target_scene\":\"beach scene with man sitting on log\",\"time_range\":\"0.0-104.5\",\"confidence\":0.95},\"global_uncertainties\":[]}"
+   },
+   "response_id": "019f1bed4d127b9b781511c9b06c2881"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 1,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 11257412,
+  "evidence_bytes": 1536868,
+  "compression_ratio": 0.1365,
+  "original_tokens": 2814353,
+  "compressed_tokens": 384217,
+  "token_saving_ratio": 0.8635,
+  "token_saving_ratio_raw": 0.8635,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 236.59
+ },
+ {
+  "record_key": "video:7R1eNHvfspk:147-2",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/7R1eNHvfspk.mp4",
+  "question": "What is the game in the video?\n['A. Basketball three-point contest.' 'B. Basketball one-on-one.' 'C. Shooting Game Boy challenge.' 'D. Basketball dunk challenge.']\nRespond with only the option letter.",
+  "ground_truth": "C",
+  "Answer": "A",
+  "raw_response": "FINAL_ANSWER: A",
+  "correct": false,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1280,
+     "height": 720,
+     "r_frame_rate": "24000/1001"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "73.467917",
+    "size": "8935819"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/7R1eNHvfspk.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "7R1eNHvfspk",
+  "question_id": "147-2",
+  "api_meta": {
+   "api_elapsed_seconds": 18.31,
+   "usage": {
+    "prompt_tokens": 20278,
+    "completion_tokens": 5,
+    "total_tokens": 20283
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: A"
+   },
+   "response_id": "019f1bf21fe51c71163c8aeb62da4bc2"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 18.31,
+   "usage": {
+    "prompt_tokens": 20278,
+    "completion_tokens": 5,
+    "total_tokens": 20283
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: A"
+   },
+   "response_id": "019f1bf21fe51c71163c8aeb62da4bc2"
+  },
+  "answer_model": "Qwen/Qwen3-VL-32B-Instruct",
+  "answer_base_url": "https://api.siliconflow.cn/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\"question_type\": \"unknown\", \"temporal_scope\": {\"type\": \"unknown\", \"time_range_sec\": null, \"confidence\": 0.0}, \"observations\": [], \"counts\": [], \"visible_set\": {}, \"ocr_text\": [], \"missing_required_evidence\": [\"evidence_pass_json_invalid_or_truncated\"], \"forbidden_inference\": [\"Do not rely on the truncated evidence text.\"], \"uncertainties\": [\"Evidence pass did not return valid JSON after retry: JSONDecodeError: Expecting ',' delimiter: line 87 column 6 (char 3351)\", \"Final verifier must rely on attached low-resolution video, high-resolution crops, transcript, and deterministic anchors.\"], \"must_rely_on_visual_inputs\": true, \"retry_attempts\": [{\"attempt\": 1, \"max_tokens\": 256, \"valid_json\": false, \"error\": \"JSONDecodeError: Expecting ',' delimiter: line 17 column 8 (char 760)\", \"response_chars\": 945}, {\"attempt\": 2, \"max_tokens\": 512, \"valid_json\": false, \"error\": \"JSONDecodeError: Expecting ',' delimiter: line 37 column 8 (char 1690)\", \"response_chars\": 1891}, {\"attempt\": 3, \"max_tokens\": 1024, \"valid_json\": false, \"error\": \"JSONDecodeError: Expecting ',' delimiter: line 87 column 6 (char 3351)\", \"response_chars\": 3455}]}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 103.884,
+   "usage": {
+    "prompt_tokens": 11784,
+    "completion_tokens": 1024,
+    "total_tokens": 12808
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"timestamp\": \"00:00-00:01\",\n        \"description\": \"Video opens with a darkened frame showing a man in profile, holding a basketball, with a TikTok interface overlay including '#basketballtiktok' and '@chrislanzagabriel'.\",\n        \"anchor_link\": \"video_full_timeline_lowres\",\n        \"confidence\": 0.9\n      },\n      {\n        \"timestamp\": \"00:00-00:01\",\n        \"description\": \"TikTok UI elements visible: search bar with '#basketballtiktok', user handle '@chrislanzagabriel', and standard TikTok icons (like, comment, share).\",\n        \"anchor_link\": \"video_full_timeline_lowres\",\n        \"confidence\": 0.95\n      },\n      {\n        \"timestamp\": \"00:00-00:01\",\n        \"description\": \"Man appears to be in a gym or indoor court environment; background shows blurred basketball hoop and court lines.\",\n        \"anchor_link\": \"video_full_timeline_lowres\",\n        \"confidence\": 0.8\n      },\n      {\n        \"timestamp\": \"00:02-00:07\",\n        \"description\": \"Man in gray shirt speaks directly to camera; text overlay reads 'Think you can beat me?' and later 'the most shots in one minute wins'.\",\n        \"anchor_link\": \"video_object_region_0001\",\n        \"confidence\": 0.9\n      },\n      {\n        \"timestamp\": \"00:29-00:30\",\n        \"description\": \"Two individuals in a side-by-side setup, each with a basketball hoop and score display; one holds a pink basketball, the other a standard orange one.\",\n        \"anchor_link\": \"video_keyframe_detail_0003\",\n        \"confidence\": 0.95\n      },\n      {\n        \"timestamp\": \"00:29-00:30\",\n        \"description\": \"Scoreboards show '250 00 000' and '250 00 000', indicating a timed shooting challenge with a point system.\",\n        \"anchor_link\": \"video_keyframe_detail_0003\",\n        \"confidence\": 0.9\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0.0, 73.448],\n    \"confidence\": 0.9\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"00:02-00:07\",\n      \"modality\": \"visual|ocr\",\n      \"observation\": \"Text overlay states 'the most shots in one minute wins', indicating a timed shooting contest.\",\n      \"anchor\": \"video_object_region_0001\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"00:29-00:30\",\n      \"modality\": \"visual\",\n      \"observation\": \"Two players positioned at separate basketball hoops with identical scoreboards, suggesting a head-to-head shooting challenge.\",\n      \"anchor\": \"video_keyframe_detail_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"00:29-00:30\",\n      \"modality\": \"visual|ocr\",\n      \"observation\": \"Scoreboards display '250 00 000', consistent with a point-based shooting game with a timer.\",\n      \"anchor\": \"video_keyframe_detail_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E4\",\n      \"time\": \"00:00-00:01\",\n      \"modality\": \"visual|ocr\",\n      \"observation\": \"TikTok interface shows '#basketballtiktok' and '@chrislanzagabriel', confirming basketball context.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E5\",\n      \"time\": \"00:02-00:07\",\n      \"modality\": \"asr|ocr\",\n      \"observation\":"
+   },
+   "response_id": "019f1bf069da478fec40a65ec72a658f",
+   "evidence_json_valid": false,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 17 column 8 (char 760)",
+     "response_chars": 945
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 37 column 8 (char 1690)",
+     "response_chars": 1891
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 87 column 6 (char 3351)",
+     "response_chars": 3455
+    }
+   ],
+   "evidence_json_fallback_used": true,
+   "evidence_json_error": "JSONDecodeError: Expecting ',' delimiter: line 87 column 6 (char 3351)",
+   "raw_invalid_evidence_response": "{ \"question_type\": \"multiple_choice\", \"task_family\": \"generic_video_evidence\", \"task_family_evidence\": { \"facts\": [ { \"timestamp\": \"00:00-00:01\", \"description\": \"Video opens with a darkened frame showing a man in profile, holding a basketball, with a TikTok interface overlay including '#basketballtiktok' and '@chrislanzagabriel'.\", \"anchor_link\": \"video_full_timeline_lowres\", \"confidence\": 0.9 }, { \"timestamp\": \"00:00-00:01\", \"description\": \"TikTok UI elements visible: search bar with '#basketballtiktok', user handle '@chrislanzagabriel', and standard TikTok icons (like, comment, share).\", \"anchor_link\": \"video_full_timeline_lowres\", \"confidence\": 0.95 }, { \"timestamp\": \"00:00-00:01\", \"description\": \"Man appears to be in a gym or indoor court environment; background shows blurred basketball hoop and court lines.\", \"anchor_link\": \"video_full_timeline_lowres\", \"confidence\": 0.8 }, { \"timestamp\": \"00:02-00:07\", \"description\": \"Man in gray shirt speaks directly to camera; text overlay reads 'Think you can beat me?' and later 'the most shots in one minute wins'.\", \"anchor_link\": \"video_object_region_0001\", \"confidence\": 0.9 }, { \"timestamp\": \"00:29-00:30\", \"description\": \"Two individuals in a side-by-side setup, each with a basketball hoop and score display; one holds a pink basketball, the other a standard orange one.\", \"anchor_link\": \"video_keyframe_detail_0003\", \"confidence\": 0.95 }, { \"timestamp\": \"00:29-00:30\", \"description\": \"Scoreboards show '250 00 000' and '250 00 000', indicating a timed shooting challenge with a point system.\", \"anchor_link\": \"video_keyframe_detail_0003\", \"confidence\": 0.9 } ], \"conflicts\": [], \"fallback_needed\": false }, \"temporal_scope\": { \"type\": \"full_video\", \"time_range_sec\": [0.0, 73.448], \"confidence\": 0.9 }, \"observations\": [ { \"id\": \"E1\", \"time\": \"00:02-00:07\", \"modality\": \"visual|ocr\", \"observation\": \"Text overlay states 'the most shots in one minute wins', indicating a timed shooting contest.\", \"anchor\": \"video_object_region_0001\",..."
+  },
+  "computed_global_timeline_response": "{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"timestamp\": \"00:00-00:01\",\n          \"description\": \"Video opens with a darkened frame showing a man in profile, holding a basketball, with a TikTok interface overlay including '#basketballtiktok' and '@chrislanzagabriel'.\",\n          \"anchor_link\": \"video_full_timeline_lowres\",\n          \"confidence\": 0.9\n        },\n        {\n          \"timestamp\": \"00:00-00:01\",\n          \"description\": \"TikTok UI elements visible: search bar with '#basketballtiktok', user handle '@chrislanzagabriel', and standard TikTok icons (like, comment, share).\",\n          \"anchor_link\": \"video_full_timeline_lowres\",\n          \"confidence\": 0.95\n        },\n        {\n          \"timestamp\": \"00:00-00:01\",\n          \"description\": \"Man appears to be in a gym or indoor court environment; background shows blurred basketball hoop and court lines.\",\n          \"anchor_link\": \"video_full_timeline_lowres\",\n          \"confidence\": 0.8\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [\n      \"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\n      \"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\n      \"Resolver output is structured evidence only; final option mapping happens later.\",\n      \"Use global timeline, local crops, transcript, and options jointly.\",\n      \"Record uncertainty instead of forcing unsupported evidence.\"\n    ],\n    \"target_time_ranges\": [\n      \"00:00-00:01\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.85\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:00-00:01\",\n      \"scene\": \"Opening frame of video with TikTok overlay\",\n      \"actions\": [\n        \"Man holding basketball, facing right,",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 56.271,
+   "usage": {
+    "prompt_tokens": 1186,
+    "completion_tokens": 512,
+    "total_tokens": 1698
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"timestamp\": \"00:00-00:01\",\n          \"description\": \"Video opens with a darkened frame showing a man in profile, holding a basketball, with a TikTok interface overlay including '#basketballtiktok' and '@chrislanzagabriel'.\",\n          \"anchor_link\": \"video_full_timeline_lowres\",\n          \"confidence\": 0.9\n        },\n        {\n          \"timestamp\": \"00:00-00:01\",\n          \"description\": \"TikTok UI elements visible: search bar with '#basketballtiktok', user handle '@chrislanzagabriel', and standard TikTok icons (like, comment, share).\",\n          \"anchor_link\": \"video_full_timeline_lowres\",\n          \"confidence\": 0.95\n        },\n        {\n          \"timestamp\": \"00:00-00:01\",\n          \"description\": \"Man appears to be in a gym or indoor court environment; background shows blurred basketball hoop and court lines.\",\n          \"anchor_link\": \"video_full_timeline_lowres\",\n          \"confidence\": 0.8\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [\n      \"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\n      \"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\n      \"Resolver output is structured evidence only; final option mapping happens later.\",\n      \"Use global timeline, local crops, transcript, and options jointly.\",\n      \"Record uncertainty instead of forcing unsupported evidence.\"\n    ],\n    \"target_time_ranges\": [\n      \"00:00-00:01\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.85\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:00-00:01\",\n      \"scene\": \"Opening frame of video with TikTok overlay\",\n      \"actions\": [\n        \"Man holding basketball, facing right,"
+   },
+   "response_id": "019f1beeceaa287f28a34c271f111c99"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/anchors/video/7R1eNHvfspk_147-2/subtitle/7R1eNHvfspk.srt",
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 8,
+  "question_relevant_time_windows": [
+   {
+    "time_range_sec": [
+     0.0,
+     24.719
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0001",
+     "video_transcript_anchor_seg_0002",
+     "video_transcript_anchor_seg_0003",
+     "video_transcript_anchor_seg_0004",
+     "video_transcript_anchor_seg_0005"
+    ],
+    "source": "question_relevant_transcript"
+   },
+   {
+    "time_range_sec": [
+     29.44,
+     64.0
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0012",
+     "video_transcript_anchor_seg_0013",
+     "video_transcript_anchor_seg_0014"
+    ],
+    "source": "question_relevant_transcript"
+   }
+  ],
+  "transcript_segment_count": 18,
+  "transcript_source": "external_subtitle",
+  "video_asr_model": "base.en",
+  "source_bytes": 8935819,
+  "evidence_bytes": 2121996,
+  "compression_ratio": 0.2375,
+  "original_tokens": 2233955,
+  "compressed_tokens": 530499,
+  "token_saving_ratio": 0.7625,
+  "token_saving_ratio_raw": 0.7625,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 242.461
+ },
+ {
+  "record_key": "video:1q-5IIyZL20:197-2",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/1q-5IIyZL20.mp4",
+  "question": "What is the function of the black plastic bag shown in the video?\n[\"A. To store the dog's treats for later.\" \"B. To carry the dog's toys during walks.\" 'C. To collect water for the dog to drink.' \"D. To catch the dog's poo.\"]\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "D",
+  "raw_response": "D",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1280,
+     "height": 720,
+     "r_frame_rate": "30000/1001"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "109.180200",
+    "size": "14594711"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/1q-5IIyZL20.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "1q-5IIyZL20",
+  "question_id": "197-2",
+  "api_meta": {
+   "api_elapsed_seconds": 14.317,
+   "usage": {
+    "prompt_tokens": 23291,
+    "completion_tokens": 1,
+    "total_tokens": 23292
+   },
+   "message": {
+    "role": "assistant",
+    "content": "D"
+   },
+   "response_id": "019f1bf46f190bc154ff10826beba88e"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 14.317,
+   "usage": {
+    "prompt_tokens": 23291,
+    "completion_tokens": 1,
+    "total_tokens": 23292
+   },
+   "message": {
+    "role": "assistant",
+    "content": "D"
+   },
+   "response_id": "019f1bf46f190bc154ff10826beba88e"
+  },
+  "answer_model": "Qwen/Qwen3-VL-32B-Instruct",
+  "answer_base_url": "https://api.siliconflow.cn/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\n  \"question_type\": \"function_of_object\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"timestamp\": \"00:00-01:49\",\n        \"description\": \"Full-video low-res anchor shows a group of four people in costumes in a nighttime urban setting. One person (center-right) holds a small dog and a black plastic bag. The bag is held in the same hand as the dog, suggesting it is being used for the dog.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0.0, 109.176],\n    \"confidence\": 0.65\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"00:00-01:49\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"Person in green costume holds a small dog and a black plastic bag in the same hand, indicating the bag is used in conjunction with the dog.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.65\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"00:00-01:49\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"The black plastic bag is consistently held alongside the dog throughout the video, suggesting a functional purpose related to the dog.\",\n      \"anchor\": \"video_anchor_low_fps\",\n      \"scope_match\": true,\n      \"confidence\": 0.6\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": [\n    \"No direct visual evidence confirms the bag's contents or specific function (e.g., treats, toys, waste). The bag's use is inferred from its co-location with the dog.\"\n  ]\n}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 25.898,
+   "usage": {
+    "prompt_tokens": 12981,
+    "completion_tokens": 474,
+    "total_tokens": 13455
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"question_type\": \"function_of_object\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"timestamp\": \"00:00-01:49\",\n        \"description\": \"Full-video low-res anchor shows a group of four people in costumes in a nighttime urban setting. One person (center-right) holds a small dog and a black plastic bag. The bag is held in the same hand as the dog, suggesting it is being used for the dog.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0.0, 109.176],\n    \"confidence\": 0.65\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"00:00-01:49\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"Person in green costume holds a small dog and a black plastic bag in the same hand, indicating the bag is used in conjunction with the dog.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.65\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"00:00-01:49\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"The black plastic bag is consistently held alongside the dog throughout the video, suggesting a functional purpose related to the dog.\",\n      \"anchor\": \"video_anchor_low_fps\",\n      \"scope_match\": true,\n      \"confidence\": 0.6\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": [\n    \"No direct visual evidence confirms the bag's contents or specific function (e.g., treats, toys, waste). The bag's use is inferred from its co-location with the dog.\"\n  ]\n}"
+   },
+   "response_id": "019f1bf407ceed37f7816cb34d27250e",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 19 column 4 (char 685)",
+     "response_chars": 888
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1725
+    }
+   ]
+  },
+  "computed_global_timeline_response": "{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"timestamp\": \"00:00-01:49\",\n          \"description\": \"Full-video low-res anchor shows a group of four people in costumes in a nighttime urban setting. One person (center-right) holds a small dog and a black plastic bag. The bag is held in the same hand as the dog, suggesting it is being used for the dog.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [\n      \"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\n      \"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\n      \"Resolver output is structured evidence only; final option mapping happens later.\",\n      \"Use global timeline, local crops, transcript, and options jointly.\",\n      \"Record uncertainty instead of forcing unsupported evidence.\"\n    ],\n    \"target_time_ranges\": [\n      \"00:00-01:49\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.65\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:00-01:49\",\n      \"scene\": \"Nighttime urban street scene with four costumed individuals.\",\n      \"actions\": [\n        \"Person in green costume holds a small dog and a black plastic bag.\",\n        \"Group appears to be posing or performing.\"\n      ],\n      \"objects\": [\n        \"Costumed individuals\",\n        \"Small dog\",\n        \"Black plastic bag\",\n        \"Urban background with lights and signage\"\n      ],\n      \"visual_cues\": [\n        \"Bag is held in hand with dog, suggesting functional use for dog-related items.\",\n        \"No visible water, treats, or toys being interacted with.\"\n      ],\n      \"confidence\": 0.7\n    }\n  ],\n  \"question_relevant_time_ranges\": [\n    {\n      \"time_range\": \"00:00-01:49\",\n      \"reason\": \"The black plastic bag is visible throughout",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 43.134,
+   "usage": {
+    "prompt_tokens": 1192,
+    "completion_tokens": 512,
+    "total_tokens": 1704
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"timestamp\": \"00:00-01:49\",\n          \"description\": \"Full-video low-res anchor shows a group of four people in costumes in a nighttime urban setting. One person (center-right) holds a small dog and a black plastic bag. The bag is held in the same hand as the dog, suggesting it is being used for the dog.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [\n      \"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\n      \"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\n      \"Resolver output is structured evidence only; final option mapping happens later.\",\n      \"Use global timeline, local crops, transcript, and options jointly.\",\n      \"Record uncertainty instead of forcing unsupported evidence.\"\n    ],\n    \"target_time_ranges\": [\n      \"00:00-01:49\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.65\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:00-01:49\",\n      \"scene\": \"Nighttime urban street scene with four costumed individuals.\",\n      \"actions\": [\n        \"Person in green costume holds a small dog and a black plastic bag.\",\n        \"Group appears to be posing or performing.\"\n      ],\n      \"objects\": [\n        \"Costumed individuals\",\n        \"Small dog\",\n        \"Black plastic bag\",\n        \"Urban background with lights and signage\"\n      ],\n      \"visual_cues\": [\n        \"Bag is held in hand with dog, suggesting functional use for dog-related items.\",\n        \"No visible water, treats, or toys being interacted with.\"\n      ],\n      \"confidence\": 0.7\n    }\n  ],\n  \"question_relevant_time_ranges\": [\n    {\n      \"time_range\": \"00:00-01:49\",\n      \"reason\": \"The black plastic bag is visible throughout"
+   },
+   "response_id": "019f1bf29acfef78eed920c76212c46f"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/anchors/video/1q-5IIyZL20_197-2/subtitle/1q-5IIyZL20.srt",
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 6,
+  "question_relevant_time_windows": [
+   {
+    "time_range_sec": [
+     7.15,
+     53.45
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0008",
+     "video_transcript_anchor_seg_0009",
+     "video_transcript_anchor_seg_0010",
+     "video_transcript_anchor_seg_0015",
+     "video_transcript_anchor_seg_0016",
+     "video_transcript_anchor_seg_0017"
+    ],
+    "source": "question_relevant_transcript"
+   }
+  ],
+  "transcript_segment_count": 43,
+  "transcript_source": "external_subtitle",
+  "video_asr_model": "base.en",
+  "source_bytes": 14594711,
+  "evidence_bytes": 4095440,
+  "compression_ratio": 0.2806,
+  "original_tokens": 3648678,
+  "compressed_tokens": 1023860,
+  "token_saving_ratio": 0.7194,
+  "token_saving_ratio_raw": 0.7194,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 145.403
+ },
+ {
+  "record_key": "video:0ag_Qi5OEd0:522-3",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/0ag_Qi5OEd0.mp4",
+  "question": "According to the video, what is the sequential order in which the following tools are used?\n(a) Glue gun.\n(b) Needle.\n(c) Scissors.\n['A. (a)(b)(c).' 'B. (b)(c)(a).' 'C. (b)(a)(c).' 'D. (c)(a)(b).']\nRespond with only the option letter.",
+  "ground_truth": "B",
+  "Answer": "C",
+  "raw_response": "FINAL_ANSWER: C",
+  "correct": false,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1280,
+     "height": 720,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "488.640703",
+    "size": "35380606"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/0ag_Qi5OEd0.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "0ag_Qi5OEd0",
+  "question_id": "522-3",
+  "api_meta": {
+   "api_elapsed_seconds": 38.344,
+   "usage": {
+    "prompt_tokens": 30002,
+    "completion_tokens": 5,
+    "total_tokens": 30007
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: C"
+   },
+   "response_id": "019f1bf8ef88c81c422ce75a9b5afb56"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 38.344,
+   "usage": {
+    "prompt_tokens": 30002,
+    "completion_tokens": 5,
+    "total_tokens": 30007
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: C"
+   },
+   "response_id": "019f1bf8ef88c81c422ce75a9b5afb56"
+  },
+  "answer_model": "Qwen/Qwen3-VL-32B-Instruct",
+  "answer_base_url": "https://api.siliconflow.cn/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\n  \"question_type\": \"sequential_tool_usage\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"id\": \"E1\",\n        \"time\": \"approx. 30-120s\",\n        \"modality\": \"visual|video\",\n        \"observation\": \"Needle is visible and used early in the video for threading or securing yarn, as seen in video_tubelet_storyboard_0002 (before t=79.42s) and video_anchor_low_fps (early frames).\",\n        \"anchor\": \"video_tubelet_storyboard_0002\",\n        \"scope_match\": true,\n        \"confidence\": 0.85\n      },\n      {\n        \"id\": \"E2\",\n        \"time\": \"approx. 150-250s\",\n        \"modality\": \"visual|video\",\n        \"observation\": \"Scissors are used to cut yarn in mid-video frames, as indicated in the global timeline and visible in video_full_timeline_lowres (mid-sequence frames).\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.75\n      },\n      {\n        \"id\": \"E3\",\n        \"time\": \"approx. 337-347s\",\n        \"modality\": \"visual|video\",\n        \"observation\": \"Glue gun is used in later frames to attach parts of the crocheted figures, as shown in video_tubelet_storyboard_0003 and video_tubelet_storyboard_0004.\",\n        \"anchor\": \"video_tubelet_storyboard_0003\",\n        \"scope_match\": true,\n        \"confidence\": 0.9\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0.0, 488.64],\n    \"confidence\": 0.9\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"approx. 30-120s\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"Needle is visible and used early in the video for threading or securing yarn, as seen in video_tubelet_storyboard_0002 (before t=79.42s) and video_anchor_low_fps (early frames).\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 0.85\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"approx. 150-250s\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"Scissors are used to cut yarn in mid-video frames, as indicated in the global timeline and visible in video_full_timeline_lowres (mid-sequence frames).\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.75\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"approx. 337-347s\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"Glue gun is used in later frames to attach parts of the crocheted figures, as shown in video_tubelet_storyboard_0003 and video_tubelet_storyboard_0004.\",\n      \"anchor\": \"video_tubelet_storyboard_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 47.299,
+   "usage": {
+    "prompt_tokens": 6879,
+    "completion_tokens": 854,
+    "total_tokens": 7733
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"question_type\": \"sequential_tool_usage\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"id\": \"E1\",\n        \"time\": \"approx. 30-120s\",\n        \"modality\": \"visual|video\",\n        \"observation\": \"Needle is visible and used early in the video for threading or securing yarn, as seen in video_tubelet_storyboard_0002 (before t=79.42s) and video_anchor_low_fps (early frames).\",\n        \"anchor\": \"video_tubelet_storyboard_0002\",\n        \"scope_match\": true,\n        \"confidence\": 0.85\n      },\n      {\n        \"id\": \"E2\",\n        \"time\": \"approx. 150-250s\",\n        \"modality\": \"visual|video\",\n        \"observation\": \"Scissors are used to cut yarn in mid-video frames, as indicated in the global timeline and visible in video_full_timeline_lowres (mid-sequence frames).\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.75\n      },\n      {\n        \"id\": \"E3\",\n        \"time\": \"approx. 337-347s\",\n        \"modality\": \"visual|video\",\n        \"observation\": \"Glue gun is used in later frames to attach parts of the crocheted figures, as shown in video_tubelet_storyboard_0003 and video_tubelet_storyboard_0004.\",\n        \"anchor\": \"video_tubelet_storyboard_0003\",\n        \"scope_match\": true,\n        \"confidence\": 0.9\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0.0, 488.64],\n    \"confidence\": 0.9\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"approx. 30-120s\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"Needle is visible and used early in the video for threading or securing yarn, as seen in video_tubelet_storyboard_0002 (before t=79.42s) and video_anchor_low_fps (early frames).\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 0.85\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"approx. 150-250s\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"Scissors are used to cut yarn in mid-video frames, as indicated in the global timeline and visible in video_full_timeline_lowres (mid-sequence frames).\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.75\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"approx. 337-347s\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"Glue gun is used in later frames to attach parts of the crocheted figures, as shown in video_tubelet_storyboard_0003 and video_tubelet_storyboard_0004.\",\n      \"anchor\": \"video_tubelet_storyboard_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}"
+   },
+   "response_id": "019f1bf83ed886c9717ad256bd3957b2",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 23 column 8 (char 753)",
+     "response_chars": 890
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 51 column 6 (char 1586)",
+     "response_chars": 1665
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 2821
+    }
+   ]
+  },
+  "computed_global_timeline_response": "{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [\n      \"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\n      \"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\n      \"Resolver output is structured evidence only; final option mapping happens later.\",\n      \"Use global timeline, local crops, transcript, and options jointly.\",\n      \"Record uncertainty instead of forcing unsupported evidence.\"\n    ],\n    \"target_time_ranges\": [\n      \"0.0-488.64\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.55\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"0.0-488.64\",\n      \"scene\": \"Full video timeline with low-resolution frames showing hands crafting small crocheted figures, tools visible intermittently.\",\n      \"actions\": [\n        \"Hands manipulating yarn and small crocheted figures.\",\n        \"Use of scissors to cut yarn (visible in mid-video frames).\",\n        \"Use of a needle for threading or securing yarn (visible in early-to-mid frames).\",\n        \"Glue gun appears in later frames, applied to attach parts of the crocheted figures.\"\n      ],\n      \"objects\": [\n        \"Crocheted figures (blue and pink octopus-like shapes)\",\n        \"Scissors\",\n        \"Needle\",\n        \"Glue gun\",\n        \"Yarn\"\n      ],\n      \"visual_cues\": [\n        \"Scissors are used around the middle of the video (approx. 150-250s) to trim yarn.\",\n        \"Needle is visible early (approx. 30-120s) being used to thread or secure yarn.\",\n        \"Glue gun appears in later frames (approx. 350-450s) to attach components of the figures.\",\n        \"Final frames (480-488s) show completed figures with text overlay: 'Thanks for watching.'\"\n      ],\n      \"confidence\": 0.7",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 56.304,
+   "usage": {
+    "prompt_tokens": 1211,
+    "completion_tokens": 512,
+    "total_tokens": 1723
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [\n      \"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\n      \"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\n      \"Resolver output is structured evidence only; final option mapping happens later.\",\n      \"Use global timeline, local crops, transcript, and options jointly.\",\n      \"Record uncertainty instead of forcing unsupported evidence.\"\n    ],\n    \"target_time_ranges\": [\n      \"0.0-488.64\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.55\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"0.0-488.64\",\n      \"scene\": \"Full video timeline with low-resolution frames showing hands crafting small crocheted figures, tools visible intermittently.\",\n      \"actions\": [\n        \"Hands manipulating yarn and small crocheted figures.\",\n        \"Use of scissors to cut yarn (visible in mid-video frames).\",\n        \"Use of a needle for threading or securing yarn (visible in early-to-mid frames).\",\n        \"Glue gun appears in later frames, applied to attach parts of the crocheted figures.\"\n      ],\n      \"objects\": [\n        \"Crocheted figures (blue and pink octopus-like shapes)\",\n        \"Scissors\",\n        \"Needle\",\n        \"Glue gun\",\n        \"Yarn\"\n      ],\n      \"visual_cues\": [\n        \"Scissors are used around the middle of the video (approx. 150-250s) to trim yarn.\",\n        \"Needle is visible early (approx. 30-120s) being used to thread or secure yarn.\",\n        \"Glue gun appears in later frames (approx. 350-450s) to attach components of the figures.\",\n        \"Final frames (480-488s) show completed figures with text overlay: 'Thanks for watching.'\"\n      ],\n      \"confidence\": 0.7\n"
+   },
+   "response_id": "019f1bf591becca90b04534c061d1bc6"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_temporal",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 7,
+   "detail_max_side": 768,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 7,
+  "video_detail_max_side": 768,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/anchors/video/0ag_Qi5OEd0_522-3/subtitle/0ag_Qi5OEd0.srt",
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 7,
+  "transcript_source": "external_subtitle",
+  "video_asr_model": "base.en",
+  "source_bytes": 35380606,
+  "evidence_bytes": 4260814,
+  "compression_ratio": 0.1204,
+  "original_tokens": 8845152,
+  "compressed_tokens": 1065204,
+  "token_saving_ratio": 0.8796,
+  "token_saving_ratio_raw": 0.8796,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_temporal compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 322.115
+ },
+ {
+  "record_key": "video:7Hk9jct2ozY:321-2",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/7Hk9jct2ozY.mp4",
+  "question": "What is the correct order in which the following events are presented in the video?\n(a) The nucleus is introduced.\n(b) Base pairing.\n(c) Cell division.\n['A. (a)(c)(b).' 'B. (c)(a)(b).' 'C. (c)(b)(a).' 'D. (a)(c)(b).']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "B",
+  "raw_response": "FINAL_ANSWER: B",
+  "correct": false,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1280,
+     "height": 720,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "439.321484",
+    "size": "86663818"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/7Hk9jct2ozY.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "7Hk9jct2ozY",
+  "question_id": "321-2",
+  "api_meta": {
+   "api_elapsed_seconds": 17.521,
+   "usage": {
+    "prompt_tokens": 28711,
+    "completion_tokens": 5,
+    "total_tokens": 28716
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: B"
+   },
+   "response_id": "019f1bfdea611cbe0a8a1f16a143b64b"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 17.521,
+   "usage": {
+    "prompt_tokens": 28711,
+    "completion_tokens": 5,
+    "total_tokens": 28716
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: B"
+   },
+   "response_id": "019f1bfdea611cbe0a8a1f16a143b64b"
+  },
+  "answer_model": "Qwen/Qwen3-VL-32B-Instruct",
+  "answer_base_url": "https://api.siliconflow.cn/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\n  \"question_type\": \"event_order\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0.0, 439.32],\n    \"confidence\": 0.9\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"0.0-10.0s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Human cell visualization with text overlay: 'Your cells control access to the genetic code by wrapping DNA around proteins'. Nucleus is implied within the cell structure.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"10.0-30.0s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Zoom into cell interior; nucleus structure is highlighted. Chromatin/DNA wrapping animation begins.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.85\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"145.38-148.38s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Frame shows 'Two cells' text overlay; visual context suggests cell division or mitosis.\",\n      \"anchor\": \"video_tubelet_storyboard_0001\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E4\",\n      \"time\": \"147.42-150.42s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Animation of DNA replication with text 'replication'; base pairing is visually depicted as complementary strands forming.\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E5\",\n      \"time\": \"273.22-276.22s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"DNA double helix structure shown with text overlay 'DNA double helix'; base pairing is evident in the helix formation.\",\n      \"anchor\": \"video_tubelet_storyboard_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E6\",\n      \"time\": \"273.9-276.9s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Repetition of DNA double helix visualization with text 'DNA double helix'; base pairing is shown in the helix structure.\",\n      \"anchor\": \"video_tubelet_storyboard_0004\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {\n    \"nucleus\": [\"0.0-30.0s\"],\n    \"cell_division\": [\"145.38-148.38s\"],\n    \"base_pairing\": [\"147.42-150.42s\", \"273.22-276.22s\", \"273.9-276.9s\"]\n  },\n  \"ocr_text\": [\n    \"Your cells control access to the genetic code by wrapping DNA around proteins\",\n    \"Human cell x10,000\",\n    \"Two cells\",\n    \"replication\",\n    \"DNA double helix\"\n  ],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 35.954,
+   "usage": {
+    "prompt_tokens": 7018,
+    "completion_tokens": 891,
+    "total_tokens": 7909
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"question_type\": \"event_order\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0.0, 439.32],\n    \"confidence\": 0.9\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"0.0-10.0s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Human cell visualization with text overlay: 'Your cells control access to the genetic code by wrapping DNA around proteins'. Nucleus is implied within the cell structure.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"10.0-30.0s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Zoom into cell interior; nucleus structure is highlighted. Chromatin/DNA wrapping animation begins.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.85\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"145.38-148.38s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Frame shows 'Two cells' text overlay; visual context suggests cell division or mitosis.\",\n      \"anchor\": \"video_tubelet_storyboard_0001\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E4\",\n      \"time\": \"147.42-150.42s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Animation of DNA replication with text 'replication'; base pairing is visually depicted as complementary strands forming.\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E5\",\n      \"time\": \"273.22-276.22s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"DNA double helix structure shown with text overlay 'DNA double helix'; base pairing is evident in the helix formation.\",\n      \"anchor\": \"video_tubelet_storyboard_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E6\",\n      \"time\": \"273.9-276.9s\",\n      \"modality\": \"visual|video|ocr\",\n      \"observation\": \"Repetition of DNA double helix visualization with text 'DNA double helix'; base pairing is shown in the helix structure.\",\n      \"anchor\": \"video_tubelet_storyboard_0004\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {\n    \"nucleus\": [\"0.0-30.0s\"],\n    \"cell_division\": [\"145.38-148.38s\"],\n    \"base_pairing\": [\"147.42-150.42s\", \"273.22-276.22s\", \"273.9-276.9s\"]\n  },\n  \"ocr_text\": [\n    \"Your cells control access to the genetic code by wrapping DNA around proteins\",\n    \"Human cell x10,000\",\n    \"Two cells\",\n    \"replication\",\n    \"DNA double helix\"\n  ],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}"
+   },
+   "response_id": "019f1bfd4185ee8774b87d4dd67367eb",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 23 column 6 (char 692)",
+     "response_chars": 887
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 50 column 6 (char 1665)",
+     "response_chars": 1712
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 2831
+    }
+   ]
+  },
+  "computed_global_timeline_response": "{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [\n      \"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\n      \"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\n      \"Resolver output is structured evidence only; final option mapping happens later.\",\n      \"Use global timeline, local crops, transcript, and options jointly.\",\n      \"Record uncertainty instead of forcing unsupported evidence.\"\n    ],\n    \"target_time_ranges\": [\n      \"0.0-439.32\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.55\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"0.0-10.0\",\n      \"scene\": \"Opening title sequence with credits and cell visualization\",\n      \"actions\": [\n        \"Display of a human cell at 10,000x magnification\",\n        \"Text overlay: 'Your cells control access to the genetic code by wrapping DNA around proteins'\"\n      ],\n      \"objects\": [\n        \"Human cell (microscopic view)\",\n        \"Text overlays: 'wehi.tv', 'Drew Berry', 'Human cell x10,000'\"\n      ],\n      \"visual_cues\": [\n        \"Purple and blue color scheme\",\n        \"Cell membrane with filopodia-like projections\",\n        \"Internal structures visible (nucleus implied)\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"time_range\": \"10.0-30.0\",\n      \"scene\": \"Introduction to cellular components\",\n      \"actions\": [\n        \"Zoom into the cell interior\",\n        \"Highlighting of nucleus structure\",\n        \"Animation of chromatin/DNA wrapping\"\n      ],\n      \"objects\": [\n        \"Nucleus\",\n        \"Chromatin fibers\",\n        \"Histone proteins (implied)\"\n      ],\n      \"visual_cues\": [\n        \"Nucleus shown as a dense, central structure\",\n        \"DNA strands coiling around protein cores\"\n      ],\n      \"confidence\":",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 34.568,
+   "usage": {
+    "prompt_tokens": 1199,
+    "completion_tokens": 512,
+    "total_tokens": 1711
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [\n      \"Do not output candidate_answer, preliminary_answer, best_option, final_answer, or a final option letter.\",\n      \"Every non-empty evidence item must include timestamp/time range and anchor_link when available.\",\n      \"Resolver output is structured evidence only; final option mapping happens later.\",\n      \"Use global timeline, local crops, transcript, and options jointly.\",\n      \"Record uncertainty instead of forcing unsupported evidence.\"\n    ],\n    \"target_time_ranges\": [\n      \"0.0-439.32\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.55\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"0.0-10.0\",\n      \"scene\": \"Opening title sequence with credits and cell visualization\",\n      \"actions\": [\n        \"Display of a human cell at 10,000x magnification\",\n        \"Text overlay: 'Your cells control access to the genetic code by wrapping DNA around proteins'\"\n      ],\n      \"objects\": [\n        \"Human cell (microscopic view)\",\n        \"Text overlays: 'wehi.tv', 'Drew Berry', 'Human cell x10,000'\"\n      ],\n      \"visual_cues\": [\n        \"Purple and blue color scheme\",\n        \"Cell membrane with filopodia-like projections\",\n        \"Internal structures visible (nucleus implied)\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"time_range\": \"10.0-30.0\",\n      \"scene\": \"Introduction to cellular components\",\n      \"actions\": [\n        \"Zoom into the cell interior\",\n        \"Highlighting of nucleus structure\",\n        \"Animation of chromatin/DNA wrapping\"\n      ],\n      \"objects\": [\n        \"Nucleus\",\n        \"Chromatin fibers\",\n        \"Histone proteins (implied)\"\n      ],\n      \"visual_cues\": [\n        \"Nucleus shown as a dense, central structure\",\n        \"DNA strands coiling around protein cores\"\n      ],\n      \"confidence\":"
+   },
+   "response_id": "019f1bfacb0f12c2fed285733dbac426"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_temporal",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 7,
+   "detail_max_side": 768,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 7,
+  "video_detail_max_side": 768,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 43,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 86663818,
+  "evidence_bytes": 8392088,
+  "compression_ratio": 0.0968,
+  "original_tokens": 21665955,
+  "compressed_tokens": 2098022,
+  "token_saving_ratio": 0.9032,
+  "token_saving_ratio_raw": 0.9032,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_temporal compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 305.245
+ },
+ {
+  "record_key": "video:1pHkv4KUiFY:314-2",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/1pHkv4KUiFY.mp4",
+  "question": "What instrument is the little girl playing in the video?\n['A. Violin.' 'B. Piano.' 'C. Cello.' 'D. Guitar.']\nRespond with only the option letter.",
+  "ground_truth": "A",
+  "Answer": "A",
+  "raw_response": "FINAL_ANSWER: A",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 640,
+     "height": 360,
+     "r_frame_rate": "30/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "266.913346",
+    "size": "20947255"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/smoketest_sf/media/video/1pHkv4KUiFY.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "1pHkv4KUiFY",
+  "question_id": "314-2",
+  "api_meta": {
+   "api_elapsed_seconds": 26.771,
+   "usage": {
+    "prompt_tokens": 24418,
+    "completion_tokens": 5,
+    "total_tokens": 24423
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: A"
+   },
+   "response_id": "019f1c0240aa5273d0e89aed22eb8969"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 26.771,
+   "usage": {
+    "prompt_tokens": 24418,
+    "completion_tokens": 5,
+    "total_tokens": 24423
+   },
+   "message": {
+    "role": "assistant",
+    "content": "FINAL_ANSWER: A"
+   },
+   "response_id": "019f1c0240aa5273d0e89aed22eb8969"
+  },
+  "answer_model": "Qwen/Qwen3-VL-32B-Instruct",
+  "answer_base_url": "https://api.siliconflow.cn/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\"question_type\":\"object_identification\",\"task_family\":\"generic_video_evidence\",\"task_family_evidence\":{\"facts\":[\"The little girl is holding a stringed instrument with a curved body, f-holes, and a bow.\",\"She is playing the instrument by holding it under her chin and using a bow.\",\"The instrument's size is appropriate for a child, matching the typical size of a violin.\",\"No piano, cello, or guitar is visible in any frame.\",\"The instrument has a distinct violin shape with a scroll and pegbox, visible in close-up frames like video_keyframe_detail_0003 and video_keyframe_detail_0004.\"],\"conflicts\":[],\"fallback_needed\":false},\"temporal_scope\":{\"type\":\"full_video\",\"time_range_sec\":[0.0,266.9],\"confidence\":0.9},\"observations\":[{\"id\":\"E1\",\"time\":\"0.0-266.9s\",\"modality\":\"visual|video\",\"observation\":\"The girl is consistently seen playing a stringed instrument throughout the video, holding it under her chin with a bow.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.9},{\"id\":\"E2\",\"time\":\"86.967s\",\"modality\":\"visual|video\",\"observation\":\"Close-up of the girl playing the instrument shows a violin-shaped body with f-holes and a bow.\",\"anchor\":\"video_keyframe_detail_0003\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E3\",\"time\":\"88.967s\",\"modality\":\"visual|video\",\"observation\":\"Another close-up confirms the instrument has a scroll and is being played with a bow, consistent with a violin.\",\"anchor\":\"video_keyframe_detail_0004\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E4\",\"time\":\"0.0s\",\"modality\":\"visual|video\",\"observation\":\"In the initial frame, the instrument is not yet visible, but the setup includes a speaker and cart, indicating a performance.\",\"anchor\":\"video_keyframe_detail_0001\",\"scope_match\":true,\"confidence\":0.7},{\"id\":\"E5\",\"time\":\"179.933s\",\"modality\":\"visual|video\",\"observation\":\"The girl continues playing the same instrument, which remains visually consistent with a violin.\",\"anchor\":\"video_keyframe_detail_0006\",\"scope_match\":true,\"confidence\":0.9},{\"id\":\"E6\",\"time\":\"0.0-266.9s\",\"modality\":\"visual|video\",\"observation\":\"No other instruments (piano, cello, guitar) are visible or played in any frame.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.9}],\"counts\":[],\"visible_set\":{\"A\":\"visible\",\"B\":\"not visible\",\"C\":\"not visible\",\"D\":\"not visible\"},\"ocr_text\":[],\"missing_required_evidence\":[],\"forbidden_inference\":[],\"uncertainty\":[]}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 46.91,
+   "usage": {
+    "prompt_tokens": 8767,
+    "completion_tokens": 627,
+    "total_tokens": 9394
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\"question_type\":\"object_identification\",\"task_family\":\"generic_video_evidence\",\"task_family_evidence\":{\"facts\":[\"The little girl is holding a stringed instrument with a curved body, f-holes, and a bow.\",\"She is playing the instrument by holding it under her chin and using a bow.\",\"The instrument's size is appropriate for a child, matching the typical size of a violin.\",\"No piano, cello, or guitar is visible in any frame.\",\"The instrument has a distinct violin shape with a scroll and pegbox, visible in close-up frames like video_keyframe_detail_0003 and video_keyframe_detail_0004.\"],\"conflicts\":[],\"fallback_needed\":false},\"temporal_scope\":{\"type\":\"full_video\",\"time_range_sec\":[0.0,266.9],\"confidence\":0.9},\"observations\":[{\"id\":\"E1\",\"time\":\"0.0-266.9s\",\"modality\":\"visual|video\",\"observation\":\"The girl is consistently seen playing a stringed instrument throughout the video, holding it under her chin with a bow.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.9},{\"id\":\"E2\",\"time\":\"86.967s\",\"modality\":\"visual|video\",\"observation\":\"Close-up of the girl playing the instrument shows a violin-shaped body with f-holes and a bow.\",\"anchor\":\"video_keyframe_detail_0003\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E3\",\"time\":\"88.967s\",\"modality\":\"visual|video\",\"observation\":\"Another close-up confirms the instrument has a scroll and is being played with a bow, consistent with a violin.\",\"anchor\":\"video_keyframe_detail_0004\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E4\",\"time\":\"0.0s\",\"modality\":\"visual|video\",\"observation\":\"In the initial frame, the instrument is not yet visible, but the setup includes a speaker and cart, indicating a performance.\",\"anchor\":\"video_keyframe_detail_0001\",\"scope_match\":true,\"confidence\":0.7},{\"id\":\"E5\",\"time\":\"179.933s\",\"modality\":\"visual|video\",\"observation\":\"The girl continues playing the same instrument, which remains visually consistent with a violin.\",\"anchor\":\"video_keyframe_detail_0006\",\"scope_match\":true,\"confidence\":0.9},{\"id\":\"E6\",\"time\":\"0.0-266.9s\",\"modality\":\"visual|video\",\"observation\":\"No other instruments (piano, cello, guitar) are visible or played in any frame.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.9}],\"counts\":[],\"visible_set\":{\"A\":\"visible\",\"B\":\"not visible\",\"C\":\"not visible\",\"D\":\"not visible\"},\"ocr_text\":[],\"missing_required_evidence\":[],\"forbidden_inference\":[],\"uncertainty\":[]}"
+   },
+   "response_id": "019f1c00f37842995e20040154eb6828",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1018 (char 1017)",
+     "response_chars": 1030
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1613 (char 1612)",
+     "response_chars": 1869
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 2421
+    }
+   ]
+  },
+  "computed_global_timeline_response": "{\"task_specific_resolver\":{\"resolver_type\":\"generic_video_evidence\",\"evidence_template\":{\"facts\":[],\"conflicts\":[],\"fallback_needed\":false},\"special_rules\":[],\"target_time_ranges\":[],\"fallback_policy\":\"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\"confidence\":0.55},\"timeline\":[{\"time_range\":\"0.0-266.9s\",\"scene\":\"Outdoor street performance with a crowd gathered around a young girl playing a stringed instrument.\",\"actions\":[\"Girl seated, holding and playing a stringed instrument\",\"Crowd watching and standing around\",\"Other performers or bystanders visible in background\"],\"objects\":[\"Young girl\",\"Stringed instrument (violin-shaped)\",\"Crowd\",\"Street setting\",\"Portable speaker\",\"Collection can\"],\"visual_cues\":[\"Instrument has a curved body, f-holes, and a bow\",\"Girl is holding the instrument under her chin and using a bow\",\"Instrument size matches that of a violin for a child\",\"No piano, cello, or guitar visible\"],\"confidence\":0.85}],\"question_relevant_time_ranges\":[{\"time_range\":\"0.0-266.9s\",\"reason\":\"The entire video shows the girl playing the instrument continuously; no other instruments are visible or played.\",\"confidence\":0.9}],\"scene_locator\":{\"target_scene\":\"Street performance with young girl playing stringed instrument\",\"time_range\":\"0.0-266.9s\",\"confidence\":0.9},\"global_uncertainties\":[]}",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 13.376,
+   "usage": {
+    "prompt_tokens": 1182,
+    "completion_tokens": 324,
+    "total_tokens": 1506
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\"task_specific_resolver\":{\"resolver_type\":\"generic_video_evidence\",\"evidence_template\":{\"facts\":[],\"conflicts\":[],\"fallback_needed\":false},\"special_rules\":[],\"target_time_ranges\":[],\"fallback_policy\":\"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\"confidence\":0.55},\"timeline\":[{\"time_range\":\"0.0-266.9s\",\"scene\":\"Outdoor street performance with a crowd gathered around a young girl playing a stringed instrument.\",\"actions\":[\"Girl seated, holding and playing a stringed instrument\",\"Crowd watching and standing around\",\"Other performers or bystanders visible in background\"],\"objects\":[\"Young girl\",\"Stringed instrument (violin-shaped)\",\"Crowd\",\"Street setting\",\"Portable speaker\",\"Collection can\"],\"visual_cues\":[\"Instrument has a curved body, f-holes, and a bow\",\"Girl is holding the instrument under her chin and using a bow\",\"Instrument size matches that of a violin for a child\",\"No piano, cello, or guitar visible\"],\"confidence\":0.85}],\"question_relevant_time_ranges\":[{\"time_range\":\"0.0-266.9s\",\"reason\":\"The entire video shows the girl playing the instrument continuously; no other instruments are visible or played.\",\"confidence\":0.9}],\"scene_locator\":{\"target_scene\":\"Street performance with young girl playing stringed instrument\",\"time_range\":\"0.0-266.9s\",\"confidence\":0.9},\"global_uncertainties\":[]}"
+   },
+   "response_id": "019f1bfe8bdd9634bbd5ba4b28825ddf"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": "{\"visual_summary\":\"A young girl performs on a stringed instrument in a public outdoor setting, surrounded by pedestrians and street elements like trash cans, folding chairs, and a red cart. The scene appears to be a street performance or busking event in a pedestrianized area with shops and trees in the background. The girl is consistently seen holding and playing the instrument throughout the video.\", \"event_chain\": [{\"time\":\"0.0s-266.9s\",\"action\":\"Young girl playing a stringed instrument in a public outdoor space\",\"objects\":[\"girl\",\"stringed instrument\",\"pedestrians\",\"trash can\",\"folding chair\",\"red cart\",\"shopfronts\"],\"anchor\":\"video_full_timeline_lowres\"}], \"visible_objects\":[\"girl\",\"stringed instrument\",\"pedestrians\",\"trash can\",\"folding chair\",\"red cart\",\"shopfronts\",\"trees\",\"street pavement\"], \"actions\":[\"playing instrument\",\"standing\",\"walking (pedestrians)\",\"observing\"], \"question_keywords\":[\"instrument\",\"little girl\",\"playing\",\"stringed\"], \"option_visual_cues\": {\"A\":{\"support\":[\"instrument has a bow\",\"instrument is held under chin\",\"instrument is small and has a curved body\",\"girl is using a bow to play\"],\"contradiction\":[],\"needs_check\":[]},\"B\":{\"support\":[],\"contradiction\":[\"no piano visible\",\"no keyboard or keys present\"],\"needs_check\":[]},\"C\":{\"support\":[],\"contradiction\":[\"instrument is too small for cello\",\"cello is played while seated with endpin\",\"no endpin visible\"],\"needs_check\":[]},\"D\":{\"support\":[],\"contradiction\":[\"no guitar strings or body shape visible\",\"guitar is typically held horizontally\"],\"needs_check\":[]}}, \"absence_checks\":[\"no piano keys or keyboard\",\"no cello endpin or large body\",\"no guitar pick or typical guitar shape\"], \"uncertainty\":[]}",
+  "computed_visual_context_meta": {
+   "api_elapsed_seconds": 55.785,
+   "usage": {
+    "prompt_tokens": 2041,
+    "completion_tokens": 381,
+    "total_tokens": 2422
+   },
+   "message": {
+    "role": "assistant",
+    "content": "{\"visual_summary\":\"A young girl performs on a stringed instrument in a public outdoor setting, surrounded by pedestrians and street elements like trash cans, folding chairs, and a red cart. The scene appears to be a street performance or busking event in a pedestrianized area with shops and trees in the background. The girl is consistently seen holding and playing the instrument throughout the video.\", \"event_chain\": [{\"time\":\"0.0s-266.9s\",\"action\":\"Young girl playing a stringed instrument in a public outdoor space\",\"objects\":[\"girl\",\"stringed instrument\",\"pedestrians\",\"trash can\",\"folding chair\",\"red cart\",\"shopfronts\"],\"anchor\":\"video_full_timeline_lowres\"}], \"visible_objects\":[\"girl\",\"stringed instrument\",\"pedestrians\",\"trash can\",\"folding chair\",\"red cart\",\"shopfronts\",\"trees\",\"street pavement\"], \"actions\":[\"playing instrument\",\"standing\",\"walking (pedestrians)\",\"observing\"], \"question_keywords\":[\"instrument\",\"little girl\",\"playing\",\"stringed\"], \"option_visual_cues\": {\"A\":{\"support\":[\"instrument has a bow\",\"instrument is held under chin\",\"instrument is small and has a curved body\",\"girl is using a bow to play\"],\"contradiction\":[],\"needs_check\":[]},\"B\":{\"support\":[],\"contradiction\":[\"no piano visible\",\"no keyboard or keys present\"],\"needs_check\":[]},\"C\":{\"support\":[],\"contradiction\":[\"instrument is too small for cello\",\"cello is played while seated with endpin\",\"no endpin visible\"],\"needs_check\":[]},\"D\":{\"support\":[],\"contradiction\":[\"no guitar strings or body shape visible\",\"guitar is typically held horizontally\"],\"needs_check\":[]}}, \"absence_checks\":[\"no piano keys or keyboard\",\"no cello endpin or large body\",\"no guitar pick or typical guitar shape\"], \"uncertainty\":[]}"
+   },
+   "response_id": "019f1bfec0db18956ab28d1c8d12a399"
+  },
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": true,
+  "video_visual_context_reason": "hard_visual_or_negative_question",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 7,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 20947255,
+  "evidence_bytes": 6745974,
+  "compression_ratio": 0.322,
+  "original_tokens": 5236814,
+  "compressed_tokens": 1686494,
+  "token_saving_ratio": 0.678,
+  "token_saving_ratio_raw": 0.678,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 293.476
+ }
+]

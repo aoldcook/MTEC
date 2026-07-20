@@ -1,0 +1,478 @@
+[
+ {
+  "record_key": "video:movie101_30:mlvu28",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_no_query_retrieval/mlvu/s0/media/video/movie101_30.mp4",
+  "question": "What is the genre of this movie clip?\n['A. Comedy' 'B. Horror' 'C. Action' 'D. War']\nRespond with only the option letter.",
+  "ground_truth": "C",
+  "Answer": "C",
+  "raw_response": "FINAL_ANSWER: C",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1912,
+     "height": 716,
+     "r_frame_rate": "24/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "726.024000",
+    "size": "190797158"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_no_query_retrieval/mlvu/s0/media/video/movie101_30.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "movie101_30",
+  "question_id": "mlvu28",
+  "api_meta": {
+   "api_elapsed_seconds": 16.996,
+   "usage": {
+    "total_tokens": 65717,
+    "completion_tokens": 6,
+    "prompt_tokens": 65711,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 36151,
+     "video_tokens": 28044,
+     "image_tokens": 1516,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-026d54fd-1234-937c-9017-49e44da149d7"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 16.996,
+   "usage": {
+    "total_tokens": 65717,
+    "completion_tokens": 6,
+    "prompt_tokens": 65711,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 36151,
+     "video_tokens": 28044,
+     "image_tokens": 1516,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-026d54fd-1234-937c-9017-49e44da149d7"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\"question_type\":\"genre_classification\",\"task_family\":\"generic_video_evidence\",\"task_family_evidence\":{\"facts\":[\"The video features a prolonged sequence from 02:21 to 04:14 where a character in a clown costume fights various CGI monsters on a subway train.\",\"The fight involves physical combat, jumping, and dodging attacks, which are hallmarks of the action genre.\"],\"conflicts\":[],\"fallback_needed\":false},\"temporal_scope\":{\"type\":\"full_video\",\"time_range_sec\":[0,726],\"confidence\":0.9},\"observations\":[{\"id\":\"E1\",\"time\":\"02:21-04:14\",\"modality\":\"visual\",\"observation\":\"A character in a clown costume engages in intense physical combat with CGI monsters inside a subway train, featuring fast-paced action sequences.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E2\",\"time\":\"02:59-03:20\",\"modality\":\"visual\",\"observation\":\"The clown character performs acrobatic moves, kicks, and dodges attacks from multiple monsters.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.9}],\"counts\":[],\"visible_set\":{\"A. Comedy\":[],\"B. Horror\":[],\"C. Action\":[\"Fight scene\",\"CGI monsters\",\"Acrobatic combat\"],\"D. War\":[]},\"ocr_text\":[],\"missing_required_evidence\":[],\"forbidden_inference\":[],\"uncertainty\":[]}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 12.584,
+   "usage": {
+    "total_tokens": 32481,
+    "completion_tokens": 433,
+    "prompt_tokens": 32048,
+    "completion_tokens_details": {
+     "reasoning_tokens": 118,
+     "text_tokens": 315
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 2558,
+     "video_tokens": 27974,
+     "image_tokens": 1516,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "{\"question_type\":\"genre_classification\",\"task_family\":\"generic_video_evidence\",\"task_family_evidence\":{\"facts\":[\"The video features a prolonged sequence from 02:21 to 04:14 where a character in a clown costume fights various CGI monsters on a subway train.\",\"The fight involves physical combat, jumping, and dodging attacks, which are hallmarks of the action genre.\"],\"conflicts\":[],\"fallback_needed\":false},\"temporal_scope\":{\"type\":\"full_video\",\"time_range_sec\":[0,726],\"confidence\":0.9},\"observations\":[{\"id\":\"E1\",\"time\":\"02:21-04:14\",\"modality\":\"visual\",\"observation\":\"A character in a clown costume engages in intense physical combat with CGI monsters inside a subway train, featuring fast-paced action sequences.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E2\",\"time\":\"02:59-03:20\",\"modality\":\"visual\",\"observation\":\"The clown character performs acrobatic moves, kicks, and dodges attacks from multiple monsters.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.9}],\"counts\":[],\"visible_set\":{\"A. Comedy\":[],\"B. Horror\":[],\"C. Action\":[\"Fight scene\",\"CGI monsters\",\"Acrobatic combat\"],\"D. War\":[]},\"ocr_text\":[],\"missing_required_evidence\":[],\"forbidden_inference\":[],\"uncertainty\":[]}",
+    "reasoning_content": "The user wants to identify the genre of the movie clip.\nLooking at the video, there is a significant portion (02:21-04:14) showing a character in a clown costume fighting CGI monsters on a subway train. This involves physical combat, jumping, dodging attacks, and fast-paced editing, which are hallmarks of the action genre.\nThe options are:\nA. Comedy\nB. Horror\nC. Action\nD. War\n\nThe fight scene clearly points to Action.\nI will formulate the evidence based on the fight scene.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-92eda3db-6cc7-9253-bbf3-f52a2ac33620",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 1021 (char 1020)",
+     "response_chars": 1045
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1254
+    }
+   ]
+  },
+  "computed_global_timeline_response": "{\"task_specific_resolver\":{\"resolver_type\":\"generic_video_evidence\",\"evidence_template\":{\"facts\":[\"The video features a prolonged sequence from 02:21 to 04:14 where a character in a clown costume fights various CGI monsters on a subway train.\",\"The fight involves physical combat, jumping, and dodging attacks, which are hallmarks of the action genre.\"],\"conflicts\":[],\"fallback_needed\":false},\"special_rules\":[],\"target_time_ranges\":[\"02:21-04:14\"],\"fallback_policy\":\"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\"confidence\":0.9},\"timeline\":[{\"time_range\":\"00:00-00:54\",\"scene\":\"Opening credits on a ship\",\"actions\":[\"Ship sailing in storm\"],\"objects\":[\"Ship\",\"Sea\"],\"visual_cues\":[\"Dark lighting\",\"Stormy weather\"],\"confidence\":0.9},{\"time_range\":\"00:55-01:15\",\"scene\":\"Animated title sequence\",\"actions\":[\"Clown animation\"],\"objects\":[\"Clown\",\"Title text\"],\"visual_cues\":[\"Animation style\"],\"confidence\":0.9},{\"time_range\":\"01:16-02:20\",\"scene\":\"Arcade\",\"actions\":[\"Man in clown costume sitting\",\"Another man approaches\"],\"objects\":[\"Arcade machines\",\"Clown costume\"],\"visual_cues\":[\"Colorful lights\"],\"confidence\":0.9},{\"time_range\":\"02:21-04:14\",\"scene\":\"Subway train\",\"actions\":[\"Clown fighting monsters\",\"Monsters attacking\"],\"objects\":[\"Subway train\",\"Monsters\",\"Clown\"],\"visual_cues\":[\"CGI effects\",\"Fast-paced editing\",\"Combat\"],\"confidence\":0.95},{\"time_range\":\"04:15-06:33\",\"scene\":\"Arcade\",\"actions\":[\"Conversation between clown and man\"],\"objects\":[\"Arcade machines\"],\"visual_cues\":[\"Dialogue\"],\"confidence\":0.9},{\"time_range\":\"06:34-12:06\",\"scene\":\"Hospital\",\"actions\":[\"Man interacting with nurse\",\"Fight breaks out\",\"Man sits down\"],\"objects\":[\"Hospital beds\",\"Nurse uniform\"],\"visual_cues\":[\"Hospital setting\"],\"confidence\":0.9}],\"question_relevant_time_ranges\":[{\"time_range\":\"02:21-04:14\",\"reason\":\"This segment clearly demonstrates action genre elements through a fight scene with monsters",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 19.268,
+   "usage": {
+    "total_tokens": 27253,
+    "completion_tokens": 857,
+    "prompt_tokens": 26396,
+    "completion_tokens_details": {
+     "reasoning_tokens": 338,
+     "text_tokens": 519
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 25482,
+     "cached_tokens": 0,
+     "text_tokens": 914
+    }
+   },
+   "message": {
+    "content": "{\"task_specific_resolver\":{\"resolver_type\":\"generic_video_evidence\",\"evidence_template\":{\"facts\":[\"The video features a prolonged sequence from 02:21 to 04:14 where a character in a clown costume fights various CGI monsters on a subway train.\",\"The fight involves physical combat, jumping, and dodging attacks, which are hallmarks of the action genre.\"],\"conflicts\":[],\"fallback_needed\":false},\"special_rules\":[],\"target_time_ranges\":[\"02:21-04:14\"],\"fallback_policy\":\"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\"confidence\":0.9},\"timeline\":[{\"time_range\":\"00:00-00:54\",\"scene\":\"Opening credits on a ship\",\"actions\":[\"Ship sailing in storm\"],\"objects\":[\"Ship\",\"Sea\"],\"visual_cues\":[\"Dark lighting\",\"Stormy weather\"],\"confidence\":0.9},{\"time_range\":\"00:55-01:15\",\"scene\":\"Animated title sequence\",\"actions\":[\"Clown animation\"],\"objects\":[\"Clown\",\"Title text\"],\"visual_cues\":[\"Animation style\"],\"confidence\":0.9},{\"time_range\":\"01:16-02:20\",\"scene\":\"Arcade\",\"actions\":[\"Man in clown costume sitting\",\"Another man approaches\"],\"objects\":[\"Arcade machines\",\"Clown costume\"],\"visual_cues\":[\"Colorful lights\"],\"confidence\":0.9},{\"time_range\":\"02:21-04:14\",\"scene\":\"Subway train\",\"actions\":[\"Clown fighting monsters\",\"Monsters attacking\"],\"objects\":[\"Subway train\",\"Monsters\",\"Clown\"],\"visual_cues\":[\"CGI effects\",\"Fast-paced editing\",\"Combat\"],\"confidence\":0.95},{\"time_range\":\"04:15-06:33\",\"scene\":\"Arcade\",\"actions\":[\"Conversation between clown and man\"],\"objects\":[\"Arcade machines\"],\"visual_cues\":[\"Dialogue\"],\"confidence\":0.9},{\"time_range\":\"06:34-12:06\",\"scene\":\"Hospital\",\"actions\":[\"Man interacting with nurse\",\"Fight breaks out\",\"Man sits down\"],\"objects\":[\"Hospital beds\",\"Nurse uniform\"],\"visual_cues\":[\"Hospital setting\"],\"confidence\":0.9}],\"question_relevant_time_ranges\":[{\"time_range\":\"02:21-04:14\",\"reason\":\"This segment clearly demonstrates action genre elements through a fight scene with monsters",
+    "reasoning_content": "The user wants to identify the genre of the movie clip.\nThe clip shows a man in a clown costume fighting monsters on a subway train, which is a clear action sequence.\nThere are also scenes in an arcade and a hospital, but the most prominent and defining genre element shown is the action/fantasy sequence with the clown fighting monsters.\nWait, let's look at the options: A. Comedy, B. Horror, C. Action, D. War.\nThe clip has a lot of action elements (fighting monsters, jumping, etc.). It's from the movie \"Animal World\" which is an action/adventure film.\nThe most fitting genre from the options is Action.\n\nLet's trace the timeline:\n00:00 - 00:54: Opening credits, dark ship, stormy sea.\n00:55 - 01:15: Animated clown sequence, title \"Animal World\".\n01:16 - 02:20: Arcade scene, man in clown costume, another man approaches him.\n02:21 - 04:14: Fantasy/Action sequence on a subway train. The clown fights various monsters. This is clearly an action sequence.\n04:15 - 06:33: Back to the arcade, conversation between the clown and the man.\n06:34 - 12:06: Hospital scene, man (out of costume) interacts with a nurse, gets into a fight, then sits down.\n\nThe presence of a prolonged fight scene with CGI monsters strongly points to Action.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-c8d4b74e-71f8-9e1d-a352-7f57bacc92c4"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": "C",
+  "computed_visual_context_meta": {
+   "api_elapsed_seconds": 11.897,
+   "usage": {
+    "total_tokens": 29675,
+    "completion_tokens": 404,
+    "prompt_tokens": 29271,
+    "completion_tokens_details": {
+     "reasoning_tokens": 399,
+     "text_tokens": 5
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 28044,
+     "cached_tokens": 0,
+     "text_tokens": 1227
+    }
+   },
+   "message": {
+    "content": "C",
+    "reasoning_content": "The user wants me to identify the genre of the movie clip from the given options: Comedy, Horror, Action, War.\n\n1.  **Analyze the video content:**\n    *   The video starts with a dark, gritty scene on a ship, then transitions to an arcade setting.\n    *   A man dressed as a clown is a central character. He has hallucinations/imaginations where he fights monsters in a subway train.\n    *   There are fight scenes, explosions, and fast-paced action sequences (e.g., fighting monsters on a train, jumping between buildings).\n    *   There is a dramatic scene in a hospital involving a nurse and a patient.\n    *   The overall tone involves high stakes, physical conflict, and special effects (CGI monsters).\n    *   While there might be some dark humor or absurdity (clown costume), the primary focus is on the action sequences and the dramatic plot. It's not a pure comedy. It's not a horror movie in the traditional sense (though there are scary monsters, the protagonist fights them like an action hero). It's definitely not a war movie.\n    *   The title \"Animal World\" appears. This is a known action/thriller movie.\n    *   The scenes of fighting monsters, running, jumping, and the intense hospital confrontation point strongly towards Action.\n\n2.  **Evaluate options:**\n    *   A. Comedy: There are some quirky elements (clown), but the main events are fighting and drama. Not the primary genre.\n    *   B. Horror: There are monsters, but the protagonist fights them. It's more action-adventure than horror.\n    *   C. Action: Lots of fighting, stunts, chases, and special effects battles. This fits best.\n    *   D. War: No military conflict shown.\n\n3.  **Conclusion:** The genre is Action.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-2d09473d-390e-9e5d-9351-f0fddc9ec223"
+  },
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": true,
+  "video_visual_context_reason": "hard_visual_or_negative_question",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_temporal",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 3,
+   "detail_max_side": 768,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 3,
+  "video_detail_max_side": 768,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": false,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 190797158,
+  "evidence_bytes": 6622317,
+  "compression_ratio": 0.0347,
+  "original_tokens": 47699290,
+  "compressed_tokens": 1655580,
+  "token_saving_ratio": 0.9653,
+  "token_saving_ratio_raw": 0.9653,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_temporal compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 356.304
+ },
+ {
+  "record_key": "video:order_139:mlvu109",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_no_query_retrieval/mlvu/s0/media/video/order_139.mp4",
+  "question": "Arrange the following events from the video in the correct chronological order: (1)The batter is poured into bowls and dye is added; (2)Ingredients are shown on a counter; (3)The cake is frosted with blue frosting and sprinkles are added; (4)The pans are greased and the different colored batter is poured into them.\n['A. 1->2->3->4' 'B. 4->3->2->1' 'C. 3->4->1->2' 'D. 2->1->4->3']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "D",
+  "raw_response": "FINAL_ANSWER: D",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 720,
+     "height": 540,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "694.284000",
+    "size": "84996020"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_no_query_retrieval/mlvu/s0/media/video/order_139.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "order_139",
+  "question_id": "mlvu109",
+  "api_meta": {
+   "api_elapsed_seconds": 5.954,
+   "usage": {
+    "total_tokens": 71388,
+    "completion_tokens": 6,
+    "prompt_tokens": 71382,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 30714,
+     "cached_tokens": 0,
+     "text_tokens": 40668
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-db264c6e-7164-9801-a02d-16a0f675f0f2",
+   "inspection_fallback_variant": "primary_video_only"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 5.954,
+   "usage": {
+    "total_tokens": 71388,
+    "completion_tokens": 6,
+    "prompt_tokens": 71382,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 30714,
+     "cached_tokens": 0,
+     "text_tokens": 40668
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-db264c6e-7164-9801-a02d-16a0f675f0f2",
+   "inspection_fallback_variant": "primary_video_only"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\"question_type\": \"unknown\", \"temporal_scope\": {\"type\": \"unknown\", \"time_range_sec\": null, \"confidence\": 0.0}, \"observations\": [], \"counts\": [], \"visible_set\": {}, \"ocr_text\": [], \"missing_required_evidence\": [\"evidence_pass_json_invalid_or_truncated\"], \"forbidden_inference\": [\"Do not rely on the truncated evidence text.\"], \"uncertainties\": [\"Evidence pass did not return valid JSON after retry: JSONDecodeError: Expecting ',' delimiter: line 89 column 20 (char 2449)\", \"Final verifier must rely on attached low-resolution video, high-resolution crops, transcript, and deterministic anchors.\"], \"must_rely_on_visual_inputs\": true, \"retry_attempts\": [{\"attempt\": 1, \"max_tokens\": 256, \"valid_json\": false, \"error\": \"JSONDecodeError: Expecting ',' delimiter: line 24 column 8 (char 625)\", \"response_chars\": 825}, {\"attempt\": 2, \"max_tokens\": 512, \"valid_json\": false, \"error\": \"JSONDecodeError: Expecting ',' delimiter: line 58 column 4 (char 1417)\", \"response_chars\": 1519}, {\"attempt\": 3, \"max_tokens\": 1024, \"valid_json\": false, \"error\": \"JSONDecodeError: Expecting ',' delimiter: line 89 column 20 (char 2449)\", \"response_chars\": 3065}]}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 26.476,
+   "usage": {
+    "total_tokens": 36934,
+    "completion_tokens": 1269,
+    "prompt_tokens": 35665,
+    "completion_tokens_details": {
+     "reasoning_tokens": 243,
+     "text_tokens": 1026
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 30714,
+     "cached_tokens": 37248,
+     "text_tokens": 4951
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"ordinal_clip_action\",\n  \"task_family\": \"ordinal_clip_action\",\n  \"task_family_evidence\": {\n    \"target_entity\": \"cake_making_events\",\n    \"role_filter\": [\n      \"foreground\",\n      \"participant\"\n    ],\n    \"exclude\": [\n      \"background\"\n    ],\n    \"entities\": [\n      {\n        \"global_entity_id\": \"E1\",\n        \"local_tracks\": [\n          \"00:45-01:08\"\n        ],\n        \"role\": \"ingredients_display\",\n        \"appearance\": \"cake_mix_box_eggs_water_oil_bowls_pans\",\n        \"include_in_count\": true,\n        \"include_reason\": \"Event 2: Ingredients shown on counter\",\n        \"confidence\": 0.95\n      },\n      {\n        \"global_entity_id\": \"E2\",\n        \"local_tracks\": [\n          \"01:44-02:08\"\n        ],\n        \"role\": \"batter_preparation\",\n        \"appearance\": \"batter_in_bowls_with_dye\",\n        \"include_in_count\": true,\n        \"include_reason\": \"Event 1: Batter poured into bowls and dye added\",\n        \"confidence\": 0.95\n      },\n      {\n        \"global_entity_id\": \"E3\",\n        \"local_tracks\": [\n          \"03:15-04:00\"\n        ],\n        \"role\": \"baking_and_frosting\",\n        \"appearance\": \"cake_pans_in_oven_frosted_cake\",\n        \"include_in_count\": true,\n        \"include_reason\": \"Event 3: Cake baked and frosted\",\n        \"confidence\": 0.95\n      }\n    ],\n    \"count_value\": 3,\n    \"count_confidence\": 0.95\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [\n      0,\n      694.28\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"00:45-01:08\",\n      \"modality\": \"visual\",\n      \"observation\": \"Ingredients (cake mix, eggs, water, oil, bowls, pans) are shown on a kitchen counter.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"01:44-02:08\",\n      \"modality\": \"visual\",\n      \"observation\": \"Batter is poured into multiple bowls and food coloring dye is added to each bowl.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"03:15-04:00\",\n      \"modality\": \"visual\",\n      \"observation\": \"Cake pans are placed in the oven to bake, then removed, cooled, and frosted with blue icing and sprinkles.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [\n    \"How to Make a Tie-Dye Cake\",\n    \"3 Eggs\",\n    \"1 1/3 Cups Water\",\n    \"2 Tbs Oil\",\n    \"12 Bowls\",\n    \"2 Eight Inch Pans\",\n    \"Preheat Oven\",\n    \"Pour Cake Mix in a Mixing Bowl\",\n    \"Add Water\",\n    \"Add Oil\",\n    \"Add Eggs\",\n    \"Mix Until Moistened\",\n    \"Pour Batter Into 6 Bowls\",\n    \"Dye Each Bowl Accordingly\",\n    \"15 Drops Red\",\n    \"5 Drops Yellow and 2 Drops Red\",\n    \"14 Drops Blue\",\n    \"9 Drops Yellow and 2 Drops Blue\",\n    \"8 Drops Yellow\",\n    \"7 Drops Red and 2 Drops Blue\",\n    \"Divide the Colors in Half\",\n    \"Grease Pans\",\n    \"Pour 6 Colors Into the Center",
+    "reasoning_content": "The user wants me to order three events from the video chronologically:\n(1) The batter is poured into bowls and dye is added\n(2) Ingredients are shown on a counter\n(3) The... (likely \"The cake is baked and frosted\" or similar based on the visual context hint)\n\nLooking at the visual context hint:\n- 00:45: Ingredients are shown on a counter (Event 2)\n- 01:45: The batter is poured into bowls and dye is added (Event 1)\n- 03:15: The cake is baked and frosted (Event 3)\n\nSo the chronological order is: (2) -> (1) -> (3).\n\nLet me extract the evidence.\nEvent 2: Ingredients shown on counter at 00:45-01:08.\nEvent 1: Batter poured into bowls and dye added at 01:44-02:08.\nEvent 3: Cake baked and frosted at 03:15-04:00.\n\nI will formulate the JSON response.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-e97b91fb-5521-99f1-9439-64bc235a2b70",
+   "inspection_fallback_variant": "primary_video_only",
+   "evidence_json_valid": false,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 24 column 8 (char 625)",
+     "response_chars": 825
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 58 column 4 (char 1417)",
+     "response_chars": 1519
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 89 column 20 (char 2449)",
+     "response_chars": 3065
+    }
+   ],
+   "evidence_json_fallback_used": true,
+   "evidence_json_error": "JSONDecodeError: Expecting ',' delimiter: line 89 column 20 (char 2449)",
+   "raw_invalid_evidence_response": "```json { \"question_type\": \"ordinal_clip_action\", \"task_family\": \"ordinal_clip_action\", \"task_family_evidence\": { \"target_entity\": \"cake_making_events\", \"role_filter\": [ \"foreground\", \"participant\" ], \"exclude\": [ \"background\" ], \"entities\": [ { \"global_entity_id\": \"E1\", \"local_tracks\": [ \"00:45-01:08\" ], \"role\": \"ingredients_display\", \"appearance\": \"cake_mix_box_eggs_water_oil_bowls_pans\", \"include_in_count\": true, \"include_reason\": \"Event 2: Ingredients shown on counter\", \"confidence\": 0.95 }, { \"global_entity_id\": \"E2\", \"local_tracks\": [ \"01:44-02:08\" ], \"role\": \"batter_preparation\", \"appearance\": \"batter_in_bowls_with_dye\", \"include_in_count\": true, \"include_reason\": \"Event 1: Batter poured into bowls and dye added\", \"confidence\": 0.95 }, { \"global_entity_id\": \"E3\", \"local_tracks\": [ \"03:15-04:00\" ], \"role\": \"baking_and_frosting\", \"appearance\": \"cake_pans_in_oven_frosted_cake\", \"include_in_count\": true, \"include_reason\": \"Event 3: Cake baked and frosted\", \"confidence\": 0.95 } ], \"count_value\": 3, \"count_confidence\": 0.95 }, \"temporal_scope\": { \"type\": \"full_video\", \"time_range_sec\": [ 0, 694.28 ], \"confidence\": 0.95 }, \"observations\": [ { \"id\": \"E1\", \"time\": \"00:45-01:08\", \"modality\": \"visual\", \"observation\": \"Ingredients (cake mix, eggs, water, oil, bowls, pans) are shown on a kitchen counter.\", \"anchor\": \"video_full_timeline_lowres\", \"scope_match\": true, \"confidence\": 0.95 }, { \"id\": \"E2\", \"time\": \"01:44-02:08\", \"modality\": \"visual\", \"observation\": \"Batter is poured into multiple bowls and food coloring dye is added to each bowl.\", \"anchor\": \"video_full_timeline_lowres\", \"scope_match\": true, \"confidence\": 0.95 }, { \"id\": \"E3\", \"time\": \"03:15-04:00\", \"modality\": \"visual\", \"observation\": \"Cake pans are placed in the oven to bake, then removed, cooled, and frosted with blue icing and sprinkles.\", \"anchor\": \"video_full_timeline_lowres\", \"scope_match\": true, \"confidence\": 0.95 } ], \"counts\": [], \"visible_set\": {}, \"ocr_text\": [ \"How to Make a Tie-Dye Cake\", \"3 Egg..."
+  },
+  "computed_global_timeline_response": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"ordinal_clip_action\",\n    \"evidence_template\": {\n      \"target_entity\": \"cake_making_events\",\n      \"role_filter\": [\n        \"foreground\",\n        \"participant\"\n      ],\n      \"exclude\": [\n        \"background\"\n      ],\n      \"entities\": [\n        {\n          \"global_entity_id\": \"E1\",\n          \"local_tracks\": [\n            \"00:45-01:08\"\n          ],\n          \"role\": \"ingredients_display\",\n          \"appearance\": \"cake_mix_box_eggs_water_oil_bowls_pans\",\n          \"include_in_count\": true,\n          \"include_reason\": \"Event 2: Ingredients shown\",\n          \"confidence\": 0.95\n        },\n        {\n          \"global_entity_id\": \"E2\",\n          \"local_tracks\": [\n            \"01:44-02:08\"\n          ],\n          \"role\": \"batter_preparation\",\n          \"appearance\": \"batter_in_bowls_with_dye\",\n          \"include_in_count\": true,\n          \"include_reason\": \"Event 1: Batter poured and dyed\",\n          \"confidence\": 0.95\n        }\n      ],\n      \"count_value\": 2,\n      \"count_confidence\": 0.95\n    },\n    \"special_rules\": [\n      \"Order events chronologically based on video timeline.\",\n      \"Event (2) occurs before Event (1).\"\n    ],\n    \"target_time_ranges\": [\n      \"00:45-01:08\",\n      \"01:44-02:08\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.95\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:45-01:08\",\n      \"scene\": \"kitchen_counter\",\n      \"actions\": [\n        \"showing_ingredients\"\n      ],\n      \"objects\": [\n        \"",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 34.424,
+   "usage": {
+    "total_tokens": 33418,
+    "completion_tokens": 1648,
+    "prompt_tokens": 31770,
+    "completion_tokens_details": {
+     "reasoning_tokens": 1129,
+     "text_tokens": 519
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 30714,
+     "cached_tokens": 0,
+     "text_tokens": 1056
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"ordinal_clip_action\",\n    \"evidence_template\": {\n      \"target_entity\": \"cake_making_events\",\n      \"role_filter\": [\n        \"foreground\",\n        \"participant\"\n      ],\n      \"exclude\": [\n        \"background\"\n      ],\n      \"entities\": [\n        {\n          \"global_entity_id\": \"E1\",\n          \"local_tracks\": [\n            \"00:45-01:08\"\n          ],\n          \"role\": \"ingredients_display\",\n          \"appearance\": \"cake_mix_box_eggs_water_oil_bowls_pans\",\n          \"include_in_count\": true,\n          \"include_reason\": \"Event 2: Ingredients shown\",\n          \"confidence\": 0.95\n        },\n        {\n          \"global_entity_id\": \"E2\",\n          \"local_tracks\": [\n            \"01:44-02:08\"\n          ],\n          \"role\": \"batter_preparation\",\n          \"appearance\": \"batter_in_bowls_with_dye\",\n          \"include_in_count\": true,\n          \"include_reason\": \"Event 1: Batter poured and dyed\",\n          \"confidence\": 0.95\n        }\n      ],\n      \"count_value\": 2,\n      \"count_confidence\": 0.95\n    },\n    \"special_rules\": [\n      \"Order events chronologically based on video timeline.\",\n      \"Event (2) occurs before Event (1).\"\n    ],\n    \"target_time_ranges\": [\n      \"00:45-01:08\",\n      \"01:44-02:08\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.95\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:45-01:08\",\n      \"scene\": \"kitchen_counter\",\n      \"actions\": [\n        \"showing_ingredients\"\n      ],\n      \"objects\": [\n        \"",
+    "reasoning_content": "The user wants me to order events from a video.\nThe events are:\n(1) The batter is poured into bowls and dye is added\n(2) Ingredients are shown on a counter\n(3) The... (incomplete, but likely related to the cake making process)\n\nLet's look at the video timeline.\nThe video starts with a scene from a movie/show (00:00 - 00:41).\nThen a title card \"How to Make a Tie-Dye Cake\" appears (00:42).\nThen ingredients are shown:\n- Tie-Dye cake mix box (00:45)\n- 3 Eggs (00:50)\n- 1 1/3 Cups Water (00:53)\n- 2 Tbs Oil (00:56)\n- 12 Bowls (01:00)\n- 2 Eight Inch Pans (01:06)\nSo event (2) \"Ingredients are shown on a counter\" happens around 00:45 - 01:08.\n\nThen the oven is preheated (01:10).\nCake mix is poured into a bowl (01:15).\nWater, oil, eggs are added (01:21 - 01:34).\nMixed until moistened (01:36 - 01:43).\nBatter is poured into 6 bowls (01:44).\nDye is added to each bowl (01:48 - 02:08).\nSo event (1) \"The batter is poured into bowls and dye is added\" happens around 01:44 - 02:08.\n\nThe question asks to arrange events in chronological order.\n(2) Ingredients are shown on a counter (00:45 - 01:08)\n(1) The batter is poured into bowls and dye is added (01:44 - 02:08)\n\nWait, the prompt says \"Arrange the following events from the video in the correct chronological order: (1)The batter is poured into bowls and dye is added; (2)Ingredients are shown on a counter; (3)The...\"\nThe third event is cut off. I will just order the first two based on the timeline.\nActually, the prompt asks me to return a JSON with specific fields. I need to follow the schema.\nThe resolver is `cross_shot_entity_count` but the question is about ordering events. Wait, the prompt says \"Inspect only the attached low-resolution full-video anchor.\" and \"Return compact JSON only with this schema\".\nThe schema requires `task_specific_resolver`, `timeline`, `question_relevant_time_ranges`, `scene_locator`, `global_uncertainties`.\n\nLet's build the timeline for the cake making part.\n00:42 - 00:45: Title card \"How to Make a Tie-Dye Cake\"\n00:45 - 01:08: Ingredients shown (cake mix, eggs, water, oil, bowls, pans). This corresponds to event (2).\n01:10 - 01:14: Preheat oven.\n01:15 - 01:43: Mixing ingredients.\n01:44 - 02:08: Pouring batter into bowls and adding dye. This corresponds to event (1).\n\nSo the order is (2), then (1).\nThe third event is missing, but I can infer it might be baking or frosting.\nBaking happens at 03:14 - 03:38.\nFrosting happens at 03:47 - 04:06.\n\nI will formulate the JSON response.\nTask specific resolver: The question is about ordering events, which is `ordinal_clip_action` or just generic video evidence. The prompt suggests `cross_shot_entity_count` as default but I should adjust if video requires better resolver. The question is \"Arrange the following events...\". This is an ordering task. I'll use `ordinal_clip_action` or just describe the timeline. Wait, the prompt says \"Use this resolver guidance as the default; adjust only if the video clearly requires a better specialized resolver\". The question is about ordering events. `ordinal_clip_action` fits best.\n\nLet's look at the schema again.\n`task_specific_resolver`: `resolver_type`, `evidence_template`, `special_rules`, `target_time_ranges`, `fallback_policy`, `confidence`.\n`timeline`: list of objects with `time_range`, `scene`, `actions`, `objects`, `visual_cues`, `confidence`.\n`question_relevant_time_ranges`: list of objects with `time_range`, `reason`, `confidence`.\n`scene_locator`: `target_scene`, `time_range`, `confidence`.\n`global_uncertainties`: list.\n\nI will map the events to time ranges.\nEvent (2): Ingredients shown. Time range: 00:45 - 01:08.\nEvent (1): Batter poured and dyed. Time range: 01:44 - 02:08.\n\nI will construct the JSON.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-614b5c59-6c1a-92ec-8c97-98b2d95a94ce"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": "```json\n{\n  \"visual_summary\": \"A video containing a movie scene followed by a tutorial on how to make a tie-dye cake, showing ingredients, mixing, dyeing batter, baking, and frosting.\",\n  \"event_chain\": [\n    {\n      \"time\": \"00:45\",\n      \"action\": \"Ingredients are shown on a counter\",\n      \"objects\": [\n        \"cake mix\",\n        \"eggs\",\n        \"water\",\n        \"oil\",\n        \"bowls\"\n      ],\n      \"anchor\": \"video_full_timeline_lowres\"\n    },\n    {\n      \"time\": \"01:10\",\n      \"action\": \"The oven is preheated\",\n      \"objects\": [\n        \"oven\",\n        \"hand\"\n      ],\n      \"anchor\": \"video_full_timeline_lowres\"\n    },\n    {\n      \"time\": \"01:45\",\n      \"action\": \"The batter is poured into bowls and dye is added\",\n      \"objects\": [\n        \"batter\",\n        \"bowls\",\n        \"food coloring\"\n      ],\n      \"anchor\": \"video_full_timeline_lowres\"\n    },\n    {\n      \"time\": \"03:15\",\n      \"action\": \"The cake is baked and frosted\",\n      \"objects\": [\n        \"cake pans\",\n        \"oven\",\n        \"frosting\",\n        \"sprinkles\"\n      ],\n      \"anchor\": \"video_full_timeline_lowres\"\n    }\n  ],\n  \"visible_objects\": [\n    \"cake mix box\",\n    \"eggs\",\n    \"water\",\n    \"oil\",\n    \"bowls\",\n    \"cake pans",
+  "computed_visual_context_meta": {
+   "api_elapsed_seconds": 18.906,
+   "usage": {
+    "total_tokens": 37341,
+    "completion_tokens": 789,
+    "prompt_tokens": 36552,
+    "completion_tokens_details": {
+     "reasoning_tokens": 396,
+     "text_tokens": 393
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 35216,
+     "cached_tokens": 0,
+     "text_tokens": 1336
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"visual_summary\": \"A video containing a movie scene followed by a tutorial on how to make a tie-dye cake, showing ingredients, mixing, dyeing batter, baking, and frosting.\",\n  \"event_chain\": [\n    {\n      \"time\": \"00:45\",\n      \"action\": \"Ingredients are shown on a counter\",\n      \"objects\": [\n        \"cake mix\",\n        \"eggs\",\n        \"water\",\n        \"oil\",\n        \"bowls\"\n      ],\n      \"anchor\": \"video_full_timeline_lowres\"\n    },\n    {\n      \"time\": \"01:10\",\n      \"action\": \"The oven is preheated\",\n      \"objects\": [\n        \"oven\",\n        \"hand\"\n      ],\n      \"anchor\": \"video_full_timeline_lowres\"\n    },\n    {\n      \"time\": \"01:45\",\n      \"action\": \"The batter is poured into bowls and dye is added\",\n      \"objects\": [\n        \"batter\",\n        \"bowls\",\n        \"food coloring\"\n      ],\n      \"anchor\": \"video_full_timeline_lowres\"\n    },\n    {\n      \"time\": \"03:15\",\n      \"action\": \"The cake is baked and frosted\",\n      \"objects\": [\n        \"cake pans\",\n        \"oven\",\n        \"frosting\",\n        \"sprinkles\"\n      ],\n      \"anchor\": \"video_full_timeline_lowres\"\n    }\n  ],\n  \"visible_objects\": [\n    \"cake mix box\",\n    \"eggs\",\n    \"water\",\n    \"oil\",\n    \"bowls\",\n    \"cake pans",
+    "reasoning_content": "The user wants me to order events from the video.\nThe video contains two distinct parts: a movie scene and a cooking tutorial.\nThe cooking tutorial starts around 00:41.\nEvents:\n(1) The batter is poured into bowls and dye is added. (Around 01:45 - 01:50)\n(2) Ingredients are shown on a counter. (Around 00:45 - 01:00)\n(3) The cake is baked and frosted. (Around 03:15 - 04:00)\n(4) The oven is preheated. (Around 01:10)\n\nChronological order:\n1. Ingredients are shown on a counter. (2)\n2. The oven is preheated. (4)\n3. The batter is poured into bowls and dye is added. (1)\n4. The cake is baked and frosted. (3)\n\nWait, the prompt says \"Arrange the following events from the video in the correct chronological order: (1)The batter is poured into bowls and dye is added; (2)Ingredients are shown on a counter; (3)The...\"\nI need to output JSON.\nThe question is cut off, but I can infer the events.\nLet's just output the JSON structure as requested.\nWait, the prompt says \"Do not answer the multiple-choice question. Return compact JSON only.\"\nI will construct the JSON based on the visual content.\nThe video shows a movie clip, then a tie-dye cake tutorial.\nThe tutorial steps:\n- Ingredients shown (eggs, water, oil, bowls, pans)\n- Preheat oven\n- Mix batter\n- Pour into bowls, add dye\n- Pour into pans, bake\n- Frost cake\n\nI will formulate the JSON.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-ed6023d9-9f54-98d3-9625-5a0c0c314fc9"
+  },
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": true,
+  "video_visual_context_reason": "hard_visual_or_negative_question",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_ocr",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 4,
+   "detail_max_side": 960,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 4,
+  "video_detail_max_side": 960,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": false,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 84996020,
+  "evidence_bytes": 10392649,
+  "compression_ratio": 0.1223,
+  "original_tokens": 21249005,
+  "compressed_tokens": 2598163,
+  "token_saving_ratio": 0.8777,
+  "token_saving_ratio_raw": 0.8777,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_ocr compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 441.235
+ }
+]

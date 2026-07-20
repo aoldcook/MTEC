@@ -1,0 +1,22 @@
+========================================================================
+ABLATION CONFIG J_medium  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[vmme] config: completed 77/80 (96% completion), acc 80.5% (62/77), median_token_save 76.5%
+      paired vs A on 77 shared keys: config 80.5% (62) vs A 80.5% (62) -> dAcc +0.0 pts
+      token-save median: config 76.5% vs A 81.6% -> d -5.1 pts
+
+[nextqa] config: completed 50/50 (100% completion), acc 76.0% (38/50), median_token_save 25.4%
+      paired vs A on 50 shared keys: config 76.0% (38) vs A 72.0% (36) -> dAcc +4.0 pts
+      token-save median: config 25.4% vs A 46.6% -> d -21.1 pts
+
+[mlvu] config: completed 30/30 (100% completion), acc 86.7% (26/30), median_token_save 95.7%
+      paired vs A on 30 shared keys: config 86.7% (26) vs A 86.7% (26) -> dAcc +0.0 pts
+      token-save median: config 95.7% vs A 96.0% -> d -0.4 pts
+
+[vmme_long] config: completed 40/40 (100% completion), acc 65.0% (26/40), median_token_save 89.1%
+      paired vs A on 28 shared keys: config 57.1% (16) vs A 53.6% (15) -> dAcc +3.6 pts
+      token-save median: config 89.1% vs A 89.4% -> d -0.3 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=185 shared): config 76.8% vs A 75.1% -> dAcc +1.6 pts

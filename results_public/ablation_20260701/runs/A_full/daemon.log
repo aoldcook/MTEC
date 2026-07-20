@@ -1,0 +1,18 @@
+loaded 8 jobs
+LAUNCH [1/8] A_full/vmme/s0 pid=284416
+LAUNCH [2/8] A_full/vmme/s1 pid=284417
+LAUNCH [3/8] A_full/vmme/s2 pid=284418
+DONE [OK rc=0] A_full/vmme/s2 completed=1 failed=0 remaining=7
+LAUNCH [4/8] A_full/nextqa/s0 pid=309782
+DONE [OK rc=0] A_full/vmme/s0 completed=2 failed=0 remaining=4
+LAUNCH [5/8] A_full/nextqa/s1 pid=316178
+DONE [OK rc=0] A_full/vmme/s1 completed=3 failed=0 remaining=3
+LAUNCH [6/8] A_full/mlvu/s0 pid=316340
+DONE [OK rc=0] A_full/nextqa/s0 completed=4 failed=0 remaining=2
+LAUNCH [7/8] A_full/mlvu/s1 pid=329814
+DONE [OK rc=0] A_full/nextqa/s1 completed=5 failed=0 remaining=1
+LAUNCH [8/8] A_full/mlvu/s2 pid=339061
+DONE [OK rc=0] A_full/mlvu/s0 completed=6 failed=0 remaining=0
+DONE [OK rc=0] A_full/mlvu/s1 completed=7 failed=0 remaining=0
+DONE [OK rc=0] A_full/mlvu/s2 completed=8 failed=0 remaining=0
+QUEUE_ALL_DONE total=8 completed=8 failed=0

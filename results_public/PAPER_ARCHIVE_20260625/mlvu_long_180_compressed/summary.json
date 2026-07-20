@@ -1,0 +1,24 @@
+{
+ "config": {
+  "label": "MLVU-long 180 (compressed)",
+  "platform": "bailian",
+  "model": "qwen3.7-plus",
+  "mode": "MTEC compressed (streamed)",
+  "notes": "10-60min videos",
+  "source_globs": [
+   "outputs/eval_mlvu_long_20260625/s*/*results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 180,
+  "completed": 180,
+  "failed": 0,
+  "correct": 148,
+  "acc_over_completed_pct": 82.2,
+  "acc_incl_failures_pct": 82.2,
+  "failure_classes": {},
+  "token_saving_raw_mean_pct": 90.1,
+  "token_saving_raw_median_pct": 88.6,
+  "token_saving_positive_count": "180/180"
+ }
+}

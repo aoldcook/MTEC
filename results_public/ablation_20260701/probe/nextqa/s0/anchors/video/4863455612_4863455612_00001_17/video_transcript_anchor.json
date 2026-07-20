@@ -1,0 +1,155 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/nextqa/s0/media/video/4863455612.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    4.78,
+    13.78
+   ],
+   "text": "Man back in like the early 90s there's a story like this kid, his older brother was playing a prank on him.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3516,
+   "no_speech_prob": 0.0795,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "her",
+    "play",
+    "other"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    13.78,
+    22.78
+   ],
+   "text": "And he put like this bean in his ear and then like a month later the kids is having to awful ear aches.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3516,
+   "no_speech_prob": 0.0795,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    22.78,
+    27.78
+   ],
+   "text": "Because it's terminated. It's starting to grow.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3516,
+   "no_speech_prob": 0.0795
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    27.78,
+    30.78
+   ],
+   "text": "Hopefully don't eat the watermelon. See you're gonna watermelon it.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4158,
+   "no_speech_prob": 0.5938
+  }
+ ],
+ "all_segment_count": 4,
+ "query_retrieval": true,
+ "query_terms": [
+  "woman",
+  "keep",
+  "her",
+  "head",
+  "down",
+  "look",
+  "side",
+  "ceremonial",
+  "pose",
+  "finding",
+  "something",
+  "play",
+  "phone",
+  "talking",
+  "each",
+  "other"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    4.78,
+    13.78
+   ],
+   "text": "Man back in like the early 90s there's a story like this kid, his older brother was playing a prank on him.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3516,
+   "no_speech_prob": 0.0795,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "her",
+    "play",
+    "other"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    13.78,
+    22.78
+   ],
+   "text": "And he put like this bean in his ear and then like a month later the kids is having to awful ear aches.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3516,
+   "no_speech_prob": 0.0795,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    30.78
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0002"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "Man back in like the early 90s there's a story like this kid, his older brother was playing a prank on him. And he put like this bean in his ear and then like a month later the kids is having to awful ear aches. Because it's terminated. It's starting to grow. Hopefully don't eat the watermelon. See you're gonna watermelon it.",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

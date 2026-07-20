@@ -1,0 +1,73 @@
+
+===== LAUNCH Wed Jul  1 15:33:58 2026 =====
+shard 0/3: assigned=10 done=0 pending=10 extra_args=['--evidence-pass', 'false']
+[s0 batch 0-4] dl 4/4 (636MB) 155s -> eval
+Traceback (most recent call last):
+  File "/root/autodl-tmp/MTEC/scripts/run_ablation_mlvu.py", line 135, in <module>
+    main()
+  File "/root/autodl-tmp/MTEC/scripts/run_ablation_mlvu.py", line 123, in main
+    rc = run_batch(batch, out_dir, vid_dir, args.extra_args)
+  File "/root/autodl-tmp/MTEC/scripts/run_ablation_mlvu.py", line 63, in run_batch
+    return subprocess.call(cmd, cwd=ROOT)
+  File "/root/miniconda3/envs/venv/lib/python3.9/subprocess.py", line 349, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "/root/miniconda3/envs/venv/lib/python3.9/subprocess.py", line 951, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/root/miniconda3/envs/venv/lib/python3.9/subprocess.py", line 1837, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'python'
+
+===== LAUNCH Wed Jul  1 16:21:50 2026 =====
+shard 0/3: assigned=10 done=0 pending=10 extra_args=['--evidence-pass', 'false']
+[s0 batch 0-4] dl 4/4 (636MB) 1024s -> eval
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:movie101_78:mlvu65 video_media=2 image_media=9 frames=623 global_full=1 global_samples=607 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:movie101_78:mlvu65 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:surveil_85:mlvu32 video_media=2 image_media=3 frames=618 global_full=1 global_samples=602 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:surveil_85:mlvu32 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:needle_147:mlvu74 video_media=2 image_media=23 frames=653 global_full=1 global_samples=622 visual_count_video=0 tubelets=4 details=8 visual_count=0 ocr=0 motion=8 objects=8 transcript_segments=48 warnings=none
+video:needle_147:mlvu74 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:movie101_106:mlvu17 video_media=2 image_media=3 frames=762 global_full=1 global_samples=746 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:movie101_106:mlvu17 [video]: completed pred=D gt=D correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_summary.json
+[s0 batch done] rc=0 cumulative_completed=4 elapsed=1666s
+[s0 batch 4-8] dl 4/4 (546MB) 57s -> eval
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:order_11:mlvu171 video_media=2 image_media=11 frames=740 global_full=1 global_samples=708 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:order_11:mlvu171 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:movie101_62:mlvu53 video_media=2 image_media=9 frames=617 global_full=1 global_samples=601 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:movie101_62:mlvu53 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:surveil_28:mlvu88 video_media=2 image_media=3 frames=932 global_full=1 global_samples=916 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=31 warnings=none
+video:surveil_28:mlvu88 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:needle_99:mlvu90 video_media=2 image_media=4 frames=899 global_full=1 global_samples=867 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:needle_99:mlvu90 [video]: completed pred=D gt=D correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_summary.json
+[s0 batch done] rc=0 cumulative_completed=8 elapsed=496s
+[s0 batch 8-10] dl 2/2 (276MB) 27s -> eval
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:movie101_30:mlvu28 video_media=2 image_media=4 frames=758 global_full=1 global_samples=726 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:movie101_30:mlvu28 [video]: completed pred=C gt=C correct=True error=
+VideoManager is deprecated and will be removed.
+/root/miniconda3/envs/venv/lib/python3.9/site-packages/paddle/utils/cpp_extension/extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv6_medium_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/root/.paddlex/official_models/PP-OCRv6_medium_det`.[0m
+[32mCreating model: ('PP-OCRv6_medium_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/root/.paddlex/official_models/PP-OCRv6_medium_rec`.[0m
+INPUT_CHECK video:order_139:mlvu109 video_media=2 image_media=32 frames=726 global_full=1 global_samples=695 visual_count_video=0 tubelets=4 details=8 visual_count=0 ocr=8 motion=8 objects=9 transcript_segments=48 warnings=missing_visual_count_executor_anchor
+video:order_139:mlvu109 [video]: completed pred=D gt=D correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s0/modelscope_mtec_anchor_api_full_summary.json
+[s0 batch done] rc=0 cumulative_completed=10 elapsed=453s
+SHARD_0_DONE

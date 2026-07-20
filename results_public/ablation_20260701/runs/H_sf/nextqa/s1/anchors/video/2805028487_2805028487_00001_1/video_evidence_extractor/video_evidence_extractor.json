@@ -1,0 +1,357 @@
+{
+ "anchor_id": "video_evidence_extractor",
+ "anchor_link": "video_evidence_extractor",
+ "type": "video_task_aware_evidence_extraction",
+ "role": "Pre-LLM task-aware evidence extractor using scene cuts, motion saliency, OCR regions, ASR windows, scoring, and diversity hints.",
+ "source_video_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/nextqa/s1/media/video/2805028487.mp4",
+ "query_profile": {
+  "question_types": [
+   "count"
+  ],
+  "task_family": {
+   "task_family": "cross_shot_entity_count",
+   "resolver_class": "EntityBankCounter",
+   "priority": "high",
+   "confidence": 0.78,
+   "route_reasons": [
+    "count question without static scene/container constraint"
+   ],
+   "options_detected": [
+    "A"
+   ],
+   "required_evidence": [
+    "entity_bank",
+    "cross_shot_identity_merge",
+    "role_filter",
+    "duplicate_guard"
+   ]
+  },
+  "target_terms": [
+   "how",
+   "many",
+   "ladies",
+   "filmed",
+   "five",
+   "six",
+   "seven",
+   "three",
+   "four"
+  ],
+  "required_evidence": [
+   "global_timeline",
+   "low_fps_context",
+   "multi_time_instance_coverage",
+   "duplicate_guard",
+   "entity_bank",
+   "cross_shot_identity_merge",
+   "role_filter"
+  ]
+ },
+ "temporal_scope": {
+  "type": "full_video",
+  "time_range_sec": [
+   0.0,
+   25.559
+  ],
+  "confidence": 0.7,
+  "source": "default_full_video",
+  "instructions": [
+   "No narrow temporal constraint detected; aggregate evidence across the full video."
+  ]
+ },
+ "scene_segments": [
+  {
+   "id": "scene_fallback_0001",
+   "time_range_sec": [
+    0.0,
+    12.78
+   ],
+   "duration_sec": 12.78,
+   "source": "uniform_fallback"
+  },
+  {
+   "id": "scene_fallback_0002",
+   "time_range_sec": [
+    12.78,
+    25.559
+   ],
+   "duration_sec": 12.78,
+   "source": "uniform_fallback"
+  }
+ ],
+ "motion_regions": [],
+ "ocr_regions": [],
+ "object_detections": [],
+ "deterministic_evidence": {
+  "version": "deterministic_evidence_engine_v1",
+  "question_analysis": {
+   "question_types": [
+    "count"
+   ],
+   "task_family": {
+    "task_family": "cross_shot_entity_count",
+    "resolver_class": "EntityBankCounter",
+    "priority": "high",
+    "confidence": 0.78,
+    "route_reasons": [
+     "count question without static scene/container constraint"
+    ],
+    "options_detected": [
+     "A"
+    ],
+    "required_evidence": [
+     "entity_bank",
+     "cross_shot_identity_merge",
+     "role_filter",
+     "duplicate_guard"
+    ]
+   },
+   "options": {
+    "A": "five' 'B. six' 'C. seven' 'D. three' 'E. four']"
+   },
+   "target_terms": [
+    "how",
+    "many",
+    "ladies",
+    "filmed",
+    "five",
+    "six",
+    "seven",
+    "three",
+    "four"
+   ]
+  },
+  "temporal_scope": {
+   "type": "full_video",
+   "time_range_sec": [
+    0.0,
+    25.559
+   ],
+   "confidence": 0.7,
+   "source": "default_full_video",
+   "instructions": [
+    "No narrow temporal constraint detected; aggregate evidence across the full video."
+   ]
+  },
+  "hard_evidence": {
+   "scoped_motion": [],
+   "scoped_ocr": [],
+   "scoped_objects": [],
+   "transcript_scope": [
+    {
+     "anchor_link": "video_transcript_anchor_seg_0001",
+     "time_range_sec": [
+      0.0,
+      6.0
+     ],
+     "text": "It's a delicious dish and a delicious dish with a nice drink.",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0002",
+     "time_range_sec": [
+      6.0,
+      8.0
+     ],
+     "text": "Oh no, it's a delicious dish!",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0003",
+     "time_range_sec": [
+      13.0,
+      15.0
+     ],
+     "text": "It's delicious!",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0004",
+     "time_range_sec": [
+      15.0,
+      17.0
+     ],
+     "text": "Listen for us!",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0005",
+     "time_range_sec": [
+      17.0,
+      18.0
+     ],
+     "text": "It's delicious!",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0006",
+     "time_range_sec": [
+      18.0,
+      22.0
+     ],
+     "text": "It's very delicious with some dish and salt.",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0007",
+     "time_range_sec": [
+      22.0,
+      27.0
+     ],
+     "text": "I see you later!",
+     "scope_match": true,
+     "task_match": "normal",
+     "use_for_answer": true,
+     "reason": "Transcript is inside temporal scope."
+    }
+   ],
+   "count_tracks": {
+    "method": "yolo_iou_tracking_v1",
+    "target_labels": [
+     "question_relevant_objects"
+    ],
+    "confirmed_tracks": [],
+    "uncertain_tracks": [],
+    "count_value": 0,
+    "count_confidence": 0.0,
+    "warning": "IoU tracking is a deterministic de-dup aid, not identity ReID; use uncertain_tracks conservatively."
+   }
+  },
+  "evidence_quality": {
+   "missing": [
+    "No confirmed multi-frame object tracks for count question."
+   ],
+   "conflicts": [],
+   "needs_reextract": true
+  },
+  "constraints_for_llm": [
+   "Evidence extractor must not output candidate_answer, preliminary_answer, best_option, or final answer.",
+   "Every observation must be timestamped and grounded to an anchor_link when available.",
+   "Final verification must evaluate each option independently as supported, contradicted, or unknown.",
+   "Use task_family=cross_shot_entity_count resolver semantics before generic evidence if confidence is medium/high.",
+   "For count questions, use count_tracks/instances instead of guessing from a single crop."
+  ]
+ },
+ "question_time_windows": [],
+ "priority_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    8.52
+   ],
+   "source": "question_counting_early_coverage"
+  },
+  {
+   "time_range_sec": [
+    6.52,
+    19.039
+   ],
+   "source": "question_counting_middle_coverage"
+  },
+  {
+   "time_range_sec": [
+    15.039,
+    25.559
+   ],
+   "source": "question_counting_late_coverage"
+  }
+ ],
+ "evidence_units": [
+  {
+   "id": "E_scene_0001",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    0.0,
+    12.78
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": true
+  },
+  {
+   "id": "E_scene_0002",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    12.78,
+    25.559
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "uniform_fallback",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0001",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    0.0,
+    8.52
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.7,
+   "source": "question_counting_early_coverage",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0002",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    6.52,
+    19.039
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.7,
+   "source": "question_counting_middle_coverage",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0003",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    15.039,
+    25.559
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.7,
+   "source": "question_counting_late_coverage",
+   "scope_match": true
+  },
+  {
+   "id": "E_count_guard",
+   "evidence_type": "counting_guard",
+   "event": "For count questions, compare early/middle/late evidence and avoid counting one frame as the total video count.",
+   "confidence": 0.75,
+   "source": "query_policy"
+  }
+ ],
+ "scoring_policy": {
+  "query_relevance": "question type and keyword overlap",
+  "temporal_importance": "scene boundary, motion peak, start/current/count windows, ASR hit windows",
+  "motion_saliency": "OpenCV frame-difference bbox intensity",
+  "ocr_confidence": "Tesseract text confidence and readable crop",
+  "diversity": "prefer different time windows and evidence types before repeating nearby evidence"
+ },
+ "warnings": [
+  "PySceneDetect found no scene cuts; used timeline fallback.",
+  "YOLO found no relevant object detections."
+ ]
+}

@@ -1,0 +1,439 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_sf/vmme/s1/media/video/zBnKgwnn7i4.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_sf/vmme/s1/anchors/video/zBnKgwnn7i4_057-2/subtitle/zBnKgwnn7i4.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.48,
+    3.56
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    5.87,
+    12.44
+   ],
+   "text": "let's look at the size of rain and how",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    8.639,
+    15.33
+   ],
+   "text": "raindrops fall first we'll need the Sun",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    12.44,
+    17.16
+   ],
+   "text": "when the Sun shines on water on the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    15.33,
+    19.109
+   ],
+   "text": "Earth's surface the heat of the Sun",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    17.16,
+    22.02
+   ],
+   "text": "warms the water turning it into an",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    19.109,
+    24.57
+   ],
+   "text": "invisible gas called water vapour this",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    22.02,
+    28.199
+   ],
+   "text": "process the changing of water into a gas",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    24.57,
+    30.449
+   ],
+   "text": "is called evaporation because gases are",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    28.199,
+    32.94
+   ],
+   "text": "lighter than liquids water vapor rises",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    30.449,
+    35.399
+   ],
+   "text": "up into the sky and the further you move",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    32.94,
+    37.829
+   ],
+   "text": "up and away from the Earth's surface the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    35.399,
+    40.829
+   ],
+   "text": "code and the temperature gets so in the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    37.829,
+    44.19
+   ],
+   "text": "sky the water vapor cools and changes",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    40.829,
+    46.89
+   ],
+   "text": "back into tiny water droplets this",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    44.19,
+    50.789
+   ],
+   "text": "change is called condensation and is the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    46.89,
+    53.219
+   ],
+   "text": "opposite of evaporation clouds are made",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    50.789,
+    55.559
+   ],
+   "text": "up of tiny water droplets so when",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    53.219,
+    59.809
+   ],
+   "text": "condensation occurs in the sky clouds",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    55.559,
+    62.19
+   ],
+   "text": "form and grow let's take a closer look",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    59.809,
+    64.47
+   ],
+   "text": "when water droplets bump into one",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    62.19,
+    67.26
+   ],
+   "text": "another they stick together and grow in",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    64.47,
+    69.5
+   ],
+   "text": "size they continue to grow until they",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    67.26,
+    71.909
+   ],
+   "text": "are too heavy and fall as rain",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    69.5,
+    73.53
+   ],
+   "text": "they even grows they bump into one",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    71.909,
+    76.439
+   ],
+   "text": "another on their journey from the cloud",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    73.53,
+    78.81
+   ],
+   "text": "to the ground and every single raindrop",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    76.439,
+    81.15
+   ],
+   "text": "that reaches the ground is made up of 1",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    78.81,
+    82.23
+   ],
+   "text": "million of the original tiny water",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    81.15,
+    84.98
+   ],
+   "text": "droplets",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    82.23,
+    87.33
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    84.98,
+    89.31
+   ],
+   "text": "raindrops fall on the ground surface or",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0033",
+   "anchor_link": "video_transcript_anchor_seg_0033",
+   "sequence_index": 33,
+   "time_range_sec": [
+    87.33,
+    94.05
+   ],
+   "text": "the Sun can shine on them and the whole",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    89.31,
+    96.27
+   ],
+   "text": "process happens again this is called the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    94.05,
+    98.19
+   ],
+   "text": "water cycle and keeps water moving from",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    96.27,
+    100.32
+   ],
+   "text": "the ground to the sky providing the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    98.19,
+    105.11
+   ],
+   "text": "water needed for plants animals and",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    100.32,
+    105.11
+   ],
+   "text": "people to survive so now you know",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 38,
+ "query_retrieval": false,
+ "query_terms": [],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "[Music] let's look at the size of rain and how raindrops fall first we'll need the Sun when the Sun shines on water on the Earth's surface the heat of the Sun warms the water turning it into an invisible gas called water vapour this process the changing of water into a gas is called evaporation because gases are lighter than liquids water vapor rises up into the sky and the further you move up and away from the Earth's surface the code and the temperature gets so in the sky the water vapor cools and changes back into tiny water droplets this change is called condensation and is the opposite of evaporation clouds are made up of tiny water droplets so when condensation occurs in the sky clouds form and grow let's take a closer look when water droplets bump into one another they stick together and grow in size they continue to grow until they are too heavy and fall as rain they even grows they bump into one another on their journey from the cloud to the ground and every single raindrop that reaches the ground is made up of 1 million of the original tiny water droplets [Music] raindrops fall on the ground surface or the Sun can shine on them and the whole process happens again this is ",
+ "warnings": []
+}

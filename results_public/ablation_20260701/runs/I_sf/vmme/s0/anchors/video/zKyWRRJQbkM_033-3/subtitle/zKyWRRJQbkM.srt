@@ -1,0 +1,240 @@
+1
+00:00:00,160 --> 00:00:04,799
+<font color="white" size=".72c">about 1.7 million americans earn at or</font>
+
+2
+00:00:02,960 --> 00:00:06,879
+<font color="white" size=".72c">below the federal minimum wage</font>
+
+3
+00:00:04,799 --> 00:00:09,679
+<font color="white" size=".72c">that's seven dollars and 25 cents per</font>
+
+4
+00:00:06,879 --> 00:00:11,840
+<font color="white" size=".72c">hour which works out to about 15 000</font>
+
+5
+00:00:09,679 --> 00:00:13,120
+<font color="white" size=".72c">a year even though the cost of living</font>
+
+6
+00:00:11,840 --> 00:00:14,960
+<font color="white" size=".72c">continues to rise</font>
+
+7
+00:00:13,120 --> 00:00:16,720
+<font color="white" size=".72c">this number has stayed the same for over</font>
+
+8
+00:00:14,960 --> 00:00:18,320
+<font color="white" size=".72c">a decade</font>
+
+9
+00:00:16,720 --> 00:00:20,000
+<font color="white" size=".72c">minimum wage is the lowest amount an</font>
+
+10
+00:00:18,320 --> 00:00:20,560
+<font color="white" size=".72c">employer can legally pay an hourly</font>
+
+11
+00:00:20,000 --> 00:00:22,720
+<font color="white" size=".72c">worker</font>
+
+12
+00:00:20,560 --> 00:00:24,560
+<font color="white" size=".72c">but there are some exceptions for</font>
+
+13
+00:00:22,720 --> 00:00:26,480
+<font color="white" size=".72c">example according to federal law</font>
+
+14
+00:00:24,560 --> 00:00:28,560
+<font color="white" size=".72c">workers who receive tips like waiters</font>
+
+15
+00:00:26,480 --> 00:00:30,400
+<font color="white" size=".72c">and bartenders employers only have to</font>
+
+16
+00:00:28,560 --> 00:00:31,039
+<font color="white" size=".72c">pay them two dollars and thirteen cents</font>
+
+17
+00:00:30,400 --> 00:00:32,960
+<font color="white" size=".72c">an hour</font>
+
+18
+00:00:31,039 --> 00:00:34,480
+<font color="white" size=".72c">disabled workers can earn as little as</font>
+
+19
+00:00:32,960 --> 00:00:36,880
+<font color="white" size=".72c">one dollar an hour</font>
+
+20
+00:00:34,480 --> 00:00:38,399
+<font color="white" size=".72c">but many states have their own laws for</font>
+
+21
+00:00:36,880 --> 00:00:40,559
+<font color="white" size=".72c">example 29 states</font>
+
+22
+00:00:38,399 --> 00:00:42,480
+<font color="white" size=".72c">plus washington dc have a higher minimum</font>
+
+23
+00:00:40,559 --> 00:00:43,360
+<font color="white" size=".72c">wage you'll always get the highest wage</font>
+
+24
+00:00:42,480 --> 00:00:45,280
+<font color="white" size=".72c">possible</font>
+
+25
+00:00:43,360 --> 00:00:48,239
+<font color="white" size=".72c">so in states with no minimum wage or a</font>
+
+26
+00:00:45,280 --> 00:00:50,160
+<font color="white" size=".72c">lower one the federal minimum applies</font>
+
+27
+00:00:48,239 --> 00:00:51,280
+<font color="white" size=".72c">this amount hasn't changed since july</font>
+
+28
+00:00:50,160 --> 00:00:53,039
+<font color="white" size=".72c">2009</font>
+
+29
+00:00:51,280 --> 00:00:55,120
+<font color="white" size=".72c">the longest period in history without a</font>
+
+30
+00:00:53,039 --> 00:00:56,800
+<font color="white" size=".72c">raise when president franklin d</font>
+
+31
+00:00:55,120 --> 00:00:57,760
+<font color="white" size=".72c">roosevelt first introduced the federal</font>
+
+32
+00:00:56,800 --> 00:00:59,440
+<font color="white" size=".72c">minimum wage</font>
+
+33
+00:00:57,760 --> 00:01:00,800
+<font color="white" size=".72c">he said it was meant to be the wages of</font>
+
+34
+00:00:59,440 --> 00:01:03,600
+<font color="white" size=".72c">a decent living</font>
+
+35
+00:01:00,800 --> 00:01:04,479
+<font color="white" size=".72c">in 1938 that was established at 25 cents</font>
+
+36
+00:01:03,600 --> 00:01:07,600
+<font color="white" size=".72c">an hour</font>
+
+37
+00:01:04,479 --> 00:01:10,000
+<font color="white" size=".72c">since then it's been raised 22 times but</font>
+
+38
+00:01:07,600 --> 00:01:10,880
+<font color="white" size=".72c">after 1968 it just couldn't keep up with</font>
+
+39
+00:01:10,000 --> 00:01:13,840
+<font color="white" size=".72c">inflation</font>
+
+40
+00:01:10,880 --> 00:01:16,560
+<font color="white" size=".72c">so in 2019 seven dollars and 25 cents</font>
+
+41
+00:01:13,840 --> 00:01:18,000
+<font color="white" size=".72c">was actually only worth six dollars</font>
+
+42
+00:01:16,560 --> 00:01:19,600
+<font color="white" size=".72c">people have been pushing for an increase</font>
+
+43
+00:01:18,000 --> 00:01:21,119
+<font color="white" size=".72c">in minimum wage for years</font>
+
+44
+00:01:19,600 --> 00:01:22,960
+<font color="white" size=".72c">but there's long been debate about how</font>
+
+45
+00:01:21,119 --> 00:01:25,600
+<font color="white" size=".72c">that would affect the overall economy</font>
+
+46
+00:01:22,960 --> 00:01:27,439
+<font color="white" size=".72c">one side says if workers are paid more</font>
+
+47
+00:01:25,600 --> 00:01:29,680
+<font color="white" size=".72c">employers will hire fewer of them</font>
+
+48
+00:01:27,439 --> 00:01:31,280
+<font color="white" size=".72c">leading to greater unemployment they</font>
+
+49
+00:01:29,680 --> 00:01:32,320
+<font color="white" size=".72c">also argue that it would cut into the</font>
+
+50
+00:01:31,280 --> 00:01:34,720
+<font color="white" size=".72c">employer's profits</font>
+
+51
+00:01:32,320 --> 00:01:36,158
+<font color="white" size=".72c">and increase inflation the other side</font>
+
+52
+00:01:34,720 --> 00:01:38,400
+<font color="white" size=".72c">says higher pay</font>
+
+53
+00:01:36,158 --> 00:01:39,520
+<font color="white" size=".72c">would reduce employee turnover increase</font>
+
+54
+00:01:38,400 --> 00:01:41,600
+<font color="white" size=".72c">consumer spending</font>
+
+55
+00:01:39,520 --> 00:01:44,399
+<font color="white" size=".72c">and help people keep up with the rising</font>
+
+56
+00:01:41,600 --> 00:01:44,399
+<font color="white" size=".72c">cost of living</font>
+
+57
+00:01:45,039 --> 00:01:49,439
+<font color="white" size=".72c">hey thanks for watching if you like this</font>
+
+58
+00:01:47,280 --> 00:01:51,439
+<font color="white" size=".72c">video check out these other videos from</font>
+
+59
+00:01:49,439 --> 00:01:55,840
+<font color="white" size=".72c">usa today to stay up to date with all</font>
+
+60
+00:01:51,439 --> 00:01:55,840
+<font color="white" size=".72c">the latest news</font>
+

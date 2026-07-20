@@ -1,0 +1,74 @@
+
+===== LAUNCH Wed Jul  1 12:59:19 2026 =====
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7R1eNHvfspk:147-2 video_media=2 image_media=21 frames=89 global_full=1 global_samples=74 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=18 warnings=none
+video:7R1eNHvfspk:147-2 [video]: completed pred=A gt=C correct=False error=
+
+===== LAUNCH Wed Jul  1 13:04:25 2026 =====
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7R1eNHvfspk:147-2 video_media=2 image_media=21 frames=89 global_full=1 global_samples=74 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=18 warnings=none
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:6Z_XNM_iT4g:134-2 video_media=2 image_media=4 frames=29 global_full=1 global_samples=12 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=6 objects=0 transcript_segments=0 warnings=transcript_anchor_has_no_segments
+
+===== LAUNCH Wed Jul  1 13:09:29 2026 =====
+VideoManager is deprecated and will be removed.
+video:7R1eNHvfspk:147-2 [video]: completed pred=A gt=C correct=False error=
+video:7R1eNHvfspk:147-2 [video]: failed pred=None gt=None correct=None error=FileNotFoundError: [Errno 2] No such file or directory: '/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/7R1eNHvfspk_147-2/video_evidence_extractor/video_evidence_extractor.json'
+video:6Z_XNM_iT4g:134-2 [video]: completed pred=D gt=B correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:Z-rHofd6g2Q:122-2 video_media=2 image_media=21 frames=83 global_full=1 global_samples=67 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=none
+video:6Z_XNM_iT4g:134-2 [video]: failed pred=None gt=None correct=None error=FileNotFoundError: [Errno 2] No such file or directory: '/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/6Z_XNM_iT4g_134-2/video_transcript_anchor.json'
+video:6Z_XNM_iT4g:134-2 [video]: failed pred=None gt=None correct=None error=FileNotFoundError: [Errno 2] No such file or directory: '/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/6Z_XNM_iT4g_134-2/video_transcript_anchor.json'
+VideoManager is deprecated and will be removed.
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:Z-rHofd6g2Q:122-2 video_media=2 image_media=21 frames=83 global_full=1 global_samples=67 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=none
+INPUT_CHECK video:Z-rHofd6g2Q:122-2 video_media=2 image_media=21 frames=83 global_full=1 global_samples=67 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=none
+
+===== LAUNCH Wed Jul  1 13:14:35 2026 =====
+VideoManager is deprecated and will be removed.
+video:Z-rHofd6g2Q:122-2 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7R1eNHvfspk:147-2 video_media=2 image_media=21 frames=89 global_full=1 global_samples=74 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=18 warnings=none
+INPUT_CHECK video:8np5YKYx3sU:181-3 video_media=2 image_media=16 frames=126 global_full=1 global_samples=96 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=47 warnings=none
+video:Z-rHofd6g2Q:122-2 [video]: failed pred=None gt=None correct=None error=RuntimeError: Video input audit failed before final answer call: {"source_video": {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/media/video/Z-rHofd6g2Q.mp4", "exists": false, "bytes": 0}, "subtitle": {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/subtitle/Z-rHofd6g2Q.srt", "exists": false, "bytes": 0}, "video_anchor_count": 2, "full_timeline_lowres_anchor_count": 1, "visual_count_video_anchor_count": 0, "full_timeline_lowres_sample_count": 67, "low_fps_frame_count": 83, "detail_crop_count": 6, "tubelet_storyboard_count": 3, "ocr_region_crop_count": 0, "object_region_crop_count": 12, "visual_count_sheet_count": 0, "video_evidence_anchor_count": 1, "motion_region_count": 8, "ocr_region_count": 0, "object_detection_count": 7, "scene_segment_count": 2, "audio_anchor_count": 0, "transcript_anchor_count": 1, "transcript_segment_count": 26, "question_relevant_transcript_segment_count": 11, "media_content_counts": {"text": 23, "image_url": 21, "video_url": 2}, "prompt_text_bytes": 32428, "evidence_bytes": 32428, "missing_files": [{"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/media/video/Z-rHofd6g2Q.mp4", "exists": false, "bytes": 0}, {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/subtitle/Z-rHofd6g2Q.srt", "exists": false, "bytes": 0}, {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/video_full_timeline_lowres.mp4", "exists": false, "bytes": 0}, {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/video_anchor_low_fps.mp4", "exists": false, "bytes": 0}, {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/v
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8np5YKYx3sU:181-3 video_media=2 image_media=16 frames=126 global_full=1 global_samples=96 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=47 warnings=none
+video:Z-rHofd6g2Q:122-2 [video]: failed pred=None gt=None correct=None error=RuntimeError: Video input audit failed before final answer call: {"source_video": {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/media/video/Z-rHofd6g2Q.mp4", "exists": false, "bytes": 0}, "subtitle": {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/subtitle/Z-rHofd6g2Q.srt", "exists": false, "bytes": 0}, "video_anchor_count": 2, "full_timeline_lowres_anchor_count": 1, "visual_count_video_anchor_count": 0, "full_timeline_lowres_sample_count": 67, "low_fps_frame_count": 83, "detail_crop_count": 6, "tubelet_storyboard_count": 3, "ocr_region_crop_count": 0, "object_region_crop_count": 12, "visual_count_sheet_count": 0, "video_evidence_anchor_count": 1, "motion_region_count": 8, "ocr_region_count": 0, "object_detection_count": 7, "scene_segment_count": 2, "audio_anchor_count": 0, "transcript_anchor_count": 1, "transcript_segment_count": 26, "question_relevant_transcript_segment_count": 11, "media_content_counts": {"text": 23, "image_url": 21, "video_url": 2}, "prompt_text_bytes": 32428, "evidence_bytes": 32428, "missing_files": [{"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/media/video/Z-rHofd6g2Q.mp4", "exists": false, "bytes": 0}, {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/subtitle/Z-rHofd6g2Q.srt", "exists": false, "bytes": 0}, {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/video_full_timeline_lowres.mp4", "exists": false, "bytes": 0}, {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/video/Z-rHofd6g2Q_122-2/video_anchor_low_fps.mp4", "exists": false, "bytes": 0}, {"path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/anchors/v
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8np5YKYx3sU:181-3 video_media=2 image_media=16 frames=126 global_full=1 global_samples=96 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=47 warnings=none
+video:7R1eNHvfspk:147-2 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 500: {"code":50507,"message":"Request failed: Unknown error.","data":null}
+video:8np5YKYx3sU:181-3 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 429: {"message":"Request was rejected due to rate limiting. Details: TPM limit reached.","data":null}
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5kmnEgBSCfg:286-1 video_media=2 image_media=21 frames=134 global_full=1 global_samples=118 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=missing_visual_count_executor_anchor
+video:8np5YKYx3sU:181-3 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 429: {"message":"Request was rejected due to rate limiting. Details: TPM limit reached.","data":null}
+VideoManager is deprecated and will be removed.
+video:8np5YKYx3sU:181-3 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 429: {"message":"Request was rejected due to rate limiting. Details: TPM limit reached.","data":null}
+INPUT_CHECK video:5kmnEgBSCfg:286-1 video_media=2 image_media=21 frames=134 global_full=1 global_samples=118 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=missing_visual_count_executor_anchor
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5kmnEgBSCfg:286-1 video_media=2 image_media=21 frames=134 global_full=1 global_samples=118 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=missing_visual_count_executor_anchor
+
+===== LAUNCH Wed Jul  1 13:19:40 2026 =====
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7R1eNHvfspk:147-2 video_media=2 image_media=21 frames=89 global_full=1 global_samples=74 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=18 warnings=none
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:6Z_XNM_iT4g:134-2 video_media=2 image_media=4 frames=29 global_full=1 global_samples=12 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=6 objects=0 transcript_segments=0 warnings=transcript_anchor_has_no_segments
+video:7R1eNHvfspk:147-2 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 429: {"message":"Request was rejected due to rate limiting. Details: TPM limit reached.","data":null}
+video:5kmnEgBSCfg:286-1 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 429: {"message":"Request was rejected due to rate limiting. Details: TPM limit reached.","data":null}
+VideoManager is deprecated and will be removed.
+video:5kmnEgBSCfg:286-1 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 429: {"message":"Request was rejected due to rate limiting. Details: TPM limit reached.","data":null}
+video:6Z_XNM_iT4g:134-2 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 429: {"message":"Request was rejected due to rate limiting. Details: TPM limit reached.","data":null}
+VideoManager is deprecated and will be removed.
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1tidNDIpKSY:154-2 video_media=2 image_media=12 frames=75 global_full=1 global_samples=60 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=3 transcript_segments=11 warnings=none
+INPUT_CHECK video:1tidNDIpKSY:154-2 video_media=2 image_media=12 frames=75 global_full=1 global_samples=60 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=3 transcript_segments=11 warnings=none
+INPUT_CHECK video:Z-rHofd6g2Q:122-2 video_media=2 image_media=21 frames=83 global_full=1 global_samples=67 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=none
+video:5kmnEgBSCfg:286-1 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 429: {"message":"Request was rejected due to rate limiting. Details: TPM limit reached.","data":null}
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1tidNDIpKSY:154-2 video_media=2 image_media=12 frames=75 global_full=1 global_samples=60 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=3 transcript_segments=11 warnings=none
+video:Z-rHofd6g2Q:122-2 [video]: failed pred=None gt=None correct=None error=RuntimeError: HTTP 500: {"code":50507,"message":"Request failed: Unknown error.","data":null}
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8np5YKYx3sU:181-3 video_media=2 image_media=16 frames=126 global_full=1 global_samples=96 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=47 warnings=none
+
+===== LAUNCH Wed Jul  1 13:24:07 2026 =====
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7R1eNHvfspk:147-2 video_media=2 image_media=21 frames=89 global_full=1 global_samples=74 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=18 warnings=none

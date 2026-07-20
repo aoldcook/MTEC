@@ -1,0 +1,18 @@
+loaded 8 jobs
+LAUNCH [1/8] B_no_evidence/vmme/s0 pid=212658
+LAUNCH [2/8] B_no_evidence/vmme/s1 pid=212659
+LAUNCH [3/8] B_no_evidence/vmme/s2 pid=212660
+DONE [OK rc=0] B_no_evidence/vmme/s2 completed=1 failed=0 remaining=7
+LAUNCH [4/8] B_no_evidence/nextqa/s0 pid=227681
+DONE [OK rc=0] B_no_evidence/vmme/s0 completed=2 failed=0 remaining=4
+LAUNCH [5/8] B_no_evidence/nextqa/s1 pid=232409
+DONE [OK rc=0] B_no_evidence/vmme/s1 completed=3 failed=0 remaining=3
+LAUNCH [6/8] B_no_evidence/mlvu/s0 pid=236084
+DONE [OK rc=0] B_no_evidence/nextqa/s0 completed=4 failed=0 remaining=2
+LAUNCH [7/8] B_no_evidence/mlvu/s1 pid=243730
+DONE [OK rc=0] B_no_evidence/nextqa/s1 completed=5 failed=0 remaining=1
+LAUNCH [8/8] B_no_evidence/mlvu/s2 pid=245922
+DONE [OK rc=0] B_no_evidence/mlvu/s0 completed=6 failed=0 remaining=0
+DONE [OK rc=0] B_no_evidence/mlvu/s1 completed=7 failed=0 remaining=0
+DONE [OK rc=0] B_no_evidence/mlvu/s2 completed=8 failed=0 remaining=0
+QUEUE_ALL_DONE total=8 completed=8 failed=0

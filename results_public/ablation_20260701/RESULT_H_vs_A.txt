@@ -1,0 +1,14 @@
+========================================================================
+ABLATION CONFIG H_no_detail_crops  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[vmme] config: completed 80/80 (100% completion), acc 82.5% (66/80), median_token_save 85.0%
+      paired vs A on 80 shared keys: config 82.5% (66) vs A 81.2% (65) -> dAcc +1.2 pts
+      token-save median: config 85.0% vs A 82.0% -> d +3.1 pts
+
+[nextqa] config: completed 50/50 (100% completion), acc 80.0% (40/50), median_token_save 59.4%
+      paired vs A on 50 shared keys: config 80.0% (40) vs A 72.0% (36) -> dAcc +8.0 pts
+      token-save median: config 59.4% vs A 46.6% -> d +12.8 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=130 shared): config 81.5% vs A 77.7% -> dAcc +3.8 pts

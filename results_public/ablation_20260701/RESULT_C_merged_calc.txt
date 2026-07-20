@@ -1,0 +1,16 @@
+=== Config C completed long records (merged, deduped, no double-count) ===
+  MLVU original         : 27/30 = 90.0%
+  MLVU ext (new)        : 26/30 = 86.7%
+  Video-MME-long (new)  : 28/40 = 70.0%
+  TOTAL C long          : 81/100 = 81.0%
+
+=== Config A completed long records (baseline; A ext paused) ===
+  MLVU original         : 26/30 = 86.7%
+  MLVU ext (new)        : 0/0 = 0.0%
+  Video-MME-long (new)  : 15/28 = 53.6%
+  TOTAL A long          : 41/58 = 70.7%
+
+=== PAIRED C-vs-A (shared completed keys only = valid delta) ===
+  MLVU             n= 30: C 90.0% vs A 86.7% -> +3.3 pts
+  Video-MME-long   n= 28: C 60.7% vs A 53.6% -> +7.1 pts
+  COMBINED         n= 58: C 75.9% vs A 70.7% -> +5.2 pts

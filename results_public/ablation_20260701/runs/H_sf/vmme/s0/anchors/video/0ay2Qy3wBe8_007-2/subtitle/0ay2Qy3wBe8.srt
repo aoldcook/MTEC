@@ -1,0 +1,80 @@
+1
+00:00:00,719 --> 00:00:05,319
+<font color="white" size=".72c">a brief and somewhat accurate history of</font>
+
+2
+00:00:03,600 --> 00:00:07,640
+<font color="white" size=".72c">how we stay</font>
+
+3
+00:00:05,319 --> 00:00:09,599
+<font color="white" size=".72c">connected let's see if an important</font>
+
+4
+00:00:07,640 --> 00:00:14,599
+<font color="white" size=".72c">message can be delivered by different</font>
+
+5
+00:00:09,599 --> 00:00:18,359
+<font color="white" size=".72c">means of communication such as the smoke</font>
+
+6
+00:00:14,599 --> 00:00:18,359
+<font color="white" size=".72c">signal the homing</font>
+
+7
+00:00:21,320 --> 00:00:25,240
+<font color="white" size=".72c">pigeon the Pony</font>
+
+8
+00:00:28,080 --> 00:00:35,000
+<font color="white" size=".72c">Express the semaphor</font>
+
+9
+00:00:31,719 --> 00:00:35,000
+<font color="white" size=".72c">flag the</font>
+
+10
+00:00:35,420 --> 00:00:42,840
+<font color="white" size=".72c">[Music]</font>
+
+11
+00:00:39,600 --> 00:00:42,840
+<font color="white" size=".72c">telegraph the</font>
+
+12
+00:00:45,840 --> 00:00:49,079
+<font color="white" size=".72c">telephone the</font>
+
+13
+00:00:52,079 --> 00:00:55,160
+<font color="white" size=".72c">radio</font>
+
+14
+00:00:53,820 --> 00:00:58,440
+<font color="white" size=".72c">[Music]</font>
+
+15
+00:00:55,160 --> 00:00:58,440
+<font color="white" size=".72c">email the</font>
+
+16
+00:00:58,920 --> 00:01:03,320
+<font color="white" size=".72c">smartphone</font>
+
+17
+00:01:00,220 --> 00:01:03,320
+<font color="white" size=".72c">[Music]</font>
+
+18
+00:01:07,320 --> 00:01:14,920
+<font color="white" size=".72c">last but not least Facebook like us on</font>
+
+19
+00:01:11,439 --> 00:01:17,920
+<font color="white" size=".72c">Facebook so we can stay</font>
+
+20
+00:01:14,920 --> 00:01:17,920
+<font color="white" size=".72c">connected</font>
+

@@ -1,0 +1,351 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/nextqa/s0/media/video/3083302557.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    2.16,
+    8.1
+   ],
+   "text": "All right, here we are in Henry Coast State Park hiking down the China China Ho Trail",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    9.58,
+    16.11
+   ],
+   "text": "Right Aaron pretty cool here having a good time",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    17.67,
+    23.47
+   ],
+   "text": "Nice hike hiking. We're gonna either stay tonight at the China Ho campground or",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    24.27,
+    26.27
+   ],
+   "text": "What's the other one Chris Harris here?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    26.71,
+    28.51
+   ],
+   "text": "Chris Harris",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    28.51,
+    30.51
+   ],
+   "text": "Right here. Well come on in a little",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    31.95,
+    38.72
+   ],
+   "text": "Opening here in a nice little",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    38.72,
+    45.45
+   ],
+   "text": "Look out Vista and view",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.609,
+   "no_speech_prob": 0.0347,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "all_segment_count": 8,
+ "query_retrieval": true,
+ "query_terms": [
+  "lady",
+  "after",
+  "giving",
+  "thumbs",
+  "continue",
+  "walking",
+  "stomp",
+  "her",
+  "foot",
+  "smile",
+  "talk",
+  "skiing"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    2.16,
+    8.1
+   ],
+   "text": "All right, here we are in Henry Coast State Park hiking down the China China Ho Trail",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    9.58,
+    16.11
+   ],
+   "text": "Right Aaron pretty cool here having a good time",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    17.67,
+    23.47
+   ],
+   "text": "Nice hike hiking. We're gonna either stay tonight at the China Ho campground or",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    24.27,
+    26.27
+   ],
+   "text": "What's the other one Chris Harris here?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    26.71,
+    28.51
+   ],
+   "text": "Chris Harris",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    28.51,
+    30.51
+   ],
+   "text": "Right here. Well come on in a little",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    31.95,
+    38.72
+   ],
+   "text": "Opening here in a nice little",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3606,
+   "no_speech_prob": 0.0826,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    38.72,
+    45.45
+   ],
+   "text": "Look out Vista and view",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.609,
+   "no_speech_prob": 0.0347,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    53.45
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0003",
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0006",
+    "video_transcript_anchor_seg_0007",
+    "video_transcript_anchor_seg_0008"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "All right, here we are in Henry Coast State Park hiking down the China China Ho Trail Right Aaron pretty cool here having a good time Nice hike hiking. We're gonna either stay tonight at the China Ho campground or What's the other one Chris Harris here? Chris Harris Right here. Well come on in a little Opening here in a nice little Look out Vista and view",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

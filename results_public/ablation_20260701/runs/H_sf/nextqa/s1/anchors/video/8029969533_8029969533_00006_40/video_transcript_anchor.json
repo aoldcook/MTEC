@@ -1,0 +1,351 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/nextqa/s1/media/video/8029969533.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.3,
+    8.0
+   ],
+   "text": "Hi, it's Rachel. I'm here in Dubai at Shaka Holic. Hi. Hi. Can you guys introduce yourselves and your bakery?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4759,
+   "no_speech_prob": 0.0658,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    10.0,
+    15.1
+   ],
+   "text": "I'm Sena, my sister, Ramesha, and we started this to raise funds for a girl back in India.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4759,
+   "no_speech_prob": 0.0658,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    39.8,
+    42.3
+   ],
+   "text": "The fact that we can customize pretty much anything and everything else,",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    42.8,
+    44.8
+   ],
+   "text": "what about menses, unlike a fixed or anything?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "men"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    45.3,
+    48.8
+   ],
+   "text": "Anytime they come in, if we have the resources, then what we just do at work at home.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    16.3,
+    18.9
+   ],
+   "text": "And how, when did you open the bakery?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4759,
+   "no_speech_prob": 0.0658
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    22.8,
+    25.5
+   ],
+   "text": "And what's your most popular flavor of cupcake?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4759,
+   "no_speech_prob": 0.0658
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    28.0,
+    30.0
+   ],
+   "text": "And what are your favorites?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4759,
+   "no_speech_prob": 0.0658
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    30.3,
+    32.3
+   ],
+   "text": "I like the aftermarket.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    34.8,
+    38.8
+   ],
+   "text": "And what is your favorite thing about running Shaka Holic?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    49.8,
+    55.3
+   ],
+   "text": "And if someone wants to place an order, how far in advance should they contact you?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    55.8,
+    59.8
+   ],
+   "text": "It depends on our availability, but three to four days should be good, generally.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    60.3,
+    62.8
+   ],
+   "text": "Okay, great. Thank you guys so much.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.225,
+   "no_speech_prob": 0.0029
+  }
+ ],
+ "all_segment_count": 13,
+ "query_retrieval": true,
+ "query_terms": [
+  "lady",
+  "white",
+  "move",
+  "her",
+  "hands",
+  "she",
+  "talking",
+  "visualize",
+  "says",
+  "preparation",
+  "formal",
+  "event",
+  "ask",
+  "boy",
+  "follow",
+  "explain",
+  "well",
+  "men",
+  "hand",
+  "gesture"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.3,
+    8.0
+   ],
+   "text": "Hi, it's Rachel. I'm here in Dubai at Shaka Holic. Hi. Hi. Can you guys introduce yourselves and your bakery?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4759,
+   "no_speech_prob": 0.0658,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    10.0,
+    15.1
+   ],
+   "text": "I'm Sena, my sister, Ramesha, and we started this to raise funds for a girl back in India.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4759,
+   "no_speech_prob": 0.0658,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    39.8,
+    42.3
+   ],
+   "text": "The fact that we can customize pretty much anything and everything else,",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    42.8,
+    44.8
+   ],
+   "text": "what about menses, unlike a fixed or anything?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "men"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    45.3,
+    48.8
+   ],
+   "text": "Anytime they come in, if we have the resources, then what we just do at work at home.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.3974,
+   "no_speech_prob": 0.0061,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    23.1
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0002"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    31.8,
+    56.8
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0008",
+    "video_transcript_anchor_seg_0009",
+    "video_transcript_anchor_seg_0010"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "Hi, it's Rachel. I'm here in Dubai at Shaka Holic. Hi. Hi. Can you guys introduce yourselves and your bakery? I'm Sena, my sister, Ramesha, and we started this to raise funds for a girl back in India. And how, when did you open the bakery? And what's your most popular flavor of cupcake? And what are your favorites? I like the aftermarket. And what is your favorite thing about running Shaka Holic? The fact that we can customize pretty much anything and everything else, what about menses, unlike a fixed or anything? Anytime they come in, if we have the resources, then what we just do at work at home. And if someone wants to place an order, how far in advance should they contact you? It depends on our availability, but three to four days should be good, generally. Okay, great. Thank you guys so much.",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

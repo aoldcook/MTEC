@@ -1,0 +1,226 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/vmme/s0/media/video/6Cr_8tvvQ0k.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.0,
+    3.88
+   ],
+   "text": "Life could be dream, life could be dream",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6599,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    3.88,
+    6.94
+   ],
+   "text": "Do, do, do, do, simple",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6599,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    6.94,
+    9.4
+   ],
+   "text": "Life could be dream",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6599,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    9.4,
+    12.82
+   ],
+   "text": "If I could take you up and paradise up above",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6599,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    12.82,
+    16.4
+   ],
+   "text": "If you would tell me I'm the only one that you love",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6599,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    16.4,
+    19.24
+   ],
+   "text": "Life could be dream, sweetheart hello",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6599,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    19.24,
+    22.12
+   ],
+   "text": "Hello again, ship women open with me to hear boom",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6599,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    22.12,
+    25.18
+   ],
+   "text": "They don't need enough, shalang, lang, lang",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6599,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    25.18,
+    31.16
+   ],
+   "text": "I woke up but over there were life with between",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.0389,
+   "no_speech_prob": 0.5732
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    31.16,
+    34.6
+   ],
+   "text": "If only all my brushes plans would come true",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.0389,
+   "no_speech_prob": 0.5732
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    34.6,
+    37.56
+   ],
+   "text": "And you will have me spend my whole life loving you",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.0389,
+   "no_speech_prob": 0.5732
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    37.56,
+    41.96
+   ],
+   "text": "Life with between sweet odds",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.0389,
+   "no_speech_prob": 0.5732
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    41.96,
+    46.62
+   ],
+   "text": "I'm good with you every time I look at you",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.0389,
+   "no_speech_prob": 0.5732
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    46.62,
+    50.2
+   ],
+   "text": "So big is all I want",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.0389,
+   "no_speech_prob": 0.5732
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    50.2,
+    53.9
+   ],
+   "text": "If you knew what I want you to",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -1.0389,
+   "no_speech_prob": 0.5732
+  }
+ ],
+ "all_segment_count": 15,
+ "query_retrieval": true,
+ "query_terms": [
+  "color",
+  "animal",
+  "yellow",
+  "white",
+  "black",
+  "red"
+ ],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "Life could be dream, life could be dream Do, do, do, do, simple Life could be dream If I could take you up and paradise up above If you would tell me I'm the only one that you love Life could be dream, sweetheart hello Hello again, ship women open with me to hear boom They don't need enough, shalang, lang, lang I woke up but over there were life with between If only all my brushes plans would come true And you will have me spend my whole life loving you Life with between sweet odds I'm good with you every time I look at you So big is all I want If you knew what I want you to",
+ "warnings": [
+  "No embedded subtitle stream extracted.",
+  "Question-driven transcript retrieval found no direct lexical hits; using temporal coverage segments."
+ ]
+}

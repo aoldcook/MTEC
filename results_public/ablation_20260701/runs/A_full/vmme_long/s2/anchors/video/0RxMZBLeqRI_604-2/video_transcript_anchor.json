@@ -1,0 +1,911 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s2/media/video/0RxMZBLeqRI.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s2/anchors/video/0RxMZBLeqRI_604-2/subtitle/0RxMZBLeqRI.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0292",
+   "anchor_link": "video_transcript_anchor_seg_0292",
+   "sequence_index": 292,
+   "time_range_sec": [
+    653.519,
+    657.68
+   ],
+   "text": "the life of his gypsies within the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "gypsies"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0293",
+   "anchor_link": "video_transcript_anchor_seg_0293",
+   "sequence_index": 293,
+   "time_range_sec": [
+    655.44,
+    659.44
+   ],
+   "text": "Balkans slavery over gypsies became ever",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 9.333,
+   "relevance_terms": [
+    "gypsies",
+    "slavery",
+    "became",
+    "balkans"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0294",
+   "anchor_link": "video_transcript_anchor_seg_0294",
+   "sequence_index": 294,
+   "time_range_sec": [
+    657.68,
+    661.56
+   ],
+   "text": "more enshrined within the ottom",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0284",
+   "anchor_link": "video_transcript_anchor_seg_0284",
+   "sequence_index": 284,
+   "time_range_sec": [
+    636.16,
+    640.56
+   ],
+   "text": "legislature regarding servitude and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0285",
+   "anchor_link": "video_transcript_anchor_seg_0285",
+   "sequence_index": 285,
+   "time_range_sec": [
+    638.279,
+    643.12
+   ],
+   "text": "gypsies became increasingly stricter in",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 7.0,
+   "relevance_terms": [
+    "gypsies",
+    "became",
+    "increasingly"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0286",
+   "anchor_link": "video_transcript_anchor_seg_0286",
+   "sequence_index": 286,
+   "time_range_sec": [
+    640.56,
+    645.12
+   ],
+   "text": "a way to keep them on that land this",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    65.88,
+    69.159
+   ],
+   "text": "even though they've been very much",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    67.32,
+    71.479
+   ],
+   "text": "present in the Balkans and in Europe",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 4.667,
+   "relevance_terms": [
+    "europe",
+    "balkans"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    69.159,
+    73.08
+   ],
+   "text": "since the 13th century most balanoides",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0224",
+   "anchor_link": "video_transcript_anchor_seg_0224",
+   "sequence_index": 224,
+   "time_range_sec": [
+    505.72,
+    509.08
+   ],
+   "text": "as the Turks pushed westwards the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "turks"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0225",
+   "anchor_link": "video_transcript_anchor_seg_0225",
+   "sequence_index": 225,
+   "time_range_sec": [
+    507.44,
+    511.08
+   ],
+   "text": "gypsies increasingly fell under their",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 4.667,
+   "relevance_terms": [
+    "gypsies",
+    "increasingly"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0226",
+   "anchor_link": "video_transcript_anchor_seg_0226",
+   "sequence_index": 226,
+   "time_range_sec": [
+    509.08,
+    513.44
+   ],
+   "text": "Juris section they continued having many",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    5.04,
+    9.44
+   ],
+   "text": "when talking about the Balkans ethnic",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    55.16,
+    61.92
+   ],
+   "text": "fascinating colorful and quite tragic",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0049",
+   "anchor_link": "video_transcript_anchor_seg_0049",
+   "sequence_index": 49,
+   "time_range_sec": [
+    113.56,
+    118.84
+   ],
+   "text": "marking the gypsies as The Untouchables",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0072",
+   "anchor_link": "video_transcript_anchor_seg_0072",
+   "sequence_index": 72,
+   "time_range_sec": [
+    165.519,
+    169.079
+   ],
+   "text": "lacking a written language they also",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0094",
+   "anchor_link": "video_transcript_anchor_seg_0094",
+   "sequence_index": 94,
+   "time_range_sec": [
+    218.68,
+    223.079
+   ],
+   "text": "being spoken between two Indian exchange",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0117",
+   "anchor_link": "video_transcript_anchor_seg_0117",
+   "sequence_index": 117,
+   "time_range_sec": [
+    274.52,
+    279.56
+   ],
+   "text": "Heretics that came from the African",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0139",
+   "anchor_link": "video_transcript_anchor_seg_0139",
+   "sequence_index": 139,
+   "time_range_sec": [
+    322.68,
+    326.479
+   ],
+   "text": "persisted and haggled with the Romanians",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0162",
+   "anchor_link": "video_transcript_anchor_seg_0162",
+   "sequence_index": 162,
+   "time_range_sec": [
+    372.56,
+    377.199
+   ],
+   "text": "territories of the regional Kingdoms in",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0185",
+   "anchor_link": "video_transcript_anchor_seg_0185",
+   "sequence_index": 185,
+   "time_range_sec": [
+    419.0,
+    422.639
+   ],
+   "text": "joined by the War prisoners many",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0207",
+   "anchor_link": "video_transcript_anchor_seg_0207",
+   "sequence_index": 207,
+   "time_range_sec": [
+    468.879,
+    473.4
+   ],
+   "text": "expanding Muslim Turks in the late 11th",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0233",
+   "anchor_link": "video_transcript_anchor_seg_0233",
+   "sequence_index": 233,
+   "time_range_sec": [
+    524.8,
+    528.36
+   ],
+   "text": "not known to what extent this was",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0255",
+   "anchor_link": "video_transcript_anchor_seg_0255",
+   "sequence_index": 255,
+   "time_range_sec": [
+    571.519,
+    575.6
+   ],
+   "text": "not a lot of artisan products were",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0278",
+   "anchor_link": "video_transcript_anchor_seg_0278",
+   "sequence_index": 278,
+   "time_range_sec": [
+    622.32,
+    627.04
+   ],
+   "text": "gypsies on it so would the clergy and",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0306",
+   "anchor_link": "video_transcript_anchor_seg_0306",
+   "sequence_index": 306,
+   "time_range_sec": [
+    686.0,
+    691.36
+   ],
+   "text": "principalities of wahi and mavia eagerly",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0329",
+   "anchor_link": "video_transcript_anchor_seg_0329",
+   "sequence_index": 329,
+   "time_range_sec": [
+    742.32,
+    747.279
+   ],
+   "text": "would give him a fighting Edge against",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0352",
+   "anchor_link": "video_transcript_anchor_seg_0352",
+   "sequence_index": 352,
+   "time_range_sec": [
+    797.32,
+    801.56
+   ],
+   "text": "gypsies to keep up with demand",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0374",
+   "anchor_link": "video_transcript_anchor_seg_0374",
+   "sequence_index": 374,
+   "time_range_sec": [
+    844.72,
+    849.24
+   ],
+   "text": "cooks and Coachmen while house slaves",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0397",
+   "anchor_link": "video_transcript_anchor_seg_0397",
+   "sequence_index": 397,
+   "time_range_sec": [
+    898.6,
+    902.68
+   ],
+   "text": "government official they had to State",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0419",
+   "anchor_link": "video_transcript_anchor_seg_0419",
+   "sequence_index": 419,
+   "time_range_sec": [
+    947.48,
+    951.92
+   ],
+   "text": "carpatian mountains where they formed",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0442",
+   "anchor_link": "video_transcript_anchor_seg_0442",
+   "sequence_index": 442,
+   "time_range_sec": [
+    998.68,
+    1002.6
+   ],
+   "text": "the ottoman realm as the gypsies made",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0464",
+   "anchor_link": "video_transcript_anchor_seg_0464",
+   "sequence_index": 464,
+   "time_range_sec": [
+    1047.839,
+    1051.88
+   ],
+   "text": "colder and rougher climate regions such",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0487",
+   "anchor_link": "video_transcript_anchor_seg_0487",
+   "sequence_index": 487,
+   "time_range_sec": [
+    1097.96,
+    1103.6
+   ],
+   "text": "inhumane in 1837 Alexandro gika the then",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0510",
+   "anchor_link": "video_transcript_anchor_seg_0510",
+   "sequence_index": 510,
+   "time_range_sec": [
+    1150.799,
+    1156.72
+   ],
+   "text": "practice and wahia doing the same one",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0532",
+   "anchor_link": "video_transcript_anchor_seg_0532",
+   "sequence_index": 532,
+   "time_range_sec": [
+    1204.039,
+    1208.6
+   ],
+   "text": "however between the late 19th century",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0555",
+   "anchor_link": "video_transcript_anchor_seg_0555",
+   "sequence_index": 555,
+   "time_range_sec": [
+    1257.96,
+    1262.08
+   ],
+   "text": "within Germany he criminalized many",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0577",
+   "anchor_link": "video_transcript_anchor_seg_0577",
+   "sequence_index": 577,
+   "time_range_sec": [
+    1315.24,
+    1320.799
+   ],
+   "text": "use of Ruthless punishments and which",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0600",
+   "anchor_link": "video_transcript_anchor_seg_0600",
+   "sequence_index": 600,
+   "time_range_sec": [
+    1373.039,
+    1377.08
+   ],
+   "text": "romanis in the same decade more laws",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0622",
+   "anchor_link": "video_transcript_anchor_seg_0622",
+   "sequence_index": 622,
+   "time_range_sec": [
+    1422.6,
+    1426.799
+   ],
+   "text": "scientist taking a special interest in",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0645",
+   "anchor_link": "video_transcript_anchor_seg_0645",
+   "sequence_index": 645,
+   "time_range_sec": [
+    1475.08,
+    1479.679
+   ],
+   "text": "even though they went to hell and back",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0668",
+   "anchor_link": "video_transcript_anchor_seg_0668",
+   "sequence_index": 668,
+   "time_range_sec": [
+    1525.48,
+    1530.159
+   ],
+   "text": "example the Gypsy identity was banned",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0690",
+   "anchor_link": "video_transcript_anchor_seg_0690",
+   "sequence_index": 690,
+   "time_range_sec": [
+    1575.279,
+    1579.64
+   ],
+   "text": "communist dictatorial power couple are",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0713",
+   "anchor_link": "video_transcript_anchor_seg_0713",
+   "sequence_index": 713,
+   "time_range_sec": [
+    1625.0,
+    1628.84
+   ],
+   "text": "capitalism started to be embraced many",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0735",
+   "anchor_link": "video_transcript_anchor_seg_0735",
+   "sequence_index": 735,
+   "time_range_sec": [
+    1671.519,
+    1676.48
+   ],
+   "text": "papers along the way to make their case",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0758",
+   "anchor_link": "video_transcript_anchor_seg_0758",
+   "sequence_index": 758,
+   "time_range_sec": [
+    1723.0,
+    1727.519
+   ],
+   "text": "on Germany would PID Romania millions of",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0780",
+   "anchor_link": "video_transcript_anchor_seg_0780",
+   "sequence_index": 780,
+   "time_range_sec": [
+    1773.48,
+    1777.72
+   ],
+   "text": "with a society that has oppressed them",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0803",
+   "anchor_link": "video_transcript_anchor_seg_0803",
+   "sequence_index": 803,
+   "time_range_sec": [
+    1826.559,
+    1833.039
+   ],
+   "text": "me don't me that you are gay are G",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  }
+ ],
+ "all_segment_count": 803,
+ "query_retrieval": true,
+ "query_terms": [
+  "depicted",
+  "happened",
+  "gypsies",
+  "migrated",
+  "europe",
+  "slavery",
+  "abolished",
+  "became",
+  "increasingly",
+  "enslaved",
+  "balkans",
+  "ottomans",
+  "expanded",
+  "territory",
+  "fought",
+  "selic",
+  "separated",
+  "turks"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0292",
+   "anchor_link": "video_transcript_anchor_seg_0292",
+   "sequence_index": 292,
+   "time_range_sec": [
+    653.519,
+    657.68
+   ],
+   "text": "the life of his gypsies within the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "gypsies"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0293",
+   "anchor_link": "video_transcript_anchor_seg_0293",
+   "sequence_index": 293,
+   "time_range_sec": [
+    655.44,
+    659.44
+   ],
+   "text": "Balkans slavery over gypsies became ever",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 9.333,
+   "relevance_terms": [
+    "gypsies",
+    "slavery",
+    "became",
+    "balkans"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0294",
+   "anchor_link": "video_transcript_anchor_seg_0294",
+   "sequence_index": 294,
+   "time_range_sec": [
+    657.68,
+    661.56
+   ],
+   "text": "more enshrined within the ottom",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0284",
+   "anchor_link": "video_transcript_anchor_seg_0284",
+   "sequence_index": 284,
+   "time_range_sec": [
+    636.16,
+    640.56
+   ],
+   "text": "legislature regarding servitude and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0285",
+   "anchor_link": "video_transcript_anchor_seg_0285",
+   "sequence_index": 285,
+   "time_range_sec": [
+    638.279,
+    643.12
+   ],
+   "text": "gypsies became increasingly stricter in",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 7.0,
+   "relevance_terms": [
+    "gypsies",
+    "became",
+    "increasingly"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0286",
+   "anchor_link": "video_transcript_anchor_seg_0286",
+   "sequence_index": 286,
+   "time_range_sec": [
+    640.56,
+    645.12
+   ],
+   "text": "a way to keep them on that land this",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    65.88,
+    69.159
+   ],
+   "text": "even though they've been very much",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    67.32,
+    71.479
+   ],
+   "text": "present in the Balkans and in Europe",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 4.667,
+   "relevance_terms": [
+    "europe",
+    "balkans"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    69.159,
+    73.08
+   ],
+   "text": "since the 13th century most balanoides",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0224",
+   "anchor_link": "video_transcript_anchor_seg_0224",
+   "sequence_index": 224,
+   "time_range_sec": [
+    505.72,
+    509.08
+   ],
+   "text": "as the Turks pushed westwards the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "turks"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0225",
+   "anchor_link": "video_transcript_anchor_seg_0225",
+   "sequence_index": 225,
+   "time_range_sec": [
+    507.44,
+    511.08
+   ],
+   "text": "gypsies increasingly fell under their",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 4.667,
+   "relevance_terms": [
+    "gypsies",
+    "increasingly"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0226",
+   "anchor_link": "video_transcript_anchor_seg_0226",
+   "sequence_index": 226,
+   "time_range_sec": [
+    509.08,
+    513.44
+   ],
+   "text": "Juris section they continued having many",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    57.88,
+    81.08
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0028",
+    "video_transcript_anchor_seg_0029",
+    "video_transcript_anchor_seg_0030"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    497.72,
+    521.44
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0224",
+    "video_transcript_anchor_seg_0225",
+    "video_transcript_anchor_seg_0226"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    628.16,
+    669.56
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0284",
+    "video_transcript_anchor_seg_0285",
+    "video_transcript_anchor_seg_0286",
+    "video_transcript_anchor_seg_0292",
+    "video_transcript_anchor_seg_0293",
+    "video_transcript_anchor_seg_0294"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "when talking about the Balkans ethnic hate between group is not an uncommon topic however there is seldom a group of people hated more than [Music] the gyps gypsies arguably the gypsies also known as the Roma have also been an Inseparable part of Balkan culture and its history however due to generational stigma Prejudice and more importantly lack of research very little is known about them as a result even though they've more or less developed parallel to the other peoples in the region and played an equally important role in its history and its development the vast majority of people have been left stigmatized and shunned from the spotlight and labeled as unwanted nuisances yet if you dig a bit deeper past the stereotypes of Thieves and black magic casters you can discover a fascinating colorful and quite tragic history of Europe's most hated group for the longest of times the origin of the gypsies has been shrouded in mystery even though they've been very much present in the Balkans and in Europe since the 13th century most balanoides weren't even aware that they were a separate ethnic group the gypsies as migration to the continent coincided with a series of Wars between the sel",
+ "warnings": []
+}

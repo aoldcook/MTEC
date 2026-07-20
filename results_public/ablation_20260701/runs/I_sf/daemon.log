@@ -1,0 +1,10 @@
+loaded 4 jobs
+LAUNCH [1/4] I_sf/vmme/s0 pid=81269
+LAUNCH [2/4] I_sf/vmme/s1 pid=81270
+LAUNCH [3/4] I_sf/nextqa/s0 pid=81271
+DONE [OK rc=0] I_sf/vmme/s1 completed=1 failed=0 remaining=2
+LAUNCH [4/4] I_sf/nextqa/s1 pid=119842
+DONE [OK rc=0] I_sf/nextqa/s0 completed=2 failed=0 remaining=1
+DONE [OK rc=0] I_sf/vmme/s0 completed=3 failed=0 remaining=0
+DONE [OK rc=0] I_sf/nextqa/s1 completed=4 failed=0 remaining=0
+QUEUE_ALL_DONE total=4 completed=4 failed=0

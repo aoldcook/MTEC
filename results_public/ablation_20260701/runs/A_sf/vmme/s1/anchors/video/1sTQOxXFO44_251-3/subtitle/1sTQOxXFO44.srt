@@ -1,0 +1,32 @@
+1
+00:00:00,880 --> 00:00:03,880
+<font color="white" size=".72c">okay</font>
+
+2
+00:00:19,640 --> 00:00:23,320
+<font color="white" size=".72c">[Applause]</font>
+
+3
+00:00:21,279 --> 00:00:26,780
+<font color="white" size=".72c">foreign</font>
+
+4
+00:00:23,320 --> 00:00:26,780
+<font color="white" size=".72c">[Applause]</font>
+
+5
+00:00:36,559 --> 00:00:39,559
+<font color="white" size=".72c">so</font>
+
+6
+00:00:48,960 --> 00:00:51,960
+<font color="white" size=".72c">so</font>
+
+7
+00:01:06,880 --> 00:01:09,880
+<font color="white" size=".72c"></font>
+
+8
+00:01:21,360 --> 00:01:23,439
+<font color="white" size=".72c">you</font>
+

@@ -1,0 +1,23 @@
+{
+ "config": {
+  "label": "NExT-QA 300 (raw, SiliconFlow)",
+  "platform": "siliconflow",
+  "model": "Qwen3-VL-32B-Instruct",
+  "mode": "raw video base64",
+  "notes": "small videos",
+  "source_globs": [
+   "outputs/raw_sf_nextqa/s*/results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 300,
+  "completed": 291,
+  "failed": 9,
+  "correct": 232,
+  "acc_over_completed_pct": 79.7,
+  "acc_incl_failures_pct": 77.3,
+  "failure_classes": {
+   "api_error": 9
+  }
+ }
+}

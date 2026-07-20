@@ -1,0 +1,55 @@
+
+===== LAUNCH Thu Jul  2 22:09:17 2026 =====
+shard 0/3: assigned=10 done=0 pending=10 extra_args=['--video-global-anchor', 'false']
+[s0 batch 0-4] dl 4/4 (636MB) 51s -> eval
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:movie101_78:mlvu65 video_media=1 image_media=9 frames=16 global_full=0 global_samples=0 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor
+video:movie101_78:mlvu65 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:surveil_85:mlvu32 video_media=1 image_media=3 frames=16 global_full=0 global_samples=0 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor
+video:surveil_85:mlvu32 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:needle_147:mlvu74 video_media=1 image_media=23 frames=31 global_full=0 global_samples=0 visual_count_video=0 tubelets=4 details=8 visual_count=0 ocr=0 motion=8 objects=8 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor
+video:needle_147:mlvu74 [video]: completed pred=C gt=A correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:movie101_106:mlvu17 video_media=1 image_media=3 frames=16 global_full=0 global_samples=0 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor
+video:movie101_106:mlvu17 [video]: completed pred=D gt=D correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_summary.json
+[s0 batch done] rc=0 cumulative_completed=4 elapsed=732s
+[s0 batch 4-8] dl 4/4 (546MB) 46s -> eval
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:order_11:mlvu171 video_media=1 image_media=11 frames=32 global_full=0 global_samples=0 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor
+video:order_11:mlvu171 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:movie101_62:mlvu53 video_media=1 image_media=9 frames=16 global_full=0 global_samples=0 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor
+video:movie101_62:mlvu53 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:surveil_28:mlvu88 video_media=1 image_media=3 frames=16 global_full=0 global_samples=0 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=31 warnings=missing_full_timeline_lowres_anchor
+video:surveil_28:mlvu88 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:needle_99:mlvu90 video_media=1 image_media=11 frames=32 global_full=0 global_samples=0 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor
+video:needle_99:mlvu90 [video]: completed pred=D gt=D correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_summary.json
+[s0 batch done] rc=0 cumulative_completed=8 elapsed=685s
+[s0 batch 8-10] dl 2/2 (276MB) 22s -> eval
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:movie101_30:mlvu28 video_media=1 image_media=11 frames=32 global_full=0 global_samples=0 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor
+video:movie101_30:mlvu28 [video]: completed pred=A gt=C correct=False error=
+VideoManager is deprecated and will be removed.
+/root/miniconda3/envs/venv/lib/python3.9/site-packages/paddle/utils/cpp_extension/extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv6_medium_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/root/.paddlex/official_models/PP-OCRv6_medium_det`.[0m
+[32mCreating model: ('PP-OCRv6_medium_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/root/.paddlex/official_models/PP-OCRv6_medium_rec`.[0m
+INPUT_CHECK video:order_139:mlvu109 video_media=1 image_media=32 frames=31 global_full=0 global_samples=0 visual_count_video=0 tubelets=4 details=8 visual_count=0 ocr=8 motion=8 objects=9 transcript_segments=48 warnings=missing_full_timeline_lowres_anchor,missing_visual_count_executor_anchor
+video:order_139:mlvu109 [video]: completed pred=D gt=D correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s0/modelscope_mtec_anchor_api_full_summary.json
+[s0 batch done] rc=0 cumulative_completed=10 elapsed=735s
+SHARD_0_DONE

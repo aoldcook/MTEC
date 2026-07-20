@@ -1,0 +1,38 @@
+{
+ "model": "qwen3.7-plus",
+ "answer_model": "qwen3.7-plus",
+ "algorithm_check": {
+  "matches_design": true,
+  "input_channels": [
+   "low_resolution_video_timeline_anchor",
+   "continuous_before_during_after_tubelet_storyboard",
+   "task_aware_scene_motion_ocr_evidence",
+   "high_detail_keyframe_crop",
+   "transcript_audio_anchor",
+   "structured_evidence_prompt",
+   "per_record_input_audit"
+  ],
+  "note": "Video mode uses a two-pass flow with question-routed Tiny/Light/Medium/Full/Dense anchor policies, continuous tubelet storyboards, task-aware scene/motion/OCR evidence extraction, and per-record input audits before API calls; SiliconFlow extracts compact evidence, then Bailian Qwen verifies it against compressed video/tubelet/crop/transcript anchors for final answering."
+ },
+ "counts": {
+  "total": 27,
+  "completed": 27,
+  "failed": 0,
+  "correct": 23
+ },
+ "groups": [
+  {
+   "modality": "video",
+   "total": 27,
+   "completed": 27,
+   "failed": 0,
+   "correct": 23,
+   "expanded_count": 1,
+   "elapsed_seconds": 3553.966,
+   "accuracy": 0.8519,
+   "avg_compression_ratio": 0.2314,
+   "avg_token_saving_ratio": 0.7697,
+   "avg_token_saving_ratio_positive_only": 0.7993
+  }
+ ]
+}

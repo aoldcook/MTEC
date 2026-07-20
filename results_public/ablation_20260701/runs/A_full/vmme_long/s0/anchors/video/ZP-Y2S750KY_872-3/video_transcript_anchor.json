@@ -1,0 +1,889 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s0/media/video/ZP-Y2S750KY.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s0/anchors/video/ZP-Y2S750KY_872-3/subtitle/ZP-Y2S750KY.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0105",
+   "anchor_link": "video_transcript_anchor_seg_0105",
+   "sequence_index": 105,
+   "time_range_sec": [
+    771.24,
+    777.68
+   ],
+   "text": "God oh that's my scarf yeah you're",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0106",
+   "anchor_link": "video_transcript_anchor_seg_0106",
+   "sequence_index": 106,
+   "time_range_sec": [
+    774.079,
+    777.68
+   ],
+   "text": "eating it no",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "eating"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0107",
+   "anchor_link": "video_transcript_anchor_seg_0107",
+   "sequence_index": 107,
+   "time_range_sec": [
+    777.839,
+    780.839
+   ],
+   "text": "no",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0152",
+   "anchor_link": "video_transcript_anchor_seg_0152",
+   "sequence_index": 152,
+   "time_range_sec": [
+    1149.44,
+    1155.12
+   ],
+   "text": "stick he is really not sure what to do",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0153",
+   "anchor_link": "video_transcript_anchor_seg_0153",
+   "sequence_index": 153,
+   "time_range_sec": [
+    1152.24,
+    1156.799
+   ],
+   "text": "with it he keeps rolling on it that it's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "rolling"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0154",
+   "anchor_link": "video_transcript_anchor_seg_0154",
+   "sequence_index": 154,
+   "time_range_sec": [
+    1155.12,
+    1158.96
+   ],
+   "text": "a dead",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    270.68,
+    272.88
+   ],
+   "text": "thank",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    274.199,
+    282.199
+   ],
+   "text": "you I got to get food now all that",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "food"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    278.12,
+    284.68
+   ],
+   "text": "night what what can I do for you but",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0057",
+   "anchor_link": "video_transcript_anchor_seg_0057",
+   "sequence_index": 57,
+   "time_range_sec": [
+    400.319,
+    406.24
+   ],
+   "text": "sit",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0058",
+   "anchor_link": "video_transcript_anchor_seg_0058",
+   "sequence_index": 58,
+   "time_range_sec": [
+    403.0,
+    406.24
+   ],
+   "text": "down good",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "down"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0059",
+   "anchor_link": "video_transcript_anchor_seg_0059",
+   "sequence_index": 59,
+   "time_range_sec": [
+    408.17,
+    411.308
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    3.36,
+    10.73
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    42.58,
+    48.949
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    88.84,
+    93.42
+   ],
+   "text": "good",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    105.38,
+    108.509
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    164.98,
+    175.039
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    264.56,
+    270.68
+   ],
+   "text": "you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0043",
+   "anchor_link": "video_transcript_anchor_seg_0043",
+   "sequence_index": 43,
+   "time_range_sec": [
+    296.24,
+    301.47
+   ],
+   "text": "kitty",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0050",
+   "anchor_link": "video_transcript_anchor_seg_0050",
+   "sequence_index": 50,
+   "time_range_sec": [
+    361.039,
+    365.28
+   ],
+   "text": "jumbo the baby elephants how old are",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0056",
+   "anchor_link": "video_transcript_anchor_seg_0056",
+   "sequence_index": 56,
+   "time_range_sec": [
+    398.8,
+    403.0
+   ],
+   "text": "God",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0066",
+   "anchor_link": "video_transcript_anchor_seg_0066",
+   "sequence_index": 66,
+   "time_range_sec": [
+    454.96,
+    460.12
+   ],
+   "text": "Jump there you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0072",
+   "anchor_link": "video_transcript_anchor_seg_0072",
+   "sequence_index": 72,
+   "time_range_sec": [
+    489.879,
+    493.96
+   ],
+   "text": "hey what are you doing you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0079",
+   "anchor_link": "video_transcript_anchor_seg_0079",
+   "sequence_index": 79,
+   "time_range_sec": [
+    514.11,
+    541.2
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0086",
+   "anchor_link": "video_transcript_anchor_seg_0086",
+   "sequence_index": 86,
+   "time_range_sec": [
+    568.12,
+    571.12
+   ],
+   "text": "when",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0092",
+   "anchor_link": "video_transcript_anchor_seg_0092",
+   "sequence_index": 92,
+   "time_range_sec": [
+    659.98,
+    669.55
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0099",
+   "anchor_link": "video_transcript_anchor_seg_0099",
+   "sequence_index": 99,
+   "time_range_sec": [
+    717.959,
+    720.959
+   ],
+   "text": "you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0108",
+   "anchor_link": "video_transcript_anchor_seg_0108",
+   "sequence_index": 108,
+   "time_range_sec": [
+    781.72,
+    786.519
+   ],
+   "text": "watch me come on",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0115",
+   "anchor_link": "video_transcript_anchor_seg_0115",
+   "sequence_index": 115,
+   "time_range_sec": [
+    814.6,
+    819.199
+   ],
+   "text": "one he's",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0121",
+   "anchor_link": "video_transcript_anchor_seg_0121",
+   "sequence_index": 121,
+   "time_range_sec": [
+    867.88,
+    870.68
+   ],
+   "text": "w",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0128",
+   "anchor_link": "video_transcript_anchor_seg_0128",
+   "sequence_index": 128,
+   "time_range_sec": [
+    935.56,
+    938.78
+   ],
+   "text": "[Applause]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0134",
+   "anchor_link": "video_transcript_anchor_seg_0134",
+   "sequence_index": 134,
+   "time_range_sec": [
+    990.8,
+    993.759
+   ],
+   "text": "Hey where's my fan",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0141",
+   "anchor_link": "video_transcript_anchor_seg_0141",
+   "sequence_index": 141,
+   "time_range_sec": [
+    1095.559,
+    1098.159
+   ],
+   "text": "are you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0147",
+   "anchor_link": "video_transcript_anchor_seg_0147",
+   "sequence_index": 147,
+   "time_range_sec": [
+    1126.85,
+    1137.32
+   ],
+   "text": "[Laughter]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0157",
+   "anchor_link": "video_transcript_anchor_seg_0157",
+   "sequence_index": 157,
+   "time_range_sec": [
+    1165.72,
+    1170.24
+   ],
+   "text": "is he's so funny",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0163",
+   "anchor_link": "video_transcript_anchor_seg_0163",
+   "sequence_index": 163,
+   "time_range_sec": [
+    1221.4,
+    1225.4
+   ],
+   "text": "you you get that peanut",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0170",
+   "anchor_link": "video_transcript_anchor_seg_0170",
+   "sequence_index": 170,
+   "time_range_sec": [
+    1287.039,
+    1290.039
+   ],
+   "text": "he",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0177",
+   "anchor_link": "video_transcript_anchor_seg_0177",
+   "sequence_index": 177,
+   "time_range_sec": [
+    1378.77,
+    1403.699
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0183",
+   "anchor_link": "video_transcript_anchor_seg_0183",
+   "sequence_index": 183,
+   "time_range_sec": [
+    1459.039,
+    1462.039
+   ],
+   "text": "Gumby",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0190",
+   "anchor_link": "video_transcript_anchor_seg_0190",
+   "sequence_index": 190,
+   "time_range_sec": [
+    1498.679,
+    1501.559
+   ],
+   "text": "you were missing some",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0196",
+   "anchor_link": "video_transcript_anchor_seg_0196",
+   "sequence_index": 196,
+   "time_range_sec": [
+    1556.679,
+    1559.679
+   ],
+   "text": "and",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0203",
+   "anchor_link": "video_transcript_anchor_seg_0203",
+   "sequence_index": 203,
+   "time_range_sec": [
+    1609.44,
+    1612.72
+   ],
+   "text": "cradles and",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0209",
+   "anchor_link": "video_transcript_anchor_seg_0209",
+   "sequence_index": 209,
+   "time_range_sec": [
+    1651.29,
+    1661.019
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0216",
+   "anchor_link": "video_transcript_anchor_seg_0216",
+   "sequence_index": 216,
+   "time_range_sec": [
+    1717.39,
+    1739.399
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0222",
+   "anchor_link": "video_transcript_anchor_seg_0222",
+   "sequence_index": 222,
+   "time_range_sec": [
+    1796.32,
+    1799.32
+   ],
+   "text": "w",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0229",
+   "anchor_link": "video_transcript_anchor_seg_0229",
+   "sequence_index": 229,
+   "time_range_sec": [
+    1829.72,
+    1834.0
+   ],
+   "text": "big guy right",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0235",
+   "anchor_link": "video_transcript_anchor_seg_0235",
+   "sequence_index": 235,
+   "time_range_sec": [
+    1856.24,
+    1859.24
+   ],
+   "text": "he",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0242",
+   "anchor_link": "video_transcript_anchor_seg_0242",
+   "sequence_index": 242,
+   "time_range_sec": [
+    1920.7,
+    1930.299
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  }
+ ],
+ "all_segment_count": 242,
+ "query_retrieval": true,
+ "query_terms": [
+  "panda",
+  "eating",
+  "some",
+  "food",
+  "playing",
+  "people",
+  "rolling",
+  "down",
+  "sleeping"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0105",
+   "anchor_link": "video_transcript_anchor_seg_0105",
+   "sequence_index": 105,
+   "time_range_sec": [
+    771.24,
+    777.68
+   ],
+   "text": "God oh that's my scarf yeah you're",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0106",
+   "anchor_link": "video_transcript_anchor_seg_0106",
+   "sequence_index": 106,
+   "time_range_sec": [
+    774.079,
+    777.68
+   ],
+   "text": "eating it no",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "eating"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0107",
+   "anchor_link": "video_transcript_anchor_seg_0107",
+   "sequence_index": 107,
+   "time_range_sec": [
+    777.839,
+    780.839
+   ],
+   "text": "no",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0152",
+   "anchor_link": "video_transcript_anchor_seg_0152",
+   "sequence_index": 152,
+   "time_range_sec": [
+    1149.44,
+    1155.12
+   ],
+   "text": "stick he is really not sure what to do",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0153",
+   "anchor_link": "video_transcript_anchor_seg_0153",
+   "sequence_index": 153,
+   "time_range_sec": [
+    1152.24,
+    1156.799
+   ],
+   "text": "with it he keeps rolling on it that it's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "rolling"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0154",
+   "anchor_link": "video_transcript_anchor_seg_0154",
+   "sequence_index": 154,
+   "time_range_sec": [
+    1155.12,
+    1158.96
+   ],
+   "text": "a dead",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    270.68,
+    272.88
+   ],
+   "text": "thank",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    274.199,
+    282.199
+   ],
+   "text": "you I got to get food now all that",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "food"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    278.12,
+    284.68
+   ],
+   "text": "night what what can I do for you but",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0057",
+   "anchor_link": "video_transcript_anchor_seg_0057",
+   "sequence_index": 57,
+   "time_range_sec": [
+    400.319,
+    406.24
+   ],
+   "text": "sit",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0058",
+   "anchor_link": "video_transcript_anchor_seg_0058",
+   "sequence_index": 58,
+   "time_range_sec": [
+    403.0,
+    406.24
+   ],
+   "text": "down good",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "down"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0059",
+   "anchor_link": "video_transcript_anchor_seg_0059",
+   "sequence_index": 59,
+   "time_range_sec": [
+    408.17,
+    411.308
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    262.68,
+    292.68
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0036",
+    "video_transcript_anchor_seg_0037",
+    "video_transcript_anchor_seg_0038"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    392.319,
+    419.308
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0057",
+    "video_transcript_anchor_seg_0058",
+    "video_transcript_anchor_seg_0059"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    763.24,
+    788.839
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0105",
+    "video_transcript_anchor_seg_0106",
+    "video_transcript_anchor_seg_0107"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    1141.44,
+    1166.96
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0152",
+    "video_transcript_anchor_seg_0153",
+    "video_transcript_anchor_seg_0154"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "[Music] I want to pet goats it lights me like a second [Music] again this just happened this just [Music] [Music] happened [Music] oh that feels [Music] good [Music] come on come on joies come on joies come on joies [Laughter] [Music] fall fore for [Applause] ay [Music] [Applause] [Music] [Music] ti ti ti [Music] thank you Atari thanks okay thanks yeah thanks thank you I got to get food now all that night what what can I do for you but what I'm trying to help you you guys are hungry yeah okay hi little kitty hello [Music] [Music] what that [Music] yeah jumbo the baby elephants how old are they you guys got to get off the road come on come on you got to get off the road where's your mama you got get up come on guys where's your mama oh my God sit down good [Music] turn not that he's going to be one but I'm videoing to want to help oh thank you he started kicking around like I got need to jump a little higher you can do it Penguin Jump there you go there you go I got a penguin standing on my belly what are you doing little hey what are you doing you goober it's not food I don't have food in there nope don't Le food either oh too you're crazy you're crazy baby I'm going with it I'm go",
+ "warnings": []
+}

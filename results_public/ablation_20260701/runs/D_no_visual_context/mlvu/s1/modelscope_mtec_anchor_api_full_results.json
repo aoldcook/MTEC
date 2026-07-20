@@ -1,0 +1,467 @@
+[
+ {
+  "record_key": "video:movie101_58:mlvu73",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/D_no_visual_context/mlvu/s1/media/video/movie101_58.mp4",
+  "question": "What is the man's reaction after the reporter asks several questions in a row?\n['A. Pleased' 'B. Happy' 'C. Gets angry and ends the interview' 'D. Sad']\nRespond with only the option letter.",
+  "ground_truth": "C",
+  "Answer": "C",
+  "raw_response": "FINAL_ANSWER: C",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1898,
+     "height": 788,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "605.024000",
+    "size": "165542756"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/D_no_visual_context/mlvu/s1/media/video/movie101_58.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "movie101_58",
+  "question_id": "mlvu73",
+  "api_meta": {
+   "api_elapsed_seconds": 5.669,
+   "usage": {
+    "total_tokens": 64725,
+    "completion_tokens": 6,
+    "prompt_tokens": 64719,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 34077,
+     "video_tokens": 26276,
+     "image_tokens": 4366,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-0f6b984e-ecab-924b-8331-57f9c2deabb9"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 5.669,
+   "usage": {
+    "total_tokens": 64725,
+    "completion_tokens": 6,
+    "prompt_tokens": 64719,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 34077,
+     "video_tokens": 26276,
+     "image_tokens": 4366,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-0f6b984e-ecab-924b-8331-57f9c2deabb9"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"time_range\": \"01:51-02:10\",\n        \"description\": \"The reporter asks the man about his biological parents and if he is seeking redemption through his paintings.\"\n      },\n      {\n        \"time_range\": \"02:11-02:18\",\n        \"description\": \"The man looks displeased, says 'We'll talk again', and walks away, ending the interview.\"\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_or_question_scope\",\n    \"time_range_sec\": [\n      111,\n      138\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"01:51-02:10\",\n      \"modality\": \"video|asr\",\n      \"observation\": \"The reporter asks the man about his biological parents and if he is seeking redemption through his paintings.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"02:11-02:18\",\n      \"modality\": \"video|asr\",\n      \"observation\": \"The man looks displeased, says 'We'll talk again', and walks away, ending the interview.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 17.363,
+   "usage": {
+    "total_tokens": 35019,
+    "completion_tokens": 753,
+    "prompt_tokens": 34266,
+    "completion_tokens_details": {
+     "reasoning_tokens": 270,
+     "text_tokens": 483
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 3624,
+     "video_tokens": 26276,
+     "image_tokens": 4366,
+     "cached_tokens": 37248
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"time_range\": \"01:51-02:10\",\n        \"description\": \"The reporter asks the man about his biological parents and if he is seeking redemption through his paintings.\"\n      },\n      {\n        \"time_range\": \"02:11-02:18\",\n        \"description\": \"The man looks displeased, says 'We'll talk again', and walks away, ending the interview.\"\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_or_question_scope\",\n    \"time_range_sec\": [\n      111,\n      138\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"01:51-02:10\",\n      \"modality\": \"video|asr\",\n      \"observation\": \"The reporter asks the man about his biological parents and if he is seeking redemption through his paintings.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"02:11-02:18\",\n      \"modality\": \"video|asr\",\n      \"observation\": \"The man looks displeased, says 'We'll talk again', and walks away, ending the interview.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+    "reasoning_content": "The user wants to know the man's reaction after the reporter asks several questions in a row.\nLooking at the video timeline:\n- 01:51-02:10: The reporter asks the man about his biological parents and if he is seeking redemption through his paintings.\n- 02:11-02:18: The man looks displeased, says \"We'll talk again\", and walks away, ending the interview.\n\nThis matches option C: Gets angry and ends the interview.\n\nLet's extract the evidence.\nE1: 01:51-02:10, reporter asks about biological parents and redemption.\nE2: 02:11-02:18, man looks displeased, says \"We'll talk again\", and walks away.\n\nTask family: generic_video_evidence.\nEvidence template:\nfacts:\n- time_range: 01:51-02:10, description: The reporter asks the man about his biological parents and if he is seeking redemption through his paintings.\n- time_range: 02:11-02:18, description: The man looks displeased, says 'We'll talk again', and walks away, ending the interview.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-4a29d9c4-f2de-98d3-928c-1a889c36cd93",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 25 column 4 (char 709)",
+     "response_chars": 807
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1485
+    }
+   ]
+  },
+  "computed_global_timeline_response": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"time_range\": \"01:51-02:10\",\n          \"description\": \"The reporter asks the man about his biological parents and if he is seeking redemption through his paintings.\"\n        },\n        {\n          \"time_range\": \"02:11-02:18\",\n          \"description\": \"The man looks displeased, says 'We'll talk again', and walks away, ending the interview.\"\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [],\n    \"target_time_ranges\": [\n      \"01:51-02:18\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.9\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:59-01:23\",\n      \"scene\": \"Art exhibition\",\n      \"actions\": [\n        \"Reporter interviews the man about his success and favorite work.\"\n      ],\n      \"objects\": [\n        \"Reporter\",\n        \"Man\"\n      ],\n      \"visual_cues\": [\n        \"Man smiling initially\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"time_range\": \"01:24-01:42\",\n      \"scene\": \"Art exhibition\",\n      \"actions\": [\n        \"Reporter asks about his orphanage childhood.\"\n      ],\n      \"objects\": [\n        \"Reporter\",\n        \"Man\"\n      ],\n      \"visual_cues\": [\n        \"Man explains his warm memories\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"time_range\": \"01:51-02:18\",\n      \"scene\": \"Art exhibition\",\n      \"actions\": [\n        \"Reporter asks about biological parents and redemption.\",\n        \"Man gets annoyed and ends the interview.\"",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 19.095,
+   "usage": {
+    "total_tokens": 25506,
+    "completion_tokens": 865,
+    "prompt_tokens": 24641,
+    "completion_tokens_details": {
+     "reasoning_tokens": 341,
+     "text_tokens": 524
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 23714,
+     "cached_tokens": 0,
+     "text_tokens": 927
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"time_range\": \"01:51-02:10\",\n          \"description\": \"The reporter asks the man about his biological parents and if he is seeking redemption through his paintings.\"\n        },\n        {\n          \"time_range\": \"02:11-02:18\",\n          \"description\": \"The man looks displeased, says 'We'll talk again', and walks away, ending the interview.\"\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [],\n    \"target_time_ranges\": [\n      \"01:51-02:18\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.9\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:59-01:23\",\n      \"scene\": \"Art exhibition\",\n      \"actions\": [\n        \"Reporter interviews the man about his success and favorite work.\"\n      ],\n      \"objects\": [\n        \"Reporter\",\n        \"Man\"\n      ],\n      \"visual_cues\": [\n        \"Man smiling initially\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"time_range\": \"01:24-01:42\",\n      \"scene\": \"Art exhibition\",\n      \"actions\": [\n        \"Reporter asks about his orphanage childhood.\"\n      ],\n      \"objects\": [\n        \"Reporter\",\n        \"Man\"\n      ],\n      \"visual_cues\": [\n        \"Man explains his warm memories\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"time_range\": \"01:51-02:18\",\n      \"scene\": \"Art exhibition\",\n      \"actions\": [\n        \"Reporter asks about biological parents and redemption.\",\n        \"Man gets annoyed and ends the interview.\"\n     ",
+    "reasoning_content": "The user wants to know the man's reaction after the reporter asks several questions in a row.\nI need to find the scene where a reporter is interviewing a man.\nLooking at the timeline:\n- 00:59 - 01:23: A reporter (woman) is interviewing a man (artist) at an art exhibition. She asks him questions about his success, his favorite work, etc.\n- 01:24 - 01:42: She asks about his childhood in an orphanage and if it's reflected in his work. He says it's a common misconception and that his memories are warm.\n- 01:51 - 02:10: She asks about his biological parents and if he's trying to seek redemption through his paintings.\n- 02:11 - 02:18: The man looks annoyed/uncomfortable. He says \"We'll talk again\" and \"Thank you\" and walks away, effectively ending the interview.\n\nThe man's reaction is that he gets annoyed/uncomfortable and ends the interview.\nOption C: Gets angry and ends the interview. (Though \"angry\" might be strong, he definitely ends it abruptly and looks displeased). Let's check the options again.\nA. Pleased\nB. Happy\nC. Gets angry and ends the interview\nD. Sad\n\nHe says \"We'll talk again\" and leaves. He looks irritated. \"Gets angry and ends the interview\" fits best among the choices.\n\nTime range: 01:51 - 02:18.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-d8528f9c-34c9-9650-869d-5dcb47c213f3"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "false",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "hard_visual_or_negative_question",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_temporal",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 7,
+   "detail_max_side": 768,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 7,
+  "video_detail_max_side": 768,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 9,
+  "question_relevant_time_windows": [
+   {
+    "time_range_sec": [
+     20.42,
+     93.1
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0006",
+     "video_transcript_anchor_seg_0007",
+     "video_transcript_anchor_seg_0008"
+    ],
+    "source": "question_relevant_transcript"
+   },
+   {
+    "time_range_sec": [
+     147.37,
+     174.65
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0035",
+     "video_transcript_anchor_seg_0036",
+     "video_transcript_anchor_seg_0037"
+    ],
+    "source": "question_relevant_transcript"
+   },
+   {
+    "time_range_sec": [
+     190.48,
+     246.74
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0046",
+     "video_transcript_anchor_seg_0047",
+     "video_transcript_anchor_seg_0048"
+    ],
+    "source": "question_relevant_transcript"
+   }
+  ],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 165542756,
+  "evidence_bytes": 5109281,
+  "compression_ratio": 0.0309,
+  "original_tokens": 41385689,
+  "compressed_tokens": 1277321,
+  "token_saving_ratio": 0.9691,
+  "token_saving_ratio_raw": 0.9691,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_temporal compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 317.182
+ },
+ {
+  "record_key": "video:surveil_171:mlvu100",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/D_no_visual_context/mlvu/s1/media/video/surveil_171.mp4",
+  "question": "Does this surveillance footage contain any anomalies? If yes, which kind of anomaly?\n['A. Stealing' 'B. Robbery' 'C. Explosion' 'D. RoadAccidents']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "D",
+  "raw_response": "FINAL_ANSWER: D",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 320,
+     "height": 240,
+     "r_frame_rate": "30/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    },
+    {
+     "codec_type": "video",
+     "width": 58,
+     "height": 38,
+     "r_frame_rate": "90000/1"
+    }
+   ],
+   "format": {
+    "duration": "602.034000",
+    "size": "124709452"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/D_no_visual_context/mlvu/s1/media/video/surveil_171.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "surveil_171",
+  "question_id": "mlvu100",
+  "api_meta": {
+   "api_elapsed_seconds": 4.642,
+   "usage": {
+    "total_tokens": 55452,
+    "completion_tokens": 6,
+    "prompt_tokens": 55446,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 30065,
+     "video_tokens": 24804,
+     "image_tokens": 577,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-066caafc-c358-97b6-957e-ace546356134"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 4.642,
+   "usage": {
+    "total_tokens": 55452,
+    "completion_tokens": 6,
+    "prompt_tokens": 55446,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 30065,
+     "video_tokens": 24804,
+     "image_tokens": 577,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-066caafc-c358-97b6-957e-ace546356134"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"anomaly_detection\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      \"At 03:55-04:00, a vehicle speeds into the frame and crashes into a brick wall structure, generating a large cloud of smoke and debris.\",\n      \"Following the crash, individuals exit the damaged vehicle and stand near the scene.\"\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full\",\n    \"time_range_sec\": [\n      0,\n      602\n    ],\n    \"confidence\": 1.0\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"03:55-04:00\",\n      \"modality\": \"visual\",\n      \"observation\": \"A vehicle speeds into the frame and crashes into a brick wall, creating smoke and debris.\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"04:00-05:00\",\n      \"modality\": \"visual\",\n      \"observation\": \"Individuals exit the damaged vehicle and stand near the crash site.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 16.244,
+   "usage": {
+    "total_tokens": 28421,
+    "completion_tokens": 653,
+    "prompt_tokens": 27768,
+    "completion_tokens_details": {
+     "reasoning_tokens": 230,
+     "text_tokens": 423
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 2467,
+     "video_tokens": 24724,
+     "image_tokens": 577,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"anomaly_detection\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      \"At 03:55-04:00, a vehicle speeds into the frame and crashes into a brick wall structure, generating a large cloud of smoke and debris.\",\n      \"Following the crash, individuals exit the damaged vehicle and stand near the scene.\"\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full\",\n    \"time_range_sec\": [\n      0,\n      602\n    ],\n    \"confidence\": 1.0\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"03:55-04:00\",\n      \"modality\": \"visual\",\n      \"observation\": \"A vehicle speeds into the frame and crashes into a brick wall, creating smoke and debris.\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"04:00-05:00\",\n      \"modality\": \"visual\",\n      \"observation\": \"Individuals exit the damaged vehicle and stand near the crash site.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+    "reasoning_content": "The user wants to identify the type of anomaly in the surveillance footage.\nThe options are:\nA. Stealing\nB. Robbery\nC. Explosion\nD. RoadAccidents\n\nLooking at the video frames:\n- At 03:55, a car speeds into the frame from the right.\n- At 03:57, the car crashes into a brick wall structure, generating a large cloud of smoke and debris.\n- After the crash, individuals exit the damaged vehicle.\nThis is clearly a road accident.\n\nEvidence:\n- E1: At 03:55-04:00, a vehicle speeds into the frame and crashes into a brick wall, creating smoke and debris. (video_tubelet_storyboard_0002, video_tubelet_storyboard_0003, video_full_timeline_lowres)\n- E2: Following the crash, people exit the damaged vehicle and stand near the scene. (video_full_timeline_lowres)\n\nTask family: generic_video_evidence\nQuestion type: anomaly_detection (implied)",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-928c5b44-2398-9fa6-aa1c-08b368f5564c",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 20 column 4 (char 571)",
+     "response_chars": 861
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1300
+    }
+   ]
+  },
+  "computed_global_timeline_response": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        \"At 05:03:55, a vehicle speeds into the frame from the right and crashes into a brick wall structure.\",\n        \"The impact generates a large cloud of smoke and debris.\",\n        \"Following the crash, individuals exit the damaged vehicle and stand near the scene.\"\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [],\n    \"target_time_ranges\": [\n      \"03:55-04:10\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 1.0\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:00-03:55\",\n      \"scene\": \"Quiet street at night\",\n      \"actions\": [\n        \"Minimal traffic\",\n        \"Static scene\"\n      ],\n      \"objects\": [\n        \"Street\",\n        \"Wall\",\n        \"Sign\"\n      ],\n      \"visual_cues\": [\n        \"Night vision\",\n        \"Street lights\"\n      ],\n      \"confidence\": 1.0\n    },\n    {\n      \"time_range\": \"03:55-04:10\",\n      \"scene\": \"Car crash\",\n      \"actions\": [\n        \"Car speeds into frame\",\n        \"Car crashes into wall\",\n        \"Smoke and debris appear\"\n      ],\n      \"objects\": [\n        \"Car\",\n        \"Wall\",\n        \"Smoke\"\n      ],\n      \"visual_cues\": [\n        \"High speed impact\",\n        \"Debris\"\n      ],\n      \"confidence\": 1.0\n    },\n    {\n      \"time_range\": \"04:10-10:02\",\n      \"scene\": \"Crash aftermath\",\n      \"actions\": [\n        \"People exit car\",\n        \"People stand around\",\n        \"Traffic passes by\"\n      ],\n      \"objects\":",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 25.459,
+   "usage": {
+    "total_tokens": 26242,
+    "completion_tokens": 1156,
+    "prompt_tokens": 25086,
+    "completion_tokens_details": {
+     "reasoning_tokens": 633,
+     "text_tokens": 523
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 24162,
+     "cached_tokens": 0,
+     "text_tokens": 924
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        \"At 05:03:55, a vehicle speeds into the frame from the right and crashes into a brick wall structure.\",\n        \"The impact generates a large cloud of smoke and debris.\",\n        \"Following the crash, individuals exit the damaged vehicle and stand near the scene.\"\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [],\n    \"target_time_ranges\": [\n      \"03:55-04:10\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 1.0\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:00-03:55\",\n      \"scene\": \"Quiet street at night\",\n      \"actions\": [\n        \"Minimal traffic\",\n        \"Static scene\"\n      ],\n      \"objects\": [\n        \"Street\",\n        \"Wall\",\n        \"Sign\"\n      ],\n      \"visual_cues\": [\n        \"Night vision\",\n        \"Street lights\"\n      ],\n      \"confidence\": 1.0\n    },\n    {\n      \"time_range\": \"03:55-04:10\",\n      \"scene\": \"Car crash\",\n      \"actions\": [\n        \"Car speeds into frame\",\n        \"Car crashes into wall\",\n        \"Smoke and debris appear\"\n      ],\n      \"objects\": [\n        \"Car\",\n        \"Wall\",\n        \"Smoke\"\n      ],\n      \"visual_cues\": [\n        \"High speed impact\",\n        \"Debris\"\n      ],\n      \"confidence\": 1.0\n    },\n    {\n      \"time_range\": \"04:10-10:02\",\n      \"scene\": \"Crash aftermath\",\n      \"actions\": [\n        \"People exit car\",\n        \"People stand around\",\n        \"Traffic passes by\"\n      ],\n      \"objects\":",
+    "reasoning_content": "The user wants me to analyze a surveillance video and identify if there are any anomalies, specifically choosing from: 'A. Stealing', 'B. Robbery', 'C. Explosion', 'D. RoadAccidents'.\nI need to output a JSON object following a specific schema.\n\n1.  **Analyze the video:**\n    *   The video starts with a quiet street scene at night (05:00:00).\n    *   Around 05:03:55, a car speeds into the frame from the right, loses control, and crashes into a brick wall/structure in the foreground.\n    *   There is a lot of smoke/dust upon impact.\n    *   The car is severely damaged.\n    *   People get out of the car and stand around.\n    *   Other vehicles pass by.\n    *   This is clearly a car accident.\n\n2.  **Map to options:**\n    *   A. Stealing: No.\n    *   B. Robbery: No.\n    *   C. Explosion: There is smoke/dust, but it's from a crash, not an explosion.\n    *   D. RoadAccidents: Yes, a car crashes into a wall.\n\n3.  **Construct the JSON:**\n    *   `task_specific_resolver`: generic_video_evidence.\n    *   `timeline`:\n        *   00:00 - 03:55: Quiet street scene.\n        *   03:55 - 04:10: Car crashes into the wall, smoke/dust appears.\n        *   04:10 - 10:02: Aftermath, people exit the car, stand around.\n    *   `question_relevant_time_ranges`: 03:55 - 04:10 (the crash).\n    *   `scene_locator`: The crash scene.\n    *   `global_uncertainties`: None.\n\n4.  **Refine JSON structure:**\n    *   `resolver_type`: \"generic_video_evidence\"\n    *   `evidence_template`: {\"facts\": [\"A car crashes into a wall at 05:03:55\", \"Smoke/dust is generated\", \"People exit the vehicle\"], \"conflicts\": [], \"fallback_needed\": false}\n    *   `target_time_ranges`: [\"03:55-04:10\"]\n    *   `timeline`: List of events.\n    *   `question_relevant_time_ranges`: [{\"time_range\": \"03:55-04:10\", \"reason\": \"Car crash occurs\", \"confidence\": 1.0}]\n    *   `scene_locator`: {\"target_scene\": \"Car crash into wall\", \"time_range\": \"03:55-04:10\", \"confidence\": 1.0}\n\nLet's write the JSON.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-17daf8ac-acfc-9959-9380-e57c541ea77e"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "false",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 21,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 124709452,
+  "evidence_bytes": 2665070,
+  "compression_ratio": 0.0214,
+  "original_tokens": 31177363,
+  "compressed_tokens": 666268,
+  "token_saving_ratio": 0.9786,
+  "token_saving_ratio_raw": 0.9786,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 78.061
+ }
+]

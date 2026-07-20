@@ -1,0 +1,204 @@
+{
+ "archive": "PAPER_ARCHIVE_20260625",
+ "generated": "20260625",
+ "datasets": [
+  {
+   "label": "Video-MME 300 (compressed)",
+   "dir": "videomme_300_compressed",
+   "platform": "bailian",
+   "model": "qwen3.7-plus",
+   "mode": "MTEC compressed (anchors+evidence, OSS)",
+   "notes": "balanced 100/100/100",
+   "n_records": 300,
+   "completed": 300,
+   "failed": 0,
+   "correct": 229,
+   "acc_over_completed_pct": 76.3,
+   "acc_incl_failures_pct": 76.3,
+   "failure_classes": {},
+   "token_saving_raw_mean_pct": 77.8,
+   "token_saving_raw_median_pct": 85.9,
+   "token_saving_positive_count": "292/300",
+   "duration_breakdown": {
+    "short": {
+     "n": 100,
+     "acc_pct": 88.0,
+     "token_saving_median_pct": 76.5
+    },
+    "medium": {
+     "n": 100,
+     "acc_pct": 74.0,
+     "token_saving_median_pct": 86.0
+    },
+    "long": {
+     "n": 100,
+     "acc_pct": 67.0,
+     "token_saving_median_pct": 89.3
+    }
+   }
+  },
+  {
+   "label": "NExT-QA 300 (compressed)",
+   "dir": "nextqa_300_compressed",
+   "platform": "bailian",
+   "model": "qwen3.7-plus",
+   "mode": "MTEC compressed",
+   "notes": "video embedded in parquet",
+   "n_records": 300,
+   "completed": 300,
+   "failed": 0,
+   "correct": 248,
+   "acc_over_completed_pct": 82.7,
+   "acc_incl_failures_pct": 82.7,
+   "failure_classes": {},
+   "token_saving_raw_mean_pct": 25.5,
+   "token_saving_raw_median_pct": 40.9,
+   "token_saving_positive_count": "229/300"
+  },
+  {
+   "label": "TempCompass 300 (compressed)",
+   "dir": "tempcompass_300_compressed",
+   "platform": "bailian",
+   "model": "qwen3.7-plus",
+   "mode": "MTEC compressed",
+   "notes": "short clips; dedup of double-process artifact",
+   "n_records": 300,
+   "completed": 293,
+   "failed": 7,
+   "correct": 239,
+   "acc_over_completed_pct": 81.6,
+   "acc_incl_failures_pct": 79.7,
+   "failure_classes": {
+    "(none)": 7
+   },
+   "token_saving_raw_mean_pct": -60.5,
+   "token_saving_raw_median_pct": -26.4,
+   "token_saving_positive_count": "82/293"
+  },
+  {
+   "label": "MLVU-long 180 (compressed)",
+   "dir": "mlvu_long_180_compressed",
+   "platform": "bailian",
+   "model": "qwen3.7-plus",
+   "mode": "MTEC compressed (streamed)",
+   "notes": "10-60min videos",
+   "n_records": 180,
+   "completed": 180,
+   "failed": 0,
+   "correct": 148,
+   "acc_over_completed_pct": 82.2,
+   "acc_incl_failures_pct": 82.2,
+   "failure_classes": {},
+   "token_saving_raw_mean_pct": 90.1,
+   "token_saving_raw_median_pct": 88.6,
+   "token_saving_positive_count": "180/180"
+  },
+  {
+   "label": "Video-MME short/med 105 (raw direct)",
+   "dir": "videomme_105_raw_bailian",
+   "platform": "bailian",
+   "model": "qwen3.7-plus",
+   "mode": "raw video via OSS (no compression)",
+   "notes": "early raw probe",
+   "n_records": 27,
+   "completed": 27,
+   "failed": 0,
+   "correct": 22,
+   "acc_over_completed_pct": 81.5,
+   "acc_incl_failures_pct": 81.5,
+   "failure_classes": {}
+  },
+  {
+   "label": "Video-MME long 100 (raw, Bailian pool)",
+   "dir": "videomme_long_raw_bailian_pool",
+   "platform": "bailian",
+   "model": "qwen3.6-plus + pool",
+   "mode": "raw video via OSS",
+   "notes": "mixed-model pool; quota-limited",
+   "n_records": 100,
+   "completed": 29,
+   "failed": 71,
+   "correct": 21,
+   "acc_over_completed_pct": 72.4,
+   "acc_incl_failures_pct": 21.0,
+   "failure_classes": {
+    "(none)": 8,
+    "quota_or_capability": 3,
+    "all_models_exhausted": 59,
+    "content_inspection": 1
+   }
+  },
+  {
+   "label": "NExT-QA 300 (raw, SiliconFlow)",
+   "dir": "nextqa_300_raw_siliconflow",
+   "platform": "siliconflow",
+   "model": "Qwen3-VL-32B-Instruct",
+   "mode": "raw video base64",
+   "notes": "small videos",
+   "n_records": 300,
+   "completed": 291,
+   "failed": 9,
+   "correct": 232,
+   "acc_over_completed_pct": 79.7,
+   "acc_incl_failures_pct": 77.3,
+   "failure_classes": {
+    "api_error": 9
+   }
+  },
+  {
+   "label": "Video-MME medium 102 (raw, SiliconFlow)",
+   "dir": "videomme_medium_raw_siliconflow",
+   "platform": "siliconflow",
+   "model": "Qwen3-VL-32B-Instruct",
+   "mode": "raw video base64",
+   "notes": "many exceed ~50-80MB base64 ceiling",
+   "n_records": 102,
+   "completed": 63,
+   "failed": 39,
+   "correct": 34,
+   "acc_over_completed_pct": 54.0,
+   "acc_incl_failures_pct": 33.3,
+   "failure_classes": {
+    "video_too_large": 37,
+    "api_error": 2
+   }
+  },
+  {
+   "label": "MLVU-long 180 (raw, SiliconFlow)",
+   "dir": "mlvu_long_raw_siliconflow",
+   "platform": "siliconflow",
+   "model": "Qwen3-VL-32B-Instruct",
+   "mode": "raw video base64",
+   "notes": "most exceed base64 ceiling -> video_too_large",
+   "n_records": 180,
+   "completed": 39,
+   "failed": 141,
+   "correct": 24,
+   "acc_over_completed_pct": 61.5,
+   "acc_incl_failures_pct": 13.3,
+   "failure_classes": {
+    "video_too_large": 141
+   }
+  },
+  {
+   "label": "MLVU-long 141-rerun (raw, Bailian OSS)",
+   "dir": "mlvu_long_141rerun_raw_bailian",
+   "platform": "bailian",
+   "model": "qwen3.6-plus",
+   "mode": "raw video via OSS; the 141 SF-failed videos",
+   "notes": "PARTIAL/in-progress; platform comparison",
+   "n_records": 76,
+   "completed": 62,
+   "failed": 14,
+   "correct": 56,
+   "acc_over_completed_pct": 90.3,
+   "acc_incl_failures_pct": 73.7,
+   "failure_classes": {
+    "content_inspection": 10,
+    "api_error": 1,
+    "quota": 2,
+    "video_too_large_for_disk": 1
+   }
+  }
+ ]
+}

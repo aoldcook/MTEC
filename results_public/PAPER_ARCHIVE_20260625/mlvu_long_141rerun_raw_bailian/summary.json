@@ -1,0 +1,26 @@
+{
+ "config": {
+  "label": "MLVU-long 141-rerun (raw, Bailian OSS)",
+  "platform": "bailian",
+  "model": "qwen3.6-plus",
+  "mode": "raw video via OSS; the 141 SF-failed videos",
+  "notes": "PARTIAL/in-progress; platform comparison",
+  "source_globs": [
+   "outputs/raw_bailian_mlvu_long_20260625/s*/results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 76,
+  "completed": 62,
+  "failed": 14,
+  "correct": 56,
+  "acc_over_completed_pct": 90.3,
+  "acc_incl_failures_pct": 73.7,
+  "failure_classes": {
+   "content_inspection": 10,
+   "api_error": 1,
+   "quota": 2,
+   "video_too_large_for_disk": 1
+  }
+ }
+}

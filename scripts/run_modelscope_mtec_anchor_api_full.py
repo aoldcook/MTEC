@@ -1466,7 +1466,13 @@ class SiliconFlowClient:
             except _InspectionBlocked as exc:
                 last_error = str(exc)
                 continue  # moderation blocked this variant; try a smaller one
-        raise RuntimeError(last_error or "DataInspectionFailed after media reduction")
+            except Exception as exc:
+                msg = str(exc)
+                if ("Unexpected item type" in msg) or ("InvalidParameter" in msg and "messages input is invalid" in msg):
+                    last_error = msg
+                    continue  # model rejects media items (e.g. text-only answer model) -> smaller/text-only variant
+                raise
+        raise RuntimeError(last_error or "media reduction exhausted")
 
     def _generate_once(self, content: List[Dict[str, Any]], max_tokens: int) -> Tuple[str, Dict[str, Any]]:
         payload = {
@@ -1781,6 +1787,10 @@ def run_video_record(
         if selected_policy.get("transcript") and video_query_retrieval and video_query_detail_extra_crops > 0:
             selected_policy = dict(selected_policy)
             selected_policy["detail_max_crops"] = int(selected_policy.get("detail_max_crops") or 0) + int(video_query_detail_extra_crops)
+        _force_crops = os.environ.get("MTEC_DETAIL_MAX_CROPS")
+        if _force_crops is not None:
+            selected_policy = dict(selected_policy)
+            selected_policy["detail_max_crops"] = int(_force_crops)
         anchor_output_dir = output_dir / "anchors" / "video" / f"{video_id}_{question_id}"
         video_subtitle_path = None
         if subtitle_lookup and selected_policy.get("transcript") and video_id in subtitle_lookup:
@@ -1856,7 +1866,7 @@ def run_video_record(
         if global_timeline_pass:
             try:
                 computed_global_timeline_response, computed_global_timeline_meta = compute_global_video_timeline(
-                    answer_client,
+                    client,  # global-timeline is a VISION pass -> use the multimodal evidence model (answer model may be text-only)
                     package,
                     max_tokens=global_timeline_max_tokens,
                 )

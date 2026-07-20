@@ -1,0 +1,14 @@
+========================================================================
+ABLATION CONFIG E_no_query_retrieval  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[mlvu] config: completed 30/30 (100% completion), acc 90.0% (27/30), median_token_save 96.1%
+      paired vs A on 30 shared keys: config 90.0% (27) vs A 86.7% (26) -> dAcc +3.3 pts
+      token-save median: config 96.1% vs A 96.0% -> d +0.1 pts
+
+[vmme_long] config: completed 40/40 (100% completion), acc 67.5% (27/40), median_token_save 89.6%
+      paired vs A on 28 shared keys: config 57.1% (16) vs A 53.6% (15) -> dAcc +3.6 pts
+      token-save median: config 89.6% vs A 89.4% -> d +0.2 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=58 shared): config 74.1% vs A 70.7% -> dAcc +3.4 pts

@@ -1,0 +1,12 @@
+{
+ "total": 6,
+ "launched": 3,
+ "completed": 0,
+ "failed": 0,
+ "running": [
+  "A_full/vmme_long/s0",
+  "A_full/vmme_long/s1",
+  "A_full/vmme_long/s2"
+ ],
+ "ts": 1782916594.8096135
+}

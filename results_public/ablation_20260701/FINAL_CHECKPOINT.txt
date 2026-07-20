@@ -1,0 +1,36 @@
+ABLATION FULL CHECKPOINT 2026-07-07 01:57:30
+
+A_full                 total=188  {'vmme': 80, 'nextqa': 50, 'mlvu': 30, 'vmme_long': 28}
+B_no_evidence          total=160  {'vmme': 80, 'nextqa': 50, 'mlvu': 30}
+C_no_timeline          total=100  {'mlvu': 30, 'vmme_long': 40, 'mlvu_ext': 30}
+D_no_visual_context    total=70  {'mlvu': 30, 'vmme_long': 40}
+E_no_query_retrieval   total=70  {'mlvu': 30, 'vmme_long': 40}
+F_no_global_anchor     total=70  {'mlvu': 30, 'vmme_long': 40}
+H_no_detail_crops      total=130  {'vmme': 80, 'nextqa': 50}
+I_no_task_routing      total=130  {'vmme': 80, 'nextqa': 50}
+J_tiny                 total=200  {'vmme': 80, 'nextqa': 50, 'mlvu': 30, 'vmme_long': 40}
+J_medium               total=17  {'vmme': 17}
+A_sf                   total=180  {'vmme': 86, 'nextqa': 94}
+D_sf                   total=187  {'vmme': 95, 'nextqa': 92}
+E_sf                   total=182  {'vmme': 99, 'nextqa': 83}
+H_sf                   total=180  {'vmme': 91, 'nextqa': 89}
+
+STATUS: All strong-model configs DONE (B,C,D,E,F,H,I,J_tiny) except J_medium (final, PARTIAL).
+SF weak-model DONE: A_sf, D_sf, E_sf, H_sf.
+
+RESUME TOMORROW: boot server, then:
+  1. restart balance monitor: cd /root/autodl-tmp/MTEC && setsid bash scripts/balance_monitor.sh &
+  2. finish J_medium (resume-safe, --resume in generator): bash scripts/launch_config.sh J_medium 3
+     (hybrid: vmme+nextqa via closeAI base64; mlvu+vmme_long via Bailian OSS.
+      If an SF/closeAI shard hangs: pkill -9 -f 'J_medium/queue.txt'; pkill -9 -f 'runs/J_medium/'; relaunch.)
+  3. When J_medium QUEUE_ALL_DONE: python scripts/analyze_config.py J_medium A_full
+  4. Then the FULL matrix is complete -> write consolidated final report (RESULT_*.txt are per-config).
+
+KEY RESULTS (Delta vs baseline, paired):
+  STRONG model (qwen3.7-plus) vs A_full: B+1.9 C+5.2 D+5.2 E+3.4 F-10.3(REAL) H+3.8(+tokens) I-0.8 J_tiny+1.1(big token-save on short)
+  WEAK model (Qwen3-VL-32B) vs A_sf: D-3.0 E-3.1 H-3.8  (all HELP weak model = flip vs strong)
+  Headline: only global-anchor(F) is load-bearing on strong model; visual-context/query-retrieval/detail-crops are
+            pure overhead on strong model but help the weak model. J_tiny: near-auto accuracy, much better compression on short.
+
+PROVIDER NOTE: qwen3.7-plus now via closeAI (api.openai-proxy.org, key sk-8LUX...) for vmme+nextqa; Bailian OSS for large.
+SF old key sk-qqid ($41.93 paid) works; new key sk-otyq had $0 paid -> 403.

@@ -1,0 +1,22 @@
+========================================================================
+ABLATION CONFIG J_tiny  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[vmme] config: completed 80/80 (100% completion), acc 78.8% (63/80), median_token_save 86.2%
+      paired vs A on 80 shared keys: config 78.8% (63) vs A 81.2% (65) -> dAcc -2.5 pts
+      token-save median: config 86.2% vs A 82.0% -> d +4.2 pts
+
+[nextqa] config: completed 50/50 (100% completion), acc 80.0% (40/50), median_token_save 65.3%
+      paired vs A on 50 shared keys: config 80.0% (40) vs A 72.0% (36) -> dAcc +8.0 pts
+      token-save median: config 65.3% vs A 46.6% -> d +18.8 pts
+
+[mlvu] config: completed 30/30 (100% completion), acc 86.7% (26/30), median_token_save 96.4%
+      paired vs A on 30 shared keys: config 86.7% (26) vs A 86.7% (26) -> dAcc +0.0 pts
+      token-save median: config 96.4% vs A 96.0% -> d +0.4 pts
+
+[vmme_long] config: completed 40/40 (100% completion), acc 65.0% (26/40), median_token_save 89.7%
+      paired vs A on 28 shared keys: config 53.6% (15) vs A 53.6% (15) -> dAcc +0.0 pts
+      token-save median: config 89.7% vs A 89.4% -> d +0.3 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=188 shared): config 76.6% vs A 75.5% -> dAcc +1.1 pts

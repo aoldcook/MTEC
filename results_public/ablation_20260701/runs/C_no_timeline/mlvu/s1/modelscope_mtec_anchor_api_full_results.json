@@ -1,0 +1,428 @@
+[
+ {
+  "record_key": "video:movie101_58:mlvu73",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/C_no_timeline/mlvu/s1/media/video/movie101_58.mp4",
+  "question": "What is the man's reaction after the reporter asks several questions in a row?\n['A. Pleased' 'B. Happy' 'C. Gets angry and ends the interview' 'D. Sad']\nRespond with only the option letter.",
+  "ground_truth": "C",
+  "Answer": "C",
+  "raw_response": "FINAL_ANSWER: C",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1898,
+     "height": 788,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "605.024000",
+    "size": "165542756"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/C_no_timeline/mlvu/s1/media/video/movie101_58.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "movie101_58",
+  "question_id": "mlvu73",
+  "api_meta": {
+   "api_elapsed_seconds": 5.993,
+   "usage": {
+    "total_tokens": 64421,
+    "completion_tokens": 6,
+    "prompt_tokens": 64415,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 33773,
+     "video_tokens": 26276,
+     "image_tokens": 4366,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-3e90a07a-c60b-9fe7-b787-cd4ce009af30"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 5.993,
+   "usage": {
+    "total_tokens": 64421,
+    "completion_tokens": 6,
+    "prompt_tokens": 64415,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 33773,
+     "video_tokens": 26276,
+     "image_tokens": 4366,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-3e90a07a-c60b-9fe7-b787-cd4ce009af30"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"id\": \"E1\",\n        \"time\": \"01:50-02:08\",\n        \"modality\": \"asr\",\n        \"observation\": \"The reporter asks a series of probing questions: 'What about your biological parents? Did they influence your works?' and 'I don't sense solitude in your works. Are you trying to seek redemption through your paintings?'\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      },\n      {\n        \"id\": \"E2\",\n        \"time\": \"02:08-02:18\",\n        \"modality\": \"visual\",\n        \"observation\": \"The man's expression shifts to annoyance and anger. He abruptly says 'We'll talk again' and walks away, ending the interview.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_or_question_scope\",\n    \"time_range_sec\": [\n      110,\n      138\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"01:50-02:08\",\n      \"modality\": \"asr\",\n      \"observation\": \"The reporter asks a series of probing questions: 'What about your biological parents? Did they influence your works?' and 'I don't sense solitude in your works. Are you trying to seek redemption through your paintings?'\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"02:08-02:18\",\n      \"modality\": \"visual\",\n      \"observation\": \"The man's expression shifts to annoyance and anger. He abruptly says 'We'll talk again' and walks away, ending the interview.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": \"None\"\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 20.707,
+   "usage": {
+    "total_tokens": 34828,
+    "completion_tokens": 929,
+    "prompt_tokens": 33899,
+    "completion_tokens_details": {
+     "reasoning_tokens": 292,
+     "text_tokens": 637
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 3257,
+     "video_tokens": 26276,
+     "image_tokens": 4366,
+     "cached_tokens": 34944
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"id\": \"E1\",\n        \"time\": \"01:50-02:08\",\n        \"modality\": \"asr\",\n        \"observation\": \"The reporter asks a series of probing questions: 'What about your biological parents? Did they influence your works?' and 'I don't sense solitude in your works. Are you trying to seek redemption through your paintings?'\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      },\n      {\n        \"id\": \"E2\",\n        \"time\": \"02:08-02:18\",\n        \"modality\": \"visual\",\n        \"observation\": \"The man's expression shifts to annoyance and anger. He abruptly says 'We'll talk again' and walks away, ending the interview.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_or_question_scope\",\n    \"time_range_sec\": [\n      110,\n      138\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"01:50-02:08\",\n      \"modality\": \"asr\",\n      \"observation\": \"The reporter asks a series of probing questions: 'What about your biological parents? Did they influence your works?' and 'I don't sense solitude in your works. Are you trying to seek redemption through your paintings?'\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"02:08-02:18\",\n      \"modality\": \"visual\",\n      \"observation\": \"The man's expression shifts to annoyance and anger. He abruptly says 'We'll talk again' and walks away, ending the interview.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": \"None\"\n}\n```",
+    "reasoning_content": "The user wants to know the man's reaction after the reporter asks several questions in a row.\nLooking at the video around 01:50-02:18:\nThe reporter asks: \"What about your biological parents? Did they influence your works?\"\nThe man looks uncomfortable.\nReporter: \"I mean, I don't sense solitude in your works. Are you trying to seek redemption through your paintings?\"\nThe man looks annoyed, says \"We'll talk again. I'm all yours.\" and walks away abruptly.\nThis matches option C: Gets angry and ends the interview.\n\nLet's extract evidence.\nTime: 01:50 - 02:18\nAction: Reporter asks probing questions. Man gets annoyed/angry and ends the interview by walking away.\nTranscript: \"What about your biological parents? Did they influence your works?\" ... \"I don't sense solitude in your works. Are you trying to seek redemption through your paintings?\" ... \"We'll talk again. I'm all yours.\" (sarcastic/abrupt ending).\nVisuals: Man's facial expression changes to annoyance/anger, he stands up and leaves.\n\nEvidence 1: Transcript of reporter's questions about biological parents and redemption.\nEvidence 2: Visual of man looking annoyed/angry.\nEvidence 3: Visual of man walking away and ending the interview.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-ec5a1b49-5274-9241-ac6d-c6a93b17d49d",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 26 column 4 (char 808)",
+     "response_chars": 859
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 39 column 6 (char 1443)",
+     "response_chars": 1711
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 2069
+    }
+   ]
+  },
+  "computed_global_timeline_response": null,
+  "computed_global_timeline_meta": null,
+  "global_timeline_pass": false,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": "{\"visual_summary\":\"A man is being interviewed at an art exhibition. The reporter asks him a series of probing questions about his past, his biological parents, and whether he is seeking redemption through his art. The man becomes visibly uncomfortable and annoyed, eventually cutting the interview short and walking away.\",\"event_chain\":[{\"time\":\"01:50-02:18\",\"action\":\"The reporter asks the man several personal questions about his past and motivations. The man's expression shifts from polite to annoyed. He abruptly says 'We'll talk again' and walks away, ending the interview.\",\"objects\":[\"reporter\",\"man\",\"microphone\"],\"anchor\":\"video_full_timeline_lowres\"}],\"visible_objects\":[\"man\",\"reporter\",\"artworks\",\"microphone\"],\"actions\":[\"interviewing\",\"asking questions\",\"walking away\",\"ending interview\"],\"question_keywords\":[\"reaction\",\"reporter\",\"questions\",\"row\"],\"option_visual_cues\":{\"A\":{\"support\":[],\"contradiction\":[\"Man looks annoyed and walks away\"],\"needs_check\":[]},\"B\":{\"support\":[],\"contradiction\":[\"Man looks annoyed and walks away\"],\"needs_check\":[]},\"C\":{\"support\":[\"Man says 'We'll talk again' and walks away abruptly after probing questions\"],\"contradiction\":[],\"needs_check\":[]},\"D\":{\"support\":[],\"contradiction\":[\"Man's demeanor is more annoyed/defensive than sad\"],\"needs_check\":[]}},\"absence_checks\":[],\"uncertainty\":\"None\"}",
+  "computed_visual_context_meta": {
+   "api_elapsed_seconds": 14.325,
+   "usage": {
+    "total_tokens": 28265,
+    "completion_tokens": 492,
+    "prompt_tokens": 27773,
+    "completion_tokens_details": {
+     "reasoning_tokens": 197,
+     "text_tokens": 295
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 26276,
+     "cached_tokens": 0,
+     "text_tokens": 1497
+    }
+   },
+   "message": {
+    "content": "{\"visual_summary\":\"A man is being interviewed at an art exhibition. The reporter asks him a series of probing questions about his past, his biological parents, and whether he is seeking redemption through his art. The man becomes visibly uncomfortable and annoyed, eventually cutting the interview short and walking away.\",\"event_chain\":[{\"time\":\"01:50-02:18\",\"action\":\"The reporter asks the man several personal questions about his past and motivations. The man's expression shifts from polite to annoyed. He abruptly says 'We'll talk again' and walks away, ending the interview.\",\"objects\":[\"reporter\",\"man\",\"microphone\"],\"anchor\":\"video_full_timeline_lowres\"}],\"visible_objects\":[\"man\",\"reporter\",\"artworks\",\"microphone\"],\"actions\":[\"interviewing\",\"asking questions\",\"walking away\",\"ending interview\"],\"question_keywords\":[\"reaction\",\"reporter\",\"questions\",\"row\"],\"option_visual_cues\":{\"A\":{\"support\":[],\"contradiction\":[\"Man looks annoyed and walks away\"],\"needs_check\":[]},\"B\":{\"support\":[],\"contradiction\":[\"Man looks annoyed and walks away\"],\"needs_check\":[]},\"C\":{\"support\":[\"Man says 'We'll talk again' and walks away abruptly after probing questions\"],\"contradiction\":[],\"needs_check\":[]},\"D\":{\"support\":[],\"contradiction\":[\"Man's demeanor is more annoyed/defensive than sad\"],\"needs_check\":[]}},\"absence_checks\":[],\"uncertainty\":\"None\"}",
+    "reasoning_content": "The user wants to know the man's reaction after the reporter asks several questions in a row.\nLooking at the video, specifically around 01:50 to 02:18:\n- The reporter asks about his biological parents and if they influenced his work.\n- She then asks if he is trying to seek redemption through his paintings.\n- The man looks increasingly uncomfortable and annoyed.\n- At 02:14, he says \"We'll talk again\" and walks away, ending the interview abruptly.\n- This matches option C: \"Gets angry and ends the interview\".\n\nLet's check the options:\nA. Pleased - No, he looks annoyed.\nB. Happy - No.\nC. Gets angry and ends the interview - Yes, he walks away saying \"We'll talk again\".\nD. Sad - He looks more annoyed/angry than sad.\n\nTherefore, the correct option is C.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-23297b81-d123-92d5-8470-d7b2292adfea"
+  },
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": true,
+  "video_visual_context_reason": "hard_visual_or_negative_question",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_temporal",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 7,
+   "detail_max_side": 768,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 7,
+  "video_detail_max_side": 768,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 3,
+  "question_relevant_time_windows": [
+   {
+    "time_range_sec": [
+     0.0,
+     19.76
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0006",
+     "video_transcript_anchor_seg_0007",
+     "video_transcript_anchor_seg_0008"
+    ],
+    "source": "question_relevant_transcript"
+   }
+  ],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 165542756,
+  "evidence_bytes": 4824769,
+  "compression_ratio": 0.0291,
+  "original_tokens": 41385689,
+  "compressed_tokens": 1206193,
+  "token_saving_ratio": 0.9709,
+  "token_saving_ratio_raw": 0.9709,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_temporal compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 323.713
+ },
+ {
+  "record_key": "video:surveil_171:mlvu100",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/C_no_timeline/mlvu/s1/media/video/surveil_171.mp4",
+  "question": "Does this surveillance footage contain any anomalies? If yes, which kind of anomaly?\n['A. Stealing' 'B. Robbery' 'C. Explosion' 'D. RoadAccidents']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "D",
+  "raw_response": "FINAL_ANSWER: D",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 320,
+     "height": 240,
+     "r_frame_rate": "30/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    },
+    {
+     "codec_type": "video",
+     "width": 58,
+     "height": 38,
+     "r_frame_rate": "90000/1"
+    }
+   ],
+   "format": {
+    "duration": "602.034000",
+    "size": "124709452"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/C_no_timeline/mlvu/s1/media/video/surveil_171.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "surveil_171",
+  "question_id": "mlvu100",
+  "api_meta": {
+   "api_elapsed_seconds": 4.958,
+   "usage": {
+    "total_tokens": 55452,
+    "completion_tokens": 6,
+    "prompt_tokens": 55446,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 30065,
+     "video_tokens": 24804,
+     "image_tokens": 577,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-9b3fa9c7-3bcd-9c6c-9aee-b91691eda6da"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 4.958,
+   "usage": {
+    "total_tokens": 55452,
+    "completion_tokens": 6,
+    "prompt_tokens": 55446,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 30065,
+     "video_tokens": 24804,
+     "image_tokens": 577,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-9b3fa9c7-3bcd-9c6c-9aee-b91691eda6da"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      \"A car is seen driving on the road at night.\",\n      \"At approximately 237.0s, the car crashes into a brick wall/structure, creating a large cloud of smoke and dust.\",\n      \"The car remains stationary and damaged against the wall in the following frames.\"\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full\",\n    \"time_range_sec\": [\n      235.5,\n      240.0\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"237.0s\",\n      \"modality\": \"visual\",\n      \"observation\": \"A car crashes into a wall, producing smoke and debris.\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"238.0s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The crashed car is visible with significant damage and smoke.\",\n      \"anchor\": \"video_tubelet_storyboard_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {\n    \"A. Stealing\": false,\n    \"B. Robbery\": false,\n    \"C. Explosion\": false,\n    \"D. RoadAccidents\": true\n  },\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 16.327,
+   "usage": {
+    "total_tokens": 28130,
+    "completion_tokens": 725,
+    "prompt_tokens": 27405,
+    "completion_tokens_details": {
+     "reasoning_tokens": 259,
+     "text_tokens": 466
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 2024,
+     "video_tokens": 24804,
+     "image_tokens": 577,
+     "cached_tokens": 28416
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      \"A car is seen driving on the road at night.\",\n      \"At approximately 237.0s, the car crashes into a brick wall/structure, creating a large cloud of smoke and dust.\",\n      \"The car remains stationary and damaged against the wall in the following frames.\"\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full\",\n    \"time_range_sec\": [\n      235.5,\n      240.0\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"237.0s\",\n      \"modality\": \"visual\",\n      \"observation\": \"A car crashes into a wall, producing smoke and debris.\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"238.0s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The crashed car is visible with significant damage and smoke.\",\n      \"anchor\": \"video_tubelet_storyboard_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {\n    \"A. Stealing\": false,\n    \"B. Robbery\": false,\n    \"C. Explosion\": false,\n    \"D. RoadAccidents\": true\n  },\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+    "reasoning_content": "The user wants me to identify if there is an anomaly in the surveillance footage and what kind.\nThe options are: A. Stealing, B. Robbery, C. Explosion, D. RoadAccidents.\n\nLooking at the video frames:\n- Around 05:03:55 (235.5s), a car is seen driving.\n- At 05:03:57 (237.0s), the car crashes into a wall/structure, creating a lot of smoke/dust.\n- The car is severely damaged and stopped against the wall.\n- This is clearly a road accident.\n\nLet's check the options:\nA. Stealing - No evidence of stealing.\nB. Robbery - No evidence of robbery.\nC. Explosion - There is smoke/dust, but it's from a crash, not an explosion.\nD. RoadAccidents - A car crashes into a wall. This fits perfectly.\n\nEvidence:\n- At t=237.0s, a car crashes into a wall, producing smoke.\n- The car remains crashed against the wall in subsequent frames.\n- This is a road accident.\n\nI will formulate the JSON response.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-2b45837b-dc33-95eb-85b3-9bec305875dc",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 21 column 4 (char 625)",
+     "response_chars": 888
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1396
+    }
+   ]
+  },
+  "computed_global_timeline_response": null,
+  "computed_global_timeline_meta": null,
+  "global_timeline_pass": false,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 21,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 124709452,
+  "evidence_bytes": 2665070,
+  "compression_ratio": 0.0214,
+  "original_tokens": 31177363,
+  "compressed_tokens": 666268,
+  "token_saving_ratio": 0.9786,
+  "token_saving_ratio_raw": 0.9786,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 53.679
+ }
+]

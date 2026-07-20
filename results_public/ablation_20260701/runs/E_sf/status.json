@@ -1,0 +1,10 @@
+{
+ "total": 4,
+ "launched": 4,
+ "completed": 3,
+ "failed": 0,
+ "running": [
+  "E_sf/nextqa/s1"
+ ],
+ "ts": 1783321684.8543365
+}

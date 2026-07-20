@@ -1,0 +1,27 @@
+{
+ "config": {
+  "label": "Video-MME long 100 (raw, Bailian pool)",
+  "platform": "bailian",
+  "model": "qwen3.6-plus + pool",
+  "mode": "raw video via OSS",
+  "notes": "mixed-model pool; quota-limited",
+  "source_globs": [
+   "outputs/direct_raw_long_qwen36plus_20260625/s*/results.jsonl",
+   "outputs/direct_raw_long_pool_20260625/s*/results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 100,
+  "completed": 29,
+  "failed": 71,
+  "correct": 21,
+  "acc_over_completed_pct": 72.4,
+  "acc_incl_failures_pct": 21.0,
+  "failure_classes": {
+   "(none)": 8,
+   "quota_or_capability": 3,
+   "all_models_exhausted": 59,
+   "content_inspection": 1
+  }
+ }
+}

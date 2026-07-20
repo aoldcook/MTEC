@@ -1,0 +1,466 @@
+[
+ {
+  "record_key": "video:movie101_58:mlvu73",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_no_query_retrieval/mlvu/s1/media/video/movie101_58.mp4",
+  "question": "What is the man's reaction after the reporter asks several questions in a row?\n['A. Pleased' 'B. Happy' 'C. Gets angry and ends the interview' 'D. Sad']\nRespond with only the option letter.",
+  "ground_truth": "C",
+  "Answer": "C",
+  "raw_response": "FINAL_ANSWER: C",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1898,
+     "height": 788,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "605.024000",
+    "size": "165542756"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_no_query_retrieval/mlvu/s1/media/video/movie101_58.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "movie101_58",
+  "question_id": "mlvu73",
+  "api_meta": {
+   "api_elapsed_seconds": 5.832,
+   "usage": {
+    "total_tokens": 60834,
+    "completion_tokens": 6,
+    "prompt_tokens": 60828,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 32142,
+     "video_tokens": 26276,
+     "image_tokens": 2410,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-db6ceb58-077e-9702-abd7-0e3d8edc3d76"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 5.832,
+   "usage": {
+    "total_tokens": 60834,
+    "completion_tokens": 6,
+    "prompt_tokens": 60828,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 32142,
+     "video_tokens": 26276,
+     "image_tokens": 2410,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-db6ceb58-077e-9702-abd7-0e3d8edc3d76"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"time_range\": \"01:51-02:10\",\n        \"description\": \"The reporter asks the man a series of probing questions about his biological parents, solitude in his work, and whether he is seeking redemption through his paintings.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      },\n      {\n        \"time_range\": \"02:10-02:18\",\n        \"description\": \"The man's expression becomes stern and annoyed. He abruptly says 'We'll talk again,' stands up, and walks away, effectively ending the interview.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_or_question_scope\",\n    \"time_range_sec\": [\n      111,\n      138\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"01:51-02:10\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"The reporter asks the man a series of probing questions about his biological parents, solitude in his work, and whether he is seeking redemption through his paintings.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"02:10-02:18\",\n      \"modality\": \"visual|video|asr\",\n      \"observation\": \"The man's expression becomes stern and annoyed. He abruptly says 'We'll talk again,' stands up, and walks away, effectively ending the interview.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": \"\"\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 16.574,
+   "usage": {
+    "total_tokens": 32610,
+    "completion_tokens": 737,
+    "prompt_tokens": 31873,
+    "completion_tokens_details": {
+     "reasoning_tokens": 153,
+     "text_tokens": 584
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 3187,
+     "video_tokens": 26276,
+     "image_tokens": 2410,
+     "cached_tokens": 32768
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"time_range\": \"01:51-02:10\",\n        \"description\": \"The reporter asks the man a series of probing questions about his biological parents, solitude in his work, and whether he is seeking redemption through his paintings.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      },\n      {\n        \"time_range\": \"02:10-02:18\",\n        \"description\": \"The man's expression becomes stern and annoyed. He abruptly says 'We'll talk again,' stands up, and walks away, effectively ending the interview.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_or_question_scope\",\n    \"time_range_sec\": [\n      111,\n      138\n    ],\n    \"confidence\": 0.95\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"01:51-02:10\",\n      \"modality\": \"visual|video\",\n      \"observation\": \"The reporter asks the man a series of probing questions about his biological parents, solitude in his work, and whether he is seeking redemption through his paintings.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"02:10-02:18\",\n      \"modality\": \"visual|video|asr\",\n      \"observation\": \"The man's expression becomes stern and annoyed. He abruptly says 'We'll talk again,' stands up, and walks away, effectively ending the interview.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": \"\"\n}\n```",
+    "reasoning_content": "The user wants to know the man's reaction after the reporter asks several questions in a row.\nLooking at the video around 01:51-02:18:\nThe reporter asks about his biological parents, solitude, and seeking redemption.\nThe man's expression becomes stern and annoyed.\nHe says \"We'll talk again\" and walks away, ending the interview.\nThis matches option C: Gets angry and ends the interview.\n\nEvidence:\n- 01:51-02:10: Reporter asks probing questions.\n- 02:10-02:18: Man looks annoyed, says \"We'll talk again\", and leaves.\n\nI will formulate the JSON response.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-121cf868-4a0d-9041-8a1a-fb3f95f0bd3a",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 23 column 4 (char 866)",
+     "response_chars": 935
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 41 column 6 (char 1411)",
+     "response_chars": 1753
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1935
+    }
+   ]
+  },
+  "computed_global_timeline_response": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"time_range\": \"01:51-02:10\",\n          \"description\": \"The reporter asks the man a series of probing questions about his biological parents, solitude in his work, and whether he is seeking redemption through his paintings.\"\n        },\n        {\n          \"time_range\": \"02:10-02:18\",\n          \"description\": \"The man's expression becomes stern and annoyed. He abruptly says 'We'll talk again,' stands up, and walks away, effectively ending the interview.\"\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [],\n    \"target_time_ranges\": [\n      \"01:51-02:18\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.95\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"01:51-02:10\",\n      \"scene\": \"Art gallery interview\",\n      \"actions\": [\n        \"Reporter asks about biological parents\",\n        \"Reporter asks about solitude in works\",\n        \"Reporter asks about seeking redemption\"\n      ],\n      \"objects\": [\n        \"Reporter\",\n        \"Man (artist)\"\n      ],\n      \"visual_cues\": [\n        \"Reporter speaking intensely\",\n        \"Man looking increasingly uncomfortable\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"time_range\": \"02:10-02:18\",\n      \"scene\": \"Art gallery interview\",\n      \"actions\": [\n        \"Man looks annoyed/angry\",\n        \"Man says 'We'll talk again'\",\n        \"Man stands up and leaves\"\n      ],\n      \"objects\": [\n        \"Man (artist)\",\n        \"Reporter\"\n      ],\n      \"visual_cues\": [\n        \"Man's stern facial expression\",\n        \"Man walking",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 23.274,
+   "usage": {
+    "total_tokens": 25701,
+    "completion_tokens": 1060,
+    "prompt_tokens": 24641,
+    "completion_tokens_details": {
+     "reasoning_tokens": 539,
+     "text_tokens": 521
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 23714,
+     "cached_tokens": 0,
+     "text_tokens": 927
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"time_range\": \"01:51-02:10\",\n          \"description\": \"The reporter asks the man a series of probing questions about his biological parents, solitude in his work, and whether he is seeking redemption through his paintings.\"\n        },\n        {\n          \"time_range\": \"02:10-02:18\",\n          \"description\": \"The man's expression becomes stern and annoyed. He abruptly says 'We'll talk again,' stands up, and walks away, effectively ending the interview.\"\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [],\n    \"target_time_ranges\": [\n      \"01:51-02:18\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 0.95\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"01:51-02:10\",\n      \"scene\": \"Art gallery interview\",\n      \"actions\": [\n        \"Reporter asks about biological parents\",\n        \"Reporter asks about solitude in works\",\n        \"Reporter asks about seeking redemption\"\n      ],\n      \"objects\": [\n        \"Reporter\",\n        \"Man (artist)\"\n      ],\n      \"visual_cues\": [\n        \"Reporter speaking intensely\",\n        \"Man looking increasingly uncomfortable\"\n      ],\n      \"confidence\": 0.9\n    },\n    {\n      \"time_range\": \"02:10-02:18\",\n      \"scene\": \"Art gallery interview\",\n      \"actions\": [\n        \"Man looks annoyed/angry\",\n        \"Man says 'We'll talk again'\",\n        \"Man stands up and leaves\"\n      ],\n      \"objects\": [\n        \"Man (artist)\",\n        \"Reporter\"\n      ],\n      \"visual_cues\": [\n        \"Man's stern facial expression\",\n        \"Man walking",
+    "reasoning_content": "The user wants to know the man's reaction after the reporter asks several questions in a row.\nI need to find the scene where a reporter is interviewing a man.\nLooking at the timeline:\n- 00:59 - 01:03: A man is being congratulated.\n- 01:03 - 01:08: A female reporter is speaking to him.\n- 01:08 - 01:12: They are sitting and talking.\n- 01:12 - 01:23: The reporter asks questions, the man answers.\n- 01:23 - 01:31: The reporter asks more questions about his childhood in an orphanage.\n- 01:31 - 01:42: The man looks uncomfortable, puts his hands together, looks down.\n- 01:42 - 01:51: The man talks about his memories being warm.\n- 01:51 - 02:03: The reporter asks about his biological parents and mentions seeing \"solitude\" in his works.\n- 02:03 - 02:10: The reporter asks if he is trying to seek redemption through his paintings.\n- 02:10 - 02:16: The man looks annoyed/angry, says \"We'll talk again,\" and leaves.\n- 02:16 - 02:18: The reporter says \"Thank you\" as he walks away.\n\nThe man's reaction after the reporter asks several questions in a row (specifically about his parents and seeking redemption) is that he gets angry/annoyed and ends the interview.\n\nLet's check the options:\nA. Pleased\nB. Happy\nC. Gets angry and ends the interview\nD. Sad\n\nThe man clearly gets upset/angry and says \"We'll talk again\" (implying ending the current interview) and walks away. This matches option C.\n\nRelevant time range: 01:51 - 02:18.\nThe reporter asks about biological parents (01:51), solitude (02:00), and seeking redemption (02:06).\nThe man's reaction is visible from 02:10 onwards, where he looks stern, says \"We'll talk again,\" and leaves.\n\nI will formulate the response based on this evidence.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-e1db2f65-0438-9949-a165-5c4a271d6b5e"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": "{\"visual_summary\":\"A man is being interviewed by a reporter at an art exhibition. The reporter asks him personal questions about his past and his motivations. The man becomes visibly annoyed and abruptly ends the interview, walking away.\",\"event_chain\":[{\"time\":\"01:50-02:18\",\"action\":\"The reporter asks the man a series of probing questions about his biological parents and if he is seeking redemption through his art. The man's expression turns from polite to annoyed. He finally says 'We'll talk again' and walks away, ending the interview.\",\"objects\":[\"reporter\",\"man\",\"microphone\"],\"anchor\":\"video_full_timeline_lowres\"}],\"visible_objects\":[\"man\",\"reporter\",\"artworks\",\"microphone\"],\"actions\":[\"asking questions\",\"walking away\",\"ending interview\"],\"question_keywords\":[\"reaction\",\"reporter\",\"questions\",\"row\"],\"option_visual_cues\":{\"A\":{\"support\":[],\"contradiction\":[\"man looks annoyed\",\"man walks away abruptly\"],\"needs_check\":[]},\"B\":{\"support\":[],\"contradiction\":[\"man looks annoyed\",\"man walks away abruptly\"],\"needs_check\":[]},\"C\":{\"support\":[\"man looks annoyed\",\"man says 'We'll talk again' and leaves\"],\"contradiction\":[],\"needs_check\":[]},\"D\":{\"support\":[],\"contradiction\":[\"man's action is to leave abruptly, indicating annoyance/anger rather than just sadness\"],\"needs_check\":[]}},\"absence_checks\":[],\"uncertainty\":false}",
+  "computed_visual_context_meta": {
+   "api_elapsed_seconds": 14.238,
+   "usage": {
+    "total_tokens": 28040,
+    "completion_tokens": 513,
+    "prompt_tokens": 27527,
+    "completion_tokens_details": {
+     "reasoning_tokens": 218,
+     "text_tokens": 295
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 26276,
+     "cached_tokens": 0,
+     "text_tokens": 1251
+    }
+   },
+   "message": {
+    "content": "{\"visual_summary\":\"A man is being interviewed by a reporter at an art exhibition. The reporter asks him personal questions about his past and his motivations. The man becomes visibly annoyed and abruptly ends the interview, walking away.\",\"event_chain\":[{\"time\":\"01:50-02:18\",\"action\":\"The reporter asks the man a series of probing questions about his biological parents and if he is seeking redemption through his art. The man's expression turns from polite to annoyed. He finally says 'We'll talk again' and walks away, ending the interview.\",\"objects\":[\"reporter\",\"man\",\"microphone\"],\"anchor\":\"video_full_timeline_lowres\"}],\"visible_objects\":[\"man\",\"reporter\",\"artworks\",\"microphone\"],\"actions\":[\"asking questions\",\"walking away\",\"ending interview\"],\"question_keywords\":[\"reaction\",\"reporter\",\"questions\",\"row\"],\"option_visual_cues\":{\"A\":{\"support\":[],\"contradiction\":[\"man looks annoyed\",\"man walks away abruptly\"],\"needs_check\":[]},\"B\":{\"support\":[],\"contradiction\":[\"man looks annoyed\",\"man walks away abruptly\"],\"needs_check\":[]},\"C\":{\"support\":[\"man looks annoyed\",\"man says 'We'll talk again' and leaves\"],\"contradiction\":[],\"needs_check\":[]},\"D\":{\"support\":[],\"contradiction\":[\"man's action is to leave abruptly, indicating annoyance/anger rather than just sadness\"],\"needs_check\":[]}},\"absence_checks\":[],\"uncertainty\":false}",
+    "reasoning_content": "The user wants to know the man's reaction after the reporter asks several questions in a row.\nLooking at the video, specifically around 01:50 to 02:18:\n- The reporter (woman) is asking the man (artist) questions.\n- She asks about his biological parents and if they influenced his work.\n- She then asks if he is trying to seek redemption through his paintings.\n- The man looks increasingly uncomfortable and annoyed.\n- At 02:14, he says \"We'll talk again\" and walks away, ending the interview abruptly.\n- This matches option C: Gets angry and ends the interview.\n\nLet's check the options:\nA. Pleased - No, he looks annoyed.\nB. Happy - No.\nC. Gets angry and ends the interview - Yes, he cuts it short and leaves.\nD. Sad - He looks more annoyed/angry than sad, and the action of ending the interview is key.\n\nTherefore, the correct option is C.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-5df4b000-2959-9ddc-9f25-a692110aedce"
+  },
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": true,
+  "video_visual_context_reason": "hard_visual_or_negative_question",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_temporal",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 3,
+   "detail_max_side": 768,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 3,
+  "video_detail_max_side": 768,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": false,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 165542756,
+  "evidence_bytes": 4604957,
+  "compression_ratio": 0.0278,
+  "original_tokens": 41385689,
+  "compressed_tokens": 1151240,
+  "token_saving_ratio": 0.9722,
+  "token_saving_ratio_raw": 0.9722,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_temporal compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 345.441
+ },
+ {
+  "record_key": "video:surveil_171:mlvu100",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_no_query_retrieval/mlvu/s1/media/video/surveil_171.mp4",
+  "question": "Does this surveillance footage contain any anomalies? If yes, which kind of anomaly?\n['A. Stealing' 'B. Robbery' 'C. Explosion' 'D. RoadAccidents']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "D",
+  "raw_response": "FINAL_ANSWER: D",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 320,
+     "height": 240,
+     "r_frame_rate": "30/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    },
+    {
+     "codec_type": "video",
+     "width": 58,
+     "height": 38,
+     "r_frame_rate": "90000/1"
+    }
+   ],
+   "format": {
+    "duration": "602.034000",
+    "size": "124709452"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_no_query_retrieval/mlvu/s1/media/video/surveil_171.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "surveil_171",
+  "question_id": "mlvu100",
+  "api_meta": {
+   "api_elapsed_seconds": 5.281,
+   "usage": {
+    "total_tokens": 54301,
+    "completion_tokens": 6,
+    "prompt_tokens": 54295,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 29219,
+     "video_tokens": 24804,
+     "image_tokens": 272,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-32f91de1-3bd4-9453-95b9-e126f9507cf6"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 5.281,
+   "usage": {
+    "total_tokens": 54301,
+    "completion_tokens": 6,
+    "prompt_tokens": 54295,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 29219,
+     "video_tokens": 24804,
+     "image_tokens": 272,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-32f91de1-3bd4-9453-95b9-e126f9507cf6"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"anomaly_detection\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"timestamp\": \"03:55\",\n        \"description\": \"A car speeds into the frame from the right side.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      },\n      {\n        \"timestamp\": \"03:57\",\n        \"description\": \"The car crashes violently into the brick wall structure in the foreground, creating a large cloud of smoke and debris.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      },\n      {\n        \"timestamp\": \"04:10\",\n        \"description\": \"The car is stationary and heavily damaged against the wall. Smoke continues to rise.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      },\n      {\n        \"timestamp\": \"05:15\",\n        \"description\": \"A person exits the crashed vehicle.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full\",\n    \"time_range_sec\": [\n      0,\n      602\n    ],\n    \"confidence\": 1.0\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"03:55-04:10\",\n      \"modality\": \"visual\",\n      \"observation\": \"A car speeds into the frame and crashes violently into a brick wall, creating smoke and debris.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"04:10-05:15\",\n      \"modality\": \"visual\",\n      \"observation\": \"The crashed car remains stationary against the wall with smoke rising from it.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"05:15\",\n      \"modality\": \"visual\",\n      \"observation\": \"A person is seen exiting the heavily damaged vehicle.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {\n    \"A. Stealing\": false,\n    \"B. Robbery\": false,\n    \"C. Explosion\": false,\n    \"D. RoadAccidents\": true\n  },\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 21.406,
+   "usage": {
+    "total_tokens": 28235,
+    "completion_tokens": 966,
+    "prompt_tokens": 27269,
+    "completion_tokens_details": {
+     "reasoning_tokens": 278,
+     "text_tokens": 688
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 2193,
+     "video_tokens": 24804,
+     "image_tokens": 272,
+     "cached_tokens": 28416
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"anomaly_detection\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"timestamp\": \"03:55\",\n        \"description\": \"A car speeds into the frame from the right side.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      },\n      {\n        \"timestamp\": \"03:57\",\n        \"description\": \"The car crashes violently into the brick wall structure in the foreground, creating a large cloud of smoke and debris.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      },\n      {\n        \"timestamp\": \"04:10\",\n        \"description\": \"The car is stationary and heavily damaged against the wall. Smoke continues to rise.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      },\n      {\n        \"timestamp\": \"05:15\",\n        \"description\": \"A person exits the crashed vehicle.\",\n        \"anchor_link\": \"video_full_timeline_lowres\"\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full\",\n    \"time_range_sec\": [\n      0,\n      602\n    ],\n    \"confidence\": 1.0\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"03:55-04:10\",\n      \"modality\": \"visual\",\n      \"observation\": \"A car speeds into the frame and crashes violently into a brick wall, creating smoke and debris.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"04:10-05:15\",\n      \"modality\": \"visual\",\n      \"observation\": \"The crashed car remains stationary against the wall with smoke rising from it.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"05:15\",\n      \"modality\": \"visual\",\n      \"observation\": \"A person is seen exiting the heavily damaged vehicle.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 1.0\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {\n    \"A. Stealing\": false,\n    \"B. Robbery\": false,\n    \"C. Explosion\": false,\n    \"D. RoadAccidents\": true\n  },\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+    "reasoning_content": "The user wants to identify the type of anomaly in the surveillance footage.\nThe options are:\nA. Stealing\nB. Robbery\nC. Explosion\nD. RoadAccidents\n\nLooking at the video frames:\n- From 00:00 to 03:55, the scene is a quiet street at night with occasional vehicles passing.\n- At 03:55, a car speeds into the frame from the right.\n- At 03:57, the car crashes violently into the brick wall structure in the foreground, creating a large cloud of smoke and debris.\n- From 04:10 onwards, the car is stationary and heavily damaged against the wall, with smoke rising.\n- At 05:15, a person exits the crashed vehicle.\n\nThis clearly depicts a road accident (car crash).\nTherefore, the anomaly is a RoadAccident.\n\nEvidence:\n- 03:55: Car speeds into frame.\n- 03:57: Car crashes into brick wall, smoke and debris.\n- 04:10: Car stationary, damaged, smoke rising.\n- 05:15: Person exits crashed vehicle.\n\nTask family: generic_video_evidence\nQuestion type: anomaly_detection (implied)",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-4c44879f-3631-9739-883c-ccd01fcfe931",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 25 column 8 (char 915)",
+     "response_chars": 972
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 56 column 6 (char 1721)",
+     "response_chars": 1754
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 2233
+    }
+   ]
+  },
+  "computed_global_timeline_response": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"timestamp\": \"03:55\",\n          \"description\": \"A car speeds into the frame from the right side.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        },\n        {\n          \"timestamp\": \"03:57\",\n          \"description\": \"The car crashes violently into the brick wall structure in the foreground, creating a large cloud of smoke and debris.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        },\n        {\n          \"timestamp\": \"04:10\",\n          \"description\": \"The car is stationary and heavily damaged against the wall. Smoke continues to rise.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        },\n        {\n          \"timestamp\": \"05:15\",\n          \"description\": \"A person exits the crashed vehicle.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [],\n    \"target_time_ranges\": [\n      \"03:55-04:10\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 1.0\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:00-03:55\",\n      \"scene\": \"Quiet street at night\",\n      \"actions\": [\n        \"Occasional vehicles passing by in the background\"\n      ],\n      \"objects\": [\n        \"Street\",\n        \"Brick wall\",\n        \"Signpost\"\n      ],\n      \"visual_cues\": [\n        \"Night vision\",\n        \"Street lights\"\n      ],\n      \"confidence\": 1.0\n    },\n    {\n      \"time_range\": \"03:55-04:10\",\n      \"scene\": \"Car crash\",\n      \"actions\": [\n        \"Car speeds into",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 24.049,
+   "usage": {
+    "total_tokens": 26193,
+    "completion_tokens": 1107,
+    "prompt_tokens": 25086,
+    "completion_tokens_details": {
+     "reasoning_tokens": 588,
+     "text_tokens": 519
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 24162,
+     "cached_tokens": 0,
+     "text_tokens": 924
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"generic_video_evidence\",\n    \"evidence_template\": {\n      \"facts\": [\n        {\n          \"timestamp\": \"03:55\",\n          \"description\": \"A car speeds into the frame from the right side.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        },\n        {\n          \"timestamp\": \"03:57\",\n          \"description\": \"The car crashes violently into the brick wall structure in the foreground, creating a large cloud of smoke and debris.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        },\n        {\n          \"timestamp\": \"04:10\",\n          \"description\": \"The car is stationary and heavily damaged against the wall. Smoke continues to rise.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        },\n        {\n          \"timestamp\": \"05:15\",\n          \"description\": \"A person exits the crashed vehicle.\",\n          \"anchor_link\": \"video_full_timeline_lowres\"\n        }\n      ],\n      \"conflicts\": [],\n      \"fallback_needed\": false\n    },\n    \"special_rules\": [],\n    \"target_time_ranges\": [\n      \"03:55-04:10\"\n    ],\n    \"fallback_policy\": \"Resolver outputs evidence only. The final verifier still maps evidence to options. If resolver evidence is incomplete, conflicting, or below confidence gate, re-check the full-video anchor and generic evidence.\",\n    \"confidence\": 1.0\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"00:00-03:55\",\n      \"scene\": \"Quiet street at night\",\n      \"actions\": [\n        \"Occasional vehicles passing by in the background\"\n      ],\n      \"objects\": [\n        \"Street\",\n        \"Brick wall\",\n        \"Signpost\"\n      ],\n      \"visual_cues\": [\n        \"Night vision\",\n        \"Street lights\"\n      ],\n      \"confidence\": 1.0\n    },\n    {\n      \"time_range\": \"03:55-04:10\",\n      \"scene\": \"Car crash\",\n      \"actions\": [\n        \"Car speeds into",
+    "reasoning_content": "The user wants me to analyze a surveillance video and identify if there are any anomalies, specifically choosing from: A. Stealing, B. Robbery, C. Explosion, D. RoadAccidents.\nI need to output a JSON object following a specific schema.\n\n1.  **Analyze the video:**\n    *   The video starts with a quiet street scene at night (05:00:00).\n    *   Around 05:03:55, a car speeds into the frame from the right, loses control, and crashes into a brick wall/structure in the foreground.\n    *   There is a lot of smoke/dust upon impact.\n    *   The car is severely damaged.\n    *   People get out of the car and stand around.\n    *   Other vehicles pass by.\n    *   This is clearly a car accident.\n\n2.  **Map to options:**\n    *   A. Stealing: No.\n    *   B. Robbery: No.\n    *   C. Explosion: There is smoke/dust, but it's from a crash, not an explosion.\n    *   D. RoadAccidents: Yes, a car crashes into a wall.\n\n3.  **Construct the JSON:**\n    *   `task_specific_resolver`: generic_video_evidence.\n    *   `timeline`:\n        *   00:00 - 03:55: Quiet street scene.\n        *   03:55 - 04:10: Car crashes into the wall, smoke/dust appears.\n        *   04:10 - 10:10: Aftermath, people exit the car, smoke clears.\n    *   `question_relevant_time_ranges`: 03:55 - 04:10 (the crash).\n    *   `scene_locator`: The crash scene.\n    *   `global_uncertainties`: None.\n\n4.  **Refine JSON structure:**\n    *   `resolver_type`: \"generic_video_evidence\"\n    *   `evidence_template`: facts about the crash.\n    *   `target_time_ranges`: [\"03:55-04:10\"]\n    *   `timeline`: detailed breakdown.\n    *   `question_relevant_time_ranges`: [{\"time_range\": \"03:55-04:10\", \"reason\": \"Car crash occurs\", \"confidence\": 1.0}]\n    *   `scene_locator`: {\"target_scene\": \"Car crash into wall\", \"time_range\": \"03:55-04:10\", \"confidence\": 1.0}\n\nLet's write the JSON.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-9dc0c880-da74-9a59-8d2f-388d74c5e018"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 2,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 2,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": false,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 21,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 124709452,
+  "evidence_bytes": 2619730,
+  "compression_ratio": 0.021,
+  "original_tokens": 31177363,
+  "compressed_tokens": 654933,
+  "token_saving_ratio": 0.979,
+  "token_saving_ratio_raw": 0.979,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 107.836
+ }
+]

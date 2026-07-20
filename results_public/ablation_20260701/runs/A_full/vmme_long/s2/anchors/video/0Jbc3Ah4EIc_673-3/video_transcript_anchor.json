@@ -1,0 +1,928 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s2/media/video/0Jbc3Ah4EIc.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s2/anchors/video/0Jbc3Ah4EIc_673-3/subtitle/0Jbc3Ah4EIc.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0297",
+   "anchor_link": "video_transcript_anchor_seg_0297",
+   "sequence_index": 297,
+   "time_range_sec": [
+    640.0,
+    645.0
+   ],
+   "text": "maintenance calories is that is the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "calories"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0298",
+   "anchor_link": "video_transcript_anchor_seg_0298",
+   "sequence_index": 298,
+   "time_range_sec": [
+    642.279,
+    647.76
+   ],
+   "text": "amount of food and calories you can eat",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 5.0,
+   "relevance_terms": [
+    "can",
+    "food",
+    "calories"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0299",
+   "anchor_link": "video_transcript_anchor_seg_0299",
+   "sequence_index": 299,
+   "time_range_sec": [
+    645.0,
+    649.959
+   ],
+   "text": "every day to maintain the weight that he",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0577",
+   "anchor_link": "video_transcript_anchor_seg_0577",
+   "sequence_index": 577,
+   "time_range_sec": [
+    1276.24,
+    1279.96
+   ],
+   "text": "feature on here you have to pay for the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0578",
+   "anchor_link": "video_transcript_anchor_seg_0578",
+   "sequence_index": 578,
+   "time_range_sec": [
+    1277.96,
+    1282.159
+   ],
+   "text": "app like invest in your health guys I'm",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 5.0,
+   "relevance_terms": [
+    "app",
+    "your",
+    "health"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0579",
+   "anchor_link": "video_transcript_anchor_seg_0579",
+   "sequence_index": 579,
+   "time_range_sec": [
+    1279.96,
+    1284.32
+   ],
+   "text": "not I'm I and before anyone comments",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0810",
+   "anchor_link": "video_transcript_anchor_seg_0810",
+   "sequence_index": 810,
+   "time_range_sec": [
+    1860.08,
+    1863.519
+   ],
+   "text": "three weeks you you learn so much about",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0811",
+   "anchor_link": "video_transcript_anchor_seg_0811",
+   "sequence_index": 811,
+   "time_range_sec": [
+    1862.08,
+    1865.159
+   ],
+   "text": "the foods you're putting in your body CU",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "food",
+    "your",
+    "body"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0812",
+   "anchor_link": "video_transcript_anchor_seg_0812",
+   "sequence_index": 812,
+   "time_range_sec": [
+    1863.519,
+    1867.36
+   ],
+   "text": "you're tracking it and you're seeing",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "tracking"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0086",
+   "anchor_link": "video_transcript_anchor_seg_0086",
+   "sequence_index": 86,
+   "time_range_sec": [
+    172.079,
+    175.4
+   ],
+   "text": "one thing in your priority list it's the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "your"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0087",
+   "anchor_link": "video_transcript_anchor_seg_0087",
+   "sequence_index": 87,
+   "time_range_sec": [
+    174.159,
+    178.04
+   ],
+   "text": "number one thing is your health and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "your",
+    "health"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0088",
+   "anchor_link": "video_transcript_anchor_seg_0088",
+   "sequence_index": 88,
+   "time_range_sec": [
+    175.4,
+    180.08
+   ],
+   "text": "fitness those people are the ones who",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.12,
+    4.96
+   ],
+   "text": "watch this if you finally want to get Le",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    58.079,
+    63.8
+   ],
+   "text": "see with everybody who who never gets",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0058",
+   "anchor_link": "video_transcript_anchor_seg_0058",
+   "sequence_index": 58,
+   "time_range_sec": [
+    118.079,
+    121.84
+   ],
+   "text": "and you need to First lose this weight",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0089",
+   "anchor_link": "video_transcript_anchor_seg_0089",
+   "sequence_index": 89,
+   "time_range_sec": [
+    178.04,
+    182.599
+   ],
+   "text": "get the best results and those those",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0117",
+   "anchor_link": "video_transcript_anchor_seg_0117",
+   "sequence_index": 117,
+   "time_range_sec": [
+    234.239,
+    238.84
+   ],
+   "text": "girlfriend is number three and getting",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0146",
+   "anchor_link": "video_transcript_anchor_seg_0146",
+   "sequence_index": 146,
+   "time_range_sec": [
+    291.72,
+    295.72
+   ],
+   "text": "that's life you know you try things you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0174",
+   "anchor_link": "video_transcript_anchor_seg_0174",
+   "sequence_index": 174,
+   "time_range_sec": [
+    348.72,
+    352.12
+   ],
+   "text": "established this you're willing to give",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0202",
+   "anchor_link": "video_transcript_anchor_seg_0202",
+   "sequence_index": 202,
+   "time_range_sec": [
+    404.36,
+    407.039
+   ],
+   "text": "can get rid of your belly fat and",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0231",
+   "anchor_link": "video_transcript_anchor_seg_0231",
+   "sequence_index": 231,
+   "time_range_sec": [
+    473.68,
+    479.0
+   ],
+   "text": "going to be 89.2",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0259",
+   "anchor_link": "video_transcript_anchor_seg_0259",
+   "sequence_index": 259,
+   "time_range_sec": [
+    537.959,
+    543.44
+   ],
+   "text": "maintenance so then let's go to chat",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0287",
+   "anchor_link": "video_transcript_anchor_seg_0287",
+   "sequence_index": 287,
+   "time_range_sec": [
+    615.64,
+    620.279
+   ],
+   "text": "this is my logic I like to round it off",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0318",
+   "anchor_link": "video_transcript_anchor_seg_0318",
+   "sequence_index": 318,
+   "time_range_sec": [
+    691.12,
+    694.959
+   ],
+   "text": "have the objective of losing one pound",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0347",
+   "anchor_link": "video_transcript_anchor_seg_0347",
+   "sequence_index": 347,
+   "time_range_sec": [
+    757.199,
+    763.48
+   ],
+   "text": "issues or liver issues if you're a",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0375",
+   "anchor_link": "video_transcript_anchor_seg_0375",
+   "sequence_index": 375,
+   "time_range_sec": [
+    824.519,
+    828.24
+   ],
+   "text": "write that down so now we figured out",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0403",
+   "anchor_link": "video_transcript_anchor_seg_0403",
+   "sequence_index": 403,
+   "time_range_sec": [
+    892.56,
+    898.68
+   ],
+   "text": "say 50 g again I'm just trying to make",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0432",
+   "anchor_link": "video_transcript_anchor_seg_0432",
+   "sequence_index": 432,
+   "time_range_sec": [
+    957.079,
+    960.639
+   ],
+   "text": "deficit is all about burning more",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0460",
+   "anchor_link": "video_transcript_anchor_seg_0460",
+   "sequence_index": 460,
+   "time_range_sec": [
+    1020.319,
+    1024.76
+   ],
+   "text": "then finally the rest figure out for X",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0488",
+   "anchor_link": "video_transcript_anchor_seg_0488",
+   "sequence_index": 488,
+   "time_range_sec": [
+    1078.08,
+    1082.159
+   ],
+   "text": "your goal you finally want to reach your",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0517",
+   "anchor_link": "video_transcript_anchor_seg_0517",
+   "sequence_index": 517,
+   "time_range_sec": [
+    1141.72,
+    1146.12
+   ],
+   "text": "there's lose it there's an app by Jeff",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0545",
+   "anchor_link": "video_transcript_anchor_seg_0545",
+   "sequence_index": 545,
+   "time_range_sec": [
+    1207.08,
+    1212.159
+   ],
+   "text": "the ideas I have is that at Max I want",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0573",
+   "anchor_link": "video_transcript_anchor_seg_0573",
+   "sequence_index": 573,
+   "time_range_sec": [
+    1266.96,
+    1271.76
+   ],
+   "text": "delete all the stuff from oats and you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0605",
+   "anchor_link": "video_transcript_anchor_seg_0605",
+   "sequence_index": 605,
+   "time_range_sec": [
+    1344.12,
+    1348.679
+   ],
+   "text": "oats with some",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0633",
+   "anchor_link": "video_transcript_anchor_seg_0633",
+   "sequence_index": 633,
+   "time_range_sec": [
+    1418.799,
+    1423.039
+   ],
+   "text": "you guys can tell because I obviously",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0661",
+   "anchor_link": "video_transcript_anchor_seg_0661",
+   "sequence_index": 661,
+   "time_range_sec": [
+    1483.36,
+    1488.72
+   ],
+   "text": "so I'm going to put um lean ground beef",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0690",
+   "anchor_link": "video_transcript_anchor_seg_0690",
+   "sequence_index": 690,
+   "time_range_sec": [
+    1556.279,
+    1560.64
+   ],
+   "text": "beef so I'm just going to check that",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0718",
+   "anchor_link": "video_transcript_anchor_seg_0718",
+   "sequence_index": 718,
+   "time_range_sec": [
+    1624.52,
+    1628.36
+   ],
+   "text": "so that's going to give me 30 G so what",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0746",
+   "anchor_link": "video_transcript_anchor_seg_0746",
+   "sequence_index": 746,
+   "time_range_sec": [
+    1693.44,
+    1697.76
+   ],
+   "text": "carbs point4 fats point6 protein so",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0774",
+   "anchor_link": "video_transcript_anchor_seg_0774",
+   "sequence_index": 774,
+   "time_range_sec": [
+    1768.44,
+    1775.32
+   ],
+   "text": "of protein no fats and no carbs right",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0803",
+   "anchor_link": "video_transcript_anchor_seg_0803",
+   "sequence_index": 803,
+   "time_range_sec": [
+    1843.519,
+    1848.12
+   ],
+   "text": "with that I'm going to take that to the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0834",
+   "anchor_link": "video_transcript_anchor_seg_0834",
+   "sequence_index": 834,
+   "time_range_sec": [
+    1916.559,
+    1921.559
+   ],
+   "text": "literally your mass time gravity it's",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0862",
+   "anchor_link": "video_transcript_anchor_seg_0862",
+   "sequence_index": 862,
+   "time_range_sec": [
+    1999.799,
+    2003.44
+   ],
+   "text": "day and you get back to the diet you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0891",
+   "anchor_link": "video_transcript_anchor_seg_0891",
+   "sequence_index": 891,
+   "time_range_sec": [
+    2070.76,
+    2075.879
+   ],
+   "text": "to do with cardio follow me we have the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0919",
+   "anchor_link": "video_transcript_anchor_seg_0919",
+   "sequence_index": 919,
+   "time_range_sec": [
+    2140.28,
+    2144.52
+   ],
+   "text": "walking pad that's the only cardio you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0947",
+   "anchor_link": "video_transcript_anchor_seg_0947",
+   "sequence_index": 947,
+   "time_range_sec": [
+    2266.92,
+    2269.92
+   ],
+   "text": "form here you want to train with",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0976",
+   "anchor_link": "video_transcript_anchor_seg_0976",
+   "sequence_index": 976,
+   "time_range_sec": [
+    2328.64,
+    2332.68
+   ],
+   "text": "flying off because there's so many",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_1004",
+   "anchor_link": "video_transcript_anchor_seg_1004",
+   "sequence_index": 1004,
+   "time_range_sec": [
+    2386.2,
+    2389.2
+   ],
+   "text": "peace",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  }
+ ],
+ "all_segment_count": 1004,
+ "query_retrieval": true,
+ "query_terms": [
+  "functions",
+  "can",
+  "app",
+  "provide",
+  "according",
+  "tracking",
+  "food",
+  "grams",
+  "calories",
+  "providing",
+  "summary",
+  "your",
+  "body",
+  "statistics",
+  "offering",
+  "consultation",
+  "doctor",
+  "health",
+  "professional",
+  "setting",
+  "diet",
+  "plan"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0297",
+   "anchor_link": "video_transcript_anchor_seg_0297",
+   "sequence_index": 297,
+   "time_range_sec": [
+    640.0,
+    645.0
+   ],
+   "text": "maintenance calories is that is the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "calories"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0298",
+   "anchor_link": "video_transcript_anchor_seg_0298",
+   "sequence_index": 298,
+   "time_range_sec": [
+    642.279,
+    647.76
+   ],
+   "text": "amount of food and calories you can eat",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 5.0,
+   "relevance_terms": [
+    "can",
+    "food",
+    "calories"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0299",
+   "anchor_link": "video_transcript_anchor_seg_0299",
+   "sequence_index": 299,
+   "time_range_sec": [
+    645.0,
+    649.959
+   ],
+   "text": "every day to maintain the weight that he",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0577",
+   "anchor_link": "video_transcript_anchor_seg_0577",
+   "sequence_index": 577,
+   "time_range_sec": [
+    1276.24,
+    1279.96
+   ],
+   "text": "feature on here you have to pay for the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0578",
+   "anchor_link": "video_transcript_anchor_seg_0578",
+   "sequence_index": 578,
+   "time_range_sec": [
+    1277.96,
+    1282.159
+   ],
+   "text": "app like invest in your health guys I'm",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 5.0,
+   "relevance_terms": [
+    "app",
+    "your",
+    "health"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0579",
+   "anchor_link": "video_transcript_anchor_seg_0579",
+   "sequence_index": 579,
+   "time_range_sec": [
+    1279.96,
+    1284.32
+   ],
+   "text": "not I'm I and before anyone comments",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0810",
+   "anchor_link": "video_transcript_anchor_seg_0810",
+   "sequence_index": 810,
+   "time_range_sec": [
+    1860.08,
+    1863.519
+   ],
+   "text": "three weeks you you learn so much about",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0811",
+   "anchor_link": "video_transcript_anchor_seg_0811",
+   "sequence_index": 811,
+   "time_range_sec": [
+    1862.08,
+    1865.159
+   ],
+   "text": "the foods you're putting in your body CU",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 4.0,
+   "relevance_terms": [
+    "food",
+    "your",
+    "body"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0812",
+   "anchor_link": "video_transcript_anchor_seg_0812",
+   "sequence_index": 812,
+   "time_range_sec": [
+    1863.519,
+    1867.36
+   ],
+   "text": "you're tracking it and you're seeing",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "tracking"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0086",
+   "anchor_link": "video_transcript_anchor_seg_0086",
+   "sequence_index": 86,
+   "time_range_sec": [
+    172.079,
+    175.4
+   ],
+   "text": "one thing in your priority list it's the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "your"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0087",
+   "anchor_link": "video_transcript_anchor_seg_0087",
+   "sequence_index": 87,
+   "time_range_sec": [
+    174.159,
+    178.04
+   ],
+   "text": "number one thing is your health and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "your",
+    "health"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0088",
+   "anchor_link": "video_transcript_anchor_seg_0088",
+   "sequence_index": 88,
+   "time_range_sec": [
+    175.4,
+    180.08
+   ],
+   "text": "fitness those people are the ones who",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    164.079,
+    188.08
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0086",
+    "video_transcript_anchor_seg_0087",
+    "video_transcript_anchor_seg_0088"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    632.0,
+    657.959
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0297",
+    "video_transcript_anchor_seg_0298",
+    "video_transcript_anchor_seg_0299"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    1268.24,
+    1292.32
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0577",
+    "video_transcript_anchor_seg_0578",
+    "video_transcript_anchor_seg_0579"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    1852.08,
+    1875.36
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0810",
+    "video_transcript_anchor_seg_0811",
+    "video_transcript_anchor_seg_0812"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "watch this if you finally want to get Le you want to be able to go from 30% body fat to 10% body fat without a struggle I will take you through that entire process in this entire video showing you the scientific evidence behind what we're going to be doing and what you need to do step by step these are the same steps that I've done not only myself over the last 10 years repeating this process and improving it using the research data and all the knowledge I have as a medical doctor but the same steps that I've used with all of my clients that I care deeply about because they've invested in me but I want to share that with you finally so the first thing is going to be contrary to what you've been told online what you get online is it's a caloric deficit you need to do this particular diet it's keto and it's all lies to an extent let me make a point I highly recommend you watch the video till the end because if you cannot it's a good indication that you're maybe not prepared to finally get me but with that being said let's not waste any time the number one thing I see with everybody who who never gets lean or who never finally gets to a place where they can be lean the rest of their l",
+ "warnings": []
+}

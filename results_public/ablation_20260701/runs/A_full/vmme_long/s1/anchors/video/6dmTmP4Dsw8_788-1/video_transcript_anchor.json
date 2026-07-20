@@ -1,0 +1,929 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s1/media/video/6dmTmP4Dsw8.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s1/anchors/video/6dmTmP4Dsw8_788-1/subtitle/6dmTmP4Dsw8.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0053",
+   "anchor_link": "video_transcript_anchor_seg_0053",
+   "sequence_index": 53,
+   "time_range_sec": [
+    201.28,
+    207.439
+   ],
+   "text": "the staff we will limit her contct with",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0054",
+   "anchor_link": "video_transcript_anchor_seg_0054",
+   "sequence_index": 54,
+   "time_range_sec": [
+    204.28,
+    211.56
+   ],
+   "text": "people and keep her powers hidden from",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "her",
+    "powers"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0055",
+   "anchor_link": "video_transcript_anchor_seg_0055",
+   "sequence_index": 55,
+   "time_range_sec": [
+    207.439,
+    230.139
+   ],
+   "text": "everyone including armor",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0199",
+   "anchor_link": "video_transcript_anchor_seg_0199",
+   "sequence_index": 199,
+   "time_range_sec": [
+    859.6,
+    865.279
+   ],
+   "text": "you're gorgeous wait what Prince Hans of",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0200",
+   "anchor_link": "video_transcript_anchor_seg_0200",
+   "sequence_index": 200,
+   "time_range_sec": [
+    862.959,
+    869.279
+   ],
+   "text": "the Southern aisle uh Princess Anna of",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "princess",
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0201",
+   "anchor_link": "video_transcript_anchor_seg_0201",
+   "sequence_index": 201,
+   "time_range_sec": [
+    865.279,
+    871.72
+   ],
+   "text": "arendel Princess my lady oh no no that",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "princess"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0577",
+   "anchor_link": "video_transcript_anchor_seg_0577",
+   "sequence_index": 577,
+   "time_range_sec": [
+    2282.92,
+    2287.0
+   ],
+   "text": "weather's get be W by the minute and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0578",
+   "anchor_link": "video_transcript_anchor_seg_0578",
+   "sequence_index": 578,
+   "time_range_sec": [
+    2284.8,
+    2290.24
+   ],
+   "text": "there's been no sign of Princess Anor in",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "princess",
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0579",
+   "anchor_link": "video_transcript_anchor_seg_0579",
+   "sequence_index": 579,
+   "time_range_sec": [
+    2287.0,
+    2293.319
+   ],
+   "text": "some time the people are",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0729",
+   "anchor_link": "video_transcript_anchor_seg_0729",
+   "sequence_index": 729,
+   "time_range_sec": [
+    2916.04,
+    2921.44
+   ],
+   "text": "fire you're so cold what happened Queen",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0730",
+   "anchor_link": "video_transcript_anchor_seg_0730",
+   "sequence_index": 730,
+   "time_range_sec": [
+    2919.24,
+    2922.8
+   ],
+   "text": "Elsa struck her with her powers thank",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "her",
+    "powers"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0731",
+   "anchor_link": "video_transcript_anchor_seg_0731",
+   "sequence_index": 731,
+   "time_range_sec": [
+    2921.44,
+    2925.52
+   ],
+   "text": "you for bringing her back and there's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.49,
+    5.14
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    115.05,
+    121.82
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0051",
+   "anchor_link": "video_transcript_anchor_seg_0051",
+   "sequence_index": 51,
+   "time_range_sec": [
+    195.28,
+    201.28
+   ],
+   "text": "it but until",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0079",
+   "anchor_link": "video_transcript_anchor_seg_0079",
+   "sequence_index": 79,
+   "time_range_sec": [
+    332.28,
+    337.94
+   ],
+   "text": "good now conceal it don't feel it don't",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0104",
+   "anchor_link": "video_transcript_anchor_seg_0104",
+   "sequence_index": 104,
+   "time_range_sec": [
+    448.319,
+    451.319
+   ],
+   "text": "missed",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0129",
+   "anchor_link": "video_transcript_anchor_seg_0129",
+   "sequence_index": 129,
+   "time_range_sec": [
+    562.1,
+    565.21
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0153",
+   "anchor_link": "video_transcript_anchor_seg_0153",
+   "sequence_index": 153,
+   "time_range_sec": [
+    649.639,
+    655.279
+   ],
+   "text": "touchingly dve against the wall the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0178",
+   "anchor_link": "video_transcript_anchor_seg_0178",
+   "sequence_index": 178,
+   "time_range_sec": [
+    763.399,
+    769.44
+   ],
+   "text": "be",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0206",
+   "anchor_link": "video_transcript_anchor_seg_0206",
+   "sequence_index": 206,
+   "time_range_sec": [
+    880.36,
+    887.12
+   ],
+   "text": "probably I mean I should sort of got a",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0231",
+   "anchor_link": "video_transcript_anchor_seg_0231",
+   "sequence_index": 231,
+   "time_range_sec": [
+    1007.839,
+    1012.56
+   ],
+   "text": "the Duke of",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0256",
+   "anchor_link": "video_transcript_anchor_seg_0256",
+   "sequence_index": 256,
+   "time_range_sec": [
+    1077.4,
+    1080.76
+   ],
+   "text": "can't",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0281",
+   "anchor_link": "video_transcript_anchor_seg_0281",
+   "sequence_index": 281,
+   "time_range_sec": [
+    1181.4,
+    1187.48
+   ],
+   "text": "about you they'll be so jealous how many",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0306",
+   "anchor_link": "video_transcript_anchor_seg_0306",
+   "sequence_index": 306,
+   "time_range_sec": [
+    1268.88,
+    1274.559
+   ],
+   "text": "window I mean it's crazy we finish each",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0331",
+   "anchor_link": "video_transcript_anchor_seg_0331",
+   "sequence_index": 331,
+   "time_range_sec": [
+    1369.88,
+    1376.0
+   ],
+   "text": "you marry me can I say something even",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0356",
+   "anchor_link": "video_transcript_anchor_seg_0356",
+   "sequence_index": 356,
+   "time_range_sec": [
+    1443.279,
+    1448.12
+   ],
+   "text": "out I'm sorry Anna you asked for my",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0381",
+   "anchor_link": "video_transcript_anchor_seg_0381",
+   "sequence_index": 381,
+   "time_range_sec": [
+    1526.679,
+    1529.679
+   ],
+   "text": "me",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0406",
+   "anchor_link": "video_transcript_anchor_seg_0406",
+   "sequence_index": 406,
+   "time_range_sec": [
+    1616.6,
+    1623.799
+   ],
+   "text": "r never bother me",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0431",
+   "anchor_link": "video_transcript_anchor_seg_0431",
+   "sequence_index": 431,
+   "time_range_sec": [
+    1733.6,
+    1738.0
+   ],
+   "text": "the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0455",
+   "anchor_link": "video_transcript_anchor_seg_0455",
+   "sequence_index": 455,
+   "time_range_sec": [
+    1857.84,
+    1865.159
+   ],
+   "text": "right that's once again true for all",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0480",
+   "anchor_link": "video_transcript_anchor_seg_0480",
+   "sequence_index": 480,
+   "time_range_sec": [
+    1943.12,
+    1946.559
+   ],
+   "text": "winter in the middle of summer thing",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0505",
+   "anchor_link": "video_transcript_anchor_seg_0505",
+   "sequence_index": 505,
+   "time_range_sec": [
+    2000.799,
+    2008.76
+   ],
+   "text": "why what do we do let me handle it help",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0530",
+   "anchor_link": "video_transcript_anchor_seg_0530",
+   "sequence_index": 530,
+   "time_range_sec": [
+    2111.92,
+    2117.359
+   ],
+   "text": "bring back summer",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0555",
+   "anchor_link": "video_transcript_anchor_seg_0555",
+   "sequence_index": 555,
+   "time_range_sec": [
+    2209.48,
+    2215.28
+   ],
+   "text": "sense Winter's a good time to stay in",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0583",
+   "anchor_link": "video_transcript_anchor_seg_0583",
+   "sequence_index": 583,
+   "time_range_sec": [
+    2301.359,
+    2303.839
+   ],
+   "text": "accompany",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0608",
+   "anchor_link": "video_transcript_anchor_seg_0608",
+   "sequence_index": 608,
+   "time_range_sec": [
+    2388.88,
+    2395.28
+   ],
+   "text": "forever I finally understand For The",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0633",
+   "anchor_link": "video_transcript_anchor_seg_0633",
+   "sequence_index": 633,
+   "time_range_sec": [
+    2475.16,
+    2482.04
+   ],
+   "text": "reverse pleas you all make it wor",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0658",
+   "anchor_link": "video_transcript_anchor_seg_0658",
+   "sequence_index": 658,
+   "time_range_sec": [
+    2568.27,
+    2571.42
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0683",
+   "anchor_link": "video_transcript_anchor_seg_0683",
+   "sequence_index": 683,
+   "time_range_sec": [
+    2680.04,
+    2684.81
+   ],
+   "text": "smell never",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0708",
+   "anchor_link": "video_transcript_anchor_seg_0708",
+   "sequence_index": 708,
+   "time_range_sec": [
+    2793.82,
+    2797.76
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0736",
+   "anchor_link": "video_transcript_anchor_seg_0736",
+   "sequence_index": 736,
+   "time_range_sec": [
+    2932.079,
+    2937.64
+   ],
+   "text": "you I was",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0760",
+   "anchor_link": "video_transcript_anchor_seg_0760",
+   "sequence_index": 760,
+   "time_range_sec": [
+    2999.0,
+    3002.599
+   ],
+   "text": "sh I already",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0785",
+   "anchor_link": "video_transcript_anchor_seg_0785",
+   "sequence_index": 785,
+   "time_range_sec": [
+    3095.599,
+    3101.16
+   ],
+   "text": "H Princess Anna is",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0810",
+   "anchor_link": "video_transcript_anchor_seg_0810",
+   "sequence_index": 810,
+   "time_range_sec": [
+    3177.4,
+    3184.96
+   ],
+   "text": "Anna I tried to save her but it was too",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0835",
+   "anchor_link": "video_transcript_anchor_seg_0835",
+   "sequence_index": 835,
+   "time_range_sec": [
+    3294.079,
+    3297.079
+   ],
+   "text": "course",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0860",
+   "anchor_link": "video_transcript_anchor_seg_0860",
+   "sequence_index": 860,
+   "time_range_sec": [
+    3399.039,
+    3406.24
+   ],
+   "text": "I could I mean I'd like to may I we me",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0885",
+   "anchor_link": "video_transcript_anchor_seg_0885",
+   "sequence_index": 885,
+   "time_range_sec": [
+    3560.64,
+    3563.64
+   ],
+   "text": "Pro",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  }
+ ],
+ "all_segment_count": 885,
+ "query_retrieval": true,
+ "query_terms": [
+  "overarching",
+  "story",
+  "told",
+  "princess",
+  "who",
+  "searches",
+  "her",
+  "long",
+  "lost",
+  "family",
+  "finally",
+  "reunited",
+  "knight",
+  "fights",
+  "evil",
+  "witch",
+  "save",
+  "kingdom",
+  "discovers",
+  "magical",
+  "powers",
+  "consequences",
+  "saves",
+  "awakens",
+  "dragon"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0053",
+   "anchor_link": "video_transcript_anchor_seg_0053",
+   "sequence_index": 53,
+   "time_range_sec": [
+    201.28,
+    207.439
+   ],
+   "text": "the staff we will limit her contct with",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0054",
+   "anchor_link": "video_transcript_anchor_seg_0054",
+   "sequence_index": 54,
+   "time_range_sec": [
+    204.28,
+    211.56
+   ],
+   "text": "people and keep her powers hidden from",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "her",
+    "powers"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0055",
+   "anchor_link": "video_transcript_anchor_seg_0055",
+   "sequence_index": 55,
+   "time_range_sec": [
+    207.439,
+    230.139
+   ],
+   "text": "everyone including armor",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0199",
+   "anchor_link": "video_transcript_anchor_seg_0199",
+   "sequence_index": 199,
+   "time_range_sec": [
+    859.6,
+    865.279
+   ],
+   "text": "you're gorgeous wait what Prince Hans of",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0200",
+   "anchor_link": "video_transcript_anchor_seg_0200",
+   "sequence_index": 200,
+   "time_range_sec": [
+    862.959,
+    869.279
+   ],
+   "text": "the Southern aisle uh Princess Anna of",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "princess",
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0201",
+   "anchor_link": "video_transcript_anchor_seg_0201",
+   "sequence_index": 201,
+   "time_range_sec": [
+    865.279,
+    871.72
+   ],
+   "text": "arendel Princess my lady oh no no that",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "princess"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0577",
+   "anchor_link": "video_transcript_anchor_seg_0577",
+   "sequence_index": 577,
+   "time_range_sec": [
+    2282.92,
+    2287.0
+   ],
+   "text": "weather's get be W by the minute and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0578",
+   "anchor_link": "video_transcript_anchor_seg_0578",
+   "sequence_index": 578,
+   "time_range_sec": [
+    2284.8,
+    2290.24
+   ],
+   "text": "there's been no sign of Princess Anor in",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "princess",
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0579",
+   "anchor_link": "video_transcript_anchor_seg_0579",
+   "sequence_index": 579,
+   "time_range_sec": [
+    2287.0,
+    2293.319
+   ],
+   "text": "some time the people are",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0729",
+   "anchor_link": "video_transcript_anchor_seg_0729",
+   "sequence_index": 729,
+   "time_range_sec": [
+    2916.04,
+    2921.44
+   ],
+   "text": "fire you're so cold what happened Queen",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0730",
+   "anchor_link": "video_transcript_anchor_seg_0730",
+   "sequence_index": 730,
+   "time_range_sec": [
+    2919.24,
+    2922.8
+   ],
+   "text": "Elsa struck her with her powers thank",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "her",
+    "powers"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0731",
+   "anchor_link": "video_transcript_anchor_seg_0731",
+   "sequence_index": 731,
+   "time_range_sec": [
+    2921.44,
+    2925.52
+   ],
+   "text": "you for bringing her back and there's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    193.28,
+    238.139
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0053",
+    "video_transcript_anchor_seg_0054",
+    "video_transcript_anchor_seg_0055"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    851.6,
+    879.72
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0199",
+    "video_transcript_anchor_seg_0200",
+    "video_transcript_anchor_seg_0201"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    2274.92,
+    2301.319
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0577",
+    "video_transcript_anchor_seg_0578",
+    "video_transcript_anchor_seg_0579"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    2908.04,
+    2933.52
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0729",
+    "video_transcript_anchor_seg_0730",
+    "video_transcript_anchor_seg_0731"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "[Music] [Music] come on come on come on go wake the whole cat so this sky is awake so I'm awake so we have to play middle of the night I know that but do you want to build a snowman oh on I no one's around to the magic do the [Music] magic this is amazing watch this hi I'm Olaf and I like warm hug I love you [Music] ol an ice freak be careful Anna don't down Anna mama papa come quick wake [Music] up Elsa what have you done this is getting out of hand Anna she's I cold it was an accident I'm sorry Anna I know what we have to [Music] do [Applause] help please it's my [Applause] [Music] [Applause] daughter born with the powers are cursed born and they're getting stronger you are lucky it wasn't her heart the heart is not so easily changed but the head can be persuaded do what you must I recommend we remove all magic even memories of magic to be safe but don't worry I'll leave the [Music] fun but she won't remember that I have powers it's for the best your power will only grow there is Beauty in your magic but also great Danger you must learn to control it fear will be your enemy we will protect her she can learn to control [Music] it but until then we'll lock the gates we'll reduce th",
+ "warnings": []
+}

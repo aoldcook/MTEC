@@ -1,0 +1,312 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/D_sf/nextqa/s1/media/video/7149839527.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.0,
+    7.0
+   ],
+   "text": "What's the most important thing when you're holding a baby?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "baby",
+    "hold"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    7.0,
+    13.0
+   ],
+   "text": "Keep his head up. It's the down.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    18.0,
+    21.0
+   ],
+   "text": "Like I can hold a glia.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "hold"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    21.0,
+    30.86
+   ],
+   "text": "When she was a baby you could hold her.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "baby",
+    "hold"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    30.86,
+    32.86
+   ],
+   "text": "Oh no.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    13.0,
+    18.0
+   ],
+   "text": "You're doing that really well.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    32.86,
+    34.86
+   ],
+   "text": "Hey, did you plan?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    34.86,
+    40.5
+   ],
+   "text": "I want to cover him up.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.1516,
+   "no_speech_prob": 0.005
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    40.5,
+    42.5
+   ],
+   "text": "Do you think he's cold?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.1516,
+   "no_speech_prob": 0.005
+  }
+ ],
+ "all_segment_count": 9,
+ "query_retrieval": true,
+ "query_terms": [
+  "lady",
+  "support",
+  "boy",
+  "baby",
+  "pram",
+  "hug",
+  "carry",
+  "bag",
+  "cot",
+  "hold",
+  "blue",
+  "arm"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.0,
+    7.0
+   ],
+   "text": "What's the most important thing when you're holding a baby?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "baby",
+    "hold"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    7.0,
+    13.0
+   ],
+   "text": "Keep his head up. It's the down.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    18.0,
+    21.0
+   ],
+   "text": "Like I can hold a glia.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "hold"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    21.0,
+    30.86
+   ],
+   "text": "When she was a baby you could hold her.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 2.667,
+   "relevance_terms": [
+    "baby",
+    "hold"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    30.86,
+    32.86
+   ],
+   "text": "Oh no.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    13.0,
+    18.0
+   ],
+   "text": "You're doing that really well.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6731,
+   "no_speech_prob": 0.1439,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    0.0,
+    40.86
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0001",
+    "video_transcript_anchor_seg_0002",
+    "video_transcript_anchor_seg_0003",
+    "video_transcript_anchor_seg_0004",
+    "video_transcript_anchor_seg_0005",
+    "video_transcript_anchor_seg_0006"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "What's the most important thing when you're holding a baby? Keep his head up. It's the down. You're doing that really well. Like I can hold a glia. When she was a baby you could hold her. Oh no. Hey, did you plan? I want to cover him up. Do you think he's cold?",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

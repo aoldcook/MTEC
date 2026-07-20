@@ -1,0 +1,14 @@
+========================================================================
+ABLATION CONFIG F_no_global_anchor  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[mlvu] config: completed 30/30 (100% completion), acc 73.3% (22/30), median_token_save 99.2%
+      paired vs A on 30 shared keys: config 73.3% (22) vs A 86.7% (26) -> dAcc -13.3 pts
+      token-save median: config 99.2% vs A 96.0% -> d +3.2 pts
+
+[vmme_long] config: completed 40/40 (100% completion), acc 60.0% (24/40), median_token_save 99.3%
+      paired vs A on 28 shared keys: config 46.4% (13) vs A 53.6% (15) -> dAcc -7.1 pts
+      token-save median: config 99.3% vs A 89.4% -> d +9.8 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=58 shared): config 60.3% vs A 70.7% -> dAcc -10.3 pts

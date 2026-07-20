@@ -1,0 +1,43 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/vmme/s0/media/video/80p80ynsZ78.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/videomme_asr_subtitles_base_en_no_vad/80p80ynsZ78.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    90.0,
+    92.0
+   ],
+   "text": "You",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 1,
+ "query_retrieval": true,
+ "query_terms": [
+  "weather",
+  "like",
+  "race",
+  "begins",
+  "foggy",
+  "rainy",
+  "snowing",
+  "cloudy"
+ ],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "You",
+ "warnings": [
+  "Question-driven transcript retrieval found no direct lexical hits; using temporal coverage segments."
+ ]
+}

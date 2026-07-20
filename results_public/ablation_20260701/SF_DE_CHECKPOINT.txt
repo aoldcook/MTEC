@@ -1,0 +1,21 @@
+SF WEAK-MODEL D/E TEST — CHECKPOINT 2026-07-06 03:35:16
+Model: SiliconFlow Qwen/Qwen3-VL-32B-Instruct; base64 (oss off); conc 3; answer-enable-thinking omit.
+Test set: 100 Video-MME short + 100 NExT-QA per config. Baseline=A_sf.
+
+A_sf   completed=180  vmme=86/100seen  nextqa=94/100seen
+D_sf   completed=187  vmme=95/100seen  nextqa=92/100seen
+E_sf   completed=118  vmme=77/79seen  nextqa=41/41seen
+
+STATUS: A_sf DONE (baseline). D_sf DONE (analyzed: -3.0 vs A_sf; nextqa -4.6).
+        E_sf PARTIAL (query-retrieval off) -- resume tomorrow.
+
+RESUME TOMORROW (after server boot):
+  1. restart watchdogs: setsid bash scripts/balance_monitor.sh & ; setsid bash scripts/sf_balance_watchdog.sh &
+  2. finish E_sf (resume-safe, skips completed): bash scripts/launch_config.sh E_sf 3
+     (NOTE: SF hangs intermittently -- if a shard freezes after INPUT_CHECK with stale log mtime,
+      pkill -9 -f 'E_sf/queue.txt'; pkill -9 -f 'runs/E_sf/'; then relaunch. Resume-safe.)
+  3. When E_sf QUEUE_ALL_DONE: /root/miniconda3/envs/venv/bin/python scripts/analyze_config.py E_sf A_sf
+     and scripts/analyze_config.py D_sf A_sf ; compare D/E deltas weak(SF) vs strong(qwen3.7-plus).
+  (analyze_config.py header says 'Bailian qwen3.7-plus' -- COSMETIC hardcoded-label bug; these are SF runs.)
+
+Also pending (Bailian, another day): H (detail-crops), I (task-routing) on vmme80+nextqa50; J_tiny/J_medium on all 4 datasets.

@@ -1,0 +1,48 @@
+========================================================================
+ABLATION CONFIG A_full  vs  archived Config A  [Bailian qwen3.7-plus]
+========================================================================
+
+[vmme] config: completed 80/80 (100% completion), acc 81.2% (65/80), median_token_save 82.0%
+      paired vs A on 80 shared keys: config 81.2% (65) vs A 80.0% (64) -> dAcc +1.2 pts
+      token-save median: config 82.0% vs A 81.5% -> d +0.4 pts
+
+[nextqa] config: completed 50/50 (100% completion), acc 72.0% (36/50), median_token_save 46.6%
+      paired vs A on 50 shared keys: config 72.0% (36) vs A 78.0% (39) -> dAcc -6.0 pts
+      token-save median: config 46.6% vs A 49.4% -> d -2.8 pts
+
+[mlvu] config: completed 30/30 (100% completion), acc 86.7% (26/30), median_token_save 96.0%
+      paired vs A on 30 shared keys: config 86.7% (26) vs A 83.3% (25) -> dAcc +3.3 pts
+      token-save median: config 96.0% vs A 96.1% -> d -0.1 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=160 shared): config 79.4% vs A 80.0% -> dAcc -0.6 pts
+
+========================================================================
+ABLATION CONFIG B_no_evidence  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[vmme] config: completed 80/80 (100% completion), acc 81.2% (65/80), median_token_save 82.0%
+      paired vs A on 80 shared keys: config 81.2% (65) vs A 81.2% (65) -> dAcc +0.0 pts
+      token-save median: config 82.0% vs A 82.0% -> d +0.0 pts
+
+[nextqa] config: completed 50/50 (100% completion), acc 80.0% (40/50), median_token_save 46.6%
+      paired vs A on 50 shared keys: config 80.0% (40) vs A 72.0% (36) -> dAcc +8.0 pts
+      token-save median: config 46.6% vs A 46.6% -> d +0.0 pts
+
+[mlvu] config: completed 30/30 (100% completion), acc 83.3% (25/30), median_token_save 96.0%
+      paired vs A on 30 shared keys: config 83.3% (25) vs A 86.7% (26) -> dAcc -3.3 pts
+      token-save median: config 96.0% vs A 96.0% -> d -0.0 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=160 shared): config 81.2% vs A 79.4% -> dAcc +1.9 pts
+
+========================================================================
+ABLATION CONFIG C_no_timeline  vs  Config A (fresh: A_full)  [Bailian qwen3.7-plus]
+========================================================================
+
+[mlvu] config: completed 30/30 (100% completion), acc 90.0% (27/30), median_token_save 96.0%
+      paired vs A on 30 shared keys: config 90.0% (27) vs A 86.7% (26) -> dAcc +3.3 pts
+      token-save median: config 96.0% vs A 96.0% -> d +0.0 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=30 shared): config 90.0% vs A 86.7% -> dAcc +3.3 pts

@@ -1,0 +1,14 @@
+========================================================================
+ABLATION CONFIG H_sf  vs  Config A (fresh: A_sf)  [Bailian qwen3.7-plus]
+========================================================================
+
+[vmme] config: completed 91/100 (91% completion), acc 64.8% (59/91), median_token_save 81.7%
+      paired vs A on 77 shared keys: config 64.9% (50) vs A 70.1% (54) -> dAcc -5.2 pts
+      token-save median: config 81.7% vs A 78.0% -> d +3.7 pts
+
+[nextqa] config: completed 89/100 (89% completion), acc 77.5% (69/89), median_token_save 52.6%
+      paired vs A on 83 shared keys: config 75.9% (63) vs A 78.3% (65) -> dAcc -2.4 pts
+      token-save median: config 52.6% vs A 41.2% -> d +11.4 pts
+
+------------------------------------------------------------------------
+OVERALL paired (n=160 shared): config 70.6% vs A 74.4% -> dAcc -3.8 pts

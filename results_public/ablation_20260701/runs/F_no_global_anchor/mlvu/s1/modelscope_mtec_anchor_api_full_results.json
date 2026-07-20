@@ -1,0 +1,439 @@
+[
+ {
+  "record_key": "video:movie101_58:mlvu73",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s1/media/video/movie101_58.mp4",
+  "question": "What is the man's reaction after the reporter asks several questions in a row?\n['A. Pleased' 'B. Happy' 'C. Gets angry and ends the interview' 'D. Sad']\nRespond with only the option letter.",
+  "ground_truth": "C",
+  "Answer": "C",
+  "raw_response": "FINAL_ANSWER: C",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1898,
+     "height": 788,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "605.024000",
+    "size": "165542756"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s1/media/video/movie101_58.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "movie101_58",
+  "question_id": "mlvu73",
+  "api_meta": {
+   "api_elapsed_seconds": 3.744,
+   "usage": {
+    "total_tokens": 15760,
+    "completion_tokens": 6,
+    "prompt_tokens": 15754,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 8826,
+     "video_tokens": 2562,
+     "image_tokens": 4366,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-ff27e83c-74e8-9271-92d4-9086cb8d11fe"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 3.744,
+   "usage": {
+    "total_tokens": 15760,
+    "completion_tokens": 6,
+    "prompt_tokens": 15754,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 8826,
+     "video_tokens": 2562,
+     "image_tokens": 4366,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: C",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-ff27e83c-74e8-9271-92d4-9086cb8d11fe"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      \"The man is being interviewed by a reporter.\",\n      \"The man displays an intense and angry expression during the interview.\",\n      \"The reporter appears shocked after the man's reaction.\"\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_or_question_scope\",\n    \"time_range_sec\": [\n      91.52,\n      122.07\n    ],\n    \"confidence\": 0.9\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"106.795s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The man shows an intense and angry expression while being interviewed.\",\n      \"anchor\": \"video_tubelet_storyboard_0001\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"122.07s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The female reporter looks shocked after the man's reaction.\",\n      \"anchor\": \"video_tubelet_storyboard_0001\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"5.7s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The man displays an angry/intense expression when asked about his past and artwork.\",\n      \"anchor\": \"video_anchor_low_fps\",\n      \"scope_match\": true,\n      \"confidence\": 0.85\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 21.807,
+   "usage": {
+    "total_tokens": 11373,
+    "completion_tokens": 1092,
+    "prompt_tokens": 10281,
+    "completion_tokens_details": {
+     "reasoning_tokens": 601,
+     "text_tokens": 491
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 3353,
+     "video_tokens": 2562,
+     "image_tokens": 4366,
+     "cached_tokens": 8704
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"multiple_choice\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      \"The man is being interviewed by a reporter.\",\n      \"The man displays an intense and angry expression during the interview.\",\n      \"The reporter appears shocked after the man's reaction.\"\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_or_question_scope\",\n    \"time_range_sec\": [\n      91.52,\n      122.07\n    ],\n    \"confidence\": 0.9\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"106.795s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The man shows an intense and angry expression while being interviewed.\",\n      \"anchor\": \"video_tubelet_storyboard_0001\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"122.07s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The female reporter looks shocked after the man's reaction.\",\n      \"anchor\": \"video_tubelet_storyboard_0001\",\n      \"scope_match\": true,\n      \"confidence\": 0.9\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"5.7s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The man displays an angry/intense expression when asked about his past and artwork.\",\n      \"anchor\": \"video_anchor_low_fps\",\n      \"scope_match\": true,\n      \"confidence\": 0.85\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+    "reasoning_content": "The user wants to know the man's reaction after the reporter asks several questions in a row.\nLooking at the video frames and transcript:\nAt 4.3s, there's an interview scene.\nAt 5.7s, the man looks intense/angry.\nAt 91.52s - 122.07s, there's a sequence of a man and a woman (reporter?).\nWait, the transcript says:\n\"Maybe he had more things to do.\"\n\"He is more than happy when he's done the job.\"\n\"He didn't really do that anymore.\"\nWait, the visual context hint says: \"A man is interviewed about his past and artwork, showing intense emotions... Interview taking place, reporter asks questions about orphanage and influence on works, man reacts with intense/angry expression.\"\nLet's check the options:\nA. Pleased\nB. Happy\nC. Gets angry and ends the interview\nD. Sad\n\nIn the low fps video:\n4.3s: Interview scene, reporter asks questions.\n5.7s: Man looks angry/intense.\nWait, let's look at the tubelet storyboard 0001:\nbefore t=91.52s: Man with hands together, looking down/sad or intense.\nduring t=106.795s: Man looking up, intense/angry expression.\nafter t=122.07s: Woman (reporter) looking surprised/shocked.\nThis suggests the man gets angry and maybe ends the interview or reacts angrily.\nWait, the option C is \"Gets angry and ends the interview\".\nLet's see the visual context: \"man reacts with intense/angry expression.\"\nIs there an option \"Gets angry and ends the interview\"? Yes, C.\nLet's check the evidence.\nE1: At 91.52s-122.07s, the man is being interviewed. He looks intense/angry at 106.795s, and the woman looks shocked at 122.07s.\nE2: At 4.3s-5.7s, the man is asked about his past and reacts with an intense/angry expression.\nTherefore, the man gets angry.\n\nLet's refine the evidence:\nE1: video_tubelet_storyboard_0001 shows the man looking intense/angry during the interview (106.795s) and the reporter looking shocked afterwards (122.07s).\nE2: video_anchor_low_fps at 5.7s shows the man with an intense/angry expression during the interview.\nThis aligns with option C.\nI will output the JSON with these observations.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-9e0907eb-94e6-9a96-8039-a1072690397a",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 21 column 8 (char 662)",
+     "response_chars": 893
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 39 column 6 (char 1292)",
+     "response_chars": 1611
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1533
+    }
+   ]
+  },
+  "computed_global_timeline_response": "{\"timeline\": [], \"question_relevant_time_ranges\": [], \"scene_locator\": {\"target_scene\": \"\", \"time_range\": \"\", \"confidence\": 0.0}, \"global_uncertainties\": [\"No full-video global anchor was available.\"]}",
+  "computed_global_timeline_meta": {
+   "skipped": "missing_full_video_global_anchor"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": "```json\n{\n  \"visual_summary\": \"A man is interviewed about his past and artwork, showing intense emotions, followed by dramatic scenes including a car crash and the man in distress.\",\n  \"event_chain\": [\n    {\n      \"time\": \"4.3s - 9.66s\",\n      \"action\": \"Interview taking place, reporter asks questions about orphanage and influence on works, man reacts with intense/angry expression.\",\n      \"objects\": [\n        \"reporter\",\n        \"man\",\n        \"paintings\",\n        \"mural\"\n      ],\n      \"anchor\": \"video_keyframe_detail_0001\"\n    },\n    {\n      \"time\": \"12.0s - 17.0s\",\n      \"action\": \"Car driving at night, potential accident scene with person on ground.\",\n      \"objects\": [\n        \"car\",\n        \"road\",\n        \"person\"\n      ],\n      \"anchor\": \"video_tubelet_storyboard_0001\"\n    },\n    {\n      \"time\": \"18.0s - 19.0s\",\n      \"action\": \"Writing in a notebook, man leaning against wall looking distressed.\",\n      \"objects\": [\n        \"notebook\",\n        \"pen\",\n        \"man\"\n      ],\n      \"anchor\": \"video_keyframe_detail_0005\"\n    }\n  ],\n  \"visible_objects\": [\n    \"man\",\n    \"reporter\",\n    \"paintings\",\n    \"mural\",\n    \"car\",\n    \"notebook\"\n  ],\n  \"actions\": [\n    \"interviewing\",\n    \"painting\",",
+  "computed_visual_context_meta": {
+   "api_elapsed_seconds": 23.413,
+   "usage": {
+    "total_tokens": 4910,
+    "completion_tokens": 1175,
+    "prompt_tokens": 3735,
+    "completion_tokens_details": {
+     "reasoning_tokens": 786,
+     "text_tokens": 389
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 2562,
+     "cached_tokens": 0,
+     "text_tokens": 1173
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"visual_summary\": \"A man is interviewed about his past and artwork, showing intense emotions, followed by dramatic scenes including a car crash and the man in distress.\",\n  \"event_chain\": [\n    {\n      \"time\": \"4.3s - 9.66s\",\n      \"action\": \"Interview taking place, reporter asks questions about orphanage and influence on works, man reacts with intense/angry expression.\",\n      \"objects\": [\n        \"reporter\",\n        \"man\",\n        \"paintings\",\n        \"mural\"\n      ],\n      \"anchor\": \"video_keyframe_detail_0001\"\n    },\n    {\n      \"time\": \"12.0s - 17.0s\",\n      \"action\": \"Car driving at night, potential accident scene with person on ground.\",\n      \"objects\": [\n        \"car\",\n        \"road\",\n        \"person\"\n      ],\n      \"anchor\": \"video_tubelet_storyboard_0001\"\n    },\n    {\n      \"time\": \"18.0s - 19.0s\",\n      \"action\": \"Writing in a notebook, man leaning against wall looking distressed.\",\n      \"objects\": [\n        \"notebook\",\n        \"pen\",\n        \"man\"\n      ],\n      \"anchor\": \"video_keyframe_detail_0005\"\n    }\n  ],\n  \"visible_objects\": [\n    \"man\",\n    \"reporter\",\n    \"paintings\",\n    \"mural\",\n    \"car\",\n    \"notebook\"\n  ],\n  \"actions\": [\n    \"interviewing\",\n    \"painting\",\n   ",
+    "reasoning_content": "The user wants me to analyze a video and answer a multiple-choice question about a man's reaction to a reporter's questions.\nHowever, the prompt explicitly says: \"Do not answer the multiple-choice question. Return compact JSON only.\"\nI need to fill out the JSON structure based on the visual content of the provided frames.\n\nFrames analysis:\n- 0.0s - 1.7s: Dark, barely visible.\n- 3.0s: Someone painting a mural (red outlines, grey fill).\n- 4.3s: Art gallery, people looking at paintings. Subtitle: \"that you grew up in an orphanage.\"\n- 5.3s: Close up of a man with a mustache, looking serious/sad. Subtitle: \"Did they influence your works?\"\n- 6.8s: Another man (reporter?) with glasses and a cap, looking at the first man.\n- 7.48s: Mural on a wall showing a boy with a guitar, barbed wire, etc. Subtitle: \"When you were kids,\"\n- 8.16s: Dark room, bar setting. Subtitle: \"I use 28 Jun 3/200 shop.\"\n- 8.84s: Man with cap and glasses talking. Subtitle: \"This record has a history.\"\n- 9.66s: First man looking intense/angry. Subtitle: \"It shocked the whole neighbourhood.\"\n- 11.0s: Framed newspaper clipping on a brick wall.\n- 12.0s: Car driving on a dark road.\n- 13.0s - 17.0s: Dark, car crash scene? Someone lying on the ground.\n- 18.0s: Writing in a notebook \"Death Note\".\n- 19.0s: Man leaning against a wall, looking distressed/crying.\n- 20.0s: Car driving at night. Subtitle: \"your family is still the most dependable.\"\n\nThe question asks about the man's reaction after the reporter asks several questions.\nIn the frames around 5.3s - 9.66s, there is an interview-like setting.\nFrame 5.3s: \"Did they influence your works?\"\nFrame 9.66s: The man looks angry/intense.\nThe options are A. Pleased, B. Happy, C. Gets angry and ends the interview, D. Sad.\nLooking at frame 9.66s, he looks angry. Frame 19.0s he looks distressed.\nBut I must not answer the question. I just need to provide the JSON.\n\nVisual summary: A man is being interviewed about his past and artwork, followed by scenes of a car crash and distress.\nEvent chain:\n- Interview scene where a reporter asks questions about the man's past (orphanage).\n- Man looks serious/angry.\n- Flashback or related scenes of a car accident and a \"Death Note\".\n- Man crying/leaning on a wall.\n\nVisible objects: Paintings, mural, reporter, man, car, notebook.\nActions: Painting, interviewing, driving, crashing, writing, crying.\nQuestion keywords: man's reaction, reporter, questions.\nOption visual cues:\n- A (Pleased): No visual support.\n- B (Happy): No visual support.\n- C (Gets angry): Frame 9.66s shows an intense/angry expression.\n- D (Sad): Frame 19.0s shows distress/sadness.\n\nI will formulate the JSON.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-f9bc3cf3-62e4-9b10-a01f-8403c67e7c03"
+  },
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": true,
+  "video_visual_context_reason": "hard_visual_or_negative_question",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": false,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_temporal",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 7,
+   "detail_max_side": 768,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 7,
+  "video_detail_max_side": 768,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 3,
+  "question_relevant_time_windows": [
+   {
+    "time_range_sec": [
+     91.52,
+     122.07
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0007",
+     "video_transcript_anchor_seg_0008",
+     "video_transcript_anchor_seg_0009"
+    ],
+    "source": "question_relevant_transcript"
+   }
+  ],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 165542756,
+  "evidence_bytes": 1356752,
+  "compression_ratio": 0.0082,
+  "original_tokens": 41385689,
+  "compressed_tokens": 339188,
+  "token_saving_ratio": 0.9918,
+  "token_saving_ratio_raw": 0.9918,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_temporal compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 332.054
+ },
+ {
+  "record_key": "video:surveil_171:mlvu100",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s1/media/video/surveil_171.mp4",
+  "question": "Does this surveillance footage contain any anomalies? If yes, which kind of anomaly?\n['A. Stealing' 'B. Robbery' 'C. Explosion' 'D. RoadAccidents']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "D",
+  "raw_response": "FINAL_ANSWER: D",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 320,
+     "height": 240,
+     "r_frame_rate": "30/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    },
+    {
+     "codec_type": "video",
+     "width": 58,
+     "height": 38,
+     "r_frame_rate": "90000/1"
+    }
+   ],
+   "format": {
+    "duration": "602.034000",
+    "size": "124709452"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/F_no_global_anchor/mlvu/s1/media/video/surveil_171.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "surveil_171",
+  "question_id": "mlvu100",
+  "api_meta": {
+   "api_elapsed_seconds": 1.515,
+   "usage": {
+    "total_tokens": 6426,
+    "completion_tokens": 6,
+    "prompt_tokens": 6420,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 5201,
+     "video_tokens": 642,
+     "image_tokens": 577,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-ac5b73db-6992-9629-905f-36daf11f2c9a"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 1.515,
+   "usage": {
+    "total_tokens": 6426,
+    "completion_tokens": 6,
+    "prompt_tokens": 6420,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 5201,
+     "video_tokens": 642,
+     "image_tokens": 577,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-ac5b73db-6992-9629-905f-36daf11f2c9a"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"anomaly_detection\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      \"A vehicle is seen driving on the road at night.\",\n      \"At approximately 05:03:57, a car crashes into a brick wall, creating a large cloud of dust and debris.\",\n      \"The car remains crashed against the wall with significant damage and scattered bricks.\"\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [\n      0,\n      602\n    ],\n    \"confidence\": 1.0\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"237.0s\",\n      \"modality\": \"visual\",\n      \"observation\": \"A vehicle crashes into a brick wall, generating a large cloud of dust and smoke.\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"238.5s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The crashed vehicle is stationary against the wall with debris scattered on the ground.\",\n      \"anchor\": \"video_tubelet_storyboard_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"05:03:57\",\n      \"modality\": \"visual\",\n      \"observation\": \"Low-FPS video confirms a car collision with a wall, resulting in a road accident with debris.\",\n      \"anchor\": \"video_anchor_low_fps\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {\n    \"A. Stealing\": false,\n    \"B. Robbery\": false,\n    \"C. Explosion\": false,\n    \"D. RoadAccidents\": true\n  },\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 20.799,
+   "usage": {
+    "total_tokens": 4249,
+    "completion_tokens": 1007,
+    "prompt_tokens": 3242,
+    "completion_tokens_details": {
+     "reasoning_tokens": 443,
+     "text_tokens": 564
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 2023,
+     "video_tokens": 642,
+     "image_tokens": 577,
+     "cached_tokens": 2176
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"anomaly_detection\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      \"A vehicle is seen driving on the road at night.\",\n      \"At approximately 05:03:57, a car crashes into a brick wall, creating a large cloud of dust and debris.\",\n      \"The car remains crashed against the wall with significant damage and scattered bricks.\"\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [\n      0,\n      602\n    ],\n    \"confidence\": 1.0\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"237.0s\",\n      \"modality\": \"visual\",\n      \"observation\": \"A vehicle crashes into a brick wall, generating a large cloud of dust and smoke.\",\n      \"anchor\": \"video_tubelet_storyboard_0002\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"238.5s\",\n      \"modality\": \"visual\",\n      \"observation\": \"The crashed vehicle is stationary against the wall with debris scattered on the ground.\",\n      \"anchor\": \"video_tubelet_storyboard_0003\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"05:03:57\",\n      \"modality\": \"visual\",\n      \"observation\": \"Low-FPS video confirms a car collision with a wall, resulting in a road accident with debris.\",\n      \"anchor\": \"video_anchor_low_fps\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {\n    \"A. Stealing\": false,\n    \"B. Robbery\": false,\n    \"C. Explosion\": false,\n    \"D. RoadAccidents\": true\n  },\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+    "reasoning_content": "The user wants to identify the type of anomaly in the surveillance footage.\nOptions: A. Stealing, B. Robbery, C. Explosion, D. RoadAccidents.\n\nLooking at the video frames:\n- At 05:01:37 (t=97.5s), a truck is driving on the road.\n- At 05:03:57 (t=237.0s), a car crashes into a wall/structure, creating a lot of smoke/dust.\n- At 05:04:02 (t=238.5s), the car is crashed into the wall, smoke is clearing.\n- At 05:04:12 (t=10.5s in low fps, wait, the timestamp says 05:04:12), the car is stationary, crashed into the wall, debris is on the ground.\n- At 05:05:00, the car is still there.\n- At 05:09:01, the car is still there, people are around.\n\nThis is clearly a car crash, which falls under \"RoadAccidents\".\nThere is no explosion (just dust/smoke from impact), no stealing, no robbery.\n\nEvidence:\n- E1: At t=237.0s, a vehicle crashes into a brick wall, generating a cloud of dust/smoke. (video_tubelet_storyboard_0002)\n- E2: At t=238.5s, the vehicle is stationary against the wall with debris scattered around. (video_tubelet_storyboard_0003)\n- E3: Low fps video shows a car crashing into a wall around 05:03:57 and remaining there with debris. (video_anchor_low_fps)\n\nTask family: generic_video_evidence.\nQuestion type: anomaly_detection / video_classification.\nTemporal scope: full video, specifically around 237s.\n\nLet's format the JSON.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-e324c6e2-246e-9ade-af26-949a768add99",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 21 column 4 (char 712)",
+     "response_chars": 779
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 56 column 4 (char 1589)",
+     "response_chars": 1616
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1745
+    }
+   ]
+  },
+  "computed_global_timeline_response": "{\"timeline\": [], \"question_relevant_time_ranges\": [], \"scene_locator\": {\"target_scene\": \"\", \"time_range\": \"\", \"confidence\": 0.0}, \"global_uncertainties\": [\"No full-video global anchor was available.\"]}",
+  "computed_global_timeline_meta": {
+   "skipped": "missing_full_video_global_anchor"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": false,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 21,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 124709452,
+  "evidence_bytes": 422567,
+  "compression_ratio": 0.0034,
+  "original_tokens": 31177363,
+  "compressed_tokens": 105642,
+  "token_saving_ratio": 0.9966,
+  "token_saving_ratio_raw": 0.9966,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 73.141
+ }
+]

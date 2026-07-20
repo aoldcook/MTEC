@@ -1,0 +1,54 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/nextqa/s1/media/video/4642870129.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    9.3,
+    11.3
+   ],
+   "text": "Holy cow",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.2103,
+   "no_speech_prob": 0.0152
+  }
+ ],
+ "all_segment_count": 1,
+ "query_retrieval": true,
+ "query_terms": [
+  "boy",
+  "control",
+  "direction",
+  "bicycle",
+  "push",
+  "using",
+  "legs",
+  "pull",
+  "back",
+  "path",
+  "remote",
+  "controller",
+  "controlling",
+  "handle",
+  "pedal",
+  "wheels"
+ ],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "Holy cow",
+ "warnings": [
+  "No embedded subtitle stream extracted.",
+  "Question-driven transcript retrieval found no direct lexical hits; using temporal coverage segments."
+ ]
+}

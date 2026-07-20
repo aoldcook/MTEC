@@ -1,0 +1,1054 @@
+{
+ "anchor_id": "video_evidence_extractor",
+ "anchor_link": "video_evidence_extractor",
+ "type": "video_task_aware_evidence_extraction",
+ "role": "Pre-LLM task-aware evidence extractor using scene cuts, motion saliency, OCR regions, ASR windows, scoring, and diversity hints.",
+ "source_video_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_full/vmme_long/s1/media/video/6dmTmP4Dsw8.mp4",
+ "query_profile": {
+  "question_types": [
+   "temporal_order",
+   "action_motion"
+  ],
+  "task_family": {
+   "task_family": "domain_intention",
+   "resolver_class": "DomainIntentResolver",
+   "priority": "medium",
+   "confidence": 0.76,
+   "route_reasons": [
+    "intent or domain keyword"
+   ],
+   "options_detected": [
+    "A",
+    "D"
+   ],
+   "required_evidence": [
+    "domain_ontology",
+    "event_facts",
+    "ranked_intents",
+    "negative_evidence"
+   ]
+  },
+  "target_terms": [
+   "overarching",
+   "story",
+   "told",
+   "princess",
+   "who",
+   "searches",
+   "her",
+   "long",
+   "lost",
+   "family",
+   "finally",
+   "reunited",
+   "knight",
+   "fights",
+   "evil",
+   "witch",
+   "save",
+   "kingdom",
+   "discovers",
+   "magical",
+   "powers",
+   "their",
+   "consequences",
+   "saves",
+   "awakens",
+   "dragon"
+  ],
+  "required_evidence": [
+   "global_timeline",
+   "low_fps_context",
+   "event_boundaries",
+   "before_during_after",
+   "motion_region",
+   "state_change_tubelet",
+   "domain_ontology",
+   "event_facts",
+   "ranked_intents",
+   "negative_evidence"
+  ]
+ },
+ "temporal_scope": {
+  "type": "end",
+  "time_range_sec": [
+   3546.691,
+   3561.691
+  ],
+  "confidence": 0.86,
+  "source": "keyword_end",
+  "instructions": [
+   "Use evidence inside temporal_scope first.",
+   "Mark evidence outside temporal_scope as scope_match=false and do not use it for final decisions unless no scoped evidence exists."
+  ]
+ },
+ "scene_segments": [
+  {
+   "id": "scene_0001",
+   "time_range_sec": [
+    0.0,
+    0.868
+   ],
+   "duration_sec": 0.868,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0002",
+   "time_range_sec": [
+    0.868,
+    13.514
+   ],
+   "duration_sec": 12.646,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0003",
+   "time_range_sec": [
+    13.514,
+    528.528
+   ],
+   "duration_sec": 515.014,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0004",
+   "time_range_sec": [
+    528.528,
+    533.867
+   ],
+   "duration_sec": 5.339,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0005",
+   "time_range_sec": [
+    533.867,
+    560.56
+   ],
+   "duration_sec": 26.693,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0006",
+   "time_range_sec": [
+    560.56,
+    751.684
+   ],
+   "duration_sec": 191.124,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0007",
+   "time_range_sec": [
+    751.684,
+    752.752
+   ],
+   "duration_sec": 1.068,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0008",
+   "time_range_sec": [
+    752.752,
+    790.123
+   ],
+   "duration_sec": 37.371,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0009",
+   "time_range_sec": [
+    790.123,
+    795.461
+   ],
+   "duration_sec": 5.338,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0010",
+   "time_range_sec": [
+    795.461,
+    800.8
+   ],
+   "duration_sec": 5.339,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0011",
+   "time_range_sec": [
+    800.8,
+    902.235
+   ],
+   "duration_sec": 101.435,
+   "source": "pyscenedetect_adaptive"
+  },
+  {
+   "id": "scene_0012",
+   "time_range_sec": [
+    902.235,
+    939.605
+   ],
+   "duration_sec": 37.37,
+   "source": "pyscenedetect_adaptive"
+  }
+ ],
+ "motion_regions": [
+  {
+   "id": "motion_candidate_0670",
+   "time_sec": 347.347,
+   "frame_index": 10410,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.92655,
+   "motion_intensity": 0.41344,
+   "score": 0.67,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_0694",
+   "time_sec": 359.359,
+   "frame_index": 10770,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.92404,
+   "motion_intensity": 0.29834,
+   "score": 0.61119,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_1022",
+   "time_sec": 538.038,
+   "frame_index": 16125,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.94367,
+   "motion_intensity": 0.30299,
+   "score": 0.62333,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_1079",
+   "time_sec": 566.566,
+   "frame_index": 16980,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.95308,
+   "motion_intensity": 0.29246,
+   "score": 0.62277,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_1721",
+   "time_sec": 890.89,
+   "frame_index": 26700,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.97613,
+   "motion_intensity": 0.26102,
+   "score": 0.61858,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_3483",
+   "time_sec": 1826.324,
+   "frame_index": 54735,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.93693,
+   "motion_intensity": 0.28,
+   "score": 0.60847,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_5314",
+   "time_sec": 2751.749,
+   "frame_index": 82470,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.9168,
+   "motion_intensity": 0.31212,
+   "score": 0.61446,
+   "source": "opencv_frame_difference"
+  },
+  {
+   "id": "motion_candidate_6666",
+   "time_sec": 3453.95,
+   "frame_index": 103515,
+   "bbox_norm": [
+    0.0,
+    0.0,
+    1.0,
+    1.0
+   ],
+   "motion_area_ratio": 0.91213,
+   "motion_intensity": 0.30789,
+   "score": 0.61001,
+   "source": "opencv_frame_difference"
+  }
+ ],
+ "ocr_regions": [],
+ "object_detections": [],
+ "deterministic_evidence": {
+  "version": "deterministic_evidence_engine_v1",
+  "question_analysis": {
+   "question_types": [
+    "action_motion",
+    "temporal_order"
+   ],
+   "task_family": {
+    "task_family": "domain_intention",
+    "resolver_class": "DomainIntentResolver",
+    "priority": "medium",
+    "confidence": 0.76,
+    "route_reasons": [
+     "intent or domain keyword"
+    ],
+    "options_detected": [
+     "A",
+     "D"
+    ],
+    "required_evidence": [
+     "domain_ontology",
+     "event_facts",
+     "ranked_intents",
+     "negative_evidence"
+    ]
+   },
+   "options": {
+    "A": "The story of a princess who searches for her long-lost family and is finally reunited.' 'B. The story of a knight who fights the evil witch to save the kingdom.' 'C. The story of a princess who discovers her magical powers and their consequences.'",
+    "D": "The story of a knight who saves and awakens a princess from a dragon.']"
+   },
+   "target_terms": [
+    "overarching",
+    "story",
+    "told",
+    "princess",
+    "who",
+    "searches",
+    "her",
+    "long",
+    "lost",
+    "family",
+    "finally",
+    "reunited",
+    "knight",
+    "fights",
+    "evil",
+    "witch",
+    "save",
+    "kingdom",
+    "discovers",
+    "magical",
+    "powers",
+    "their",
+    "consequences",
+    "saves",
+    "awakens",
+    "dragon"
+   ]
+  },
+  "temporal_scope": {
+   "type": "end",
+   "time_range_sec": [
+    3546.691,
+    3561.691
+   ],
+   "confidence": 0.86,
+   "source": "keyword_end",
+   "instructions": [
+    "Use evidence inside temporal_scope first.",
+    "Mark evidence outside temporal_scope as scope_match=false and do not use it for final decisions unless no scoped evidence exists."
+   ]
+  },
+  "hard_evidence": {
+   "scoped_motion": [
+    {
+     "id": "motion_candidate_0670",
+     "time_sec": 347.347,
+     "frame_index": 10410,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.92655,
+     "motion_intensity": 0.41344,
+     "score": 0.67,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_0694",
+     "time_sec": 359.359,
+     "frame_index": 10770,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.92404,
+     "motion_intensity": 0.29834,
+     "score": 0.61119,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_1022",
+     "time_sec": 538.038,
+     "frame_index": 16125,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.94367,
+     "motion_intensity": 0.30299,
+     "score": 0.62333,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_1079",
+     "time_sec": 566.566,
+     "frame_index": 16980,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.95308,
+     "motion_intensity": 0.29246,
+     "score": 0.62277,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_1721",
+     "time_sec": 890.89,
+     "frame_index": 26700,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.97613,
+     "motion_intensity": 0.26102,
+     "score": 0.61858,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_3483",
+     "time_sec": 1826.324,
+     "frame_index": 54735,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.93693,
+     "motion_intensity": 0.28,
+     "score": 0.60847,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_5314",
+     "time_sec": 2751.749,
+     "frame_index": 82470,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.9168,
+     "motion_intensity": 0.31212,
+     "score": 0.61446,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    },
+    {
+     "id": "motion_candidate_6666",
+     "time_sec": 3453.95,
+     "frame_index": 103515,
+     "bbox_norm": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+     ],
+     "motion_area_ratio": 0.91213,
+     "motion_intensity": 0.30789,
+     "score": 0.61001,
+     "source": "opencv_frame_difference",
+     "scope_match": false
+    }
+   ],
+   "scoped_ocr": [],
+   "scoped_objects": [],
+   "transcript_scope": [
+    {
+     "anchor_link": "video_transcript_anchor_seg_0053",
+     "time_range_sec": [
+      201.28,
+      207.439
+     ],
+     "text": "the staff we will limit her contct with",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0054",
+     "time_range_sec": [
+      204.28,
+      211.56
+     ],
+     "text": "people and keep her powers hidden from",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0055",
+     "time_range_sec": [
+      207.439,
+      230.139
+     ],
+     "text": "everyone including armor",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0199",
+     "time_range_sec": [
+      859.6,
+      865.279
+     ],
+     "text": "you're gorgeous wait what Prince Hans of",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0200",
+     "time_range_sec": [
+      862.959,
+      869.279
+     ],
+     "text": "the Southern aisle uh Princess Anna of",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0201",
+     "time_range_sec": [
+      865.279,
+      871.72
+     ],
+     "text": "arendel Princess my lady oh no no that",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0577",
+     "time_range_sec": [
+      2282.92,
+      2287.0
+     ],
+     "text": "weather's get be W by the minute and",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0578",
+     "time_range_sec": [
+      2284.8,
+      2290.24
+     ],
+     "text": "there's been no sign of Princess Anor in",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0579",
+     "time_range_sec": [
+      2287.0,
+      2293.319
+     ],
+     "text": "some time the people are",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0729",
+     "time_range_sec": [
+      2916.04,
+      2921.44
+     ],
+     "text": "fire you're so cold what happened Queen",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0730",
+     "time_range_sec": [
+      2919.24,
+      2922.8
+     ],
+     "text": "Elsa struck her with her powers thank",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    },
+    {
+     "anchor_link": "video_transcript_anchor_seg_0731",
+     "time_range_sec": [
+      2921.44,
+      2925.52
+     ],
+     "text": "you for bringing her back and there's",
+     "scope_match": false,
+     "task_match": "normal",
+     "use_for_answer": false,
+     "reason": "Transcript is outside temporal scope."
+    }
+   ]
+  },
+  "evidence_quality": {
+   "missing": [],
+   "conflicts": [],
+   "needs_reextract": false
+  },
+  "constraints_for_llm": [
+   "Evidence extractor must not output candidate_answer, preliminary_answer, best_option, or final answer.",
+   "Every observation must be timestamped and grounded to an anchor_link when available.",
+   "Final verification must evaluate each option independently as supported, contradicted, or unknown.",
+   "Use task_family=domain_intention resolver semantics before generic evidence if confidence is medium/high.",
+   "Do not use evidence outside temporal_scope for the answer unless all scoped evidence is missing.",
+   "For intent questions, rank domain-specific intent hypotheses and include negative evidence."
+  ]
+ },
+ "question_time_windows": [
+  {
+   "time_range_sec": [
+    193.28,
+    238.139
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0053",
+    "video_transcript_anchor_seg_0054",
+    "video_transcript_anchor_seg_0055"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    851.6,
+    879.72
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0199",
+    "video_transcript_anchor_seg_0200",
+    "video_transcript_anchor_seg_0201"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    2274.92,
+    2301.319
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0577",
+    "video_transcript_anchor_seg_0578",
+    "video_transcript_anchor_seg_0579"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    2908.04,
+    2933.52
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0729",
+    "video_transcript_anchor_seg_0730",
+    "video_transcript_anchor_seg_0731"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "priority_time_windows": [
+  {
+   "time_range_sec": [
+    3546.691,
+    3561.691
+   ],
+   "source": "temporal_scope_end"
+  }
+ ],
+ "evidence_units": [
+  {
+   "id": "E_scene_0001",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    0.0,
+    0.868
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": false
+  },
+  {
+   "id": "E_scene_0002",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    0.868,
+    13.514
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": false
+  },
+  {
+   "id": "E_scene_0003",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    13.514,
+    528.528
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": false
+  },
+  {
+   "id": "E_scene_0004",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    528.528,
+    533.867
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": false
+  },
+  {
+   "id": "E_scene_0005",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    533.867,
+    560.56
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": false
+  },
+  {
+   "id": "E_scene_0006",
+   "evidence_type": "global_scene_segment",
+   "time_range_sec": [
+    560.56,
+    751.684
+   ],
+   "event": "Scene segment for global temporal structure and context.",
+   "confidence": 0.65,
+   "source": "pyscenedetect_adaptive",
+   "scope_match": false
+  },
+  {
+   "id": "E_motion_0001",
+   "evidence_type": "motion_saliency",
+   "time_sec": 347.347,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.41344,
+    "motion_area_ratio": 0.92655
+   }
+  },
+  {
+   "id": "E_motion_0002",
+   "evidence_type": "motion_saliency",
+   "time_sec": 359.359,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.29834,
+    "motion_area_ratio": 0.92404
+   }
+  },
+  {
+   "id": "E_motion_0003",
+   "evidence_type": "motion_saliency",
+   "time_sec": 538.038,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.30299,
+    "motion_area_ratio": 0.94367
+   }
+  },
+  {
+   "id": "E_motion_0004",
+   "evidence_type": "motion_saliency",
+   "time_sec": 566.566,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.29246,
+    "motion_area_ratio": 0.95308
+   }
+  },
+  {
+   "id": "E_motion_0005",
+   "evidence_type": "motion_saliency",
+   "time_sec": 890.89,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.26102,
+    "motion_area_ratio": 0.97613
+   }
+  },
+  {
+   "id": "E_motion_0006",
+   "evidence_type": "motion_saliency",
+   "time_sec": 1826.324,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.28,
+    "motion_area_ratio": 0.93693
+   }
+  },
+  {
+   "id": "E_motion_0007",
+   "evidence_type": "motion_saliency",
+   "time_sec": 2751.749,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.31212,
+    "motion_area_ratio": 0.9168
+   }
+  },
+  {
+   "id": "E_motion_0008",
+   "evidence_type": "motion_saliency",
+   "time_sec": 3453.95,
+   "region": {
+    "bbox_norm": [
+     0.0,
+     0.0,
+     1.0,
+     1.0
+    ]
+   },
+   "event": "Frame-difference motion region; inspect nearby before/during/after frames for actions, entries, exits, and state changes.",
+   "confidence": 0.95,
+   "source": "opencv_frame_difference",
+   "scope_match": false,
+   "score_terms": {
+    "motion_intensity": 0.30789,
+    "motion_area_ratio": 0.91213
+   }
+  },
+  {
+   "id": "E_query_window_0001",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    3546.691,
+    3561.691
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.7,
+   "source": "temporal_scope_end",
+   "scope_match": true
+  },
+  {
+   "id": "E_query_window_0002",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    193.28,
+    238.139
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": false
+  },
+  {
+   "id": "E_query_window_0003",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    851.6,
+    879.72
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": false
+  },
+  {
+   "id": "E_query_window_0004",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    2274.92,
+    2301.319
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": false
+  },
+  {
+   "id": "E_query_window_0005",
+   "evidence_type": "query_relevant_time_window",
+   "time_range_sec": [
+    2908.04,
+    2933.52
+   ],
+   "event": "Question-prioritized or ASR-retrieved time window; keep nearby visual anchors.",
+   "confidence": 0.8,
+   "source": "question_relevant_transcript",
+   "scope_match": false
+  }
+ ],
+ "scoring_policy": {
+  "query_relevance": "question type and keyword overlap",
+  "temporal_importance": "scene boundary, motion peak, start/current/count windows, ASR hit windows",
+  "motion_saliency": "OpenCV frame-difference bbox intensity",
+  "ocr_confidence": "Tesseract text confidence and readable crop",
+  "diversity": "prefer different time windows and evidence types before repeating nearby evidence"
+ },
+ "warnings": []
+}

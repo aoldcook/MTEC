@@ -1,0 +1,24 @@
+{
+ "config": {
+  "label": "Video-MME medium 102 (raw, SiliconFlow)",
+  "platform": "siliconflow",
+  "model": "Qwen3-VL-32B-Instruct",
+  "mode": "raw video base64",
+  "notes": "many exceed ~50-80MB base64 ceiling",
+  "source_globs": [
+   "outputs/raw_sf_videomme_medium/s*/results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 102,
+  "completed": 63,
+  "failed": 39,
+  "correct": 34,
+  "acc_over_completed_pct": 54.0,
+  "acc_incl_failures_pct": 33.3,
+  "failure_classes": {
+   "video_too_large": 37,
+   "api_error": 2
+  }
+ }
+}

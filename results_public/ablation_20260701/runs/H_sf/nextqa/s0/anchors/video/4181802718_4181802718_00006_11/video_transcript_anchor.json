@@ -1,0 +1,649 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/H_sf/nextqa/s0/media/video/4181802718.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    35.01,
+    36.85
+   ],
+   "text": "I'm dead",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    36.85,
+    39.23
+   ],
+   "text": "where's my tilts",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    39.23,
+    42.77
+   ],
+   "text": "where is my tilts",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    42.77,
+    45.13
+   ],
+   "text": "where's my tilts",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    45.13,
+    46.53
+   ],
+   "text": "I think it will help you.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    50.18,
+    52.28
+   ],
+   "text": "I've heard you've heard about your new friend.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    53.18,
+    63.64
+   ],
+   "text": "How long have you been here?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    63.84,
+    65.64
+   ],
+   "text": "I've been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    66.1,
+    67.46
+   ],
+   "text": "I've been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    67.46,
+    68.28
+   ],
+   "text": "I've been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    68.28,
+    69.48
+   ],
+   "text": "I've been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    69.84,
+    70.64
+   ],
+   "text": "I have been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.69,
+    5.19
+   ],
+   "text": "he was a little scared",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    5.19,
+    7.09
+   ],
+   "text": "i don't know",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    7.09,
+    10.57
+   ],
+   "text": "I'm dead",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    10.57,
+    14.53
+   ],
+   "text": "ramps",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    14.53,
+    21.6
+   ],
+   "text": "i don't know",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    21.6,
+    30.55
+   ],
+   "text": "he's dead",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    30.55,
+    32.93
+   ],
+   "text": "I'm dead",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    32.93,
+    35.01
+   ],
+   "text": "I'm dead",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    47.03,
+    48.05
+   ],
+   "text": "I know you've already heard.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    70.64,
+    70.9
+   ],
+   "text": "You, you, you have been here?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    71.22,
+    89.98
+   ],
+   "text": "I've heard you",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831
+  }
+ ],
+ "all_segment_count": 23,
+ "query_retrieval": true,
+ "query_terms": [
+  "woman",
+  "white",
+  "get",
+  "dressed",
+  "black",
+  "dresses",
+  "her",
+  "wear",
+  "kimono",
+  "wipe",
+  "his",
+  "mouth",
+  "talking",
+  "hair",
+  "band"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    35.01,
+    36.85
+   ],
+   "text": "I'm dead",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    36.85,
+    39.23
+   ],
+   "text": "where's my tilts",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    39.23,
+    42.77
+   ],
+   "text": "where is my tilts",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    42.77,
+    45.13
+   ],
+   "text": "where's my tilts",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.1487,
+   "no_speech_prob": 0.5469,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    45.13,
+    46.53
+   ],
+   "text": "I think it will help you.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    50.18,
+    52.28
+   ],
+   "text": "I've heard you've heard about your new friend.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    53.18,
+    63.64
+   ],
+   "text": "How long have you been here?",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    63.84,
+    65.64
+   ],
+   "text": "I've been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    66.1,
+    67.46
+   ],
+   "text": "I've been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    67.46,
+    68.28
+   ],
+   "text": "I've been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    68.28,
+    69.48
+   ],
+   "text": "I've been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    69.84,
+    70.64
+   ],
+   "text": "I have been here.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -2.0468,
+   "no_speech_prob": 0.3831,
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "her"
+   ]
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    27.01,
+    78.64
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0009",
+    "video_transcript_anchor_seg_0010",
+    "video_transcript_anchor_seg_0011",
+    "video_transcript_anchor_seg_0012",
+    "video_transcript_anchor_seg_0013",
+    "video_transcript_anchor_seg_0015",
+    "video_transcript_anchor_seg_0016",
+    "video_transcript_anchor_seg_0017",
+    "video_transcript_anchor_seg_0018",
+    "video_transcript_anchor_seg_0019",
+    "video_transcript_anchor_seg_0020",
+    "video_transcript_anchor_seg_0021"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "he was a little scared i don't know I'm dead ramps i don't know he's dead I'm dead I'm dead I'm dead where's my tilts where is my tilts where's my tilts I think it will help you. I know you've already heard. I've heard you've heard about your new friend. How long have you been here? I've been here. I've been here. I've been here. I've been here. I have been here. You, you, you have been here? I've heard you",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}

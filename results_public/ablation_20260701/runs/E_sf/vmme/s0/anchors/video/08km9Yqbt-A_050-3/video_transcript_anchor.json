@@ -1,0 +1,428 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_sf/vmme/s0/media/video/08km9Yqbt-A.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_sf/vmme/s0/anchors/video/08km9Yqbt-A_050-3/subtitle/08km9Yqbt-A.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    1.48,
+    8.599
+   ],
+   "text": "[Music]",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    5.56,
+    10.92
+   ],
+   "text": "2024 will feature a variety of exciting",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    8.599,
+    13.48
+   ],
+   "text": "astronomy events we start with a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    10.92,
+    16.359
+   ],
+   "text": "planetary alignment of Jupiter Mars and",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    13.48,
+    18.56
+   ],
+   "text": "Saturn at number five this alignment on",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    16.359,
+    21.92
+   ],
+   "text": "June 29th will be joined by the moon and",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    18.56,
+    25.32
+   ],
+   "text": "the Eastern Sky Before Sunrise watch as",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    21.92,
+    28.4
+   ],
+   "text": "these worlds form a straight line across",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    25.32,
+    30.56
+   ],
+   "text": "the night sky at number four we have the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    28.4,
+    32.8
+   ],
+   "text": "super Harvest Moon eclipse",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    30.56,
+    34.96
+   ],
+   "text": "a partial lunar eclipse will be visible",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    32.8,
+    38.559
+   ],
+   "text": "in the United States during a super moon",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    34.96,
+    40.76
+   ],
+   "text": "on September 17th it is the Harvest Moon",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    38.559,
+    44.44
+   ],
+   "text": "because it is the full moon closest to",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    40.76,
+    46.84
+   ],
+   "text": "the Equinox on September 22nd get ready",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    44.44,
+    49.559
+   ],
+   "text": "for planetary oppositions at number",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    46.84,
+    52.28
+   ],
+   "text": "three catch our Celestial Lord of the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    49.559,
+    54.76
+   ],
+   "text": "Rings Saturn at opposition on September",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    52.28,
+    57.52
+   ],
+   "text": "8th and massive Jupiter will dominate",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    54.76,
+    59.44
+   ],
+   "text": "the night's sky on December 7th a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    57.52,
+    62.399
+   ],
+   "text": "telescope will help you observe Saturn's",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    59.44,
+    64.239
+   ],
+   "text": "rings and and Jupiter's Great Red Spot",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    62.399,
+    66.72
+   ],
+   "text": "shooting stars will rain down from the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    64.239,
+    69.159
+   ],
+   "text": "summer night sky with the perced meteor",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    66.72,
+    71.759
+   ],
+   "text": "shower at number two it is one of the",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    69.159,
+    74.96
+   ],
+   "text": "most popular meteor showers boasting 40",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    71.759,
+    77.96
+   ],
+   "text": "to 60 meteors hour catch the shower",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    74.96,
+    80.32
+   ],
+   "text": "after midnight when the moon sets and at",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    77.96,
+    83.28
+   ],
+   "text": "number one the total solar eclipse will",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    80.32,
+    85.68
+   ],
+   "text": "return to the United States on April 8th",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    83.28,
+    88.4
+   ],
+   "text": "the path of totality will travel from",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    85.68,
+    91.64
+   ],
+   "text": "Texas to Maine people in parts of Mexico",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0033",
+   "anchor_link": "video_transcript_anchor_seg_0033",
+   "sequence_index": 33,
+   "time_range_sec": [
+    88.4,
+    94.759
+   ],
+   "text": "and Canada will also the total eclipse",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    91.64,
+    97.88
+   ],
+   "text": "it is by far the number one astronomy",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    94.759,
+    100.96
+   ],
+   "text": "event to mark on your calendar reporting",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    97.88,
+    103.96
+   ],
+   "text": "for ACU weather I'm Justin",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    100.96,
+    103.96
+   ],
+   "text": "pic",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 37,
+ "query_retrieval": false,
+ "query_terms": [],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "[Music] 2024 will feature a variety of exciting astronomy events we start with a planetary alignment of Jupiter Mars and Saturn at number five this alignment on June 29th will be joined by the moon and the Eastern Sky Before Sunrise watch as these worlds form a straight line across the night sky at number four we have the super Harvest Moon eclipse a partial lunar eclipse will be visible in the United States during a super moon on September 17th it is the Harvest Moon because it is the full moon closest to the Equinox on September 22nd get ready for planetary oppositions at number three catch our Celestial Lord of the Rings Saturn at opposition on September 8th and massive Jupiter will dominate the night's sky on December 7th a telescope will help you observe Saturn's rings and and Jupiter's Great Red Spot shooting stars will rain down from the summer night sky with the perced meteor shower at number two it is one of the most popular meteor showers boasting 40 to 60 meteors hour catch the shower after midnight when the moon sets and at number one the total solar eclipse will return to the United States on April 8th the path of totality will travel from Texas to Maine people in part",
+ "warnings": []
+}

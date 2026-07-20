@@ -1,0 +1,409 @@
+[
+ {
+  "record_key": "video:order_153:mlvu119",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/C_no_timeline/mlvu_ext/s0/media/video/order_153.mp4",
+  "question": "Arrange the following events from the video in the correct chronological order: (1)A man picks up the baby from the pool; (2)A person carries two bags out of a house; (3)A baby falls into the swimming pool; (4)A dog walks out of a house.\n['A. 2->4->3->1' 'B. 1->3->2->4' 'C. 4->2->1->3' 'D. 3->1->2->4']\nRespond with only the option letter.",
+  "ground_truth": "A",
+  "Answer": "A",
+  "raw_response": "FINAL_ANSWER: A",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 720,
+     "height": 540,
+     "r_frame_rate": "2997/100"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "828.544000",
+    "size": "89205834"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/C_no_timeline/mlvu_ext/s0/media/video/order_153.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "order_153",
+  "question_id": "mlvu119",
+  "api_meta": {
+   "api_elapsed_seconds": 8.891,
+   "usage": {
+    "total_tokens": 95333,
+    "completion_tokens": 6,
+    "prompt_tokens": 95327,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 46581,
+     "video_tokens": 41324,
+     "image_tokens": 7422,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: A",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-45ed53ae-b2fa-9908-a988-e4ec08f0d0d7"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 8.891,
+   "usage": {
+    "total_tokens": 95333,
+    "completion_tokens": 6,
+    "prompt_tokens": 95327,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 46581,
+     "video_tokens": 41324,
+     "image_tokens": 7422,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: A",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-45ed53ae-b2fa-9908-a988-e4ec08f0d0d7"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "```json\n{\n  \"question_type\": \"temporal_ordering\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"id\": \"E1\",\n        \"time\": \"01:38-01:45\",\n        \"modality\": \"visual\",\n        \"observation\": \"A person carries two bags out of a house through glass doors.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      },\n      {\n        \"id\": \"E2\",\n        \"time\": \"02:24-02:28\",\n        \"modality\": \"visual\",\n        \"observation\": \"A baby falls into the pool.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      },\n      {\n        \"id\": \"E3\",\n        \"time\": \"04:47-04:50\",\n        \"modality\": \"visual\",\n        \"observation\": \"A man picks up the baby from the pool.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0, 828.529],\n    \"confidence\": 1.0\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"01:38-01:45\",\n      \"modality\": \"visual\",\n      \"observation\": \"A person carries two bags out of a house.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"02:24-02:28\",\n      \"modality\": \"visual\",\n      \"observation\": \"A baby falls into the pool.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"04:47-04:50\",\n      \"modality\": \"visual\",\n      \"observation\": \"A man picks up the baby from the pool.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 22.977,
+   "usage": {
+    "total_tokens": 53878,
+    "completion_tokens": 967,
+    "prompt_tokens": 52911,
+    "completion_tokens_details": {
+     "reasoning_tokens": 269,
+     "text_tokens": 698
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 4165,
+     "video_tokens": 41324,
+     "image_tokens": 7422,
+     "cached_tokens": 56960
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"question_type\": \"temporal_ordering\",\n  \"task_family\": \"generic_video_evidence\",\n  \"task_family_evidence\": {\n    \"facts\": [\n      {\n        \"id\": \"E1\",\n        \"time\": \"01:38-01:45\",\n        \"modality\": \"visual\",\n        \"observation\": \"A person carries two bags out of a house through glass doors.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      },\n      {\n        \"id\": \"E2\",\n        \"time\": \"02:24-02:28\",\n        \"modality\": \"visual\",\n        \"observation\": \"A baby falls into the pool.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      },\n      {\n        \"id\": \"E3\",\n        \"time\": \"04:47-04:50\",\n        \"modality\": \"visual\",\n        \"observation\": \"A man picks up the baby from the pool.\",\n        \"anchor\": \"video_full_timeline_lowres\",\n        \"scope_match\": true,\n        \"confidence\": 0.95\n      }\n    ],\n    \"conflicts\": [],\n    \"fallback_needed\": false\n  },\n  \"temporal_scope\": {\n    \"type\": \"full_video\",\n    \"time_range_sec\": [0, 828.529],\n    \"confidence\": 1.0\n  },\n  \"observations\": [\n    {\n      \"id\": \"E1\",\n      \"time\": \"01:38-01:45\",\n      \"modality\": \"visual\",\n      \"observation\": \"A person carries two bags out of a house.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E2\",\n      \"time\": \"02:24-02:28\",\n      \"modality\": \"visual\",\n      \"observation\": \"A baby falls into the pool.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    },\n    {\n      \"id\": \"E3\",\n      \"time\": \"04:47-04:50\",\n      \"modality\": \"visual\",\n      \"observation\": \"A man picks up the baby from the pool.\",\n      \"anchor\": \"video_full_timeline_lowres\",\n      \"scope_match\": true,\n      \"confidence\": 0.95\n    }\n  ],\n  \"counts\": [],\n  \"visible_set\": {},\n  \"ocr_text\": [],\n  \"missing_required_evidence\": [],\n  \"forbidden_inference\": [],\n  \"uncertainty\": []\n}\n```",
+    "reasoning_content": "The user wants me to order three events chronologically based on the video:\n(1) A man picks up the baby from the pool\n(2) A person carries two bags out of a house\n(3) A baby falls into the pool\n\nLet's find the timestamps for these events in the video.\n- Event (2): A person carries two bags out of a house. Looking at the video around 01:38-01:45, a man carries two bags out of the house.\n- Event (3): A baby falls into the pool. Looking at the video around 02:24-02:28, the baby falls into the pool.\n- Event (1): A man picks up the baby from the pool. Looking at the video around 04:47-04:50, a man picks up the baby from the pool.\n\nSo the chronological order is:\n1. A person carries two bags out of a house (around 01:40)\n2. A baby falls into the pool (around 02:25)\n3. A man picks up the baby from the pool (around 04:48)\n\nOrder: (2), (3), (1)",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-f3e216ac-8e06-9606-8b69-6323e1713cda",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 23 column 8 (char 652)",
+     "response_chars": 786
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 51 column 6 (char 1363)",
+     "response_chars": 1519
+    },
+    {
+     "attempt": 3,
+     "max_tokens": 1024,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 2028
+    }
+   ]
+  },
+  "computed_global_timeline_response": null,
+  "computed_global_timeline_meta": null,
+  "global_timeline_pass": false,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "medium_temporal",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.5,
+   "max_frames": 32,
+   "max_side": 640,
+   "detail_max_crops": 7,
+   "detail_max_side": 768,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 256
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.5,
+  "video_anchor_max_frames": 32,
+  "video_detail_max_crops": 7,
+  "video_detail_max_side": 768,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 12,
+  "question_relevant_time_windows": [
+   {
+    "time_range_sec": [
+     0.0,
+     29.1
+    ],
+    "anchor_links": [
+     "video_transcript_anchor_seg_0001",
+     "video_transcript_anchor_seg_0002",
+     "video_transcript_anchor_seg_0003",
+     "video_transcript_anchor_seg_0004",
+     "video_transcript_anchor_seg_0005",
+     "video_transcript_anchor_seg_0006",
+     "video_transcript_anchor_seg_0007",
+     "video_transcript_anchor_seg_0008",
+     "video_transcript_anchor_seg_0009",
+     "video_transcript_anchor_seg_0010",
+     "video_transcript_anchor_seg_0011",
+     "video_transcript_anchor_seg_0012"
+    ],
+    "source": "question_relevant_transcript"
+   }
+  ],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 89205834,
+  "evidence_bytes": 10271699,
+  "compression_ratio": 0.1151,
+  "original_tokens": 22301459,
+  "compressed_tokens": 2567925,
+  "token_saving_ratio": 0.8849,
+  "token_saving_ratio_raw": 0.8849,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=medium_temporal compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 288.692
+ },
+ {
+  "record_key": "video:needle_143:mlvu66",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/C_no_timeline/mlvu_ext/s0/media/video/needle_143.mp4",
+  "question": "What is the woman's appearance?\n['A. She is a young girl' 'B. She is an elderly woman' 'C. She is a middle-aged woman' 'D. She is a beautiful woman']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "D",
+  "raw_response": "FINAL_ANSWER: D",
+  "correct": true,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 720,
+     "height": 540,
+     "r_frame_rate": "2997/100"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "624.894000",
+    "size": "82968008"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/C_no_timeline/mlvu_ext/s0/media/video/needle_143.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "needle_143",
+  "question_id": "mlvu66",
+  "api_meta": {
+   "api_elapsed_seconds": 16.995,
+   "usage": {
+    "total_tokens": 63306,
+    "completion_tokens": 6,
+    "prompt_tokens": 63300,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 31623,
+     "video_tokens": 28996,
+     "image_tokens": 2681,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-902b9931-bde6-91b2-a1f1-eda5e7e55544"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 16.995,
+   "usage": {
+    "total_tokens": 63306,
+    "completion_tokens": 6,
+    "prompt_tokens": 63300,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 31623,
+     "video_tokens": 28996,
+     "image_tokens": 2681,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-902b9931-bde6-91b2-a1f1-eda5e7e55544"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": "{\"question_type\":\"appearance\",\"task_family\":\"generic_video_evidence\",\"task_family_evidence\":{\"facts\":[],\"conflicts\":[],\"fallback_needed\":false},\"temporal_scope\":{\"type\":\"full\",\"time_range_sec\":[0,624.892],\"confidence\":1.0},\"observations\":[{\"id\":\"E1\",\"time\":\"00:33\",\"modality\":\"visual\",\"observation\":\"A beautiful young woman is shown in a close-up shot.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E2\",\"time\":\"01:56\",\"modality\":\"visual\",\"observation\":\"The woman is seen holding a dog, appearing as a beautiful adult woman.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E3\",\"time\":\"08:28\",\"modality\":\"visual\",\"observation\":\"Close-up of the woman's face wearing a veil, confirming she is a beautiful woman.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95}],\"counts\":[],\"visible_set\":{\"A\":false,\"B\":false,\"C\":false,\"D\":true},\"ocr_text\":[],\"missing_required_evidence\":[],\"forbidden_inference\":[],\"uncertainty\":[]}",
+  "computed_evidence_meta": {
+   "api_elapsed_seconds": 12.993,
+   "usage": {
+    "total_tokens": 34542,
+    "completion_tokens": 527,
+    "prompt_tokens": 34015,
+    "completion_tokens_details": {
+     "reasoning_tokens": 254,
+     "text_tokens": 273
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 2162,
+     "video_tokens": 29172,
+     "image_tokens": 2681,
+     "cached_tokens": 34944
+    }
+   },
+   "message": {
+    "content": "{\"question_type\":\"appearance\",\"task_family\":\"generic_video_evidence\",\"task_family_evidence\":{\"facts\":[],\"conflicts\":[],\"fallback_needed\":false},\"temporal_scope\":{\"type\":\"full\",\"time_range_sec\":[0,624.892],\"confidence\":1.0},\"observations\":[{\"id\":\"E1\",\"time\":\"00:33\",\"modality\":\"visual\",\"observation\":\"A beautiful young woman is shown in a close-up shot.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E2\",\"time\":\"01:56\",\"modality\":\"visual\",\"observation\":\"The woman is seen holding a dog, appearing as a beautiful adult woman.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95},{\"id\":\"E3\",\"time\":\"08:28\",\"modality\":\"visual\",\"observation\":\"Close-up of the woman's face wearing a veil, confirming she is a beautiful woman.\",\"anchor\":\"video_full_timeline_lowres\",\"scope_match\":true,\"confidence\":0.95}],\"counts\":[],\"visible_set\":{\"A\":false,\"B\":false,\"C\":false,\"D\":true},\"ocr_text\":[],\"missing_required_evidence\":[],\"forbidden_inference\":[],\"uncertainty\":[]}",
+    "reasoning_content": "The user wants to identify the appearance of the woman in the video.\nLooking at the video, there is a prominent female character (Cecilia Cheung) who appears throughout the video. She is a young, beautiful woman.\nLet's check the options:\nA. She is a young girl\nB. She is an elderly woman\nC. She is a middle-aged woman\nD. She is a beautiful woman\n\nIn the video, the woman is clearly an adult, beautiful woman. She is not an elderly woman or middle-aged woman. \"Young girl\" might imply a child, whereas she is a young adult woman. \"Beautiful woman\" is the most accurate description given her appearance in the film (a period drama, likely \"The Lion Roars\").\nLet's find evidence.\nAt 00:33, she is shown clearly. She is a beautiful young woman.\nAt 01:56, she is holding a dog, looking beautiful.\nAt 05:43, she is dancing, wearing a veil, clearly a beautiful woman.\nAt 08:28, close up of her face with a veil, very beautiful.\n\nTherefore, D is the correct option.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-f1f1180e-ffbf-976f-b2ba-96e11c5c49cc",
+   "evidence_json_valid": true,
+   "evidence_json_retry_attempts": [
+    {
+     "attempt": 1,
+     "max_tokens": 256,
+     "valid_json": false,
+     "error": "JSONDecodeError: Expecting ',' delimiter: line 20 column 4 (char 580)",
+     "response_chars": 866
+    },
+    {
+     "attempt": 2,
+     "max_tokens": 512,
+     "valid_json": true,
+     "error": "",
+     "response_chars": 1014
+    }
+   ]
+  },
+  "computed_global_timeline_response": null,
+  "computed_global_timeline_meta": null,
+  "global_timeline_pass": false,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": true,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 82968008,
+  "evidence_bytes": 9391118,
+  "compression_ratio": 0.1132,
+  "original_tokens": 20742002,
+  "compressed_tokens": 2347780,
+  "token_saving_ratio": 0.8868,
+  "token_saving_ratio_raw": 0.8868,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=True, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 113.941
+ }
+]

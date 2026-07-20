@@ -1,0 +1,920 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/J_medium/vmme/s1/media/video/0rCbfsuKdYw.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/J_medium/vmme/s1/anchors/video/0rCbfsuKdYw_389-2/subtitle/0rCbfsuKdYw.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0282",
+   "anchor_link": "video_transcript_anchor_seg_0282",
+   "sequence_index": 282,
+   "time_range_sec": [
+    566.959,
+    570.399
+   ],
+   "text": "even though it was the home to god tier",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "god"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0283",
+   "anchor_link": "video_transcript_anchor_seg_0283",
+   "sequence_index": 283,
+   "time_range_sec": [
+    568.72,
+    572.16
+   ],
+   "text": "games like grand theft auto 5 and the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 6.667,
+   "relevance_terms": [
+    "game",
+    "gran",
+    "grand",
+    "theft",
+    "auto"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0284",
+   "anchor_link": "video_transcript_anchor_seg_0284",
+   "sequence_index": 284,
+   "time_range_sec": [
+    570.399,
+    573.76
+   ],
+   "text": "last of us even though is where sony",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "last"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0054",
+   "anchor_link": "video_transcript_anchor_seg_0054",
+   "sequence_index": 54,
+   "time_range_sec": [
+    110.158,
+    114.24
+   ],
+   "text": "powerful console money could buy so this",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0055",
+   "anchor_link": "video_transcript_anchor_seg_0055",
+   "sequence_index": 55,
+   "time_range_sec": [
+    112.158,
+    116.158
+   ],
+   "text": "is gran turismo running on the ps1 and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "gran",
+    "turismo"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0056",
+   "anchor_link": "video_transcript_anchor_seg_0056",
+   "sequence_index": 56,
+   "time_range_sec": [
+    114.24,
+    118.079
+   ],
+   "text": "if you compare it to nintendo or sega's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0146",
+   "anchor_link": "video_transcript_anchor_seg_0146",
+   "sequence_index": 146,
+   "time_range_sec": [
+    295.12,
+    299.28
+   ],
+   "text": "power that combined with some of the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0147",
+   "anchor_link": "video_transcript_anchor_seg_0147",
+   "sequence_index": 147,
+   "time_range_sec": [
+    297.28,
+    302.16
+   ],
+   "text": "best games of the generation led the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "game",
+    "generation"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0148",
+   "anchor_link": "video_transcript_anchor_seg_0148",
+   "sequence_index": 148,
+   "time_range_sec": [
+    299.28,
+    305.6
+   ],
+   "text": "playstation 2 to break every record ever",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "play"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0249",
+   "anchor_link": "video_transcript_anchor_seg_0249",
+   "sequence_index": 249,
+   "time_range_sec": [
+    495.12,
+    499.199
+   ],
+   "text": "consoles off don't get any ideas",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0250",
+   "anchor_link": "video_transcript_anchor_seg_0250",
+   "sequence_index": 250,
+   "time_range_sec": [
+    499.52,
+    504.319
+   ],
+   "text": "so now we have the ps3 gran turismo next",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "gran",
+    "turismo"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0251",
+   "anchor_link": "video_transcript_anchor_seg_0251",
+   "sequence_index": 251,
+   "time_range_sec": [
+    501.68,
+    506.319
+   ],
+   "text": "to the ps2 next to the ps1 i can't wait",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.08,
+    3.36
+   ],
+   "text": "i've just bought every single",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    27.439,
+    32.079
+   ],
+   "text": "equivalent to mario had taken the market",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    59.28,
+    63.84
+   ],
+   "text": "that sound that's basically the sound of",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0044",
+   "anchor_link": "video_transcript_anchor_seg_0044",
+   "sequence_index": 44,
+   "time_range_sec": [
+    87.28,
+    92.72
+   ],
+   "text": "one thing sony smashed it's buttons this",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0062",
+   "anchor_link": "video_transcript_anchor_seg_0062",
+   "sequence_index": 62,
+   "time_range_sec": [
+    126.64,
+    130.318
+   ],
+   "text": "the next playstation can do sony also",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0076",
+   "anchor_link": "video_transcript_anchor_seg_0076",
+   "sequence_index": 76,
+   "time_range_sec": [
+    153.599,
+    156.72
+   ],
+   "text": "if i'm being really honest we will be",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0090",
+   "anchor_link": "video_transcript_anchor_seg_0090",
+   "sequence_index": 90,
+   "time_range_sec": [
+    182.08,
+    186.8
+   ],
+   "text": "released in 2000 at about 485 dollars in",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0105",
+   "anchor_link": "video_transcript_anchor_seg_0105",
+   "sequence_index": 105,
+   "time_range_sec": [
+    214.48,
+    218.48
+   ],
+   "text": "the amount of ram and no less than 63",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0119",
+   "anchor_link": "video_transcript_anchor_seg_0119",
+   "sequence_index": 119,
+   "time_range_sec": [
+    242.799,
+    245.84
+   ],
+   "text": "this is my childhood so there's an eject",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0134",
+   "anchor_link": "video_transcript_anchor_seg_0134",
+   "sequence_index": 134,
+   "time_range_sec": [
+    272.8,
+    276.72
+   ],
+   "text": "managed to through the design of the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0151",
+   "anchor_link": "video_transcript_anchor_seg_0151",
+   "sequence_index": 151,
+   "time_range_sec": [
+    307.44,
+    311.039
+   ],
+   "text": "original xbox also around at this time",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0165",
+   "anchor_link": "video_transcript_anchor_seg_0165",
+   "sequence_index": 165,
+   "time_range_sec": [
+    334.72,
+    338.24
+   ],
+   "text": "to rely on the individual game",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0180",
+   "anchor_link": "video_transcript_anchor_seg_0180",
+   "sequence_index": 180,
+   "time_range_sec": [
+    363.84,
+    368.88
+   ],
+   "text": "beefcake plus do you recognize that text",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0194",
+   "anchor_link": "video_transcript_anchor_seg_0194",
+   "sequence_index": 194,
+   "time_range_sec": [
+    392.72,
+    397.6
+   ],
+   "text": "this console all the way up to",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0209",
+   "anchor_link": "video_transcript_anchor_seg_0209",
+   "sequence_index": 209,
+   "time_range_sec": [
+    426.16,
+    430.24
+   ],
+   "text": "to dedicate a portion of their super",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0223",
+   "anchor_link": "video_transcript_anchor_seg_0223",
+   "sequence_index": 223,
+   "time_range_sec": [
+    452.08,
+    454.88
+   ],
+   "text": "attention into how the disks look at",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0237",
+   "anchor_link": "video_transcript_anchor_seg_0237",
+   "sequence_index": 237,
+   "time_range_sec": [
+    473.68,
+    477.599
+   ],
+   "text": "fact that you could change your home",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0255",
+   "anchor_link": "video_transcript_anchor_seg_0255",
+   "sequence_index": 255,
+   "time_range_sec": [
+    510.4,
+    515.519
+   ],
+   "text": "ps1 is outputting the game at 512 by 240",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0269",
+   "anchor_link": "video_transcript_anchor_seg_0269",
+   "sequence_index": 269,
+   "time_range_sec": [
+    543.2,
+    547.6
+   ],
+   "text": "shadows and reflections not to mention",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0287",
+   "anchor_link": "video_transcript_anchor_seg_0287",
+   "sequence_index": 287,
+   "time_range_sec": [
+    575.519,
+    579.68
+   ],
+   "text": "doubled as a media machine with full",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0301",
+   "anchor_link": "video_transcript_anchor_seg_0301",
+   "sequence_index": 301,
+   "time_range_sec": [
+    603.76,
+    608.0
+   ],
+   "text": "and probably still won the fact that",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0315",
+   "anchor_link": "video_transcript_anchor_seg_0315",
+   "sequence_index": 315,
+   "time_range_sec": [
+    632.48,
+    637.6
+   ],
+   "text": "point now when you add to this that the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0330",
+   "anchor_link": "video_transcript_anchor_seg_0330",
+   "sequence_index": 330,
+   "time_range_sec": [
+    663.68,
+    667.68
+   ],
+   "text": "the controller itself for a directional",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0344",
+   "anchor_link": "video_transcript_anchor_seg_0344",
+   "sequence_index": 344,
+   "time_range_sec": [
+    693.2,
+    697.839
+   ],
+   "text": "times the ps3 and 4096 times the",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0359",
+   "anchor_link": "video_transcript_anchor_seg_0359",
+   "sequence_index": 359,
+   "time_range_sec": [
+    723.12,
+    727.12
+   ],
+   "text": "this section is all about the ps4 but",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0373",
+   "anchor_link": "video_transcript_anchor_seg_0373",
+   "sequence_index": 373,
+   "time_range_sec": [
+    749.92,
+    753.519
+   ],
+   "text": "way sharper and more readable now you",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0387",
+   "anchor_link": "video_transcript_anchor_seg_0387",
+   "sequence_index": 387,
+   "time_range_sec": [
+    775.519,
+    779.68
+   ],
+   "text": "actually also notice a bit of realistic",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0402",
+   "anchor_link": "video_transcript_anchor_seg_0402",
+   "sequence_index": 402,
+   "time_range_sec": [
+    807.279,
+    811.36
+   ],
+   "text": "it's in these details where you really",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0416",
+   "anchor_link": "video_transcript_anchor_seg_0416",
+   "sequence_index": 416,
+   "time_range_sec": [
+    838.399,
+    841.76
+   ],
+   "text": "really run with this idea of futurism",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0431",
+   "anchor_link": "video_transcript_anchor_seg_0431",
+   "sequence_index": 431,
+   "time_range_sec": [
+    869.68,
+    875.36
+   ],
+   "text": "vertically but do the internals keep up",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0445",
+   "anchor_link": "video_transcript_anchor_seg_0445",
+   "sequence_index": 445,
+   "time_range_sec": [
+    900.88,
+    904.639
+   ],
+   "text": "and it still wouldn't be able to",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0459",
+   "anchor_link": "video_transcript_anchor_seg_0459",
+   "sequence_index": 459,
+   "time_range_sec": [
+    928.399,
+    933.519
+   ],
+   "text": "everything is very visual and full",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0474",
+   "anchor_link": "video_transcript_anchor_seg_0474",
+   "sequence_index": 474,
+   "time_range_sec": [
+    960.32,
+    965.279
+   ],
+   "text": "higher than 1080p the ps5 is also",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0488",
+   "anchor_link": "video_transcript_anchor_seg_0488",
+   "sequence_index": 488,
+   "time_range_sec": [
+    989.839,
+    994.72
+   ],
+   "text": "every playstation console together in",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0503",
+   "anchor_link": "video_transcript_anchor_seg_0503",
+   "sequence_index": 503,
+   "time_range_sec": [
+    1017.759,
+    1021.44
+   ],
+   "text": "unavoidable scuffs on the glossy piano",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0517",
+   "anchor_link": "video_transcript_anchor_seg_0517",
+   "sequence_index": 517,
+   "time_range_sec": [
+    1044.319,
+    1047.599
+   ],
+   "text": "i'll catch you there",
+   "source": "external_subtitle",
+   "selection_role": "temporal_coverage_transcript"
+  }
+ ],
+ "all_segment_count": 517,
+ "query_retrieval": true,
+ "query_terms": [
+  "game",
+  "played",
+  "each",
+  "generation",
+  "play",
+  "stations",
+  "gran",
+  "turismo",
+  "last",
+  "god",
+  "war",
+  "grand",
+  "theft",
+  "auto"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0282",
+   "anchor_link": "video_transcript_anchor_seg_0282",
+   "sequence_index": 282,
+   "time_range_sec": [
+    566.959,
+    570.399
+   ],
+   "text": "even though it was the home to god tier",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "god"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0283",
+   "anchor_link": "video_transcript_anchor_seg_0283",
+   "sequence_index": 283,
+   "time_range_sec": [
+    568.72,
+    572.16
+   ],
+   "text": "games like grand theft auto 5 and the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 6.667,
+   "relevance_terms": [
+    "game",
+    "gran",
+    "grand",
+    "theft",
+    "auto"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0284",
+   "anchor_link": "video_transcript_anchor_seg_0284",
+   "sequence_index": 284,
+   "time_range_sec": [
+    570.399,
+    573.76
+   ],
+   "text": "last of us even though is where sony",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "last"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0054",
+   "anchor_link": "video_transcript_anchor_seg_0054",
+   "sequence_index": 54,
+   "time_range_sec": [
+    110.158,
+    114.24
+   ],
+   "text": "powerful console money could buy so this",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0055",
+   "anchor_link": "video_transcript_anchor_seg_0055",
+   "sequence_index": 55,
+   "time_range_sec": [
+    112.158,
+    116.158
+   ],
+   "text": "is gran turismo running on the ps1 and",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "gran",
+    "turismo"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0056",
+   "anchor_link": "video_transcript_anchor_seg_0056",
+   "sequence_index": 56,
+   "time_range_sec": [
+    114.24,
+    118.079
+   ],
+   "text": "if you compare it to nintendo or sega's",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0146",
+   "anchor_link": "video_transcript_anchor_seg_0146",
+   "sequence_index": 146,
+   "time_range_sec": [
+    295.12,
+    299.28
+   ],
+   "text": "power that combined with some of the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0147",
+   "anchor_link": "video_transcript_anchor_seg_0147",
+   "sequence_index": 147,
+   "time_range_sec": [
+    297.28,
+    302.16
+   ],
+   "text": "best games of the generation led the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "game",
+    "generation"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0148",
+   "anchor_link": "video_transcript_anchor_seg_0148",
+   "sequence_index": 148,
+   "time_range_sec": [
+    299.28,
+    305.6
+   ],
+   "text": "playstation 2 to break every record ever",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "play"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0249",
+   "anchor_link": "video_transcript_anchor_seg_0249",
+   "sequence_index": 249,
+   "time_range_sec": [
+    495.12,
+    499.199
+   ],
+   "text": "consoles off don't get any ideas",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0250",
+   "anchor_link": "video_transcript_anchor_seg_0250",
+   "sequence_index": 250,
+   "time_range_sec": [
+    499.52,
+    504.319
+   ],
+   "text": "so now we have the ps3 gran turismo next",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "gran",
+    "turismo"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0251",
+   "anchor_link": "video_transcript_anchor_seg_0251",
+   "sequence_index": 251,
+   "time_range_sec": [
+    501.68,
+    506.319
+   ],
+   "text": "to the ps2 next to the ps1 i can't wait",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    102.158,
+    126.079
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0054",
+    "video_transcript_anchor_seg_0055",
+    "video_transcript_anchor_seg_0056"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    287.12,
+    313.6
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0146",
+    "video_transcript_anchor_seg_0147",
+    "video_transcript_anchor_seg_0148"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    487.12,
+    514.319
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0249",
+    "video_transcript_anchor_seg_0250",
+    "video_transcript_anchor_seg_0251"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    558.959,
+    581.76
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0282",
+    "video_transcript_anchor_seg_0283",
+    "video_transcript_anchor_seg_0284"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "i've just bought every single playstation brand new we've got a tv from the time of each one's release and even the same game on all of them so let's find out how much the gaming experience has evolved over time it might sound strange now but the original playstation was actually a massive risk for sony because put simply sony was a nobody in 1994 the entire gaming market was just two companies nintendo who hit a home run with the creation of mario and had about 40 market share and sega who having created sonic their equivalent to mario had taken the market by storm to achieve a share of 55 both of these titans were fighting tooth and nail to try and make their mascot the greatest 2d platformer of all time but sony realized something that now is the perfect time for 3d yeah this is a real sealed playstation 1 straight from 1994. and inside we've got the video adapter in case your tv didn't have the right connectors the ac adapter to plug into the mains the controller which was of course wired and the console hopefully it turns on this is ancient equipment that sound that's basically the sound of a cathode ray gun shooting electrons at the display panel that's actually why they're c",
+ "warnings": []
+}

@@ -1,0 +1,344 @@
+[
+ {
+  "record_key": "video:needle_21:mlvu82",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s2/media/video/needle_21.mp4",
+  "question": "What is the condition of the car's windshield as it rides through the mountain country village?\n['A. The windshield is broken' 'B. The windshield is foggy'\n 'C. The windshield is covered in snow' 'D. The windshield is clean']\nRespond with only the option letter.",
+  "ground_truth": "A",
+  "Answer": "D",
+  "raw_response": "FINAL_ANSWER: D",
+  "correct": false,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 720,
+     "height": 540,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "846.144000",
+    "size": "55594990"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s2/media/video/needle_21.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "needle_21",
+  "question_id": "mlvu82",
+  "api_meta": {
+   "api_elapsed_seconds": 8.782,
+   "usage": {
+    "total_tokens": 99046,
+    "completion_tokens": 6,
+    "prompt_tokens": 99040,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 47628,
+     "video_tokens": 43404,
+     "image_tokens": 8008,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-db136671-c734-90e0-a929-5e36d0b053c4"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 8.782,
+   "usage": {
+    "total_tokens": 99046,
+    "completion_tokens": 6,
+    "prompt_tokens": 99040,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 47628,
+     "video_tokens": 43404,
+     "image_tokens": 8008,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: D",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-db136671-c734-90e0-a929-5e36d0b053c4"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": null,
+  "computed_evidence_meta": null,
+  "computed_global_timeline_response": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"scene_conditioned_attribute\",\n    \"evidence_template\": {\n      \"scene\": \"car interior view driving through village\",\n      \"object\": \"windshield\",\n      \"attribute\": \"condition\",\n      \"selected_frame_or_range\": \"09:32-09:40\",\n      \"visual_evidence\": \"The view is from inside a car looking out through the windshield. The glass appears hazy, dirty, or foggy, obscuring the view slightly.\"\n    },\n    \"special_rules\": [\n      \"Focus on the visual quality of the windshield in the specified clip.\",\n      \"Do not answer the multiple-choice question directly in the text, but provide evidence that supports the correct option.\"\n    ],\n    \"target_time_ranges\": [\n      \"09:32-09:40\"\n    ],\n    \"fallback_policy\": \"If the clip is too short or unclear, rely on the general appearance of the windshield in the available frames.\",\n    \"confidence\": 0.85\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"09:32-09:40\",\n      \"scene\": \"Interior view of a car driving down a road in a rural/mountain village.\",\n      \"actions\": [\n        \"Car is moving forward.\",\n        \"Camera is positioned inside the car, looking out the front windshield.\"\n      ],\n      \"objects\": [\n        \"Car interior (dashboard, rearview mirror)\",\n        \"Windshield\",\n        \"Road\",\n        \"Houses\",\n        \"Trees\",\n        \"Person walking on the road (09:36)\"\n      ],\n      \"visual_cues\": [\n        \"The windshield is visible in the foreground.\",\n        \"The view through the windshield is somewhat hazy or dirty, suggesting it is foggy or unclean.\",\n        \"The environment outside is a sunny day in a village.\"\n      ],\n      \"confidence\": 0.9\n    }\n  ],\n  \"question_relevant_time_ranges\": [\n    {\n      \"time_range\": \"09:32-09:40\",\n      \"reason\": \"This is the only segment showing a car riding through a mountain country village, allowing observation of the windshield's condition.\",",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 31.639,
+   "usage": {
+    "total_tokens": 39909,
+    "completion_tokens": 1426,
+    "prompt_tokens": 38483,
+    "completion_tokens_details": {
+     "reasoning_tokens": 901,
+     "text_tokens": 525
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 37402,
+     "cached_tokens": 0,
+     "text_tokens": 1081
+    }
+   },
+   "message": {
+    "content": "```json\n{\n  \"task_specific_resolver\": {\n    \"resolver_type\": \"scene_conditioned_attribute\",\n    \"evidence_template\": {\n      \"scene\": \"car interior view driving through village\",\n      \"object\": \"windshield\",\n      \"attribute\": \"condition\",\n      \"selected_frame_or_range\": \"09:32-09:40\",\n      \"visual_evidence\": \"The view is from inside a car looking out through the windshield. The glass appears hazy, dirty, or foggy, obscuring the view slightly.\"\n    },\n    \"special_rules\": [\n      \"Focus on the visual quality of the windshield in the specified clip.\",\n      \"Do not answer the multiple-choice question directly in the text, but provide evidence that supports the correct option.\"\n    ],\n    \"target_time_ranges\": [\n      \"09:32-09:40\"\n    ],\n    \"fallback_policy\": \"If the clip is too short or unclear, rely on the general appearance of the windshield in the available frames.\",\n    \"confidence\": 0.85\n  },\n  \"timeline\": [\n    {\n      \"time_range\": \"09:32-09:40\",\n      \"scene\": \"Interior view of a car driving down a road in a rural/mountain village.\",\n      \"actions\": [\n        \"Car is moving forward.\",\n        \"Camera is positioned inside the car, looking out the front windshield.\"\n      ],\n      \"objects\": [\n        \"Car interior (dashboard, rearview mirror)\",\n        \"Windshield\",\n        \"Road\",\n        \"Houses\",\n        \"Trees\",\n        \"Person walking on the road (09:36)\"\n      ],\n      \"visual_cues\": [\n        \"The windshield is visible in the foreground.\",\n        \"The view through the windshield is somewhat hazy or dirty, suggesting it is foggy or unclean.\",\n        \"The environment outside is a sunny day in a village.\"\n      ],\n      \"confidence\": 0.9\n    }\n  ],\n  \"question_relevant_time_ranges\": [\n    {\n      \"time_range\": \"09:32-09:40\",\n      \"reason\": \"This is the only segment showing a car riding through a mountain country village, allowing observation of the windshield's condition.\",\n     ",
+    "reasoning_content": "The user wants to know the condition of the car's windshield in a specific scene.\nI need to find the scene where a car is riding through a mountain country village.\nLooking at the video, there is a brief clip around 09:32 to 09:40 that shows a view from inside a car driving down a road in a village.\nLet's examine the windshield in this clip.\nAt 09:32, the view is from inside a car. The windshield looks a bit dirty or foggy, but not broken. Wait, looking closely at 09:32-09:40, the windshield has some smudges or dirt, but it's not clearly \"foggy\" in the sense of condensation. However, looking at the options provided in the prompt (though I shouldn't answer the multiple choice, I need to understand the context), the options are A. broken, B. foggy, C. c... (likely clean or cracked).\nActually, looking very closely at the clip from 09:32 to 09:40, the windshield appears to have some dirt or smudges, but it's relatively clear. Wait, let me re-examine.\nThe clip at 09:32 shows a view through a windshield. It looks a bit hazy or dirty.\nLet's look for other car scenes. There aren't many.\nThe question asks about the condition.\nLet's look at the options again: A. broken, B. foggy, C. c...\nActually, looking at the clip at 09:32, the windshield is definitely not broken. It might be described as dirty or foggy.\nWait, let's look at the specific frames.\n09:32: View from inside a car. The windshield has some reflections and looks a bit dirty/foggy.\n09:36: A person is walking on the road.\n09:38: The car continues.\nThe windshield is not broken. It's not perfectly clean. \"Foggy\" might be the intended description if it's hazy.\nHowever, I must follow the instructions: \"Do not answer the multiple-choice question.\" and \"Return compact JSON only\".\nI need to build the timeline and locate the scene.\nThe scene is at 09:32 - 09:40.\nThe resolver is `scene_conditioned_attribute` or `generic_video_evidence` since it's about a specific attribute of an object in a scene. The prompt suggests `scene_group_attribute_count` but that's for counting. This is a condition question. I will use `generic_video_evidence` or a custom resolver type if needed, but the prompt says \"Use this resolver guidance as the default...\". Wait, the prompt gives a specific resolver guidance for `scene_group_attribute_count`. But the question is \"What is the condition...\". This doesn't fit counting.\nAh, the prompt says \"First route the question to a task-specific resolver... Use this resolver guidance as the default; adjust only if the video clearly requires a better specialized resolver\".\nThe question is about an attribute (condition) of an object (windshield).\nI will use `scene_conditioned_attribute` or just `generic_video_evidence`.\nActually, the prompt provides a specific JSON structure for `scene_group_attribute_count`. I should probably stick to the structure but adapt the resolver type if needed.\nWait, the prompt says \"Return compact JSON only with this schema: ...\". The schema has `task_specific_resolver`.\nI will set `resolver_type` to `scene_conditioned_attribute` because it's about the condition of an object in a scene.\nTarget time range: 09:32 - 09:40.\nScene: Car driving through a village.\nVisual cues: View from inside the car, windshield visible, road, houses, trees.\nCondition: The windshield appears dirty/hazy/foggy.\n\nLet's refine the timeline.\n09:32 - 09:40: View from inside a moving car. The windshield is visible. It looks a bit dirty or foggy.\nThe question asks for the condition.\nI will output the JSON.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-929e68be-477f-91c7-bbbe-beb04b9354f2"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": false,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "full_scene_group_count",
+  "selected_video_anchor_policy_params": {
+   "fps": 4.0,
+   "max_frames": 80,
+   "max_side": 640,
+   "detail_max_crops": 12,
+   "detail_max_side": 960,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 384
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 4.0,
+  "video_anchor_max_frames": 80,
+  "video_detail_max_crops": 12,
+  "video_detail_max_side": 960,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 24,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 55594990,
+  "evidence_bytes": 15418460,
+  "compression_ratio": 0.2773,
+  "original_tokens": 13898748,
+  "compressed_tokens": 3854615,
+  "token_saving_ratio": 0.7227,
+  "token_saving_ratio_raw": 0.7227,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=full_scene_group_count compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=False, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 299.055
+ },
+ {
+  "record_key": "video:movie101_16:mlvu33",
+  "dataset": "lmms-lab/Video-MME",
+  "modality": "video",
+  "status": "completed",
+  "video": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s2/media/video/movie101_16.mp4",
+  "question": "What type of movie is the scene in the video?\n['A. Science Fiction' 'B. Comedy' 'C. Horror' 'D. Documentary']\nRespond with only the option letter.",
+  "ground_truth": "D",
+  "Answer": "B",
+  "raw_response": "FINAL_ANSWER: B",
+  "correct": false,
+  "video_metadata": {
+   "programs": [],
+   "streams": [
+    {
+     "codec_type": "video",
+     "width": 1906,
+     "height": 838,
+     "r_frame_rate": "25/1"
+    },
+    {
+     "codec_type": "audio",
+     "sample_rate": "44100",
+     "channels": 2,
+     "r_frame_rate": "0/0"
+    }
+   ],
+   "format": {
+    "duration": "740.024000",
+    "size": "289616009"
+   },
+   "path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/mlvu/s2/media/video/movie101_16.mp4",
+   "probe_backend": "ffprobe"
+  },
+  "videoID": "movie101_16",
+  "question_id": "mlvu33",
+  "api_meta": {
+   "api_elapsed_seconds": 7.43,
+   "usage": {
+    "total_tokens": 78358,
+    "completion_tokens": 6,
+    "prompt_tokens": 78352,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 40678,
+     "video_tokens": 29838,
+     "image_tokens": 7836,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: B",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-89defd85-629e-9161-9417-7560ee57c286"
+  },
+  "answer_api_meta": {
+   "api_elapsed_seconds": 7.43,
+   "usage": {
+    "total_tokens": 78358,
+    "completion_tokens": 6,
+    "prompt_tokens": 78352,
+    "completion_tokens_details": {
+     "text_tokens": 6
+    },
+    "prompt_tokens_details": {
+     "text_tokens": 40678,
+     "video_tokens": 29838,
+     "image_tokens": 7836,
+     "cached_tokens": 0
+    }
+   },
+   "message": {
+    "content": "FINAL_ANSWER: B",
+    "reasoning_content": "",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-89defd85-629e-9161-9417-7560ee57c286"
+  },
+  "answer_model": "qwen3.7-plus",
+  "answer_base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+  "answer_parse_success": true,
+  "final_content_empty": false,
+  "computed_evidence_response": null,
+  "computed_evidence_meta": null,
+  "computed_global_timeline_response": "{\"task_specific_resolver\":{\"resolver_type\":\"domain_intention\",\"evidence_template\":{\"facts\":[\"The video contains scenes of slapstick humor, such as men clumsily chasing a dog and falling (01:38-02:46).\",\"There are dark comedic elements, like characters unknowingly eating dog meat and the subsequent reactions (04:42-05:40, 09:06-11:26).\",\"The dialogue and situations are absurd and humorous rather than scary or futuristic.\",\"The film is clearly a scripted narrative, not a documentary.\"],\"conflicts\":[],\"fallback_needed\":false},\"special_rules\":[\"Identify genre based on tone, narrative elements, and visual style.\"],\"target_time_ranges\":[\"01:38-02:46\",\"04:42-05:40\",\"09:06-11:26\"],\"fallback_policy\":\"If genre is ambiguous, look for dominant emotional tone.\",\"confidence\":0.9},\"timeline\":[{\"time_range\":\"00:00-00:48\",\"scene\":\"Nighttime, indoor and outdoor shots of a man and a dog.\",\"actions\":[\"Talking about a dog case\",\"Dog in a cage\"],\"objects\":[\"Man\",\"Dog\",\"Cage\"],\"visual_cues\":[\"Dark lighting\",\"Rural setting\"],\"confidence\":0.8},{\"time_range\":\"01:06-02:46\",\"scene\":\"Daytime, outdoor yard and rooftops.\",\"actions\":[\"Dog escapes cage\",\"Men chase dog with ladder and sticks\",\"Men fall and struggle\"],\"objects\":[\"Dog\",\"Men\",\"Ladder\",\"Sticks\",\"Roof\"],\"visual_cues\":[\"Slapstick action\",\"Comedic timing\"],\"confidence\":0.9},{\"time_range\":\"04:42-06:10\",\"scene\":\"Indoor room with colorful windows.\",\"actions\":[\"Men eating and drinking\",\"Revelation of dog meat\",\"Fight breaks out\",\"Dog attacks man\"],\"objects\":[\"Men\",\"Food\",\"Table\",\"Dog\"],\"visual_cues\":[\"Dark humor\",\"Conflict\"],\"confidence\":0.9},{\"time_range\":\"09:06-11:26\",\"scene\":\"Indoor rustic room.\",\"actions\":[\"Police officer visits old man\",\"They eat meat\",\"Officer realizes he's eating from dog's bowl\"],\"objects\":[\"Police officer\",\"Old man\",\"Food\",\"Dog bowl\",\"Dog\"],\"visual_cues\":[\"Comedic realization\",\"Awkward situation\"],\"confidence\":0.9}],\"question_relevant_time_ranges\":[{\"time_range\":\"01",
+  "computed_global_timeline_meta": {
+   "api_elapsed_seconds": 25.719,
+   "usage": {
+    "total_tokens": 31021,
+    "completion_tokens": 1164,
+    "prompt_tokens": 29857,
+    "completion_tokens_details": {
+     "reasoning_tokens": 639,
+     "text_tokens": 525
+    },
+    "prompt_tokens_details": {
+     "video_tokens": 28940,
+     "cached_tokens": 0,
+     "text_tokens": 917
+    }
+   },
+   "message": {
+    "content": "{\"task_specific_resolver\":{\"resolver_type\":\"domain_intention\",\"evidence_template\":{\"facts\":[\"The video contains scenes of slapstick humor, such as men clumsily chasing a dog and falling (01:38-02:46).\",\"There are dark comedic elements, like characters unknowingly eating dog meat and the subsequent reactions (04:42-05:40, 09:06-11:26).\",\"The dialogue and situations are absurd and humorous rather than scary or futuristic.\",\"The film is clearly a scripted narrative, not a documentary.\"],\"conflicts\":[],\"fallback_needed\":false},\"special_rules\":[\"Identify genre based on tone, narrative elements, and visual style.\"],\"target_time_ranges\":[\"01:38-02:46\",\"04:42-05:40\",\"09:06-11:26\"],\"fallback_policy\":\"If genre is ambiguous, look for dominant emotional tone.\",\"confidence\":0.9},\"timeline\":[{\"time_range\":\"00:00-00:48\",\"scene\":\"Nighttime, indoor and outdoor shots of a man and a dog.\",\"actions\":[\"Talking about a dog case\",\"Dog in a cage\"],\"objects\":[\"Man\",\"Dog\",\"Cage\"],\"visual_cues\":[\"Dark lighting\",\"Rural setting\"],\"confidence\":0.8},{\"time_range\":\"01:06-02:46\",\"scene\":\"Daytime, outdoor yard and rooftops.\",\"actions\":[\"Dog escapes cage\",\"Men chase dog with ladder and sticks\",\"Men fall and struggle\"],\"objects\":[\"Dog\",\"Men\",\"Ladder\",\"Sticks\",\"Roof\"],\"visual_cues\":[\"Slapstick action\",\"Comedic timing\"],\"confidence\":0.9},{\"time_range\":\"04:42-06:10\",\"scene\":\"Indoor room with colorful windows.\",\"actions\":[\"Men eating and drinking\",\"Revelation of dog meat\",\"Fight breaks out\",\"Dog attacks man\"],\"objects\":[\"Men\",\"Food\",\"Table\",\"Dog\"],\"visual_cues\":[\"Dark humor\",\"Conflict\"],\"confidence\":0.9},{\"time_range\":\"09:06-11:26\",\"scene\":\"Indoor rustic room.\",\"actions\":[\"Police officer visits old man\",\"They eat meat\",\"Officer realizes he's eating from dog's bowl\"],\"objects\":[\"Police officer\",\"Old man\",\"Food\",\"Dog bowl\",\"Dog\"],\"visual_cues\":[\"Comedic realization\",\"Awkward situation\"],\"confidence\":0.9}],\"question_relevant_time_ranges\":[{\"time_range\":\"01",
+    "reasoning_content": "The user wants to identify the genre of the movie based on the provided video clips.\nI need to analyze the visual and narrative elements in the video to determine the genre.\nThe video shows a mix of scenes:\n- A man talking about dealing with a dog case.\n- A dog escaping from a cage and running around.\n- Two men chasing the dog, one with a ladder, one with a stick.\n- A scene where a man is eating meat and drinking with another man, who then reveals the meat is dog meat (implied by the conversation about \"Ranmao's meat\").\n- A fight breaks out.\n- A police officer visiting an old man, eating meat, and realizing it's dog meat (from the dog's bowl).\n- The overall tone has elements of dark humor, absurdity, and rural life.\n- The chase scene with the dog and the clumsy men is comedic.\n- The dialogue has a humorous, albeit dark, tone (e.g., \"Life is a dream and enjoy it asap\", \"You like to eat dog\").\n- It doesn't look like Science Fiction (no futuristic elements).\n- It's not a Horror movie (no scary monsters or typical horror tropes, though the dog meat aspect is dark).\n- It's not a Documentary (it's clearly a scripted narrative film with actors).\n- The combination of rural setting, quirky characters, slapstick chase, and dark humor points towards a Comedy, specifically a black comedy or rural comedy.\n\nLet's look at the options:\nA. Science Fiction\nB. Comedy\nC. Horror\nD. Documentary\n\nThe scenes of the men chasing the dog, falling off roofs, and the general absurdity of the situations (eating dog meat unknowingly, the fight) strongly suggest a Comedy, likely a dark or black comedy. The movie appears to be \"The Long Day's Night\" or similar Chinese rural comedy/drama (actually it looks like \"Ranmao\" or a film featuring a dog named Ranmao, possibly \"The Dog Days\" or similar, wait, the subtitles mention \"Ranmao is missing\". The film is likely \"Ranmao\" (2018) or similar. Actually, looking at the actors and style, it resembles Chinese rural comedies/dramas. The chase scene is definitely comedic. The interaction between the police officer and the old man has comedic timing.\n\nTherefore, the genre is Comedy.\n\nTarget time ranges for evidence:\n- 01:38 - 02:46: The chase scene with the dog and the two men is slapstick comedy.\n- 04:42 - 05:40: The scene where the man is eating and the other man reveals it's dog meat, leading to a fight, has dark comedic elements.\n- 09:06 - 11:26: The police officer eating from the dog's bowl is a comedic/darkly comedic situation.\n\nThe overall tone and specific scenes align best with Comedy.",
+    "role": "assistant"
+   },
+   "response_id": "chatcmpl-a8b41475-9f51-9c44-b0f9-748a35404838"
+  },
+  "global_timeline_pass": true,
+  "global_timeline_error": null,
+  "global_timeline_max_tokens": 512,
+  "computed_visual_context_response": null,
+  "computed_visual_context_meta": null,
+  "video_visual_context_pass": "auto",
+  "video_visual_context_triggered": false,
+  "video_visual_context_reason": "",
+  "video_visual_context_error": null,
+  "video_visual_context_max_tokens": 384,
+  "video_global_anchor": true,
+  "video_global_anchor_fps": 1.0,
+  "video_global_anchor_max_side": 360,
+  "evidence_pass": false,
+  "prompt_style": "compact",
+  "video_anchor_policy": "auto",
+  "selected_video_anchor_policy": "light",
+  "selected_video_anchor_policy_params": {
+   "fps": 1.0,
+   "max_frames": 16,
+   "max_side": 512,
+   "detail_max_crops": 6,
+   "detail_max_side": 640,
+   "audio_anchor": false,
+   "transcript": true,
+   "evidence_max_tokens": 192
+  },
+  "evidence_prompt_style": "minimal",
+  "video_anchor_fps": 1.0,
+  "video_anchor_max_frames": 16,
+  "video_detail_max_crops": 6,
+  "video_detail_max_side": 640,
+  "video_audio_anchor": false,
+  "send_audio_media": false,
+  "answer_send_audio_media": false,
+  "video_transcript_backend": "auto",
+  "video_subtitle_path": null,
+  "video_query_retrieval": true,
+  "video_query_max_segments": 12,
+  "video_query_window_padding_sec": 8.0,
+  "video_query_detail_extra_crops": 4,
+  "question_relevant_transcript_segment_count": 0,
+  "question_relevant_time_windows": [],
+  "transcript_segment_count": 48,
+  "transcript_source": "faster_whisper_asr",
+  "video_asr_model": "base.en",
+  "source_bytes": 289616009,
+  "evidence_bytes": 9647536,
+  "compression_ratio": 0.0333,
+  "original_tokens": 72404003,
+  "compressed_tokens": 2411884,
+  "token_saving_ratio": 0.9667,
+  "token_saving_ratio_raw": 0.9667,
+  "compression_expanded": false,
+  "compression_note": "API MTEC++ video uses policy=light compressed video anchors, high-detail crops only when routed, transcript/audio text anchors, answer_send_audio_media=False, evidence_prompt_style=minimal, computed evidence pass=False, and compact structured evidence prompt.",
+  "cleanup_record_artifacts": true,
+  "cleanup_removed_paths": 2,
+  "elapsed_seconds": 175.525
+ }
+]

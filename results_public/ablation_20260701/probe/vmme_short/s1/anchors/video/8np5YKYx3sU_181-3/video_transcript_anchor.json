@@ -1,0 +1,550 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s1/media/video/8np5YKYx3sU.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/videomme_asr_subtitles_base_en_no_vad/8np5YKYx3sU.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.0,
+    15.08
+   ],
+   "text": "CHEERING AND APPLAUSE",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    15.08,
+    16.52
+   ],
+   "text": "I know you want it",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    16.52,
+    18.44
+   ],
+   "text": "Bang bang all over you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    18.44,
+    19.88
+   ],
+   "text": "I'll let you have it",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    19.88,
+    22.52
+   ],
+   "text": "Wait for me to let me take you back",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    22.52,
+    24.44
+   ],
+   "text": "Wait for me to tell you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    24.44,
+    25.72
+   ],
+   "text": "Oh",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    25.72,
+    28.04
+   ],
+   "text": "You might have to hold a hat",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    28.04,
+    29.0
+   ],
+   "text": "A school of fun",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    29.0,
+    31.24
+   ],
+   "text": "I'm sure you had a graduate",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    31.24,
+    32.2
+   ],
+   "text": "Oh",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    32.2,
+    34.12
+   ],
+   "text": "You might have to hate it",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    34.12,
+    37.64
+   ],
+   "text": "I'm so much in my again",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    37.64,
+    38.6
+   ],
+   "text": "Oh",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    38.6,
+    41.8
+   ],
+   "text": "I'm sure you gotta be this",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    41.8,
+    42.6
+   ],
+   "text": "Yeah",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    42.6,
+    43.8
+   ],
+   "text": "But don't say",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    43.8,
+    44.76
+   ],
+   "text": "I'll say",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    44.76,
+    45.24
+   ],
+   "text": "Oh",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    45.24,
+    47.88
+   ],
+   "text": "Just see anybody come and go to you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    47.88,
+    50.68
+   ],
+   "text": "You need a bag of room in your mind",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    50.68,
+    52.68
+   ],
+   "text": "Bang bang all over you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    52.68,
+    53.88
+   ],
+   "text": "Bang bang all over you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    53.88,
+    55.72
+   ],
+   "text": "I know you wanna bang bang",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    55.72,
+    56.52
+   ],
+   "text": "Oh for you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    56.52,
+    58.12
+   ],
+   "text": "I'll let you have it",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    58.12,
+    61.48
+   ],
+   "text": "Wait for me to let me take you back",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    61.48,
+    63.48
+   ],
+   "text": "Wait for me to let me take you back",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    63.48,
+    64.44
+   ],
+   "text": "Bang bang all over you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    64.44,
+    65.32
+   ],
+   "text": "Bang bang",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    65.32,
+    66.6
+   ],
+   "text": "Get to the room",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    66.6,
+    67.72
+   ],
+   "text": "I know you want it",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0033",
+   "anchor_link": "video_transcript_anchor_seg_0033",
+   "sequence_index": 33,
+   "time_range_sec": [
+    67.72,
+    69.56
+   ],
+   "text": "Bang bang all over you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    69.56,
+    70.12
+   ],
+   "text": "Oh",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    70.12,
+    70.6
+   ],
+   "text": "Oh",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    70.6,
+    72.28
+   ],
+   "text": "Bang bang bang",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    72.28,
+    74.04
+   ],
+   "text": "Bang bang bang bang",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    74.04,
+    75.48
+   ],
+   "text": "Bang bang bang",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0039",
+   "anchor_link": "video_transcript_anchor_seg_0039",
+   "sequence_index": 39,
+   "time_range_sec": [
+    75.48,
+    76.92
+   ],
+   "text": "Bang bang bang",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0040",
+   "anchor_link": "video_transcript_anchor_seg_0040",
+   "sequence_index": 40,
+   "time_range_sec": [
+    76.92,
+    77.72
+   ],
+   "text": "Two days",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0041",
+   "anchor_link": "video_transcript_anchor_seg_0041",
+   "sequence_index": 41,
+   "time_range_sec": [
+    77.72,
+    79.48
+   ],
+   "text": "Bang bang all over you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0042",
+   "anchor_link": "video_transcript_anchor_seg_0042",
+   "sequence_index": 42,
+   "time_range_sec": [
+    79.48,
+    80.92
+   ],
+   "text": "I know you wanna bang bang",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0043",
+   "anchor_link": "video_transcript_anchor_seg_0043",
+   "sequence_index": 43,
+   "time_range_sec": [
+    80.92,
+    82.68
+   ],
+   "text": "Oh yeah",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0044",
+   "anchor_link": "video_transcript_anchor_seg_0044",
+   "sequence_index": 44,
+   "time_range_sec": [
+    82.68,
+    83.72
+   ],
+   "text": "Oh",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0045",
+   "anchor_link": "video_transcript_anchor_seg_0045",
+   "sequence_index": 45,
+   "time_range_sec": [
+    83.72,
+    87.0
+   ],
+   "text": "Wait for me to let me take you back",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0046",
+   "anchor_link": "video_transcript_anchor_seg_0046",
+   "sequence_index": 46,
+   "time_range_sec": [
+    87.0,
+    88.52
+   ],
+   "text": "Wait for me to tell you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0047",
+   "anchor_link": "video_transcript_anchor_seg_0047",
+   "sequence_index": 47,
+   "time_range_sec": [
+    88.52,
+    90.04
+   ],
+   "text": "Oh yeah",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 47,
+ "query_retrieval": true,
+ "query_terms": [
+  "people",
+  "stage",
+  "reciting",
+  "poetry",
+  "singing",
+  "dancing",
+  "performing",
+  "acrobatics",
+  "drama"
+ ],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "CHEERING AND APPLAUSE I know you want it Bang bang all over you I'll let you have it Wait for me to let me take you back Wait for me to tell you Oh You might have to hold a hat A school of fun I'm sure you had a graduate Oh You might have to hate it I'm so much in my again Oh I'm sure you gotta be this Yeah But don't say I'll say Oh Just see anybody come and go to you You need a bag of room in your mind Bang bang all over you Bang bang all over you I know you wanna bang bang Oh for you I'll let you have it Wait for me to let me take you back Wait for me to let me take you back Bang bang all over you Bang bang Get to the room I know you want it Bang bang all over you Oh Oh Bang bang bang Bang bang bang bang Bang bang bang Bang bang bang Two days Bang bang all over you I know you wanna bang bang Oh yeah Oh Wait for me to let me take you back Wait for me to tell you Oh yeah",
+ "warnings": [
+  "Question-driven transcript retrieval found no direct lexical hits; using temporal coverage segments."
+ ]
+}

@@ -1,0 +1,845 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/vmme/s1/media/video/7iXM5aq53Ts.mp4",
+ "source": "external_subtitle",
+ "backend": "auto",
+ "model_name": null,
+ "external_subtitle_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/A_sf/vmme/s1/anchors/video/7iXM5aq53Ts_073-2/subtitle/7iXM5aq53Ts.srt",
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    44.52,
+    49.36
+   ],
+   "text": "thing right A Better Way is to use an",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    46.92,
+    50.96
+   ],
+   "text": "app called keyboard cleaner and this is",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 6.0,
+   "relevance_terms": [
+    "cleaner",
+    "app",
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    49.36,
+    52.48
+   ],
+   "text": "a free app it was actually submitted to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "app"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0042",
+   "anchor_link": "video_transcript_anchor_seg_0042",
+   "sequence_index": 42,
+   "time_range_sec": [
+    88.439,
+    90.84
+   ],
+   "text": "let me know what you think about",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0043",
+   "anchor_link": "video_transcript_anchor_seg_0043",
+   "sequence_index": 43,
+   "time_range_sec": [
+    89.4,
+    96.158
+   ],
+   "text": "keyboard cleaner Down Below in the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 4.667,
+   "relevance_terms": [
+    "cleaner",
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0044",
+   "anchor_link": "video_transcript_anchor_seg_0044",
+   "sequence_index": 44,
+   "time_range_sec": [
+    90.84,
+    96.158
+   ],
+   "text": "comment section this is Jeff with 95",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    24.519,
+    28.039
+   ],
+   "text": "nap right on your keyboard and they get",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    26.039,
+    30.08
+   ],
+   "text": "paw prints all over the keyboard's keys",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "keyboard",
+    "keys"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    28.039,
+    31.679
+   ],
+   "text": "now of course we know how to clean",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    62.84,
+    65.799
+   ],
+   "text": "keyboard so I'm just going to launch the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    64.28,
+    67.759
+   ],
+   "text": "app just like that and now keyboard",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "app",
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    65.799,
+    70.08
+   ],
+   "text": "cleaner is launched it's a black screen",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "cleaner",
+    "black"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.08,
+    5.12
+   ],
+   "text": "in this video I'm going to show you a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    1.64,
+    5.12
+   ],
+   "text": "better way to clean your max",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    8.48,
+    13.08
+   ],
+   "text": "keyboard how's it going folks this is",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    10.719,
+    15.28
+   ],
+   "text": "Jeff Benjamin with 9o5 Mac we've all",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    13.08,
+    17.96
+   ],
+   "text": "been there before we're eating at our",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    15.28,
+    20.24
+   ],
+   "text": "desk and we have just stuff all over",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    17.96,
+    22.199
+   ],
+   "text": "crumbs whatever the case may be all over",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    20.24,
+    24.519
+   ],
+   "text": "your keyboard you want to clean it off",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    22.199,
+    26.039
+   ],
+   "text": "or maybe even your cat decides to take a",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    30.08,
+    33.48
+   ],
+   "text": "keyboard it's not really that difficult",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    31.679,
+    36.36
+   ],
+   "text": "just take a cloth and wipe it off right",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    33.48,
+    38.2
+   ],
+   "text": "but when you do that with your Mac own",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    36.36,
+    40.719
+   ],
+   "text": "then you start to hit Keys you maybe",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    38.2,
+    42.239
+   ],
+   "text": "input text that's erroneous you just",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    40.719,
+    44.52
+   ],
+   "text": "maybe even quit a program that you're",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    42.239,
+    46.92
+   ],
+   "text": "working on at the moment it's not a good",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0023",
+   "anchor_link": "video_transcript_anchor_seg_0023",
+   "sequence_index": 23,
+   "time_range_sec": [
+    50.96,
+    54.68
+   ],
+   "text": "the Mac App Store a long time ago but",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0024",
+   "anchor_link": "video_transcript_anchor_seg_0024",
+   "sequence_index": 24,
+   "time_range_sec": [
+    52.48,
+    56.879
+   ],
+   "text": "Apple never approved it for whatever",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0025",
+   "anchor_link": "video_transcript_anchor_seg_0025",
+   "sequence_index": 25,
+   "time_range_sec": [
+    54.68,
+    58.92
+   ],
+   "text": "reason but this app basically allows you",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0026",
+   "anchor_link": "video_transcript_anchor_seg_0026",
+   "sequence_index": 26,
+   "time_range_sec": [
+    56.879,
+    60.96
+   ],
+   "text": "to suspend the activity on your Mac it",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0027",
+   "anchor_link": "video_transcript_anchor_seg_0027",
+   "sequence_index": 27,
+   "time_range_sec": [
+    58.92,
+    62.84
+   ],
+   "text": "goes to a black screen so that you can't",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0028",
+   "anchor_link": "video_transcript_anchor_seg_0028",
+   "sequence_index": 28,
+   "time_range_sec": [
+    60.96,
+    64.28
+   ],
+   "text": "input text while you're cleaning your",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0032",
+   "anchor_link": "video_transcript_anchor_seg_0032",
+   "sequence_index": 32,
+   "time_range_sec": [
+    67.759,
+    72.28
+   ],
+   "text": "and now I can clean my keyboard at will",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0033",
+   "anchor_link": "video_transcript_anchor_seg_0033",
+   "sequence_index": 33,
+   "time_range_sec": [
+    70.08,
+    74.119
+   ],
+   "text": "without worrying about inputting text or",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0034",
+   "anchor_link": "video_transcript_anchor_seg_0034",
+   "sequence_index": 34,
+   "time_range_sec": [
+    72.28,
+    76.08
+   ],
+   "text": "quitting an app or anything like that",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0035",
+   "anchor_link": "video_transcript_anchor_seg_0035",
+   "sequence_index": 35,
+   "time_range_sec": [
+    74.119,
+    77.799
+   ],
+   "text": "just messing up something I'm working on",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0036",
+   "anchor_link": "video_transcript_anchor_seg_0036",
+   "sequence_index": 36,
+   "time_range_sec": [
+    76.08,
+    79.84
+   ],
+   "text": "I don't have to go and shut down my Mac",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0037",
+   "anchor_link": "video_transcript_anchor_seg_0037",
+   "sequence_index": 37,
+   "time_range_sec": [
+    77.799,
+    81.6
+   ],
+   "text": "completely once I'm finished all I need",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0038",
+   "anchor_link": "video_transcript_anchor_seg_0038",
+   "sequence_index": 38,
+   "time_range_sec": [
+    79.84,
+    84.119
+   ],
+   "text": "to do is hold the command key and press",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0039",
+   "anchor_link": "video_transcript_anchor_seg_0039",
+   "sequence_index": 39,
+   "time_range_sec": [
+    81.6,
+    86.119
+   ],
+   "text": "the Q button to quit the application and",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0040",
+   "anchor_link": "video_transcript_anchor_seg_0040",
+   "sequence_index": 40,
+   "time_range_sec": [
+    84.119,
+    88.439
+   ],
+   "text": "now I'm back to my Mac like normal with",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0041",
+   "anchor_link": "video_transcript_anchor_seg_0041",
+   "sequence_index": 41,
+   "time_range_sec": [
+    86.119,
+    89.4
+   ],
+   "text": "a clean keyboard so ladies and gentlemen",
+   "source": "external_subtitle"
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0045",
+   "anchor_link": "video_transcript_anchor_seg_0045",
+   "sequence_index": 45,
+   "time_range_sec": [
+    97.64,
+    100.64
+   ],
+   "text": "Mac",
+   "source": "external_subtitle"
+  }
+ ],
+ "all_segment_count": 45,
+ "query_retrieval": true,
+ "query_terms": [
+  "icon",
+  "keyborad",
+  "cleaner",
+  "app",
+  "features",
+  "colorful",
+  "image",
+  "keyboard",
+  "sparkling",
+  "keys",
+  "depicts",
+  "two",
+  "black",
+  "letters",
+  "displays",
+  "cartoon",
+  "character",
+  "holding",
+  "broom",
+  "cleaning",
+  "magnifying",
+  "glass",
+  "zooming",
+  "dirty"
+ ],
+ "question_relevant_segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    44.52,
+    49.36
+   ],
+   "text": "thing right A Better Way is to use an",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 1,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    46.92,
+    50.96
+   ],
+   "text": "app called keyboard cleaner and this is",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 2,
+   "relevance_score": 6.0,
+   "relevance_terms": [
+    "cleaner",
+    "app",
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0022",
+   "anchor_link": "video_transcript_anchor_seg_0022",
+   "sequence_index": 22,
+   "time_range_sec": [
+    49.36,
+    52.48
+   ],
+   "text": "a free app it was actually submitted to",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 3,
+   "relevance_score": 1.333,
+   "relevance_terms": [
+    "app"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0042",
+   "anchor_link": "video_transcript_anchor_seg_0042",
+   "sequence_index": 42,
+   "time_range_sec": [
+    88.439,
+    90.84
+   ],
+   "text": "let me know what you think about",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 4,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0043",
+   "anchor_link": "video_transcript_anchor_seg_0043",
+   "sequence_index": 43,
+   "time_range_sec": [
+    89.4,
+    96.158
+   ],
+   "text": "keyboard cleaner Down Below in the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 5,
+   "relevance_score": 4.667,
+   "relevance_terms": [
+    "cleaner",
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0044",
+   "anchor_link": "video_transcript_anchor_seg_0044",
+   "sequence_index": 44,
+   "time_range_sec": [
+    90.84,
+    96.158
+   ],
+   "text": "comment section this is Jeff with 95",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 6,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    24.519,
+    28.039
+   ],
+   "text": "nap right on your keyboard and they get",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 7,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    26.039,
+    30.08
+   ],
+   "text": "paw prints all over the keyboard's keys",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 8,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "keyboard",
+    "keys"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    28.039,
+    31.679
+   ],
+   "text": "now of course we know how to clean",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 9,
+   "relevance_score": 0.0,
+   "relevance_terms": []
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0029",
+   "anchor_link": "video_transcript_anchor_seg_0029",
+   "sequence_index": 29,
+   "time_range_sec": [
+    62.84,
+    65.799
+   ],
+   "text": "keyboard so I'm just going to launch the",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 10,
+   "relevance_score": 2.333,
+   "relevance_terms": [
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0030",
+   "anchor_link": "video_transcript_anchor_seg_0030",
+   "sequence_index": 30,
+   "time_range_sec": [
+    64.28,
+    67.759
+   ],
+   "text": "app just like that and now keyboard",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 11,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "app",
+    "keyboard"
+   ]
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0031",
+   "anchor_link": "video_transcript_anchor_seg_0031",
+   "sequence_index": 31,
+   "time_range_sec": [
+    65.799,
+    70.08
+   ],
+   "text": "cleaner is launched it's a black screen",
+   "source": "external_subtitle",
+   "selection_role": "question_relevant_transcript",
+   "relevance_rank": 12,
+   "relevance_score": 3.667,
+   "relevance_terms": [
+    "cleaner",
+    "black"
+   ]
+  }
+ ],
+ "question_relevant_time_windows": [
+  {
+   "time_range_sec": [
+    16.519,
+    78.08
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0010",
+    "video_transcript_anchor_seg_0011",
+    "video_transcript_anchor_seg_0012",
+    "video_transcript_anchor_seg_0020",
+    "video_transcript_anchor_seg_0021",
+    "video_transcript_anchor_seg_0022",
+    "video_transcript_anchor_seg_0029",
+    "video_transcript_anchor_seg_0030",
+    "video_transcript_anchor_seg_0031"
+   ],
+   "source": "question_relevant_transcript"
+  },
+  {
+   "time_range_sec": [
+    80.439,
+    104.158
+   ],
+   "anchor_links": [
+    "video_transcript_anchor_seg_0042",
+    "video_transcript_anchor_seg_0043",
+    "video_transcript_anchor_seg_0044"
+   ],
+   "source": "question_relevant_transcript"
+  }
+ ],
+ "text_preview": "in this video I'm going to show you a better way to clean your max keyboard how's it going folks this is Jeff Benjamin with 9o5 Mac we've all been there before we're eating at our desk and we have just stuff all over crumbs whatever the case may be all over your keyboard you want to clean it off or maybe even your cat decides to take a nap right on your keyboard and they get paw prints all over the keyboard's keys now of course we know how to clean keyboard it's not really that difficult just take a cloth and wipe it off right but when you do that with your Mac own then you start to hit Keys you maybe input text that's erroneous you just maybe even quit a program that you're working on at the moment it's not a good thing right A Better Way is to use an app called keyboard cleaner and this is a free app it was actually submitted to the Mac App Store a long time ago but Apple never approved it for whatever reason but this app basically allows you to suspend the activity on your Mac it goes to a black screen so that you can't input text while you're cleaning your keyboard so I'm just going to launch the app just like that and now keyboard cleaner is launched it's a black screen and no",
+ "warnings": []
+}

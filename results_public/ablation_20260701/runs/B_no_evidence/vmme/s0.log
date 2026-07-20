@@ -1,0 +1,184 @@
+
+===== LAUNCH Wed Jul  1 14:54:57 2026 =====
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:ZfNSxRiYfZQ:258-3 video_media=2 image_media=15 frames=121 global_full=1 global_samples=105 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=11 transcript_segments=1 warnings=none
+video:ZfNSxRiYfZQ:258-3 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:6Z_XNM_iT4g:134-2 video_media=2 image_media=4 frames=29 global_full=1 global_samples=12 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=6 objects=0 transcript_segments=0 warnings=transcript_anchor_has_no_segments
+video:6Z_XNM_iT4g:134-2 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:Z-rHofd6g2Q:122-2 video_media=2 image_media=21 frames=83 global_full=1 global_samples=67 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=none
+video:Z-rHofd6g2Q:122-2 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8np5YKYx3sU:181-3 video_media=2 image_media=16 frames=126 global_full=1 global_samples=96 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=47 warnings=none
+video:8np5YKYx3sU:181-3 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5kmnEgBSCfg:286-1 video_media=2 image_media=21 frames=134 global_full=1 global_samples=118 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=missing_visual_count_executor_anchor
+video:5kmnEgBSCfg:286-1 [video]: completed pred=B gt=D correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1tidNDIpKSY:154-2 video_media=2 image_media=12 frames=75 global_full=1 global_samples=60 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=3 transcript_segments=11 warnings=none
+video:1tidNDIpKSY:154-2 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1sTQOxXFO44:251-1 video_media=2 image_media=16 frames=113 global_full=1 global_samples=82 visual_count_video=0 tubelets=4 details=12 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=7 warnings=none
+video:1sTQOxXFO44:251-1 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:80p80ynsZ78:139-2 video_media=2 image_media=3 frames=112 global_full=1 global_samples=96 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=1 warnings=none
+video:80p80ynsZ78:139-2 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+/root/miniconda3/envs/venv/lib/python3.9/site-packages/paddle/utils/cpp_extension/extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv6_medium_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/root/.paddlex/official_models/PP-OCRv6_medium_det`.[0m
+[32mCreating model: ('PP-OCRv6_medium_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/root/.paddlex/official_models/PP-OCRv6_medium_rec`.[0m
+INPUT_CHECK video:6NVr0cNiHPM:248-1 video_media=2 image_media=36 frames=163 global_full=1 global_samples=131 visual_count_video=0 tubelets=4 details=12 visual_count=2 ocr=8 motion=8 objects=10 transcript_segments=48 warnings=none
+video:6NVr0cNiHPM:248-1 [video]: completed pred=B gt=C correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5_fXicEnKKk:016-3 video_media=2 image_media=19 frames=108 global_full=1 global_samples=92 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=36 warnings=none
+video:5_fXicEnKKk:016-3 [video]: completed pred=C gt=D correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:0IdYJGBmguM:102-1 video_media=2 image_media=9 frames=105 global_full=1 global_samples=89 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=32 warnings=none
+video:0IdYJGBmguM:102-1 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7R1eNHvfspk:147-3 video_media=2 image_media=23 frames=106 global_full=1 global_samples=74 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=3 transcript_segments=18 warnings=none
+video:7R1eNHvfspk:147-3 [video]: completed pred=A gt=B correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:6Z_XNM_iT4g:134-1 video_media=2 image_media=5 frames=29 global_full=1 global_samples=12 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=6 objects=1 transcript_segments=0 warnings=transcript_anchor_has_no_segments
+video:6Z_XNM_iT4g:134-1 [video]: completed pred=C gt=B correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:Z-rHofd6g2Q:122-1 video_media=2 image_media=32 frames=97 global_full=1 global_samples=67 visual_count_video=0 tubelets=4 details=8 visual_count=0 ocr=8 motion=8 objects=7 transcript_segments=26 warnings=none
+video:Z-rHofd6g2Q:122-1 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8np5YKYx3sU:181-1 video_media=3 image_media=28 frames=250 global_full=1 global_samples=96 visual_count_video=1 tubelets=4 details=12 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=47 warnings=none
+video:8np5YKYx3sU:181-1 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5kmnEgBSCfg:286-2 video_media=2 image_media=21 frames=134 global_full=1 global_samples=118 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=none
+video:5kmnEgBSCfg:286-2 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1tidNDIpKSY:154-1 video_media=2 image_media=16 frames=89 global_full=1 global_samples=60 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=5 transcript_segments=11 warnings=none
+video:1tidNDIpKSY:154-1 [video]: completed pred=C gt=C correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7Hk9jct2ozY:321-2 video_media=2 image_media=4 frames=472 global_full=1 global_samples=440 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=43 warnings=none
+video:7Hk9jct2ozY:321-2 [video]: completed pred=A gt=D correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:0Y9-MQ44MdU:445-2 video_media=2 image_media=11 frames=656 global_full=1 global_samples=624 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:0Y9-MQ44MdU:445-2 [video]: completed pred=B gt=A correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:ZFtxvf72NxA:470-2 video_media=2 image_media=9 frames=385 global_full=1 global_samples=369 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:ZFtxvf72NxA:470-2 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7Ni4gcl4tpE:360-3 video_media=2 image_media=23 frames=379 global_full=1 global_samples=348 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=48 warnings=none
+video:7Ni4gcl4tpE:360-3 [video]: completed pred=B gt=A correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5R64pAPUZmk:597-1 video_media=2 image_media=10 frames=621 global_full=1 global_samples=605 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=5 transcript_segments=48 warnings=none
+video:5R64pAPUZmk:597-1 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:zW87tVnDKIU:465-3 video_media=2 image_media=11 frames=801 global_full=1 global_samples=770 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:zW87tVnDKIU:465-3 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8-aI8Fp2bPU:582-2 video_media=2 image_media=18 frames=278 global_full=1 global_samples=262 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=9 transcript_segments=48 warnings=missing_visual_count_executor_anchor
+video:8-aI8Fp2bPU:582-2 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:6DAFkaGUiT4:382-2 video_media=2 image_media=26 frames=427 global_full=1 global_samples=397 visual_count_video=0 tubelets=4 details=8 visual_count=0 ocr=8 motion=8 objects=3 transcript_segments=48 warnings=none
+video:6DAFkaGUiT4:382-2 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1uqupftxFOM:496-2 video_media=2 image_media=9 frames=280 global_full=1 global_samples=264 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:1uqupftxFOM:496-2 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:ZGGDKC3GlrI:326-2 video_media=2 image_media=19 frames=710 global_full=1 global_samples=702 visual_count_video=0 tubelets=3 details=5 visual_count=0 ocr=0 motion=8 objects=8 transcript_segments=48 warnings=none
+video:ZGGDKC3GlrI:326-2 [video]: completed pred=A gt=A correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/vmme/s0/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/vmme/s0/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/vmme/s0/modelscope_mtec_anchor_api_full_summary.json
+
+===== LAUNCH Wed Jul  1 15:42:04 2026 =====
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:ZfNSxRiYfZQ:258-3 video_media=2 image_media=15 frames=121 global_full=1 global_samples=105 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=11 transcript_segments=1 warnings=none
+video:ZfNSxRiYfZQ:258-3 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:6Z_XNM_iT4g:134-2 video_media=2 image_media=4 frames=29 global_full=1 global_samples=12 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=6 objects=0 transcript_segments=0 warnings=transcript_anchor_has_no_segments
+video:6Z_XNM_iT4g:134-2 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:Z-rHofd6g2Q:122-2 video_media=2 image_media=21 frames=83 global_full=1 global_samples=67 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=none
+video:Z-rHofd6g2Q:122-2 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8np5YKYx3sU:181-3 video_media=2 image_media=16 frames=126 global_full=1 global_samples=96 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=47 warnings=none
+video:8np5YKYx3sU:181-3 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5kmnEgBSCfg:286-1 video_media=2 image_media=21 frames=134 global_full=1 global_samples=118 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=missing_visual_count_executor_anchor
+video:5kmnEgBSCfg:286-1 [video]: completed pred=A gt=D correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1tidNDIpKSY:154-2 video_media=2 image_media=12 frames=75 global_full=1 global_samples=60 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=3 transcript_segments=11 warnings=none
+video:1tidNDIpKSY:154-2 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1sTQOxXFO44:251-1 video_media=2 image_media=16 frames=113 global_full=1 global_samples=82 visual_count_video=0 tubelets=4 details=12 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=7 warnings=none
+video:1sTQOxXFO44:251-1 [video]: completed pred=A gt=B correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:80p80ynsZ78:139-2 video_media=2 image_media=3 frames=112 global_full=1 global_samples=96 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=1 warnings=none
+video:80p80ynsZ78:139-2 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+/root/miniconda3/envs/venv/lib/python3.9/site-packages/paddle/utils/cpp_extension/extension_utils.py:712: UserWarning: No ccache found. Please be aware that recompiling all source files may be required. You can download and install ccache from: https://github.com/ccache/ccache/blob/master/doc/INSTALL.md
+  warnings.warn(warning_message)
+[32mCreating model: ('PP-OCRv6_medium_det', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/root/.paddlex/official_models/PP-OCRv6_medium_det`.[0m
+[32mCreating model: ('PP-OCRv6_medium_rec', None, None)[0m
+[32mModel files already exist. Using cached files. To redownload, please delete the directory manually: `/root/.paddlex/official_models/PP-OCRv6_medium_rec`.[0m
+INPUT_CHECK video:6NVr0cNiHPM:248-1 video_media=2 image_media=36 frames=163 global_full=1 global_samples=131 visual_count_video=0 tubelets=4 details=12 visual_count=2 ocr=8 motion=8 objects=10 transcript_segments=48 warnings=none
+video:6NVr0cNiHPM:248-1 [video]: completed pred=B gt=C correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5_fXicEnKKk:016-3 video_media=2 image_media=19 frames=108 global_full=1 global_samples=92 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=36 warnings=none
+video:5_fXicEnKKk:016-3 [video]: completed pred=C gt=D correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:0IdYJGBmguM:102-1 video_media=2 image_media=9 frames=105 global_full=1 global_samples=89 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=32 warnings=none
+video:0IdYJGBmguM:102-1 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7R1eNHvfspk:147-3 video_media=2 image_media=23 frames=106 global_full=1 global_samples=74 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=3 transcript_segments=18 warnings=none
+video:7R1eNHvfspk:147-3 [video]: completed pred=A gt=B correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:6Z_XNM_iT4g:134-1 video_media=2 image_media=5 frames=29 global_full=1 global_samples=12 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=6 objects=1 transcript_segments=0 warnings=transcript_anchor_has_no_segments
+video:6Z_XNM_iT4g:134-1 [video]: completed pred=C gt=B correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:Z-rHofd6g2Q:122-1 video_media=2 image_media=32 frames=97 global_full=1 global_samples=67 visual_count_video=0 tubelets=4 details=8 visual_count=0 ocr=8 motion=8 objects=7 transcript_segments=26 warnings=none
+video:Z-rHofd6g2Q:122-1 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8np5YKYx3sU:181-1 video_media=3 image_media=28 frames=250 global_full=1 global_samples=96 visual_count_video=1 tubelets=4 details=12 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=47 warnings=none
+video:8np5YKYx3sU:181-1 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5kmnEgBSCfg:286-2 video_media=2 image_media=21 frames=134 global_full=1 global_samples=118 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=7 transcript_segments=26 warnings=none
+video:5kmnEgBSCfg:286-2 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1tidNDIpKSY:154-1 video_media=2 image_media=16 frames=89 global_full=1 global_samples=60 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=5 transcript_segments=11 warnings=none
+video:1tidNDIpKSY:154-1 [video]: completed pred=C gt=C correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7Hk9jct2ozY:321-2 video_media=2 image_media=4 frames=472 global_full=1 global_samples=440 visual_count_video=0 tubelets=4 details=0 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=43 warnings=none
+video:7Hk9jct2ozY:321-2 [video]: completed pred=A gt=D correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:0Y9-MQ44MdU:445-2 video_media=2 image_media=11 frames=656 global_full=1 global_samples=624 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:0Y9-MQ44MdU:445-2 [video]: completed pred=B gt=A correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:ZFtxvf72NxA:470-2 video_media=2 image_media=9 frames=385 global_full=1 global_samples=369 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:ZFtxvf72NxA:470-2 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:7Ni4gcl4tpE:360-3 video_media=2 image_media=23 frames=379 global_full=1 global_samples=348 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=4 transcript_segments=48 warnings=none
+video:7Ni4gcl4tpE:360-3 [video]: completed pred=B gt=A correct=False error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:5R64pAPUZmk:597-1 video_media=2 image_media=10 frames=621 global_full=1 global_samples=605 visual_count_video=0 tubelets=3 details=0 visual_count=0 ocr=0 motion=8 objects=5 transcript_segments=48 warnings=none
+video:5R64pAPUZmk:597-1 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:zW87tVnDKIU:465-3 video_media=2 image_media=11 frames=801 global_full=1 global_samples=770 visual_count_video=0 tubelets=4 details=7 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:zW87tVnDKIU:465-3 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:8-aI8Fp2bPU:582-2 video_media=2 image_media=18 frames=278 global_full=1 global_samples=262 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=9 transcript_segments=48 warnings=missing_visual_count_executor_anchor
+video:8-aI8Fp2bPU:582-2 [video]: completed pred=A gt=A correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:6DAFkaGUiT4:382-2 video_media=2 image_media=26 frames=427 global_full=1 global_samples=397 visual_count_video=0 tubelets=4 details=8 visual_count=0 ocr=8 motion=8 objects=3 transcript_segments=48 warnings=none
+video:6DAFkaGUiT4:382-2 [video]: completed pred=D gt=D correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:1uqupftxFOM:496-2 video_media=2 image_media=9 frames=280 global_full=1 global_samples=264 visual_count_video=0 tubelets=3 details=6 visual_count=0 ocr=0 motion=8 objects=0 transcript_segments=48 warnings=none
+video:1uqupftxFOM:496-2 [video]: completed pred=B gt=B correct=True error=
+VideoManager is deprecated and will be removed.
+INPUT_CHECK video:ZGGDKC3GlrI:326-2 video_media=2 image_media=19 frames=710 global_full=1 global_samples=702 visual_count_video=0 tubelets=3 details=5 visual_count=0 ocr=0 motion=8 objects=8 transcript_segments=48 warnings=none
+video:ZGGDKC3GlrI:326-2 [video]: completed pred=A gt=A correct=True error=
+Results JSONL: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/vmme/s0/modelscope_mtec_anchor_api_full_results.jsonl
+Results JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/vmme/s0/modelscope_mtec_anchor_api_full_results.json
+Summary JSON: /root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/B_no_evidence/vmme/s0/modelscope_mtec_anchor_api_full_summary.json

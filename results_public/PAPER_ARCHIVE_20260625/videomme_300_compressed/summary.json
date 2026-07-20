@@ -1,0 +1,47 @@
+{
+ "config": {
+  "label": "Video-MME 300 (compressed)",
+  "platform": "bailian",
+  "model": "qwen3.7-plus",
+  "mode": "MTEC compressed (anchors+evidence, OSS)",
+  "notes": "balanced 100/100/100",
+  "source_globs": [
+   "outputs/eval100_baseline_20260622/*results.jsonl",
+   "outputs/new50_oss_20260623/*results.jsonl",
+   "outputs/new50_redo_20260623/*results.jsonl",
+   "outputs/payload3_oss_20260623/*results.jsonl",
+   "outputs/err6_oss_20260623/*results.jsonl",
+   "outputs/ab_baseline_20260622/*results.jsonl",
+   "outputs/vmme300_shards/s*/*results.jsonl"
+  ]
+ },
+ "summary": {
+  "n_records": 300,
+  "completed": 300,
+  "failed": 0,
+  "correct": 229,
+  "acc_over_completed_pct": 76.3,
+  "acc_incl_failures_pct": 76.3,
+  "failure_classes": {},
+  "token_saving_raw_mean_pct": 77.8,
+  "token_saving_raw_median_pct": 85.9,
+  "token_saving_positive_count": "292/300",
+  "duration_breakdown": {
+   "short": {
+    "n": 100,
+    "acc_pct": 88.0,
+    "token_saving_median_pct": 76.5
+   },
+   "medium": {
+    "n": 100,
+    "acc_pct": 74.0,
+    "token_saving_median_pct": 86.0
+   },
+   "long": {
+    "n": 100,
+    "acc_pct": 67.0,
+    "token_saving_median_pct": 89.3
+   }
+  }
+ }
+}

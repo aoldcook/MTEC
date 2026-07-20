@@ -1,0 +1,304 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/probe/vmme_short/s2/media/video/6Cr_8tvvQ0k.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.0,
+    3.78
+   ],
+   "text": "Life could be dream, life could be dream",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0002",
+   "anchor_link": "video_transcript_anchor_seg_0002",
+   "sequence_index": 2,
+   "time_range_sec": [
+    3.78,
+    7.36
+   ],
+   "text": "Do, do, do, sub-ooh",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0003",
+   "anchor_link": "video_transcript_anchor_seg_0003",
+   "sequence_index": 3,
+   "time_range_sec": [
+    7.36,
+    9.68
+   ],
+   "text": "Life could be dream",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0004",
+   "anchor_link": "video_transcript_anchor_seg_0004",
+   "sequence_index": 4,
+   "time_range_sec": [
+    9.68,
+    11.26
+   ],
+   "text": "If I could take you up",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0005",
+   "anchor_link": "video_transcript_anchor_seg_0005",
+   "sequence_index": 5,
+   "time_range_sec": [
+    11.26,
+    12.88
+   ],
+   "text": "In paradise above",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0006",
+   "anchor_link": "video_transcript_anchor_seg_0006",
+   "sequence_index": 6,
+   "time_range_sec": [
+    12.88,
+    14.26
+   ],
+   "text": "If you would tell me",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0007",
+   "anchor_link": "video_transcript_anchor_seg_0007",
+   "sequence_index": 7,
+   "time_range_sec": [
+    14.26,
+    16.28
+   ],
+   "text": "I'm the only one that you love",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0008",
+   "anchor_link": "video_transcript_anchor_seg_0008",
+   "sequence_index": 8,
+   "time_range_sec": [
+    16.28,
+    18.16
+   ],
+   "text": "Life could be dream",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0009",
+   "anchor_link": "video_transcript_anchor_seg_0009",
+   "sequence_index": 9,
+   "time_range_sec": [
+    18.16,
+    19.86
+   ],
+   "text": "Sweetheart, hello again",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0010",
+   "anchor_link": "video_transcript_anchor_seg_0010",
+   "sequence_index": 10,
+   "time_range_sec": [
+    19.86,
+    22.02
+   ],
+   "text": "Sub-ooh man, open my medium",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0011",
+   "anchor_link": "video_transcript_anchor_seg_0011",
+   "sequence_index": 11,
+   "time_range_sec": [
+    22.02,
+    23.52
+   ],
+   "text": "Then I'll need enough",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0012",
+   "anchor_link": "video_transcript_anchor_seg_0012",
+   "sequence_index": 12,
+   "time_range_sec": [
+    23.52,
+    25.26
+   ],
+   "text": "Shallang, ka-lang, ga-lang",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0013",
+   "anchor_link": "video_transcript_anchor_seg_0013",
+   "sequence_index": 13,
+   "time_range_sec": [
+    25.26,
+    26.82
+   ],
+   "text": "I'll whoop whoop whoop",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.9707,
+   "no_speech_prob": 0.5654
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0014",
+   "anchor_link": "video_transcript_anchor_seg_0014",
+   "sequence_index": 14,
+   "time_range_sec": [
+    26.82,
+    30.82
+   ],
+   "text": "A robot of war, life would be dreams",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4497,
+   "no_speech_prob": 0.0951
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0015",
+   "anchor_link": "video_transcript_anchor_seg_0015",
+   "sequence_index": 15,
+   "time_range_sec": [
+    30.82,
+    33.82
+   ],
+   "text": "If only all my precious plans would come true",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4497,
+   "no_speech_prob": 0.0951
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0016",
+   "anchor_link": "video_transcript_anchor_seg_0016",
+   "sequence_index": 16,
+   "time_range_sec": [
+    33.82,
+    37.82
+   ],
+   "text": "If you would let me spend my whole life loving you",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4497,
+   "no_speech_prob": 0.0951
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0017",
+   "anchor_link": "video_transcript_anchor_seg_0017",
+   "sequence_index": 17,
+   "time_range_sec": [
+    37.82,
+    41.82
+   ],
+   "text": "Life would be dreams, sweetheart",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4497,
+   "no_speech_prob": 0.0951
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0018",
+   "anchor_link": "video_transcript_anchor_seg_0018",
+   "sequence_index": 18,
+   "time_range_sec": [
+    41.82,
+    43.82
+   ],
+   "text": "It's a boom, boom, boom",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4497,
+   "no_speech_prob": 0.0951
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0019",
+   "anchor_link": "video_transcript_anchor_seg_0019",
+   "sequence_index": 19,
+   "time_range_sec": [
+    43.82,
+    49.82
+   ],
+   "text": "Every time I look at you, something is a rock line",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4497,
+   "no_speech_prob": 0.0951
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0020",
+   "anchor_link": "video_transcript_anchor_seg_0020",
+   "sequence_index": 20,
+   "time_range_sec": [
+    49.82,
+    53.82
+   ],
+   "text": "If you knew what I wanted to do",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.4497,
+   "no_speech_prob": 0.0951
+  },
+  {
+   "anchor_id": "video_transcript_anchor_seg_0021",
+   "anchor_link": "video_transcript_anchor_seg_0021",
+   "sequence_index": 21,
+   "time_range_sec": [
+    53.82,
+    55.82
+   ],
+   "text": "Forever, ever, ever",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.6893,
+   "no_speech_prob": 0.9004
+  }
+ ],
+ "all_segment_count": 21,
+ "query_retrieval": true,
+ "query_terms": [
+  "color",
+  "animal",
+  "yellow",
+  "white",
+  "black",
+  "red"
+ ],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "Life could be dream, life could be dream Do, do, do, sub-ooh Life could be dream If I could take you up In paradise above If you would tell me I'm the only one that you love Life could be dream Sweetheart, hello again Sub-ooh man, open my medium Then I'll need enough Shallang, ka-lang, ga-lang I'll whoop whoop whoop A robot of war, life would be dreams If only all my precious plans would come true If you would let me spend my whole life loving you Life would be dreams, sweetheart It's a boom, boom, boom Every time I look at you, something is a rock line If you knew what I wanted to do Forever, ever, ever",
+ "warnings": [
+  "No embedded subtitle stream extracted.",
+  "Question-driven transcript retrieval found no direct lexical hits; using temporal coverage segments."
+ ]
+}

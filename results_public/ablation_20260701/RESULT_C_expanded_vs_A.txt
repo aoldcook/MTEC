@@ -1,0 +1,13 @@
+==========================================================================
+EXPANDED LONG-VIDEO: C_no_timeline vs A_full (paired on shared completed keys)
+==========================================================================
+
+[MLVU (orig+ext)] paired n=30 : C_no_timeline 90.0% (27) vs A_full 86.7% (26) -> dAcc +3.3 pts
+      completion: C_no_timeline=60  A_full=30 ; token-save med 95.8% vs 96.0%
+
+[Video-MME-long] paired n=28 : C_no_timeline 60.7% (17) vs A_full 53.6% (15) -> dAcc +7.1 pts
+      completion: C_no_timeline=40  A_full=28 ; token-save med 89.4% vs 89.4%
+
+--------------------------------------------------------------------------
+COMBINED LONG (n=58): C_no_timeline 75.9% vs A_full 70.7% -> dAcc +5.2 pts
+      (per-config 95% CI half-width ~ 11.0 pts at n=58)

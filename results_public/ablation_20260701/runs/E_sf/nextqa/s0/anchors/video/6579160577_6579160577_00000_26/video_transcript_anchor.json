@@ -1,0 +1,36 @@
+{
+ "anchor_id": "video_transcript_anchor",
+ "anchor_link": "video_transcript_anchor",
+ "type": "video_timestamped_transcript",
+ "role": "Preserve speech, subtitles, narration, named entities, event order, and negated/not-mentioned details for long-video reasoning.",
+ "source_path": "/root/autodl-tmp/MTEC/outputs/ablation_20260701/runs/E_sf/nextqa/s0/media/video/6579160577.mp4",
+ "source": "faster_whisper_asr",
+ "backend": "auto",
+ "model_name": "base.en",
+ "external_subtitle_path": null,
+ "language": "en",
+ "segments": [
+  {
+   "anchor_id": "video_transcript_anchor_seg_0001",
+   "anchor_link": "video_transcript_anchor_seg_0001",
+   "sequence_index": 1,
+   "time_range_sec": [
+    0.0,
+    0.84
+   ],
+   "text": "Okay, go.",
+   "source": "faster_whisper_asr",
+   "avg_logprob": -0.5858,
+   "no_speech_prob": 0.0644
+  }
+ ],
+ "all_segment_count": 1,
+ "query_retrieval": false,
+ "query_terms": [],
+ "question_relevant_segments": [],
+ "question_relevant_time_windows": [],
+ "text_preview": "Okay, go.",
+ "warnings": [
+  "No embedded subtitle stream extracted."
+ ]
+}
